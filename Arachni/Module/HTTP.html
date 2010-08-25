@@ -1,0 +1,1842 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Arachni::Module::HTTP</title>
+<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (H)</a> &raquo; 
+    <span class='title'><a href="../../Arachni.html" title="Arachni (module)">Arachni</a></span> &raquo; <span class='title'><a href="../Module.html" title="Arachni::Module (module)">Module</a></span>
+     &raquo; 
+    <span class="title">HTTP</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Arachni::Module::HTTP
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Arachni::Module::HTTP</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><a href="../UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/module/http.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Arachni::Module::HTTP class
+</p>
+<p>
+Provides a simple HTTP interface for modules.
+</p>
+<h3>Exceptions</h3>
+<p>
+Any exceptions or session corruption is handled by the class.<br/> Some are
+ignored, on others the HTTP session is refreshed.<br/> Point is, you
+don&#8217;t need to worry about it.
+</p>
+<p>
+@author: Anastasios &#8220;Zapotek&#8221; Laskos
+</p>
+<pre class="code">
+                                     &lt;tasos.laskos@gmail.com&gt;
+                                     &lt;zapotek@segfault.gr&gt;
+</pre>
+<p>
+@version: 0.1-pre
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+
+  
+  
+  
+  
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cookie_jar-instance_method" title="#cookie_jar (instance method)">- (Hash) <strong>cookie_jar</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The user supplied cookie jar.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#init_headers-instance_method" title="#init_headers (instance method)">- (Hash) <strong>init_headers</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The headers with which the HTTP client is initialized<br/> This is always
+kept updated.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#session-instance_method" title="#session (instance method)">- (Net::HTTP) <strong>session</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The HTTP session.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#url-instance_method" title="#url (instance method)">- (URI) <strong>url</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The url of the session.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse_cookiejar-class_method" title="parse_cookiejar (class method)">+ (Hash) <strong>parse_cookiejar</strong>(cookie_jar) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Class method.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_trainer-instance_method" title="#add_trainer (instance method)">- (Object) <strong>add_trainer</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Blocks passed to this method will be passed each HTTP response<br/> and in
+cases of redirection the new location as well.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cookie-instance_method" title="#cookie (instance method)">- (HTTP::Response) <strong>cookie</strong>(url, cookie_vars, url_vars = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Gets a url with cookies and url variables.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get-instance_method" title="#get (instance method)">- (HTTP::Response) <strong>get</strong>(url, url_vars = {}, redirect = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Gets a URL passing the provided variables.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#header-instance_method" title="#header (instance method)">- (HTTP::Response) <strong>header</strong>(url, headers, url_vars = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Gets a url with optional url variables and modified headers.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Net::HTTP) <strong>initialize</strong>(url, opts = {}) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Initializes the HTTP session given a start URL respecting system wide
+settings for HTTP basic auth and proxy.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse_cookie_str-instance_method" title="#parse_cookie_str (instance method)">- (Object) <strong>parse_cookie_str</strong>(str) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse_url-instance_method" title="#parse_url (instance method)">- (URI) <strong>parse_url</strong>(url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Encodes and parses a URL String.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#post-instance_method" title="#post (instance method)">- (HTTP::Response) <strong>post</strong>(url, form_vars) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Posts a form to a URL with the provided variables.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_cookies-instance_method" title="#set_cookies (instance method)">- (void) <strong>set_cookies</strong>(cookie_hash) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Sets cookies for the HTTP session.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="../UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></h3>
+  <p class="inherited"><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a>, <a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a>, <a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a>, <a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a>, <a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a>, <a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a>, <a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a>, <a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a>, <a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a>, <a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a>, <a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a>, <a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a>, <a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a>, <a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a>, <a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt>Net::HTTP</tt>) <strong>initialize</strong>(url, opts = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Initializes the HTTP session given a start URL respecting system wide
+settings for HTTP basic auth and proxy
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>url</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+start URL
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
+    <span class='ivar'>@url</span> <span class='op'>=</span> <span class='id parse_url'>parse_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+
+    <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+
+    <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+
+    <span class='comment'># create a new HTTP session
+</span>    <span class='id refresh'>refresh</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    
+    <span class='ivar'>@trainers</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    
+    <span class='ivar'>@init_headers</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+    <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>user-agent</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id user_agent'>user_agent</span>
+    <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>     <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="cookie_jar-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="cookie_jar-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>cookie_jar</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The user supplied cookie jar
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id cookie_jar'>cookie_jar</span>
+  <span class='ivar'>@cookie_jar</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="init_headers-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="init_headers-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>init_headers</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The headers with which the HTTP client is initialized<br/> This is always
+kept updated.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id init_headers'>init_headers</span>
+  <span class='ivar'>@init_headers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="session-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="session-instance_method">
+  
+    - (<tt>Net::HTTP</tt>) <strong>session</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The HTTP session
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Net::HTTP</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id session'>session</span>
+  <span class='ivar'>@session</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="url-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="url-instance_method">
+  
+    - (<tt>URI</tt>) <strong>url</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The url of the session
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>URI</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id url'>url</span>
+  <span class='ivar'>@url</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="parse_cookiejar-class_method">
+  
+    + (<tt>Hash</tt>) <strong>parse_cookiejar</strong>(cookie_jar) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Class method
+</p>
+<p>
+Parses netscape HTTP cookie file
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>cookie_jar</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the location of the cookie file
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+cookies in name=>value pairs
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 292</span>
+
+<span class='kw'>def</span> <span class='const'>HTTP</span><span class='period'>.</span><span class='id parse_cookiejar'>parse_cookiejar</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
+    
+    <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+    
+    <span class='id jar'>jar</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>r</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> 
+    <span class='id jar'>jar</span><span class='period'>.</span><span class='id each_line'>each_line</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id line'>line</span><span class='op'>|</span>
+        
+        <span class='comment'># skip empty lines
+</span>        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id line'>line</span> <span class='op'>=</span> <span class='id line'>line</span><span class='period'>.</span><span class='id strip'>strip</span><span class='rparen'>)</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
+            
+        <span class='comment'># skip comment lines
+</span>        <span class='kw'>if</span> <span class='id line'>line</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>#</span><span class='tstring_end'>'</span></span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
+            
+        <span class='id cookie_arr'>cookie_arr</span> <span class='op'>=</span> <span class='id line'>line</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        
+        <span class='id cookies'>cookies</span><span class='lbracket'>[</span><span class='id cookie_arr'>cookie_arr</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id cookie_arr'>cookie_arr</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+    
+    <span class='id cookies'>cookies</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="add_trainer-instance_method">
+  
+    - (<tt>Object</tt>) <strong>add_trainer</strong>(&amp;block) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Blocks passed to this method will be passed each HTTP response<br/> and in
+cases of redirection the new location as well.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+329
+330
+331</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 329</span>
+
+<span class='kw'>def</span> <span class='id add_trainer'>add_trainer</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='ivar'>@trainers</span> <span class='op'>&lt;&lt;</span> <span class='id block'>block</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="cookie-instance_method">
+  
+    - (<tt>HTTP::Response</tt>) <strong>cookie</strong>(url, cookie_vars, url_vars = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Gets a url with cookies and url variables
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>URI</tt>)</span>
+      
+      
+        <span class='name'>url</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+URL to get
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Array&lt;Hash&lt;String, String&gt;&gt;</tt>)</span>
+      
+      
+        <span class='name'>cookie_vars</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+array of name=>value pairs
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Array&lt;Hash&lt;String, String&gt;&gt;</tt>)</span>
+      
+      
+        <span class='name'>url_vars</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+array of name=>value pairs
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>HTTP::Response</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 177</span>
+
+<span class='kw'>def</span> <span class='id cookie'>cookie</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id cookie_vars'>cookie_vars</span><span class='comma'>,</span> <span class='id url_vars'>url_vars</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+
+    <span class='id orig_cookiejar'>orig_cookiejar</span> <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id clone'>clone</span> 
+    
+    <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+    <span class='id jar'>jar</span> <span class='op'>=</span> <span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='id orig_cookiejar'>orig_cookiejar</span> <span class='rparen'>)</span>
+    
+    <span class='id cookie_vars'>cookie_vars</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
+
+        <span class='comment'># don't audit cookies in the cookie jar                
+</span><span class='comment'>#            next if Options.instance.exclude_cookies.include?( name )
+</span>        
+        <span class='id cookies'>cookies</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id value'>value</span>
+    <span class='rbrace'>}</span>
+    
+    <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id reject'>reject</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
+        <span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id exclude_cookies'>exclude_cookies</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+    
+    <span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='id jar'>jar</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    
+    <span class='comment'># wrap the code in exception handling
+</span>    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
+        <span class='id url'>url</span> <span class='op'>=</span> <span class='id parse_url'>parse_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='period'>.</span><span class='id query'>query</span> <span class='op'>&amp;&amp;</span> <span class='id url'>url</span><span class='period'>.</span><span class='id query'>query</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='rparen'>)</span>
+            <span class='id query'>query</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>?</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id url'>url</span><span class='period'>.</span><span class='id query'>query</span>
+            <span class='id append'>append</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='kw'>else</span>
+            <span class='id query'>query</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+            <span class='id append'>append</span> <span class='op'>=</span> <span class='kw'>false</span>
+        <span class='kw'>end</span>
+        
+        <span class='id full_url'>full_url</span> <span class='op'>=</span> <span class='id url'>url</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>+</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id query'>query</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='id a_to_s'>a_to_s</span><span class='lparen'>(</span> <span class='id url_vars'>url_vars</span><span class='comma'>,</span> <span class='id append'>append</span> <span class='rparen'>)</span>
+                    
+        <span class='id res'>res</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id full_url'>full_url</span><span class='comma'>,</span> <span class='ivar'>@init_headers</span> <span class='rparen'>)</span>
+        <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id orig_cookiejar'>orig_cookiejar</span><span class='period'>.</span><span class='id clone'>clone</span>
+        <span class='id train'>train</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id res'>res</span>
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get-instance_method">
+  
+    - (<tt>HTTP::Response</tt>) <strong>get</strong>(url, url_vars = {}, redirect = false) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Gets a URL passing the provided variables
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>URI</tt>)</span>
+      
+      
+        <span class='name'>url</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+URL to get
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Array&lt;Hash&lt;String, String&gt;&gt;</tt>)</span>
+      
+      
+        <span class='name'>url_vars</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+array of name=>value pairs
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>HTTP::Response</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 97</span>
+
+<span class='kw'>def</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id url_vars'>url_vars</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id redirect'>redirect</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
+    <span class='id url'>url</span> <span class='op'>=</span> <span class='id parse_url'>parse_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+
+    <span class='id url_vars'>url_vars</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id url_vars'>url_vars</span> <span class='rparen'>)</span>
+    
+    <span class='id url_vars'>url_vars</span> <span class='op'>=</span> <span class='id url_vars'>url_vars</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>__arachni__</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span> <span class='rparen'>)</span> 
+    <span class='comment'>#
+</span>    <span class='comment'># the exception jail function wraps the block passed to it
+</span>    <span class='comment'># in exception handling and runs it
+</span>    <span class='comment'>#
+</span>    <span class='comment'># how cool is Ruby? Seriously....
+</span>    <span class='comment'>#
+</span>    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
+
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='period'>.</span><span class='id query'>query</span> <span class='op'>&amp;&amp;</span> <span class='id url'>url</span><span class='period'>.</span><span class='id query'>query</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='rparen'>)</span>
+            <span class='id query'>query</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>?</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id url'>url</span><span class='period'>.</span><span class='id query'>query</span>
+            <span class='id append'>append</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='kw'>else</span>
+            <span class='id query'>query</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+            <span class='id append'>append</span> <span class='op'>=</span> <span class='kw'>false</span>
+        <span class='kw'>end</span>
+        
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id redirect'>redirect</span> <span class='rparen'>)</span>
+            <span class='id full_url'>full_url</span> <span class='op'>=</span> <span class='id url'>url</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>+</span> <span class='id query'>query</span>
+        <span class='kw'>else</span>
+            <span class='id full_url'>full_url</span> <span class='op'>=</span> <span class='id url'>url</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>+</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id query'>query</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='id a_to_s'>a_to_s</span><span class='lparen'>(</span> <span class='id url_vars'>url_vars</span><span class='comma'>,</span> <span class='id append'>append</span> <span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        
+        <span class='id res'>res</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id full_url'>full_url</span><span class='comma'>,</span> <span class='ivar'>@init_headers</span> <span class='rparen'>)</span>
+        
+        <span class='comment'># handle redirections
+</span>        <span class='kw'>if</span><span class='lparen'>(</span> <span class='lparen'>(</span> <span class='id redir'>redir</span> <span class='op'>=</span> <span class='id redirect?'>redirect?</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+            <span class='id res'>res</span> <span class='op'>=</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id redir'>redir</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>true</span> <span class='rparen'>)</span>
+            <span class='id train'>train</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id redir'>redir</span> <span class='rparen'>)</span>
+        <span class='kw'>else</span>
+            <span class='id train'>train</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        
+        <span class='kw'>return</span> <span class='id res'>res</span>
+    <span class='rbrace'>}</span>
+    
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="header-instance_method">
+  
+    - (<tt>HTTP::Response</tt>) <strong>header</strong>(url, headers, url_vars = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Gets a url with optional url variables and modified headers
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>URI</tt>)</span>
+      
+      
+        <span class='name'>url</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+URL to get
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>)</span>
+      
+      
+        <span class='name'>headers</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+hash of name=>value pairs
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Array&lt;Hash&lt;String, String&gt;&gt;</tt>)</span>
+      
+      
+        <span class='name'>url_vars</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+array of name=>value pairs
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>HTTP::Response</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 230</span>
+
+<span class='kw'>def</span> <span class='id header'>header</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id headers'>headers</span><span class='comma'>,</span> <span class='id url_vars'>url_vars</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+
+    <span class='comment'># wrap the code in exception handling
+</span>    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
+        <span class='id url'>url</span> <span class='op'>=</span> <span class='id parse_url'>parse_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='period'>.</span><span class='id query'>query</span> <span class='op'>&amp;&amp;</span> <span class='id url'>url</span><span class='period'>.</span><span class='id query'>query</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='rparen'>)</span>
+            <span class='id query'>query</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>?</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id url'>url</span><span class='period'>.</span><span class='id query'>query</span>
+            <span class='id append'>append</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='kw'>else</span>
+            <span class='id query'>query</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+            <span class='id append'>append</span> <span class='op'>=</span> <span class='kw'>false</span>
+        <span class='kw'>end</span>
+        
+        <span class='id full_url'>full_url</span> <span class='op'>=</span> <span class='id url'>url</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>+</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id query'>query</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='id a_to_s'>a_to_s</span><span class='lparen'>(</span> <span class='id url_vars'>url_vars</span><span class='comma'>,</span> <span class='id append'>append</span> <span class='rparen'>)</span>
+        
+        <span class='id orig_headers'>orig_headers</span>  <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id clone'>clone</span>
+        <span class='ivar'>@init_headers</span> <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
+        
+        <span class='id res'>res</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id full_url'>full_url</span><span class='comma'>,</span> <span class='ivar'>@init_headers</span> <span class='rparen'>)</span>
+        
+        <span class='ivar'>@init_headers</span> <span class='op'>=</span> <span class='id orig_headers'>orig_headers</span><span class='period'>.</span><span class='id clone'>clone</span>
+        <span class='id train'>train</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id res'>res</span>
+    <span class='rbrace'>}</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="parse_cookie_str-instance_method">
+  
+    - (<tt>Object</tt>) <strong>parse_cookie_str</strong>(str) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+274
+275
+276
+277
+278
+279
+280
+281</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 274</span>
+
+<span class='kw'>def</span> <span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+    <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+    <span class='id str'>str</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id kvp'>kvp</span><span class='op'>|</span>
+        <span class='id cookie_jar'>cookie_jar</span><span class='lbracket'>[</span><span class='id kvp'>kvp</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id kvp'>kvp</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> 
+    <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='id cookie_jar'>cookie_jar</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="parse_url-instance_method">
+  
+    - (<tt>URI</tt>) <strong>parse_url</strong>(url) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Encodes and parses a URL String
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>url</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+URL String
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>URI</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+URI object
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+321
+322
+323</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 321</span>
+
+<span class='kw'>def</span> <span class='id parse_url'>parse_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="post-instance_method">
+  
+    - (<tt>HTTP::Response</tt>) <strong>post</strong>(url, form_vars) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Posts a form to a URL with the provided variables
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>URI</tt>)</span>
+      
+      
+        <span class='name'>url</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+URL to get
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Array&lt;Hash&lt;String, String&gt;&gt;</tt>)</span>
+      
+      
+        <span class='name'>form_vars</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+array of name=>value pairs
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>HTTP::Response</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 148</span>
+
+<span class='kw'>def</span> <span class='id post'>post</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id form_vars'>form_vars</span> <span class='rparen'>)</span>
+
+    <span class='id req'>req</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='op'>::</span><span class='const'>Post</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='ivar'>@init_headers</span> <span class='rparen'>)</span>
+    <span class='id req'>req</span><span class='period'>.</span><span class='id set_form_data'>set_form_data</span><span class='lparen'>(</span> <span class='id form_vars'>form_vars</span> <span class='rparen'>)</span>
+
+    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
+        <span class='id res'>res</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id request'>request</span><span class='lparen'>(</span> <span class='id req'>req</span> <span class='rparen'>)</span>
+        
+        <span class='comment'># handle redirections
+</span>        <span class='kw'>if</span><span class='lparen'>(</span> <span class='lparen'>(</span> <span class='id redir'>redir</span> <span class='op'>=</span> <span class='id redirect?'>redirect?</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+            <span class='id res'>res</span> <span class='op'>=</span>  <span class='id get'>get</span><span class='lparen'>(</span> <span class='id redir'>redir</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>true</span> <span class='rparen'>)</span>
+            <span class='id train'>train</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id redir'>redir</span> <span class='rparen'>)</span>
+        <span class='kw'>else</span>
+            <span class='id train'>train</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>return</span> <span class='id res'>res</span>
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="set_cookies-instance_method">
+  
+    - (<tt>void</tt>) <strong>set_cookies</strong>(cookie_hash) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Sets cookies for the HTTP session
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>cookie_hash</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+name=>value pair cookies
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+266
+267
+268
+269
+270
+271
+272</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 266</span>
+
+<span class='kw'>def</span> <span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='id cookie_hash'>cookie_hash</span> <span class='rparen'>)</span>
+    <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+    <span class='ivar'>@cookie_jar</span> <span class='op'>=</span> <span class='id cookie_hash'>cookie_hash</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
+        <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id value'>value</span><span class='rbrace'>}</span><span class='tstring_content'>;</span><span class='tstring_end'>&quot;</span></span> 
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://sourceforge.net/apps/piwik/arachni/" : "http://sourceforge.net/apps/piwik/arachni/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://sourceforge.net/apps/piwik/arachni/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript>
+<!-- End Piwik Tag -->
+
+<div id="footer">
+  Generated on Wed Aug 25 22:09:39 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.8 (ruby-1.9.1).
+</div>
+
+  </body>
+</html>

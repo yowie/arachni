@@ -1,0 +1,876 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Arachni::Spider</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo; 
+    <span class='title'><a href="../Arachni.html" title="Arachni (module)">Arachni</a></span>
+     &raquo; 
+    <span class="title">Spider</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Arachni::Spider
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Arachni::Spider</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><a href="UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/spider.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Spider class
+</p>
+<p>
+Crawls the URL in opts[:url] and grabs the HTML code and headers.
+</p>
+<p>
+@author: Anastasios &#8220;Zapotek&#8221; Laskos
+</p>
+<pre class="code">
+                                     &lt;tasos.laskos@gmail.com&gt;
+                                     &lt;zapotek@segfault.gr&gt;
+</pre>
+<p>
+@version: 0.1-pre
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+
+  
+  
+  
+  
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#on_every_page_blocks-instance_method" title="#on_every_page_blocks (instance method)">- (Proc) <strong>on_every_page_blocks</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Code block to be executed on each page.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#opts-instance_method" title="#opts (instance method)">- (Options) <strong>opts</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sitemap-instance_method" title="#sitemap (instance method)">- (Array) <strong>sitemap</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Sitemap, array of links.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Spider) <strong>initialize</strong>(opts) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Constructor <br/> Instantiates Spider class with user options.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#on_every_page-instance_method" title="#on_every_page (instance method)">- (self) <strong>on_every_page</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Hook for further analysis of pages, statistics etc.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-instance_method" title="#run (instance method)">- (Array) <strong>run</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Runs the Spider and passes the url, html and headers Hash.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></h3>
+  <p class="inherited"><a href="UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a>, <a href="UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a>, <a href="UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a>, <a href="UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a>, <a href="UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a>, <a href="UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a>, <a href="UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a>, <a href="UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a>, <a href="UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a>, <a href="UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a>, <a href="UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a>, <a href="UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a>, <a href="UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a>, <a href="UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a>, <a href="UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="Arachni::Spider (class)">Spider</a></tt>) <strong>initialize</strong>(opts) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Constructor <br/> Instantiates Spider class with user options.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Options.html" title="Arachni::Options (class)">Options</a></tt>)</span>
+      
+      
+        <span class='name'>opts</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+    <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='id opts'>opts</span>
+    <span class='ivar'>@anemone_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+        <span class='symbol'>:threads</span>              <span class='op'>=&gt;</span>  <span class='int'>3</span><span class='comma'>,</span>
+        <span class='symbol'>:discard_page_bodies</span>  <span class='op'>=&gt;</span>  <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='symbol'>:delay</span>                <span class='op'>=&gt;</span>  <span class='int'>0</span><span class='comma'>,</span>
+        <span class='symbol'>:obey_robots_txt</span>      <span class='op'>=&gt;</span>  <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='symbol'>:depth_limit</span>          <span class='op'>=&gt;</span>  <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='symbol'>:link_count_limit</span>     <span class='op'>=&gt;</span>  <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='symbol'>:redirect_limit</span>       <span class='op'>=&gt;</span>  <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='symbol'>:storage</span>              <span class='op'>=&gt;</span>  <span class='kw'>nil</span><span class='comma'>,</span>
+        <span class='symbol'>:cookies</span>              <span class='op'>=&gt;</span>  <span class='kw'>nil</span><span class='comma'>,</span>
+        <span class='symbol'>:accept_cookies</span>       <span class='op'>=&gt;</span>  <span class='kw'>true</span><span class='comma'>,</span>
+        <span class='symbol'>:proxy_addr</span>           <span class='op'>=&gt;</span>  <span class='kw'>nil</span><span class='comma'>,</span>
+        <span class='symbol'>:proxy_port</span>           <span class='op'>=&gt;</span>  <span class='kw'>nil</span><span class='comma'>,</span>
+        <span class='symbol'>:proxy_user</span>           <span class='op'>=&gt;</span>  <span class='kw'>nil</span><span class='comma'>,</span>
+        <span class='symbol'>:proxy_pass</span>           <span class='op'>=&gt;</span>  <span class='kw'>nil</span>
+    <span class='rbrace'>}</span>
+
+    <span class='id hash_opts'>hash_opts</span> <span class='op'>=</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id to_h'>to_h</span>
+    <span class='ivar'>@anemone_opts</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
+        <span class='ivar'>@anemone_opts</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id hash_opts'>hash_opts</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id hash_opts'>hash_opts</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+    
+    <span class='ivar'>@anemone_opts</span> <span class='op'>=</span> <span class='ivar'>@anemone_opts</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id hash_opts'>hash_opts</span> <span class='rparen'>)</span>
+    
+    <span class='ivar'>@sitemap</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@on_every_page_blocks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='comment'># if we have no 'include' patterns create one that will match
+</span>    <span class='comment'># everything, like '.*'
+</span>    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id include'>include</span> <span class='op'>=</span>
+        <span class='ivar'>@opts</span><span class='period'>.</span><span class='id include'>include</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>?</span> <span class='lbracket'>[</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.*</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='rbracket'>]</span> <span class='op'>:</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id include'>include</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="on_every_page_blocks-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="on_every_page_blocks-instance_method">
+  
+    - (<tt>Proc</tt>) <strong>on_every_page_blocks</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Code block to be executed on each page
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id on_every_page_blocks'>on_every_page_blocks</span>
+  <span class='ivar'>@on_every_page_blocks</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="opts-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="opts-instance_method">
+  
+    - (<tt><a href="Options.html" title="Arachni::Options (class)">Options</a></tt>) <strong>opts</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Options.html" title="Arachni::Options (class)">Options</a></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id opts'>opts</span>
+  <span class='ivar'>@opts</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="sitemap-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="sitemap-instance_method">
+  
+    - (<tt>Array</tt>) <strong>sitemap</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Sitemap, array of links
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id sitemap'>sitemap</span>
+  <span class='ivar'>@sitemap</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="on_every_page-instance_method">
+  
+    - (<tt>self</tt>) <strong>on_every_page</strong>(&amp;block) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Hook for further analysis of pages, statistics etc.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+        <span class='name'>block</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+code to be executed for every page
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>self</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 172</span>
+
+<span class='kw'>def</span> <span class='id on_every_page'>on_every_page</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='ivar'>@on_every_page_blocks</span><span class='period'>.</span><span class='id push'>push</span><span class='lparen'>(</span> <span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="run-instance_method">
+  
+    - (<tt>Array</tt>) <strong>run</strong>(&amp;block) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Runs the Spider and passes the url, html and headers Hash
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+        <span class='name'>block</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+a block expecting url, html, cookies
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+array of links, a sitemap
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 107</span>
+
+<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+
+    <span class='id i'>i</span> <span class='op'>=</span> <span class='int'>1</span>
+    <span class='comment'># start the crawl
+</span>    <span class='const'>Anemone</span><span class='period'>.</span><span class='id crawl'>crawl</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span> <span class='ivar'>@anemone_opts</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id anemone'>anemone</span><span class='op'>|</span>
+        
+        <span class='comment'># apply 'exclude' patterns
+</span>        <span class='id anemone'>anemone</span><span class='period'>.</span><span class='id skip_links_like'>skip_links_like</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id exclude'>exclude</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id exclude'>exclude</span>
+        
+        <span class='comment'># apply 'include' patterns and grab matching pages
+</span>        <span class='comment'># as they are discovered
+</span>        <span class='id anemone'>anemone</span><span class='period'>.</span><span class='id on_pages_like'>on_pages_like</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id include'>include</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id page'>page</span><span class='op'>|</span>
+
+            <span class='id url'>url</span> <span class='op'>=</span> <span class='id page'>page</span><span class='period'>.</span><span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+            
+            <span class='comment'># something went kaboom, tell the user and skip the page
+</span>            <span class='kw'>if</span> <span class='id page'>page</span><span class='period'>.</span><span class='id error'>error</span>
+                <span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[Error: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id page'>page</span><span class='period'>.</span><span class='id error'>error</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>] </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+                <span class='id print_debug_backtrace'>print_debug_backtrace</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='period'>.</span><span class='id error'>error</span> <span class='rparen'>)</span>
+                <span class='kw'>next</span>
+            <span class='kw'>end</span>
+
+            <span class='comment'># push the url in the sitemap
+</span>            <span class='ivar'>@sitemap</span><span class='period'>.</span><span class='id push'>push</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+
+            <span class='id print_line'>print_line</span>
+            <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[HTTP: </span><span class='embexpr_beg'>#{</span><span class='id page'>page</span><span class='period'>.</span><span class='id code'>code</span><span class='rbrace'>}</span><span class='tstring_content'>] </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+            
+            <span class='comment'># call the block...if we have one
+</span>            <span class='kw'>if</span> <span class='id block'>block</span>
+                <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id page'>page</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span> <span class='id page'>page</span><span class='period'>.</span><span class='id headers'>headers</span> <span class='rparen'>)</span>
+            <span class='kw'>end</span>
+
+            <span class='comment'># run blocks specified later 
+</span>            <span class='ivar'>@on_every_page_blocks</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id block'>block</span><span class='op'>|</span>
+                <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
+            <span class='rbrace'>}</span>
+
+            <span class='comment'># we don't need the HTML doc anymore
+</span>            <span class='id page'>page</span><span class='period'>.</span><span class='id discard_doc!'>discard_doc!</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+
+            <span class='comment'># make sure we obey the link count limit and
+</span>            <span class='comment'># return if we have exceeded it.
+</span>            <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id link_count_limit'>link_count_limit</span> <span class='op'>&amp;&amp;</span>
+                <span class='ivar'>@opts</span><span class='period'>.</span><span class='id link_count_limit'>link_count_limit</span> <span class='op'>&lt;=</span> <span class='id i'>i</span> <span class='rparen'>)</span>
+                <span class='kw'>return</span> <span class='ivar'>@sitemap</span><span class='period'>.</span><span class='id uniq'>uniq</span>
+            <span class='kw'>end</span>
+
+            <span class='id i'>i</span><span class='op'>+=</span><span class='int'>1</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+
+    <span class='kw'>return</span> <span class='ivar'>@sitemap</span><span class='period'>.</span><span class='id uniq'>uniq</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://sourceforge.net/apps/piwik/arachni/" : "http://sourceforge.net/apps/piwik/arachni/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://sourceforge.net/apps/piwik/arachni/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript>
+<!-- End Piwik Tag -->
+
+<div id="footer">
+  Generated on Wed Aug 25 22:09:36 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.8 (ruby-1.9.1).
+</div>
+
+  </body>
+</html>

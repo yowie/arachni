@@ -1,0 +1,2087 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Arachni::Module::Base</title>
+<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (B)</a> &raquo; 
+    <span class='title'><a href="../../Arachni.html" title="Arachni (module)">Arachni</a></span> &raquo; <span class='title'><a href="../Module.html" title="Arachni::Module (module)">Module</a></span>
+     &raquo; 
+    <span class="title">Base</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Arachni::Module::Base
+  <span class="abstract note title">Abstract</span>
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Arachni::Module::Base</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><a href="Auditor.html" title="Arachni::Module::Auditor (module)">Auditor</a>, <a href="Trainer.html" title="Arachni::Module::Trainer (module)">Trainer</a></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/module/base.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <div class="note abstract">
+  <strong>This class is abstract.</strong> 
+  <div class='inline'></div>
+</div>
+<p>
+Arachni&#8217;s base module class<br/> To be extended by Arachni::Modules.
+</p>
+<p>
+Defines basic structure and provides utilities to modules.
+</p>
+<p>
+@author: Anastasios &#8220;Zapotek&#8221; Laskos
+</p>
+<pre class="code">
+                                     &lt;tasos.laskos@gmail.com&gt;
+                                     &lt;zapotek@segfault.gr&gt;
+</pre>
+<p>
+@version: 0.1-pre
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><a href="../Modules/Audit/AuditObjects.html" title="Arachni::Modules::Audit::AuditObjects (class)">s::Audit::AuditObjects</a>, <a href="../Modules/Audit/Eval.html" title="Arachni::Modules::Audit::Eval (class)">s::Audit::Eval</a>, <a href="../Modules/Audit/ResponseSplitting.html" title="Arachni::Modules::Audit::ResponseSplitting (class)">s::Audit::ResponseSplitting</a>, <a href="../Modules/Audit/SQLInjection.html" title="Arachni::Modules::Audit::SQLInjection (class)">s::Audit::SQLInjection</a>, <a href="../Modules/Audit/SimpleCmdExec.html" title="Arachni::Modules::Audit::SimpleCmdExec (class)">s::Audit::SimpleCmdExec</a>, <a href="../Modules/Audit/SimpleRFI.html" title="Arachni::Modules::Audit::SimpleRFI (class)">s::Audit::SimpleRFI</a>, <a href="../Modules/Audit/XSS.html" title="Arachni::Modules::Audit::XSS (class)">s::Audit::XSS</a>, <a href="../Modules/Recon/BackupFiles.html" title="Arachni::Modules::Recon::BackupFiles (class)">s::Recon::BackupFiles</a>, <a href="../Modules/Recon/ExtractObjects.html" title="Arachni::Modules::Recon::ExtractObjects (class)">s::Recon::ExtractObjects</a></p>
+</div>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#http-instance_method" title="#http (instance method)">- (Arachni::HTTP) <strong>http</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Arachni::HTTP instance for the modules.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#page-instance_method" title="#page (instance method)">- (Page) <strong>page</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Arachni::Page instance.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deps-class_method" title="deps (class method)">+ (Object) <strong>deps</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+ABSTRACT - OPTIONAL.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#info-class_method" title="info (class method)">+ (Object) <strong>info</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+ABSTRACT - REQUIRED.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clean_up-instance_method" title="#clean_up (instance method)">- (Object) <strong>clean_up</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+ABSTRACT - OPTIONAL.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_cookie_simple-instance_method" title="#get_cookie_simple (instance method)">- (Hash) <strong>get_cookie_simple</strong>(cookie) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns a cookie from <tt><a href="#get_cookies-instance_method" title="Arachni::Module::Base#get_cookies (method)">Base#get_cookies</a></tt> as a name=>value hash.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_cookies-instance_method" title="#get_cookies (instance method)">- (Array) <strong>get_cookies</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns extended cookie information from <tt><a href="../Page.html#elements-instance_method" title="Arachni::Page#elements (method)">Arachni::Page#elements</a></tt>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_cookies_simple-instance_method" title="#get_cookies_simple (instance method)">- (Hash) <strong>get_cookies_simple</strong>(incookies = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns cookies from <tt><a href="#get_cookies-instance_method" title="Arachni::Module::Base#get_cookies (method)">Base#get_cookies</a></tt> as a name=>value hash.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_data_file-instance_method" title="#get_data_file (instance method)">- (Object) <strong>get_data_file</strong>(filename, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Gets module data files from
+&#8216;modules/[modtype]/[modname]/[filename]&#8217;.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_form_simple-instance_method" title="#get_form_simple (instance method)">- (Array) <strong>get_form_simple</strong>(form) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the form with its attributes and auditable inputs as a name=>value
+hash.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_forms-instance_method" title="#get_forms (instance method)">- (Aray) <strong>get_forms</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns extended form information from <tt><a href="../Page.html#elements-instance_method" title="Arachni::Page#elements (method)">Arachni::Page#elements</a></tt>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_forms_simple-instance_method" title="#get_forms_simple (instance method)">- (Array) <strong>get_forms_simple</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns an array of forms from <tt><a href="#get_forms-instance_method" title="Arachni::Module::Base#get_forms (method)">Base#get_forms</a></tt> with its attributes and<br/>
+its auditable inputs as a name=>value hash.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_links-instance_method" title="#get_links (instance method)">- (Aray) <strong>get_links</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns extended link information from <tt><a href="../Page.html#elements-instance_method" title="Arachni::Page#elements (method)">Arachni::Page#elements</a></tt>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_links_simple-instance_method" title="#get_links_simple (instance method)">- (Hash) <strong>get_links_simple</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns links from <tt><a href="#get_links-instance_method" title="Arachni::Module::Base#get_links (method)">Base#get_links</a></tt> as a name=>value hash with href as key.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_request_headers-instance_method" title="#get_request_headers (instance method)">- (Hash) <strong>get_request_headers</strong>(merge = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns a hash of request headers.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_response_headers-instance_method" title="#get_response_headers (instance method)">- (Hash) <strong>get_response_headers</strong>(res) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the headers from a Net::HTTP response as a hash.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Base) <strong>initialize</strong>(page) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Initializes the module attributes, HTTP client and <tt><a href="Trainer.html" title="Arachni::Module::Trainer (module)">Trainer</a></tt>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+ABSTRACT - OPTIONAL.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+ABSTRACT - REQUIRED.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="Auditor.html" title="Arachni::Module::Auditor (module)">Auditor</a></h3>
+  <p class="inherited"><a href="Auditor.html#audit_cookies-instance_method" title="Arachni::Module::Auditor#audit_cookies (method)">#audit_cookies</a>, <a href="Auditor.html#audit_forms-instance_method" title="Arachni::Module::Auditor#audit_forms (method)">#audit_forms</a>, <a href="Auditor.html#audit_headers-instance_method" title="Arachni::Module::Auditor#audit_headers (method)">#audit_headers</a>, <a href="Auditor.html#audit_links-instance_method" title="Arachni::Module::Auditor#audit_links (method)">#audit_links</a>, <a href="Auditor.html#get_matches-instance_method" title="Arachni::Module::Auditor#get_matches (method)">#get_matches</a>, <a href="Auditor.html#inject_each_var-instance_method" title="Arachni::Module::Auditor#inject_each_var (method)">#inject_each_var</a></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="Trainer.html" title="Arachni::Module::Trainer (module)">Trainer</a></h3>
+  <p class="inherited"><a href="Trainer.html#train-instance_method" title="Arachni::Module::Trainer#train (method)">#train</a></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="ElementDB.html" title="Arachni::Module::ElementDB (module)">ElementDB</a></h3>
+  <p class="inherited"><a href="ElementDB.html#init_cookies-instance_method" title="Arachni::Module::ElementDB#init_cookies (method)">#init_cookies</a>, <a href="ElementDB.html#init_forms-instance_method" title="Arachni::Module::ElementDB#init_forms (method)">#init_forms</a>, <a href="ElementDB.html#init_links-instance_method" title="Arachni::Module::ElementDB#init_links (method)">#init_links</a>, <a href="ElementDB.html#update_cookies-instance_method" title="Arachni::Module::ElementDB#update_cookies (method)">#update_cookies</a>, <a href="ElementDB.html#update_forms-instance_method" title="Arachni::Module::ElementDB#update_forms (method)">#update_forms</a>, <a href="ElementDB.html#update_links-instance_method" title="Arachni::Module::ElementDB#update_links (method)">#update_links</a>, <a href="ElementDB.html#work_on_cookies-instance_method" title="Arachni::Module::ElementDB#work_on_cookies (method)">#work_on_cookies</a>, <a href="ElementDB.html#work_on_forms-instance_method" title="Arachni::Module::ElementDB#work_on_forms (method)">#work_on_forms</a>, <a href="ElementDB.html#work_on_links-instance_method" title="Arachni::Module::ElementDB#work_on_links (method)">#work_on_links</a></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="Arachni::Module::Base (class)">Base</a></tt>) <strong>initialize</strong>(page) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Initializes the module attributes, HTTP client and <tt><a href="Trainer.html" title="Arachni::Module::Trainer (module)">Arachni::Module::Trainer</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../Page.html" title="Arachni::Page (class)">Page</a></tt>)</span>
+      
+      
+        <span class='name'>page</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="Trainer.html" title="Arachni::Module::Trainer (module)">Arachni::Module::Trainer</a></li>
+    
+      <li><a href="HTTP.html" title="Arachni::Module::HTTP (class)">Arachni::Module::HTTP</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
+    
+    <span class='ivar'>@page</span>  <span class='op'>=</span> <span class='id page'>page</span>
+    <span class='ivar'>@http</span>  <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+    
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id cookiejar'>cookiejar</span> <span class='rparen'>)</span>
+        <span class='ivar'>@http</span><span class='period'>.</span><span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id cookiejar'>cookiejar</span> <span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    
+    <span class='cvar'>@@last_url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='cvar'>@@last_url</span> <span class='op'>!=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='id init_forms'>init_forms</span><span class='lparen'>(</span> <span class='id get_forms'>get_forms</span> <span class='rparen'>)</span>
+        <span class='id init_links'>init_links</span><span class='lparen'>(</span> <span class='id get_links'>get_links</span> <span class='rparen'>)</span>
+        <span class='id init_cookies'>init_cookies</span><span class='lparen'>(</span> <span class='id get_cookies'>get_cookies</span> <span class='rparen'>)</span>
+        
+        <span class='cvar'>@@last_url</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span>
+    <span class='kw'>end</span>
+    
+    <span class='comment'>#
+</span>    <span class='comment'># This is a callback.
+</span>    <span class='comment'># The block will be called for every HTTP response
+</span>    <span class='comment'># we get during the audit.
+</span>    <span class='comment'>#
+</span>    <span class='comment'># It's used to train Arachni.
+</span>    <span class='comment'>#
+</span>    <span class='ivar'>@http</span><span class='period'>.</span><span class='id add_trainer'>add_trainer</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id res'>res</span><span class='comma'>,</span> <span class='id url'>url</span><span class='op'>|</span> <span class='id train'>train</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+    
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="http-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="http-instance_method">
+  
+    - (<tt>Arachni::HTTP</tt>) <strong>http</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Arachni::HTTP instance for the modules
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Arachni::HTTP</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id http'>http</span>
+  <span class='ivar'>@http</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="page-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="page-instance_method">
+  
+    - (<tt><a href="../Page.html" title="Arachni::Page (class)">Page</a></tt>) <strong>page</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Arachni::Page instance
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../Page.html" title="Arachni::Page (class)">Page</a></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id page'>page</span>
+  <span class='ivar'>@page</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="deps-class_method">
+  
+    + (<tt>Object</tt>) <strong>deps</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+ABSTRACT - OPTIONAL
+</p>
+<p>
+In case you depend on other modules you can return an array of their names
+(not their class names, the module names as they appear by the
+&#8220;-l&#8221; CLI argument) and they will be loaded for you.
+</p>
+<p>
+This is also great for creating audit/discovery/whatever profiles.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+171
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 171</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id deps'>deps</span>
+    <span class='comment'># example:
+</span>    <span class='comment'># ['eval', 'sqli']
+</span>    <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="info-class_method">
+  
+    + (<tt>Object</tt>) <strong>info</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+ABSTRACT - REQUIRED
+</p>
+<p>
+Provides information about the module. Don&#8217;t take this lightly and
+don&#8217;t ommit any of the info.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+    <span class='lbrace'>{</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Base module abstract class</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Provides an abstract the modules should implement.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+        <span class='comment'>#
+</span>        <span class='comment'># Arachni needs to know what elements the module plans to audit
+</span>        <span class='comment'># before invoking it.
+</span>        <span class='comment'># If a page doesn't have any of those elements
+</span>        <span class='comment'># there's no point in instantiating the module.
+</span>        <span class='comment'>#
+</span>        <span class='comment'># If you want the module to run no-matter what leave the array
+</span>        <span class='comment'># empty.
+</span>        <span class='comment'>#
+</span>        <span class='comment'># 'Elements'       =&gt; [
+</span>        <span class='comment'>#     Vulnerability::Element::FORM,
+</span>        <span class='comment'>#     Vulnerability::Element::LINK,
+</span>        <span class='comment'>#     Vulnerability::Element::COOKIE,
+</span>        <span class='comment'>#     Vulnerability::Element::HEADER
+</span>        <span class='comment'># ],
+</span>        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Author</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>$Rev$</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>References</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Targets</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Vulnerability</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CWE</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='comment'>#
+</span>            <span class='comment'># Severity can be:
+</span>            <span class='comment'>#
+</span>            <span class='comment'># Vulnerability::Severity::HIGH
+</span>            <span class='comment'># Vulnerability::Severity::MEDIUM
+</span>            <span class='comment'># Vulnerability::Severity::LOW
+</span>            <span class='comment'># Vulnerability::Severity::INFORMATIONAL
+</span>            <span class='comment'>#
+</span>            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Severity</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CVSSV2</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Remedy_Guidance</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Remedy_Code</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="clean_up-instance_method">
+  
+    - (<tt>Object</tt>) <strong>clean_up</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+ABSTRACT - OPTIONAL
+</p>
+<p>
+This is called after run() has finished executing,
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='id clean_up'>clean_up</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_cookie_simple-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>get_cookie_simple</strong>(cookie) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns a cookie from <tt><a href="#get_cookies-instance_method" title="Arachni::Module::Base#get_cookies (method)">#get_cookies</a></tt> as a name=>value hash
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>cookie</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+simple cookie
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+297
+298
+299</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 297</span>
+
+<span class='kw'>def</span> <span class='id get_cookie_simple'>get_cookie_simple</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='lbrace'>{</span> <span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_cookies-instance_method">
+  
+    - (<tt>Array</tt>) <strong>get_cookies</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns extended cookie information from <tt><a href="../Page.html#elements-instance_method" title="Arachni::Page#elements (method)">Arachni::Page#elements</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the cookie attributes, values, etc
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="../Page.html#get_cookies-instance_method" title="Arachni::Page#get_cookies (method)">Arachni::Page#get_cookies</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+267
+268
+269</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 267</span>
+
+<span class='kw'>def</span> <span class='id get_cookies'>get_cookies</span>
+    <span class='ivar'>@page</span><span class='period'>.</span><span class='id get_cookies'>get_cookies</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_cookies_simple-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>get_cookies_simple</strong>(incookies = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns cookies from <tt><a href="#get_cookies-instance_method" title="Arachni::Module::Base#get_cookies (method)">#get_cookies</a></tt> as a name=>value hash
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the cookie attributes, values, etc
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 276</span>
+
+<span class='kw'>def</span> <span class='id get_cookies_simple'>get_cookies_simple</span><span class='lparen'>(</span> <span class='id incookies'>incookies</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+    <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    
+    <span class='id incookies'>incookies</span> <span class='op'>=</span> <span class='id get_cookies'>get_cookies</span><span class='lparen'>(</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id incookies'>incookies</span>
+    
+    <span class='id incookies'>incookies</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
+        <span class='id cookies'>cookies</span><span class='lbracket'>[</span><span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+    
+    <span class='kw'>return</span> <span class='id cookies'>cookies</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@page</span><span class='period'>.</span><span class='id cookiejar'>cookiejar</span>
+    <span class='ivar'>@page</span><span class='period'>.</span><span class='id cookiejar'>cookiejar</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_data_file-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_data_file</strong>(filename, &amp;block) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Gets module data files from
+&#8216;modules/[modtype]/[modname]/[filename]&#8217;
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>filename</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+filename, without the path
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Block</tt>)</span>
+      
+      
+        <span class='name'>the</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+block to be passed each line as it&#8217;s read
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 353</span>
+
+<span class='kw'>def</span> <span class='id get_data_file'>get_data_file</span><span class='lparen'>(</span> <span class='id filename'>filename</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    
+    <span class='comment'># the path of the module that called us
+</span>    <span class='id mod_path'>mod_path</span> <span class='op'>=</span> <span class='id block'>block</span><span class='period'>.</span><span class='id source_location'>source_location</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    
+    <span class='comment'># the name of the module that called us
+</span>    <span class='id mod_name'>mod_name</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id basename'>basename</span><span class='lparen'>(</span> <span class='id mod_path'>mod_path</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.rb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    
+    <span class='comment'># the path to the module's data file directory
+</span>    <span class='id path'>path</span>    <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id expand_path'>expand_path</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id dirname'>dirname</span><span class='lparen'>(</span> <span class='id mod_path'>mod_path</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='op'>+</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id mod_name'>mod_name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span>
+            
+    <span class='id file'>file</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id filename'>filename</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id line'>line</span><span class='op'>|</span>
+        <span class='kw'>yield</span> <span class='id line'>line</span><span class='period'>.</span><span class='id strip'>strip</span>
+    <span class='rbrace'>}</span>
+    
+    <span class='id file'>file</span><span class='period'>.</span><span class='id close'>close</span>
+         
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_form_simple-instance_method">
+  
+    - (<tt>Array</tt>) <strong>get_form_simple</strong>(form) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the form with its attributes and auditable inputs as a name=>value
+hash
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 220</span>
+
+<span class='kw'>def</span> <span class='id get_form_simple'>get_form_simple</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
+    
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id form'>form</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+    
+    <span class='id new_form'>new_form</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+    <span class='id new_form'>new_form</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id form'>form</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+    <span class='id new_form'>new_form</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id form'>form</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span>
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id item'>item</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
+        <span class='id new_form'>new_form</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id item'>item</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id item'>item</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='id new_form'>new_form</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_forms-instance_method">
+  
+    - (<tt>Aray</tt>) <strong>get_forms</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns extended form information from <tt><a href="../Page.html#elements-instance_method" title="Arachni::Page#elements (method)">Arachni::Page#elements</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Aray</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+forms with attributes, values, etc
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="../Page.html#get_forms-instance_method" title="Arachni::Page#get_forms (method)">Arachni::Page#get_forms</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 184</span>
+
+<span class='kw'>def</span> <span class='id get_forms'>get_forms</span>
+    <span class='ivar'>@page</span><span class='period'>.</span><span class='id get_forms'>get_forms</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_forms_simple-instance_method">
+  
+    - (<tt>Array</tt>) <strong>get_forms_simple</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns an array of forms from <tt><a href="#get_forms-instance_method" title="Arachni::Module::Base#get_forms (method)">#get_forms</a></tt> with its attributes and<br/>
+its auditable inputs as a name=>value hash
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+206
+207
+208
+209
+210
+211
+212
+213</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 206</span>
+
+<span class='kw'>def</span> <span class='id get_forms_simple'>get_forms_simple</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='id forms'>forms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id get_forms'>get_forms</span><span class='lparen'>(</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span>
+        <span class='id forms'>forms</span> <span class='op'>&lt;&lt;</span> <span class='id get_form_simple'>get_form_simple</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+    <span class='id forms'>forms</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_links-instance_method">
+  
+    - (<tt>Aray</tt>) <strong>get_links</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns extended link information from <tt><a href="../Page.html#elements-instance_method" title="Arachni::Page#elements (method)">Arachni::Page#elements</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Aray</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+link with attributes, variables, etc
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="../Page.html#get_links-instance_method" title="Arachni::Page#get_links (method)">Arachni::Page#get_links</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 196</span>
+
+<span class='kw'>def</span> <span class='id get_links'>get_links</span>
+    <span class='ivar'>@page</span><span class='period'>.</span><span class='id get_links'>get_links</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_links_simple-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>get_links_simple</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns links from <tt><a href="#get_links-instance_method" title="Arachni::Module::Base#get_links (method)">#get_links</a></tt> as a name=>value hash with href as key
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 240</span>
+
+<span class='kw'>def</span> <span class='id get_links_simple'>get_links_simple</span>
+    <span class='id links'>links</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+    <span class='id get_links'>get_links</span><span class='lparen'>(</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id link'>link</span><span class='comma'>,</span> <span class='id i'>i</span><span class='op'>|</span>
+        
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span> <span class='rparen'>)</span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
+            
+        <span class='id links'>links</span><span class='lbracket'>[</span><span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+        <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
+            
+            <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id name'>name</span> <span class='op'>||</span> <span class='op'>!</span><span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
+                
+            <span class='id links'>links</span><span class='lbracket'>[</span><span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id value'>value</span>
+        <span class='rbrace'>}</span>
+        
+    <span class='rbrace'>}</span>
+    <span class='id links'>links</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_request_headers-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>get_request_headers</strong>(merge = false) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns a hash of request headers.
+</p>
+<p>
+If &#8216;merge&#8217; is set to &#8216;true&#8217; cookies will be
+skipped.<br/> If you need to audit cookies use <tt><a href="#get_cookies-instance_method" title="Arachni::Module::Base#get_cookies (method)">#get_cookies</a></tt> or
+<tt><a href="Auditor.html#audit_cookies-instance_method" title="Arachni::Module::Auditor#audit_cookies (method)">Arachni::Module::Auditor#audit_cookies</a></tt>.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <span class='name'>merge</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+merge with auditable (<tt><a href="../Page.html#request_headers-instance_method" title="Arachni::Page#request_headers (method)">Arachni::Page#request_headers</a></tt>) headers?
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="../Page.html#request_headers-instance_method" title="Arachni::Page#request_headers (method)">Arachni::Page#request_headers</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 314</span>
+
+<span class='kw'>def</span> <span class='id get_request_headers'>get_request_headers</span><span class='lparen'>(</span> <span class='id merge'>merge</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
+    
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id merge'>merge</span> <span class='op'>==</span> <span class='kw'>true</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id request_headers'>request_headers</span> <span class='rparen'>)</span>
+        <span class='kw'>begin</span>
+        <span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='op'>=</span> <span class='lparen'>(</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id init_headers'>init_headers</span> <span class='rparen'>)</span><span class='period'>.</span>
+            <span class='id merge'>merge</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id request_headers'>request_headers</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='kw'>rescue</span>
+            <span class='id headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+        <span class='kw'>end</span>
+        <span class='kw'>return</span> <span class='id headers'>headers</span> 
+    <span class='kw'>end</span>
+    
+   <span class='kw'>return</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id init_headers'>init_headers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_response_headers-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>get_response_headers</strong>(res) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the headers from a Net::HTTP response as a hash
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Net::HTTPResponse</tt>)</span>
+      
+      
+        <span class='name'>res</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 336</span>
+
+<span class='kw'>def</span> <span class='id get_response_headers'>get_response_headers</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+    
+    <span class='id header'>header</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+    <span class='id res'>res</span><span class='period'>.</span><span class='id each_capitalized'>each_capitalized</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id key'>key</span><span class='op'>|</span>
+        <span class='id header'>header</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id get_fields'>get_fields</span><span class='lparen'>(</span> <span class='id key'>key</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+    
+    <span class='id header'>header</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prepare-instance_method">
+  
+    - (<tt>Object</tt>) <strong>prepare</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+ABSTRACT - OPTIONAL
+</p>
+<p>
+It provides you with a way to setup your module&#8217;s data and methods.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="run-instance_method">
+  
+    - (<tt>Object</tt>) <strong>run</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+ABSTRACT - REQUIRED
+</p>
+<p>
+This is used to deliver the module&#8217;s payload whatever it may be.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 101</span>
+
+<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://sourceforge.net/apps/piwik/arachni/" : "http://sourceforge.net/apps/piwik/arachni/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://sourceforge.net/apps/piwik/arachni/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript>
+<!-- End Piwik Tag -->
+
+<div id="footer">
+  Generated on Wed Aug 25 22:09:38 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.8 (ruby-1.9.1).
+</div>
+
+  </body>
+</html>

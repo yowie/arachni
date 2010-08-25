@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Anemone::Page</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (P)</a> &raquo; 
+    <span class='title'><a href="../Anemone.html" title="Anemone (module)">Anemone</a></span>
+     &raquo; 
+    <span class="title">Page</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Anemone::Page
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Anemone::Page</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/anemone/page.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Overides Anemone&#8217;s Page class methods:<br/> o in_domain?( uri ):
+adding support for subdomain crawling<br/> o links(): adding support for
+frame and iframe src URLs<br/>
+</p>
+<p>
+@author: Anastasios &#8220;Zapotek&#8221; Laskos
+</p>
+<pre class="code">
+                                     &lt;tasos.laskos@gmail.com&gt;
+                                     &lt;zapotek@segfault.gr&gt;
+</pre>
+<p>
+@version: 0.1-pre
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#doc-instance_method" title="#doc (instance method)">- (Object) <strong>doc</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Nokogiri document for the HTML body.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#extract_domain-instance_method" title="#extract_domain (instance method)">- (String) <strong>extract_domain</strong>(url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Extracts the domain from a URI object.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#in_domain%3F-instance_method" title="#in_domain? (instance method)">- (Boolean) <strong>in_domain?</strong>(uri) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns <tt>true</tt> if <b>uri</b> is in the same domain as the page,
+returns <tt>false</tt> otherwise.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#links-instance_method" title="#links (instance method)">- (Object) <strong>links</strong> </a>
+    
+
+    
+      (also: #old_links)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Array of distinct A tag HREFs and (i)frame SRCs from the page<br/> The
+original links() method takes care of A tags and the added code takes care
+of (i)frame SRCs.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="doc-instance_method">
+  
+    - (<tt>Object</tt>) <strong>doc</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Nokogiri document for the HTML body
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id doc'>doc</span>
+  <span class='kw'>return</span> <span class='ivar'>@doc</span> <span class='kw'>if</span> <span class='ivar'>@doc</span>
+<span class='comment'>#      @doc = Nokogiri::HTML( @body ) if @body &amp;&amp; html? rescue nil
+</span>  <span class='ivar'>@doc</span> <span class='op'>=</span> <span class='const'>Nokogiri</span><span class='op'>::</span><span class='const'>HTML</span><span class='lparen'>(</span> <span class='ivar'>@body</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@body</span> <span class='kw'>rescue</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="extract_domain-instance_method">
+  
+    - (<tt>String</tt>) <strong>extract_domain</strong>(url) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Extracts the domain from a URI object
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>URI</tt>)</span>
+      
+      
+        <span class='name'>url</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id url'>url</span><span class='period'>.</span><span class='id host'>host</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>end</span>
+        
+    <span class='id splits'>splits</span> <span class='op'>=</span> <span class='id url'>url</span><span class='period'>.</span><span class='id host'>host</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id splits'>splits</span><span class='period'>.</span><span class='id length'>length</span> <span class='op'>==</span> <span class='int'>1</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>end</span>
+
+    <span class='id splits'>splits</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id splits'>splits</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="in_domain?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>in_domain?</strong>(uri) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns <tt>true</tt> if <b>uri</b> is in the same domain as the page,
+returns <tt>false</tt> otherwise.
+</p>
+<p>
+The added code enables optional subdomain crawling.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id follow_subdomains'>follow_subdomains</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span> <span class='op'>==</span>  <span class='id extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id uri'>uri</span><span class='period'>.</span><span class='id host'>host</span> <span class='op'>==</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id host'>host</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="links-instance_method">
+  
+    - (<tt>Object</tt>) <strong>links</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='old_links-instance_method'>old_links</span></span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Array of distinct A tag HREFs and (i)frame SRCs from the page<br/> The
+original links() method takes care of A tags and the added code takes care
+of (i)frame SRCs.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id links'>links</span>
+    <span class='ivar'>@links</span> <span class='op'>=</span> <span class='id old_links'>old_links</span>
+    <span class='kw'>return</span> <span class='ivar'>@links</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id doc'>doc</span>
+    
+    <span class='id doc'>doc</span><span class='period'>.</span><span class='id css'>css</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>frame</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>iframe</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id a'>a</span><span class='op'>|</span>
+        <span class='id u'>u</span> <span class='op'>=</span> <span class='id a'>a</span><span class='period'>.</span><span class='id attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>src</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id content'>content</span> <span class='kw'>rescue</span> <span class='kw'>nil</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id u'>u</span><span class='period'>.</span><span class='id nil?'>nil?</span> <span class='kw'>or</span> <span class='id u'>u</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id abs'>abs</span> <span class='op'>=</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span><span class='const'>URI</span><span class='lparen'>(</span><span class='id u'>u</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>rescue</span> <span class='kw'>next</span>
+        <span class='ivar'>@links</span> <span class='op'>&lt;&lt;</span> <span class='id abs'>abs</span> <span class='kw'>if</span> <span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span><span class='id abs'>abs</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    
+    <span class='ivar'>@links</span><span class='period'>.</span><span class='id uniq!'>uniq!</span>
+    <span class='ivar'>@links</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://sourceforge.net/apps/piwik/arachni/" : "http://sourceforge.net/apps/piwik/arachni/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://sourceforge.net/apps/piwik/arachni/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript>
+<!-- End Piwik Tag -->
+
+<div id="footer">
+  Generated on Wed Aug 25 22:09:39 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.8 (ruby-1.9.1).
+</div>
+
+  </body>
+</html>

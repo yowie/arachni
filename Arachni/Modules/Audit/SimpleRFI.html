@@ -1,0 +1,1025 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Arachni::Modules::Audit::SimpleRFI</title>
+<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../_index.html">Index (S)</a> &raquo; 
+    <span class='title'><a href="../../../Arachni.html" title="Arachni (module)">Arachni</a></span> &raquo; <span class='title'><a href="../../Modules.html" title="Arachni::Modules (module)">Modules</a></span> &raquo; <span class='title'><a href="../Audit.html" title="Arachni::Modules::Audit (module)">Audit</a></span>
+     &raquo; 
+    <span class="title">SimpleRFI</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Arachni::Modules::Audit::SimpleRFI
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></li>
+          
+            <li class="next">Arachni::Modules::Audit::SimpleRFI</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><a href="../../Module/Registrar.html" title="Arachni::Module::Registrar (module)">Arachni::Module::Registrar</a>, <a href="../../UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">modules/audit/simple_rfi.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Simple Remote File Inclusion tutorial module.
+</p>
+<p>
+It audits links, forms and cookies and will give you a good idea<br/> of
+how to write modules for Arachni.
+</p>
+<p>
+@author: Anastasios &#8220;Zapotek&#8221; Laskos
+</p>
+<pre class="code">
+                                     &lt;tasos.laskos@gmail.com&gt;
+                                     &lt;zapotek@segfault.gr&gt;
+</pre>
+<p>
+@version: $Rev$
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="http://cwe.mitre.org/data/definitions/94.html" target="_parent" title="http://cwe.mitre.org/data/definitions/94.html">http://cwe.mitre.org/data/definitions/94.html</a></li>
+    
+      <li><a href="http://projects.webappsec.org/Remote-File-Inclusion" target="_parent" title="http://projects.webappsec.org/Remote-File-Inclusion">http://projects.webappsec.org/Remote-File-Inclusion</a></li>
+    
+      <li><a href="http://en.wikipedia.org/wiki/Remote_File_Inclusion" target="_parent" title="http://en.wikipedia.org/wiki/Remote_File_Inclusion">http://en.wikipedia.org/wiki/Remote_File_Inclusion</a></li>
+    
+  </ul>
+
+</div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#http-instance_method" title="#http (instance method)">- (Arachni::Module::HTTP) <strong>http</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Arachni::Module::HTTP instance.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deps-class_method" title="deps (class method)">+ (Object) <strong>deps</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+OPTIONAL.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#info-class_method" title="info (class method)">+ (Object) <strong>info</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+REQUIRED.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clean_up-instance_method" title="#clean_up (instance method)">- (Object) <strong>clean_up</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+OPTIONAL.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (SimpleRFI) <strong>initialize</strong>(page) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+REQUIRED.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+OPTIONAL.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+REQUIRED.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="../../Module/Registrar.html" title="Arachni::Module::Registrar (module)">Arachni::Module::Registrar</a></h3>
+  <p class="inherited"><a href="../../Module/Registrar.html#add_storage-instance_method" title="Arachni::Module::Registrar#add_storage (method)">#add_storage</a>, <a href="../../Module/Registrar.html#get_storage-instance_method" title="Arachni::Module::Registrar#get_storage (method)">#get_storage</a>, <a href="../../Module/Registrar.html#get_store-instance_method" title="Arachni::Module::Registrar#get_store (method)">#get_store</a>, <a href="../../Module/Registrar.html#included-class_method" title="Arachni::Module::Registrar.included (method)">included</a>, <a href="../../Module/Registrar.html#register_results-instance_method" title="Arachni::Module::Registrar#register_results (method)">#register_results</a></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="../../UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></h3>
+  <p class="inherited"><a href="../../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a>, <a href="../../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a>, <a href="../../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a>, <a href="../../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a>, <a href="../../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a>, <a href="../../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a>, <a href="../../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a>, <a href="../../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a>, <a href="../../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a>, <a href="../../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a>, <a href="../../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a>, <a href="../../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a>, <a href="../../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a>, <a href="../../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a>, <a href="../../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></h3>
+  <p class="inherited"><a href="../../Module/Base.html#get_cookie_simple-instance_method" title="Arachni::Module::Base#get_cookie_simple (method)">#get_cookie_simple</a>, <a href="../../Module/Base.html#get_cookies-instance_method" title="Arachni::Module::Base#get_cookies (method)">#get_cookies</a>, <a href="../../Module/Base.html#get_cookies_simple-instance_method" title="Arachni::Module::Base#get_cookies_simple (method)">#get_cookies_simple</a>, <a href="../../Module/Base.html#get_data_file-instance_method" title="Arachni::Module::Base#get_data_file (method)">#get_data_file</a>, <a href="../../Module/Base.html#get_form_simple-instance_method" title="Arachni::Module::Base#get_form_simple (method)">#get_form_simple</a>, <a href="../../Module/Base.html#get_forms-instance_method" title="Arachni::Module::Base#get_forms (method)">#get_forms</a>, <a href="../../Module/Base.html#get_forms_simple-instance_method" title="Arachni::Module::Base#get_forms_simple (method)">#get_forms_simple</a>, <a href="../../Module/Base.html#get_links-instance_method" title="Arachni::Module::Base#get_links (method)">#get_links</a>, <a href="../../Module/Base.html#get_links_simple-instance_method" title="Arachni::Module::Base#get_links_simple (method)">#get_links_simple</a>, <a href="../../Module/Base.html#get_request_headers-instance_method" title="Arachni::Module::Base#get_request_headers (method)">#get_request_headers</a>, <a href="../../Module/Base.html#get_response_headers-instance_method" title="Arachni::Module::Base#get_response_headers (method)">#get_response_headers</a></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="../../Module/Auditor.html" title="Arachni::Module::Auditor (module)">Arachni::Module::Auditor</a></h3>
+  <p class="inherited"><a href="../../Module/Auditor.html#audit_cookies-instance_method" title="Arachni::Module::Auditor#audit_cookies (method)">#audit_cookies</a>, <a href="../../Module/Auditor.html#audit_forms-instance_method" title="Arachni::Module::Auditor#audit_forms (method)">#audit_forms</a>, <a href="../../Module/Auditor.html#audit_headers-instance_method" title="Arachni::Module::Auditor#audit_headers (method)">#audit_headers</a>, <a href="../../Module/Auditor.html#audit_links-instance_method" title="Arachni::Module::Auditor#audit_links (method)">#audit_links</a>, <a href="../../Module/Auditor.html#get_matches-instance_method" title="Arachni::Module::Auditor#get_matches (method)">#get_matches</a>, <a href="../../Module/Auditor.html#inject_each_var-instance_method" title="Arachni::Module::Auditor#inject_each_var (method)">#inject_each_var</a></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="../../Module/Trainer.html" title="Arachni::Module::Trainer (module)">Arachni::Module::Trainer</a></h3>
+  <p class="inherited"><a href="../../Module/Trainer.html#train-instance_method" title="Arachni::Module::Trainer#train (method)">#train</a></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="../../Module/ElementDB.html" title="Arachni::Module::ElementDB (module)">Arachni::Module::ElementDB</a></h3>
+  <p class="inherited"><a href="../../Module/ElementDB.html#init_cookies-instance_method" title="Arachni::Module::ElementDB#init_cookies (method)">#init_cookies</a>, <a href="../../Module/ElementDB.html#init_forms-instance_method" title="Arachni::Module::ElementDB#init_forms (method)">#init_forms</a>, <a href="../../Module/ElementDB.html#init_links-instance_method" title="Arachni::Module::ElementDB#init_links (method)">#init_links</a>, <a href="../../Module/ElementDB.html#update_cookies-instance_method" title="Arachni::Module::ElementDB#update_cookies (method)">#update_cookies</a>, <a href="../../Module/ElementDB.html#update_forms-instance_method" title="Arachni::Module::ElementDB#update_forms (method)">#update_forms</a>, <a href="../../Module/ElementDB.html#update_links-instance_method" title="Arachni::Module::ElementDB#update_links (method)">#update_links</a>, <a href="../../Module/ElementDB.html#work_on_cookies-instance_method" title="Arachni::Module::ElementDB#work_on_cookies (method)">#work_on_cookies</a>, <a href="../../Module/ElementDB.html#work_on_forms-instance_method" title="Arachni::Module::ElementDB#work_on_forms (method)">#work_on_forms</a>, <a href="../../Module/ElementDB.html#work_on_links-instance_method" title="Arachni::Module::ElementDB#work_on_links (method)">#work_on_links</a></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="Arachni::Modules::Audit::SimpleRFI (class)">SimpleRFI</a></tt>) <strong>initialize</strong>(page) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+REQUIRED
+</p>
+<p>
+Initializes the module and the parent.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../Page.html" title="Arachni::Page (class)">Page</a></tt>)</span>
+      
+      
+        <span class='name'>page</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+you can always expect this to be provided by the system.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></li>
+    
+      <li><a href="../../Page.html" title="Arachni::Page (class)">Arachni::Page</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83
+84
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/simple_rfi.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
+    <span class='comment'># unless you want to do something freaky
+</span>    <span class='comment'># *do not* ommit the following line
+</span>    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
+
+    <span class='comment'># init your stuff here
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="http-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="http-instance_method">
+  
+    - (<tt><a href="../../Module/HTTP.html" title="Arachni::Module::HTTP (class)">Arachni::Module::HTTP</a></tt>) <strong>http</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Arachni::Module::HTTP instance
+</p>
+<p>
+You don&#8217;t really need to declare this, you inherit it from
+Arachni::Module
+</p>
+<p>
+It&#8217;s an initialized object of the Arachni::Module::HTTP instance
+class configured with proxy, authentication, SSL settings etc.
+</p>
+<p>
+Look at Arachni::Module::HTTP instance doc to see what you get.
+</p>
+<p>
+If you need direct access to the Net::HTTP session you can get it from
+@http.session
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="../../Module/HTTP.html" title="Arachni::Module::HTTP (class)">Arachni::Module::HTTP</a></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/simple_rfi.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id http'>http</span>
+  <span class='ivar'>@http</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="deps-class_method">
+  
+    + (<tt>Object</tt>) <strong>deps</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+OPTIONAL
+</p>
+<p>
+In case you depend on other modules you can return an array of their names
+(not their class names, the module names as they appear by the
+&#8220;-l&#8221; CLI argument) and they will be loaded for you.
+</p>
+<p>
+This is also great for creating audit/discovery/whatever profiles.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+237
+238
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/simple_rfi.rb', line 237</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id deps'>deps</span>
+    <span class='comment'># example:
+</span>    <span class='comment'># ['eval', 'sqli']
+</span>    <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="info-class_method">
+  
+    + (<tt>Object</tt>) <strong>info</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+REQUIRED
+</p>
+<p>
+Do not ommit any of the info.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/simple_rfi.rb', line 182</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+    <span class='lbrace'>{</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>SimpleRFI</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Simple Remote File Inclusion recon module</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+        <span class='comment'>#
+</span>        <span class='comment'># Arachni needs to know what elements the module plans to audit
+</span>        <span class='comment'># before invoking it. If a page doesn't have any of those elements
+</span>        <span class='comment'># there's no point putting the module in the thread queue.
+</span>        <span class='comment'>#
+</span>        <span class='comment'># If you want the module to run no-matter what leave the array
+</span>        <span class='comment'># empty or don't define it at all.
+</span>        <span class='comment'># 
+</span>        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
+            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span><span class='comma'>,</span>
+            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span><span class='comma'>,</span>
+            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>COOKIE</span>
+        <span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Author</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>$Rev$</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>References</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>WASC</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://projects.webappsec.org/Remote-File-Inclusion</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Wikipedia</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://en.wikipedia.org/wiki/Remote_File_Inclusion</span><span class='tstring_end'>'</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Targets</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>PHP</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+        
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Vulnerability</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Remote file inclusion</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>A remote file inclusion vulnerability exists.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CWE</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>94</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='comment'>#
+</span>            <span class='comment'># Severity can be:
+</span>            <span class='comment'>#
+</span>            <span class='comment'># Vulnerability::Severity::HIGH
+</span>            <span class='comment'># Vulnerability::Severity::MEDIUM
+</span>            <span class='comment'># Vulnerability::Severity::LOW
+</span>            <span class='comment'># Vulnerability::Severity::INFORMATIONAL
+</span>            <span class='comment'>#
+</span>            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Severity</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>HIGH</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CVSSV2</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>7.5</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Remedy_Guidance</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Remedy_Code</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='rbrace'>}</span>
+        
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="clean_up-instance_method">
+  
+    - (<tt>Object</tt>) <strong>clean_up</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+OPTIONAL
+</p>
+<p>
+This is called after run() has finished executing, it allows you to clean
+up after yourself.
+</p>
+<p>
+May also be redundant but, once again, it&#8217;s optional
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/simple_rfi.rb', line 163</span>
+
+<span class='kw'>def</span> <span class='id clean_up'>clean_up</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>In SimpleRFI.clean_up()</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+
+    <span class='comment'>#
+</span>    <span class='comment'># REQUIRED
+</span>    <span class='comment'>#
+</span>    <span class='comment'># Register our results with the ModuleRegistry
+</span>    <span class='comment'># via the ModuleRegistrar.
+</span>    <span class='comment'>#
+</span>    <span class='comment'># Doesn't *have* to be in clean_up().
+</span>    <span class='comment'>#
+</span>    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='ivar'>@results</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prepare-instance_method">
+  
+    - (<tt>Object</tt>) <strong>prepare</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+OPTIONAL
+</p>
+<p>
+Gets called before any other method, right after initialization. It
+provides you with a way to setup your module&#8217;s data.
+</p>
+<p>
+It may be redundant but it&#8217;s optional anyways&#8230;
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/simple_rfi.rb', line 97</span>
+
+<span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='comment'>#
+</span>    <span class='comment'># You can use print debug for debugging.
+</span>    <span class='comment'># Don't over-do ti though, debugging messages are supposed to
+</span>    <span class='comment'># be helpful don't flood the output.
+</span>    <span class='comment'>#
+</span>    <span class='comment'># Debugging output will only appear if &quot;--debug&quot; is enabled.
+</span>    <span class='comment'>#
+</span>    <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>In SimpleRFI.prepare()</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+
+    <span class='comment'>#
+</span>    <span class='comment'># you can setup your modules environment as you wish
+</span>    <span class='comment'># but it's good practice to prefix your attributes and methods
+</span>    <span class='comment'># with 2 underscores ( @__foo_attr, __foo_meth() )
+</span>    <span class='comment'>#
+</span>
+    <span class='comment'># this is our RFI id signature, we'll look for it
+</span>    <span class='comment'># in the HTTP response body
+</span>    <span class='comment'>#
+</span>        <span class='ivar'>@__rfi_id_regex</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;title&gt;Google&lt;\/title&gt;</span><span class='regexp_end'>/ixm</span></span>
+        <span class='ivar'>@__rfi_id</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;title&gt;Google&lt;/title&gt;</span><span class='tstring_end'>'</span></span>
+<span class='comment'>#        @__rfi_id_regex = /d3612e6ae8c17e46fa8592c8bdb8f2f3/ixm
+</span><span class='comment'>#        @__rfi_id = 'd3612e6ae8c17e46fa8592c8bdb8f2f3'
+</span>
+    <span class='comment'># inject this url to asses RFI
+</span>        <span class='ivar'>@__injection_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hTtP://google.com</span><span class='tstring_end'>'</span></span>
+<span class='comment'>#        @__injection_url = 'http://localhost/zapotek/fis/file.txt'
+</span>
+    <span class='comment'>#
+</span>    <span class='comment'># the module can be made to detect XSS and many other kinds 
+</span>    <span class='comment'># of attack just as easily if you adjust the above attributes
+</span>    <span class='comment'># accordingly.
+</span>    <span class='comment'>#
+</span>
+    <span class='comment'>#
+</span>    <span class='comment'># this array will hold the audit results to be registered
+</span>    <span class='comment'># with the system, using:
+</span>    <span class='comment'>#
+</span>    <span class='comment'># register_results( @results )
+</span>    <span class='comment'>#
+</span>    <span class='comment'># Should be an array of Vulnerability objects
+</span>    <span class='comment'>#
+</span>    <span class='ivar'>@results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="run-instance_method">
+  
+    - (<tt>Object</tt>) <strong>run</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+REQUIRED
+</p>
+<p>
+This is used to deliver the module&#8217;s payload whatever it may be.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149
+150
+151
+152
+153</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/simple_rfi.rb', line 147</span>
+
+<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='id print_debug'>print_debug</span><span class='lparen'>(</span>  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>In SimpleRFI.run()</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+
+    <span class='id __audit_links'>__audit_links</span><span class='lparen'>(</span><span class='rparen'>)</span>
+    <span class='id __audit_forms'>__audit_forms</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='id __audit_cookies'>__audit_cookies</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://sourceforge.net/apps/piwik/arachni/" : "http://sourceforge.net/apps/piwik/arachni/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://sourceforge.net/apps/piwik/arachni/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript>
+<!-- End Piwik Tag -->
+
+<div id="footer">
+  Generated on Wed Aug 25 22:09:40 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.8 (ruby-1.9.1).
+</div>
+
+  </body>
+</html>

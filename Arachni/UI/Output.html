@@ -1,0 +1,1528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Module: Arachni::UI::Output</title>
+<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (O)</a> &raquo; 
+    <span class='title'><a href="../../Arachni.html" title="Arachni (module)">Arachni</a></span> &raquo; <span class='title'><a href="../UI.html" title="Arachni::UI (module)">UI</a></span>
+     &raquo; 
+    <span class="title">Output</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: Arachni::UI::Output
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r1">Included in:</dt>
+    <dd class="r1"><a href="../../Anemone/Core.html" title="Anemone::Core (class)">Anemone::Core</a>, <a href="../../Anemone/HTTP.html" title="Anemone::HTTP (class)">Anemone::HTTP</a>, <a href="../Analyzer.html" title="Arachni::Analyzer (class)">Arachni::Analyzer</a>, <a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a>, <a href="../Module/HTTP.html" title="Arachni::Module::HTTP (class)">Arachni::Module::HTTP</a>, <a href="../Module/Registry.html" title="Arachni::Module::Registry (class)">Arachni::Module::Registry</a>, <a href="../Modules/Audit/AuditObjects.html" title="Arachni::Modules::Audit::AuditObjects (class)">Arachni::Modules::Audit::AuditObjects</a>, <a href="../Modules/Audit/Eval.html" title="Arachni::Modules::Audit::Eval (class)">Arachni::Modules::Audit::Eval</a>, <a href="../Modules/Audit/ResponseSplitting.html" title="Arachni::Modules::Audit::ResponseSplitting (class)">Arachni::Modules::Audit::ResponseSplitting</a>, <a href="../Modules/Audit/SQLInjection.html" title="Arachni::Modules::Audit::SQLInjection (class)">Arachni::Modules::Audit::SQLInjection</a>, <a href="../Modules/Audit/SimpleCmdExec.html" title="Arachni::Modules::Audit::SimpleCmdExec (class)">Arachni::Modules::Audit::SimpleCmdExec</a>, <a href="../Modules/Audit/SimpleRFI.html" title="Arachni::Modules::Audit::SimpleRFI (class)">Arachni::Modules::Audit::SimpleRFI</a>, <a href="../Modules/Audit/XSS.html" title="Arachni::Modules::Audit::XSS (class)">Arachni::Modules::Audit::XSS</a>, <a href="../Modules/Recon/BackupFiles.html" title="Arachni::Modules::Recon::BackupFiles (class)">Arachni::Modules::Recon::BackupFiles</a>, <a href="../Modules/Recon/ExtractObjects.html" title="Arachni::Modules::Recon::ExtractObjects (class)">Arachni::Modules::Recon::ExtractObjects</a>, <a href="../Reports/AP.html" title="Arachni::Reports::AP (class)">Arachni::Reports::AP</a>, <a href="../Reports/HTML.html" title="Arachni::Reports::HTML (class)">Arachni::Reports::HTML</a>, <a href="../Reports/Stdout.html" title="Arachni::Reports::Stdout (class)">Arachni::Reports::Stdout</a>, <a href="../Spider.html" title="Arachni::Spider (class)">Arachni::Spider</a>, <a href="CLI.html" title="Arachni::UI::CLI (class)">CLI</a></dd>
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/ui/cli/output.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+CLI Output module
+</p>
+<p>
+Provides a command line output interface to the framework.<br/> All UIs
+should provide an Arachni::UI::Output module with these methods.
+</p>
+<p>
+@author: Anastasios &#8220;Zapotek&#8221; Laskos
+</p>
+<pre class="code">
+                                     &lt;tasos.laskos@gmail.com&gt;
+                                     &lt;zapotek@segfault.gr&gt;
+</pre>
+<p>
+@version: 0.1-pre
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="verbose-classvariable" class="">@@verbose =
+          <div class="docstring">
+  <div class="discussion">
+    <p>
+verbosity flag
+</p>
+<p>
+if it&#8217;s on verbose messages will be enabled
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+        </dt>
+        <dd><pre class="code"><span class='kw'>false</span></pre></dd>
+      
+        <dt id="debug-classvariable" class="">@@debug =
+          <div class="docstring">
+  <div class="discussion">
+    <p>
+debug flag
+</p>
+<p>
+if it&#8217;s on debugging messages will be enabled
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+        </dt>
+        <dd><pre class="code"><span class='kw'>false</span></pre></dd>
+      
+        <dt id="only_positives-classvariable" class="">@@only_positives =
+          <div class="docstring">
+  <div class="discussion">
+    <p>
+only_positives flag
+</p>
+<p>
+if it&#8217;s on status messages will be disabled
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+        </dt>
+        <dd><pre class="code"><span class='kw'>false</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#debug%21-instance_method" title="#debug! (instance method)">- (void) <strong>debug!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Sets the <tt><a href="#debug-classvariable" title="Arachni::UI::Output::@@debug (classvariable)">Output::@@debug</a></tt> flag to true.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#debug%3F-instance_method" title="#debug? (instance method)">- (Bool) <strong>debug?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the <tt><a href="#debug-classvariable" title="Arachni::UI::Output::@@debug (classvariable)">Output::@@debug</a></tt> flag.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#only_positives%21-instance_method" title="#only_positives! (instance method)">- (void) <strong>only_positives!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Sets the <tt><a href="#only_positives-classvariable" title="Arachni::UI::Output::@@only_positives (classvariable)">Output::@@only_positives</a></tt> flag to true.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#only_positives%3F-instance_method" title="#only_positives? (instance method)">- (Bool) <strong>only_positives?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the <tt><a href="#only_positives-classvariable" title="Arachni::UI::Output::@@only_positives (classvariable)">Output::@@only_positives</a></tt> flag.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_debug-instance_method" title="#print_debug (instance method)">- (void) <strong>print_debug</strong>(str = '') </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a debugging message.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_debug_backtrace-instance_method" title="#print_debug_backtrace (instance method)">- (void) <strong>print_debug_backtrace</strong>(e = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints the backtrace of an exception.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_debug_pp-instance_method" title="#print_debug_pp (instance method)">- (void) <strong>print_debug_pp</strong>(obj = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Pretty prints an object, used for debugging, needs some improvement but
+it&#8217;ll do for now.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_error-instance_method" title="#print_error (instance method)">- (void) <strong>print_error</strong>(str = '') </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints an error message.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_info-instance_method" title="#print_info (instance method)">- (void) <strong>print_info</strong>(str = '') </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints an info message.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_line-instance_method" title="#print_line (instance method)">- (void) <strong>print_line</strong>(str = '') </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a line of message.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_ok-instance_method" title="#print_ok (instance method)">- (void) <strong>print_ok</strong>(str = '') </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a good message, something that went very very right, like the
+discovery of a vulnerability.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_status-instance_method" title="#print_status (instance method)">- (void) <strong>print_status</strong>(str = '') </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a status message.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_verbose-instance_method" title="#print_verbose (instance method)">- (void) <strong>print_verbose</strong>(str = '') </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a verbose message.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#verbose%21-instance_method" title="#verbose! (instance method)">- (void) <strong>verbose!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Sets the <tt><a href="#verbose-classvariable" title="Arachni::UI::Output::@@verbose (classvariable)">Output::@@verbose</a></tt> flag to true.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#verbose%3F-instance_method" title="#verbose? (instance method)">- (Bool) <strong>verbose?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the <tt><a href="#verbose-classvariable" title="Arachni::UI::Output::@@verbose (classvariable)">Output::@@verbose</a></tt> flag.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="debug!-instance_method">
+  
+    - (<tt>void</tt>) <strong>debug!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Sets the <tt><a href="#debug-classvariable" title="Arachni::UI::Output::@@debug (classvariable)">@@debug</a></tt> flag to true
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201
+202
+203</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 201</span>
+
+<span class='kw'>def</span> <span class='id debug!'>debug!</span>
+    <span class='cvar'>@@debug</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="debug?-instance_method">
+  
+    - (<tt>Bool</tt>) <strong>debug?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the <tt><a href="#debug-classvariable" title="Arachni::UI::Output::@@debug (classvariable)">@@debug</a></tt> flag
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+@@debug
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+211
+212
+213</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 211</span>
+
+<span class='kw'>def</span> <span class='id debug?'>debug?</span>
+    <span class='cvar'>@@debug</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="only_positives!-instance_method">
+  
+    - (<tt>void</tt>) <strong>only_positives!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Sets the <tt><a href="#only_positives-classvariable" title="Arachni::UI::Output::@@only_positives (classvariable)">@@only_positives</a></tt> flag to true
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+221
+222
+223</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 221</span>
+
+<span class='kw'>def</span> <span class='id only_positives!'>only_positives!</span>
+    <span class='cvar'>@@only_positives</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="only_positives?-instance_method">
+  
+    - (<tt>Bool</tt>) <strong>only_positives?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the <tt><a href="#only_positives-classvariable" title="Arachni::UI::Output::@@only_positives (classvariable)">@@only_positives</a></tt> flag
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+@@only_positives
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+231
+232
+233</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 231</span>
+
+<span class='kw'>def</span> <span class='id only_positives?'>only_positives?</span>
+    <span class='cvar'>@@only_positives</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_debug-instance_method">
+  
+    - (<tt>void</tt>) <strong>print_debug</strong>(str = '') 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Prints a debugging message
+</p>
+<p>
+Obeys <tt><a href="#debug-classvariable" title="Arachni::UI::Output::@@debug (classvariable)">@@debug</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>debugging</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+string
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></li>
+    
+      <li><a href="#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='cvar'>@@debug</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
+    <span class='id print_color'>print_color</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>[!]</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>36</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_debug_backtrace-instance_method">
+  
+    - (<tt>void</tt>) <strong>print_debug_backtrace</strong>(e = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Prints the backtrace of an exception
+</p>
+<p>
+Obeys <tt><a href="#debug-classvariable" title="Arachni::UI::Output::@@debug (classvariable)">@@debug</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Exception</tt>)</span>
+      
+      
+        <span class='name'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></li>
+    
+      <li><a href="#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142
+143</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='id print_debug_backtrace'>print_debug_backtrace</span><span class='lparen'>(</span> <span class='id e'>e</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='cvar'>@@debug</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
+    <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id line'>line</span><span class='op'>|</span> <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='id line'>line</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_debug_pp-instance_method">
+  
+    - (<tt>void</tt>) <strong>print_debug_pp</strong>(obj = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Pretty prints an object, used for debugging, needs some improvement but
+it&#8217;ll do for now
+</p>
+<p>
+Obeys <tt><a href="#debug-classvariable" title="Arachni::UI::Output::@@debug (classvariable)">@@debug</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></li>
+    
+      <li><a href="#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id print_debug_pp'>print_debug_pp</span><span class='lparen'>(</span> <span class='id obj'>obj</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='cvar'>@@debug</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
+    <span class='id pp'>pp</span> <span class='id obj'>obj</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_error-instance_method">
+  
+    - (<tt>void</tt>) <strong>print_error</strong>(str = '') 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Prints an error message
+</p>
+<p>
+It ignores all flags, error messages will be output under all
+circumstances.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>error</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+string
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id print_color'>print_color</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>[-]</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>31</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_info-instance_method">
+  
+    - (<tt>void</tt>) <strong>print_info</strong>(str = '') 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Prints an info message
+</p>
+<p>
+Obeys <tt><a href="#only_positives-classvariable" title="Arachni::UI::Output::@@only_positives (classvariable)">@@only_positives</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>info</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+string
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></li>
+    
+      <li><a href="#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='cvar'>@@only_positives</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
+    <span class='id print_color'>print_color</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>[~]</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>30</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_line-instance_method">
+  
+    - (<tt>void</tt>) <strong>print_line</strong>(str = '') 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Prints a line of message
+</p>
+<p>
+Obeys <tt><a href="#only_positives-classvariable" title="Arachni::UI::Output::@@only_positives (classvariable)">@@only_positives</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>string</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></li>
+    
+      <li><a href="#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+170
+171
+172
+173</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 170</span>
+
+<span class='kw'>def</span> <span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='cvar'>@@only_positives</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
+    <span class='id puts'>puts</span> <span class='id str'>str</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_ok-instance_method">
+  
+    - (<tt>void</tt>) <strong>print_ok</strong>(str = '') 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Prints a good message, something that went very very right, like the
+discovery of a vulnerability
+</p>
+<p>
+Disregards all flags.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>ok</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+string
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id print_color'>print_color</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>[+]</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>32</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_status-instance_method">
+  
+    - (<tt>void</tt>) <strong>print_status</strong>(str = '') 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Prints a status message
+</p>
+<p>
+Obeys <tt><a href="#only_positives-classvariable" title="Arachni::UI::Output::@@only_positives (classvariable)">@@only_positives</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>status</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+string
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></li>
+    
+      <li><a href="#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='cvar'>@@only_positives</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
+    <span class='id print_color'>print_color</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>[*]</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>34</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_verbose-instance_method">
+  
+    - (<tt>void</tt>) <strong>print_verbose</strong>(str = '') 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Prints a verbose message
+</p>
+<p>
+Obeys <tt><a href="#verbose-classvariable" title="Arachni::UI::Output::@@verbose (classvariable)">@@verbose</a></tt>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>verbose</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+string
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></li>
+    
+      <li><a href="#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id print_verbose'>print_verbose</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='cvar'>@@verbose</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
+    <span class='id print_color'>print_color</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>[v]</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>37</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="verbose!-instance_method">
+  
+    - (<tt>void</tt>) <strong>verbose!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>
+Sets the <tt><a href="#verbose-classvariable" title="Arachni::UI::Output::@@verbose (classvariable)">@@verbose</a></tt> flag to true
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 181</span>
+
+<span class='kw'>def</span> <span class='id verbose!'>verbose!</span>
+    <span class='cvar'>@@verbose</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="verbose?-instance_method">
+  
+    - (<tt>Bool</tt>) <strong>verbose?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the <tt><a href="#verbose-classvariable" title="Arachni::UI::Output::@@verbose (classvariable)">@@verbose</a></tt> flag
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+@@verbose
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/output.rb', line 191</span>
+
+<span class='kw'>def</span> <span class='id verbose?'>verbose?</span>
+    <span class='cvar'>@@verbose</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://sourceforge.net/apps/piwik/arachni/" : "http://sourceforge.net/apps/piwik/arachni/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://sourceforge.net/apps/piwik/arachni/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript>
+<!-- End Piwik Tag -->
+
+<div id="footer">
+  Generated on Wed Aug 25 22:09:39 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.8 (ruby-1.9.1).
+</div>
+
+  </body>
+</html>
