@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Modules::Audit::XSS</title>
+<title>Class: Arachni::Modules::Audit::XSSURI</title>
 <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
@@ -26,7 +26,7 @@
     <a href="../../../_index.html">Index (X)</a> &raquo; 
     <span class='title'><a href="../../../Arachni.html" title="Arachni (module)">Arachni</a></span> &raquo; <span class='title'><a href="../../Modules.html" title="Arachni::Modules (module)">Modules</a></span> &raquo; <span class='title'><a href="../Audit.html" title="Arachni::Modules::Audit (module)">Audit</a></span>
      &raquo; 
-    <span class="title">XSS</span>
+    <span class="title">XSSURI</span>
   
   
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -43,7 +43,7 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Arachni::Modules::Audit::XSS
+    <div id="content"><h1>Class: Arachni::Modules::Audit::XSSURI
   
   
   
@@ -60,7 +60,7 @@
           
             <li class="next"><a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></li>
           
-            <li class="next">Arachni::Modules::Audit::XSS</li>
+            <li class="next">Arachni::Modules::Audit::XSSURI</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -80,7 +80,7 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">modules/audit/xss.rb</dd>
+    <dd class="r1 last">modules/audit/xss_uri.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -88,7 +88,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-XSS recon module.<br/> It audits links, forms and cookies.
+XSS in URI audit module.
 </p>
 <p>
 @author: Anastasios &#8220;Zapotek&#8221; Laskos
@@ -98,7 +98,7 @@ XSS recon module.<br/> It audits links, forms and cookies.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: $Rev$
+@version: $Rev: 371 $
 </p>
 
 
@@ -185,7 +185,49 @@ XSS recon module.<br/> It audits links, forms and cookies.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (XSS) <strong>initialize</strong>(page) </a>
+      <a href="#__get_path-instance_method" title="#__get_path (instance method)">- (Object) <strong>__get_path</strong>(url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__log_results-instance_method" title="#__log_results (instance method)">- (Object) <strong>__log_results</strong>(res, id, url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (XSSURI) <strong>initialize</strong>(page) </a>
     
 
     
@@ -201,7 +243,7 @@ XSS recon module.<br/> It audits links, forms and cookies.
 
   
     <span class="summary_desc"><div class='inline'><p>
-A new instance of XSS.
+A new instance of XSSURI.
 </p>
 </div></span>
   
@@ -319,14 +361,14 @@ A new instance of XSS.
     <div class="method_details first">
   <p class="signature first" id="initialize-instance_method">
   
-    - (<tt><a href="" title="Arachni::Modules::Audit::XSS (class)">XSS</a></tt>) <strong>initialize</strong>(page) 
+    - (<tt><a href="" title="Arachni::Modules::Audit::XSSURI (class)">XSSURI</a></tt>) <strong>initialize</strong>(page) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A new instance of XSS
+A new instance of XSSURI
 </p>
 
 
@@ -340,20 +382,18 @@ A new instance of XSS
       <pre class="lines">
 
 
+35
+36
 37
 38
-39
-40
-41
-42</pre>
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/xss_uri.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
 
-    <span class='ivar'>@__injection_strs_file</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='ivar'>@results</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -381,53 +421,43 @@ A new instance of XSS
       <pre class="lines">
 
 
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
 88
 89
 90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118</pre>
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/xss_uri.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>XSS</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Cross-Site Scripting recon module</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
-            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span><span class='comma'>,</span>
-            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span><span class='comma'>,</span>
-            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>COOKIE</span><span class='comma'>,</span>
-            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>HEADER</span>
-        <span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>XSSPath</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Cross-Site Scripting module for path injection</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Author</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>$Rev$</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>$Rev: 371 $</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>References</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ha.ckers</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://ha.ckers.org/xss.html</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Secunia</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://secunia.com/advisories/9716/</span><span class='tstring_end'>'</span></span>
@@ -435,7 +465,7 @@ A new instance of XSS
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Targets</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
             
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Vulnerability</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Cross-Site Scripting (XSS)</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Cross-Site Scripting (XSS) in URI</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Client-side code, like JavaScript, can
 </span><span class='tstring_content'>                be injected into the web application.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CWE</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>79</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -459,7 +489,157 @@ A new instance of XSS
     
     
       <div class="method_details first">
-  <p class="signature first" id="prepare-instance_method">
+  <p class="signature first" id="__get_path-instance_method">
+  
+    - (<tt>Object</tt>) <strong>__get_path</strong>(url) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/xss_uri.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='id __get_path'>__get_path</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+  
+    <span class='id splits'>splits</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+    
+    <span class='id url'>url</span><span class='period'>.</span><span class='id each_char'>each_char</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id c'>c</span><span class='op'>|</span>
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id c'>c</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+            <span class='id tmp'>tmp</span> <span class='op'>+=</span> <span class='id c'>c</span>
+        <span class='kw'>else</span>
+            <span class='id splits'>splits</span> <span class='op'>&lt;&lt;</span> <span class='id tmp'>tmp</span>
+            <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+        <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
+    
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id tmp'>tmp</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span>
+      <span class='id splits'>splits</span> <span class='op'>&lt;&lt;</span> <span class='id tmp'>tmp</span>
+    <span class='kw'>end</span>
+    
+    <span class='kw'>return</span> <span class='id splits'>splits</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="__log_results-instance_method">
+  
+    - (<tt>Object</tt>) <strong>__log_results</strong>(res, id, url) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/xss_uri.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id id'>id</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+
+    <span class='id regexp'>regexp</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    
+    <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id id'>id</span> <span class='op'>&amp;&amp;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='period'>.</span><span class='id scan'>scan</span><span class='lparen'>(</span> <span class='id regexp'>regexp</span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id id'>id</span> <span class='rparen'>)</span> <span class='op'>||</span>
+       <span class='lparen'>(</span> <span class='op'>!</span><span class='id id'>id</span> <span class='op'>&amp;&amp;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='period'>.</span><span class='id scan'>scan</span><span class='lparen'>(</span> <span class='id regexp'>regexp</span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='rparen'>)</span>
+       
+        <span class='id puts'>puts</span> <span class='id id'>id</span>        
+        <span class='id puts'>puts</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+    
+        <span class='comment'># append the result to the results hash
+</span>        <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>var</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>injected</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='id id'>id</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>id</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='id id'>id</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>regexp</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='id regexp'>regexp</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>regexp_match</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id id'>id</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>elem</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>response</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>headers</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>request</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>response</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>    
+            <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+                
+        <span class='comment'># inform the user that we have a match
+</span>        <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> in </span><span class='embexpr_beg'>#{</span><span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_content'> :\t</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+            
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prepare-instance_method">
   
     - (<tt>Object</tt>) <strong>prepare</strong> 
   
@@ -471,15 +651,23 @@ A new instance of XSS
       <pre class="lines">
 
 
+41
+42
+43
 44
 45
-46</pre>
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/xss_uri.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='ivar'>@__injection_strs_file</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>injection_strings.txt</span><span class='tstring_end'>'</span></span>
+    <span class='ivar'>@__injection_strs</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/&gt;\'&gt;&lt;ScRiPt&gt;a=/RANDOMIZE/&lt;/ScRiPt&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/&gt;&quot;&gt;&lt;ScRiPt&gt;a=/RANDOMIZE/&lt;/ScRiPt&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/&gt;&gt;&lt;ScRiPt&gt;a=/RANDOMIZE/&lt;/ScRiPt&gt;</span><span class='tstring_end'>'</span></span>
+    <span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -499,7 +687,6 @@ A new instance of XSS
       <pre class="lines">
 
 
-48
 49
 50
 51
@@ -514,70 +701,25 @@ A new instance of XSS
 60
 61
 62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85</pre>
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/xss_uri.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
-    <span class='comment'>#
-</span>    <span class='comment'># it's better to save big arrays to a file
-</span>    <span class='comment'># a big array is ugly, messy and can't be updated as easily
-</span>    <span class='comment'>#
-</span>    <span class='comment'># but don't open the file yourself, use get_data_file( filename )
-</span>    <span class='comment'># with a block and read each line
-</span>    <span class='comment'>#
-</span>    <span class='comment'># the file must be under modules/&lt;modtype&gt;/&lt;modname&gt;/&lt;filename&gt;
-</span>    <span class='comment'>#
-</span>    <span class='id get_data_file'>get_data_file</span><span class='lparen'>(</span> <span class='ivar'>@__injection_strs_file</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+    <span class='ivar'>@__injection_strs</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id str'>str</span><span class='op'>|</span>
+        
+        <span class='id url'>url</span>  <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>+</span> <span class='id str'>str</span>
+        <span class='id res'>res</span>  <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 
-        <span class='id audit_headers'>audit_headers</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-            <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-        <span class='rbrace'>}</span>
-        
-        <span class='id audit_forms'>audit_forms</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-            <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-        <span class='rbrace'>}</span>
-        
-        <span class='id audit_links'>audit_links</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-            <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-        <span class='rbrace'>}</span>
-        
-        <span class='id audit_cookies'>audit_cookies</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-            <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-        <span class='rbrace'>}</span>
-        
+        <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
+
     
-    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='ivar'>@results</span> <span class='rparen'>)</span>
+    <span class='comment'># register our results with the system
+</span>    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='ivar'>@results</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -602,7 +744,7 @@ piwikTracker.enableLinkTracking();
 <!-- End Piwik Tag -->
 
 <div id="footer">
-  Generated on Wed Aug 25 22:35:20 2010 by 
+  Generated on Wed Aug 25 22:35:21 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
