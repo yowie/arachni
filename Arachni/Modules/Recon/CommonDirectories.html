@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Modules::Recon::BackupFiles</title>
+<title>Class: Arachni::Modules::Recon::CommonDirectories</title>
 <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
@@ -23,10 +23,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../../_index.html">Index (B)</a> &raquo; 
+    <a href="../../../_index.html">Index (C)</a> &raquo; 
     <span class='title'><a href="../../../Arachni.html" title="Arachni (module)">Arachni</a></span> &raquo; <span class='title'><a href="../../Modules.html" title="Arachni::Modules (module)">Modules</a></span> &raquo; <span class='title'><a href="../Recon.html" title="Arachni::Modules::Recon (module)">Recon</a></span>
      &raquo; 
-    <span class="title">BackupFiles</span>
+    <span class="title">CommonDirectories</span>
   
   
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -43,7 +43,7 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Arachni::Modules::Recon::BackupFiles
+    <div id="content"><h1>Class: Arachni::Modules::Recon::CommonDirectories
   
   
   
@@ -60,7 +60,7 @@
           
             <li class="next"><a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></li>
           
-            <li class="next">Arachni::Modules::Recon::BackupFiles</li>
+            <li class="next">Arachni::Modules::Recon::CommonDirectories</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -80,7 +80,7 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">modules/recon/backup_files.rb</dd>
+    <dd class="r1 last">modules/recon/common_directories.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -88,11 +88,10 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-Backup file discovery module.
+Common directories discovery module.
 </p>
 <p>
-Appends common backup extesions to the filename of the page under
-audit<br/> and checks for its existence.
+Looks for common, possibly sensitive, directories on the server.
 </p>
 <p>
 @author: Anastasios &#8220;Zapotek&#8221; Laskos
@@ -102,7 +101,7 @@ audit<br/> and checks for its existence.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: $Rev$
+@version: $Rev: 385 $
 </p>
 
 
@@ -110,6 +109,13 @@ audit<br/> and checks for its existence.
 </div>
 <div class="tags">
   
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="http://cwe.mitre.org/data/definitions/538.html" target="_parent" title="http://cwe.mitre.org/data/definitions/538.html">http://cwe.mitre.org/data/definitions/538.html</a></li>
+    
+  </ul>
+
 </div>
 
   
@@ -199,7 +205,7 @@ audit<br/> and checks for its existence.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#__log_results-instance_method" title="#__log_results (instance method)">- (Object) <strong>__log_results</strong>(res, filename, url) </a>
+      <a href="#__log_results-instance_method" title="#__log_results (instance method)">- (Object) <strong>__log_results</strong>(res, dirname, url) </a>
     
 
     
@@ -220,7 +226,7 @@ audit<br/> and checks for its existence.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (BackupFiles) <strong>initialize</strong>(page) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (CommonDirectories) <strong>initialize</strong>(page) </a>
     
 
     
@@ -236,7 +242,7 @@ audit<br/> and checks for its existence.
 
   
     <span class="summary_desc"><div class='inline'><p>
-A new instance of BackupFiles.
+A new instance of CommonDirectories.
 </p>
 </div></span>
   
@@ -333,14 +339,14 @@ A new instance of BackupFiles.
     <div class="method_details first">
   <p class="signature first" id="initialize-instance_method">
   
-    - (<tt><a href="" title="Arachni::Modules::Recon::BackupFiles (class)">BackupFiles</a></tt>) <strong>initialize</strong>(page) 
+    - (<tt><a href="" title="Arachni::Modules::Recon::CommonDirectories (class)">CommonDirectories</a></tt>) <strong>initialize</strong>(page) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A new instance of BackupFiles
+A new instance of CommonDirectories
 </p>
 
 
@@ -354,7 +360,6 @@ A new instance of BackupFiles
       <pre class="lines">
 
 
-38
 39
 40
 41
@@ -364,15 +369,14 @@ A new instance of BackupFiles
 45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
 
-    <span class='ivar'>@__backup_ext_file</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>extensions.txt</span><span class='tstring_end'>'</span></span>
+    <span class='ivar'>@__common_directories</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>directories.txt</span><span class='tstring_end'>'</span></span> 
     
-    <span class='comment'># our results hash
-</span>    <span class='ivar'>@results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -399,47 +403,47 @@ A new instance of BackupFiles
       <pre class="lines">
 
 
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112</pre>
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>BackupFiles</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Tries to find sensitive backup files.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CommonDirectories</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Tries to find common directories on the server.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Author</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>$Rev$</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>$Rev: 385 $</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>References</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Targets</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
             
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Vulnerability</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>A backup file exists on the server.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>A common directory exists on the server.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CWE</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>530</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Severity</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>HIGH</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CWE</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>538</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Severity</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>MEDIUM</span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CVSSV2</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Remedy_Guidance</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Remedy_Code</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -471,30 +475,30 @@ A new instance of BackupFiles
       <pre class="lines">
 
 
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134</pre>
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id __get_path'>__get_path</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
   
@@ -525,7 +529,7 @@ A new instance of BackupFiles
       <div class="method_details ">
   <p class="signature " id="__log_results-instance_method">
   
-    - (<tt>Object</tt>) <strong>__log_results</strong>(res, filename, url) 
+    - (<tt>Object</tt>) <strong>__log_results</strong>(res, dirname, url) 
   
 
   
@@ -535,40 +539,40 @@ A new instance of BackupFiles
       <pre class="lines">
 
 
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157</pre>
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 112</span>
 
-<span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id filename'>filename</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id dirname'>dirname</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     
     <span class='comment'># append the result to the results hash
 </span>    <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>var</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>injected</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='id filename'>filename</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>id</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='id filename'>filename</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>injected</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='id dirname'>dirname</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>id</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='id dirname'>dirname</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>regexp</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>regexp_match</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>elem</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span><span class='comma'>,</span>
@@ -581,7 +585,7 @@ A new instance of BackupFiles
             
     <span class='comment'># inform the user that we have a match
 </span>    <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> named </span><span class='embexpr_beg'>#{</span><span class='id filename'>filename</span><span class='rbrace'>}</span><span class='tstring_content'> at\t</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> named </span><span class='embexpr_beg'>#{</span><span class='id dirname'>dirname</span><span class='rbrace'>}</span><span class='tstring_content'> at\t</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -618,71 +622,23 @@ A new instance of BackupFiles
 61
 62
 63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88</pre>
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
     <span class='comment'># ugly crap but it works, as far as I can tell...
 </span>    <span class='id path'>path</span>     <span class='op'>=</span> <span class='id __get_path'>__get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='id regex'>regex</span>    <span class='op'>=</span> <span class='id path'>path</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>(.*)</span><span class='tstring_end'>'</span></span>
     
-    <span class='id filename'>filename</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='period'>.</span><span class='id match'>match</span><span class='lparen'>(</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id regex'>regex</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-    <span class='id filename'>filename</span> <span class='op'>=</span> <span class='id filename'>filename</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\?(.*)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> 
-    
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id filename'>filename</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
-        <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> is backing out. </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> 
-          <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Can\'t extract filename from url: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span>
-    <span class='kw'>end</span>
-    
-    <span class='id get_data_file'>get_data_file</span><span class='lparen'>(</span> <span class='ivar'>@__backup_ext_file</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id ext'>ext</span><span class='op'>|</span>
+    <span class='id get_data_file'>get_data_file</span><span class='lparen'>(</span> <span class='ivar'>@__common_directories</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id dirname'>dirname</span><span class='op'>|</span>
         
-        <span class='comment'>#
-</span>        <span class='comment'># Test for the existance of the file + extension.
-</span>        <span class='comment'>#
-</span>        <span class='comment'># We're not worrying about its contents, the Trainer will
-</span>        <span class='comment'># analyze it and if it's HTML it'll extract any new attack vectors.
-</span>        <span class='comment'>#
-</span>        
-        <span class='id file'>file</span> <span class='op'>=</span> <span class='id ext'>ext</span> <span class='op'>%</span> <span class='id filename'>filename</span> <span class='comment'># Example: index.php.bak
-</span>        <span class='id url'>url</span>  <span class='op'>=</span> <span class='id path'>path</span> <span class='op'>+</span> <span class='id file'>file</span>
+        <span class='id url'>url</span>  <span class='op'>=</span> <span class='id path'>path</span> <span class='op'>+</span> <span class='id dirname'>dirname</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span>
         <span class='id res'>res</span>  <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 
-        <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>200</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-        
-        <span class='id file'>file</span> <span class='op'>=</span> <span class='id ext'>ext</span> <span class='op'>%</span> <span class='id filename'>filename</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.(.*)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='comment'># Example: index.bak
-</span>        <span class='id url'>url</span>  <span class='op'>=</span> <span class='id path'>path</span> <span class='op'>+</span> <span class='id file'>file</span>
-        <span class='id res'>res</span>  <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-        
-        <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>200</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id dirname'>dirname</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>200</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
     
@@ -699,7 +655,7 @@ A new instance of BackupFiles
 </div>
     
     <div id="footer">
-  Generated on Sun Aug 29 20:43:58 2010 by 
+  Generated on Sun Aug 29 20:43:59 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

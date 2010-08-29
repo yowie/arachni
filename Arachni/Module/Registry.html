@@ -1076,9 +1076,6 @@ Path to the module directory
     <p>
 Stores an object regulated by <tt><a href="Registrar.html#add_storage-instance_method" title="Arachni::Module::Registrar#add_storage (method)">Arachni::Module::Registrar#add_storage</a></tt> in @@module_storage
 </p>
-<p>
-TODO: this isn&#8217;t smart, classify it by module name instead
-</p>
 
 
   </div>
@@ -1113,12 +1110,12 @@ TODO: this isn&#8217;t smart, classify it by module name instead
       <pre class="lines">
 
 
-288
-289
-290</pre>
+286
+287
+288</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 288</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 286</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id add_storage'>add_storage</span><span class='lparen'>(</span> <span class='id obj'>obj</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_storage</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id obj'>obj</span> <span class='rparen'>)</span>
@@ -1214,6 +1211,8 @@ the new @@module_registry
       <pre class="lines">
 
 
+324
+325
 326
 327
 328
@@ -1228,12 +1227,10 @@ the new @@module_registry
 337
 338
 339
-340
-341
-342</pre>
+340</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 326</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 324</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id clean_up'>clean_up</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -1440,15 +1437,15 @@ the data under key
       <pre class="lines">
 
 
+300
+301
 302
 303
 304
-305
-306
-307</pre>
+305</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 302</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 300</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id get_storage'>get_storage</span><span class='lparen'>(</span> <span class='id key'>key</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_storage</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -1498,12 +1495,12 @@ Gets the entire storage array
       <pre class="lines">
 
 
-314
-315
-316</pre>
+312
+313
+314</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 314</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 312</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id get_store'>get_store</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_storage</span>
@@ -2294,7 +2291,7 @@ the loaded modules
 </div>
     
     <div id="footer">
-  Generated on Thu Aug 26 01:17:07 2010 by 
+  Generated on Sun Aug 29 20:43:57 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
