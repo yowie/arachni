@@ -185,27 +185,6 @@ XSS in path audit module.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#__get_path-instance_method" title="#__get_path (instance method)">- (Object) <strong>__get_path</strong>(url) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#__log_results-instance_method" title="#__log_results (instance method)">- (Object) <strong>__log_results</strong>(res, id, url) </a>
     
 
@@ -489,9 +468,9 @@ A new instance of XSSPath
     
     
       <div class="method_details first">
-  <p class="signature first" id="__get_path-instance_method">
+  <p class="signature first" id="__log_results-instance_method">
   
-    - (<tt>Object</tt>) <strong>__get_path</strong>(url) 
+    - (<tt>Object</tt>) <strong>__log_results</strong>(res, id, url) 
   
 
   
@@ -521,81 +500,17 @@ A new instance of XSSPath
 113
 114
 115
-116</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss_path.rb', line 96</span>
-
-<span class='kw'>def</span> <span class='id __get_path'>__get_path</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-  
-    <span class='id splits'>splits</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-    
-    <span class='id url'>url</span><span class='period'>.</span><span class='id each_char'>each_char</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id c'>c</span><span class='op'>|</span>
-        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id c'>c</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-            <span class='id tmp'>tmp</span> <span class='op'>+=</span> <span class='id c'>c</span>
-        <span class='kw'>else</span>
-            <span class='id splits'>splits</span> <span class='op'>&lt;&lt;</span> <span class='id tmp'>tmp</span>
-            <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-        <span class='kw'>end</span>
-    <span class='rbrace'>}</span>
-    
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id tmp'>tmp</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span>
-      <span class='id splits'>splits</span> <span class='op'>&lt;&lt;</span> <span class='id tmp'>tmp</span>
-    <span class='kw'>end</span>
-    
-    <span class='kw'>return</span> <span class='id splits'>splits</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="__log_results-instance_method">
-  
-    - (<tt>Object</tt>) <strong>__log_results</strong>(res, id, url) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
+116
+117
 118
 119
 120
 121
 122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145</pre>
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss_path.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/xss_path.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id id'>id</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     
@@ -704,7 +619,7 @@ A new instance of XSSPath
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
     <span class='comment'># ugly crap but it works, as far as I can tell...
-</span>    <span class='id path'>path</span> <span class='op'>=</span> <span class='id __get_path'>__get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+</span>    <span class='id path'>path</span> <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id get_path'>get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
     
     <span class='ivar'>@__injection_strs</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id str'>str</span><span class='op'>|</span>
@@ -729,7 +644,7 @@ A new instance of XSSPath
 </div>
     
     <div id="footer">
-  Generated on Sun Aug 29 20:43:58 2010 by 
+  Generated on Mon Aug 30 00:29:01 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

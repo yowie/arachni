@@ -178,27 +178,6 @@ audit<br/> and checks for its existence.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#__get_path-instance_method" title="#__get_path (instance method)">- (Object) <strong>__get_path</strong>(url) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#__log_results-instance_method" title="#__log_results (instance method)">- (Object) <strong>__log_results</strong>(res, filename, url) </a>
     
 
@@ -459,9 +438,9 @@ A new instance of BackupFiles
     
     
       <div class="method_details first">
-  <p class="signature first" id="__get_path-instance_method">
+  <p class="signature first" id="__log_results-instance_method">
   
-    - (<tt>Object</tt>) <strong>__get_path</strong>(url) 
+    - (<tt>Object</tt>) <strong>__log_results</strong>(res, filename, url) 
   
 
   
@@ -491,75 +470,11 @@ A new instance of BackupFiles
 131
 132
 133
-134</pre>
+134
+135</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 114</span>
-
-<span class='kw'>def</span> <span class='id __get_path'>__get_path</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-  
-    <span class='id splits'>splits</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-    
-    <span class='id url'>url</span><span class='period'>.</span><span class='id each_char'>each_char</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id c'>c</span><span class='op'>|</span>
-        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id c'>c</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-            <span class='id tmp'>tmp</span> <span class='op'>+=</span> <span class='id c'>c</span>
-        <span class='kw'>else</span>
-            <span class='id splits'>splits</span> <span class='op'>&lt;&lt;</span> <span class='id tmp'>tmp</span>
-            <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-        <span class='kw'>end</span>
-    <span class='rbrace'>}</span>
-    
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id tmp'>tmp</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span>
-      <span class='id splits'>splits</span> <span class='op'>&lt;&lt;</span> <span class='id tmp'>tmp</span>
-    <span class='kw'>end</span>
-    
-    <span class='kw'>return</span> <span class='id splits'>splits</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="__log_results-instance_method">
-  
-    - (<tt>Object</tt>) <strong>__log_results</strong>(res, filename, url) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 136</span>
 
 <span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id filename'>filename</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     
@@ -650,7 +565,7 @@ A new instance of BackupFiles
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
     <span class='comment'># ugly crap but it works, as far as I can tell...
-</span>    <span class='id path'>path</span>     <span class='op'>=</span> <span class='id __get_path'>__get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+</span>    <span class='id path'>path</span>     <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id get_path'>get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='id regex'>regex</span>    <span class='op'>=</span> <span class='id path'>path</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>(.*)</span><span class='tstring_end'>'</span></span>
     
     <span class='id filename'>filename</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='period'>.</span><span class='id match'>match</span><span class='lparen'>(</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id regex'>regex</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -699,7 +614,7 @@ A new instance of BackupFiles
 </div>
     
     <div id="footer">
-  Generated on Sun Aug 29 20:43:58 2010 by 
+  Generated on Mon Aug 30 00:29:02 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

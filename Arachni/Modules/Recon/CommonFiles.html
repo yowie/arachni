@@ -632,7 +632,7 @@ A new instance of CommonFiles
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
     <span class='comment'># ugly crap but it works, as far as I can tell...
-</span>    <span class='id path'>path</span>     <span class='op'>=</span> <span class='id __get_path'>__get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+</span>    <span class='id path'>path</span> <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id get_path'>get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
     
     <span class='id get_data_file'>get_data_file</span><span class='lparen'>(</span> <span class='ivar'>@__common_files</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id file'>file</span><span class='op'>|</span>
@@ -664,7 +664,7 @@ A new instance of CommonFiles
 </div>
     
     <div id="footer">
-  Generated on Sun Aug 29 20:43:58 2010 by 
+  Generated on Mon Aug 30 00:29:02 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
