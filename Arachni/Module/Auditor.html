@@ -1364,7 +1364,22 @@ the string to inject
 395
 396
 397
-398</pre>
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 367</span>
@@ -1398,6 +1413,21 @@ the string to inject
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id hash'>hash</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='id k'>k</span> <span class='op'>=&gt;</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='id to_inj'>to_inj</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
+
+    <span class='comment'>#
+</span>    <span class='comment'># same as above but with null terminated injection strings
+</span>    <span class='comment'>#
+</span>    <span class='id chash'>chash</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id k'>k</span><span class='op'>|</span>
+        
+        <span class='id chash'>chash</span> <span class='op'>=</span> <span class='const'>KeyFiller</span><span class='period'>.</span><span class='id fill'>fill</span><span class='lparen'>(</span> <span class='id chash'>chash</span> <span class='rparen'>)</span>
+        
+        <span class='id var_combo'>var_combo</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span> 
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>altered</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id k'>k</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id chash'>chash</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='id k'>k</span> <span class='op'>=&gt;</span> <span class='id chash'>chash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='id to_inj'>to_inj</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+
     
     <span class='id var_combo'>var_combo</span>
 <span class='kw'>end</span></pre>
@@ -1411,7 +1441,7 @@ the string to inject
 </div>
     
     <div id="footer">
-  Generated on Mon Aug 30 03:46:07 2010 by 
+  Generated on Tue Aug 31 23:57:59 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

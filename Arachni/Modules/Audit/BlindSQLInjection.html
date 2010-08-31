@@ -91,7 +91,7 @@
 Blind SQL injection audit module
 </p>
 <p>
-It uses a MySQL timing attack.<br/> This is going to be greatly improved in
+It uses a SQL timing attacks.<br/> This is going to be greatly improved in
 the future<br/> to support other DBs as well.
 </p>
 <p>
@@ -393,14 +393,6 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
-121
-122
-123
-124
-125
-126
-127
-128
 129
 130
 131
@@ -421,10 +413,18 @@ A new instance of BlindSQLInjection
 146
 147
 148
-149</pre>
+149
+150
+151
+152
+153
+154
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 129</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -491,7 +491,15 @@ A new instance of BlindSQLInjection
 61
 62
 63
-64</pre>
+64
+65
+66
+67
+68
+69
+70
+71
+72</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 52</span>
@@ -505,7 +513,15 @@ A new instance of BlindSQLInjection
         <span class='comment'># MySQL
 </span>        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> AND BENCHMARK(5000000,ENCODE(1,1)) --</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\' AND BENCHMARK(5000000,ENCODE(1,1)) --</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&quot; AND BENCHMARK(5000000,ENCODE(1,1)) --</span><span class='tstring_end'>'</span></span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&quot; AND BENCHMARK(5000000,ENCODE(1,1)) --</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='comment'># MSSQL
+</span>        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;waitfor delay \'0:0:5\'--</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\';waitfor delay \'0:0:5\'--</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&quot;;waitfor delay \'0:0:5\'--</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='comment'># PostgreSQL
+</span>        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;SELECT pg_sleep(5);--</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\';SELECT pg_sleep(5);--</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\&quot;;SELECT pg_sleep(5);--</span><span class='tstring_end'>'</span></span>
     <span class='rbracket'>]</span>
     
 <span class='kw'>end</span></pre>
@@ -527,14 +543,6 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
-66
-67
-68
-69
-70
-71
-72
-73
 74
 75
 76
@@ -579,10 +587,18 @@ A new instance of BlindSQLInjection
 115
 116
 117
-118</pre>
+118
+119
+120
+121
+122
+123
+124
+125
+126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -647,7 +663,7 @@ A new instance of BlindSQLInjection
 </div>
     
     <div id="footer">
-  Generated on Mon Aug 30 03:46:08 2010 by 
+  Generated on Tue Aug 31 23:58:01 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

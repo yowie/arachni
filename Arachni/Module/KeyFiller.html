@@ -270,7 +270,9 @@ hash of name=>value pairs
 68
 69
 70
-71</pre>
+71
+72
+73</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/key_filler.rb', line 56</span>
@@ -286,7 +288,9 @@ hash of name=>value pairs
             <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id val'>val</span>
         <span class='kw'>end</span>
         
-        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arachni_default</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='comment'># moronic default value...
+</span>        <span class='comment'># will figure  out ssomething better later...
+</span>        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>1</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
     
     <span class='kw'>return</span> <span class='id hash'>hash</span>
@@ -301,7 +305,7 @@ hash of name=>value pairs
 </div>
     
     <div id="footer">
-  Generated on Mon Aug 30 03:46:08 2010 by 
+  Generated on Tue Aug 31 23:58:00 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
