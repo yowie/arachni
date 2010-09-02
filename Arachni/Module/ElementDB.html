@@ -508,17 +508,6 @@ the return object of <tt><a href="../Analyzer.html#get_cookies-instance_method" 
       <pre class="lines">
 
 
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
 221
 222
 223
@@ -540,10 +529,21 @@ the return object of <tt><a href="../Analyzer.html#get_cookies-instance_method" 
 239
 240
 241
-242</pre>
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 210</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 221</span>
 
 <span class='kw'>def</span> <span class='id update_cookies'>update_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
@@ -653,7 +653,11 @@ the return object of <tt><a href="../Analyzer.html#get_forms-instance_method" ti
 185
 186
 187
-188</pre>
+188
+189
+190
+191
+192</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 164</span>
@@ -676,7 +680,11 @@ the return object of <tt><a href="../Analyzer.html#get_forms-instance_method" ti
             <span class='kw'>next</span> <span class='kw'>if</span> <span class='id form'>form</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>__arachni__</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
             <span class='kw'>next</span> <span class='kw'>if</span> <span class='id form'>form</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
         
-            <span class='cvar'>@@forms</span> <span class='op'>&lt;&lt;</span> <span class='id form'>form</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id forms_include?'>forms_include?</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='op'>!</span> <span class='lparen'>(</span><span class='id index'>index</span> <span class='op'>=</span> <span class='id forms_include?'>forms_include?</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+                <span class='cvar'>@@forms</span> <span class='op'>&lt;&lt;</span> <span class='id form'>form</span> 
+            <span class='kw'>else</span>
+                <span class='cvar'>@@forms</span><span class='lbracket'>[</span><span class='id index'>index</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id form'>form</span>
+            <span class='kw'>end</span>
         
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
@@ -734,22 +742,36 @@ the return object of <tt><a href="../Analyzer.html#get_links-instance_method" ti
       <pre class="lines">
 
 
-196
-197
-198
-199
 200
 201
-202</pre>
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 196</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 200</span>
 
 <span class='kw'>def</span> <span class='id update_links'>update_links</span><span class='lparen'>(</span> <span class='id links'>links</span> <span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id links'>links</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
   
   <span class='cvar'>@@link_mutex</span><span class='period'>.</span><span class='id synchronize'>synchronize</span> <span class='lbrace'>{</span>
-      <span class='cvar'>@@links</span> <span class='op'>|=</span> <span class='id links'>links</span>
+      <span class='id links'>links</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+          <span class='op'>|</span><span class='id link'>link</span><span class='op'>|</span>
+          
+          <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+          <span class='kw'>next</span> <span class='kw'>if</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>__arachni__</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+            
+          <span class='cvar'>@@links</span> <span class='op'>|=</span> <span class='lbracket'>[</span><span class='id link'>link</span><span class='rbracket'>]</span>
+      <span class='rbrace'>}</span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1005,7 +1027,7 @@ presents itself during the audit Arachni will see it and pass it.
 </div>
     
     <div id="footer">
-  Generated on Tue Aug 31 23:58:00 2010 by 
+  Generated on Thu Sep  2 05:11:10 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

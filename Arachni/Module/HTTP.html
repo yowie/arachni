@@ -895,16 +895,6 @@ cookies in name=>value pairs
       <pre class="lines">
 
 
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
 302
 303
 304
@@ -915,10 +905,20 @@ cookies in name=>value pairs
 309
 310
 311
-312</pre>
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 292</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 302</span>
 
 <span class='kw'>def</span> <span class='const'>HTTP</span><span class='period'>.</span><span class='id parse_cookiejar'>parse_cookiejar</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
     
@@ -977,12 +977,12 @@ cases of redirection the new location as well.
       <pre class="lines">
 
 
-329
-330
-331</pre>
+339
+340
+341</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 329</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 339</span>
 
 <span class='kw'>def</span> <span class='id add_trainer'>add_trainer</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='ivar'>@trainers</span> <span class='op'>&lt;&lt;</span> <span class='id block'>block</span>
@@ -1086,11 +1086,6 @@ array of name=>value pairs
       <pre class="lines">
 
 
-177
-178
-179
-180
-181
 182
 183
 184
@@ -1128,10 +1123,18 @@ array of name=>value pairs
 216
 217
 218
-219</pre>
+219
+220
+221
+222
+223
+224
+225
+226
+227</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 177</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 182</span>
 
 <span class='kw'>def</span> <span class='id cookie'>cookie</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id cookie_vars'>cookie_vars</span><span class='comma'>,</span> <span class='id url_vars'>url_vars</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
 
@@ -1170,7 +1173,10 @@ array of name=>value pairs
         
         <span class='id full_url'>full_url</span> <span class='op'>=</span> <span class='id url'>url</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>+</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id query'>query</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='id a_to_s'>a_to_s</span><span class='lparen'>(</span> <span class='id url_vars'>url_vars</span><span class='comma'>,</span> <span class='id append'>append</span> <span class='rparen'>)</span>
                     
+        <span class='id start'>start</span>  <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span>
         <span class='id res'>res</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id full_url'>full_url</span><span class='comma'>,</span> <span class='ivar'>@init_headers</span> <span class='rparen'>)</span>
+        <span class='id res'>res</span><span class='period'>.</span><span class='id time'>time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span> <span class='op'>-</span> <span class='id start'>start</span>
+        
         <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id orig_cookiejar'>orig_cookiejar</span><span class='period'>.</span><span class='id clone'>clone</span>
         <span class='id train'>train</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
         <span class='kw'>return</span> <span class='id res'>res</span>
@@ -1299,7 +1305,9 @@ array of name=>value pairs
 135
 136
 137
-138</pre>
+138
+139
+140</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 97</span>
@@ -1332,7 +1340,9 @@ array of name=>value pairs
             <span class='id full_url'>full_url</span> <span class='op'>=</span> <span class='id url'>url</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>+</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id query'>query</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='id a_to_s'>a_to_s</span><span class='lparen'>(</span> <span class='id url_vars'>url_vars</span><span class='comma'>,</span> <span class='id append'>append</span> <span class='rparen'>)</span>
         <span class='kw'>end</span>
         
+        <span class='id start'>start</span>  <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span>
         <span class='id res'>res</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id full_url'>full_url</span><span class='comma'>,</span> <span class='ivar'>@init_headers</span> <span class='rparen'>)</span>
+        <span class='id res'>res</span><span class='period'>.</span><span class='id time'>time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span> <span class='op'>-</span> <span class='id start'>start</span>
         
         <span class='comment'># handle redirections
 </span>        <span class='kw'>if</span><span class='lparen'>(</span> <span class='lparen'>(</span> <span class='id redir'>redir</span> <span class='op'>=</span> <span class='id redirect?'>redirect?</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -1445,14 +1455,6 @@ array of name=>value pairs
       <pre class="lines">
 
 
-230
-231
-232
-233
-234
-235
-236
-237
 238
 239
 240
@@ -1471,10 +1473,20 @@ array of name=>value pairs
 253
 254
 255
-256</pre>
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 230</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 238</span>
 
 <span class='kw'>def</span> <span class='id header'>header</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id headers'>headers</span><span class='comma'>,</span> <span class='id url_vars'>url_vars</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
 
@@ -1495,7 +1507,9 @@ array of name=>value pairs
         <span class='id orig_headers'>orig_headers</span>  <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id clone'>clone</span>
         <span class='ivar'>@init_headers</span> <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
         
+        <span class='id start'>start</span>  <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span>
         <span class='id res'>res</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id full_url'>full_url</span><span class='comma'>,</span> <span class='ivar'>@init_headers</span> <span class='rparen'>)</span>
+        <span class='id res'>res</span><span class='period'>.</span><span class='id time'>time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span> <span class='op'>-</span> <span class='id start'>start</span>
         
         <span class='ivar'>@init_headers</span> <span class='op'>=</span> <span class='id orig_headers'>orig_headers</span><span class='period'>.</span><span class='id clone'>clone</span>
         <span class='id train'>train</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
@@ -1521,17 +1535,17 @@ array of name=>value pairs
       <pre class="lines">
 
 
-274
-275
-276
-277
-278
-279
-280
-281</pre>
+284
+285
+286
+287
+288
+289
+290
+291</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 274</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 284</span>
 
 <span class='kw'>def</span> <span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
     <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -1610,12 +1624,12 @@ URI object
       <pre class="lines">
 
 
-321
-322
-323</pre>
+331
+332
+333</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 321</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 331</span>
 
 <span class='kw'>def</span> <span class='id parse_url'>parse_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -1700,8 +1714,6 @@ array of name=>value pairs
       <pre class="lines">
 
 
-148
-149
 150
 151
 152
@@ -1718,10 +1730,15 @@ array of name=>value pairs
 163
 164
 165
-166</pre>
+166
+167
+168
+169
+170
+171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id post'>post</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id form_vars'>form_vars</span> <span class='rparen'>)</span>
 
@@ -1729,7 +1746,10 @@ array of name=>value pairs
     <span class='id req'>req</span><span class='period'>.</span><span class='id set_form_data'>set_form_data</span><span class='lparen'>(</span> <span class='id form_vars'>form_vars</span> <span class='rparen'>)</span>
 
     <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
+        
+        <span class='id start'>start</span>  <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span>
         <span class='id res'>res</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id request'>request</span><span class='lparen'>(</span> <span class='id req'>req</span> <span class='rparen'>)</span>
+        <span class='id res'>res</span><span class='period'>.</span><span class='id time'>time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span> <span class='op'>-</span> <span class='id start'>start</span>
         
         <span class='comment'># handle redirections
 </span>        <span class='kw'>if</span><span class='lparen'>(</span> <span class='lparen'>(</span> <span class='id redir'>redir</span> <span class='op'>=</span> <span class='id redirect?'>redirect?</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -1792,16 +1812,16 @@ name=>value pair cookies
       <pre class="lines">
 
 
-266
-267
-268
-269
-270
-271
-272</pre>
+276
+277
+278
+279
+280
+281
+282</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 266</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 276</span>
 
 <span class='kw'>def</span> <span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='id cookie_hash'>cookie_hash</span> <span class='rparen'>)</span>
     <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -1820,7 +1840,7 @@ name=>value pair cookies
 </div>
     
     <div id="footer">
-  Generated on Tue Aug 31 23:57:58 2010 by 
+  Generated on Thu Sep  2 05:11:08 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
