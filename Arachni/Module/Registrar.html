@@ -88,7 +88,7 @@ enabling them to register their results and access the datastore.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -278,12 +278,12 @@ module or class.
       <pre class="lines">
 
 
-40
-41
-42</pre>
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registrar.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registrar.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='const'>Registrar</span><span class='period'>.</span><span class='id included'>included</span><span class='lparen'>(</span> <span class='id mod'>mod</span> <span class='rparen'>)</span>
     <span class='const'>Registry</span><span class='period'>.</span><span class='id register'>register</span><span class='lparen'>(</span> <span class='id mod'>mod</span> <span class='rparen'>)</span>
@@ -361,12 +361,12 @@ the value of the key
       <pre class="lines">
 
 
-59
-60
-61</pre>
+57
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registrar.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registrar.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id add_storage'>add_storage</span><span class='lparen'>(</span> <span class='id key'>key</span><span class='comma'>,</span> <span class='id value'>value</span> <span class='rparen'>)</span>
     <span class='const'>Registry</span><span class='period'>.</span><span class='id add_storage'>add_storage</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='id key'>key</span> <span class='op'>=&gt;</span> <span class='id value'>value</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
@@ -440,12 +440,12 @@ the data under key
       <pre class="lines">
 
 
-70
-71
-72</pre>
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registrar.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registrar.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id get_storage'>get_storage</span><span class='lparen'>(</span> <span class='id key'>key</span> <span class='rparen'>)</span>
     <span class='const'>Registry</span><span class='period'>.</span><span class='id get_storage'>get_storage</span><span class='lparen'>(</span> <span class='id key'>key</span> <span class='rparen'>)</span>
@@ -492,12 +492,12 @@ Gets the entire storage array
       <pre class="lines">
 
 
-79
-80
-81</pre>
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registrar.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registrar.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id get_store'>get_store</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='const'>Registry</span><span class='period'>.</span><span class='id get_store'>get_store</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -552,12 +552,12 @@ module results
       <pre class="lines">
 
 
-49
-50
-51</pre>
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registrar.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registrar.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
     <span class='const'>Registry</span><span class='period'>.</span><span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
@@ -572,7 +572,7 @@ module results
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:18 2010 by 
+  Generated on Thu Sep  2 20:13:02 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

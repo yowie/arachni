@@ -98,7 +98,7 @@ Messages were also added to inform the user in case of redundant URLs.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -242,6 +242,8 @@ expression for &#8220;@on_pages_like_blocks&#8221;.
       <pre class="lines">
 
 
+70
+71
 72
 73
 74
@@ -250,12 +252,10 @@ expression for &#8220;@on_pages_like_blocks&#8221;.
 77
 78
 79
-80
-81
-82</pre>
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/anemone/core.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/anemone/core.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id do_page_blocks'>do_page_blocks</span><span class='lparen'>(</span><span class='id page'>page</span><span class='rparen'>)</span>
     <span class='ivar'>@on_every_page_blocks</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id block'>block</span><span class='op'>|</span>
@@ -343,18 +343,18 @@ array of regular expressions
       <pre class="lines">
 
 
+91
+92
 93
 94
 95
 96
 97
 98
-99
-100
-101</pre>
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/anemone/core.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'lib/anemone/core.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id matches_pattern?'>matches_pattern?</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id patterns'>patterns</span> <span class='rparen'>)</span>
     
@@ -408,6 +408,8 @@ matches a skip_link pattern or the reundancy countdown has reached zero.
       <pre class="lines">
 
 
+35
+36
 37
 38
 39
@@ -433,12 +435,10 @@ matches a skip_link pattern or the reundancy countdown has reached zero.
 59
 60
 61
-62
-63
-64</pre>
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/anemone/core.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'lib/anemone/core.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id skip_link?'>skip_link?</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span>
 
@@ -478,7 +478,7 @@ matches a skip_link pattern or the reundancy countdown has reached zero.
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:16 2010 by 
+  Generated on Thu Sep  2 20:12:59 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

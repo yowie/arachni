@@ -102,7 +102,7 @@ audit<br/> and checks for its existence.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: $Rev$
+@version: 0.1
 </p>
 
 
@@ -375,6 +375,8 @@ A new instance of BackupFiles
       <pre class="lines">
 
 
+33
+34
 35
 36
 37
@@ -383,12 +385,10 @@ A new instance of BackupFiles
 40
 41
 42
-43
-44
-45</pre>
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
@@ -398,7 +398,7 @@ A new instance of BackupFiles
     <span class='comment'># to keep track of the requests and not repeat them
 </span>    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     
-    <span class='comment'># our results hash
+    <span class='comment'># our results array
 </span>    <span class='ivar'>@results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -426,6 +426,8 @@ A new instance of BackupFiles
       <pre class="lines">
 
 
+91
+92
 93
 94
 95
@@ -445,12 +447,10 @@ A new instance of BackupFiles
 109
 110
 111
-112
-113
-114</pre>
+112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -458,7 +458,7 @@ A new instance of BackupFiles
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Tries to find sensitive backup files.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Author</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>$Rev$</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>References</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Targets</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
             
@@ -550,6 +550,8 @@ otherwise
       <pre class="lines">
 
 
+153
+154
 155
 156
 157
@@ -558,12 +560,10 @@ otherwise
 160
 161
 162
-163
-164
-165</pre>
+163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='id __get_once'>__get_once</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
   
@@ -661,6 +661,8 @@ the url of the discovered file
       <pre class="lines">
 
 
+122
+123
 124
 125
 126
@@ -679,16 +681,14 @@ the url of the discovered file
 139
 140
 141
-142
-143
-144</pre>
+142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id filename'>filename</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     
-    <span class='comment'># append the result to the results hash
+    <span class='comment'># append the result to the results array
 </span>    <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>var</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span>
@@ -705,7 +705,7 @@ the url of the discovered file
     <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
             
     <span class='comment'># inform the user that we have a match
-</span>    <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found </span><span class='embexpr_beg'>#{</span><span class='id filename'>filename</span><span class='rbrace'>}</span><span class='tstring_content'> at\t</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+</span>    <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found </span><span class='embexpr_beg'>#{</span><span class='id filename'>filename</span><span class='rbrace'>}</span><span class='tstring_content'> at </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -725,6 +725,8 @@ the url of the discovered file
       <pre class="lines">
 
 
+45
+46
 47
 48
 49
@@ -766,12 +768,10 @@ the url of the discovered file
 85
 86
 87
-88
-89
-90</pre>
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/backup_files.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -827,7 +827,7 @@ the url of the discovered file
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:19 2010 by 
+  Generated on Thu Sep  2 20:13:03 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

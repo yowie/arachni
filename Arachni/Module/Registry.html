@@ -104,7 +104,7 @@ modules etc.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -789,6 +789,8 @@ path the the module directory
       <pre class="lines">
 
 
+74
+75
 76
 77
 78
@@ -796,12 +798,10 @@ path the the module directory
 80
 81
 82
-83
-84
-85</pre>
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id mod_lib'>mod_lib</span> <span class='rparen'>)</span>
     
@@ -866,12 +866,12 @@ Array of module objects
       <pre class="lines">
 
 
-49
-50
-51</pre>
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id module_registry'>module_registry</span>
   <span class='ivar'>@module_registry</span>
@@ -924,12 +924,12 @@ Array of <tt><a href="../Vulnerability.html" title="Arachni::Vulnerability (clas
       <pre class="lines">
 
 
-58
-59
-60</pre>
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id module_results'>module_results</span>
   <span class='ivar'>@module_results</span>
@@ -982,12 +982,12 @@ Array of module data
       <pre class="lines">
 
 
-67
-68
-69</pre>
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id module_storage'>module_storage</span>
   <span class='ivar'>@module_storage</span>
@@ -1042,12 +1042,12 @@ Path to the module directory
       <pre class="lines">
 
 
-38
-39
-40</pre>
+36
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id mod_lib'>mod_lib</span>
   <span class='ivar'>@mod_lib</span>
@@ -1110,12 +1110,12 @@ Stores an object regulated by <tt><a href="Registrar.html#add_storage-instance_m
       <pre class="lines">
 
 
-286
-287
-288</pre>
+284
+285
+286</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 286</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 284</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id add_storage'>add_storage</span><span class='lparen'>(</span> <span class='id obj'>obj</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_storage</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id obj'>obj</span> <span class='rparen'>)</span>
@@ -1149,12 +1149,12 @@ Un-registers all modules
       <pre class="lines">
 
 
-232
-233
-234</pre>
+230
+231
+232</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 232</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 230</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id clean'>clean</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_registry</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1211,6 +1211,8 @@ the new @@module_registry
       <pre class="lines">
 
 
+322
+323
 324
 325
 326
@@ -1225,12 +1227,10 @@ the new @@module_registry
 335
 336
 337
-338
-339
-340</pre>
+338</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 324</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 322</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id clean_up'>clean_up</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -1300,12 +1300,12 @@ the @@module_registry
       <pre class="lines">
 
 
-243
-244
-245</pre>
+241
+242
+243</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 243</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 241</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id get_registry'>get_registry</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_registry</span><span class='period'>.</span><span class='id uniq'>uniq</span>
@@ -1357,12 +1357,12 @@ Gets module results
       <pre class="lines">
 
 
-265
-266
-267</pre>
+263
+264
+265</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 265</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 263</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id get_results'>get_results</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_results</span>
@@ -1437,15 +1437,15 @@ the data under key
       <pre class="lines">
 
 
+298
+299
 300
 301
 302
-303
-304
-305</pre>
+303</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 300</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 298</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id get_storage'>get_storage</span><span class='lparen'>(</span> <span class='id key'>key</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_storage</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -1495,12 +1495,12 @@ Gets the entire storage array
       <pre class="lines">
 
 
-312
-313
-314</pre>
+310
+311
+312</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 312</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 310</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id get_store'>get_store</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_storage</span>
@@ -1537,13 +1537,13 @@ Used by the Registrar <b>only</b>
       <pre class="lines">
 
 
+222
+223
 224
-225
-226
-227</pre>
+225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 224</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 222</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id register'>register</span><span class='lparen'>(</span> <span class='id mod'>mod</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_registry</span> <span class='op'>&lt;&lt;</span> <span class='id mod'>mod</span>
@@ -1596,12 +1596,12 @@ Registers module results with&#8230;well..us.
       <pre class="lines">
 
 
-254
-255
-256</pre>
+252
+253
+254</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 254</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 252</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_results</span> <span class='op'>+=</span> <span class='id results'>results</span>
@@ -1675,16 +1675,16 @@ the name of the module
       <pre class="lines">
 
 
+193
+194
 195
 196
 197
 198
-199
-200
-201</pre>
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 195</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 193</span>
 
 <span class='kw'>def</span> <span class='id get_module_by_name'>get_module_by_name</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
     <span class='kw'>begin</span>
@@ -1762,17 +1762,17 @@ the path of the module
       <pre class="lines">
 
 
+208
+209
 210
 211
 212
 213
 214
-215
-216
-217</pre>
+215</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 210</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 208</span>
 
 <span class='kw'>def</span> <span class='id get_path_from_name'>get_path_from_name</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
     <span class='kw'>begin</span>
@@ -1830,12 +1830,12 @@ the @@module_registry
       <pre class="lines">
 
 
-274
-275
-276</pre>
+272
+273
+274</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 274</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 272</span>
 
 <span class='kw'>def</span> <span class='id get_registry'>get_registry</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='const'>Registry</span><span class='period'>.</span><span class='id get_registry'>get_registry</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -1858,12 +1858,12 @@ the @@module_registry
       <pre class="lines">
 
 
-116
-117
-118</pre>
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id ls'>ls</span><span class='lparen'>(</span> <span class='id type'>type</span> <span class='rparen'>)</span>
     <span class='const'>Dir</span><span class='period'>.</span><span class='id glob'>glob</span><span class='lparen'>(</span> <span class='ivar'>@mod_lib</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id type'>type</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>*.rb</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -1886,12 +1886,12 @@ the @@module_registry
       <pre class="lines">
 
 
-112
-113
-114</pre>
+110
+111
+112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id ls_audit'>ls_audit</span>
   <span class='id ls'>ls</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>audit</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
@@ -1938,6 +1938,8 @@ Lists all available modules and puts them in a Hash
       <pre class="lines">
 
 
+90
+91
 92
 93
 94
@@ -1950,12 +1952,10 @@ Lists all available modules and puts them in a Hash
 101
 102
 103
-104
-105
-106</pre>
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id ls_available'>ls_available</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -2020,12 +2020,12 @@ contents of the @@module_registry
       <pre class="lines">
 
 
-149
-150
-151</pre>
+147
+148
+149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 149</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id ls_loaded'>ls_loaded</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='id get_registry'>get_registry</span>
@@ -2048,12 +2048,12 @@ contents of the @@module_registry
       <pre class="lines">
 
 
-108
-109
-110</pre>
+106
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='id ls_recon'>ls_recon</span>
   <span class='id ls'>ls</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>recon</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
@@ -2121,6 +2121,8 @@ the info of the module
       <pre class="lines">
 
 
+126
+127
 128
 129
 130
@@ -2133,12 +2135,10 @@ the info of the module
 137
 138
 139
-140
-141
-142</pre>
+140</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 126</span>
 
 <span class='kw'>def</span> <span class='id mod_info'>mod_info</span><span class='lparen'>(</span> <span class='id reg_id'>reg_id</span> <span class='rparen'>)</span>
     <span class='cvar'>@@module_registry</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
@@ -2225,6 +2225,8 @@ the loaded modules
       <pre class="lines">
 
 
+159
+160
 161
 162
 163
@@ -2248,12 +2250,10 @@ the loaded modules
 181
 182
 183
-184
-185
-186</pre>
+184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/module/registry.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='id mod_load'>mod_load</span><span class='lparen'>(</span> <span class='id mod_name'>mod_name</span> <span class='rparen'>)</span>
     
@@ -2291,7 +2291,7 @@ the loaded modules
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:17 2010 by 
+  Generated on Thu Sep  2 20:13:01 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

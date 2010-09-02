@@ -96,7 +96,7 @@ values of proper type based on their name.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -255,6 +255,8 @@ hash of name=>value pairs
       <pre class="lines">
 
 
+54
+55
 56
 57
 58
@@ -270,12 +272,10 @@ hash of name=>value pairs
 68
 69
 70
-71
-72
-73</pre>
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/key_filler.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/module/key_filler.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id fill'>fill</span><span class='lparen'>(</span> <span class='id hash'>hash</span> <span class='rparen'>)</span>
     
@@ -289,7 +289,7 @@ hash of name=>value pairs
         <span class='kw'>end</span>
         
         <span class='comment'># moronic default value...
-</span>        <span class='comment'># will figure  out ssomething better later...
+</span>        <span class='comment'># will figure  out ssomething better in the future...
 </span>        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>1</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
     
@@ -305,7 +305,7 @@ hash of name=>value pairs
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:18 2010 by 
+  Generated on Thu Sep  2 20:13:02 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

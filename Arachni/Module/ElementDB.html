@@ -88,7 +88,7 @@ For each page that is audited the database is reset by the <tt><a href="Base.htm
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -359,17 +359,17 @@ Initializes @@cookies with the cookies found during the crawl/analysis
       <pre class="lines">
 
 
+75
+76
 77
 78
 79
 80
 81
-82
-83
-84</pre>
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id init_cookies'>init_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
   <span class='cvar'>@@cookies</span> <span class='op'>=</span> <span class='id cookies'>cookies</span>
@@ -408,12 +408,12 @@ Initializes @@forms with the cookies found during the crawl/analysis
       <pre class="lines">
 
 
-63
-64
-65</pre>
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id init_forms'>init_forms</span><span class='lparen'>(</span> <span class='id forms'>forms</span> <span class='rparen'>)</span>
   <span class='cvar'>@@forms</span> <span class='op'>=</span> <span class='id forms'>forms</span>
@@ -447,12 +447,12 @@ Initializes @@links with the links found during the crawl/analysis
       <pre class="lines">
 
 
-70
-71
-72</pre>
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id init_links'>init_links</span><span class='lparen'>(</span> <span class='id links'>links</span> <span class='rparen'>)</span>
   <span class='cvar'>@@links</span> <span class='op'>=</span> <span class='id links'>links</span>
@@ -508,6 +508,8 @@ the return object of <tt><a href="../Analyzer.html#get_cookies-instance_method" 
       <pre class="lines">
 
 
+219
+220
 221
 222
 223
@@ -538,12 +540,10 @@ the return object of <tt><a href="../Analyzer.html#get_cookies-instance_method" 
 248
 249
 250
-251
-252
-253</pre>
+251</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 221</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 219</span>
 
 <span class='kw'>def</span> <span class='id update_cookies'>update_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
@@ -629,6 +629,8 @@ the return object of <tt><a href="../Analyzer.html#get_forms-instance_method" ti
       <pre class="lines">
 
 
+162
+163
 164
 165
 166
@@ -655,12 +657,10 @@ the return object of <tt><a href="../Analyzer.html#get_forms-instance_method" ti
 187
 188
 189
-190
-191
-192</pre>
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 162</span>
 
 <span class='kw'>def</span> <span class='id update_forms'>update_forms</span><span class='lparen'>(</span> <span class='id forms'>forms</span> <span class='rparen'>)</span>
     
@@ -742,6 +742,8 @@ the return object of <tt><a href="../Analyzer.html#get_links-instance_method" ti
       <pre class="lines">
 
 
+198
+199
 200
 201
 202
@@ -753,12 +755,10 @@ the return object of <tt><a href="../Analyzer.html#get_links-instance_method" ti
 208
 209
 210
-211
-212
-213</pre>
+211</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 200</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id update_links'>update_links</span><span class='lparen'>(</span> <span class='id links'>links</span> <span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id links'>links</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
@@ -823,6 +823,8 @@ presents itself during the audit Arachni will see it and pass it.
       <pre class="lines">
 
 
+141
+142
 143
 144
 145
@@ -834,12 +836,10 @@ presents itself during the audit Arachni will see it and pass it.
 151
 152
 153
-154
-155
-156</pre>
+154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id work_on_cookies'>work_on_cookies</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id audit_cookies'>audit_cookies</span>
@@ -904,6 +904,8 @@ presents itself during the audit Arachni will see it and pass it.
       <pre class="lines">
 
 
+93
+94
 95
 96
 97
@@ -915,12 +917,10 @@ presents itself during the audit Arachni will see it and pass it.
 103
 104
 105
-106
-107
-108</pre>
+106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id work_on_forms'>work_on_forms</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id audit_forms'>audit_forms</span>
@@ -985,6 +985,8 @@ presents itself during the audit Arachni will see it and pass it.
       <pre class="lines">
 
 
+117
+118
 119
 120
 121
@@ -996,12 +998,10 @@ presents itself during the audit Arachni will see it and pass it.
 127
 128
 129
-130
-131
-132</pre>
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 119</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id work_on_links'>work_on_links</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id audit_links'>audit_links</span>
@@ -1027,7 +1027,7 @@ presents itself during the audit Arachni will see it and pass it.
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:18 2010 by 
+  Generated on Thu Sep  2 20:13:02 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

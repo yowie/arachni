@@ -101,7 +101,7 @@ Looks for sensitive common files on the server.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: $Rev: 385 $
+@version: 0.1
 </p>
 
 
@@ -177,27 +177,6 @@ Looks for sensitive common files on the server.
     </h2>
 
     <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#__get_path-instance_method" title="#__get_path (instance method)">- (Object) <strong>__get_path</strong>(url) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
       
         <li class="public ">
   <span class="summary_signature">
@@ -371,6 +350,8 @@ A new instance of CommonFiles
       <pre class="lines">
 
 
+32
+33
 34
 35
 36
@@ -379,12 +360,10 @@ A new instance of CommonFiles
 39
 40
 41
-42
-43
-44</pre>
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
@@ -394,7 +373,7 @@ A new instance of CommonFiles
     <span class='comment'># to keep track of the requests and not repeat them
 </span>    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     
-    <span class='comment'># our results hash
+    <span class='comment'># our results array
 </span>    <span class='ivar'>@results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -422,6 +401,9 @@ A new instance of CommonFiles
       <pre class="lines">
 
 
+77
+78
+79
 80
 81
 82
@@ -440,13 +422,10 @@ A new instance of CommonFiles
 95
 96
 97
-98
-99
-100
-101</pre>
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -454,7 +433,7 @@ A new instance of CommonFiles
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Tries to find common sensitive files on the server.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Author</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>$Rev: 385 $</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>References</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Targets</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
             
@@ -482,71 +461,7 @@ A new instance of CommonFiles
     
     
       <div class="method_details first">
-  <p class="signature first" id="__get_path-instance_method">
-  
-    - (<tt>Object</tt>) <strong>__get_path</strong>(url) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 103</span>
-
-<span class='kw'>def</span> <span class='id __get_path'>__get_path</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-  
-    <span class='id splits'>splits</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-    
-    <span class='id url'>url</span><span class='period'>.</span><span class='id each_char'>each_char</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id c'>c</span><span class='op'>|</span>
-        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id c'>c</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-            <span class='id tmp'>tmp</span> <span class='op'>+=</span> <span class='id c'>c</span>
-        <span class='kw'>else</span>
-            <span class='id splits'>splits</span> <span class='op'>&lt;&lt;</span> <span class='id tmp'>tmp</span>
-            <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-        <span class='kw'>end</span>
-    <span class='rbrace'>}</span>
-    
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id tmp'>tmp</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span>
-      <span class='id splits'>splits</span> <span class='op'>&lt;&lt;</span> <span class='id tmp'>tmp</span>
-    <span class='kw'>end</span>
-    
-    <span class='kw'>return</span> <span class='id splits'>splits</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="__log_results-instance_method">
+  <p class="signature first" id="__log_results-instance_method">
   
     - (<tt>Object</tt>) <strong>__log_results</strong>(res, filename, url) 
   
@@ -625,34 +540,34 @@ the url of the discovered file
       <pre class="lines">
 
 
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153</pre>
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id filename'>filename</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     
-    <span class='comment'># append the result to the results hash
+    <span class='comment'># append the result to the results array
 </span>    <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>var</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span>
@@ -669,7 +584,7 @@ the url of the discovered file
     <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
             
     <span class='comment'># inform the user that we have a match
-</span>    <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found </span><span class='embexpr_beg'>#{</span><span class='id filename'>filename</span><span class='rbrace'>}</span><span class='tstring_content'> at\t</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+</span>    <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found </span><span class='embexpr_beg'>#{</span><span class='id filename'>filename</span><span class='rbrace'>}</span><span class='tstring_content'> at </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -689,6 +604,8 @@ the url of the discovered file
       <pre class="lines">
 
 
+44
+45
 46
 47
 48
@@ -717,20 +634,16 @@ the url of the discovered file
 71
 72
 73
-74
-75
-76
-77</pre>
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
   
     <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Scanning...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
-    <span class='comment'># ugly crap but it works, as far as I can tell...
-</span>    <span class='id path'>path</span> <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id get_path'>get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='id path'>path</span> <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id get_path'>get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
     
     <span class='id get_data_file'>get_data_file</span><span class='lparen'>(</span> <span class='ivar'>@__common_files</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id file'>file</span><span class='op'>|</span>
@@ -767,7 +680,7 @@ the url of the discovered file
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:19 2010 by 
+  Generated on Thu Sep  2 20:13:03 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

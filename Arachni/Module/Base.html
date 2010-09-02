@@ -103,7 +103,7 @@ Defines basic structure and provides utilities to modules.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -731,6 +731,8 @@ Initializes the module attributes, HTTP client and <tt><a href="Trainer.html" ti
       <pre class="lines">
 
 
+62
+63
 64
 65
 66
@@ -758,21 +760,43 @@ Initializes the module attributes, HTTP client and <tt><a href="Trainer.html" ti
 88
 89
 90
-91</pre>
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     
     <span class='ivar'>@page</span>  <span class='op'>=</span> <span class='id page'>page</span>
     <span class='ivar'>@http</span>  <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
     
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id cookiejar'>cookiejar</span> <span class='rparen'>)</span>
+    <span class='comment'># initialize the HTTP cookiejar with the user supplied one
+</span>    <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id cookiejar'>cookiejar</span> <span class='rparen'>)</span>
         <span class='ivar'>@http</span><span class='period'>.</span><span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id cookiejar'>cookiejar</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
     
-    <span class='cvar'>@@last_url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+    <span class='comment'>#
+</span>    <span class='comment'># This is slightly tricky...
+</span>    <span class='comment'>#
+</span>    <span class='comment'># Each loaded module is instantiated for each page,
+</span>    <span class='comment'># however modules share the elements of each page and access them
+</span>    <span class='comment'># via the ElementsDB.
+</span>    <span class='comment'>#
+</span>    <span class='comment'># Since the ElementDB is dynamically updated by the Trainer
+</span>    <span class='comment'># during the audit, is should only be initialized *once* 
+</span>    <span class='comment'># for each page and not overwritten every single time a module is instantiated.
+</span>    <span class='comment'>#
+</span>    <span class='cvar'>@@last_url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='cvar'>@@last_url</span> <span class='op'>!=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
         <span class='id init_forms'>init_forms</span><span class='lparen'>(</span> <span class='id get_forms'>get_forms</span> <span class='rparen'>)</span>
         <span class='id init_links'>init_links</span><span class='lparen'>(</span> <span class='id get_links'>get_links</span> <span class='rparen'>)</span>
@@ -841,12 +865,12 @@ Arachni::HTTP instance for the modules
       <pre class="lines">
 
 
-47
-48
-49</pre>
+45
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id http'>http</span>
   <span class='ivar'>@http</span>
@@ -896,12 +920,12 @@ Arachni::Page instance
       <pre class="lines">
 
 
-54
-55
-56</pre>
+52
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id page'>page</span>
   <span class='ivar'>@page</span>
@@ -950,14 +974,14 @@ This is also great for creating audit/discovery/whatever profiles.
       <pre class="lines">
 
 
-176
-177
-178
-179
-180</pre>
+186
+187
+188
+189
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 176</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 186</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id deps'>deps</span>
     <span class='comment'># example:
@@ -997,16 +1021,6 @@ don&#8217;t ommit any of the info.
       <pre class="lines">
 
 
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
 133
 134
 135
@@ -1039,15 +1053,25 @@ don&#8217;t ommit any of the info.
 162
 163
 164
-165</pre>
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Base module abstract class</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Provides an abstract the modules should implement.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Provides an abstract class the modules should implement.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='comment'>#
 </span>        <span class='comment'># Arachni needs to know what elements the module plans to audit
 </span>        <span class='comment'># before invoking it.
@@ -1065,7 +1089,7 @@ don&#8217;t ommit any of the info.
 </span>        <span class='comment'># ],
 </span>        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Author</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>$Rev$</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>References</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
         <span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Targets</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
@@ -1125,11 +1149,11 @@ This is called after run() has finished executing,
       <pre class="lines">
 
 
-114
-115</pre>
+124
+125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 124</span>
 
 <span class='kw'>def</span> <span class='id clean_up'>clean_up</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -1196,12 +1220,12 @@ simple cookie
       <pre class="lines">
 
 
-302
-303
-304</pre>
+312
+313
+314</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 302</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 312</span>
 
 <span class='kw'>def</span> <span class='id get_cookie_simple'>get_cookie_simple</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='lbrace'>{</span> <span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -1261,12 +1285,12 @@ the cookie attributes, values, etc
       <pre class="lines">
 
 
-272
-273
-274</pre>
+282
+283
+284</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 272</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 282</span>
 
 <span class='kw'>def</span> <span class='id get_cookies'>get_cookies</span>
     <span class='ivar'>@page</span><span class='period'>.</span><span class='id get_cookies'>get_cookies</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -1319,22 +1343,22 @@ the cookie attributes, values, etc
       <pre class="lines">
 
 
-281
-282
-283
-284
-285
-286
-287
-288
-289
-290
 291
 292
-293</pre>
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 281</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 291</span>
 
 <span class='kw'>def</span> <span class='id get_cookies_simple'>get_cookies_simple</span><span class='lparen'>(</span> <span class='id incookies'>incookies</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
     <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -1417,16 +1441,6 @@ block to be passed each line as it&#8217;s read
       <pre class="lines">
 
 
-358
-359
-360
-361
-362
-363
-364
-365
-366
-367
 368
 369
 370
@@ -1436,10 +1450,20 @@ block to be passed each line as it&#8217;s read
 374
 375
 376
-377</pre>
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 358</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 368</span>
 
 <span class='kw'>def</span> <span class='id get_data_file'>get_data_file</span><span class='lparen'>(</span> <span class='id filename'>filename</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     
@@ -1504,23 +1528,23 @@ hash
       <pre class="lines">
 
 
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234
 235
 236
 237
-238</pre>
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 225</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 235</span>
 
 <span class='kw'>def</span> <span class='id get_form_simple'>get_form_simple</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
     
@@ -1591,12 +1615,12 @@ forms with attributes, values, etc
       <pre class="lines">
 
 
-189
-190
-191</pre>
+199
+200
+201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 189</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 199</span>
 
 <span class='kw'>def</span> <span class='id get_forms'>get_forms</span>
     <span class='ivar'>@page</span><span class='period'>.</span><span class='id get_forms'>get_forms</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -1644,17 +1668,17 @@ its auditable inputs as a name=>value hash
       <pre class="lines">
 
 
-211
-212
-213
-214
-215
-216
-217
-218</pre>
+221
+222
+223
+224
+225
+226
+227
+228</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 211</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 221</span>
 
 <span class='kw'>def</span> <span class='id get_forms_simple'>get_forms_simple</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='id forms'>forms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1719,12 +1743,12 @@ link with attributes, variables, etc
       <pre class="lines">
 
 
-201
-202
-203</pre>
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 201</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 211</span>
 
 <span class='kw'>def</span> <span class='id get_links'>get_links</span>
     <span class='ivar'>@page</span><span class='period'>.</span><span class='id get_links'>get_links</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -1771,16 +1795,6 @@ Returns links from <tt><a href="#get_links-instance_method" title="Arachni::Modu
       <pre class="lines">
 
 
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
 255
 256
 257
@@ -1789,10 +1803,20 @@ Returns links from <tt><a href="#get_links-instance_method" title="Arachni::Modu
 260
 261
 262
-263</pre>
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 245</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 255</span>
 
 <span class='kw'>def</span> <span class='id get_links_simple'>get_links_simple</span>
     <span class='id links'>links</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -1890,23 +1914,23 @@ merge with auditable (<tt><a href="../Page.html#request_headers-instance_method"
       <pre class="lines">
 
 
-319
-320
-321
-322
-323
-324
-325
-326
-327
-328
 329
 330
 331
-332</pre>
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 319</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 329</span>
 
 <span class='kw'>def</span> <span class='id get_request_headers'>get_request_headers</span><span class='lparen'>(</span> <span class='id merge'>merge</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
     
@@ -1979,19 +2003,19 @@ Returns the headers from a Net::HTTP response as a hash
       <pre class="lines">
 
 
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350</pre>
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 341</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 351</span>
 
 <span class='kw'>def</span> <span class='id get_response_headers'>get_response_headers</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
     
@@ -2035,11 +2059,11 @@ It provides you with a way to setup your module&#8217;s data and methods.
       <pre class="lines">
 
 
-98
-99</pre>
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2075,11 +2099,11 @@ This is used to deliver the module&#8217;s payload whatever it may be.
       <pre class="lines">
 
 
-106
-107</pre>
+116
+117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/module/base.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2093,7 +2117,7 @@ This is used to deliver the module&#8217;s payload whatever it may be.
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:15 2010 by 
+  Generated on Thu Sep  2 20:12:58 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

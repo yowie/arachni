@@ -95,7 +95,7 @@ It holds page data like elements, cookies, headers, etc&#8230;
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -436,16 +436,16 @@ A new instance of Page
       <pre class="lines">
 
 
+69
+70
 71
 72
 73
 74
-75
-76
-77</pre>
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/page.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/page.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='id opts'>opts</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -504,12 +504,12 @@ Cookies extracted from the supplied cookiejar
       <pre class="lines">
 
 
-69
-70
-71</pre>
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/page.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/page.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id cookiejar'>cookiejar</span>
   <span class='ivar'>@cookiejar</span>
@@ -578,12 +578,12 @@ auditable HTML elements (links/forms/cookies)
       <pre class="lines">
 
 
-62
-63
-64</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/page.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/page.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id elements'>elements</span>
   <span class='ivar'>@elements</span>
@@ -639,12 +639,12 @@ response headers
       <pre class="lines">
 
 
-45
-46
-47</pre>
+43
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/page.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/page.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id headers'>headers</span>
   <span class='ivar'>@headers</span>
@@ -700,12 +700,12 @@ the HTML response
       <pre class="lines">
 
 
-40
-41
-42</pre>
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/page.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/page.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id html'>html</span>
   <span class='ivar'>@html</span>
@@ -761,12 +761,12 @@ url variables
       <pre class="lines">
 
 
-35
-36
-37</pre>
+33
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/page.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/page.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id query_vars'>query_vars</span>
   <span class='ivar'>@query_vars</span>
@@ -829,12 +829,12 @@ auditable HTTP request headers
       <pre class="lines">
 
 
-52
-53
-54</pre>
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/page.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/page.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id request_headers'>request_headers</span>
   <span class='ivar'>@request_headers</span>
@@ -890,12 +890,12 @@ url of the page
       <pre class="lines">
 
 
-30
-31
-32</pre>
+28
+29
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/page.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/page.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id url'>url</span>
   <span class='ivar'>@url</span>
@@ -936,12 +936,12 @@ Returns the cookies elements in <tt><a href="#elements-instance_method" title="A
       <pre class="lines">
 
 
-96
-97
-98</pre>
+94
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/page.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'lib/page.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id get_cookies'>get_cookies</span>
     <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookies</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
@@ -975,12 +975,12 @@ Returns the form elements in <tt><a href="#elements-instance_method" title="Arac
       <pre class="lines">
 
 
-82
-83
-84</pre>
+80
+81
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/page.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/page.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id get_forms'>get_forms</span>
     <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>forms</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
@@ -1014,12 +1014,12 @@ Returns the links elements in <tt><a href="#elements-instance_method" title="Ara
       <pre class="lines">
 
 
-89
-90
-91</pre>
+87
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/page.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/page.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='id get_links'>get_links</span>
     <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>links</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
@@ -1034,7 +1034,7 @@ Returns the links elements in <tt><a href="#elements-instance_method" title="Ara
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:13 2010 by 
+  Generated on Thu Sep  2 20:12:56 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

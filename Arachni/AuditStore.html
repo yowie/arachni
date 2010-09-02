@@ -96,7 +96,7 @@ runtime environment, the results of the audit etc&#8230;
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -473,6 +473,8 @@ A new instance of AuditStore
       <pre class="lines">
 
 
+67
+68
 69
 70
 71
@@ -484,12 +486,10 @@ A new instance of AuditStore
 77
 78
 79
-80
-81
-82</pre>
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id audit'>audit</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
     
@@ -561,12 +561,12 @@ how long the audit took
       <pre class="lines">
 
 
-67
-68
-69</pre>
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id delta_time'>delta_time</span>
   <span class='ivar'>@delta_time</span>
@@ -622,12 +622,12 @@ the date and time when the audit finished
       <pre class="lines">
 
 
-62
-63
-64</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id finish_datetime'>finish_datetime</span>
   <span class='ivar'>@finish_datetime</span>
@@ -683,12 +683,12 @@ the runtime arguments/options of the environment
       <pre class="lines">
 
 
-42
-43
-44</pre>
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id options'>options</span>
   <span class='ivar'>@options</span>
@@ -744,12 +744,12 @@ the SVN revision of the framework
       <pre class="lines">
 
 
-37
-38
-39</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id revision'>revision</span>
   <span class='ivar'>@revision</span>
@@ -805,12 +805,12 @@ all the urls crawled
       <pre class="lines">
 
 
-47
-48
-49</pre>
+45
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id sitemap'>sitemap</span>
   <span class='ivar'>@sitemap</span>
@@ -866,12 +866,12 @@ the date and time when the audit started
       <pre class="lines">
 
 
-57
-58
-59</pre>
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id start_datetime'>start_datetime</span>
   <span class='ivar'>@start_datetime</span>
@@ -927,12 +927,12 @@ the version of the framework
       <pre class="lines">
 
 
-32
-33
-34</pre>
+30
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id version'>version</span>
   <span class='ivar'>@version</span>
@@ -988,12 +988,12 @@ the discovered vulnerabilities
       <pre class="lines">
 
 
-52
-53
-54</pre>
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id vulns'>vulns</span>
   <span class='ivar'>@vulns</span>
@@ -1068,12 +1068,12 @@ the file to load
       <pre class="lines">
 
 
-91
-92
-93</pre>
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='const'>AuditStore</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
      <span class='const'>YAML</span><span class='op'>::</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -1128,13 +1128,13 @@ Saves &#8216;self&#8217; to file
       <pre class="lines">
 
 
+98
+99
 100
-101
-102
-103</pre>
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='id save'>save</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
     <span class='id f'>f</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -1182,6 +1182,8 @@ Returns &#8216;self&#8217; and all objects in its instance vars as hashes
       <pre class="lines">
 
 
+108
+109
 110
 111
 112
@@ -1192,12 +1194,10 @@ Returns &#8216;self&#8217; and all objects in its instance vars as hashes
 117
 118
 119
-120
-121
-122</pre>
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 110</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id to_h'>to_h</span>
 
@@ -1222,7 +1222,7 @@ Returns &#8216;self&#8217; and all objects in its instance vars as hashes
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:16 2010 by 
+  Generated on Thu Sep  2 20:12:59 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

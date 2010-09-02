@@ -99,7 +99,7 @@ Crawls the URL in opts[:url] and grabs the HTML code and headers.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -334,6 +334,8 @@ Constructor <br/> Instantiates Spider class with user options.
       <pre class="lines">
 
 
+61
+62
 63
 64
 65
@@ -366,12 +368,10 @@ Constructor <br/> Instantiates Spider class with user options.
 92
 93
 94
-95
-96
-97</pre>
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='id opts'>opts</span>
@@ -458,12 +458,12 @@ Code block to be executed on each page
       <pre class="lines">
 
 
-55
-56
-57</pre>
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id on_every_page_blocks'>on_every_page_blocks</span>
   <span class='ivar'>@on_every_page_blocks</span>
@@ -510,12 +510,12 @@ Code block to be executed on each page
       <pre class="lines">
 
 
-41
-42
-43</pre>
+39
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id opts'>opts</span>
   <span class='ivar'>@opts</span>
@@ -565,12 +565,12 @@ Sitemap, array of links
       <pre class="lines">
 
 
-48
-49
-50</pre>
+46
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id sitemap'>sitemap</span>
   <span class='ivar'>@sitemap</span>
@@ -645,13 +645,13 @@ code to be executed for every page
       <pre class="lines">
 
 
+170
+171
 172
-173
-174
-175</pre>
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 172</span>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='id on_every_page'>on_every_page</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='ivar'>@on_every_page_blocks</span><span class='period'>.</span><span class='id push'>push</span><span class='lparen'>(</span> <span class='id block'>block</span> <span class='rparen'>)</span>
@@ -726,6 +726,8 @@ array of links, a sitemap
       <pre class="lines">
 
 
+105
+106
 107
 108
 109
@@ -780,12 +782,10 @@ array of links, a sitemap
 158
 159
 160
-161
-162
-163</pre>
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
 
@@ -854,7 +854,7 @@ array of links, a sitemap
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:13 2010 by 
+  Generated on Thu Sep  2 20:12:56 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

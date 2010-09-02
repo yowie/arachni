@@ -95,7 +95,7 @@ Holds and manages the registry of the reports.
                                      &lt;zapotek@segfault.gr&gt; &lt;br/&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -451,14 +451,14 @@ A new instance of Registry
       <pre class="lines">
 
 
+30
+31
 32
 33
-34
-35
-36</pre>
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id lib'>lib</span> <span class='rparen'>)</span>
     <span class='ivar'>@lib</span> <span class='op'>=</span> <span class='id lib'>lib</span>
@@ -502,12 +502,12 @@ Returns the value of attribute registry
       <pre class="lines">
 
 
-29
-30
-31</pre>
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id registry'>registry</span>
   <span class='ivar'>@registry</span>
@@ -570,12 +570,12 @@ the @@registry
       <pre class="lines">
 
 
-127
-128
-129</pre>
+125
+126
+127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 125</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id clean'>clean</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='cvar'>@@registry</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -632,6 +632,8 @@ the new @@registry
       <pre class="lines">
 
 
+165
+166
 167
 168
 169
@@ -647,12 +649,10 @@ the new @@registry
 179
 180
 181
-182
-183
-184</pre>
+182</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 165</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id clean_up'>clean_up</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -723,12 +723,12 @@ the @@registry
       <pre class="lines">
 
 
-116
-117
-118</pre>
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id get_registry'>get_registry</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='cvar'>@@registry</span><span class='period'>.</span><span class='id uniq'>uniq</span>
@@ -765,13 +765,13 @@ Used by the Registrar <b>only</b>
       <pre class="lines">
 
 
+151
+152
 153
-154
-155
-156</pre>
+154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 153</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 151</span>
 
 <span class='kw'>def</span> <span class='const'>Registry</span><span class='period'>.</span><span class='id register'>register</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
     <span class='cvar'>@@registry</span> <span class='op'>&lt;&lt;</span> <span class='id report'>report</span>
@@ -846,16 +846,16 @@ the name of the report
       <pre class="lines">
 
 
+63
+64
 65
 66
 67
 68
-69
-70
-71</pre>
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id get_by_name'>get_by_name</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
     <span class='kw'>begin</span>
@@ -933,17 +933,17 @@ the path of the report
       <pre class="lines">
 
 
+78
+79
 80
 81
 82
 83
 84
-85
-86
-87</pre>
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id get_path_from_name'>get_path_from_name</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
     <span class='kw'>begin</span>
@@ -1016,17 +1016,17 @@ the info of the module
       <pre class="lines">
 
 
+137
+138
 139
 140
 141
 142
 143
-144
-145
-146</pre>
+144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 139</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 137</span>
 
 <span class='kw'>def</span> <span class='id info'>info</span><span class='lparen'>(</span> <span class='id reg_id'>reg_id</span> <span class='rparen'>)</span>
     <span class='cvar'>@@registry</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
@@ -1078,6 +1078,8 @@ Lists all available reports and puts them in a Hash
       <pre class="lines">
 
 
+93
+94
 95
 96
 97
@@ -1088,12 +1090,10 @@ Lists all available reports and puts them in a Hash
 102
 103
 104
-105
-106
-107</pre>
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id ls_available'>ls_available</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -1156,12 +1156,12 @@ contents of the @@module_registry
       <pre class="lines">
 
 
-54
-55
-56</pre>
+52
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id ls_loaded'>ls_loaded</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='const'>Registry</span><span class='period'>.</span><span class='id get_registry'>get_registry</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -1235,12 +1235,12 @@ the loaded reports
       <pre class="lines">
 
 
-45
-46
-47</pre>
+43
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registry.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id rep_load'>rep_load</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
     <span class='const'>Registry</span><span class='period'>.</span><span class='id register'>register</span><span class='lparen'>(</span> <span class='id get_by_name'>get_by_name</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -1255,7 +1255,7 @@ the loaded reports
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:18 2010 by 
+  Generated on Thu Sep  2 20:13:02 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

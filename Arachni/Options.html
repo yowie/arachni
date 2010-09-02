@@ -100,7 +100,7 @@ runtime options.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: $Rev$
+@version: 0.1
 </p>
 
 
@@ -1394,6 +1394,8 @@ A new instance of Options
       <pre class="lines">
 
 
+323
+324
 325
 326
 327
@@ -1408,12 +1410,10 @@ A new instance of Options
 336
 337
 338
-339
-340
-341</pre>
+339</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 325</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 323</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -1482,12 +1482,12 @@ Be verbose?
       <pre class="lines">
 
 
-70
-71
-72</pre>
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id arachni_verbose'>arachni_verbose</span>
   <span class='ivar'>@arachni_verbose</span>
@@ -1537,12 +1537,12 @@ Should Arachni audit cookies?
       <pre class="lines">
 
 
-157
-158
-159</pre>
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='id audit_cookies'>audit_cookies</span>
   <span class='ivar'>@audit_cookies</span>
@@ -1592,12 +1592,12 @@ Should Arachni audit forms?
       <pre class="lines">
 
 
-150
-151
-152</pre>
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 150</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id audit_forms'>audit_forms</span>
   <span class='ivar'>@audit_forms</span>
@@ -1647,12 +1647,12 @@ Should Arachni audit HTTP headers?
       <pre class="lines">
 
 
-164
-165
-166</pre>
+162
+163
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 162</span>
 
 <span class='kw'>def</span> <span class='id audit_headers'>audit_headers</span>
   <span class='ivar'>@audit_headers</span>
@@ -1702,12 +1702,12 @@ Should Arachni audit links?
       <pre class="lines">
 
 
-143
-144
-145</pre>
+141
+142
+143</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id audit_links'>audit_links</span>
   <span class='ivar'>@audit_links</span>
@@ -1758,12 +1758,12 @@ The person that authorized the scan<br/> It will be added to the HTTP
       <pre class="lines">
 
 
-221
-222
-223</pre>
+219
+220
+221</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 221</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 219</span>
 
 <span class='kw'>def</span> <span class='id authed_by'>authed_by</span>
   <span class='ivar'>@authed_by</span>
@@ -1813,12 +1813,12 @@ Location of the cookiejar
       <pre class="lines">
 
 
-272
-273
-274</pre>
+270
+271
+272</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 272</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 270</span>
 
 <span class='kw'>def</span> <span class='id cookie_jar'>cookie_jar</span>
   <span class='ivar'>@cookie_jar</span>
@@ -1877,12 +1877,12 @@ name=>value pairs
       <pre class="lines">
 
 
-265
-266
-267</pre>
+263
+264
+265</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 265</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 263</span>
 
 <span class='kw'>def</span> <span class='id cookies'>cookies</span>
   <span class='ivar'>@cookies</span>
@@ -1932,12 +1932,12 @@ Output debugging messages?
       <pre class="lines">
 
 
-77
-78
-79</pre>
+75
+76
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id debug'>debug</span>
   <span class='ivar'>@debug</span>
@@ -1974,12 +1974,12 @@ to be populated by the framework
       <pre class="lines">
 
 
-323
-324
-325</pre>
+321
+322
+323</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 323</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 321</span>
 
 <span class='kw'>def</span> <span class='id delta_time'>delta_time</span>
   <span class='ivar'>@delta_time</span>
@@ -2029,12 +2029,12 @@ How deep to go in the site structure?<br/> If nil, depth_limit = inf
       <pre class="lines">
 
 
-99
-100
-101</pre>
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id depth_limit'>depth_limit</span>
   <span class='ivar'>@depth_limit</span>
@@ -2084,12 +2084,12 @@ Holds absolute paths for the directory structure of the framework
       <pre class="lines">
 
 
-37
-38
-39</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id dir'>dir</span>
   <span class='ivar'>@dir</span>
@@ -2140,12 +2140,12 @@ followed
       <pre class="lines">
 
 
-287
-288
-289</pre>
+285
+286
+287</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 287</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 285</span>
 
 <span class='kw'>def</span> <span class='id exclude'>exclude</span>
   <span class='ivar'>@exclude</span>
@@ -2195,12 +2195,12 @@ Cookies to exclude from audit<br/>
       <pre class="lines">
 
 
-294
-295
-296</pre>
+292
+293
+294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 294</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 292</span>
 
 <span class='kw'>def</span> <span class='id exclude_cookies'>exclude_cookies</span>
   <span class='ivar'>@exclude_cookies</span>
@@ -2237,12 +2237,12 @@ to be populated by the framework
       <pre class="lines">
 
 
-321
-322
-323</pre>
+319
+320
+321</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 321</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 319</span>
 
 <span class='kw'>def</span> <span class='id finish_datetime'>finish_datetime</span>
   <span class='ivar'>@finish_datetime</span>
@@ -2292,12 +2292,12 @@ Should the crawler follow subdomains?
       <pre class="lines">
 
 
-309
-310
-311</pre>
+307
+308
+309</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 309</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 307</span>
 
 <span class='kw'>def</span> <span class='id follow_subdomains'>follow_subdomains</span>
   <span class='ivar'>@follow_subdomains</span>
@@ -2347,12 +2347,12 @@ Show help?
       <pre class="lines">
 
 
-51
-52
-53</pre>
+49
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id help'>help</span>
   <span class='ivar'>@help</span>
@@ -2403,12 +2403,12 @@ followed
       <pre class="lines">
 
 
-302
-303
-304</pre>
+300
+301
+302</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 302</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 300</span>
 
 <span class='kw'>def</span> <span class='id include'>include</span>
   <span class='ivar'>@include</span>
@@ -2458,12 +2458,12 @@ How many links to follow? If nil, link_count_limit = inf
       <pre class="lines">
 
 
-107
-108
-109</pre>
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='id link_count_limit'>link_count_limit</span>
   <span class='ivar'>@link_count_limit</span>
@@ -2513,12 +2513,12 @@ Location of an Arachni Framework Profile (.afp) file to load
       <pre class="lines">
 
 
-213
-214
-215</pre>
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 213</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 211</span>
 
 <span class='kw'>def</span> <span class='id load_profile'>load_profile</span>
   <span class='ivar'>@load_profile</span>
@@ -2568,12 +2568,12 @@ List modules and exit?
       <pre class="lines">
 
 
-122
-123
-124</pre>
+120
+121
+122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 120</span>
 
 <span class='kw'>def</span> <span class='id lsmod'>lsmod</span>
   <span class='ivar'>@lsmod</span>
@@ -2623,12 +2623,12 @@ List reports and exit?
       <pre class="lines">
 
 
-129
-130
-131</pre>
+127
+128
+129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 129</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id lsrep'>lsrep</span>
   <span class='ivar'>@lsrep</span>
@@ -2678,12 +2678,12 @@ Array of modules to load
       <pre class="lines">
 
 
-171
-172
-173</pre>
+169
+170
+171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 171</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='id mods'>mods</span>
   <span class='ivar'>@mods</span>
@@ -2733,12 +2733,12 @@ Run the modules after the crawl/analysis?
       <pre class="lines">
 
 
-316
-317
-318</pre>
+314
+315
+316</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 316</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 314</span>
 
 <span class='kw'>def</span> <span class='id mods_run_last'>mods_run_last</span>
   <span class='ivar'>@mods_run_last</span>
@@ -2788,12 +2788,12 @@ Should the crawler obery robots.txt files?
       <pre class="lines">
 
 
-91
-92
-93</pre>
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='id obey_robots_txt'>obey_robots_txt</span>
   <span class='ivar'>@obey_robots_txt</span>
@@ -2843,12 +2843,12 @@ Output only positive results during the audit?
       <pre class="lines">
 
 
-58
-59
-60</pre>
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id only_positives'>only_positives</span>
   <span class='ivar'>@only_positives</span>
@@ -2898,12 +2898,12 @@ The address of the proxy server
       <pre class="lines">
 
 
-228
-229
-230</pre>
+226
+227
+228</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 228</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 226</span>
 
 <span class='kw'>def</span> <span class='id proxy_addr'>proxy_addr</span>
   <span class='ivar'>@proxy_addr</span>
@@ -2953,12 +2953,12 @@ The proxy password
       <pre class="lines">
 
 
-242
-243
-244</pre>
+240
+241
+242</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 242</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 240</span>
 
 <span class='kw'>def</span> <span class='id proxy_pass'>proxy_pass</span>
   <span class='ivar'>@proxy_pass</span>
@@ -3008,12 +3008,12 @@ The port to connect on the proxy server
       <pre class="lines">
 
 
-235
-236
-237</pre>
+233
+234
+235</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 235</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 233</span>
 
 <span class='kw'>def</span> <span class='id proxy_port'>proxy_port</span>
   <span class='ivar'>@proxy_port</span>
@@ -3069,12 +3069,12 @@ The proxy type
       <pre class="lines">
 
 
-256
-257
-258</pre>
+254
+255
+256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 256</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 254</span>
 
 <span class='kw'>def</span> <span class='id proxy_type'>proxy_type</span>
   <span class='ivar'>@proxy_type</span>
@@ -3124,12 +3124,12 @@ The proxy user
       <pre class="lines">
 
 
-249
-250
-251</pre>
+247
+248
+249</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 249</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 247</span>
 
 <span class='kw'>def</span> <span class='id proxy_user'>proxy_user</span>
   <span class='ivar'>@proxy_user</span>
@@ -3179,12 +3179,12 @@ How many redirects to follow? If nil, redirect_limit = inf
       <pre class="lines">
 
 
-115
-116
-117</pre>
+113
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id redirect_limit'>redirect_limit</span>
   <span class='ivar'>@redirect_limit</span>
@@ -3234,12 +3234,12 @@ Filters for redundant links
       <pre class="lines">
 
 
-84
-85
-86</pre>
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id redundant'>redundant</span>
   <span class='ivar'>@redundant</span>
@@ -3289,12 +3289,12 @@ Location of an Arachni Framework Report (.afr) file to load
       <pre class="lines">
 
 
-185
-186
-187</pre>
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 185</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 183</span>
 
 <span class='kw'>def</span> <span class='id repload'>repload</span>
   <span class='ivar'>@repload</span>
@@ -3350,12 +3350,12 @@ name=>value pairs
       <pre class="lines">
 
 
-199
-200
-201</pre>
+197
+198
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 199</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 197</span>
 
 <span class='kw'>def</span> <span class='id repopts'>repopts</span>
   <span class='ivar'>@repopts</span>
@@ -3405,12 +3405,12 @@ Array of reports to load
       <pre class="lines">
 
 
-178
-179
-180</pre>
+176
+177
+178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 178</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 176</span>
 
 <span class='kw'>def</span> <span class='id reports'>reports</span>
   <span class='ivar'>@reports</span>
@@ -3460,12 +3460,12 @@ Where to save the Arachni Framework Report (.afr) file
       <pre class="lines">
 
 
-192
-193
-194</pre>
+190
+191
+192</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 192</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 190</span>
 
 <span class='kw'>def</span> <span class='id repsave'>repsave</span>
   <span class='ivar'>@repsave</span>
@@ -3502,12 +3502,12 @@ Not implemented
       <pre class="lines">
 
 
-63
-64
-65</pre>
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id resume'>resume</span>
   <span class='ivar'>@resume</span>
@@ -3557,12 +3557,12 @@ Where to save the Arachni Framework Profile (.afp) file
       <pre class="lines">
 
 
-206
-207
-208</pre>
+204
+205
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 206</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 204</span>
 
 <span class='kw'>def</span> <span class='id save_profile'>save_profile</span>
   <span class='ivar'>@save_profile</span>
@@ -3599,12 +3599,12 @@ to be populated by the framework
       <pre class="lines">
 
 
-319
-320
-321</pre>
+317
+318
+319</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 319</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 317</span>
 
 <span class='kw'>def</span> <span class='id start_datetime'>start_datetime</span>
   <span class='ivar'>@start_datetime</span>
@@ -3654,12 +3654,12 @@ How many threads to spawn?
       <pre class="lines">
 
 
-136
-137
-138</pre>
+134
+135
+136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 134</span>
 
 <span class='kw'>def</span> <span class='id threads'>threads</span>
   <span class='ivar'>@threads</span>
@@ -3709,12 +3709,12 @@ The URL to audit
       <pre class="lines">
 
 
-44
-45
-46</pre>
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id url'>url</span>
   <span class='ivar'>@url</span>
@@ -3764,12 +3764,12 @@ The HTTP user-agent to use
       <pre class="lines">
 
 
-279
-280
-281</pre>
+277
+278
+279</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 279</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id user_agent'>user_agent</span>
   <span class='ivar'>@user_agent</span>
@@ -3825,15 +3825,15 @@ Merges self with the object in &#8216;options&#8217;
       <pre class="lines">
 
 
+360
+361
 362
 363
 364
-365
-366
-367</pre>
+365</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 362</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 360</span>
 
 <span class='kw'>def</span> <span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id options'>options</span> <span class='rparen'>)</span>
     <span class='id options'>options</span><span class='period'>.</span><span class='id to_h'>to_h</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
@@ -3883,17 +3883,17 @@ Converts the Options object to hash
       <pre class="lines">
 
 
+346
+347
 348
 349
 350
 351
 352
-353
-354
-355</pre>
+353</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 348</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 346</span>
 
 <span class='kw'>def</span> <span class='id to_h'>to_h</span>
     <span class='id hash'>hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -3913,7 +3913,7 @@ Converts the Options object to hash
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:14 2010 by 
+  Generated on Thu Sep  2 20:12:57 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

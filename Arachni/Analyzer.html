@@ -124,7 +124,7 @@ Cookies are extracted from the HTTP headers and parsed by WEBrick::Cookie
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -566,6 +566,8 @@ Constructor <br/> Instantiates Analyzer class with user options.
       <pre class="lines">
 
 
+93
+94
 95
 96
 97
@@ -574,12 +576,10 @@ Constructor <br/> Instantiates Analyzer class with user options.
 100
 101
 102
-103
-104
-105</pre>
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='ivar'>@url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -642,12 +642,12 @@ Array of extracted cookies
       <pre class="lines">
 
 
-74
-75
-76</pre>
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id cookies'>cookies</span>
   <span class='ivar'>@cookies</span>
@@ -697,12 +697,12 @@ Array of extracted HTML forms
       <pre class="lines">
 
 
-62
-63
-64</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id forms'>forms</span>
   <span class='ivar'>@forms</span>
@@ -752,12 +752,12 @@ Array of valid HTML headers
       <pre class="lines">
 
 
-80
-81
-82</pre>
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id headers'>headers</span>
   <span class='ivar'>@headers</span>
@@ -807,12 +807,12 @@ Array of extracted HTML links
       <pre class="lines">
 
 
-68
-69
-70</pre>
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id links'>links</span>
   <span class='ivar'>@links</span>
@@ -862,12 +862,12 @@ Options instance
       <pre class="lines">
 
 
-87
-88
-89</pre>
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id opts'>opts</span>
   <span class='ivar'>@opts</span>
@@ -917,12 +917,12 @@ Structure of the html elements in Hash format
       <pre class="lines">
 
 
-56
-57
-58</pre>
+54
+55
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id structure'>structure</span>
   <span class='ivar'>@structure</span>
@@ -978,12 +978,12 @@ the url of the page
       <pre class="lines">
 
 
-50
-51
-52</pre>
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id url'>url</span>
   <span class='ivar'>@url</span>
@@ -1064,6 +1064,8 @@ of cookies
       <pre class="lines">
 
 
+299
+300
 301
 302
 303
@@ -1088,12 +1090,10 @@ of cookies
 322
 323
 324
-325
-326
-327</pre>
+325</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 301</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 299</span>
 
 <span class='kw'>def</span> <span class='id get_cookies'>get_cookies</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
     <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id parse_set_cookies'>parse_set_cookies</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
@@ -1203,6 +1203,8 @@ array of forms
       <pre class="lines">
 
 
+191
+192
 193
 194
 195
@@ -1274,12 +1276,10 @@ array of forms
 261
 262
 263
-264
-265
-266</pre>
+264</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 193</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='id get_forms'>get_forms</span><span class='lparen'>(</span> <span class='id html'>html</span> <span class='rparen'>)</span>
 
@@ -1408,6 +1408,8 @@ HTTP header fields
       <pre class="lines">
 
 
+163
+164
 165
 166
 167
@@ -1418,12 +1420,10 @@ HTTP header fields
 172
 173
 174
-175
-176
-177</pre>
+175</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 165</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 163</span>
 
 <span class='kw'>def</span> <span class='id get_headers'>get_headers</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='lbrace'>{</span>
@@ -1508,6 +1508,8 @@ name=>value pairs
       <pre class="lines">
 
 
+336
+337
 338
 339
 340
@@ -1521,12 +1523,10 @@ name=>value pairs
 348
 349
 350
-351
-352
-353</pre>
+351</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 338</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 336</span>
 
 <span class='kw'>def</span> <span class='id get_link_vars'>get_link_vars</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='op'>!</span><span class='id link'>link</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>end</span>
@@ -1614,6 +1614,8 @@ of links
       <pre class="lines">
 
 
+275
+276
 277
 278
 279
@@ -1627,12 +1629,10 @@ of links
 287
 288
 289
-290
-291
-292</pre>
+290</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 277</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 275</span>
 
 <span class='kw'>def</span> <span class='id get_links'>get_links</span><span class='lparen'>(</span> <span class='id html'>html</span> <span class='rparen'>)</span>
     <span class='id links'>links</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1753,6 +1753,8 @@ HTML elements
       <pre class="lines">
 
 
+114
+115
 116
 117
 118
@@ -1789,12 +1791,10 @@ HTML elements
 149
 150
 151
-152
-153
-154</pre>
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id html'>html</span><span class='comma'>,</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
 
@@ -1845,7 +1845,7 @@ HTML elements
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:14 2010 by 
+  Generated on Thu Sep  2 20:12:57 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

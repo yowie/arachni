@@ -84,7 +84,7 @@ When included into reports it registers them with Arachni::Report::Registry
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1-pre
+@version: 0.1
 </p>
 
 
@@ -169,12 +169,12 @@ module or class.<br/> It registers the report with the system.
       <pre class="lines">
 
 
-37
-38
-39</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/registrar.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'lib/report/registrar.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='const'>Registrar</span><span class='period'>.</span><span class='id included'>included</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
     <span class='const'>Registry</span><span class='period'>.</span><span class='id register'>register</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
@@ -189,7 +189,7 @@ module or class.<br/> It registers the report with the system.
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 06:03:18 2010 by 
+  Generated on Thu Sep  2 20:13:02 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
