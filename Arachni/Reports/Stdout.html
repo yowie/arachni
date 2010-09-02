@@ -73,7 +73,7 @@
   
     
       <dt class="r2">Includes:</dt>
-      <dd class="r2"><a href="../Report/Registrar.html" title="Arachni::Report::Registrar (module)">Arachni::Report::Registrar</a>, <a href="../UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></dd>
+      <dd class="r2"><a href="../Report/Registrar.html" title="Arachni::Report::Registrar (module)">Arachni::Report::Registrar</a></dd>
       
     
   
@@ -258,14 +258,14 @@ REQUIRED.
   
   
   
+  
+  
+  
+  
+  
   <h3 class="inherited">Methods included from <a href="../UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></h3>
   <p class="inherited"><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a>, <a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a>, <a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a>, <a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a>, <a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a>, <a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a>, <a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a>, <a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a>, <a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a>, <a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a>, <a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a>, <a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a>, <a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a>, <a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a>, <a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></p>
-
-  
-  
-  
-  
-  <div id="constructor_details" class="method_details_list">
+<div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
@@ -345,12 +345,12 @@ where to save the report
       <pre class="lines">
 
 
-41
-42
-43</pre>
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id audit_store'>audit_store</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id outfile'>outfile</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
     <span class='ivar'>@audit_store</span> <span class='op'>=</span> <span class='id audit_store'>audit_store</span>
@@ -394,17 +394,17 @@ Do not ommit any of the info.
       <pre class="lines">
 
 
+130
+131
+132
 133
 134
 135
 136
-137
-138
-139
-140</pre>
+137</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -438,6 +438,9 @@ Do not ommit any of the info.
       <pre class="lines">
 
 
+139
+140
+141
 142
 143
 144
@@ -458,13 +461,10 @@ Do not ommit any of the info.
 159
 160
 161
-162
-163
-164
-165</pre>
+162</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 142</span>
+      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 139</span>
 
 <span class='kw'>def</span> <span class='id __print_generic'>__print_generic</span><span class='lparen'>(</span> <span class='id key'>key</span><span class='comma'>,</span> <span class='id val'>val</span> <span class='rparen'>)</span>
     <span class='id key'>key</span> <span class='op'>=</span> <span class='id key'>key</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>_</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id capitalize'>capitalize</span>
@@ -522,6 +522,9 @@ Use it to run your report.
       <pre class="lines">
 
 
+47
+48
+49
 50
 51
 52
@@ -595,13 +598,10 @@ Use it to run your report.
 120
 121
 122
-123
-124
-125
-126</pre>
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -690,7 +690,7 @@ Use it to run your report.
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 05:11:07 2010 by 
+  Generated on Thu Sep  2 06:03:15 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

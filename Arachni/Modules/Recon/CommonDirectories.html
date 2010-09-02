@@ -73,7 +73,7 @@
   
     
       <dt class="r2">Includes:</dt>
-      <dd class="r2"><a href="../../Module/Registrar.html" title="Arachni::Module::Registrar (module)">Arachni::Module::Registrar</a>, <a href="../../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Arachni::Module::Utilities</a></dd>
+      <dd class="r2"><a href="../../Module/Registrar.html" title="Arachni::Module::Registrar (module)">Arachni::Module::Registrar</a></dd>
       
     
   
@@ -118,10 +118,6 @@ Looks for common, possibly sensitive, directories on the server.
 
 </div>
 
-  
-  
-  
-  
   
   
   
@@ -282,16 +278,6 @@ A new instance of CommonDirectories.
   
   
   
-  <h3 class="inherited">Methods included from <a href="../../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Arachni::Module::Utilities</a></h3>
-  <p class="inherited"><a href="../../Module/Utilities.html#get_path-class_method" title="Arachni::Module::Utilities.get_path (method)">get_path</a></p>
-
-  
-  
-  
-  
-  
-  
-  
   <h3 class="inherited">Methods inherited from <a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></h3>
   <p class="inherited"><a href="../../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a>, <a href="../../Module/Base.html#deps-class_method" title="Arachni::Module::Base.deps (method)">deps</a>, <a href="../../Module/Base.html#get_cookie_simple-instance_method" title="Arachni::Module::Base#get_cookie_simple (method)">#get_cookie_simple</a>, <a href="../../Module/Base.html#get_cookies-instance_method" title="Arachni::Module::Base#get_cookies (method)">#get_cookies</a>, <a href="../../Module/Base.html#get_cookies_simple-instance_method" title="Arachni::Module::Base#get_cookies_simple (method)">#get_cookies_simple</a>, <a href="../../Module/Base.html#get_data_file-instance_method" title="Arachni::Module::Base#get_data_file (method)">#get_data_file</a>, <a href="../../Module/Base.html#get_form_simple-instance_method" title="Arachni::Module::Base#get_form_simple (method)">#get_form_simple</a>, <a href="../../Module/Base.html#get_forms-instance_method" title="Arachni::Module::Base#get_forms (method)">#get_forms</a>, <a href="../../Module/Base.html#get_forms_simple-instance_method" title="Arachni::Module::Base#get_forms_simple (method)">#get_forms_simple</a>, <a href="../../Module/Base.html#get_links-instance_method" title="Arachni::Module::Base#get_links (method)">#get_links</a>, <a href="../../Module/Base.html#get_links_simple-instance_method" title="Arachni::Module::Base#get_links_simple (method)">#get_links_simple</a>, <a href="../../Module/Base.html#get_request_headers-instance_method" title="Arachni::Module::Base#get_request_headers (method)">#get_request_headers</a>, <a href="../../Module/Base.html#get_response_headers-instance_method" title="Arachni::Module::Base#get_response_headers (method)">#get_response_headers</a>, <a href="../../Module/Base.html#prepare-instance_method" title="Arachni::Module::Base#prepare (method)">#prepare</a></p>
 
@@ -371,18 +357,18 @@ A new instance of CommonDirectories
       <pre class="lines">
 
 
+36
+37
 38
 39
 40
 41
 42
 43
-44
-45
-46</pre>
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
@@ -418,6 +404,8 @@ A new instance of CommonDirectories
       <pre class="lines">
 
 
+73
+74
 75
 76
 77
@@ -437,12 +425,10 @@ A new instance of CommonDirectories
 91
 92
 93
-94
-95
-96</pre>
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -557,6 +543,8 @@ the url of the discovered file
       <pre class="lines">
 
 
+104
+105
 106
 107
 108
@@ -575,12 +563,10 @@ the url of the discovered file
 121
 122
 123
-124
-125
-126</pre>
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id dirname'>dirname</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     
@@ -621,6 +607,8 @@ the url of the discovered file
       <pre class="lines">
 
 
+46
+47
 48
 49
 50
@@ -643,12 +631,10 @@ the url of the discovered file
 67
 68
 69
-70
-71
-72</pre>
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -685,7 +671,7 @@ the url of the discovered file
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 05:11:12 2010 by 
+  Generated on Thu Sep  2 06:03:19 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

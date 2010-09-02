@@ -70,11 +70,15 @@
     
   
     
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><a href="../UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></dd>
+      
+    
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/report/base.rb</dd>
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/report/base.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -113,6 +117,10 @@ An abstract class for the reports.<br/> All reports must extend this.
 </div>
 
 
+  
+  
+  
+  
 
   
     <h2>
@@ -183,6 +191,16 @@ REQUIRED.
   
 
 
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="../UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></h3>
+  <p class="inherited"><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a>, <a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a>, <a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a>, <a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a>, <a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a>, <a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a>, <a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a>, <a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a>, <a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a>, <a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a>, <a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a>, <a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a>, <a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a>, <a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a>, <a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></p>
+
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
@@ -215,9 +233,6 @@ Do not ommit any of the info.
       <pre class="lines">
 
 
-42
-43
-44
 45
 46
 47
@@ -243,10 +258,13 @@ Do not ommit any of the info.
 67
 68
 69
-70</pre>
+70
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/base.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/report/base.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -312,12 +330,12 @@ REQUIRED
       <pre class="lines">
 
 
-33
-34
-35</pre>
+36
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/base.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/report/base.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -332,7 +350,7 @@ REQUIRED
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 05:11:08 2010 by 
+  Generated on Thu Sep  2 06:03:15 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

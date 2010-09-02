@@ -73,7 +73,7 @@
   
     
       <dt class="r2">Includes:</dt>
-      <dd class="r2"><a href="../Report/Registrar.html" title="Arachni::Report::Registrar (module)">Arachni::Report::Registrar</a>, <a href="../UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></dd>
+      <dd class="r2"><a href="../Report/Registrar.html" title="Arachni::Report::Registrar (module)">Arachni::Report::Registrar</a></dd>
       
     
   
@@ -237,14 +237,14 @@ Runs the HTML report.
   
   
   
+  
+  
+  
+  
+  
   <h3 class="inherited">Methods included from <a href="../UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></h3>
   <p class="inherited"><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a>, <a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a>, <a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a>, <a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a>, <a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a>, <a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a>, <a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a>, <a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a>, <a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a>, <a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a>, <a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a>, <a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a>, <a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a>, <a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a>, <a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></p>
-
-  
-  
-  
-  
-  <div id="constructor_details" class="method_details_list">
+<div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
@@ -322,16 +322,16 @@ where to save the report
       <pre class="lines">
 
 
+40
+41
+42
 43
 44
 45
-46
-47
-48
-49</pre>
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/html.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'reports/html.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id audit_store'>audit_store</span><span class='comma'>,</span> <span class='id options'>options</span><span class='comma'>,</span> <span class='id outfile'>outfile</span> <span class='op'>=</span> <span class='id html'>html</span> <span class='rparen'>)</span>
     <span class='ivar'>@audit_store</span>   <span class='op'>=</span> <span class='id audit_store'>audit_store</span>
@@ -365,6 +365,9 @@ where to save the report
       <pre class="lines">
 
 
+65
+66
+67
 68
 69
 70
@@ -375,13 +378,10 @@ where to save the report
 75
 76
 77
-78
-79
-80
-81</pre>
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/html.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'reports/html.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -432,6 +432,9 @@ Runs the HTML report.
       <pre class="lines">
 
 
+51
+52
+53
 54
 55
 56
@@ -441,13 +444,10 @@ Runs the HTML report.
 60
 61
 62
-63
-64
-65
-66</pre>
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/html.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'reports/html.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -472,7 +472,7 @@ Runs the HTML report.
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 05:11:06 2010 by 
+  Generated on Thu Sep  2 06:03:14 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
