@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Modules::Recon::CommonDirectories</title>
+<title>Class: Arachni::Modules::Audit::HelloWorld</title>
 <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
@@ -23,10 +23,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../../_index.html">Index (C)</a> &raquo; 
-    <span class='title'><a href="../../../Arachni.html" title="Arachni (module)">Arachni</a></span> &raquo; <span class='title'><a href="../../Modules.html" title="Arachni::Modules (module)">Modules</a></span> &raquo; <span class='title'><a href="../Recon.html" title="Arachni::Modules::Recon (module)">Recon</a></span>
+    <a href="../../../_index.html">Index (H)</a> &raquo; 
+    <span class='title'><a href="../../../Arachni.html" title="Arachni (module)">Arachni</a></span> &raquo; <span class='title'><a href="../../Modules.html" title="Arachni::Modules (module)">Modules</a></span> &raquo; <span class='title'><a href="../Audit.html" title="Arachni::Modules::Audit (module)">Audit</a></span>
      &raquo; 
-    <span class="title">CommonDirectories</span>
+    <span class="title">HelloWorld</span>
   
   
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -43,7 +43,7 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Arachni::Modules::Recon::CommonDirectories
+    <div id="content"><h1>Class: Arachni::Modules::Audit::HelloWorld
   
   
   
@@ -60,7 +60,7 @@
           
             <li class="next"><a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></li>
           
-            <li class="next">Arachni::Modules::Recon::CommonDirectories</li>
+            <li class="next">Arachni::Modules::Audit::HelloWorld</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -80,7 +80,7 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">modules/recon/common_directories.rb</dd>
+    <dd class="r1 last">modules/audit/hello_world.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -88,10 +88,10 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-Common directories discovery module.
+Hello world audit module.
 </p>
 <p>
-Looks for common, possibly sensitive, directories on the server.
+It outputs the string &#8220;Hello World!&#8221;.
 </p>
 <p>
 @author: Anastasios &#8220;Zapotek&#8221; Laskos
@@ -101,7 +101,7 @@ Looks for common, possibly sensitive, directories on the server.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1
+@version: 0.3
 </p>
 
 
@@ -112,7 +112,7 @@ Looks for common, possibly sensitive, directories on the server.
   <h3>See Also:</h3>
   <ul class="see">
     
-      <li><a href="http://cwe.mitre.org/data/definitions/538.html" target="_parent" title="http://cwe.mitre.org/data/definitions/538.html">http://cwe.mitre.org/data/definitions/538.html</a></li>
+      <li><a href="http://github.com/Zapotek/arachni/wiki/Developer-guide" target="_parent" title="http://github.com/Zapotek/arachni/wiki/Developer-guide">http://github.com/Zapotek/arachni/wiki/Developer-guide</a></li>
     
   </ul>
 
@@ -188,7 +188,7 @@ Looks for common, possibly sensitive, directories on the server.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#__log_results-instance_method" title="#__log_results (instance method)">- (Object) <strong>__log_results</strong>(res, dirname, url) </a>
+      <a href="#__log-instance_method" title="#__log (instance method)">- (Object) <strong>__log</strong> </a>
     
 
     
@@ -201,11 +201,7 @@ Looks for common, possibly sensitive, directories on the server.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Adds a vulnerability to the @results array<br/> and outputs an
-&#8220;OK&#8221; message with the dirname and its url.
-</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -213,7 +209,28 @@ Adds a vulnerability to the @results array<br/> and outputs an
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (CommonDirectories) <strong>initialize</strong>(page) </a>
+      <a href="#clean_up-instance_method" title="#clean_up (instance method)">- (Object) <strong>clean_up</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (HelloWorld) <strong>initialize</strong>(page) </a>
     
 
     
@@ -229,7 +246,7 @@ Adds a vulnerability to the @results array<br/> and outputs an
 
   
     <span class="summary_desc"><div class='inline'><p>
-A new instance of CommonDirectories.
+Initialize our module&#8217;s attibutes.
 </p>
 </div></span>
   
@@ -252,7 +269,10 @@ A new instance of CommonDirectories.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Output the string in @__message.
+</p>
+</div></span>
   
 </li>
 
@@ -279,7 +299,7 @@ A new instance of CommonDirectories.
   
   
   <h3 class="inherited">Methods inherited from <a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></h3>
-  <p class="inherited"><a href="../../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a>, <a href="../../Module/Base.html#deps-class_method" title="Arachni::Module::Base.deps (method)">deps</a>, <a href="../../Module/Base.html#get_cookie_simple-instance_method" title="Arachni::Module::Base#get_cookie_simple (method)">#get_cookie_simple</a>, <a href="../../Module/Base.html#get_cookies-instance_method" title="Arachni::Module::Base#get_cookies (method)">#get_cookies</a>, <a href="../../Module/Base.html#get_cookies_simple-instance_method" title="Arachni::Module::Base#get_cookies_simple (method)">#get_cookies_simple</a>, <a href="../../Module/Base.html#get_data_file-instance_method" title="Arachni::Module::Base#get_data_file (method)">#get_data_file</a>, <a href="../../Module/Base.html#get_form_simple-instance_method" title="Arachni::Module::Base#get_form_simple (method)">#get_form_simple</a>, <a href="../../Module/Base.html#get_forms-instance_method" title="Arachni::Module::Base#get_forms (method)">#get_forms</a>, <a href="../../Module/Base.html#get_forms_simple-instance_method" title="Arachni::Module::Base#get_forms_simple (method)">#get_forms_simple</a>, <a href="../../Module/Base.html#get_links-instance_method" title="Arachni::Module::Base#get_links (method)">#get_links</a>, <a href="../../Module/Base.html#get_links_simple-instance_method" title="Arachni::Module::Base#get_links_simple (method)">#get_links_simple</a>, <a href="../../Module/Base.html#get_request_headers-instance_method" title="Arachni::Module::Base#get_request_headers (method)">#get_request_headers</a>, <a href="../../Module/Base.html#get_response_headers-instance_method" title="Arachni::Module::Base#get_response_headers (method)">#get_response_headers</a>, <a href="../../Module/Base.html#prepare-instance_method" title="Arachni::Module::Base#prepare (method)">#prepare</a></p>
+  <p class="inherited"><a href="../../Module/Base.html#deps-class_method" title="Arachni::Module::Base.deps (method)">deps</a>, <a href="../../Module/Base.html#get_cookie_simple-instance_method" title="Arachni::Module::Base#get_cookie_simple (method)">#get_cookie_simple</a>, <a href="../../Module/Base.html#get_cookies-instance_method" title="Arachni::Module::Base#get_cookies (method)">#get_cookies</a>, <a href="../../Module/Base.html#get_cookies_simple-instance_method" title="Arachni::Module::Base#get_cookies_simple (method)">#get_cookies_simple</a>, <a href="../../Module/Base.html#get_data_file-instance_method" title="Arachni::Module::Base#get_data_file (method)">#get_data_file</a>, <a href="../../Module/Base.html#get_form_simple-instance_method" title="Arachni::Module::Base#get_form_simple (method)">#get_form_simple</a>, <a href="../../Module/Base.html#get_forms-instance_method" title="Arachni::Module::Base#get_forms (method)">#get_forms</a>, <a href="../../Module/Base.html#get_forms_simple-instance_method" title="Arachni::Module::Base#get_forms_simple (method)">#get_forms_simple</a>, <a href="../../Module/Base.html#get_links-instance_method" title="Arachni::Module::Base#get_links (method)">#get_links</a>, <a href="../../Module/Base.html#get_links_simple-instance_method" title="Arachni::Module::Base#get_links_simple (method)">#get_links_simple</a>, <a href="../../Module/Base.html#get_request_headers-instance_method" title="Arachni::Module::Base#get_request_headers (method)">#get_request_headers</a>, <a href="../../Module/Base.html#get_response_headers-instance_method" title="Arachni::Module::Base#get_response_headers (method)">#get_response_headers</a>, <a href="../../Module/Base.html#prepare-instance_method" title="Arachni::Module::Base#prepare (method)">#prepare</a></p>
 
   
   
@@ -336,14 +356,14 @@ A new instance of CommonDirectories.
     <div class="method_details first">
   <p class="signature first" id="initialize-instance_method">
   
-    - (<tt><a href="" title="Arachni::Modules::Recon::CommonDirectories (class)">CommonDirectories</a></tt>) <strong>initialize</strong>(page) 
+    - (<tt><a href="" title="Arachni::Modules::Audit::HelloWorld (class)">HelloWorld</a></tt>) <strong>initialize</strong>(page) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A new instance of CommonDirectories
+Initialize our module&#8217;s attibutes
 </p>
 
 
@@ -357,27 +377,31 @@ A new instance of CommonDirectories
       <pre class="lines">
 
 
-34
-35
-36
-37
-38
-39
-40
-41
-42</pre>
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/hello_world.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
-
-    <span class='ivar'>@__common_directories</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>directories.txt</span><span class='tstring_end'>'</span></span> 
- 
-    <span class='comment'># to keep track of the requests and not repeat them
-</span>    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='ivar'>@results</span>   <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    
+    <span class='comment'>#
+</span>    <span class='comment'># This array will hold the detected vulnerabilities.
+</span>    <span class='comment'>#
+</span>    <span class='comment'># It's good practise to append your attributes and methods with
+</span>    <span class='comment'># 2 underscores ( @__foo, __foo() )
+</span>    <span class='comment'>#
+</span>    <span class='ivar'>@__results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -425,31 +449,33 @@ A new instance of CommonDirectories
 89
 90
 91
-92</pre>
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/hello_world.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CommonDirectories</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Tries to find common directories on the server.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>HelloWorld</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Hello world module.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Author</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>References</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Targets</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
-            
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.3</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>References</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Arachni Wiki</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://github.com/Zapotek/arachni/wiki/Developer-guide</span><span class='tstring_end'>'</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Targets</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>PHP</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+        
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Vulnerability</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>A common directory exists on the server.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CWE</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>538</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Severity</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>MEDIUM</span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CVSSV2</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Example vulnerability</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Vulnerability description.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CWE</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Severity</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>INFORMATIONAL</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CVSSV2</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Remedy_Guidance</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Remedy_Code</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='rbrace'>}</span>
-
+        
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -464,140 +490,9 @@ A new instance of CommonDirectories
     
     
       <div class="method_details first">
-  <p class="signature first" id="__log_results-instance_method">
+  <p class="signature first" id="__log-instance_method">
   
-    - (<tt>Object</tt>) <strong>__log_results</strong>(res, dirname, url) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Adds a vulnerability to the @results array<br/> and outputs an
-&#8220;OK&#8221; message with the dirname and its url.
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='type'>(<tt><a href="../../../Net/HTTPResponse.html" title="Net::HTTPResponse (class)">Net::HTTPResponse</a></tt>)</span>
-      
-      
-        <span class='name'>res</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>
-the HTTP response
-</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-        <span class='name'>dirname</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>
-the discovered dirname
-</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-        <span class='name'>url</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>
-the url of the discovered file
-</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 102</span>
-
-<span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id dirname'>dirname</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    
-    <span class='comment'># append the result to the results array
-</span>    <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>var</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>injected</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='id dirname'>dirname</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>id</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='id dirname'>dirname</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>regexp</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>regexp_match</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>elem</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>response</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>headers</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>request</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>response</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>    
-        <span class='rbrace'>}</span>
-    <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-            
-    <span class='comment'># inform the user that we have a match
-</span>    <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found </span><span class='embexpr_beg'>#{</span><span class='id dirname'>dirname</span><span class='rbrace'>}</span><span class='tstring_content'> at </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="run-instance_method">
-  
-    - (<tt>Object</tt>) <strong>run</strong> 
+    - (<tt>Object</tt>) <strong>__log</strong> 
   
 
   
@@ -607,12 +502,6 @@ the url of the discovered file
       <pre class="lines">
 
 
-44
-45
-46
-47
-48
-49
 50
 51
 52
@@ -631,35 +520,104 @@ the url of the discovered file
 65
 66
 67
-68</pre>
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/hello_world.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id __log'>__log</span>
+    <span class='comment'>#
+</span>    <span class='comment'># Instantiate a new Vulnerability class and
+</span>    <span class='comment'># append it to the results array
+</span>    <span class='ivar'>@__results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>var</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>injected</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>id</span><span class='tstring_end'>'</span></span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>regexp</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>regexp_match</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>elem</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>response</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>headers</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>request</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>response</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>    
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+  
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clean_up-instance_method">
+  
+    - (<tt>Object</tt>) <strong>clean_up</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/hello_world.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
+    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='ivar'>@__results</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="run-instance_method">
+  
+    - (<tt>Object</tt>) <strong>run</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Output the string in @__message
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/hello_world.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Scanning...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-
-    <span class='comment'># ugly crap but it works, as far as I can tell...
-</span>    <span class='id path'>path</span> <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id get_path'>get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+  
+    <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Found a vulnerability.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id __log'>__log</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
-    <span class='id get_data_file'>get_data_file</span><span class='lparen'>(</span> <span class='ivar'>@__common_directories</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id dirname'>dirname</span><span class='op'>|</span>
-        
-        <span class='id url'>url</span>  <span class='op'>=</span> <span class='id path'>path</span> <span class='op'>+</span> <span class='id dirname'>dirname</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span>
-        
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-        <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Checking for </span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-        
-        <span class='id res'>res</span>  <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-        <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='id url'>url</span>
-
-        <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id dirname'>dirname</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>200</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-    <span class='rbrace'>}</span>
-
-    
-    <span class='comment'># register our results with the system
-</span>    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='ivar'>@results</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -671,7 +629,7 @@ the url of the discovered file
 </div>
     
     <div id="footer">
-  Generated on Sat Sep  4 00:53:57 2010 by 
+  Generated on Sat Sep  4 00:53:55 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
