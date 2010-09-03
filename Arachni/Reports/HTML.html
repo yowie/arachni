@@ -114,6 +114,9 @@ href="http://www.liquidmarkup.org">www.liquidmarkup.org</a>/) gem:<br/>
 <div class="tags">
   
 </div>
+  <h2>Constant Summary</h2>
+  
+
 
   
   
@@ -123,6 +126,9 @@ href="http://www.liquidmarkup.org">www.liquidmarkup.org</a>/) gem:<br/>
   
   
   
+  <h3 class="inherited">Constants inherited from <a href="../Report/Base.html" title="Arachni::Report::Base (class)">Arachni::Report::Base</a></h3>
+  <p class="inherited"><a href="../Report/Base.html#REPORT_FP-constant" title="Arachni::Report::Base::REPORT_FP (constant)">REPORT_FP</a></p>
+
   
   
   
@@ -169,7 +175,7 @@ href="http://www.liquidmarkup.org">www.liquidmarkup.org</a>/) gem:<br/>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (HTML) <strong>initialize</strong>(audit_store, options, outfile = html) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (HTML) <strong>initialize</strong>(audit_store, options, outfile = 'report') </a>
     
 
     
@@ -250,7 +256,7 @@ Runs the HTML report.
     <div class="method_details first">
   <p class="signature first" id="initialize-instance_method">
   
-    - (<tt><a href="" title="Arachni::Reports::HTML (class)">HTML</a></tt>) <strong>initialize</strong>(audit_store, options, outfile = html) 
+    - (<tt><a href="" title="Arachni::Reports::HTML (class)">HTML</a></tt>) <strong>initialize</strong>(audit_store, options, outfile = 'report') 
   
 
   
@@ -303,7 +309,7 @@ options passed to the report
         <span class='name'>outfile</span>
       
       
-        <em class="default">(defaults to: <tt>html</tt>)</em>
+        <em class="default">(defaults to: <tt>'report'</tt>)</em>
       
       
         &mdash;
@@ -333,7 +339,7 @@ where to save the report
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 38</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id audit_store'>audit_store</span><span class='comma'>,</span> <span class='id options'>options</span><span class='comma'>,</span> <span class='id outfile'>outfile</span> <span class='op'>=</span> <span class='id html'>html</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id audit_store'>audit_store</span><span class='comma'>,</span> <span class='id options'>options</span><span class='comma'>,</span> <span class='id outfile'>outfile</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>report</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='ivar'>@audit_store</span>   <span class='op'>=</span> <span class='id audit_store'>audit_store</span>
     <span class='ivar'>@options</span>       <span class='op'>=</span> <span class='id options'>options</span>
     <span class='ivar'>@outfile</span>       <span class='op'>=</span> <span class='id outfile'>outfile</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.html</span><span class='tstring_end'>'</span></span>
@@ -472,7 +478,7 @@ Runs the HTML report.
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 20:12:57 2010 by 
+  Generated on Fri Sep  3 08:14:57 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

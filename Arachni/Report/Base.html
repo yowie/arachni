@@ -116,6 +116,30 @@ An abstract class for the reports.<br/> All reports must extend this.
   <p class="children"><a href="../Reports/AP.html" title="Arachni::Reports::AP (class)">s::AP</a>, <a href="../Reports/HTML.html" title="Arachni::Reports::HTML (class)">s::HTML</a>, <a href="../Reports/Stdout.html" title="Arachni::Reports::Stdout (class)">s::Stdout</a></p>
 </div>
 
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="REPORT_FP-constant" class="">REPORT_FP =
+          <div class="docstring">
+  <div class="discussion">
+    <p>
+where to report false positives <br/> info about this should be included in
+all templates
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://github.com/Zapotek/arachni/issues</span><span class='tstring_end'>'</span></span></pre></dd>
+      
+    </dl>
+  
+
 
   
   
@@ -233,11 +257,6 @@ Do not ommit any of the info.
       <pre class="lines">
 
 
-43
-44
-45
-46
-47
 48
 49
 50
@@ -261,10 +280,15 @@ Do not ommit any of the info.
 68
 69
 70
-71</pre>
+71
+72
+73
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/base.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/report/base.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -330,12 +354,12 @@ REQUIRED
       <pre class="lines">
 
 
-34
-35
-36</pre>
+39
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/base.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/report/base.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -350,7 +374,7 @@ REQUIRED
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 20:12:58 2010 by 
+  Generated on Fri Sep  3 08:14:59 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

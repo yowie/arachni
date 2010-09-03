@@ -111,6 +111,9 @@ must have a default report.
 <div class="tags">
   
 </div>
+  <h2>Constant Summary</h2>
+  
+
 
   
   
@@ -120,6 +123,9 @@ must have a default report.
   
   
   
+  <h3 class="inherited">Constants inherited from <a href="../Report/Base.html" title="Arachni::Report::Base (class)">Arachni::Report::Base</a></h3>
+  <p class="inherited"><a href="../Report/Base.html#REPORT_FP-constant" title="Arachni::Report::Base::REPORT_FP (constant)">REPORT_FP</a></p>
+
   
   
   
@@ -394,17 +400,17 @@ Do not ommit any of the info.
       <pre class="lines">
 
 
-128
-129
-130
-131
-132
-133
 134
-135</pre>
+135
+136
+137
+138
+139
+140
+141</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 134</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -438,12 +444,6 @@ Do not ommit any of the info.
       <pre class="lines">
 
 
-137
-138
-139
-140
-141
-142
 143
 144
 145
@@ -461,10 +461,16 @@ Do not ommit any of the info.
 157
 158
 159
-160</pre>
+160
+161
+162
+163
+164
+165
+166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 143</span>
 
 <span class='kw'>def</span> <span class='id __print_generic'>__print_generic</span><span class='lparen'>(</span> <span class='id key'>key</span><span class='comma'>,</span> <span class='id val'>val</span> <span class='rparen'>)</span>
     <span class='id key'>key</span> <span class='op'>=</span> <span class='id key'>key</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>_</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id capitalize'>capitalize</span>
@@ -598,7 +604,13 @@ Use it to run your report.
 118
 119
 120
-121</pre>
+121
+122
+123
+124
+125
+126
+127</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'reports/stdout.rb', line 45</span>
@@ -677,6 +689,12 @@ Use it to run your report.
         <span class='rbrace'>}</span>
         
         <span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+        <span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-----</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Found a false positive?</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Report it: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>REPORT_FP</span> <span class='rparen'>)</span>
+        <span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-----</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        
+        <span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='rparen'>)</span>
         <span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -690,7 +708,7 @@ Use it to run your report.
 </div>
     
     <div id="footer">
-  Generated on Thu Sep  2 20:12:58 2010 by 
+  Generated on Fri Sep  3 08:14:58 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
