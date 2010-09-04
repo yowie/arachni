@@ -313,7 +313,9 @@ And a more complex HTML report here: <tt><a href="Arachni/Reports/HTML.html" tit
 
 <p><strong>Modules</strong></p>
 
-<pre class="code">--lsmod                     list available modules
+<pre class="code">--lsmod=&lt;regexp&gt;            list available modules based on the provided regular expression
+                              If no regexp is provided all modules will be listed.
+                              (Can be used multiple times.)
 
 
 -m &lt;modname,modname..&gt;
@@ -432,7 +434,7 @@ However, I can't be held responsible for your actions or for any damage
 caused by the use of this software.</p></div></div>
     
     <div id="footer">
-  Generated on Sat Sep  4 01:12:00 2010 by 
+  Generated on Sun Sep  5 00:35:49 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

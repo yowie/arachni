@@ -660,7 +660,7 @@ Location of an Arachni Framework Profile (.afp) file to load.
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#lsmod-instance_method" title="#lsmod (instance method)">- (Bool) <strong>lsmod</strong> </a>
+      <a href="#lsmod-instance_method" title="#lsmod (instance method)">- (Array&lt;Regexp&gt;) <strong>lsmod</strong> </a>
     
 
     
@@ -677,7 +677,7 @@ Location of an Arachni Framework Profile (.afp) file to load.
 
   
     <span class="summary_desc"><div class='inline'><p>
-List modules and exit?.
+List modules, based on regexps, and exit?.
 </p>
 </div></span>
   
@@ -1410,7 +1410,8 @@ A new instance of Options
 336
 337
 338
-339</pre>
+339
+340</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/options.rb', line 323</span>
@@ -1427,6 +1428,7 @@ A new instance of Options
     <span class='ivar'>@include</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='ivar'>@redundant</span>  <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='ivar'>@reports</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@lsmod</span>      <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='ivar'>@repopts</span>    <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
     <span class='ivar'>@dir</span>        <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
     <span class='ivar'>@exclude_cookies</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -2534,14 +2536,14 @@ Location of an Arachni Framework Profile (.afp) file to load
       <div class="method_details ">
   <p class="signature " id="lsmod-instance_method">
   
-    - (<tt>Bool</tt>) <strong>lsmod</strong> 
+    - (<tt>Array&lt;Regexp&gt;</tt>) <strong>lsmod</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-List modules and exit?
+List modules, based on regexps, and exit?
 </p>
 
 
@@ -2553,7 +2555,7 @@ List modules and exit?
   
     <li>
       
-        <span class='type'>(<tt>Bool</tt>)</span>
+        <span class='type'>(<tt>Array&lt;Regexp&gt;</tt>)</span>
       
       
       
@@ -3825,15 +3827,15 @@ Merges self with the object in &#8216;options&#8217;
       <pre class="lines">
 
 
-360
 361
 362
 363
 364
-365</pre>
+365
+366</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 360</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 361</span>
 
 <span class='kw'>def</span> <span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id options'>options</span> <span class='rparen'>)</span>
     <span class='id options'>options</span><span class='period'>.</span><span class='id to_h'>to_h</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
@@ -3883,17 +3885,17 @@ Converts the Options object to hash
       <pre class="lines">
 
 
-346
 347
 348
 349
 350
 351
 352
-353</pre>
+353
+354</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 346</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 347</span>
 
 <span class='kw'>def</span> <span class='id to_h'>to_h</span>
     <span class='id hash'>hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -3913,7 +3915,7 @@ Converts the Options object to hash
 </div>
     
     <div id="footer">
-  Generated on Sat Sep  4 01:12:01 2010 by 
+  Generated on Sun Sep  5 00:35:50 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
