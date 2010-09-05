@@ -95,7 +95,7 @@ Holds and manages the registry of the reports.
                                      &lt;zapotek@segfault.gr&gt; &lt;br/&gt;
 </pre>
 <p>
-@version: 0.1
+@version: 0.1.1
 </p>
 
 
@@ -1100,7 +1100,7 @@ Lists all available reports and puts them in a Hash
     <span class='const'>Dir</span><span class='period'>.</span><span class='id glob'>glob</span><span class='lparen'>(</span> <span class='ivar'>@lib</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>*.rb</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id class_path'>class_path</span><span class='op'>|</span>
 
-        <span class='id filename'>filename</span> <span class='op'>=</span> <span class='id class_path'>class_path</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='ivar'>@lib</span> <span class='rparen'>)</span> <span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='id filename'>filename</span> <span class='op'>=</span> <span class='id class_path'>class_path</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@lib</span> <span class='rparen'>)</span> <span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
         <span class='id filename'>filename</span><span class='period'>.</span><span class='id gsub!'>gsub!</span><span class='lparen'>(</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.rb</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 
         <span class='ivar'>@available</span><span class='lbracket'>[</span><span class='id filename'>filename</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -1255,7 +1255,7 @@ the loaded reports
 </div>
     
     <div id="footer">
-  Generated on Sun Sep  5 03:54:25 2010 by 
+  Generated on Mon Sep  6 01:11:25 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

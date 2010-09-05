@@ -96,7 +96,7 @@ runtime environment, the results of the audit etc&#8230;
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1
+@version: 0.1.1
 </p>
 
 
@@ -496,7 +496,7 @@ A new instance of AuditStore
     <span class='comment'># set instance variables from audit opts
 </span>    <span class='id audit'>audit</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-        <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='rparen'>)</span>
+        <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
     
     <span class='ivar'>@options</span>         <span class='op'>=</span> <span class='id prepare_options'>prepare_options</span><span class='lparen'>(</span> <span class='ivar'>@options</span> <span class='rparen'>)</span>
@@ -1222,7 +1222,7 @@ Returns &#8216;self&#8217; and all objects in its instance vars as hashes
 </div>
     
     <div id="footer">
-  Generated on Sun Sep  5 03:54:23 2010 by 
+  Generated on Mon Sep  6 01:11:22 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
