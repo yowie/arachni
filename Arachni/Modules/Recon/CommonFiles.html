@@ -101,7 +101,7 @@ Looks for sensitive common files on the server.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1
+@version: 0.1.1
 </p>
 
 
@@ -401,8 +401,6 @@ A new instance of CommonFiles
       <pre class="lines">
 
 
-77
-78
 79
 80
 81
@@ -422,10 +420,12 @@ A new instance of CommonFiles
 95
 96
 97
-98</pre>
+98
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -433,7 +433,7 @@ A new instance of CommonFiles
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Tries to find common sensitive files on the server.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Author</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>References</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Targets</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
             
@@ -540,8 +540,6 @@ the url of the discovered file
       <pre class="lines">
 
 
-108
-109
 110
 111
 112
@@ -560,10 +558,12 @@ the url of the discovered file
 125
 126
 127
-128</pre>
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id filename'>filename</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     
@@ -634,7 +634,9 @@ the url of the discovered file
 71
 72
 73
-74</pre>
+74
+75
+76</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 44</span>
@@ -663,7 +665,9 @@ the url of the discovered file
         <span class='id res'>res</span>  <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
         <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='id url'>url</span>
 
-        <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>200</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>200</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@http</span><span class='period'>.</span><span class='id custom_404?'>custom_404?</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+            <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='kw'>end</span>
     <span class='rbrace'>}</span>
 
     
@@ -680,7 +684,7 @@ the url of the discovered file
 </div>
     
     <div id="footer">
-  Generated on Mon Sep  6 01:11:26 2010 by 
+  Generated on Mon Sep  6 09:41:12 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>

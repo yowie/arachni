@@ -101,7 +101,7 @@ Looks for common, possibly sensitive, directories on the server.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1
+@version: 0.1.1
 </p>
 
 
@@ -357,24 +357,24 @@ A new instance of CommonDirectories
       <pre class="lines">
 
 
-34
-35
 36
 37
 38
 39
 40
 41
-42</pre>
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
 
-    <span class='ivar'>@__common_directories</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>directories.txt</span><span class='tstring_end'>'</span></span> 
- 
+    <span class='ivar'>@__common_directories</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>directories.txt</span><span class='tstring_end'>'</span></span>
+    
     <span class='comment'># to keep track of the requests and not repeat them
 </span>    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='ivar'>@results</span>   <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -404,8 +404,6 @@ A new instance of CommonDirectories
       <pre class="lines">
 
 
-71
-72
 73
 74
 75
@@ -425,10 +423,12 @@ A new instance of CommonDirectories
 89
 90
 91
-92</pre>
+92
+93
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -436,7 +436,7 @@ A new instance of CommonDirectories
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Description</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Tries to find common directories on the server.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Author</span><span class='tstring_end'>'</span></span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Version</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>References</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Targets</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
             
@@ -543,8 +543,6 @@ the url of the discovered file
       <pre class="lines">
 
 
-102
-103
 104
 105
 106
@@ -563,10 +561,12 @@ the url of the discovered file
 119
 120
 121
-122</pre>
+122
+123
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id dirname'>dirname</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     
@@ -607,8 +607,6 @@ the url of the discovered file
       <pre class="lines">
 
 
-44
-45
 46
 47
 48
@@ -631,18 +629,20 @@ the url of the discovered file
 65
 66
 67
-68</pre>
+68
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_directories.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
     <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Scanning...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
-    <span class='comment'># ugly crap but it works, as far as I can tell...
-</span>    <span class='id path'>path</span> <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id get_path'>get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
-    
+    <span class='id path'>path</span> <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id get_path'>get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+
     <span class='id get_data_file'>get_data_file</span><span class='lparen'>(</span> <span class='ivar'>@__common_directories</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id dirname'>dirname</span><span class='op'>|</span>
         
@@ -654,7 +654,9 @@ the url of the discovered file
         <span class='id res'>res</span>  <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
         <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='id url'>url</span>
 
-        <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id dirname'>dirname</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>200</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>200</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@http</span><span class='period'>.</span><span class='id custom_404?'>custom_404?</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+            <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id dirname'>dirname</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='kw'>end</span> 
     <span class='rbrace'>}</span>
 
     
@@ -671,7 +673,7 @@ the url of the discovered file
 </div>
     
     <div id="footer">
-  Generated on Mon Sep  6 01:11:27 2010 by 
+  Generated on Mon Sep  6 09:41:12 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
   0.5.8 (ruby-1.9.1).
 </div>
