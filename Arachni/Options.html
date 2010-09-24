@@ -24,7 +24,7 @@
       <div id="menu">
   
     <a href="../_index.html">Index (O)</a> &raquo; 
-    <span class='title'><a href="../Arachni.html" title="Arachni (module)">Arachni</a></span>
+    <span class='title'><span class='object_link'><a href="../Arachni.html" title="Arachni (module)">Arachni</a></span></span>
      &raquo; 
     <span class="title">Options</span>
   
@@ -100,7 +100,7 @@ runtime options.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1
+@version: 0.1.1
 </p>
 
 
@@ -578,6 +578,60 @@ Show help?.
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#http_harvest_last-instance_method" title="#http_harvest_last (instance method)">- (Bool) <strong>http_harvest_last</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Harvest the HTTP responses for the whole site at the end or for each page?.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#http_req_limit-instance_method" title="#http_req_limit (instance method)">- (Integer) <strong>http_req_limit</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+How many concurrent HTTP requests?.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#include-instance_method" title="#include (instance method)">- (Array) <strong>include</strong> </a>
     
 
@@ -732,33 +786,6 @@ List reports and exit?.
   
     <span class="summary_desc"><div class='inline'><p>
 Array of modules to load.
-</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#mods_run_last-instance_method" title="#mods_run_last (instance method)">- (Bool) <strong>mods_run_last</strong> </a>
-    
-
-    
-  </span>
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Run the modules after the crawl/analysis?.
 </p>
 </div></span>
   
@@ -1373,7 +1400,7 @@ Converts the Options object to hash.
     <div class="method_details first">
   <p class="signature first" id="initialize-instance_method">
   
-    - (<tt><a href="" title="Arachni::Options (class)">Options</a></tt>) <strong>initialize</strong> 
+    - (<tt><span class='object_link'><a href="" title="Arachni::Options (class)">Options</a></span></tt>) <strong>initialize</strong> 
   
 
   
@@ -1394,14 +1421,6 @@ A new instance of Options
       <pre class="lines">
 
 
-323
-324
-325
-326
-327
-328
-329
-330
 331
 332
 333
@@ -1411,10 +1430,18 @@ A new instance of Options
 337
 338
 339
-340</pre>
+340
+341
+342
+343
+344
+345
+346
+347
+348</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 323</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 331</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -1539,12 +1566,12 @@ Should Arachni audit cookies?
       <pre class="lines">
 
 
-155
-156
-157</pre>
+162
+163
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 162</span>
 
 <span class='kw'>def</span> <span class='id audit_cookies'>audit_cookies</span>
   <span class='ivar'>@audit_cookies</span>
@@ -1594,12 +1621,12 @@ Should Arachni audit forms?
       <pre class="lines">
 
 
-148
-149
-150</pre>
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='id audit_forms'>audit_forms</span>
   <span class='ivar'>@audit_forms</span>
@@ -1649,12 +1676,12 @@ Should Arachni audit HTTP headers?
       <pre class="lines">
 
 
-162
-163
-164</pre>
+169
+170
+171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 162</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='id audit_headers'>audit_headers</span>
   <span class='ivar'>@audit_headers</span>
@@ -1704,12 +1731,12 @@ Should Arachni audit links?
       <pre class="lines">
 
 
-141
-142
-143</pre>
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id audit_links'>audit_links</span>
   <span class='ivar'>@audit_links</span>
@@ -1760,12 +1787,12 @@ The person that authorized the scan<br/> It will be added to the HTTP
       <pre class="lines">
 
 
-219
-220
-221</pre>
+226
+227
+228</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 219</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 226</span>
 
 <span class='kw'>def</span> <span class='id authed_by'>authed_by</span>
   <span class='ivar'>@authed_by</span>
@@ -1815,12 +1842,12 @@ Location of the cookiejar
       <pre class="lines">
 
 
-270
-271
-272</pre>
+277
+278
+279</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 270</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id cookie_jar'>cookie_jar</span>
   <span class='ivar'>@cookie_jar</span>
@@ -1879,12 +1906,12 @@ name=>value pairs
       <pre class="lines">
 
 
-263
-264
-265</pre>
+270
+271
+272</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 263</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 270</span>
 
 <span class='kw'>def</span> <span class='id cookies'>cookies</span>
   <span class='ivar'>@cookies</span>
@@ -1976,12 +2003,12 @@ to be populated by the framework
       <pre class="lines">
 
 
-321
-322
-323</pre>
+329
+330
+331</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 321</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 329</span>
 
 <span class='kw'>def</span> <span class='id delta_time'>delta_time</span>
   <span class='ivar'>@delta_time</span>
@@ -2142,12 +2169,12 @@ followed
       <pre class="lines">
 
 
-285
-286
-287</pre>
+292
+293
+294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 285</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 292</span>
 
 <span class='kw'>def</span> <span class='id exclude'>exclude</span>
   <span class='ivar'>@exclude</span>
@@ -2197,12 +2224,12 @@ Cookies to exclude from audit<br/>
       <pre class="lines">
 
 
-292
-293
-294</pre>
+299
+300
+301</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 292</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 299</span>
 
 <span class='kw'>def</span> <span class='id exclude_cookies'>exclude_cookies</span>
   <span class='ivar'>@exclude_cookies</span>
@@ -2239,12 +2266,12 @@ to be populated by the framework
       <pre class="lines">
 
 
-319
-320
-321</pre>
+327
+328
+329</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 319</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 327</span>
 
 <span class='kw'>def</span> <span class='id finish_datetime'>finish_datetime</span>
   <span class='ivar'>@finish_datetime</span>
@@ -2294,12 +2321,12 @@ Should the crawler follow subdomains?
       <pre class="lines">
 
 
-307
-308
-309</pre>
+314
+315
+316</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 307</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 314</span>
 
 <span class='kw'>def</span> <span class='id follow_subdomains'>follow_subdomains</span>
   <span class='ivar'>@follow_subdomains</span>
@@ -2365,6 +2392,116 @@ Show help?
 </div>
     
       
+      <span id="http_harvest_last=-instance_method"></span>
+      <span id="http_harvest_last-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="http_harvest_last-instance_method">
+  
+    - (<tt>Bool</tt>) <strong>http_harvest_last</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Harvest the HTTP responses for the whole site at the end or for each page?
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+322
+323
+324</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 322</span>
+
+<span class='kw'>def</span> <span class='id http_harvest_last'>http_harvest_last</span>
+  <span class='ivar'>@http_harvest_last</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="http_req_limit=-instance_method"></span>
+      <span id="http_req_limit-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="http_req_limit-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>http_req_limit</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+How many concurrent HTTP requests?
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 141</span>
+
+<span class='kw'>def</span> <span class='id http_req_limit'>http_req_limit</span>
+  <span class='ivar'>@http_req_limit</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
       <span id="include=-instance_method"></span>
       <span id="include-instance_method"></span>
       <div class="method_details ">
@@ -2405,12 +2542,12 @@ followed
       <pre class="lines">
 
 
-300
-301
-302</pre>
+307
+308
+309</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 300</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 307</span>
 
 <span class='kw'>def</span> <span class='id include'>include</span>
   <span class='ivar'>@include</span>
@@ -2515,12 +2652,12 @@ Location of an Arachni Framework Profile (.afp) file to load
       <pre class="lines">
 
 
-211
-212
-213</pre>
+218
+219
+220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 211</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='id load_profile'>load_profile</span>
   <span class='ivar'>@load_profile</span>
@@ -2680,70 +2817,15 @@ Array of modules to load
       <pre class="lines">
 
 
-169
-170
-171</pre>
+176
+177
+178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 169</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 176</span>
 
 <span class='kw'>def</span> <span class='id mods'>mods</span>
   <span class='ivar'>@mods</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="mods_run_last=-instance_method"></span>
-      <span id="mods_run_last-instance_method"></span>
-      <div class="method_details ">
-  <p class="signature " id="mods_run_last-instance_method">
-  
-    - (<tt>Bool</tt>) <strong>mods_run_last</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Run the modules after the crawl/analysis?
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-        <span class='type'>(<tt>Bool</tt>)</span>
-      
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-314
-315
-316</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 314</span>
-
-<span class='kw'>def</span> <span class='id mods_run_last'>mods_run_last</span>
-  <span class='ivar'>@mods_run_last</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2900,12 +2982,12 @@ The address of the proxy server
       <pre class="lines">
 
 
-226
-227
-228</pre>
+233
+234
+235</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 226</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 233</span>
 
 <span class='kw'>def</span> <span class='id proxy_addr'>proxy_addr</span>
   <span class='ivar'>@proxy_addr</span>
@@ -2955,12 +3037,12 @@ The proxy password
       <pre class="lines">
 
 
-240
-241
-242</pre>
+247
+248
+249</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 240</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 247</span>
 
 <span class='kw'>def</span> <span class='id proxy_pass'>proxy_pass</span>
   <span class='ivar'>@proxy_pass</span>
@@ -3010,12 +3092,12 @@ The port to connect on the proxy server
       <pre class="lines">
 
 
-233
-234
-235</pre>
+240
+241
+242</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 233</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 240</span>
 
 <span class='kw'>def</span> <span class='id proxy_port'>proxy_port</span>
   <span class='ivar'>@proxy_port</span>
@@ -3056,10 +3138,7 @@ The proxy type
       
       
         &mdash;
-        <div class='inline'><p>
-[http, socks]
-</p>
-</div>
+        <div class='inline'></div>
       
     </li>
   
@@ -3071,12 +3150,12 @@ The proxy type
       <pre class="lines">
 
 
-254
-255
-256</pre>
+261
+262
+263</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 254</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 261</span>
 
 <span class='kw'>def</span> <span class='id proxy_type'>proxy_type</span>
   <span class='ivar'>@proxy_type</span>
@@ -3126,12 +3205,12 @@ The proxy user
       <pre class="lines">
 
 
-247
-248
-249</pre>
+254
+255
+256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 247</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 254</span>
 
 <span class='kw'>def</span> <span class='id proxy_user'>proxy_user</span>
   <span class='ivar'>@proxy_user</span>
@@ -3291,12 +3370,12 @@ Location of an Arachni Framework Report (.afr) file to load
       <pre class="lines">
 
 
-183
-184
-185</pre>
+190
+191
+192</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 183</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 190</span>
 
 <span class='kw'>def</span> <span class='id repload'>repload</span>
   <span class='ivar'>@repload</span>
@@ -3352,12 +3431,12 @@ name=>value pairs
       <pre class="lines">
 
 
-197
-198
-199</pre>
+204
+205
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 204</span>
 
 <span class='kw'>def</span> <span class='id repopts'>repopts</span>
   <span class='ivar'>@repopts</span>
@@ -3407,12 +3486,12 @@ Array of reports to load
       <pre class="lines">
 
 
-176
-177
-178</pre>
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 176</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 183</span>
 
 <span class='kw'>def</span> <span class='id reports'>reports</span>
   <span class='ivar'>@reports</span>
@@ -3462,12 +3541,12 @@ Where to save the Arachni Framework Report (.afr) file
       <pre class="lines">
 
 
-190
-191
-192</pre>
+197
+198
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 190</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 197</span>
 
 <span class='kw'>def</span> <span class='id repsave'>repsave</span>
   <span class='ivar'>@repsave</span>
@@ -3559,12 +3638,12 @@ Where to save the Arachni Framework Profile (.afp) file
       <pre class="lines">
 
 
-204
-205
-206</pre>
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 204</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 211</span>
 
 <span class='kw'>def</span> <span class='id save_profile'>save_profile</span>
   <span class='ivar'>@save_profile</span>
@@ -3601,12 +3680,12 @@ to be populated by the framework
       <pre class="lines">
 
 
-317
-318
-319</pre>
+325
+326
+327</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 317</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 325</span>
 
 <span class='kw'>def</span> <span class='id start_datetime'>start_datetime</span>
   <span class='ivar'>@start_datetime</span>
@@ -3766,12 +3845,12 @@ The HTTP user-agent to use
       <pre class="lines">
 
 
-277
-278
-279</pre>
+284
+285
+286</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 277</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 284</span>
 
 <span class='kw'>def</span> <span class='id user_agent'>user_agent</span>
   <span class='ivar'>@user_agent</span>
@@ -3810,7 +3889,7 @@ Merges self with the object in &#8216;options&#8217;
   
     <li>
       
-        <span class='type'>(<tt><a href="" title="Arachni::Options (class)">Options</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Arachni::Options (class)">Options</a></span></tt>)</span>
       
       
         <span class='name'></span>
@@ -3827,15 +3906,15 @@ Merges self with the object in &#8216;options&#8217;
       <pre class="lines">
 
 
-361
-362
-363
-364
-365
-366</pre>
+369
+370
+371
+372
+373
+374</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 361</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 369</span>
 
 <span class='kw'>def</span> <span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id options'>options</span> <span class='rparen'>)</span>
     <span class='id options'>options</span><span class='period'>.</span><span class='id to_h'>to_h</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
@@ -3885,17 +3964,17 @@ Converts the Options object to hash
       <pre class="lines">
 
 
-347
-348
-349
-350
-351
-352
-353
-354</pre>
+355
+356
+357
+358
+359
+360
+361
+362</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 347</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 355</span>
 
 <span class='kw'>def</span> <span class='id to_h'>to_h</span>
     <span class='id hash'>hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -3915,9 +3994,9 @@ Converts the Options object to hash
 </div>
     
     <div id="footer">
-  Generated on Mon Sep  6 22:54:34 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.8 (ruby-1.9.1).
+  Generated on Fri Sep 24 23:46:58 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.1 (ruby-1.9.2).
 </div>
 
   </body>

@@ -3,16 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=utf-8" />
-<title>Module: Arachni::UI</title>
-<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>Module: Typhoeus</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '..';
+  relpath = '';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
   </head>
   <body>
@@ -23,10 +23,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (U)</a> &raquo; 
-    <span class='title'><span class='object_link'><a href="../Arachni.html" title="Arachni (module)">Arachni</a></span></span>
-     &raquo; 
-    <span class="title">UI</span>
+    <a href="_index.html">Index (T)</a> &raquo; 
+    
+    
+    <span class="title">Typhoeus</span>
   
   
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -43,7 +43,7 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Module: Arachni::UI
+    <div id="content"><h1>Module: Typhoeus
   
   
   
@@ -59,22 +59,34 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/ui/cli/cli.rb<span class="defines">,<br />
-  lib/ui/cli/output.rb</span>
-</dd>
+    <dd class="r1 last">lib/typhoeus/request.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
-<h2>Defined Under Namespace</h2>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Override the on_complete methods of Typhoeus adding support for multiple
+on_complete blocks.
+</p>
+<p>
+Also added support for on demand training of the response and incremental
+request id numbers.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><h2>Defined Under Namespace</h2>
 <p class="children">
    
     
-      <strong class="modules">Modules:</strong> <span class='object_link'><a href="UI/Output.html" title="Arachni::UI::Output (module)">Output</a></span>
-    
    
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="UI/CLI.html" title="Arachni::UI::CLI (class)">CLI</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Typhoeus/Request.html" title="Typhoeus::Request (class)">Request</a></span>
     
   
 </p>
@@ -86,7 +98,7 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Sep 24 23:46:58 2010 by 
+  Generated on Fri Sep 24 23:47:00 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>

@@ -41,8 +41,7 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><p>This file contains some brief instructions on contributing to Arachni.  <br/>
-</p>
+    <div id="content"><div id='filecontents'><p>This file contains some brief instructions on contributing to Arachni.</p>
 
 <h2>Code Style</h2>
 
@@ -70,52 +69,48 @@ adhere to the following guidelines:</p>
 The interface in use won't be able to see your output and route it
 accordingly.</p>
 
-<p>Arachni provides you with wrappers that you can use, take a look in <tt><a href="Arachni/UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></tt>.<br/>
+<p>Arachni provides you with wrappers that you can use, take a look in <span class='object_link'><a href="Arachni/UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></span>.<br/>
 All UIs will provide these methods to handle your output, use them.</p>
 
 <p><strong>2. Don't use "sleep".</strong><br/>
 It is unlikely that you will need it, but if you do, use
 "select(nil, nil, nil, &lt;time&gt;)" instead to avoid multi-threading issues.</p>
 
-<p><strong>3. Avoid creating your own instance of Net::HTTP.</strong><br/>
-If you are writing a module you are provided with wrappers (<tt><a href="Arachni/Module/Base.html#http-instance_method" title="Arachni::Module::Base#http (method)">Arachni::Module::Base#http</a></tt>) for Net:HTTP
-pre-configured with proxy, auth and ssl settings.</p>
+<p><strong>3. Avoid creating your own instance of Net::HTTP or other lib.</strong><br/>
+You are provided with pre-configured wrapper (<span class='object_link'><a href="Arachni/Module/Base.html#http-instance_method" title="Arachni::Module::Base#http (method)">Arachni::Module::Base#http</a></span>) of Typhoeus.</p>
 
-<p>You also have access to the instantiated Net:HTTP session (<tt><a href="Arachni/Module/HTTP.html#session-instance_method" title="Arachni::Module::HTTP#session (method)">Arachni::Module::HTTP#session</a></tt>) so use that
-if you must.</p>
+<p>Take a look in the tutorial module to see what you get: <span class='object_link'><a href="Arachni/Modules/Audit/SimpleRFI.html" title="Arachni::Modules::Audit::SimpleRFI (class)">Arachni::Modules::Audit::SimpleRFI</a></span></p>
 
-<p>Take a look in the tutorial module to see what you get: <tt><a href="Arachni/Modules/Audit/SimpleRFI.html" title="Arachni::Modules::Audit::SimpleRFI (class)">Arachni::Modules::Audit::SimpleRFI</a></tt></p>
-
-<p>The base module will also give you some insights: <tt><a href="Arachni/Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></tt></p>
+<p>The base module will also give you some insights: <span class='object_link'><a href="Arachni/Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></p>
 
 <p>If you absolutely have to bypass Arachni's facilities you must obey the
-run-time settings in <tt><a href="Arachni/Options.html" title="Arachni::Options (class)">Arachni::Options</a></tt>.</p>
+run-time settings in <span class='object_link'><a href="Arachni/Options.html" title="Arachni::Options (class)">Arachni::Options</a></span>.</p>
 
 <h2>Creating New Modules</h2>
 
 <p>Arachni provides you with examples for the usual types of modules.</p>
 
-<p>This is your main guide: <tt><a href="Arachni/Modules/Audit/SimpleRFI.html" title="Arachni::Modules::Audit::SimpleRFI (class)">Arachni::Modules::Audit::SimpleRFI</a></tt></p>
+<p>This is your main guide: <span class='object_link'><a href="Arachni/Modules/Audit/SimpleRFI.html" title="Arachni::Modules::Audit::SimpleRFI (class)">Arachni::Modules::Audit::SimpleRFI</a></span></p>
 
 <p>This covers most of the usual tasks when writing a module.
 It lets Arachni do all the work.</p>
 
 <p>For something more elaborate look in:<br/>
-- <tt><a href="Arachni/Modules/Audit/ResponseSplitting.html" title="Arachni::Modules::Audit::ResponseSplitting (class)">Arachni::Modules::Audit::ResponseSplitting</a></tt><br/>
-- <tt><a href="Arachni/Modules/Audit/SQLInjection.html" title="Arachni::Modules::Audit::SQLInjection (class)">Arachni::Modules::Audit::SQLInjection</a></tt></p>
+- <span class='object_link'><a href="Arachni/Modules/Audit/ResponseSplitting.html" title="Arachni::Modules::Audit::ResponseSplitting (class)">Arachni::Modules::Audit::ResponseSplitting</a></span><br/>
+- <span class='object_link'><a href="Arachni/Modules/Audit/SQLInjection.html" title="Arachni::Modules::Audit::SQLInjection (class)">Arachni::Modules::Audit::SQLInjection</a></span></p>
 
 <p>These modules do their own vulnerability checking and logging.</p>
 
 <p>If you want to create coupled modules take a look in:<br/>
-- <tt><a href="Arachni/Modules/Recon/ExtractObjects.html" title="Arachni::Modules::Recon::ExtractObjects (class)">Arachni::Modules::Recon::ExtractObjects</a></tt><br/>
-- <tt><a href="Arachni/Modules/Audit/AuditObjects.html" title="Arachni::Modules::Audit::AuditObjects (class)">Arachni::Modules::Audit::AuditObjects</a></tt></p>
+- <span class='object_link'><a href="Arachni/Modules/Recon/ExtractObjects.html" title="Arachni::Modules::Recon::ExtractObjects (class)">Arachni::Modules::Recon::ExtractObjects</a></span><br/>
+- <span class='object_link'><a href="Arachni/Modules/Audit/AuditObjects.html" title="Arachni::Modules::Audit::AuditObjects (class)">Arachni::Modules::Audit::AuditObjects</a></span></p>
 
-<p>In this case <tt><a href="Arachni/Modules/Recon/ExtractObjects.html" title="Arachni::Modules::Recon::ExtractObjects (class)">Arachni::Modules::Recon::ExtractObjects</a></tt> extracts information from the
+<p>In this case <span class='object_link'><a href="Arachni/Modules/Recon/ExtractObjects.html" title="Arachni::Modules::Recon::ExtractObjects (class)">Arachni::Modules::Recon::ExtractObjects</a></span> extracts information from the
 web pages and saves it in the module datastore.</p>
 
 <p>The datastore is persistent and shared between all modules.</p>
 
-<p><tt><a href="Arachni/Modules/Audit/AuditObjects.html" title="Arachni::Modules::Audit::AuditObjects (class)">Arachni::Modules::Audit::AuditObjects</a></tt> then gets the data harvested by <tt><a href="Arachni/Modules/Recon/ExtractObjects.html" title="Arachni::Modules::Recon::ExtractObjects (class)">Arachni::Modules::Recon::ExtractObjects</a></tt>
+<p><span class='object_link'><a href="Arachni/Modules/Audit/AuditObjects.html" title="Arachni::Modules::Audit::AuditObjects (class)">Arachni::Modules::Audit::AuditObjects</a></span> then gets the data harvested by <span class='object_link'><a href="Arachni/Modules/Recon/ExtractObjects.html" title="Arachni::Modules::Recon::ExtractObjects (class)">Arachni::Modules::Recon::ExtractObjects</a></span>
 and handles it accordingly.</p>
 
 <p>One last note.
@@ -126,7 +121,7 @@ so it's better to keep them in an external file under:</p>
 <pre class="code">modules/&lt;modname&gt;/
 </pre>
 
-<p>Use "<tt><a href="Arachni/Module/Base.html#get_data_file-instance_method" title="Arachni::Module::Base#get_data_file (method)">Arachni::Module::Base#get_data_file</a></tt>( filename ){ |line| }" to get the file line by line.<br/>
+<p>Use "<span class='object_link'><a href="Arachni/Module/Base.html#get_data_file-instance_method" title="Arachni::Module::Base#get_data_file (method)">Arachni::Module::Base#get_data_file</a></span>( filename ){ |line| }" to get the file line by line.<br/>
 You just pass the filename (no path), get_data_file() will take care of the rest.</p>
 
 <p>This will make the strings easier to update and keep your modules smaller.</p>
@@ -137,11 +132,11 @@ to your needs and modify it.</p>
 <h2>Creating New Reports<br/></h2>
 
 <p>The only thing that you should keep in mind when creating a new report
-is to adhere to the structure shown in: <tt><a href="Arachni/Reports/AP.html" title="Arachni::Reports::AP (class)">Arachni::Reports::AP</a></tt>.<br/>
-Also look in: <tt><a href="Arachni/Report/Base.html" title="Arachni::Report::Base (class)">Arachni::Report::Base</a></tt>.</p>
+is to adhere to the structure shown in: <span class='object_link'><a href="Arachni/Reports/AP.html" title="Arachni::Reports::AP (class)">Arachni::Reports::AP</a></span>.<br/>
+Also look in: <span class='object_link'><a href="Arachni/Report/Base.html" title="Arachni::Report::Base (class)">Arachni::Report::Base</a></span>.</p>
 
 <p>If you want your users to be able to customize the report you can
-provide them with a set of options, as in <tt><a href="Arachni/Reports/HTML.html" title="Arachni::Reports::HTML (class)">Arachni::Reports::HTML</a></tt>'s self.info() return hash.</p>
+provide them with a set of options, as in <span class='object_link'><a href="Arachni/Reports/HTML.html" title="Arachni::Reports::HTML (class)">Arachni::Reports::HTML</a></span>'s self.info() return hash.</p>
 
 <p>Keep in minds though that Arachni does not do any checking for these options,
 you will have to take care of that yourself.</p>
@@ -157,9 +152,9 @@ power to work with.</p>
 Do place licensing information in your code files.</p></div></div>
     
     <div id="footer">
-  Generated on Mon Sep  6 22:54:33 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.8 (ruby-1.9.1).
+  Generated on Fri Sep 24 23:46:57 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.1 (ruby-1.9.2).
 </div>
 
   </body>
