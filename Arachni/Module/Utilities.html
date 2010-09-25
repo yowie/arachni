@@ -276,19 +276,20 @@ path
     <p>
 Gets the reverse diff (strings that have not changed) between 2 strings
 </p>
-<p>
-text1 = <<END This is the first test. Not really sure what else to put
-here&#8230; END
-</p>
-<p>
-text2 = <<END This is the second test. Not really sure what else to put
-here&#8230; Boo-Yah! END
-</p>
-<p>
-Arachni::Modules::Utilities.rdiff( text1, text2 )
-</p>
 <pre class="code">
- <span class='comment'># =&gt; &quot;This is the  test.\nNot really sure what else to put here...\n&quot;</span></pre>
+ text1 = &lt;&lt;END
+ This is the first test.
+ Not really sure what else to put here...
+ END
+
+ text2 = &lt;&lt;END
+ This is the second test.
+ Not really sure what else to put here...
+ Boo-Yah!
+ END
+
+ Arachni::Modules::Utilities.rdiff( text1, text2 )
+   # =&gt; &quot;This is the  test.\nNot really sure what else to put here...\n&quot;</pre>
 
 
   </div>
@@ -422,7 +423,7 @@ Arachni::Modules::Utilities.rdiff( text1, text2 )
 </div>
     
     <div id="footer">
-  Generated on Sat Sep 25 11:02:06 2010 by 
+  Generated on Sat Sep 25 20:28:37 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
