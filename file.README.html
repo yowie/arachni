@@ -347,7 +347,10 @@ to uncover new elements or attack vectors and will adapt itself accordingly.</p>
 
 -m &lt;modname,modname..&gt;
 --mods=&lt;modname,modname..&gt;  comma separated list of modules to deploy
-                              (use '*' to deploy all modules)
+                              (Use '*' to deploy all modules)
+                              (You can exclude modules by prefixing their name with a dash:
+                                  --mods=*,-backup_files,-xss
+                               The above will load all modules except for the 'backup_files' and 'xss' modules. )
 </pre>
 
 <h3>Reports</h3>
@@ -358,15 +361,15 @@ to uncover new elements or attack vectors and will adapt itself accordingly.</p>
                                 (The file will be saved with an extention of: .afr)               
 
 --repload=&lt;file&gt;              load audit results from &lt;file&gt;
-                              (Allows you to create a new reports from old/finished scans.)
+                                (Allows you to create a new reports from old/finished scans.)
 
 --repopts=&lt;option1&gt;:&lt;value&gt;,&lt;option2&gt;:&lt;value&gt;,...
                               Set options for the selected reports.
-                              (One invocation only, options will be applied to all loaded reports.)
+                                (One invocation only, options will be applied to all loaded reports.)
 
---report=&lt;repname&gt;          &lt;repname&gt;: the name of the report as displayed by '--lsrep'
-                              (Default: stdout)
-                              (Can be used multiple times.)
+--report=&lt;repname&gt;            &lt;repname&gt;: the name of the report as displayed by '--lsrep'
+                                (Default: stdout)
+                                (Can be used multiple times.)
 </pre>
 
 <h3>Proxy</h3>
@@ -471,7 +474,7 @@ However, I can't be held responsible for your actions or for any damage
 caused by the use of this software.</p></div></div>
     
     <div id="footer">
-  Generated on Sun Sep 26 14:25:04 2010 by 
+  Generated on Sun Sep 26 19:11:32 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>

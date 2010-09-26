@@ -217,6 +217,27 @@ Passes the reponse to <span class='object_link'><a href="#analyze-instance_metho
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#follow%3F-instance_method" title="#follow? (instance method)">- (Boolean) <strong>follow?</strong>(url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#initialize-instance_method" title="#initialize (instance method)">- (Trainer) <strong>initialize</strong> </a>
     
 
@@ -407,19 +428,19 @@ Returns an updated <span class='object_link'><a href="../Page.html" title="Arach
       <pre class="lines">
 
 
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66</pre>
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id page'>page</span>
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@updated</span>  <span class='rparen'>)</span>
@@ -503,13 +524,74 @@ was the response forcing a redirection?
 
 48
 49
-50</pre>
+50
+51
+52
+53
+54</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id add_response'>add_response</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id redir'>redir</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
+    <span class='comment'># don't follow links to external sites and 
+</span>    <span class='comment'># respect follow-subdomains option
+</span>    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id follow?'>follow?</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span> <span class='rparen'>)</span> <span class='op'>||</span> <span class='lparen'>(</span> <span class='id redir'>redir</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id follow?'>follow?</span><span class='lparen'>(</span> <span class='id redir'>redir</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    
     <span class='id analyze'>analyze</span><span class='lparen'>(</span> <span class='lbracket'>[</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id redir'>redir</span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="follow?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>follow?</strong>(url) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id follow?'>follow?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@analyzer</span><span class='period'>.</span><span class='id exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@analyzer</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>    
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@analyzer</span><span class='period'>.</span><span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -521,7 +603,7 @@ was the response forcing a redirection?
 </div>
     
     <div id="footer">
-  Generated on Sun Sep 26 14:25:06 2010 by 
+  Generated on Sun Sep 26 19:11:34 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>

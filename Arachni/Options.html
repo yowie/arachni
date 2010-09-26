@@ -1438,7 +1438,11 @@ A new instance of Options
 345
 346
 347
-348</pre>
+348
+349
+350
+351
+352</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/options.rb', line 331</span>
@@ -1459,6 +1463,10 @@ A new instance of Options
     <span class='ivar'>@repopts</span>    <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
     <span class='ivar'>@dir</span>        <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
     <span class='ivar'>@exclude_cookies</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    
+    <span class='comment'># set some defaults
+</span>    <span class='id redirect_limit'>redirect_limit</span> <span class='op'>=</span> <span class='int'>20</span>
+
     
 <span class='kw'>end</span></pre>
     </td>
@@ -3906,15 +3914,15 @@ Merges self with the object in &#8216;options&#8217;
       <pre class="lines">
 
 
-369
-370
-371
-372
 373
-374</pre>
+374
+375
+376
+377
+378</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 369</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 373</span>
 
 <span class='kw'>def</span> <span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id options'>options</span> <span class='rparen'>)</span>
     <span class='id options'>options</span><span class='period'>.</span><span class='id to_h'>to_h</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
@@ -3964,17 +3972,17 @@ Converts the Options object to hash
       <pre class="lines">
 
 
-355
-356
-357
-358
 359
 360
 361
-362</pre>
+362
+363
+364
+365
+366</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 355</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 359</span>
 
 <span class='kw'>def</span> <span class='id to_h'>to_h</span>
     <span class='id hash'>hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -3994,7 +4002,7 @@ Converts the Options object to hash
 </div>
     
     <div id="footer">
-  Generated on Sun Sep 26 14:25:05 2010 by 
+  Generated on Sun Sep 26 19:11:32 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
