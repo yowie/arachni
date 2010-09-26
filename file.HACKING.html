@@ -41,7 +41,9 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><p>This file contains some brief instructions on contributing to Arachni.</p>
+    <div id="content"><div id='filecontents'><h1>Hacking the Framework</h1>
+
+<p>This file contains some brief instructions on contributing to Arachni.</p>
 
 <h2>Code Style</h2>
 
@@ -51,7 +53,7 @@ adhere to the following guidelines:</p>
 <ul>
 <li>4 spaces, no tabs.</li>
 <li>Maximum line length 75-80 columns, try not to exceed that limit.</li>
-<li>{} instead of "do" for blocks and keep the iterator var in it's own line.<br/>
+<li>{} instead of "<code>do</code>" for blocks and keep the iterator var in it's own line.<br/>
  Like so:
 
 <pre class="code"> <span class='id arr'>arr</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -74,10 +76,10 @@ All UIs will provide these methods to handle your output, use them.</p>
 
 <p><strong>2. Don't use "sleep".</strong><br/>
 It is unlikely that you will need it, but if you do, use
-"select(nil, nil, nil, &lt;time&gt;)" instead to avoid multi-threading issues.</p>
+<code>select(nil, nil, nil, &lt;time&gt;)</code> instead to avoid multi-threading issues.</p>
 
 <p><strong>3. Avoid creating your own instance of Net::HTTP or other lib.</strong><br/>
-You are provided with pre-configured wrapper (<span class='object_link'><a href="Arachni/Module/Base.html#http-instance_method" title="Arachni::Module::Base#http (method)">Arachni::Module::Base#http</a></span>) of Typhoeus.</p>
+You are provided with pre-configured wrapper (<span class='object_link'><a href="Arachni/Module/Base.html#http-instance_method" title="Arachni::Module::Base#http (method)">Arachni::Module::Base#http</a></span>) of <a href="http://github.com/pauldix/typhoeus">Typhoeus</a>.</p>
 
 <p>Take a look in the tutorial module to see what you get: <span class='object_link'><a href="Arachni/Modules/Audit/SimpleRFI.html" title="Arachni::Modules::Audit::SimpleRFI (class)">Arachni::Modules::Audit::SimpleRFI</a></span></p>
 
@@ -121,27 +123,27 @@ so it's better to keep them in an external file under:</p>
 <pre class="code">modules/&lt;modname&gt;/
 </pre>
 
-<p>Use "<span class='object_link'><a href="Arachni/Module/Base.html#get_data_file-instance_method" title="Arachni::Module::Base#get_data_file (method)">Arachni::Module::Base#get_data_file</a></span>( filename ){ |line| }" to get the file line by line.<br/>
-You just pass the filename (no path), get_data_file() will take care of the rest.</p>
+<p>Use "<span class='object_link'><a href="Arachni/Module/Base.html#get_data_file-instance_method" title="Arachni::Module::Base#get_data_file (method)">Arachni::Module::Base#get_data_file</a></span><code>( filename ){ |line| }</code>" to get the file line by line.<br/>
+You just pass the filename (no path), <code>get_data_file()</code> will take care of the rest.</p>
 
 <p>This will make the strings easier to update and keep your modules smaller.</p>
 
 <p>In general, before writing a module copy an existing one that's close
 to your needs and modify it.</p>
 
-<h2>Creating New Reports<br/></h2>
+<h2>Creating New Reports</h2>
 
 <p>The only thing that you should keep in mind when creating a new report
 is to adhere to the structure shown in: <span class='object_link'><a href="Arachni/Reports/AP.html" title="Arachni::Reports::AP (class)">Arachni::Reports::AP</a></span>.<br/>
 Also look in: <span class='object_link'><a href="Arachni/Report/Base.html" title="Arachni::Report::Base (class)">Arachni::Report::Base</a></span>.</p>
 
 <p>If you want your users to be able to customize the report you can
-provide them with a set of options, as in <span class='object_link'><a href="Arachni/Reports/HTML.html" title="Arachni::Reports::HTML (class)">Arachni::Reports::HTML</a></span>'s self.info() return hash.</p>
+provide them with a set of options, as in <span class='object_link'><a href="Arachni/Reports/HTML.html" title="Arachni::Reports::HTML (class)">Arachni::Reports::HTML</a></span>'s <code>self.info()</code> return hash.</p>
 
 <p>Keep in minds though that Arachni does not do any checking for these options,
 you will have to take care of that yourself.</p>
 
-<p>However, do provide an appropriate default "outfile" value in "initialize".</p>
+<p>However, do provide an appropriate default <code>outfile</code> value in <code>initialize()</code>.</p>
 
 <p>Other than that you can do whatever you want, you have all of Ruby's
 power to work with.</p>
@@ -152,7 +154,7 @@ power to work with.</p>
 Do place licensing information in your code files.</p></div></div>
     
     <div id="footer">
-  Generated on Sat Sep 25 20:28:34 2010 by 
+  Generated on Sun Sep 26 01:11:56 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>

@@ -50,7 +50,7 @@
 <strong>Code Documentation</strong>:     <a href="http://zapotek.github.com/arachni/">http://zapotek.github.com/arachni/</a><br/>
 <strong>Author</strong>:       <a href="mailto:tasos.laskos@gmail.com">Anastasios</a> "<a href="mailto:zapotek@segfault.gr">Zapotek</a>" <a href="mailto:tasos.laskos@gmail.com">Laskos</a><br/>
 <strong>Copyright</strong>:    2010  <br/>
-<strong>License</strong>:      GNU General Public License v2</p>
+<strong>License</strong>:      <a href="file.LICENSE.html">GNU General Public License v2</a></p>
 
 <h2>Synopsis</h2>
 
@@ -104,7 +104,7 @@ However, extensive <a href="http://github.com/Zapotek/arachni/wiki">documentatio
 
 <h2>Feature List</h2>
 
-<p><strong>General</strong></p>
+<h3>General</h3>
 
 <ul>
 <li>Cookie-jar support</li>
@@ -131,7 +131,7 @@ However, extensive <a href="http://github.com/Zapotek/arachni/wiki">documentatio
 </ul>
 
 
-<p><strong> Website Crawler </strong> (<span class='object_link'><a href="Arachni/Spider.html" title="Arachni::Spider (class)">Arachni::Spider</a></span>)</p>
+<h3>Website Crawler (<span class='object_link'><a href="Arachni/Spider.html" title="Arachni::Spider (class)">Arachni::Spider</a></span>)</h3>
 
 <p>The crawler is provided by <a href="http://anemone.rubyforge.org/">Anemone</a> -- with some slight modifications to accommodate extra features.</p>
 
@@ -148,7 +148,7 @@ However, extensive <a href="http://github.com/Zapotek/arachni/wiki">documentatio
 </ul>
 
 
-<p><strong> HTML Analyzer </strong> (<span class='object_link'><a href="Arachni/Analyzer.html" title="Arachni::Analyzer (class)">Arachni::Analyzer</a></span>)</p>
+<h3>HTML Analyzer (<span class='object_link'><a href="Arachni/Analyzer.html" title="Arachni::Analyzer (class)">Arachni::Analyzer</a></span>)</h3>
 
 <p>Can extract and analyze:</p>
 
@@ -170,7 +170,7 @@ like:<br/>
 
 <p>This way the system can be extended to be able to handle virtually anything.</p>
 
-<p><strong>  Module Management </strong> (<span class='object_link'><a href="Arachni/Module.html" title="Arachni::Module (module)">Arachni::Module</a></span>)</p>
+<h3>Module Management (<span class='object_link'><a href="Arachni/Module.html" title="Arachni::Module (module)">Arachni::Module</a></span>)</h3>
 
 <ul>
 <li>Modular design
@@ -197,7 +197,7 @@ like:<br/>
 
 <p>You can find a tutorial module here: <span class='object_link'><a href="Arachni/Modules/Audit/SimpleRFI.html" title="Arachni::Modules::Audit::SimpleRFI (class)">Arachni::Modules::Audit::SimpleRFI</a></span></p>
 
-<p><strong>  Report Management </strong> (<span class='object_link'><a href="Arachni/Report.html" title="Arachni::Report (module)">Arachni::Report</a></span>)</p>
+<h3>Report Management (<span class='object_link'><a href="Arachni/Report.html" title="Arachni::Report (module)">Arachni::Report</a></span>)</h3>
 
 <ul>
 <li>Modular design
@@ -213,7 +213,7 @@ like:<br/>
 <p>You can find an up-to-date sample report here: <span class='object_link'><a href="Arachni/Reports/AP.html" title="Arachni::Reports::AP (class)">Arachni::Reports::AP</a></span><br/>
 And a more complex HTML report here: <span class='object_link'><a href="Arachni/Reports/HTML.html" title="Arachni::Reports::HTML (class)">Arachni::Reports::HTML</a></span></p>
 
-<p><strong>  Trainer subsystem </strong> (<span class='object_link'><a href="Arachni/Module/Trainer.html" title="Arachni::Module::Trainer (class)">Arachni::Module::Trainer</a></span>)</p>
+<h3>Trainer subsystem (<span class='object_link'><a href="Arachni/Module/Trainer.html" title="Arachni::Module::Trainer (class)">Arachni::Module::Trainer</a></span>)</h3>
 
 <p>The Trainer is what enables Arachni to learn from the scan it performs
 and incorporate that knowledge, on the fly, for the duration of the audit.</p>
@@ -241,7 +241,7 @@ to uncover new elements or attack vectors and will adapt itself accordingly.</p>
   Supported options:
 </pre>
 
-<p><strong>General</strong></p>
+<h3>General</h3>
 
 <pre class="code">-h
 --help                      output this
@@ -287,7 +287,7 @@ to uncover new elements or attack vectors and will adapt itself accordingly.</p>
                                   * --redundant)
 </pre>
 
-<p><strong>Crawler</strong></p>
+<h3>Crawler</h3>
 
 <pre class="code">-e &lt;regex&gt;
 --exclude=&lt;regex&gt;           exclude urls matching regex
@@ -314,7 +314,7 @@ to uncover new elements or attack vectors and will adapt itself accordingly.</p>
 --redirect-limit=&lt;number&gt;   how many redirects to follow (default: inf)
 </pre>
 
-<p><strong>Auditor</strong></p>
+<h3>Auditor</h3>
 
 <pre class="code">-g
 --audit-links               audit link variables (GET)
@@ -338,7 +338,7 @@ to uncover new elements or attack vectors and will adapt itself accordingly.</p>
                                maybe by an order of magnitude.)
 </pre>
 
-<p><strong>Modules</strong></p>
+<h3>Modules</h3>
 
 <pre class="code">--lsmod=&lt;regexp&gt;            list available modules based on the provided regular expression
                               (If no regexp is provided all modules will be listed.)
@@ -350,7 +350,7 @@ to uncover new elements or attack vectors and will adapt itself accordingly.</p>
                               (use '*' to deploy all modules)
 </pre>
 
-<p><strong>Reports</strong></p>
+<h3>Reports</h3>
 
 <pre class="code">--lsrep                       list available reports
 
@@ -369,7 +369,7 @@ to uncover new elements or attack vectors and will adapt itself accordingly.</p>
                               (Can be used multiple times.)
 </pre>
 
-<p><strong>Proxy</strong></p>
+<h3>Proxy</h3>
 
 <pre class="code">--proxy=&lt;server:port&gt;       specify proxy
 
@@ -379,7 +379,7 @@ to uncover new elements or attack vectors and will adapt itself accordingly.</p>
                               (Default: http)
 </pre>
 
-<p><strong>Example</strong></p>
+<h3>Example</h3>
 
 <p>In the following example all modules will be run against <i>http://test.com</i>
 , auditing links/forms/cookies and following subdomains --with verbose output enabled.<br/>
@@ -400,50 +400,52 @@ The results of the audit will be saved in the the file <i>test.com.afr</i>.</p>
 <li>Nokogiri
 
 <ul>
-<li>gem install nokogiri</li>
+<li><code>gem install nokogiri</code></li>
 </ul>
 </li>
 <li>Anemone
 
 <ul>
-<li>gem install anemone</li>
+<li><code>gem install anemone</code></li>
 </ul>
 </li>
 <li>Typhoeus
 
 <ul>
-<li>gem install typhoeus</li>
+<li><code>gem install typhoeus</code></li>
 </ul>
 </li>
 <li>Sockify
 
 <ul>
-<li>gem install socksify</li>
+<li><code>gem install socksify</code></li>
 </ul>
 </li>
 <li>Awesome print
 
 <ul>
-<li>gem install awesome_print</li>
+<li><code>gem install awesome_print</code></li>
 </ul>
 </li>
 <li>Liquid (For <span class='object_link'><a href="Arachni/Reports/HTML.html" title="Arachni::Reports::HTML (class)">Arachni::Reports::HTML</a></span> reporting)
 
 <ul>
-<li>gem install liquid</li>
+<li><code>gem install liquid</code></li>
 </ul>
 </li>
 <li>Yardoc (if you want to generate the documentation)
 
 <ul>
-<li>gem install yard</li>
+<li><code>gem install yard</code></li>
 </ul>
 </li>
 </ul>
 
 
-<p>Run the following to install all dependencies:
-  gem install nokogiri anemone typhoeus socksify awesome_print liquid yard</p>
+<p>Run the following to install all dependencies:</p>
+
+<pre class="code"><span class='id gem'>gem</span> <span class='id install'>install</span> <span class='id nokogiri'>nokogiri</span> <span class='id anemone'>anemone</span> <span class='id typhoeus'>typhoeus</span> <span class='id socksify'>socksify</span> <span class='id awesome_print'>awesome_print</span> <span class='id liquid'>liquid</span> <span class='id yard'>yard</span>
+</pre>
 
 <h2>Supported platforms</h2>
 
@@ -460,7 +462,7 @@ and the aforementioned requirements.</p>
 <h2>License</h2>
 
 <p>Arachni is licensed under the GNU General Public License v2.<br/>
-See the "LICENSE" file for more information.</p>
+See the <a href="file.LICENSE.html">LICENSE</a> file for more information.</p>
 
 <h2>Disclaimer</h2>
 
@@ -469,7 +471,7 @@ However, I can't be held responsible for your actions or for any damage
 caused by the use of this software.</p></div></div>
     
     <div id="footer">
-  Generated on Sat Sep 25 20:28:34 2010 by 
+  Generated on Sun Sep 26 01:11:56 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
