@@ -1165,22 +1165,22 @@ the url of the page
       <pre class="lines">
 
 
-423
 424
 425
 426
 427
 428
 429
-430</pre>
+430
+431</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 423</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 424</span>
 
 <span class='kw'>def</span> <span class='id exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='ivar'>@opts</span><span class='period'>.</span><span class='id exclude'>exclude</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id pattern'>pattern</span><span class='op'>|</span>
-        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id url'>url</span> <span class='op'>=~</span> <span class='id pattern'>pattern</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>=~</span> <span class='id pattern'>pattern</span>
     <span class='rbrace'>}</span>
     
     <span class='kw'>return</span> <span class='kw'>false</span>
@@ -1242,7 +1242,6 @@ Extracts the domain from a URI object
       <pre class="lines">
 
 
-412
 413
 414
 415
@@ -1251,10 +1250,11 @@ Extracts the domain from a URI object
 418
 419
 420
-421</pre>
+421
+422</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 412</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 413</span>
 
 <span class='kw'>def</span> <span class='id extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 
@@ -1977,18 +1977,20 @@ returns <tt>false</tt> otherwise
 400
 401
 402
-403</pre>
+403
+404</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 396</span>
 
 <span class='kw'>def</span> <span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span>
-    
+    <span class='id uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id uri'>uri</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+  
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id follow_subdomains'>follow_subdomains</span> <span class='rparen'>)</span>
         <span class='kw'>return</span> <span class='id extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span> <span class='op'>==</span>  <span class='id extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 
-    <span class='id uri'>uri</span><span class='period'>.</span><span class='id host'>host</span> <span class='op'>==</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span>
+    <span class='kw'>return</span> <span class='id uri'>uri</span><span class='period'>.</span><span class='id host'>host</span> <span class='op'>==</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2029,21 +2031,23 @@ returns <tt>false</tt> otherwise
       <pre class="lines">
 
 
-432
 433
 434
 435
 436
-437</pre>
+437
+438
+439</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 432</span>
+      <pre class="code"><span class="info file"># File 'lib/analyzer.rb', line 433</span>
 
 <span class='kw'>def</span> <span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='ivar'>@opts</span><span class='period'>.</span><span class='id include'>include</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id pattern'>pattern</span><span class='op'>|</span>
-        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id url'>url</span> <span class='op'>=~</span> <span class='id pattern'>pattern</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>=~</span> <span class='id pattern'>pattern</span>
     <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2356,7 +2360,7 @@ location of the page
 </div>
     
     <div id="footer">
-  Generated on Sun Sep 26 21:19:36 2010 by 
+  Generated on Wed Sep 29 14:16:40 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>

@@ -238,6 +238,33 @@ Returns the value of attribute request_count.
 </li>
 
     
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#response_count-instance_method" title="#response_count (instance method)">- (Object) <strong>response_count</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute response_count.
+</p>
+</div></span>
+  
+</li>
+
+    
   </ul>
 
 
@@ -647,7 +674,6 @@ start URL
       <pre class="lines">
 
 
-71
 72
 73
 74
@@ -678,10 +704,12 @@ start URL
 99
 100
 101
-102</pre>
+102
+103
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='id opts'>opts</span> <span class='op'>=</span> <span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span>
@@ -713,7 +741,8 @@ start URL
 
     <span class='ivar'>@__not_found</span>  <span class='op'>=</span> <span class='kw'>nil</span>
     
-    <span class='ivar'>@request_count</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='ivar'>@request_count</span>  <span class='op'>=</span> <span class='int'>0</span>
+    <span class='ivar'>@response_count</span> <span class='op'>=</span> <span class='int'>0</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -930,6 +959,48 @@ Returns the value of attribute request_count
 </table>
 </div>
     
+      
+      <span id=""></span>
+      <span id="response_count-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="response_count-instance_method">
+  
+    - (<tt>Object</tt>) <strong>response_count</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute response_count
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id response_count'>response_count</span>
+  <span class='ivar'>@response_count</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 
@@ -1004,9 +1075,6 @@ cookies     in name=>value pairs
       <pre class="lines">
 
 
-355
-356
-357
 358
 359
 360
@@ -1024,10 +1092,13 @@ cookies     in name=>value pairs
 372
 373
 374
-375</pre>
+375
+376
+377
+378</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 355</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 358</span>
 
 <span class='kw'>def</span> <span class='const'>HTTP</span><span class='period'>.</span><span class='id parse_cookiejar'>parse_cookiejar</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
     
@@ -1155,9 +1226,6 @@ hash with GET name=>value pairs
       <pre class="lines">
 
 
-238
-239
-240
 241
 242
 243
@@ -1181,10 +1249,13 @@ hash with GET name=>value pairs
 261
 262
 263
-264</pre>
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 238</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 241</span>
 
 <span class='kw'>def</span> <span class='id cookie'>cookie</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id cookies'>cookies</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id train'>train</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
 
@@ -1287,9 +1358,6 @@ the HTML code to check
       <pre class="lines">
 
 
-395
-396
-397
 398
 399
 400
@@ -1318,10 +1386,13 @@ the HTML code to check
 423
 424
 425
-426</pre>
+426
+427
+428
+429</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 395</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 398</span>
 
 <span class='kw'>def</span> <span class='id custom_404?'>custom_404?</span><span class='lparen'>(</span> <span class='id html'>html</span> <span class='rparen'>)</span>
     
@@ -1437,9 +1508,6 @@ hash with name=>value pairs
       <pre class="lines">
 
 
-175
-176
-177
 178
 179
 180
@@ -1462,10 +1530,13 @@ hash with name=>value pairs
 197
 198
 199
-200</pre>
+200
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 175</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 178</span>
 
 <span class='kw'>def</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id remove_id'>remove_id</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id train'>train</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
     <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id params'>params</span>
@@ -1556,17 +1627,17 @@ name=>value pairs
       <pre class="lines">
 
 
-321
-322
-323
 324
 325
 326
 327
-328</pre>
+328
+329
+330
+331</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 321</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 324</span>
 
 <span class='kw'>def</span> <span class='id get_cookies_str'>get_cookies_str</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -1675,9 +1746,6 @@ hash with name=>value pairs
       <pre class="lines">
 
 
-275
-276
-277
 278
 279
 280
@@ -1697,10 +1765,13 @@ hash with name=>value pairs
 294
 295
 296
-297</pre>
+297
+298
+299
+300</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 275</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 278</span>
 
 <span class='kw'>def</span> <span class='id header'>header</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id headers'>headers</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id train'>train</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
     
@@ -1782,17 +1853,17 @@ Converts HTTP cookies from string to Hash
       <pre class="lines">
 
 
-337
-338
-339
 340
 341
 342
 343
-344</pre>
+344
+345
+346
+347</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 337</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 340</span>
 
 <span class='kw'>def</span> <span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
     <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -1871,12 +1942,12 @@ URI object
       <pre class="lines">
 
 
-384
-385
-386</pre>
+387
+388
+389</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 384</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 387</span>
 
 <span class='kw'>def</span> <span class='id parse_url'>parse_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -1963,9 +2034,6 @@ hash with name=>value pairs
       <pre class="lines">
 
 
-210
-211
-212
 213
 214
 215
@@ -1980,10 +2048,13 @@ hash with name=>value pairs
 224
 225
 226
-227</pre>
+227
+228
+229
+230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 210</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 213</span>
 
 <span class='kw'>def</span> <span class='id post'>post</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id train'>train</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
 
@@ -2054,8 +2125,6 @@ the request to queue
       <pre class="lines">
 
 
-120
-121
 122
 123
 124
@@ -2099,10 +2168,13 @@ the request to queue
 162
 163
 164
-165</pre>
+165
+166
+167
+168</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 120</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id queue'>queue</span><span class='lparen'>(</span> <span class='id req'>req</span> <span class='rparen'>)</span>
     
@@ -2126,6 +2198,7 @@ the request to queue
     <span class='id req'>req</span><span class='period'>.</span><span class='id on_complete'>on_complete</span><span class='lparen'>(</span> <span class='kw'>true</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
         
+        <span class='ivar'>@response_count</span> <span class='op'>+=</span> <span class='int'>1</span>
         <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>------------</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
         <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Got response.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
         <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Request ID#: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id id'>id</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
@@ -2183,12 +2256,12 @@ joined!
       <pre class="lines">
 
 
-110
-111
-112</pre>
+112
+113
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 110</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 112</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span>
     <span class='ivar'>@hydra</span><span class='period'>.</span><span class='id run'>run</span>
@@ -2243,16 +2316,16 @@ name=>value pairs
       <pre class="lines">
 
 
-306
-307
-308
 309
 310
 311
-312</pre>
+312
+313
+314
+315</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 306</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 309</span>
 
 <span class='kw'>def</span> <span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -2271,7 +2344,7 @@ name=>value pairs
 </div>
     
     <div id="footer">
-  Generated on Sun Sep 26 21:19:37 2010 by 
+  Generated on Wed Sep 29 14:16:40 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
