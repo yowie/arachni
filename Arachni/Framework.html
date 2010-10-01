@@ -341,6 +341,30 @@ Saves an AuditStore instance in &#8216;file&#8217;.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#deep_clone-instance_method" title="#deep_clone (instance method)">- (Object) <strong>deep_clone</strong>(obj) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Creates a deep clone of an object and returns that object.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#initialize-instance_method" title="#initialize (instance method)">- (Framework) <strong>initialize</strong>(opts) </a>
     
 
@@ -649,6 +673,30 @@ Runs the system.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#run_reps-instance_method" title="#run_reps (instance method)">- (Object) <strong>run_reps</strong>(audit_store) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Takes care of report execution.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#version-instance_method" title="#version (instance method)">- (String) <strong>version</strong> </a>
     
 
@@ -745,10 +793,7 @@ Initializes system components.
 100
 101
 102
-103
-104
-105
-106</pre>
+103</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/framework.rb', line 83</span>
@@ -768,9 +813,6 @@ Initializes system components.
     
     <span class='ivar'>@spider</span>   <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Spider</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span>
     <span class='ivar'>@analyzer</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Analyzer</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span>
-    
-    <span class='comment'># trap Ctrl+C interrupts
-</span>    <span class='id trap'>trap</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>INT</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id handle_interrupt'>handle_interrupt</span><span class='lparen'>(</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
     
     <span class='comment'># deep copy the redundancy rules to preserve their counter
 </span>    <span class='comment'># for the reports
@@ -923,32 +965,6 @@ Analyzes the html code for elements and returns a page object
       <pre class="lines">
 
 
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
 240
 241
 242
@@ -959,10 +975,36 @@ Analyzes the html code for elements and returns a page object
 247
 248
 249
-250</pre>
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 214</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 240</span>
 
 <span class='kw'>def</span> <span class='id analyze'>analyze</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id html'>html</span><span class='comma'>,</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
     
@@ -1034,6 +1076,9 @@ Runs the spider, analyzes each page as it appears and passes it to
       <pre class="lines">
 
 
+185
+186
+187
 188
 189
 190
@@ -1046,13 +1091,10 @@ Runs the spider, analyzes each page as it appears and passes it to
 197
 198
 199
-200
-201
-202
-203</pre>
+200</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 188</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 185</span>
 
 <span class='kw'>def</span> <span class='id audit'>audit</span>
     <span class='id pages'>pages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1119,22 +1161,22 @@ Returns the results of the audit as an <span class='object_link'><a href="AuditS
       <pre class="lines">
 
 
-259
-260
-261
-262
-263
-264
-265
-266
-267
-268
-269
-270
-271</pre>
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 259</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 285</span>
 
 <span class='kw'>def</span> <span class='id audit_store_get'>audit_store_get</span>
     
@@ -1206,12 +1248,12 @@ location of the dump file
       <pre class="lines">
 
 
-433
-434
-435</pre>
+459
+460
+461</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 433</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 459</span>
 
 <span class='kw'>def</span> <span class='id audit_store_load'>audit_store_load</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='const'>AuditStore</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
@@ -1260,20 +1302,20 @@ Saves an AuditStore instance in &#8216;file&#8217;
       <pre class="lines">
 
 
-414
-415
-416
-417
-418
-419
-420
-421
-422
-423
-424</pre>
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 414</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 440</span>
 
 <span class='kw'>def</span> <span class='id audit_store_save'>audit_store_save</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
     
@@ -1285,6 +1327,85 @@ Saves an AuditStore instance in &#8216;file&#8217;
     <span class='id audit_store_get'>audit_store_get</span><span class='lparen'>(</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id save'>save</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
     
     <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Done!</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="deep_clone-instance_method">
+  
+    - (<tt>Object</tt>) <strong>deep_clone</strong>(obj) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates a deep clone of an object and returns that object.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>the</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+object to clone
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+a deep clone of the object
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+569
+570
+571</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 569</span>
+
+<span class='kw'>def</span> <span class='id deep_clone'>deep_clone</span><span class='lparen'>(</span> <span class='id obj'>obj</span> <span class='rparen'>)</span>
+    <span class='const'>Marshal</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='id obj'>obj</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1328,12 +1449,12 @@ Returns an array of all loaded modules
       <pre class="lines">
 
 
-278
-279
-280</pre>
+304
+305
+306</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 278</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 304</span>
 
 <span class='kw'>def</span> <span class='id ls_loaded_mods'>ls_loaded_mods</span>
     <span class='ivar'>@modreg</span><span class='period'>.</span><span class='id ls_loaded'>ls_loaded</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -1380,12 +1501,12 @@ Returns an array of all loaded reports
       <pre class="lines">
 
 
-287
-288
-289</pre>
+313
+314
+315</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 287</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 313</span>
 
 <span class='kw'>def</span> <span class='id ls_loaded_reps'>ls_loaded_reps</span>
     <span class='ivar'>@repreg</span><span class='period'>.</span><span class='id ls_loaded'>ls_loaded</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -1432,32 +1553,6 @@ Returns an array of hashes with information about all available modules
       <pre class="lines">
 
 
-443
-444
-445
-446
-447
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458
-459
-460
-461
-462
-463
-464
-465
-466
-467
-468
 469
 470
 471
@@ -1468,10 +1563,36 @@ Returns an array of hashes with information about all available modules
 476
 477
 478
-479</pre>
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 443</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 469</span>
 
 <span class='kw'>def</span> <span class='id lsmod'>lsmod</span>
     
@@ -1552,30 +1673,30 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
-487
-488
-489
-490
-491
-492
-493
-494
-495
-496
-497
-498
-499
-500
-501
-502
-503
-504
-505
-506
-507</pre>
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 487</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 513</span>
 
 <span class='kw'>def</span> <span class='id lsrep'>lsrep</span>
     
@@ -1650,41 +1771,41 @@ Array of modules to load
       <pre class="lines">
 
 
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312
-313
-314
-315
-316
-317
-318
-319
-320
-321
 322
 323
 324
 325
 326
-327</pre>
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 296</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 322</span>
 
 <span class='kw'>def</span> <span class='id mod_load'>mod_load</span><span class='lparen'>(</span> <span class='id mods'>mods</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>*</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
@@ -1736,32 +1857,6 @@ Array of modules to load
       <pre class="lines">
 
 
-329
-330
-331
-332
-333
-334
-335
-336
-337
-338
-339
-340
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
-354
 355
 356
 357
@@ -1777,10 +1872,36 @@ Array of modules to load
 367
 368
 369
-370</pre>
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 329</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 355</span>
 
 <span class='kw'>def</span> <span class='id parse_mods'>parse_mods</span><span class='lparen'>(</span> <span class='id mods'>mods</span> <span class='rparen'>)</span>
     
@@ -1842,6 +1963,9 @@ Array of modules to load
       <pre class="lines">
 
 
+164
+165
+166
 167
 168
 169
@@ -1852,13 +1976,10 @@ Array of modules to load
 174
 175
 176
-177
-178
-179
-180</pre>
+177</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='id print_stats'>print_stats</span><span class='lparen'>(</span> <span class='id audit_store'>audit_store</span> <span class='rparen'>)</span>
 
@@ -1928,13 +2049,13 @@ location of the saved AuditStore
       <pre class="lines">
 
 
-404
-405
-406
-407</pre>
+430
+431
+432
+433</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 404</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 430</span>
 
 <span class='kw'>def</span> <span class='id rep_convert'>rep_convert</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
     <span class='id run_reps'>run_reps</span><span class='lparen'>(</span> <span class='id audit_store_load'>audit_store_load</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -1992,27 +2113,27 @@ Array of reports to load
       <pre class="lines">
 
 
-377
-378
-379
-380
-381
-382
-383
-384
-385
-386
-387
-388
-389
-390
-391
-392
-393
-394</pre>
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 377</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 403</span>
 
 <span class='kw'>def</span> <span class='id rep_load'>rep_load</span><span class='lparen'>(</span> <span class='id reports'>reports</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stdout</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
@@ -2074,12 +2195,12 @@ Returns the extension of the report files
       <pre class="lines">
 
 
-532
-533
-534</pre>
+558
+559
+560</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 532</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 558</span>
 
 <span class='kw'>def</span> <span class='id report_ext'>report_ext</span>
     <span class='const'>REPORT_EXT</span>
@@ -2126,12 +2247,12 @@ Returns the revision of the <span class='object_link'><a href="" title="Arachni:
       <pre class="lines">
 
 
-523
-524
-525</pre>
+549
+550
+551</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 523</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 549</span>
 
 <span class='kw'>def</span> <span class='id revision'>revision</span>
     <span class='const'>REVISION</span>
@@ -2168,6 +2289,9 @@ It parses the instanse options and runs the audit
       <pre class="lines">
 
 
+110
+111
+112
 113
 114
 115
@@ -2217,13 +2341,10 @@ It parses the instanse options and runs the audit
 159
 160
 161
-162
-163
-164
-165</pre>
+162</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span>
     
@@ -2284,6 +2405,101 @@ It parses the instanse options and runs the audit
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="run_reps-instance_method">
+  
+    - (<tt>Object</tt>) <strong>run_reps</strong>(audit_store) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Takes care of report execution
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="AuditStore.html" title="Arachni::AuditStore (class)">AuditStore</a></span></tt>)</span>
+      
+      
+        <span class='name'>audit_store</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="AuditStore.html" title="Arachni::AuditStore (class)">AuditStore</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 209</span>
+
+<span class='kw'>def</span> <span class='id run_reps'>run_reps</span><span class='lparen'>(</span> <span class='id audit_store'>audit_store</span> <span class='rparen'>)</span>
+
+    <span class='id ls_loaded_reps'>ls_loaded_reps</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id report'>report</span><span class='comma'>,</span> <span class='id i'>i</span><span class='op'>|</span>
+
+        <span class='comment'># if the user hasn't selected a filename for the report
+</span>        <span class='comment'># choose one for him
+</span>        <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id repsave'>repsave</span> <span class='op'>||</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id repsave'>repsave</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span> <span class='rparen'>)</span>
+            <span class='ivar'>@opts</span><span class='period'>.</span><span class='id repsave'>repsave</span> <span class='op'>=</span>
+                <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span> <span class='op'>+</span>
+                    <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+        <span class='kw'>end</span>
+        
+        
+        <span class='id new_rep'>new_rep</span> <span class='op'>=</span> <span class='id report'>report</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id deep_clone'>deep_clone</span><span class='lparen'>(</span> <span class='id audit_store'>audit_store</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id repopts'>repopts</span><span class='comma'>,</span>
+                        <span class='ivar'>@opts</span><span class='period'>.</span><span class='id repsave'>repsave</span> <span class='op'>+</span> <span class='const'>REPORT_EXT</span> <span class='rparen'>)</span>
+        
+        <span class='id new_rep'>new_rep</span><span class='period'>.</span><span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="version-instance_method">
   
     - (<tt>String</tt>) <strong>version</strong> 
@@ -2320,12 +2536,12 @@ Returns the version of the framework
       <pre class="lines">
 
 
-514
-515
-516</pre>
+540
+541
+542</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 514</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 540</span>
 
 <span class='kw'>def</span> <span class='id version'>version</span>
     <span class='const'>VERSION</span>
@@ -2340,7 +2556,7 @@ Returns the version of the framework
 </div>
     
     <div id="footer">
-  Generated on Fri Oct  1 15:06:36 2010 by 
+  Generated on Fri Oct  1 16:14:29 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
