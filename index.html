@@ -279,14 +279,20 @@ to uncover new elements or attack vectors and will adapt itself accordingly.</p>
 --authed-by=&lt;who&gt;           who authorized the scan, include name and e-mail address
                               (It'll make it easier on the sys-admins during log reviews.)
                               (Will be appended to the user-agent string.)
+</pre>
 
---save-profile=&lt;file&gt;       save the current run profile/options to &lt;file&gt;
+<h3>Profiles</h3>
+
+<pre class="code">--save-profile=&lt;file&gt;       save the current run profile/options to &lt;file&gt;
                               (The file will be saved with an extention of: .afp)
 
 --load-profile=&lt;file&gt;       load a run profile from &lt;file&gt;
+                              (Can be used multiple times.)
                               (You can complement it with more options, except for:
                                   * --mods
                                   * --redundant)
+
+--show-profile              will output the running profile as CLI arguments
 </pre>
 
 <h3>Crawler</h3>
@@ -483,7 +489,7 @@ caused by the use of this software.</p>
 <p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p></div></div>
     
     <div id="footer">
-  Generated on Fri Oct  1 23:56:09 2010 by 
+  Generated on Sat Oct  2 23:08:32 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>

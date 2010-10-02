@@ -340,7 +340,13 @@ Initializes the command line interface and the framework
 88
 89
 90
-91</pre>
+91
+92
+93
+94
+95
+96
+97</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/ui/cli/cli.rb', line 55</span>
@@ -354,7 +360,7 @@ Initializes the command line interface and the framework
 </span>    <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id load_profile'>load_profile</span> <span class='rparen'>)</span>
         <span class='id load_profile'>load_profile</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id load_profile'>load_profile</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
-            
+
     <span class='comment'>#
 </span>    <span class='comment'># the stdout report is the default one for the CLI,
 </span>    <span class='comment'># each UI should have it's own default
@@ -374,6 +380,12 @@ Initializes the command line interface and the framework
     
     <span class='comment'># echo the banner
 </span>    <span class='id banner'>banner</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id show_profile'>show_profile</span> <span class='rparen'>)</span>
+        <span class='id print_profile'>print_profile</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+        <span class='id exit'>exit</span> <span class='int'>0</span>
+    <span class='kw'>end</span>
+
     
     <span class='comment'># work on the user supplied arguments
 </span>    <span class='id parse_opts'>parse_opts</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -478,12 +490,6 @@ Runs Arachni
       <pre class="lines">
 
 
-96
-97
-98
-99
-100
-101
 102
 103
 104
@@ -508,10 +514,16 @@ Runs Arachni
 123
 124
 125
-126</pre>
+126
+127
+128
+129
+130
+131
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/cli/cli.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/cli/cli.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -554,7 +566,7 @@ Runs Arachni
 </div>
     
     <div id="footer">
-  Generated on Fri Oct  1 23:56:11 2010 by 
+  Generated on Sat Oct  2 23:08:33 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
