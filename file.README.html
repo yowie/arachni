@@ -396,17 +396,17 @@ to uncover new elements or attack vectors and will adapt itself accordingly.</p>
 , auditing links/forms/cookies and following subdomains --with verbose output enabled.<br/>
 The results of the audit will be saved in the the file <i>test.com.afr</i>.</p>
 
-<pre class="code">$ ./arachni_cli.rb -gpcfv --mods=* http://test.com --repsave=test.com
+<pre class="code">$ ./arachni.rb -gpcfv --mods=* http://test.com --repsave=test.com
 </pre>
 
 <p>The Arachni Framework Report (.afr) file can later be loaded by Arachni to create a report, like so:</p>
 
-<pre class="code">$ ./arachni_cli.rb --report=html --repload=test.com.afr --repsave=my_report
+<pre class="code">$ ./arachni.rb --report=html --repload=test.com.afr --repsave=my_report
 </pre>
 
 <p>or any other report type as shown by:</p>
 
-<pre class="code">$ ./arachni_cli.rb --lsrep
+<pre class="code">$ ./arachni.rb --lsrep
 </pre>
 
 <h2>Requirements</h2>
@@ -489,7 +489,7 @@ caused by the use of this software.</p>
 <p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p></div></div>
     
     <div id="footer">
-  Generated on Sun Oct  3 19:54:39 2010 by 
+  Generated on Sun Oct  3 19:57:49 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
