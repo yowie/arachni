@@ -124,26 +124,6 @@ the future<br/> to support other DBs as well.
 </div>
   <h2>Constant Summary</h2>
   
-    <dl class="constants">
-      
-        <dt id="BASELINE_NUM-constant" class="">BASELINE_NUM =
-          <div class="docstring">
-  <div class="discussion">
-    <p>
-how many requests to send to establish a baseline
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div>
-        </dt>
-        <dd><pre class="code"><span class='int'>5</span></pre></dd>
-      
-    </dl>
-  
 
 
   
@@ -207,6 +187,69 @@ how many requests to send to establish a baseline
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__stage1-instance_method" title="#__stage1 (instance method)">- (Object) <strong>__stage1</strong>(res) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__stage2-instance_method" title="#__stage2 (instance method)">- (Object) <strong>__stage2</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__stage3-instance_method" title="#__stage3 (instance method)">- (Object) <strong>__stage3</strong>(str) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -356,27 +399,19 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
+37
+38
+39
 40
 41
-42
-43
-44
-45
-46
-47
-48
-49</pre>
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
 
-    <span class='comment'># initialize variables 
-</span>    <span class='ivar'>@__id</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='ivar'>@__injection_strs</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    
     <span class='comment'># initialize the results hash
 </span>    <span class='ivar'>@results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
@@ -405,10 +440,6 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
-132
-133
-134
-135
 136
 137
 138
@@ -433,10 +464,14 @@ A new instance of BlindSQLInjection
 157
 158
 159
-160</pre>
+160
+161
+162
+163
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 136</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -479,7 +514,151 @@ A new instance of BlindSQLInjection
     
     
       <div class="method_details first">
-  <p class="signature first" id="prepare-instance_method">
+  <p class="signature first" id="__stage1-instance_method">
+  
+    - (<tt>Object</tt>) <strong>__stage1</strong>(res) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id __stage1'>__stage1</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+    
+    <span class='comment'># eliminate dynamic content that's context irrelevant
+</span>    <span class='comment'># ie. changing with every refresh
+</span>    <span class='ivar'>@__content</span> <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span><span class='comma'>,</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span>
+    <span class='id __stage2'>__stage2</span><span class='lparen'>(</span>  <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="__stage2-instance_method">
+  
+    - (<tt>Object</tt>) <strong>__stage2</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104
+105
+106
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id __stage2'>__stage2</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='ivar'>@__quotes</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id quote'>quote</span><span class='op'>|</span>
+        
+        <span class='id str'>str</span> <span class='op'>=</span> <span class='ivar'>@__injection</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%q%</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id quote'>quote</span> <span class='rparen'>)</span>
+        <span class='id __stage3'>__stage3</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="__stage3-instance_method">
+  
+    - (<tt>Object</tt>) <strong>__stage3</strong>(str) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id __stage3'>__stage3</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+    <span class='id audit'>audit</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='ivar'>@__opts</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='op'>|</span>
+
+        
+        <span class='comment'># inject the bad chars in var here and get a proper error
+</span>        <span class='comment'># for comparison
+</span>        
+        <span class='comment'># if one of the injections gives the same results as the
+</span>        <span class='comment'># original page then a blind SQL injection exists
+</span>        <span class='id check'>check</span> <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span> <span class='rparen'>)</span>
+        
+        <span class='comment'># ap check
+</span>        <span class='comment'># ap @__content
+</span>        <span class='comment'># ap @page.html
+</span>        <span class='comment'># ap res.body
+</span>
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id check'>check</span> <span class='op'>==</span> <span class='ivar'>@__content</span> <span class='rparen'>)</span>
+            <span class='id ap'>ap</span> <span class='id check'>check</span>
+            <span class='id puts'>puts</span> <span class='id str'>str</span>
+        <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
+    
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prepare-instance_method">
   
     - (<tt>Object</tt>) <strong>prepare</strong> 
   
@@ -491,6 +670,13 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
+44
+45
+46
+47
+48
+49
+50
 51
 52
 53
@@ -511,31 +697,48 @@ A new instance of BlindSQLInjection
 68
 69
 70
-71</pre>
+71
+72
+73
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
     <span class='comment'>#
-</span>    <span class='comment'># we'll try some timing attacks on the remote DB
+</span>    <span class='comment'># get html from @page.html
+</span>    <span class='comment'># get fresh html
+</span>    <span class='comment'># rdiff them, save rdiff1
+</span>    <span class='comment'># injection, save html
 </span>    <span class='comment'>#
-</span>    <span class='ivar'>@__injection_strs</span> <span class='op'>=</span> <span class='lbracket'>[</span>
-        <span class='comment'># MySQL
-</span>        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> AND BENCHMARK(5000000,ENCODE(1,1)) --</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\' AND BENCHMARK(5000000,ENCODE(1,1)) --</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&quot; AND BENCHMARK(5000000,ENCODE(1,1)) --</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='comment'># MSSQL
-</span>        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;waitfor delay \'0:0:5\'--</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\';waitfor delay \'0:0:5\'--</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&quot;;waitfor delay \'0:0:5\'--</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='comment'># PostgreSQL
-</span>        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;SELECT pg_sleep(5);--</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\';SELECT pg_sleep(5);--</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\&quot;;SELECT pg_sleep(5);--</span><span class='tstring_end'>'</span></span>
+</span>    <span class='comment'># rdiff good injection html with rdiff1, save rdiff2
+</span>    <span class='comment'># rdiff bad injection html with rdiff1, save rdiff3
+</span>    <span class='comment'>#
+</span>    <span class='comment'># if rdiff2 != rdiff3 then positive
+</span>    <span class='comment'>#
+</span>    
+    <span class='comment'># possible quote characters used in SQL statements
+</span>    <span class='ivar'>@__quotes</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
     <span class='rbracket'>]</span>
+
+    <span class='comment'># this will cause a silent error if there's a blind SQL injection
+</span>    <span class='ivar'>@__bad_chars</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'&quot;`</span><span class='tstring_end'>'</span></span>
+
     
+    <span class='comment'># %q% will be replaced by a character in @__quotes
+</span>    <span class='ivar'>@__injection</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%q% and %q%1</span><span class='tstring_end'>'</span></span>
+    
+    <span class='ivar'>@__opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+        <span class='symbol'>:format</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='const'>Format</span><span class='op'>::</span><span class='const'>APPEND</span> <span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -555,11 +758,6 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
-73
-74
-75
-76
-77
 78
 79
 80
@@ -573,102 +771,21 @@ A new instance of BlindSQLInjection
 88
 89
 90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129</pre>
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-  
-    <span class='comment'># disabled until I implement diff analysis also 
-</span>    <span class='kw'>return</span>
     
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span> 
-      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> is establishing a timing attack baseline.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-
-    <span class='id deltas'>deltas</span> <span class='op'>=</span> <span class='float'>0.0</span>
-    <span class='comment'># establish a baseline
-</span>    <span class='const'>BASELINE_NUM</span><span class='period'>.</span><span class='id times'>times</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id i'>i</span><span class='op'>|</span>
-        <span class='id res'>res</span>    <span class='op'>=</span>  <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
-        <span class='id deltas'>deltas</span> <span class='op'>+=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id time'>time</span>
-        
-        <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span>
-          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --&gt; Request </span><span class='embexpr_beg'>#{</span><span class='id i'>i</span><span class='op'>+</span><span class='int'>1</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='const'>BASELINE_NUM</span><span class='rbrace'>}</span><span class='tstring_content'> took </span><span class='embexpr_beg'>#{</span><span class='id res'>res</span><span class='period'>.</span><span class='id time'>time</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'>s.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='comment'># let's get a fresh rendering of the page to assist with us
+</span>    <span class='comment'># irrelevant dynamic content elimination
+</span>    <span class='id req'>req</span>  <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span> <span class='rparen'>)</span>
+    <span class='id req'>req</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
+        <span class='id __stage1'>__stage1</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
-    
-    <span class='comment'># get the baseline plus 5 seconds for the query execution.
-</span>    <span class='comment'># of course this is just a guestimation...
-</span>    <span class='id baseline'>baseline</span> <span class='op'>=</span> <span class='id deltas'>deltas</span> <span class='op'>/</span> <span class='const'>BASELINE_NUM</span> <span class='op'>+</span> <span class='float'>5.0</span>
-    
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Established a maximum baseline limit of </span><span class='embexpr_beg'>#{</span><span class='id baseline'>baseline</span><span class='rbrace'>}</span><span class='tstring_content'>s.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-    
-    <span class='comment'># iterate through the injection strings
-</span>    <span class='ivar'>@__injection_strs</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id str'>str</span><span class='op'>|</span>
-        
-        <span class='id audit_forms'>audit_forms</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='op'>|</span>
-            
-            <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id time'>time</span> <span class='op'>&gt;</span> <span class='id baseline'>baseline</span> <span class='rparen'>)</span>
-                <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-            <span class='kw'>end</span>
-        <span class='rbrace'>}</span>
-        
-        <span class='id audit_links'>audit_links</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='op'>|</span>
-            
-            <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id time'>time</span> <span class='op'>&gt;</span> <span class='id baseline'>baseline</span> <span class='rparen'>)</span>
-                <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-            <span class='kw'>end</span>
-        <span class='rbrace'>}</span>
 
-        <span class='id audit_cookies'>audit_cookies</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='op'>|</span>
-
-            <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id time'>time</span> <span class='op'>&gt;</span> <span class='id baseline'>baseline</span> <span class='rparen'>)</span>
-                <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>COOKIE</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-            <span class='kw'>end</span>
-        <span class='rbrace'>}</span>
-    <span class='rbrace'>}</span>
     
     <span class='comment'># register our results with the framework
 </span>    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='ivar'>@results</span> <span class='rparen'>)</span>
@@ -683,7 +800,7 @@ A new instance of BlindSQLInjection
 </div>
     
     <div id="footer">
-  Generated on Mon Oct  4 17:29:50 2010 by 
+  Generated on Tue Oct  5 11:53:09 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
