@@ -205,7 +205,7 @@ blind SQL injections.
 
   
     <span class="summary_desc"><div class='inline'><p>
-goes through the responses induced by <span class='object_link'><a href="#__audit-instance_method" title="Arachni::Modules::Audit::BlindSQLInjection#__audit (method)">BlindSQLInjection#__audit</a></span> and {__check}s their code.
+Goes through the responses induced by <span class='object_link'><a href="#__audit-instance_method" title="Arachni::Modules::Audit::BlindSQLInjection#__audit (method)">BlindSQLInjection#__audit</a></span> and <span class='object_link'><a href="#__check-instance_method" title="Arachni::Modules::Audit::BlindSQLInjection#__check (method)">BlindSQLInjection#__check</a></span> their code.
 </p>
 </div></span>
   
@@ -229,7 +229,7 @@ goes through the responses induced by <span class='object_link'><a href="#__audi
 
   
     <span class="summary_desc"><div class='inline'><p>
-injects SQL code that doesn&#8217;t affect the flow of execution nor
+Injects SQL code that doesn&#8217;t affect the flow of execution nor
 presentation.
 </p>
 </div></span>
@@ -254,7 +254,7 @@ presentation.
 
   
     <span class="summary_desc"><div class='inline'><p>
-compares HTML responses in order to identify successful blind sql
+Compares HTML responses in order to identify successful blind sql
 injections.
 </p>
 </div></span>
@@ -279,7 +279,7 @@ injections.
 
   
     <span class="summary_desc"><div class='inline'><p>
-audits page with &#8216;bad&#8217; SQL characters and gathers error pages.
+Audits page with &#8216;bad&#8217; SQL characters and gathers error pages.
 </p>
 </div></span>
   
@@ -447,7 +447,7 @@ A new instance of BlindSQLInjection
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
 
-    <span class='comment'># initialize the results hash
+    <span class='comment'># initialize the results array
 </span>    <span class='ivar'>@results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -475,7 +475,6 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
-183
 184
 185
 186
@@ -501,10 +500,11 @@ A new instance of BlindSQLInjection
 206
 207
 208
-209</pre>
+209
+210</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 183</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 184</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -554,7 +554,7 @@ A new instance of BlindSQLInjection
 </p><div class="docstring">
   <div class="discussion">
     <p>
-goes through the responses induced by <span class='object_link'><a href="#__audit-instance_method" title="Arachni::Modules::Audit::BlindSQLInjection#__audit (method)">#__audit</a></span> and {__check}s their code
+Goes through the responses induced by <span class='object_link'><a href="#__audit-instance_method" title="Arachni::Modules::Audit::BlindSQLInjection#__audit (method)">#__audit</a></span> and <span class='object_link'><a href="#__check-instance_method" title="Arachni::Modules::Audit::BlindSQLInjection#__check (method)">#__check</a></span> their code
 </p>
 
 
@@ -568,18 +568,18 @@ goes through the responses induced by <span class='object_link'><a href="#__audi
       <pre class="lines">
 
 
+154
+155
 156
 157
 158
 159
 160
 161
-162
-163
-164</pre>
+162</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 156</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id __analyze'>__analyze</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='ivar'>@__html_good</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -605,7 +605,7 @@ goes through the responses induced by <span class='object_link'><a href="#__audi
 </p><div class="docstring">
   <div class="discussion">
     <p>
-injects SQL code that doesn&#8217;t affect the flow of execution nor
+Injects SQL code that doesn&#8217;t affect the flow of execution nor
 presentation
 </p>
 
@@ -620,6 +620,8 @@ presentation
       <pre class="lines">
 
 
+125
+126
 127
 128
 129
@@ -644,12 +646,10 @@ presentation
 148
 149
 150
-151
-152
-153</pre>
+151</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 125</span>
 
 <span class='kw'>def</span> <span class='id __audit'>__audit</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -693,7 +693,7 @@ presentation
 </p><div class="docstring">
   <div class="discussion">
     <p>
-compares HTML responses in order to identify successful blind sql
+Compares HTML responses in order to identify successful blind sql
 injections
 </p>
 
@@ -701,18 +701,79 @@ injections
   </div>
 </div>
 <div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
   
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>str</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the string that unveiled the vulnerability
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Typhoeus::Response</tt>)</span>
+      
+      
+        <span class='name'></span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>var</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the vulnerable variable
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>opts</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the options passed to the <span class='object_link'><a href="../../Module/Auditor.html#audit-instance_method" title="Arachni::Module::Auditor#audit (method)">Arachni::Module::Auditor#audit</a></span> block
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-167
-168
-169
-170
-171
 172
 173
 174
@@ -722,10 +783,11 @@ injections
 178
 179
 180
-181</pre>
+181
+182</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 172</span>
 
 <span class='kw'>def</span> <span class='id __check'>__check</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
   
@@ -733,10 +795,6 @@ injections
 </span>    <span class='comment'># original page then a blind SQL injection exists
 </span>    <span class='id check'>check</span> <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span> <span class='rparen'>)</span>
 
-    <span class='comment'># ap str
-</span>    <span class='comment'># ap var
-</span>    <span class='comment'># ap opts
-</span>    
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='id check'>check</span> <span class='op'>==</span> <span class='ivar'>@__content</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@__html_bad</span><span class='lbracket'>[</span><span class='id var'>var</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id check'>check</span> <span class='rparen'>)</span>
         <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
@@ -757,7 +815,7 @@ injections
 </p><div class="docstring">
   <div class="discussion">
     <p>
-audits page with &#8216;bad&#8217; SQL characters and gathers error pages
+Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 </p>
 
 
@@ -771,6 +829,8 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
       <pre class="lines">
 
 
+102
+103
 104
 105
 106
@@ -789,12 +849,10 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 119
 120
 121
-122
-123
-124</pre>
+122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id __prep_bad_response'>__prep_bad_response</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -862,9 +920,7 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 67
 68
 69
-70
-71
-72</pre>
+70</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 43</span>
@@ -881,7 +937,9 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
     <span class='comment'># this will cause a silent error if there's a blind SQL injection
 </span>    <span class='ivar'>@__bad_chars</span> <span class='op'>=</span><span class='lbracket'>[</span>
        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'&quot;`</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-       <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'&quot;`</span><span class='tstring_end'>'</span></span>
+       <span class='comment'># we need 2 requests thus we change the second one a little bit to
+</span>       <span class='comment'># fool the Auditor's redundancy filter
+</span>       <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'&quot;``</span><span class='tstring_end'>'</span></span> 
      <span class='rbracket'>]</span>
 
     <span class='comment'># %q% will be replaced by a character in @__quotes
@@ -889,11 +947,7 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
     
     <span class='ivar'>@__opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
         <span class='symbol'>:format</span>      <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='const'>Format</span><span class='op'>::</span><span class='const'>APPEND</span> <span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='comment'># we don't want the Auditor to make any redundancy checks
-</span>        <span class='comment'># since we depend on redundant requests to eliminate
-</span>        <span class='comment'># context irrelevant content
-</span>        <span class='comment'># :redundant   =&gt; true,
-</span>        <span class='comment'># sadly, we need to disable asynchronous requests
+        <span class='comment'># sadly, we need to disable asynchronous requests
 </span>        <span class='comment'># otherwise the code would get *really* ugly
 </span>        <span class='symbol'>:async</span>       <span class='op'>=&gt;</span> <span class='kw'>false</span>
     <span class='rbrace'>}</span>
@@ -917,6 +971,8 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
       <pre class="lines">
 
 
+72
+73
 74
 75
 76
@@ -942,12 +998,10 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 96
 97
 98
-99
-100
-101</pre>
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -987,7 +1041,7 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 </div>
     
     <div id="footer">
-  Generated on Tue Oct  5 21:13:40 2010 by 
+  Generated on Tue Oct  5 21:35:49 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
