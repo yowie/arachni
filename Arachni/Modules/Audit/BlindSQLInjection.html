@@ -91,8 +91,8 @@
 Blind SQL injection audit module
 </p>
 <p>
-It uses a SQL timing attacks.<br/> This is going to be greatly improved in
-the future<br/> to support other DBs as well. 
+It uses reverse-diff analysis of HTML code in order to determine successful
+blind SQL injections.
 </p>
 <p>
 @author: Tasos &#8220;Zapotek&#8221; Laskos
@@ -434,15 +434,15 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
+36
 37
 38
 39
 40
-41
-42</pre>
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
@@ -475,6 +475,7 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
+183
 184
 185
 186
@@ -500,11 +501,10 @@ A new instance of BlindSQLInjection
 206
 207
 208
-209
-210</pre>
+209</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 184</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 183</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -568,6 +568,7 @@ goes through the responses induced by <span class='object_link'><a href="#__audi
       <pre class="lines">
 
 
+156
 157
 158
 159
@@ -575,11 +576,10 @@ goes through the responses induced by <span class='object_link'><a href="#__audi
 161
 162
 163
-164
-165</pre>
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 156</span>
 
 <span class='kw'>def</span> <span class='id __analyze'>__analyze</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='ivar'>@__html_good</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -620,6 +620,7 @@ presentation
       <pre class="lines">
 
 
+127
 128
 129
 130
@@ -645,11 +646,10 @@ presentation
 150
 151
 152
-153
-154</pre>
+153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id __audit'>__audit</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -708,6 +708,7 @@ injections
       <pre class="lines">
 
 
+167
 168
 169
 170
@@ -721,11 +722,10 @@ injections
 178
 179
 180
-181
-182</pre>
+181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='id __check'>__check</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
   
@@ -771,6 +771,7 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
       <pre class="lines">
 
 
+104
 105
 106
 107
@@ -790,11 +791,10 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 121
 122
 123
-124
-125</pre>
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='id __prep_bad_response'>__prep_bad_response</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -835,6 +835,7 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
       <pre class="lines">
 
 
+43
 44
 45
 46
@@ -863,11 +864,10 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 69
 70
 71
-72
-73</pre>
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -917,6 +917,7 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
       <pre class="lines">
 
 
+74
 75
 76
 77
@@ -943,11 +944,10 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 98
 99
 100
-101
-102</pre>
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -987,7 +987,7 @@ audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 </div>
     
     <div id="footer">
-  Generated on Tue Oct  5 21:09:27 2010 by 
+  Generated on Tue Oct  5 21:13:40 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
