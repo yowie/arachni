@@ -175,7 +175,17 @@ Default audit options.
 </span>    <span class='comment'># When the Auditor submits a form with original or sample values
 </span>    <span class='comment'># this option will be overriden to true.
 </span>    <span class='comment'>#
-</span>    <span class='symbol'>:train</span>    <span class='op'>=&gt;</span> <span class='kw'>false</span>
+</span>    <span class='symbol'>:train</span>     <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
+    
+    <span class='comment'>#
+</span>    <span class='comment'># Enable skipping of already audited inputs
+</span>    <span class='comment'>#
+</span>    <span class='symbol'>:redundant</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
+    
+    <span class='comment'>#
+</span>    <span class='comment'># Make requests asynchronously
+</span>    <span class='comment'>#
+</span>    <span class='symbol'>:async</span>     <span class='op'>=&gt;</span> <span class='kw'>true</span>
 <span class='rbrace'>}</span></pre></dd>
       
     </dl>
@@ -707,16 +717,6 @@ of the audit
       <pre class="lines">
 
 
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
 152
 153
 154
@@ -744,15 +744,25 @@ of the audit
 176
 177
 178
-179</pre>
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 142</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 152</span>
 
 <span class='kw'>def</span> <span class='id audit'>audit</span><span class='lparen'>(</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='symbol'>:elements</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
-        <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Elements</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+        <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span>
     <span class='kw'>end</span>
     
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='symbol'>:elements</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
@@ -894,18 +904,6 @@ of the audit
       <pre class="lines">
 
 
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
 419
 420
 421
@@ -932,10 +930,22 @@ of the audit
 442
 443
 444
-445</pre>
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 407</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 419</span>
 
 <span class='kw'>def</span> <span class='id audit_cookies'>audit_cookies</span><span class='lparen'>(</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span>  <span class='rparen'>)</span>
     
@@ -950,7 +960,7 @@ of the audit
         <span class='id cookie'>cookie</span> <span class='op'>=</span> <span class='id get_cookie_simple'>get_cookie_simple</span><span class='lparen'>(</span> <span class='id orig_cookie'>orig_cookie</span> <span class='rparen'>)</span>
   
         <span class='id audit_id'>audit_id</span> <span class='op'>=</span> <span class='id audit_id'>audit_id</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id cookie'>cookie</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id injection_str'>injection_str</span> <span class='rparen'>)</span>
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id audited?'>audited?</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:redundant</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id audited?'>audited?</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span>
 
         <span class='id injection_sets'>injection_sets</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span><span class='comma'>,</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
@@ -959,7 +969,7 @@ of the audit
         
             <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='id get_status_str'>get_status_str</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id cookie'>cookie</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 
-            <span class='id req'>req</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id cookie'>cookie</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+            <span class='id req'>req</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id cookie'>cookie</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
             
             <span class='id injected'>injected</span> <span class='op'>=</span> <span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>altered</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span>
             <span class='id on_complete'>on_complete</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id injected'>injected</span><span class='comma'>,</span> <span class='id cookie'>cookie</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
@@ -1083,16 +1093,6 @@ of the audit
       <pre class="lines">
 
 
-317
-318
-319
-320
-321
-322
-323
-324
-325
-326
 327
 328
 329
@@ -1156,10 +1156,22 @@ of the audit
 387
 388
 389
-390</pre>
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 317</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 327</span>
 
 <span class='kw'>def</span> <span class='id audit_forms'>audit_forms</span><span class='lparen'>(</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
 
@@ -1179,7 +1191,7 @@ of the audit
         <span class='id fields'>fields</span> <span class='op'>=</span> <span class='id form'>form</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
         
         <span class='id audit_id'>audit_id</span> <span class='op'>=</span> <span class='id audit_id'>audit_id</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id fields'>fields</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id injection_str'>injection_str</span> <span class='rparen'>)</span>
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id audited?'>audited?</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id audited?'>audited?</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:skip</span><span class='rbracket'>]</span>
 
         <span class='comment'># iterate through each auditable element
 </span>        <span class='id injection_sets'>injection_sets</span><span class='lparen'>(</span> <span class='id fields'>fields</span><span class='comma'>,</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -1189,7 +1201,8 @@ of the audit
             <span class='kw'>if</span><span class='lparen'>(</span> <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>altered</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'>FORM_VALUES_ORIGINAL</span> <span class='rparen'>)</span>
                 <span class='id orig_id'>orig_id</span> <span class='op'>=</span> <span class='id audit_id'>audit_id</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span>
                   <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id values'>values</span> <span class='op'>|</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>{</span><span class='embexpr_beg'>#{</span><span class='const'>FORM_VALUES_ORIGINAL</span><span class='rbrace'>}</span><span class='tstring_content'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-                <span class='kw'>next</span> <span class='kw'>if</span> <span class='id audited?'>audited?</span><span class='lparen'>(</span> <span class='id orig_id'>orig_id</span> <span class='rparen'>)</span>
+                
+                <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:redundant</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id audited?'>audited?</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span>
                 <span class='id audited'>audited</span><span class='lparen'>(</span> <span class='id orig_id'>orig_id</span> <span class='rparen'>)</span>
                 
                 <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Submitting form with original values;</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
@@ -1201,7 +1214,8 @@ of the audit
             <span class='kw'>if</span><span class='lparen'>(</span> <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>altered</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'>FORM_VALUES_SAMPLE</span> <span class='rparen'>)</span>
                 <span class='id sample_id'>sample_id</span> <span class='op'>=</span> <span class='id audit_id'>audit_id</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span>
                   <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id values'>values</span> <span class='op'>|</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>{</span><span class='embexpr_beg'>#{</span><span class='const'>FORM_VALUES_SAMPLE</span><span class='rbrace'>}</span><span class='tstring_content'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-                <span class='kw'>next</span> <span class='kw'>if</span> <span class='id audited?'>audited?</span><span class='lparen'>(</span> <span class='id sample_id'>sample_id</span> <span class='rparen'>)</span>
+      
+                <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:redundant</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id audited?'>audited?</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span>
                 <span class='id audited'>audited</span><span class='lparen'>(</span> <span class='id sample_id'>sample_id</span> <span class='rparen'>)</span>
                 
                 <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Submitting form with sample values;</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
@@ -1215,9 +1229,9 @@ of the audit
 </span>            <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='id get_status_str'>get_status_str</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id input'>input</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 
             <span class='kw'>if</span><span class='lparen'>(</span> <span class='id method'>method</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>get</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-                <span class='id req'>req</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id post'>post</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+                <span class='id req'>req</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id post'>post</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
             <span class='kw'>else</span>
-                <span class='id req'>req</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+                <span class='id req'>req</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
             <span class='kw'>end</span>
             <span class='id opts'>opts</span> <span class='op'>=</span> <span class='id curr_opts'>curr_opts</span><span class='period'>.</span><span class='id dup'>dup</span>
             <span class='id injected'>injected</span> <span class='op'>=</span> <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>altered</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_s'>to_s</span>
@@ -1342,16 +1356,6 @@ of the audit
       <pre class="lines">
 
 
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
 206
 207
 208
@@ -1386,10 +1390,20 @@ of the audit
 237
 238
 239
-240</pre>
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 196</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 206</span>
 
 <span class='kw'>def</span> <span class='id audit_headers'>audit_headers</span><span class='lparen'>(</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     
@@ -1423,7 +1437,7 @@ of the audit
 </span>        <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='id get_status_str'>get_status_str</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id vars'>vars</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
         
         <span class='comment'># audit the url vars
-</span>        <span class='id req'>req</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id header'>header</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id vars'>vars</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+</span>        <span class='id req'>req</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id header'>header</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id vars'>vars</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
         <span class='id injected'>injected</span> <span class='op'>=</span> <span class='id vars'>vars</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id vars'>vars</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>altered</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span>
         <span class='id on_complete'>on_complete</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id injected'>injected</span><span class='comma'>,</span> <span class='id vars'>vars</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
@@ -1521,16 +1535,16 @@ the url under audit
       <pre class="lines">
 
 
-571
-572
-573
-574
-575
-576
-577</pre>
+594
+595
+596
+597
+598
+599
+600</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 571</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 594</span>
 
 <span class='kw'>def</span> <span class='id audit_id'>audit_id</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id input'>input</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id injection_str'>injection_str</span> <span class='rparen'>)</span>
     
@@ -1646,16 +1660,6 @@ of the audit
       <pre class="lines">
 
 
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
 267
 268
 269
@@ -1689,10 +1693,20 @@ of the audit
 297
 298
 299
-300</pre>
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 257</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 267</span>
 
 <span class='kw'>def</span> <span class='id audit_links'>audit_links</span><span class='lparen'>(</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
 
@@ -1713,8 +1727,8 @@ of the audit
         <span class='kw'>if</span> <span class='id link_vars'>link_vars</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
           
         <span class='id audit_id'>audit_id</span> <span class='op'>=</span> <span class='id audit_id'>audit_id</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id link_vars'>link_vars</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id injection_str'>injection_str</span> <span class='rparen'>)</span>
-        <span class='comment'># next if audited?( audit_id )
-</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:redundant</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id audited?'>audited?</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span> 
+
         <span class='comment'># iterate through all url vars and audit each one
 </span>        <span class='id injection_sets'>injection_sets</span><span class='lparen'>(</span> <span class='id link_vars'>link_vars</span><span class='comma'>,</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id vars'>vars</span><span class='op'>|</span>
@@ -1723,7 +1737,7 @@ of the audit
 </span>            <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='id get_status_str'>get_status_str</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id vars'>vars</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
             
             <span class='comment'># audit the url vars
-</span>            <span class='id req'>req</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id vars'>vars</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+</span>            <span class='id req'>req</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id vars'>vars</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
             
             <span class='id injected'>injected</span> <span class='op'>=</span> <span class='id vars'>vars</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id vars'>vars</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>altered</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span>
             <span class='id on_complete'>on_complete</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id injected'>injected</span><span class='comma'>,</span> <span class='id vars'>vars</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
@@ -1788,12 +1802,12 @@ a string returned by <span class='object_link'><a href="#audit_id-instance_metho
       <pre class="lines">
 
 
-599
-600
-601</pre>
+622
+623
+624</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 599</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 622</span>
 
 <span class='kw'>def</span> <span class='id audited'>audited</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span>
     <span class='cvar'>@@audited</span> <span class='op'>&lt;&lt;</span> <span class='id audit_id'>audit_id</span>
@@ -1861,18 +1875,18 @@ a string returned by <span class='object_link'><a href="#audit_id-instance_metho
       <pre class="lines">
 
 
-584
-585
-586
-587
-588
-589
-590
-591
-592</pre>
+607
+608
+609
+610
+611
+612
+613
+614
+615</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 584</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 607</span>
 
 <span class='kw'>def</span> <span class='id audited?'>audited?</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span>
   <span class='id ret'>ret</span> <span class='op'>=</span>  <span class='cvar'>@@audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span>
@@ -1983,19 +1997,19 @@ bitfield describing formating preferencies
       <pre class="lines">
 
 
-676
-677
-678
-679
-680
-681
-682
-683
-684
-685</pre>
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 676</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 699</span>
 
 <span class='kw'>def</span> <span class='id format_str'>format_str</span><span class='lparen'>(</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id default_str'>default_str</span><span class='comma'>,</span> <span class='id format'>format</span>  <span class='rparen'>)</span>
   
@@ -2108,29 +2122,6 @@ the name of the vulnerable input vector
       <pre class="lines">
 
 
-504
-505
-506
-507
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517
-518
-519
-520
-521
-522
-523
-524
-525
-526
 527
 528
 529
@@ -2147,10 +2138,33 @@ the name of the vulnerable input vector
 540
 541
 542
-543</pre>
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 504</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 527</span>
 
 <span class='kw'>def</span> <span class='id get_matches'>get_matches</span><span class='lparen'>(</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id injected_str'>injected_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     
@@ -2281,13 +2295,13 @@ the url under audit
       <pre class="lines">
 
 
-557
-558
-559
-560</pre>
+580
+581
+582
+583</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 557</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 580</span>
 
 <span class='kw'>def</span> <span class='id get_status_str'>get_status_str</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id input'>input</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Auditing </span><span class='embexpr_beg'>#{</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:element</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'> variable '</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
@@ -2374,29 +2388,6 @@ the string to inject
       <pre class="lines">
 
 
-612
-613
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626
-627
-628
-629
-630
-631
-632
-633
-634
 635
 636
 637
@@ -2423,10 +2414,33 @@ the string to inject
 658
 659
 660
-661</pre>
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 612</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 635</span>
 
 <span class='kw'>def</span> <span class='id injection_sets'>injection_sets</span><span class='lparen'>(</span> <span class='id hash'>hash</span><span class='comma'>,</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
     
@@ -2589,18 +2603,6 @@ updated opts The block will be called as soon as HTTP response is received.
       <pre class="lines">
 
 
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
 476
 477
 478
@@ -2613,12 +2615,45 @@ updated opts The block will be called as soon as HTTP response is received.
 485
 486
 487
-488</pre>
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 464</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 476</span>
 
 <span class='kw'>def</span> <span class='id on_complete'>on_complete</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id injected_str'>injected_str</span><span class='comma'>,</span> <span class='id input'>input</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+  
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id req'>req</span> <span class='op'>&amp;&amp;</span> <span class='id req'>req</span><span class='period'>.</span><span class='id response'>response</span> <span class='rparen'>)</span>
+            <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='period'>.</span><span class='id response'>response</span><span class='comma'>,</span> <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>altered</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        
+        <span class='kw'>return</span>
+    <span class='kw'>end</span>
+  
     <span class='id req'>req</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id res'>res</span> <span class='op'>|</span>
         
@@ -2631,6 +2666,7 @@ updated opts The block will be called as soon as HTTP response is received.
         <span class='kw'>end</span>
             
         <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:injected</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id injected_str'>injected_str</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+        <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:combo</span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id input'>input</span>
         <span class='comment'># call the block, if there's one
 </span>        <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
             <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>altered</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
@@ -2661,33 +2697,33 @@ updated opts The block will be called as soon as HTTP response is received.
       <pre class="lines">
 
 
-728
-729
-730
-731
-732
-733
-734
-735
-736
-737
-738
-739
-740
-741
-742
-743
-744
-745
-746
-747
-748
-749
-750
-751</pre>
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 728</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 751</span>
 
 <span class='kw'>def</span> <span class='id print_debug_combos'>print_debug_combos</span><span class='lparen'>(</span> <span class='id combos'>combos</span> <span class='rparen'>)</span>
     <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -2731,29 +2767,6 @@ updated opts The block will be called as soon as HTTP response is received.
       <pre class="lines">
 
 
-696
-697
-698
-699
-700
-701
-702
-703
-704
-705
-706
-707
-708
-709
-710
-711
-712
-713
-714
-715
-716
-717
-718
 719
 720
 721
@@ -2761,10 +2774,33 @@ updated opts The block will be called as soon as HTTP response is received.
 723
 724
 725
-726</pre>
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 696</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 719</span>
 
 <span class='kw'>def</span> <span class='id print_debug_formatting'>print_debug_formatting</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>------------</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -2815,17 +2851,17 @@ updated opts The block will be called as soon as HTTP response is received.
       <pre class="lines">
 
 
-687
-688
-689
-690
-691
-692
-693
-694</pre>
+710
+711
+712
+713
+714
+715
+716
+717</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 687</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 710</span>
 
 <span class='kw'>def</span> <span class='id print_debug_injection_set'>print_debug_injection_set</span><span class='lparen'>(</span> <span class='id var_combo'>var_combo</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id debug?'>debug?</span>
@@ -2853,12 +2889,12 @@ updated opts The block will be called as soon as HTTP response is received.
       <pre class="lines">
 
 
-753
-754
-755</pre>
+776
+777
+778</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 753</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 776</span>
 
 <span class='kw'>def</span> <span class='id print_debug_trainer'>print_debug_trainer</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Trainer set to: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='lparen'>(</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ON</span><span class='tstring_end'>'</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>OFF</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -2873,7 +2909,7 @@ updated opts The block will be called as soon as HTTP response is received.
 </div>
     
     <div id="footer">
-  Generated on Tue Oct  5 11:53:08 2010 by 
+  Generated on Tue Oct  5 16:37:44 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
