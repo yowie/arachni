@@ -942,7 +942,9 @@ of the audit
 454
 455
 456
-457</pre>
+457
+458
+459</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 419</span>
@@ -954,6 +956,8 @@ of the audit
     <span class='id url'>url</span>             <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span>
 
     <span class='id results'>results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    
+    <span class='kw'>return</span> <span class='id results'>results</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id audit_cookies'>audit_cookies</span> <span class='rparen'>)</span>
     <span class='id get_cookies'>get_cookies</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id orig_cookie'>orig_cookie</span><span class='op'>|</span>
         
@@ -1535,16 +1539,16 @@ the url under audit
       <pre class="lines">
 
 
-600
-601
 602
 603
 604
 605
-606</pre>
+606
+607
+608</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 600</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 602</span>
 
 <span class='kw'>def</span> <span class='id audit_id'>audit_id</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id input'>input</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id injection_str'>injection_str</span> <span class='rparen'>)</span>
     
@@ -1802,12 +1806,12 @@ a string returned by <span class='object_link'><a href="#audit_id-instance_metho
       <pre class="lines">
 
 
-628
-629
-630</pre>
+630
+631
+632</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 628</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 630</span>
 
 <span class='kw'>def</span> <span class='id audited'>audited</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span>
     <span class='cvar'>@@audited</span> <span class='op'>&lt;&lt;</span> <span class='id audit_id'>audit_id</span>
@@ -1875,18 +1879,18 @@ a string returned by <span class='object_link'><a href="#audit_id-instance_metho
       <pre class="lines">
 
 
-613
-614
 615
 616
 617
 618
 619
 620
-621</pre>
+621
+622
+623</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 613</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 615</span>
 
 <span class='kw'>def</span> <span class='id audited?'>audited?</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span>
   <span class='id ret'>ret</span> <span class='op'>=</span>  <span class='cvar'>@@audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id audit_id'>audit_id</span> <span class='rparen'>)</span>
@@ -1997,8 +2001,6 @@ bitfield describing formating preferencies
       <pre class="lines">
 
 
-705
-706
 707
 708
 709
@@ -2006,10 +2008,12 @@ bitfield describing formating preferencies
 711
 712
 713
-714</pre>
+714
+715
+716</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 705</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 707</span>
 
 <span class='kw'>def</span> <span class='id format_str'>format_str</span><span class='lparen'>(</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id default_str'>default_str</span><span class='comma'>,</span> <span class='id format'>format</span>  <span class='rparen'>)</span>
   
@@ -2122,8 +2126,6 @@ the name of the vulnerable input vector
       <pre class="lines">
 
 
-527
-528
 529
 530
 531
@@ -2167,10 +2169,12 @@ the name of the vulnerable input vector
 569
 570
 571
-572</pre>
+572
+573
+574</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 527</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 529</span>
 
 <span class='kw'>def</span> <span class='id get_matches'>get_matches</span><span class='lparen'>(</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id injected_str'>injected_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     
@@ -2307,13 +2311,13 @@ the url under audit
       <pre class="lines">
 
 
-586
-587
 588
-589</pre>
+589
+590
+591</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 586</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 588</span>
 
 <span class='kw'>def</span> <span class='id get_status_str'>get_status_str</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id input'>input</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Auditing </span><span class='embexpr_beg'>#{</span><span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:element</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'> variable '</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
@@ -2400,8 +2404,6 @@ the string to inject
       <pre class="lines">
 
 
-641
-642
 643
 644
 645
@@ -2449,10 +2451,12 @@ the string to inject
 687
 688
 689
-690</pre>
+690
+691
+692</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 641</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 643</span>
 
 <span class='kw'>def</span> <span class='id injection_sets'>injection_sets</span><span class='lparen'>(</span> <span class='id hash'>hash</span><span class='comma'>,</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
     
@@ -2615,8 +2619,6 @@ updated opts The block will be called as soon as HTTP response is received.
       <pre class="lines">
 
 
-476
-477
 478
 479
 480
@@ -2650,10 +2652,12 @@ updated opts The block will be called as soon as HTTP response is received.
 508
 509
 510
-511</pre>
+511
+512
+513</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 476</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 478</span>
 
 <span class='kw'>def</span> <span class='id on_complete'>on_complete</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id injected_str'>injected_str</span><span class='comma'>,</span> <span class='id input'>input</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
   
@@ -2667,7 +2671,7 @@ updated opts The block will be called as soon as HTTP response is received.
     <span class='kw'>end</span>
   
     <span class='id req'>req</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id res'>res</span> <span class='op'>|</span>
+        <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
         
         <span class='comment'># make sure that we have a response before continuing
 </span>        <span class='kw'>if</span> <span class='op'>!</span><span class='id res'>res</span>
@@ -2709,8 +2713,6 @@ updated opts The block will be called as soon as HTTP response is received.
       <pre class="lines">
 
 
-757
-758
 759
 760
 761
@@ -2732,10 +2734,12 @@ updated opts The block will be called as soon as HTTP response is received.
 777
 778
 779
-780</pre>
+780
+781
+782</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 757</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 759</span>
 
 <span class='kw'>def</span> <span class='id print_debug_combos'>print_debug_combos</span><span class='lparen'>(</span> <span class='id combos'>combos</span> <span class='rparen'>)</span>
     <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -2779,8 +2783,6 @@ updated opts The block will be called as soon as HTTP response is received.
       <pre class="lines">
 
 
-725
-726
 727
 728
 729
@@ -2809,10 +2811,12 @@ updated opts The block will be called as soon as HTTP response is received.
 752
 753
 754
-755</pre>
+755
+756
+757</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 725</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 727</span>
 
 <span class='kw'>def</span> <span class='id print_debug_formatting'>print_debug_formatting</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>------------</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -2863,17 +2867,17 @@ updated opts The block will be called as soon as HTTP response is received.
       <pre class="lines">
 
 
-716
-717
 718
 719
 720
 721
 722
-723</pre>
+723
+724
+725</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 716</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 718</span>
 
 <span class='kw'>def</span> <span class='id print_debug_injection_set'>print_debug_injection_set</span><span class='lparen'>(</span> <span class='id var_combo'>var_combo</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id debug?'>debug?</span>
@@ -2901,12 +2905,12 @@ updated opts The block will be called as soon as HTTP response is received.
       <pre class="lines">
 
 
-782
-783
-784</pre>
+784
+785
+786</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 782</span>
+      <pre class="code"><span class="info file"># File 'lib/module/auditor.rb', line 784</span>
 
 <span class='kw'>def</span> <span class='id print_debug_trainer'>print_debug_trainer</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Trainer set to: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='lparen'>(</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ON</span><span class='tstring_end'>'</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>OFF</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -2921,7 +2925,7 @@ updated opts The block will be called as soon as HTTP response is received.
 </div>
     
     <div id="footer">
-  Generated on Thu Oct  7 13:54:51 2010 by 
+  Generated on Thu Oct  7 20:33:32 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>

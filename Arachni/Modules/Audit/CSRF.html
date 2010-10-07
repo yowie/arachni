@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Modules::Audit::Trainer</title>
+<title>Class: Arachni::Modules::Audit::CSRF</title>
 <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
@@ -23,10 +23,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../../_index.html">Index (T)</a> &raquo; 
+    <a href="../../../_index.html">Index (C)</a> &raquo; 
     <span class='title'><span class='object_link'><a href="../../../Arachni.html" title="Arachni (module)">Arachni</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Modules.html" title="Arachni::Modules (module)">Modules</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Audit.html" title="Arachni::Modules::Audit (module)">Audit</a></span></span>
      &raquo; 
-    <span class="title">Trainer</span>
+    <span class="title">CSRF</span>
   
   
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -43,7 +43,7 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Arachni::Modules::Audit::Trainer
+    <div id="content"><h1>Class: Arachni::Modules::Audit::CSRF
   
   
   
@@ -60,7 +60,7 @@
           
             <li class="next"><span class='object_link'><a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></li>
           
-            <li class="next">Arachni::Modules::Audit::Trainer</li>
+            <li class="next">Arachni::Modules::Audit::CSRF</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -80,7 +80,7 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">modules/audit/trainer.rb</dd>
+    <dd class="r1 last">modules/audit/csrf.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -88,11 +88,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-Pokes and probes all inputs of a given page in order to uncover new input
-vectors.
-</p>
-<p>
-It also forces Arachni to train itself by analyzing the server responses.
+CSRF audit module
 </p>
 <p>
 @author: Tasos &#8220;Zapotek&#8221; Laskos
@@ -110,6 +106,19 @@ It also forces Arachni to train itself by analyzing the server responses.
 </div>
 <div class="tags">
   
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="http://cwe.mitre.org/data/definitions/352.html" target="_parent" title="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a></li>
+    
+      <li><a href="http://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29" target="_parent" title="http://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">http://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29</a></li>
+    
+      <li><a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_parent" title="http://en.wikipedia.org/wiki/Cross-site_request_forgery">http://en.wikipedia.org/wiki/Cross-site_request_forgery</a></li>
+    
+      <li><a href="http://www.cgisecurity.com/csrf-faq.html" target="_parent" title="http://www.cgisecurity.com/csrf-faq.html">http://www.cgisecurity.com/csrf-faq.html</a></li>
+    
+  </ul>
+
 </div>
   <h2>Constant Summary</h2>
   
@@ -180,7 +189,7 @@ It also forces Arachni to train itself by analyzing the server responses.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Trainer) <strong>initialize</strong>(page) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (CSRF) <strong>initialize</strong>(page) </a>
     
 
     
@@ -196,7 +205,7 @@ It also forces Arachni to train itself by analyzing the server responses.
 
   
     <span class="summary_desc"><div class='inline'><p>
-A new instance of Trainer.
+A new instance of CSRF.
 </p>
 </div></span>
   
@@ -304,14 +313,14 @@ A new instance of Trainer.
     <div class="method_details first">
   <p class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Arachni::Modules::Audit::Trainer (class)">Trainer</a></span></tt>) <strong>initialize</strong>(page) 
+    - (<tt><span class='object_link'><a href="" title="Arachni::Modules::Audit::CSRF (class)">CSRF</a></span></tt>) <strong>initialize</strong>(page) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A new instance of Trainer
+A new instance of CSRF
 </p>
 
 
@@ -325,15 +334,21 @@ A new instance of Trainer
       <pre class="lines">
 
 
-33
-34
-35</pre>
+35
+36
+37
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/trainer.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
+
+    <span class='comment'># initialize the results array
+</span>    <span class='ivar'>@results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -360,6 +375,18 @@ A new instance of Trainer
       <pre class="lines">
 
 
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
 68
 69
 70
@@ -377,27 +404,41 @@ A new instance of Trainer
 82
 83
 84
-85</pre>
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/trainer.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
-        <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Trainer</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Pokes and probes all inputs of a given page in order to uncover new input vectors.
-</span><span class='tstring_content'>            It also forces Arachni to train itself by analyzing the server responses.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+        <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CSRF</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:elements</span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
-            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span><span class='comma'>,</span>
-            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span><span class='comma'>,</span>
-            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>COOKIE</span><span class='comma'>,</span>
-            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>HEADER</span>
+            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span>
         <span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:references</span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='symbol'>:author</span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:references</span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>MITRE - CWE</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://cwe.mitre.org/data/definitions/352.html</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>OWASP</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Wikipedia</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://en.wikipedia.org/wiki/Cross-site_request_forgery</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CGI Security</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://www.cgisecurity.com/csrf-faq.html</span><span class='tstring_end'>'</span></span>
         <span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='symbol'>:targets</span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+            
+        <span class='symbol'>:vulnerability</span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+            <span class='symbol'>:name</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Cross-Site Request Forgery</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='symbol'>:description</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>The web application does not, or can not,
+                sufficiently verify whether a well-formed, valid, consistent
+</span><span class='tstring_content'>                request was intentionally provided by the user who submitted the request.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='symbol'>:cwe</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>352</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='symbol'>:severity</span>    <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>HIGH</span><span class='comma'>,</span>
+            <span class='symbol'>:cvssv2</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='symbol'>:remedy_guidance</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='symbol'>:remedy_code</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='rbrace'>}</span>
+
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -424,35 +465,15 @@ A new instance of Trainer
       <pre class="lines">
 
 
-37
-38
-39
-40
-41
 42
 43
-44
-45
-46
-47
-48
-49</pre>
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/trainer.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
-    <span class='comment'># this will be the used as the injection string
-</span>    <span class='ivar'>@str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_arachni_trainer_</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id seed'>seed</span>
-    
-    <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-        <span class='comment'>#
-</span>        <span class='comment'># tell the frameworm to learn from the
-</span>        <span class='comment'># server responses that this module will cause.
-</span>        <span class='comment'>#
-</span>        <span class='symbol'>:train</span>  <span class='op'>=&gt;</span> <span class='kw'>true</span>
-    <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -472,42 +493,28 @@ A new instance of Trainer
       <pre class="lines">
 
 
+46
+47
+48
+49
+50
 51
 52
 53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66</pre>
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/trainer.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-  
     <span class='comment'>#
-</span>    <span class='comment'># this will inject the string in @str into all available inputs
+</span>    <span class='comment'># check for persistent cookies
+</span>    <span class='comment'># submit a form
+</span>    <span class='comment'># submit the form with a forged referer and see if we get different results
+</span>    <span class='comment'># 
 </span>    <span class='comment'>#
-</span>    <span class='id audit'>audit</span><span class='lparen'>(</span> <span class='ivar'>@str</span><span class='comma'>,</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-        <span class='comment'>#
-</span>        <span class='comment'># empty block, we don't need to check for anything
-</span>        <span class='comment'>#
-</span>        <span class='comment'># however since we haven't passed at least a regexp to audit()
-</span>        <span class='comment'># we need to provide a block otherwise the Auditor will complain...
-</span>        <span class='comment'># 
-</span>        <span class='comment'># that bastard!
-</span>        <span class='comment'>#
-</span>    <span class='rbrace'>}</span>
-<span class='kw'>end</span></pre>
+</span>    <span class='comment'>#
+</span><span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -518,7 +525,7 @@ A new instance of Trainer
 </div>
     
     <div id="footer">
-  Generated on Thu Oct  7 20:33:33 2010 by 
+  Generated on Thu Oct  7 20:33:32 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
