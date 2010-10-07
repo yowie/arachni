@@ -98,7 +98,7 @@ Path Traversal audit module.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.2
+@version: 0.2.1
 </p>
 
 
@@ -183,27 +183,6 @@ Path Traversal audit module.
     </h2>
 
     <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#__log_results-instance_method" title="#__log_results (instance method)">- (Object) <strong>__log_results</strong>(where, var, res, injection_str, regexp) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
       
         <li class="public ">
   <span class="summary_signature">
@@ -392,21 +371,6 @@ A new instance of PathTraversal
       <pre class="lines">
 
 
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
 105
 106
 107
@@ -420,10 +384,25 @@ A new instance of PathTraversal
 115
 116
 117
-118</pre>
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/path_traversal.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/path_traversal.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -435,7 +414,7 @@ A new instance of PathTraversal
             <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>COOKIE</span>
         <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:references</span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>OWASP</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://www.owasp.org/index.php/Path_Traversal</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>WASC</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://projects.webappsec.org/Path-Traversal</span><span class='tstring_end'>'</span></span>
@@ -466,101 +445,7 @@ A new instance of PathTraversal
     
     
       <div class="method_details first">
-  <p class="signature first" id="__log_results-instance_method">
-  
-    - (<tt>Object</tt>) <strong>__log_results</strong>(where, var, res, injection_str, regexp) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/path_traversal.rb', line 120</span>
-
-<span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id where'>where</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span> <span class='id regexp'>regexp</span> <span class='rparen'>)</span>
-
-    <span class='kw'>if</span> <span class='lparen'>(</span> <span class='lparen'>(</span> <span class='id match'>match</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='period'>.</span><span class='id scan'>scan</span><span class='lparen'>(</span> <span class='id regexp'>regexp</span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id match'>match</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='rparen'>)</span>
-        
-        <span class='id injection_str'>injection_str</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id injection_str'>injection_str</span> <span class='rparen'>)</span> 
-        
-        <span class='id url'>url</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span>
-        <span class='comment'># append the result to the results hash
-</span>        <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
-                <span class='symbol'>:var</span>          <span class='op'>=&gt;</span> <span class='id var'>var</span><span class='comma'>,</span>
-                <span class='symbol'>:url</span>          <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span>
-                <span class='symbol'>:injected</span>     <span class='op'>=&gt;</span> <span class='id injection_str'>injection_str</span><span class='comma'>,</span>
-                <span class='symbol'>:id</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-                <span class='symbol'>:regexp</span>       <span class='op'>=&gt;</span> <span class='id regexp'>regexp</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span>
-                <span class='symbol'>:regexp_match</span> <span class='op'>=&gt;</span> <span class='id match'>match</span><span class='comma'>,</span>
-                <span class='symbol'>:elem</span>         <span class='op'>=&gt;</span> <span class='id where'>where</span><span class='comma'>,</span>
-                <span class='symbol'>:response</span>     <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span>
-                <span class='symbol'>:headers</span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-                    <span class='symbol'>:request</span>    <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id headers'>headers</span><span class='comma'>,</span>
-                    <span class='symbol'>:response</span>   <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id headers'>headers</span><span class='comma'>,</span>    
-               <span class='rbrace'>}</span>
-
-            <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span>
-        <span class='rparen'>)</span>
-            
-        <span class='comment'># inform the user that we have a match
-</span>        <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In </span><span class='embexpr_beg'>#{</span><span class='id where'>where</span><span class='rbrace'>}</span><span class='tstring_content'> var '</span><span class='embexpr_beg'>#{</span><span class='id var'>var</span><span class='rbrace'>}</span><span class='tstring_content'>' ( </span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_content'> )</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-        
-        <span class='comment'># give the user some more info if he wants 
-</span>        <span class='id print_verbose'>print_verbose</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Injected str:\t</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id injection_str'>injection_str</span> <span class='rparen'>)</span>    
-        <span class='id print_verbose'>print_verbose</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Matched regex:\t</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id regexp'>regexp</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
-        <span class='id print_verbose'>print_verbose</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>---------</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id only_positives?'>only_positives?</span>
-
-    <span class='kw'>end</span>
-    
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="prepare-instance_method">
+  <p class="signature first" id="prepare-instance_method">
   
     - (<tt>Object</tt>) <strong>prepare</strong> 
   
@@ -606,12 +491,42 @@ A new instance of PathTraversal
 69
 70
 71
-72</pre>
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/path_traversal.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+  
+    <span class='comment'>#
+</span>    <span class='comment'># the way this works is pretty cool since it will actually
+</span>    <span class='comment'># exploit the vulnerability in order to verify that it worked
+</span>    <span class='comment'># which also means that the results of the exploitation will
+</span>    <span class='comment'># appear in the report.
+</span>    <span class='comment'>#
+</span>    <span class='comment'># *but* we may run into a web page that details the structure of
+</span>    <span class='comment'># the 'passwd' file and get a false positive; so we need to check
+</span>    <span class='comment'># the html code in @page.html before checking the responses of the audit
+</span>    <span class='comment'># and give accurate feedback about the context in which the vulnerability
+</span>    <span class='comment'># was flagged.
+</span>    <span class='comment'>#
+</span>    
+    
     <span class='ivar'>@__trv</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>../../../../../../../../../../../../../../../../</span><span class='tstring_end'>'</span></span>
     <span class='ivar'>@__ext</span> <span class='op'>=</span> <span class='lbracket'>[</span>
         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
@@ -664,23 +579,23 @@ A new instance of PathTraversal
       <pre class="lines">
 
 
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87</pre>
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/path_traversal.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/path_traversal.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -706,7 +621,7 @@ A new instance of PathTraversal
 </div>
     
     <div id="footer">
-  Generated on Tue Oct  5 21:35:49 2010 by 
+  Generated on Thu Oct  7 13:41:37 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>

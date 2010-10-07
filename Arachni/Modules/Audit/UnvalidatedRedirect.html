@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta name="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Modules::Audit::XSS</title>
+<title>Class: Arachni::Modules::Audit::UnvalidatedRedirect</title>
 <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
@@ -23,10 +23,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../../_index.html">Index (X)</a> &raquo; 
+    <a href="../../../_index.html">Index (U)</a> &raquo; 
     <span class='title'><span class='object_link'><a href="../../../Arachni.html" title="Arachni (module)">Arachni</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Modules.html" title="Arachni::Modules (module)">Modules</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Audit.html" title="Arachni::Modules::Audit (module)">Audit</a></span></span>
      &raquo; 
-    <span class="title">XSS</span>
+    <span class="title">UnvalidatedRedirect</span>
   
   
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -43,7 +43,7 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Arachni::Modules::Audit::XSS
+    <div id="content"><h1>Class: Arachni::Modules::Audit::UnvalidatedRedirect
   
   
   
@@ -60,7 +60,7 @@
           
             <li class="next"><span class='object_link'><a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></li>
           
-            <li class="next">Arachni::Modules::Audit::XSS</li>
+            <li class="next">Arachni::Modules::Audit::UnvalidatedRedirect</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -80,7 +80,7 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">modules/audit/xss.rb</dd>
+    <dd class="r1 last">modules/audit/unvalidated_redirect.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -88,7 +88,11 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-XSS audit module.<br/> It audits links, forms and cookies.
+Unvalidated redirect audit module.
+</p>
+<p>
+It audits links, forms and cookies, injects URLs and checks the Location
+header field to determnine whether the attack was successful.
 </p>
 <p>
 @author: Tasos &#8220;Zapotek&#8221; Laskos
@@ -98,7 +102,7 @@ XSS audit module.<br/> It audits links, forms and cookies.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.2
+@version: 0.1
 </p>
 
 
@@ -109,11 +113,7 @@ XSS audit module.<br/> It audits links, forms and cookies.
   <h3>See Also:</h3>
   <ul class="see">
     
-      <li><a href="http://cwe.mitre.org/data/definitions/79.html" target="_parent" title="http://cwe.mitre.org/data/definitions/79.html">http://cwe.mitre.org/data/definitions/79.html</a></li>
-    
-      <li><a href="http://ha.ckers.org/xss.html" target="_parent" title="http://ha.ckers.org/xss.html">http://ha.ckers.org/xss.html</a></li>
-    
-      <li><a href="http://secunia.com/advisories/9716/" target="_parent" title="http://secunia.com/advisories/9716/">http://secunia.com/advisories/9716/</a></li>
+      <li><a href="http://www.owasp.org/index.php/Top_10_2010-A10-Unvalidated_Redirects_and_Forwards" target="_parent" title="http://www.owasp.org/index.php/Top_10_2010-A10-Unvalidated_Redirects_and_Forwards">http://www.owasp.org/index.php/Top_10_2010-A10-Unvalidated_Redirects_and_Forwards</a></li>
     
   </ul>
 
@@ -187,7 +187,7 @@ XSS audit module.<br/> It audits links, forms and cookies.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (XSS) <strong>initialize</strong>(page) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (UnvalidatedRedirect) <strong>initialize</strong>(page) </a>
     
 
     
@@ -203,7 +203,7 @@ XSS audit module.<br/> It audits links, forms and cookies.
 
   
     <span class="summary_desc"><div class='inline'><p>
-A new instance of XSS.
+A new instance of UnvalidatedRedirect.
 </p>
 </div></span>
   
@@ -311,14 +311,14 @@ A new instance of XSS.
     <div class="method_details first">
   <p class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Arachni::Modules::Audit::XSS (class)">XSS</a></span></tt>) <strong>initialize</strong>(page) 
+    - (<tt><span class='object_link'><a href="" title="Arachni::Modules::Audit::UnvalidatedRedirect (class)">UnvalidatedRedirect</a></span></tt>) <strong>initialize</strong>(page) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A new instance of XSS
+A new instance of UnvalidatedRedirect
 </p>
 
 
@@ -332,19 +332,21 @@ A new instance of XSS
       <pre class="lines">
 
 
-34
 35
 36
 37
-38</pre>
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/unvalidated_redirect.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
 
-    <span class='ivar'>@results</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='comment'># initialize the array that will hold the results
+</span>    <span class='ivar'>@results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -371,14 +373,6 @@ A new instance of XSS
       <pre class="lines">
 
 
-53
-54
-55
-56
-57
-58
-59
-60
 61
 62
 63
@@ -400,35 +394,41 @@ A new instance of XSS
 79
 80
 81
-82</pre>
+82
+83
+84
+85
+86
+87
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/unvalidated_redirect.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
-        <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>XSS</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Cross-Site Scripting recon module</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+        <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UnvalidatedRedirect</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Injects URLs and checks the Location header field
+</span><span class='tstring_content'>            to determnine whether the attack was successful.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:elements</span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
             <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span><span class='comma'>,</span>
             <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span><span class='comma'>,</span>
-            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>COOKIE</span><span class='comma'>,</span>
-            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>HEADER</span>
+            <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>COOKIE</span>
         <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:references</span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ha.ckers</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://ha.ckers.org/xss.html</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Secunia</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://secunia.com/advisories/9716/</span><span class='tstring_end'>'</span></span>
+             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>OWASP Top 10 2010</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://www.owasp.org/index.php/Top_10_2010-A10-Unvalidated_Redirects_and_Forwards</span><span class='tstring_end'>'</span></span>
         <span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='symbol'>:targets</span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+            
         <span class='symbol'>:vulnerability</span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-            <span class='symbol'>:name</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Cross-Site Scripting (XSS)</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-            <span class='symbol'>:description</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Client-side code, like JavaScript, can
-</span><span class='tstring_content'>                be injected into the web application.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-            <span class='symbol'>:cwe</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>79</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-            <span class='symbol'>:severity</span>    <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>HIGH</span><span class='comma'>,</span>
-            <span class='symbol'>:cvssv2</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>9.0</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='symbol'>:name</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Unvalidated redirect</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='symbol'>:description</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>The web application redirects users to unvalidated URLs.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='symbol'>:cwe</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>819</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='symbol'>:severity</span>    <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>MEDIUM</span><span class='comma'>,</span>
+            <span class='symbol'>:cvssv2</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:remedy_guidance</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:remedy_code</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='rbrace'>}</span>
@@ -459,8 +459,6 @@ A new instance of XSS
       <pre class="lines">
 
 
-40
-41
 42
 43
 44
@@ -469,15 +467,13 @@ A new instance of XSS
 47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/unvalidated_redirect.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;arachni_xss_</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id seed'>seed</span>
-    <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> 
-        <span class='symbol'>:format</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='const'>Format</span><span class='op'>::</span><span class='const'>APPEND</span> <span class='op'>|</span> <span class='const'>Format</span><span class='op'>::</span><span class='const'>NULL</span> <span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='symbol'>:match</span>  <span class='op'>=&gt;</span> <span class='id str'>str</span><span class='comma'>,</span>
-        <span class='symbol'>:regexp</span> <span class='op'>=&gt;</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
-    <span class='rbrace'>}</span>
+    <span class='ivar'>@__urls</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>www.arachni-boogie-woogie.com</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://www.arachni-boogie-woogie.com</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -499,13 +495,27 @@ A new instance of XSS
 
 49
 50
-51</pre>
+51
+52
+53
+54
+55
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/unvalidated_redirect.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='id audit'>audit</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='lbracket'>[</span><span class='symbol'>:match</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span>
+    <span class='ivar'>@__urls</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id url'>url</span><span class='op'>|</span>
+        
+        <span class='id audit'>audit</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='op'>|</span>
+            <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -517,7 +527,7 @@ A new instance of XSS
 </div>
     
     <div id="footer">
-  Generated on Thu Oct  7 13:41:35 2010 by 
+  Generated on Thu Oct  7 13:41:37 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
