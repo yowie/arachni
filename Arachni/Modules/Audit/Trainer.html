@@ -360,7 +360,6 @@ A new instance of Trainer
       <pre class="lines">
 
 
-68
 69
 70
 71
@@ -377,10 +376,11 @@ A new instance of Trainer
 82
 83
 84
-85</pre>
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/trainer.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/trainer.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -436,7 +436,8 @@ A new instance of Trainer
 46
 47
 48
-49</pre>
+49
+50</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/trainer.rb', line 37</span>
@@ -447,6 +448,7 @@ A new instance of Trainer
 </span>    <span class='ivar'>@str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_arachni_trainer_</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id seed'>seed</span>
     
     <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+        <span class='symbol'>:format</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='const'>Format</span><span class='op'>::</span><span class='const'>STRAIGHT</span> <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='comment'>#
 </span>        <span class='comment'># tell the frameworm to learn from the
 </span>        <span class='comment'># server responses that this module will cause.
@@ -472,7 +474,6 @@ A new instance of Trainer
       <pre class="lines">
 
 
-51
 52
 53
 54
@@ -487,10 +488,11 @@ A new instance of Trainer
 63
 64
 65
-66</pre>
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/trainer.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/trainer.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
   
@@ -518,7 +520,7 @@ A new instance of Trainer
 </div>
     
     <div id="footer">
-  Generated on Thu Oct  7 21:03:42 2010 by 
+  Generated on Fri Oct  8 21:23:45 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>

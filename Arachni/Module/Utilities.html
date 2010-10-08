@@ -246,10 +246,7 @@ path
 42
 43
 44
-45
-46
-47
-48</pre>
+45</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/utilities.rb', line 34</span>
@@ -264,10 +261,7 @@ path
         <span class='id path'>path</span> <span class='op'>=</span>  <span class='id url'>url</span>
     <span class='kw'>end</span>
     
-    <span class='id len'>len</span> <span class='op'>=</span> <span class='id path'>path</span><span class='period'>.</span><span class='id length'>length</span> <span class='op'>-</span> <span class='int'>1</span>
-    <span class='id path'>path</span><span class='lbracket'>[</span><span class='id len'>len</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id path'>path</span><span class='lbracket'>[</span><span class='id len'>len</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>?</span><span class='tstring_end'>'</span></span>
-    
-    <span class='kw'>return</span> <span class='id path'>path</span>
+    <span class='kw'>return</span> <span class='id path'>path</span><span class='period'>.</span><span class='id chomp'>chomp</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>?</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -351,6 +345,9 @@ Gets the reverse diff (strings that have not changed) between 2 strings
       <pre class="lines">
 
 
+71
+72
+73
 74
 75
 76
@@ -367,13 +364,10 @@ Gets the reverse diff (strings that have not changed) between 2 strings
 87
 88
 89
-90
-91
-92
-93</pre>
+90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/utilities.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/module/utilities.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='const'>Utilities</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id text1'>text1</span><span class='comma'>,</span> <span class='id text2'>text2</span> <span class='rparen'>)</span>
     
@@ -413,12 +407,12 @@ Gets the reverse diff (strings that have not changed) between 2 strings
       <pre class="lines">
 
 
-95
-96
-97</pre>
+92
+93
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/utilities.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/module/utilities.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='const'>Utilities</span><span class='period'>.</span><span class='id seed'>seed</span>
     <span class='cvar'>@@seed</span> <span class='op'>||=</span> <span class='const'>Digest</span><span class='op'>::</span><span class='const'>SHA2</span><span class='period'>.</span><span class='id hexdigest'>hexdigest</span><span class='lparen'>(</span> <span class='id srand'>srand</span><span class='lparen'>(</span> <span class='int'>1000</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
@@ -433,7 +427,7 @@ Gets the reverse diff (strings that have not changed) between 2 strings
 </div>
     
     <div id="footer">
-  Generated on Thu Oct  7 21:03:41 2010 by 
+  Generated on Fri Oct  8 21:23:45 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>

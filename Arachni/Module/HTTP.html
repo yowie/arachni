@@ -717,7 +717,10 @@ start URL
 112
 113
 114
-115</pre>
+115
+116
+117
+118</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 72</span>
@@ -751,10 +754,10 @@ start URL
     <span class='ivar'>@trainer</span><span class='period'>.</span><span class='id http'>http</span> <span class='op'>=</span> <span class='kw'>self</span>
     
     <span class='ivar'>@init_headers</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-      <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-      <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>from</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id authed_by'>authed_by</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>from</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id authed_by'>authed_by</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>accept</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><span class='tstring_end'>'</span></span>
     <span class='rbrace'>}</span>
-
     
     <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
         <span class='symbol'>:user_agent</span>      <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id user_agent'>user_agent</span><span class='comma'>,</span>
@@ -765,6 +768,9 @@ start URL
     
     <span class='ivar'>@request_count</span>  <span class='op'>=</span> <span class='int'>0</span>
     <span class='ivar'>@response_count</span> <span class='op'>=</span> <span class='int'>0</span>
+    
+    <span class='comment'># we'll use it to identify our requests
+</span>    <span class='ivar'>@rand_seed</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id seed'>seed</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1097,9 +1103,6 @@ cookies     in name=>value pairs
       <pre class="lines">
 
 
-377
-378
-379
 380
 381
 382
@@ -1117,10 +1120,13 @@ cookies     in name=>value pairs
 394
 395
 396
-397</pre>
+397
+398
+399
+400</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 377</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 380</span>
 
 <span class='kw'>def</span> <span class='const'>HTTP</span><span class='period'>.</span><span class='id parse_cookiejar'>parse_cookiejar</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
     
@@ -1248,9 +1254,6 @@ hash with GET name=>value pairs
       <pre class="lines">
 
 
-260
-261
-262
 263
 264
 265
@@ -1274,10 +1277,13 @@ hash with GET name=>value pairs
 283
 284
 285
-286</pre>
+286
+287
+288
+289</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 260</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 263</span>
 
 <span class='kw'>def</span> <span class='id cookie'>cookie</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id cookies'>cookies</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id train'>train</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id sync'>sync</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
 
@@ -1380,9 +1386,6 @@ the HTML code to check
       <pre class="lines">
 
 
-417
-418
-419
 420
 421
 422
@@ -1411,10 +1414,13 @@ the HTML code to check
 445
 446
 447
-448</pre>
+448
+449
+450
+451</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 417</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 420</span>
 
 <span class='kw'>def</span> <span class='id custom_404?'>custom_404?</span><span class='lparen'>(</span> <span class='id html'>html</span> <span class='rparen'>)</span>
     
@@ -1530,9 +1536,6 @@ hash with name=>value pairs
       <pre class="lines">
 
 
-197
-198
-199
 200
 201
 202
@@ -1555,15 +1558,18 @@ hash with name=>value pairs
 219
 220
 221
-222</pre>
+222
+223
+224
+225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 200</span>
 
 <span class='kw'>def</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id remove_id'>remove_id</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id train'>train</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id sync'>sync</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
     <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id params'>params</span>
     
-    <span class='id params'>params</span> <span class='op'>=</span> <span class='id params'>params</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>__arachni__</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id remove_id'>remove_id</span> 
+    <span class='id params'>params</span> <span class='op'>=</span> <span class='id params'>params</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='ivar'>@rand_seed</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id remove_id'>remove_id</span> 
     <span class='comment'>#
 </span>    <span class='comment'># the exception jail function wraps the block passed to it
 </span>    <span class='comment'># in exception handling and runs it
@@ -1649,17 +1655,17 @@ name=>value pairs
       <pre class="lines">
 
 
-343
-344
-345
 346
 347
 348
 349
-350</pre>
+350
+351
+352
+353</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 343</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 346</span>
 
 <span class='kw'>def</span> <span class='id get_cookies_str'>get_cookies_str</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -1768,9 +1774,6 @@ hash with name=>value pairs
       <pre class="lines">
 
 
-297
-298
-299
 300
 301
 302
@@ -1790,10 +1793,13 @@ hash with name=>value pairs
 316
 317
 318
-319</pre>
+319
+320
+321
+322</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 297</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 300</span>
 
 <span class='kw'>def</span> <span class='id header'>header</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id headers'>headers</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id train'>train</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id sync'>sync</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
     
@@ -1875,17 +1881,17 @@ Converts HTTP cookies from string to Hash
       <pre class="lines">
 
 
-359
-360
-361
 362
 363
 364
 365
-366</pre>
+366
+367
+368
+369</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 359</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 362</span>
 
 <span class='kw'>def</span> <span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
     <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -1964,12 +1970,12 @@ URI object
       <pre class="lines">
 
 
-406
-407
-408</pre>
+409
+410
+411</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 406</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 409</span>
 
 <span class='kw'>def</span> <span class='id parse_url'>parse_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -2056,9 +2062,6 @@ hash with name=>value pairs
       <pre class="lines">
 
 
-232
-233
-234
 235
 236
 237
@@ -2073,10 +2076,13 @@ hash with name=>value pairs
 246
 247
 248
-249</pre>
+249
+250
+251
+252</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 232</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 235</span>
 
 <span class='kw'>def</span> <span class='id post'>post</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id train'>train</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id sync'>sync</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
 
@@ -2147,9 +2153,6 @@ the request to queue
       <pre class="lines">
 
 
-135
-136
-137
 138
 139
 140
@@ -2199,10 +2202,13 @@ the request to queue
 184
 185
 186
-187</pre>
+187
+188
+189
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 138</span>
 
 <span class='kw'>def</span> <span class='id queue'>queue</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id sync'>sync</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
     
@@ -2290,14 +2296,14 @@ joined!
       <pre class="lines">
 
 
-123
-124
-125
 126
-127</pre>
+127
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 126</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span>
   <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
@@ -2354,16 +2360,16 @@ name=>value pairs
       <pre class="lines">
 
 
-328
-329
-330
 331
 332
 333
-334</pre>
+334
+335
+336
+337</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 328</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 331</span>
 
 <span class='kw'>def</span> <span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -2382,7 +2388,7 @@ name=>value pairs
 </div>
     
     <div id="footer">
-  Generated on Thu Oct  7 21:03:40 2010 by 
+  Generated on Fri Oct  8 21:23:44 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
