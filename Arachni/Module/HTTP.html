@@ -408,7 +408,7 @@ Gets a hash of cookies as a string.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#header-instance_method" title="#header (instance method)">- (Typhoeus::Request) <strong>header</strong>(url, headers, params = { }, train = false, sync = false) </a>
+      <a href="#header-instance_method" title="#header (instance method)">- (Typhoeus::Request) <strong>header</strong>(url, headers, params = nil, train = false, sync = false) </a>
     
 
     
@@ -1103,6 +1103,7 @@ cookies     in name=>value pairs
       <pre class="lines">
 
 
+379
 380
 381
 382
@@ -1122,11 +1123,10 @@ cookies     in name=>value pairs
 396
 397
 398
-399
-400</pre>
+399</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 380</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 379</span>
 
 <span class='kw'>def</span> <span class='const'>HTTP</span><span class='period'>.</span><span class='id parse_cookiejar'>parse_cookiejar</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
     
@@ -1386,6 +1386,7 @@ the HTML code to check
       <pre class="lines">
 
 
+419
 420
 421
 422
@@ -1416,11 +1417,10 @@ the HTML code to check
 447
 448
 449
-450
-451</pre>
+450</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 420</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 419</span>
 
 <span class='kw'>def</span> <span class='id custom_404?'>custom_404?</span><span class='lparen'>(</span> <span class='id html'>html</span> <span class='rparen'>)</span>
     
@@ -1655,17 +1655,17 @@ name=>value pairs
       <pre class="lines">
 
 
+345
 346
 347
 348
 349
 350
 351
-352
-353</pre>
+352</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 346</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 345</span>
 
 <span class='kw'>def</span> <span class='id get_cookies_str'>get_cookies_str</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -1683,7 +1683,7 @@ name=>value pairs
       <div class="method_details ">
   <p class="signature " id="header-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>) <strong>header</strong>(url, headers, params = { }, train = false, sync = false) 
+    - (<tt><span class='object_link'><a href="../../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>) <strong>header</strong>(url, headers, params = nil, train = false, sync = false) 
   
 
   
@@ -1742,7 +1742,7 @@ hash with name=>value pairs
         <span class='name'>params</span>
       
       
-        <em class="default">(defaults to: <tt>{ }</tt>)</em>
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
         &mdash;
@@ -1795,15 +1795,13 @@ hash with name=>value pairs
 318
 319
 320
-321
-322</pre>
+321</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 300</span>
 
-<span class='kw'>def</span> <span class='id header'>header</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id headers'>headers</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id train'>train</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id sync'>sync</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id header'>header</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id headers'>headers</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id train'>train</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id sync'>sync</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
     
-    <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id params'>params</span>
     <span class='comment'># wrap the code in exception handling
 </span>    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
         
@@ -1881,17 +1879,17 @@ Converts HTTP cookies from string to Hash
       <pre class="lines">
 
 
+361
 362
 363
 364
 365
 366
 367
-368
-369</pre>
+368</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 362</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 361</span>
 
 <span class='kw'>def</span> <span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
     <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -1970,12 +1968,12 @@ URI object
       <pre class="lines">
 
 
+408
 409
-410
-411</pre>
+410</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 409</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 408</span>
 
 <span class='kw'>def</span> <span class='id parse_url'>parse_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -2360,16 +2358,16 @@ name=>value pairs
       <pre class="lines">
 
 
+330
 331
 332
 333
 334
 335
-336
-337</pre>
+336</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 331</span>
+      <pre class="code"><span class="info file"># File 'lib/module/http.rb', line 330</span>
 
 <span class='kw'>def</span> <span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -2388,7 +2386,7 @@ name=>value pairs
 </div>
     
     <div id="footer">
-  Generated on Fri Oct  8 21:23:44 2010 by 
+  Generated on Sat Oct  9 01:24:06 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
