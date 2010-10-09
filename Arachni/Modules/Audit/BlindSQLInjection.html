@@ -475,9 +475,6 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
-184
-185
-186
 187
 188
 189
@@ -501,10 +498,13 @@ A new instance of BlindSQLInjection
 207
 208
 209
-210</pre>
+210
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 184</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 187</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -568,18 +568,18 @@ Goes through the responses induced by <span class='object_link'><a href="#__audi
       <pre class="lines">
 
 
-154
-155
-156
 157
 158
 159
 160
 161
-162</pre>
+162
+163
+164
+165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 154</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 157</span>
 
 <span class='kw'>def</span> <span class='id __analyze'>__analyze</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='ivar'>@__html_good</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -620,9 +620,6 @@ presentation
       <pre class="lines">
 
 
-125
-126
-127
 128
 129
 130
@@ -646,10 +643,13 @@ presentation
 148
 149
 150
-151</pre>
+151
+152
+153
+154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 125</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id __audit'>__audit</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -774,9 +774,6 @@ the options passed to the <span class='object_link'><a href="../../Module/Audito
       <pre class="lines">
 
 
-172
-173
-174
 175
 176
 177
@@ -784,10 +781,13 @@ the options passed to the <span class='object_link'><a href="../../Module/Audito
 179
 180
 181
-182</pre>
+182
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 172</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 175</span>
 
 <span class='kw'>def</span> <span class='id __check'>__check</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
   
@@ -829,9 +829,6 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
       <pre class="lines">
 
 
-102
-103
-104
 105
 106
 107
@@ -849,10 +846,13 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 119
 120
 121
-122</pre>
+122
+123
+124
+125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='id __prep_bad_response'>__prep_bad_response</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -998,7 +998,10 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 96
 97
 98
-99</pre>
+99
+100
+101
+102</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 72</span>
@@ -1012,7 +1015,10 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
     
     <span class='comment'># let's get a fresh rendering of the page to assist us with
 </span>    <span class='comment'># irrelevant dynamic content elimination (banners, ads, etc...)
-</span>    <span class='id res'>res</span>  <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>true</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id response'>response</span>
+</span>    <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span>
+    <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='id res'>res</span>  <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id response'>response</span>
 
     <span class='comment'># eliminate dynamic content that's context-irrelevant
 </span>    <span class='comment'># ie. changing with every refresh
@@ -1041,7 +1047,7 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 </div>
     
     <div id="footer">
-  Generated on Sat Oct  9 01:44:01 2010 by 
+  Generated on Sat Oct  9 16:04:05 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
