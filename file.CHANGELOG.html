@@ -109,13 +109,14 @@
 </ul>
 </li>
 <li>Overall module improvements and optimizations.</li>
-<li>Module additions:
+<li>Module additions for:
 
 <ul>
 <li>Blind SQL Injection, using reverse-diff analysis.</li>
 <li>Trainer, probes all inputs of a given page, in order to uncover new input vectors, and forces Arachni to learn from the responses.</li>
 <li>Unvalidated redirects.</li>
 <li>Forms that transmit passwords in clear text.</li>
+<li>CSRF, implementing 4-pass rDiff analysis to drastically reduce noise.</li>
 </ul>
 </li>
 <li>Overall report improvements and optimizations.</li>
@@ -124,7 +125,7 @@
 </div></div>
     
     <div id="footer">
-  Generated on Sat Oct  9 23:26:44 2010 by 
+  Generated on Sat Oct  9 23:32:31 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
