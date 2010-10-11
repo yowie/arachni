@@ -521,19 +521,19 @@ Returns an updated <span class='object_link'><a href="../Page.html" title="Arach
       <pre class="lines">
 
 
-76
-77
-78
-79
-80
-81
 82
 83
 84
-85</pre>
+85
+86
+87
+88
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id page'>page</span>
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@updated</span>  <span class='rparen'>)</span>
@@ -628,17 +628,29 @@ was the response forcing a redirection?
 59
 60
 61
-62</pre>
+62
+63
+64
+65
+66
+67
+68</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id add_response'>add_response</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id redir'>redir</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
   
+    <span class='comment'># ap @page.url
+</span>    <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id decode'>decode</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id unpack'>unpack</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>A*</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='id effective_url'>effective_url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id decode'>decode</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id unpack'>unpack</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>A*</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    
     <span class='comment'># prepare the page url
-</span>    <span class='ivar'>@analyzer</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span>
-      <span class='id merge'>merge</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+</span>    <span class='ivar'>@analyzer</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span>
+      <span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id effective_url'>effective_url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
 
+    <span class='comment'># ap @analyzer.url
+</span> 
     <span class='comment'># don't follow links to external sites and 
 </span>    <span class='comment'># respect follow-subdomains option
 </span>
@@ -691,12 +703,6 @@ Analyzes a response looking for new links, forms and cookies.
       <pre class="lines">
 
 
-93
-94
-95
-96
-97
-98
 99
 100
 101
@@ -744,10 +750,16 @@ Analyzes a response looking for new links, forms and cookies.
 143
 144
 145
-146</pre>
+146
+147
+148
+149
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id analyze'>analyze</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
     
@@ -791,8 +803,8 @@ Analyzes a response looking for new links, forms and cookies.
       
         <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span> <span class='op'>=</span> <span class='id res'>res</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id body'>body</span><span class='period'>.</span><span class='id dup'>dup</span>
        
-        <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span>  <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span>
-            <span class='id merge'>merge</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id effective_url'>effective_url</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+        <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span>  <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span>
+            <span class='id merge'>merge</span><span class='lparen'>(</span> <span class='ivar'>@analyzer</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
         
         
         <span class='ivar'>@page</span><span class='period'>.</span><span class='id request_headers'>request_headers</span> <span class='op'>=</span> <span class='id res'>res</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id headers'>headers</span>
@@ -842,15 +854,15 @@ Analyzes a response looking for new links, forms and cookies.
       <pre class="lines">
 
 
-64
-65
-66
-67
-68
-69</pre>
+70
+71
+72
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id follow?'>follow?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@analyzer</span><span class='period'>.</span><span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
@@ -868,7 +880,7 @@ Analyzes a response looking for new links, forms and cookies.
 </div>
     
     <div id="footer">
-  Generated on Sun Oct 10 00:35:04 2010 by 
+  Generated on Mon Oct 11 18:28:39 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>

@@ -475,7 +475,6 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
-187
 188
 189
 190
@@ -501,10 +500,11 @@ A new instance of BlindSQLInjection
 210
 211
 212
-213</pre>
+213
+214</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 187</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 188</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -784,7 +784,8 @@ the options passed to the <span class='object_link'><a href="../../Module/Audito
 182
 183
 184
-185</pre>
+185
+186</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 175</span>
@@ -795,7 +796,8 @@ the options passed to the <span class='object_link'><a href="../../Module/Audito
 </span>    <span class='comment'># original page then a blind SQL injection exists
 </span>    <span class='id check'>check</span> <span class='op'>=</span> <span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span> <span class='rparen'>)</span>
 
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id check'>check</span> <span class='op'>==</span> <span class='ivar'>@__content</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@__html_bad</span><span class='lbracket'>[</span><span class='id var'>var</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id check'>check</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id check'>check</span> <span class='op'>==</span> <span class='ivar'>@__content</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@__html_bad</span><span class='lbracket'>[</span><span class='id var'>var</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id check'>check</span> <span class='op'>&amp;&amp;</span>
+        <span class='op'>!</span><span class='ivar'>@http</span><span class='period'>.</span><span class='id custom_404?'>custom_404?</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
         <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 
@@ -1047,7 +1049,7 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 </div>
     
     <div id="footer">
-  Generated on Sun Oct 10 00:35:05 2010 by 
+  Generated on Mon Oct 11 18:28:40 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
