@@ -240,6 +240,48 @@ presentation.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#__audit_id-instance_method" title="#__audit_id (instance method)">- (Object) <strong>__audit_id</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__audited%3F-instance_method" title="#__audited? (instance method)">- (Boolean) <strong>__audited?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#__check-instance_method" title="#__check (instance method)">- (Object) <strong>__check</strong>(str, res, var, opts) </a>
     
 
@@ -282,6 +324,27 @@ injections.
 Audits page with &#8216;bad&#8217; SQL characters and gathers error pages.
 </p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clean_up-instance_method" title="#clean_up (instance method)">- (Object) <strong>clean_up</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -376,7 +439,7 @@ A new instance of BlindSQLInjection.
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../../Module/Base.html#deps-class_method" title="Arachni::Module::Base.deps (method)">deps</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_cookie_simple-instance_method" title="Arachni::Module::Base#get_cookie_simple (method)">#get_cookie_simple</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_cookies-instance_method" title="Arachni::Module::Base#get_cookies (method)">#get_cookies</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_cookies_simple-instance_method" title="Arachni::Module::Base#get_cookies_simple (method)">#get_cookies_simple</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_data_file-instance_method" title="Arachni::Module::Base#get_data_file (method)">#get_data_file</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_form_simple-instance_method" title="Arachni::Module::Base#get_form_simple (method)">#get_form_simple</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_forms-instance_method" title="Arachni::Module::Base#get_forms (method)">#get_forms</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_forms_simple-instance_method" title="Arachni::Module::Base#get_forms_simple (method)">#get_forms_simple</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_headers-instance_method" title="Arachni::Module::Base#get_headers (method)">#get_headers</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_links-instance_method" title="Arachni::Module::Base#get_links (method)">#get_links</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_links_simple-instance_method" title="Arachni::Module::Base#get_links_simple (method)">#get_links_simple</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../../Module/Base.html#deps-class_method" title="Arachni::Module::Base.deps (method)">deps</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_cookie_simple-instance_method" title="Arachni::Module::Base#get_cookie_simple (method)">#get_cookie_simple</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_cookies-instance_method" title="Arachni::Module::Base#get_cookies (method)">#get_cookies</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_cookies_simple-instance_method" title="Arachni::Module::Base#get_cookies_simple (method)">#get_cookies_simple</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_data_file-instance_method" title="Arachni::Module::Base#get_data_file (method)">#get_data_file</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_form_simple-instance_method" title="Arachni::Module::Base#get_form_simple (method)">#get_form_simple</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_forms-instance_method" title="Arachni::Module::Base#get_forms (method)">#get_forms</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_forms_simple-instance_method" title="Arachni::Module::Base#get_forms_simple (method)">#get_forms_simple</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_headers-instance_method" title="Arachni::Module::Base#get_headers (method)">#get_headers</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_links-instance_method" title="Arachni::Module::Base#get_links (method)">#get_links</a></span>, <span class='object_link'><a href="../../Module/Base.html#get_links_simple-instance_method" title="Arachni::Module::Base#get_links_simple (method)">#get_links_simple</a></span></p>
 
   
   
@@ -475,23 +538,6 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
 208
 209
 210
@@ -501,10 +547,27 @@ A new instance of BlindSQLInjection
 214
 215
 216
-217</pre>
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 191</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 208</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -568,18 +631,18 @@ Goes through the responses induced by <span class='object_link'><a href="#__audi
       <pre class="lines">
 
 
-160
-161
-162
-163
-164
-165
-166
-167
-168</pre>
+177
+178
+179
+180
+181
+182
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 177</span>
 
 <span class='kw'>def</span> <span class='id __analyze'>__analyze</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='ivar'>@__html_good</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -620,25 +683,6 @@ presentation
       <pre class="lines">
 
 
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
 148
 149
 150
@@ -648,10 +692,27 @@ presentation
 154
 155
 156
-157</pre>
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 129</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id __audit'>__audit</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -667,8 +728,6 @@ presentation
 </span>        <span class='id audit'>audit</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='ivar'>@__opts</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='op'>|</span>
 
-            <span class='id ap'>ap</span> <span class='id var'>var</span>
-
             <span class='ivar'>@__html_good</span><span class='lbracket'>[</span><span class='id var'>var</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
             <span class='comment'># save the response for later analysis
@@ -681,6 +740,83 @@ presentation
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
 
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="__audit_id-instance_method">
+  
+    - (<tt>Object</tt>) <strong>__audit_id</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+116
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 116</span>
+
+<span class='kw'>def</span> <span class='id __audit_id'>__audit_id</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span><span class='rbrace'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span><span class='period'>.</span><span class='id keys'>keys</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="__audited?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>__audited?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+120
+121
+122</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 120</span>
+
+<span class='kw'>def</span> <span class='id __audited?'>__audited?</span>
+    <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id __audit_id'>__audit_id</span><span class='lparen'>(</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -778,21 +914,21 @@ the options passed to the <span class='object_link'><a href="../../Module/Audito
       <pre class="lines">
 
 
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189</pre>
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 178</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 195</span>
 
 <span class='kw'>def</span> <span class='id __check'>__check</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
   
@@ -835,30 +971,30 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
       <pre class="lines">
 
 
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
 125
-126</pre>
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 125</span>
 
 <span class='kw'>def</span> <span class='id __prep_bad_response'>__prep_bad_response</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -880,6 +1016,36 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
     <span class='rbrace'>}</span>
     
     <span class='kw'>return</span> <span class='ivar'>@__html_bad</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clean_up-instance_method">
+  
+    - (<tt>Object</tt>) <strong>clean_up</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
+    <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='id __audit_id'>__audit_id</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id uniq!'>uniq!</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -927,7 +1093,11 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 68
 69
 70
-71</pre>
+71
+72
+73
+74
+75</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 43</span>
@@ -954,11 +1124,15 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
     
     <span class='ivar'>@__opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
         <span class='symbol'>:format</span>      <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='const'>Format</span><span class='op'>::</span><span class='const'>APPEND</span> <span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='symbol'>:redundant</span>   <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
+        <span class='comment'># we need to do our own redundancy checks
+</span>        <span class='symbol'>:redundant</span>   <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
         <span class='comment'># sadly, we need to disable asynchronous requests
 </span>        <span class='comment'># otherwise the code would get *really* ugly
 </span>        <span class='symbol'>:async</span>       <span class='op'>=&gt;</span> <span class='kw'>false</span>
     <span class='rbrace'>}</span>
+    
+    <span class='comment'># used for redundancy checks 
+</span>    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     
 <span class='kw'>end</span></pre>
     </td>
@@ -979,10 +1153,6 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
       <pre class="lines">
 
 
-73
-74
-75
-76
 77
 78
 79
@@ -1009,12 +1179,20 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 100
 101
 102
-103</pre>
+103
+104
+105
+106
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    
+    <span class='kw'>return</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id __audited?'>__audited?</span> <span class='rparen'>)</span>
     
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
         <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Nothing to audit on current page, skipping...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -1055,7 +1233,7 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 </div>
     
     <div id="footer">
-  Generated on Wed Oct 13 18:14:23 2010 by 
+  Generated on Wed Oct 13 18:42:56 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
