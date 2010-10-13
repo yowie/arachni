@@ -1512,7 +1512,11 @@ A new instance of Options
 353
 354
 355
-356</pre>
+356
+357
+358
+359
+360</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/options.rb', line 334</span>
@@ -1537,6 +1541,10 @@ A new instance of Options
     
     <span class='comment'># set some defaults
 </span>    <span class='ivar'>@redirect_limit</span> <span class='op'>=</span> <span class='int'>20</span>
+    
+    <span class='comment'># relatively low but will give good performance without bottleneck
+</span>    <span class='comment'># on low bandwidth conections
+</span>    <span class='ivar'>@http_req_limit</span> <span class='op'>=</span> <span class='int'>60</span>
 
     
 <span class='kw'>end</span></pre>
@@ -4027,17 +4035,17 @@ Merges self with the object in &#8216;options&#8217;
       <pre class="lines">
 
 
-377
-378
-379
-380
 381
 382
 383
-384</pre>
+384
+385
+386
+387
+388</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 377</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 381</span>
 
 <span class='kw'>def</span> <span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id options'>options</span> <span class='rparen'>)</span>
     <span class='id options'>options</span><span class='period'>.</span><span class='id to_h'>to_h</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
@@ -4065,10 +4073,6 @@ Merges self with the object in &#8216;options&#8217;
       <pre class="lines">
 
 
-401
-402
-403
-404
 405
 406
 407
@@ -4137,10 +4141,14 @@ Merges self with the object in &#8216;options&#8217;
 470
 471
 472
-473</pre>
+473
+474
+475
+476
+477</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 401</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 405</span>
 
 <span class='kw'>def</span> <span class='id to_arg'>to_arg</span><span class='lparen'>(</span> <span class='id key'>key</span> <span class='rparen'>)</span>
     
@@ -4233,10 +4241,6 @@ Merges self with the object in &#8216;options&#8217;
       <pre class="lines">
 
 
-386
-387
-388
-389
 390
 391
 392
@@ -4246,10 +4250,14 @@ Merges self with the object in &#8216;options&#8217;
 396
 397
 398
-399</pre>
+399
+400
+401
+402
+403</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 386</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 390</span>
 
 <span class='kw'>def</span> <span class='id to_args'>to_args</span>
     
@@ -4307,17 +4315,17 @@ Converts the Options object to hash
       <pre class="lines">
 
 
-363
-364
-365
-366
 367
 368
 369
-370</pre>
+370
+371
+372
+373
+374</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 363</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 367</span>
 
 <span class='kw'>def</span> <span class='id to_h'>to_h</span>
     <span class='id hash'>hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -4337,7 +4345,7 @@ Converts the Options object to hash
 </div>
     
     <div id="footer">
-  Generated on Tue Oct 12 16:04:36 2010 by 
+  Generated on Wed Oct 13 02:23:40 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
