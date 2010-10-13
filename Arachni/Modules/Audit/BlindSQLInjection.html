@@ -475,9 +475,6 @@ A new instance of BlindSQLInjection
       <pre class="lines">
 
 
-188
-189
-190
 191
 192
 193
@@ -501,10 +498,13 @@ A new instance of BlindSQLInjection
 211
 212
 213
-214</pre>
+214
+215
+216
+217</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 188</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -568,18 +568,18 @@ Goes through the responses induced by <span class='object_link'><a href="#__audi
       <pre class="lines">
 
 
-157
-158
-159
 160
 161
 162
 163
 164
-165</pre>
+165
+166
+167
+168</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 160</span>
 
 <span class='kw'>def</span> <span class='id __analyze'>__analyze</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='ivar'>@__html_good</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -620,7 +620,6 @@ presentation
       <pre class="lines">
 
 
-128
 129
 130
 131
@@ -646,10 +645,13 @@ presentation
 151
 152
 153
-154</pre>
+154
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 129</span>
 
 <span class='kw'>def</span> <span class='id __audit'>__audit</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -664,6 +666,8 @@ presentation
         <span class='comment'># inject the statement
 </span>        <span class='id audit'>audit</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='ivar'>@__opts</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='op'>|</span>
+
+            <span class='id ap'>ap</span> <span class='id var'>var</span>
 
             <span class='ivar'>@__html_good</span><span class='lbracket'>[</span><span class='id var'>var</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
@@ -774,9 +778,6 @@ the options passed to the <span class='object_link'><a href="../../Module/Audito
       <pre class="lines">
 
 
-175
-176
-177
 178
 179
 180
@@ -785,10 +786,13 @@ the options passed to the <span class='object_link'><a href="../../Module/Audito
 183
 184
 185
-186</pre>
+186
+187
+188
+189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 175</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 178</span>
 
 <span class='kw'>def</span> <span class='id __check'>__check</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
   
@@ -831,7 +835,6 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
       <pre class="lines">
 
 
-105
 106
 107
 108
@@ -851,10 +854,11 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 122
 123
 124
-125</pre>
+125
+126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='id __prep_bad_response'>__prep_bad_response</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -922,7 +926,8 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 67
 68
 69
-70</pre>
+70
+71</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 43</span>
@@ -949,6 +954,7 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
     
     <span class='ivar'>@__opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
         <span class='symbol'>:format</span>      <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='const'>Format</span><span class='op'>::</span><span class='const'>APPEND</span> <span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='symbol'>:redundant</span>   <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
         <span class='comment'># sadly, we need to disable asynchronous requests
 </span>        <span class='comment'># otherwise the code would get *really* ugly
 </span>        <span class='symbol'>:async</span>       <span class='op'>=&gt;</span> <span class='kw'>false</span>
@@ -973,7 +979,6 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
       <pre class="lines">
 
 
-72
 73
 74
 75
@@ -1003,10 +1008,11 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 99
 100
 101
-102</pre>
+102
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/blind_sqli.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     
@@ -1049,7 +1055,7 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 </div>
     
     <div id="footer">
-  Generated on Wed Oct 13 15:16:33 2010 by 
+  Generated on Wed Oct 13 18:14:23 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
