@@ -423,7 +423,14 @@ The results of the audit will be saved in the the file <i>test.com.afr</i>.</p>
 </ul>
 
 
-<p>Run the following to install all dependencies:</p>
+<p>Run the following to install all required system libraries:</p>
+
+<pre class="code">sudo apt-get install libxml2-dev libxslt1-dev libcurl4-openssl-dev ruby1.9.1-full ruby1.8-dev rubygems
+</pre>
+
+<p>(Adapt the above line to your Linux distro.)</p>
+
+<p>Run the following to install all gem dependencies:</p>
 
 <pre class="code"><span class='id sudo'>sudo</span> <span class='id gem'>gem</span> <span class='id install'>install</span> <span class='id nokogiri'>nokogiri</span> <span class='id anemone'>anemone</span> <span class='id typhoeus'>typhoeus</span> <span class='id socksify'>socksify</span> <span class='id awesome_print'>awesome_print</span> <span class='id liquid'>liquid</span> <span class='id yard'>yard</span>
 </pre>
@@ -454,7 +461,7 @@ caused by the use of this software.</p>
 <p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p></div></div>
     
     <div id="footer">
-  Generated on Fri Oct 15 08:54:48 2010 by 
+  Generated on Fri Oct 15 09:27:37 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
