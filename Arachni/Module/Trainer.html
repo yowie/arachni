@@ -545,19 +545,19 @@ Returns an updated <span class='object_link'><a href="../Page.html" title="Arach
       <pre class="lines">
 
 
-86
-87
-88
-89
-90
-91
-92
 93
 94
-95</pre>
+95
+96
+97
+98
+99
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id page'>page</span>
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@updated</span>  <span class='rparen'>)</span>
@@ -648,20 +648,34 @@ was the response forcing a redirection?
 55
 56
 57
-58</pre>
+58
+59
+60
+61
+62
+63
+64
+65</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id add_response'>add_response</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id redir'>redir</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
 
-    <span class='id url'>url</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span>
-    <span class='id url'>url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-    
-    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id follow?'>follow?</span><span class='lparen'>(</span>  <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id redir'>redir</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id follow?'>follow?</span><span class='lparen'>(</span>  <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-  
-    <span class='id analyze'>analyze</span><span class='lparen'>(</span> <span class='lbracket'>[</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id redir'>redir</span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
+    <span class='kw'>begin</span>
+        <span class='id url'>url</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span>
+        <span class='id url'>url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+        
+        <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id follow?'>follow?</span><span class='lparen'>(</span>  <span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id redir'>redir</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id follow?'>follow?</span><span class='lparen'>(</span>  <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+      
+        <span class='id analyze'>analyze</span><span class='lparen'>(</span> <span class='lbracket'>[</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id redir'>redir</span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
+        
+    <span class='kw'>rescue</span>
+        <span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid URL, probably broken redirection. Ignoring...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='comment'># raise
+</span>    <span class='kw'>end</span>
+
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -707,13 +721,6 @@ Analyzes a response looking for new links, forms and cookies.
       <pre class="lines">
 
 
-103
-104
-105
-106
-107
-108
-109
 110
 111
 112
@@ -764,10 +771,17 @@ Analyzes a response looking for new links, forms and cookies.
 157
 158
 159
-160</pre>
+160
+161
+162
+163
+164
+165
+166
+167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id analyze'>analyze</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
     
@@ -817,8 +831,8 @@ Analyzes a response looking for new links, forms and cookies.
 </span>            <span class='ivar'>@analyzer</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
         <span class='kw'>rescue</span>
             <span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid URL, probably broken redirection. Ignoring...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-            <span class='id raise'>raise</span>
-        <span class='kw'>end</span>
+            <span class='comment'># raise
+</span>        <span class='kw'>end</span>
 
         <span class='ivar'>@page</span><span class='period'>.</span><span class='id request_headers'>request_headers</span> <span class='op'>=</span> <span class='id res'>res</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id headers'>headers</span>
         <span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span> <span class='op'>=</span> <span class='ivar'>@analyzer</span><span class='period'>.</span><span class='id get_link_vars'>get_link_vars</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id dup'>dup</span>
@@ -866,17 +880,17 @@ Analyzes a response looking for new links, forms and cookies.
       <pre class="lines">
 
 
-72
-73
-74
-75
-76
-77
-78
-79</pre>
+79
+80
+81
+82
+83
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id follow?'>follow?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='ivar'>@analyzer</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span>
@@ -915,17 +929,17 @@ Decodes URLs to reverse multiple encodes and removes NULL characters
       <pre class="lines">
 
 
-63
-64
-65
-66
-67
-68
-69
-70</pre>
+70
+71
+72
+73
+74
+75
+76
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     
@@ -945,7 +959,7 @@ Decodes URLs to reverse multiple encodes and removes NULL characters
 </div>
     
     <div id="footer">
-  Generated on Fri Oct 15 17:34:23 2010 by 
+  Generated on Sun Oct 31 19:02:59 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.9.2).
 </div>
