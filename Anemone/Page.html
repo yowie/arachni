@@ -53,10 +53,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName">Object</span>
+      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li>Object</li>
+          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">Anemone::Page</li>
           
@@ -70,41 +70,359 @@
     
   
     
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="../Arachni/UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></span></dd>
+      
+    
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/anemone/page.rb</dd>
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/anemone/page.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
-<h2>Overview</h2><div class="docstring">
-  <div class="discussion">
-    <p>
-Overides Anemone&#8217;s Page class methods:<br/> o in_domain?( uri ):
-adding support for subdomain crawling<br/>  o links(): adding support for
-frame and iframe src URLs<br/>
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.1
-</p>
 
 
-  </div>
-</div>
-<div class="tags">
   
-</div>
+  
+  
+  
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#body-instance_method" title="#body (instance method)">- (Object) <strong>body</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The raw HTTP response body of the page.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#code-instance_method" title="#code (instance method)">- (Object) <strong>code</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Integer response code of the page.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#data-instance_method" title="#data (instance method)">- (Object) <strong>data</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+OpenStruct for user-stored data.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#depth-instance_method" title="#depth (instance method)">- (Object) <strong>depth</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Depth of this page from the root of the crawl.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#error-instance_method" title="#error (instance method)">- (Object) <strong>error</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Exception object, if one was raised during HTTP#fetch_page.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#headers-instance_method" title="#headers (instance method)">- (Object) <strong>headers</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Headers of the HTTP response.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#redirect_to-instance_method" title="#redirect_to (instance method)">- (Object) <strong>redirect_to</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+URL of the page this one redirected to, if any.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#referer-instance_method" title="#referer (instance method)">- (Object) <strong>referer</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+URL of the page that brought us to this page.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#response_time-instance_method" title="#response_time (instance method)">- (Object) <strong>response_time</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Response time of the request for this page in milliseconds.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#url-instance_method" title="#url (instance method)">- (Object) <strong>url</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The URL of the page.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#visited-instance_method" title="#visited (instance method)">- (Object) <strong>visited</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Boolean indicating whether or not this page has been visited in
+PageStore#shortest_paths!.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
 
 
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_hash-class_method" title="from_hash (class method)">+ (Object) <strong>from_hash</strong>(hash) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
   
     <h2>
       Instance Method Summary
@@ -112,6 +430,120 @@ frame and iframe src URLs<br/>
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#base-instance_method" title="#base (instance method)">- (Object) <strong>base</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#content_type-instance_method" title="#content_type (instance method)">- (Object) <strong>content_type</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The content-type returned by the HTTP request for this page.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cookies-instance_method" title="#cookies (instance method)">- (Object) <strong>cookies</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Array of cookies received with this page as WEBrick::Cookie objects.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dir-instance_method" title="#dir (instance method)">- (Object) <strong>dir</strong>(url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#discard_doc%21-instance_method" title="#discard_doc! (instance method)">- (Object) <strong>discard_doc!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Delete the Nokogiri document and response body to conserve memory.
+</p>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -164,6 +596,56 @@ Extracts the domain from a URI object.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#fetched%3F-instance_method" title="#fetched? (instance method)">- (Boolean) <strong>fetched?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Was the page successfully fetched? <tt>true</tt> if the page was fetched
+with no error, <tt>false</tt> otherwise.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#html%3F-instance_method" title="#html? (instance method)">- (Boolean) <strong>html?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns <tt>true</tt> if the page is a HTML document, returns
+<tt>false</tt> otherwise.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#in_domain%3F-instance_method" title="#in_domain? (instance method)">- (Boolean) <strong>in_domain?</strong>(uri) </a>
     
 
@@ -189,11 +671,35 @@ returns <tt>false</tt> otherwise.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#links-instance_method" title="#links (instance method)">- (Object) <strong>links</strong> </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Page) <strong>initialize</strong>(url, params = {}) </a>
     
 
     
-      (also: #old_links)
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Create a new page.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#links-instance_method" title="#links (instance method)">- (Array&lt;URI&gt;) <strong>links</strong> </a>
+    
+
     
   </span>
   
@@ -205,11 +711,171 @@ returns <tt>false</tt> otherwise.
 
   
     <span class="summary_desc"><div class='inline'><p>
-Array of distinct A tag HREFs and (i)frame SRCs from the page<br/> The
-original links() method takes care of A tags and the added code takes care
-of (i)frame SRCs.
+Array of distinct links to follow.
 </p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#marshal_dump-instance_method" title="#marshal_dump (instance method)">- (Object) <strong>marshal_dump</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#marshal_load-instance_method" title="#marshal_load (instance method)">- (Object) <strong>marshal_load</strong>(ary) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#not_found%3F-instance_method" title="#not_found? (instance method)">- (Boolean) <strong>not_found?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns <tt>true</tt> if the page was not found (returned 404 code),
+returns <tt>false</tt> otherwise.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#redirect%3F-instance_method" title="#redirect? (instance method)">- (Boolean) <strong>redirect?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns <tt>true</tt> if the page is a HTTP redirect, returns
+<tt>false</tt> otherwise.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run_modules-instance_method" title="#run_modules (instance method)">- (Array) <strong>run_modules</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Runs all Spider (path extraction) modules and returns an array of paths.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_absolute-instance_method" title="#to_absolute (instance method)">- (Object) <strong>to_absolute</strong>(link) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Converts relative URL <b>link</b> into an absolute URL based on the
+location of the page.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_hash-instance_method" title="#to_hash (instance method)">- (Object) <strong>to_hash</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -218,15 +884,814 @@ of (i)frame SRCs.
   
 
 
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Arachni/UI/Output.html" title="Arachni::UI::Output (module)">Arachni::UI::Output</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Arachni/UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../Arachni/UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Anemone::Page (class)">Page</a></span></tt>) <strong>initialize</strong>(url, params = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Create a new page
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 88</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@url</span> <span class='op'>=</span> <span class='id url'>url</span>
+  <span class='ivar'>@data</span> <span class='op'>=</span> <span class='const'>OpenStruct</span><span class='period'>.</span><span class='id new'>new</span>
+
+  <span class='ivar'>@code</span> <span class='op'>=</span> <span class='id params'>params</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span>
+  <span class='ivar'>@headers</span> <span class='op'>=</span> <span class='id params'>params</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content-type</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+  <span class='ivar'>@aliases</span> <span class='op'>=</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id params'>params</span><span class='lbracket'>[</span><span class='symbol'>:aka</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id compact'>compact</span>
+  <span class='ivar'>@referer</span> <span class='op'>=</span> <span class='id params'>params</span><span class='lbracket'>[</span><span class='symbol'>:referer</span><span class='rbracket'>]</span>
+  <span class='ivar'>@depth</span> <span class='op'>=</span> <span class='id params'>params</span><span class='lbracket'>[</span><span class='symbol'>:depth</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='int'>0</span>
+  <span class='ivar'>@redirect_to</span> <span class='op'>=</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span><span class='id params'>params</span><span class='lbracket'>[</span><span class='symbol'>:redirect_to</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@response_time</span> <span class='op'>=</span> <span class='id params'>params</span><span class='lbracket'>[</span><span class='symbol'>:response_time</span><span class='rbracket'>]</span>
+  <span class='ivar'>@body</span> <span class='op'>=</span> <span class='id params'>params</span><span class='lbracket'>[</span><span class='symbol'>:body</span><span class='rbracket'>]</span>
+  <span class='ivar'>@error</span> <span class='op'>=</span> <span class='id params'>params</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span>
+
+  <span class='ivar'>@fetched</span> <span class='op'>=</span> <span class='op'>!</span><span class='id params'>params</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id nil?'>nil?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="body-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="body-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>body</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The raw HTTP response body of the page
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id body'>body</span>
+  <span class='ivar'>@body</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="code=-instance_method"></span>
+      <span id="code-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="code-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>code</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Integer response code of the page
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='id code'>code</span>
+  <span class='ivar'>@code</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="data=-instance_method"></span>
+      <span id="data-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="data-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>data</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+OpenStruct for user-stored data
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id data'>data</span>
+  <span class='ivar'>@data</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="depth=-instance_method"></span>
+      <span id="depth-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="depth-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>depth</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Depth of this page from the root of the crawl. This is not necessarily the
+shortest path; use PageStore#shortest_paths! to find that value.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id depth'>depth</span>
+  <span class='ivar'>@depth</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="error-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="error-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>error</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Exception object, if one was raised during HTTP#fetch_page
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id error'>error</span>
+  <span class='ivar'>@error</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="headers-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="headers-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>headers</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Headers of the HTTP response
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id headers'>headers</span>
+  <span class='ivar'>@headers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="redirect_to-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="redirect_to-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>redirect_to</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+URL of the page this one redirected to, if any
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='id redirect_to'>redirect_to</span>
+  <span class='ivar'>@redirect_to</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="referer=-instance_method"></span>
+      <span id="referer-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="referer-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>referer</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+URL of the page that brought us to this page
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id referer'>referer</span>
+  <span class='ivar'>@referer</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="response_time=-instance_method"></span>
+      <span id="response_time-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="response_time-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>response_time</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Response time of the request for this page in milliseconds
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id response_time'>response_time</span>
+  <span class='ivar'>@response_time</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="url-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="url-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>url</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The URL of the page
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id url'>url</span>
+  <span class='ivar'>@url</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="visited=-instance_method"></span>
+      <span id="visited-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="visited-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>visited</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Boolean indicating whether or not this page has been visited in
+PageStore#shortest_paths!
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id visited'>visited</span>
+  <span class='ivar'>@visited</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="from_hash-class_method">
+  
+    + (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>from_hash</strong>(hash) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 314</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id from_hash'>from_hash</span><span class='lparen'>(</span><span class='id hash'>hash</span><span class='rparen'>)</span>
+  <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='const'>URI</span><span class='lparen'>(</span><span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@headers</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span><span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>headers</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@data</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span><span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>data</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@body</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>body</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@links</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>links</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id link'>link</span><span class='op'>|</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id link'>link</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@code</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>code</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@visited</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>visited</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@depth</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>depth</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@referer</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>referer</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@redirect_to</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>redirect_to</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@response_time</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>response_time</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@fetched</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>fetched</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id var'>var</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
+    <span class='id page'>page</span><span class='period'>.</span><span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='id var'>var</span><span class='comma'>,</span> <span class='id value'>value</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id page'>page</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
     
     
       <div class="method_details first">
-  <p class="signature first" id="doc-instance_method">
+  <p class="signature first" id="base-instance_method">
   
-    - (<tt>Object</tt>) <strong>doc</strong> 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>base</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+249
+250
+251
+252
+253
+254
+255
+256</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 249</span>
+
+<span class='kw'>def</span> <span class='id base'>base</span>
+  <span class='kw'>begin</span>
+    <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='id doc'>doc</span><span class='period'>.</span><span class='id search'>search</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>//base[@href]</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id tmp'>tmp</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id dup'>dup</span>
+  <span class='kw'>rescue</span>
+    <span class='kw'>return</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="content_type-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>content_type</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The content-type returned by the HTTP request for this page
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 197</span>
+
+<span class='kw'>def</span> <span class='id content_type'>content_type</span>
+  <span class='id headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content-type</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id first'>first</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="cookies-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>cookies</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Array of cookies received with this page as WEBrick::Cookie objects.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+190
+191
+192</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 190</span>
+
+<span class='kw'>def</span> <span class='id cookies'>cookies</span>
+  <span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id parse_set_cookies'>parse_set_cookies</span><span class='lparen'>(</span><span class='ivar'>@headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Set-Cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>rescue</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="dir-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>dir</strong>(url) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 132</span>
+
+<span class='kw'>def</span> <span class='id dir'>dir</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='const'>URI</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id dirname'>dirname</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="discard_doc!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>discard_doc!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Delete the Nokogiri document and response body to conserve memory
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+174
+175
+176
+177</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 174</span>
+
+<span class='kw'>def</span> <span class='id discard_doc!'>discard_doc!</span>
+  <span class='id links'>links</span> <span class='comment'># force parsing of page links before we trash the document
+</span>  <span class='ivar'>@doc</span> <span class='op'>=</span> <span class='ivar'>@body</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="doc-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>doc</strong> 
   
 
   
@@ -247,19 +1712,17 @@ Nokogiri document for the HTML body
       <pre class="lines">
 
 
-48
-49
-50
-51
-52</pre>
+166
+167
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='id doc'>doc</span>
   <span class='kw'>return</span> <span class='ivar'>@doc</span> <span class='kw'>if</span> <span class='ivar'>@doc</span>
-<span class='comment'>#      @doc = Nokogiri::HTML( @body ) if @body &amp;&amp; html? rescue nil
-</span>  <span class='ivar'>@doc</span> <span class='op'>=</span> <span class='const'>Nokogiri</span><span class='op'>::</span><span class='const'>HTML</span><span class='lparen'>(</span> <span class='ivar'>@body</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@body</span> <span class='kw'>rescue</span> <span class='kw'>nil</span>
+  <span class='ivar'>@doc</span> <span class='op'>=</span> <span class='const'>Nokogiri</span><span class='op'>::</span><span class='const'>HTML</span><span class='lparen'>(</span> <span class='ivar'>@body</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@body</span> <span class='kw'>rescue</span> <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -269,7 +1732,7 @@ Nokogiri document for the HTML body
       <div class="method_details ">
   <p class="signature " id="extract_domain-instance_method">
   
-    - (<tt>String</tt>) <strong>extract_domain</strong>(url) 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>extract_domain</strong>(url) 
   
 
   
@@ -303,7 +1766,7 @@ Extracts the domain from a URI object
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -318,29 +1781,135 @@ Extracts the domain from a URI object
       <pre class="lines">
 
 
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85</pre>
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 279</span>
 
 <span class='kw'>def</span> <span class='id extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 
     <span class='kw'>if</span> <span class='op'>!</span><span class='id url'>url</span><span class='period'>.</span><span class='id host'>host</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>end</span>
-        
+
     <span class='id splits'>splits</span> <span class='op'>=</span> <span class='id url'>url</span><span class='period'>.</span><span class='id host'>host</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span>
 
     <span class='kw'>if</span> <span class='id splits'>splits</span><span class='period'>.</span><span class='id length'>length</span> <span class='op'>==</span> <span class='int'>1</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>end</span>
 
     <span class='id splits'>splits</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id splits'>splits</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="fetched?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>fetched?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Was the page successfully fetched? <tt>true</tt> if the page was fetched
+with no error, <tt>false</tt> otherwise.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+183
+184
+185</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 183</span>
+
+<span class='kw'>def</span> <span class='id fetched?'>fetched?</span>
+  <span class='ivar'>@fetched</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="html?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>html?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns <tt>true</tt> if the page is a HTML document, returns
+<tt>false</tt> otherwise.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+205
+206
+207</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 205</span>
+
+<span class='kw'>def</span> <span class='id html?'>html?</span>
+  <span class='op'>!</span><span class='op'>!</span><span class='lparen'>(</span><span class='id content_type'>content_type</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^(text/html|application/xhtml+xml)\b</span><span class='regexp_end'>}</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -388,16 +1957,16 @@ The added code enables optional subdomain crawling.
       <pre class="lines">
 
 
-61
-62
-63
-64
-65
-66
-67</pre>
+264
+265
+266
+267
+268
+269
+270</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 264</span>
 
 <span class='kw'>def</span> <span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span>
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id follow_subdomains'>follow_subdomains</span> <span class='rparen'>)</span>
@@ -414,20 +1983,357 @@ The added code enables optional subdomain crawling.
       <div class="method_details ">
   <p class="signature " id="links-instance_method">
   
-    - (<tt>Object</tt>) <strong>links</strong> 
+    - (<tt>Array&lt;URI&gt;</tt>) <strong>links</strong> 
   
 
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='old_links-instance_method'>old_links</span></span>
-    </span>
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Array of distinct A tag HREFs and (i)frame SRCs from the page<br/> The
-original links() method takes care of A tags and the added code takes care
-of (i)frame SRCs.
+Array of distinct links to follow
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array&lt;URI&gt;</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 141</span>
+
+<span class='kw'>def</span> <span class='id links'>links</span>
+  <span class='kw'>return</span> <span class='ivar'>@links</span> <span class='kw'>unless</span> <span class='ivar'>@links</span><span class='period'>.</span><span class='id nil?'>nil?</span>
+  <span class='ivar'>@links</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='ivar'>@links</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id doc'>doc</span>
+
+  <span class='id run_modules'>run_modules</span><span class='lparen'>(</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+      <span class='op'>|</span><span class='id path'>path</span><span class='op'>|</span>
+      <span class='kw'>next</span> <span class='kw'>if</span> <span class='id path'>path</span><span class='period'>.</span><span class='id nil?'>nil?</span> <span class='kw'>or</span> <span class='id path'>path</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+      <span class='id abs'>abs</span> <span class='op'>=</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='kw'>rescue</span> <span class='kw'>next</span>
+
+      <span class='kw'>if</span> <span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id abs'>abs</span> <span class='rparen'>)</span>
+          <span class='ivar'>@links</span> <span class='op'>&lt;&lt;</span> <span class='id abs'>abs</span>
+          <span class='comment'># force dir listing
+</span>          <span class='comment'># ap to_absolute( get_path( abs.to_s ).to_s ).to_s
+</span>          <span class='comment'># @links &lt;&lt; to_absolute( dir( abs.to_s ).to_s ) rescue next
+</span>      <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+
+  <span class='ivar'>@links</span><span class='period'>.</span><span class='id uniq!'>uniq!</span>
+  <span class='kw'>return</span> <span class='ivar'>@links</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="marshal_dump-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>marshal_dump</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+291
+292
+293</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 291</span>
+
+<span class='kw'>def</span> <span class='id marshal_dump'>marshal_dump</span>
+  <span class='lbracket'>[</span><span class='ivar'>@url</span><span class='comma'>,</span> <span class='ivar'>@headers</span><span class='comma'>,</span> <span class='ivar'>@data</span><span class='comma'>,</span> <span class='ivar'>@body</span><span class='comma'>,</span> <span class='ivar'>@links</span><span class='comma'>,</span> <span class='ivar'>@code</span><span class='comma'>,</span> <span class='ivar'>@visited</span><span class='comma'>,</span> <span class='ivar'>@depth</span><span class='comma'>,</span> <span class='ivar'>@referer</span><span class='comma'>,</span> <span class='ivar'>@redirect_to</span><span class='comma'>,</span> <span class='ivar'>@response_time</span><span class='comma'>,</span> <span class='ivar'>@fetched</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="marshal_load-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>marshal_load</strong>(ary) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+295
+296
+297</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 295</span>
+
+<span class='kw'>def</span> <span class='id marshal_load'>marshal_load</span><span class='lparen'>(</span><span class='id ary'>ary</span><span class='rparen'>)</span>
+  <span class='ivar'>@url</span><span class='comma'>,</span> <span class='ivar'>@headers</span><span class='comma'>,</span> <span class='ivar'>@data</span><span class='comma'>,</span> <span class='ivar'>@body</span><span class='comma'>,</span> <span class='ivar'>@links</span><span class='comma'>,</span> <span class='ivar'>@code</span><span class='comma'>,</span> <span class='ivar'>@visited</span><span class='comma'>,</span> <span class='ivar'>@depth</span><span class='comma'>,</span> <span class='ivar'>@referer</span><span class='comma'>,</span> <span class='ivar'>@redirect_to</span><span class='comma'>,</span> <span class='ivar'>@response_time</span><span class='comma'>,</span> <span class='ivar'>@fetched</span> <span class='op'>=</span> <span class='id ary'>ary</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="not_found?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>not_found?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns <tt>true</tt> if the page was not found (returned 404 code),
+returns <tt>false</tt> otherwise.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+221
+222
+223</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 221</span>
+
+<span class='kw'>def</span> <span class='id not_found?'>not_found?</span>
+  <span class='int'>404</span> <span class='op'>==</span> <span class='ivar'>@code</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="redirect?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>redirect?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns <tt>true</tt> if the page is a HTTP redirect, returns
+<tt>false</tt> otherwise.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+213
+214
+215</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 213</span>
+
+<span class='kw'>def</span> <span class='id redirect?'>redirect?</span>
+  <span class='lparen'>(</span><span class='int'>300</span><span class='op'>..</span><span class='int'>307</span><span class='rparen'>)</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span><span class='ivar'>@code</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="run_modules-instance_method">
+  
+    - (<tt>Array</tt>) <strong>run_modules</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Runs all Spider (path extraction) modules and returns an array of paths
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+paths
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id run_modules'>run_modules</span>
+    <span class='id opts'>opts</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span>
+    <span class='id require'>require</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id dir'>dir</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lib</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>component_manager</span><span class='tstring_end'>'</span></span>
+
+    <span class='id lib'>lib</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id dir'>dir</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pwd</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>path_extractors/</span><span class='tstring_end'>'</span></span>
+
+
+    <span class='kw'>begin</span>
+        <span class='cvar'>@@manager</span> <span class='op'>||=</span> <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>ComponentManager</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id lib'>lib</span><span class='comma'>,</span> <span class='const'>Extractors</span> <span class='rparen'>)</span>
+
+        <span class='kw'>return</span> <span class='cvar'>@@manager</span><span class='period'>.</span><span class='id available'>available</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id name'>name</span><span class='op'>|</span>
+            <span class='cvar'>@@manager</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id new'>new</span><span class='period'>.</span><span class='id run'>run</span><span class='lparen'>(</span> <span class='id doc'>doc</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span><span class='period'>.</span><span class='id flatten'>flatten</span><span class='period'>.</span><span class='id uniq'>uniq</span>
+
+    <span class='kw'>rescue</span> <span class='op'>::</span><span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+        <span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='id e'>e</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
+        <span class='id print_debug_backtrace'>print_debug_backtrace</span><span class='lparen'>(</span> <span class='id e'>e</span> <span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_absolute-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_absolute</strong>(link) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Converts relative URL <b>link</b> into an absolute URL based on the
+location of the page
 </p>
 
 
@@ -441,37 +2347,97 @@ of (i)frame SRCs.
       <pre class="lines">
 
 
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43</pre>
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 229</span>
 
-<span class='kw'>def</span> <span class='id links'>links</span>
-    <span class='ivar'>@links</span> <span class='op'>=</span> <span class='id old_links'>old_links</span>
-    <span class='kw'>return</span> <span class='ivar'>@links</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id doc'>doc</span>
+<span class='kw'>def</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span><span class='id link'>link</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id link'>link</span><span class='period'>.</span><span class='id nil?'>nil?</span>
+
+  <span class='comment'># remove anchor
+</span>  <span class='id link'>link</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span><span class='id link'>link</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>#[a-zA-Z0-9_-]*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id url'>url</span> <span class='op'>=</span> <span class='id base'>base</span>
+    <span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id url'>url</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id dup'>dup</span>
+  <span class='kw'>end</span>
+
+  <span class='id relative'>relative</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id link'>link</span><span class='rparen'>)</span>
+  <span class='id absolute'>absolute</span> <span class='op'>=</span> <span class='id base_url'>base_url</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span><span class='id relative'>relative</span><span class='rparen'>)</span>
+
+  <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id path'>path</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+
+  <span class='kw'>return</span> <span class='id absolute'>absolute</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
-    <span class='id doc'>doc</span><span class='period'>.</span><span class='id css'>css</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>frame</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>iframe</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id a'>a</span><span class='op'>|</span>
-        <span class='id u'>u</span> <span class='op'>=</span> <span class='id a'>a</span><span class='period'>.</span><span class='id attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>src</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id content'>content</span> <span class='kw'>rescue</span> <span class='kw'>nil</span>
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id u'>u</span><span class='period'>.</span><span class='id nil?'>nil?</span> <span class='kw'>or</span> <span class='id u'>u</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-        <span class='id abs'>abs</span> <span class='op'>=</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span><span class='const'>URI</span><span class='lparen'>(</span><span class='id u'>u</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>rescue</span> <span class='kw'>next</span>
-        <span class='ivar'>@links</span> <span class='op'>&lt;&lt;</span> <span class='id abs'>abs</span> <span class='kw'>if</span> <span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span><span class='id abs'>abs</span><span class='rparen'>)</span>
-    <span class='kw'>end</span>
-    
-    <span class='ivar'>@links</span><span class='period'>.</span><span class='id uniq!'>uniq!</span>
-    <span class='ivar'>@links</span>
+      <div class="method_details ">
+  <p class="signature " id="to_hash-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_hash</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page.rb', line 299</span>
+
+<span class='kw'>def</span> <span class='id to_hash'>to_hash</span>
+  <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>headers</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span><span class='ivar'>@headers</span><span class='rparen'>)</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>data</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span><span class='ivar'>@data</span><span class='rparen'>)</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>body</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@body</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>links</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id links'>links</span><span class='period'>.</span><span class='id map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>code</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@code</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>visited</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@visited</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>depth</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@depth</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>referer</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@referer</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>redirect_to</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@redirect_to</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>response_time</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@response_time</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>fetched</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@fetched</span><span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -483,9 +2449,9 @@ of (i)frame SRCs.
 </div>
     
     <div id="footer">
-  Generated on Sun Oct 31 19:21:40 2010 by 
+  Generated on Wed Nov 24 17:28:21 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.1 (ruby-1.9.2).
+  0.6.2 (ruby-1.9.2).
 </div>
 
   </body>

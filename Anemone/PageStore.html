@@ -1,0 +1,1107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Anemone::PageStore</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (P)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../Anemone.html" title="Anemone (module)">Anemone</a></span></span>
+     &raquo; 
+    <span class="title">PageStore</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Anemone::PageStore
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Anemone::PageStore</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+      <dt class="r2">Extended by:</dt>
+      <dd class="r2">Forwardable</dd>
+      
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/anemone/page_store.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+  
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Object) <strong>[]</strong>(index) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+We typically index the hash with a URI, but convert it to a String for
+easier retrieval.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong>(index, other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete-instance_method" title="#delete (instance method)">- (Object) <strong>delete</strong>(key) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_value-instance_method" title="#each_value (instance method)">- (Object) <strong>each_value</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_key%3F-instance_method" title="#has_key? (instance method)">- (Boolean) <strong>has_key?</strong>(key) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_page%3F-instance_method" title="#has_page? (instance method)">- (Boolean) <strong>has_page?</strong>(url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Does this PageStore contain the specified URL? HTTP and HTTPS versions of a
+URL are considered to be the same page.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (PageStore) <strong>initialize</strong>(storage = {}) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of PageStore.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pages_linking_to-instance_method" title="#pages_linking_to (instance method)">- (Object) <strong>pages_linking_to</strong>(urls) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+If given a single URL (as a String or URI), returns an Array of Pages which
+link to that URL If given an Array of URLs, returns a Hash (URI => [Page,
+Page&#8230;]) of Pages linking to those URLs.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shortest_paths%21-instance_method" title="#shortest_paths! (instance method)">- (Object) <strong>shortest_paths!</strong>(root) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Use a breadth-first search to calculate the single-source shortest paths
+from <b>root</b> to all pages in the PageStore.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#touch_key-instance_method" title="#touch_key (instance method)">- (Object) <strong>touch_key</strong>(key) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#touch_keys-instance_method" title="#touch_keys (instance method)">- (Object) <strong>touch_keys</strong>(keys) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#uniq%21-instance_method" title="#uniq! (instance method)">- (Object) <strong>uniq!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Removes all Pages from storage where redirect? is true.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#urls_linking_to-instance_method" title="#urls_linking_to (instance method)">- (Object) <strong>urls_linking_to</strong>(urls) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+If given a single URL (as a String or URI), returns an Array of URLs which
+link to that URL If given an Array of URLs, returns a Hash (URI => [URI,
+URI&#8230;]) of URLs linking to those URLs.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#values-instance_method" title="#values (instance method)">- (Object) <strong>values</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Anemone::PageStore (class)">PageStore</a></span></tt>) <strong>initialize</strong>(storage = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of PageStore
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id storage'>storage</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@storage</span> <span class='op'>=</span> <span class='id storage'>storage</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="[]-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>[]</strong>(index) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+We typically index the hash with a URI, but convert it to a String for
+easier retrieval
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id index'>index</span><span class='rparen'>)</span>
+  <span class='ivar'>@storage</span><span class='lbracket'>[</span><span class='id index'>index</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="[]=-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>[]=</strong>(index, other) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span><span class='id index'>index</span><span class='comma'>,</span> <span class='id other'>other</span><span class='rparen'>)</span>
+  <span class='ivar'>@storage</span><span class='lbracket'>[</span><span class='id index'>index</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id other'>other</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="delete-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>delete</strong>(key) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id delete'>delete</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span>
+  <span class='ivar'>@storage</span><span class='period'>.</span><span class='id delete'>delete</span> <span class='id key'>key</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="each_value-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>each_value</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id each_value'>each_value</span>
+  <span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id key'>key</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span> <span class='kw'>yield</span> <span class='id value'>value</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="has_key?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>has_key?</strong>(key) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id has_key?'>has_key?</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span>
+  <span class='ivar'>@storage</span><span class='period'>.</span><span class='id has_key?'>has_key?</span> <span class='id key'>key</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="has_page?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>has_page?</strong>(url) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Does this PageStore contain the specified URL? HTTP and HTTPS versions of a
+URL are considered to be the same page.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id has_page?'>has_page?</span><span class='lparen'>(</span><span class='id url'>url</span><span class='rparen'>)</span>
+  <span class='id schemes'>schemes</span> <span class='op'>=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>http</span><span class='words_sep'> </span><span class='tstring_content'>https</span><span class='words_sep'>)</span>
+  <span class='kw'>if</span> <span class='id schemes'>schemes</span><span class='period'>.</span><span class='id include?'>include?</span> <span class='id url'>url</span><span class='period'>.</span><span class='id scheme'>scheme</span>
+    <span class='id u'>u</span> <span class='op'>=</span> <span class='id url'>url</span><span class='period'>.</span><span class='id dup'>dup</span>
+    <span class='kw'>return</span> <span class='id schemes'>schemes</span><span class='period'>.</span><span class='id any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id s'>s</span><span class='op'>|</span> <span class='id u'>u</span><span class='period'>.</span><span class='id scheme'>scheme</span> <span class='op'>=</span> <span class='id s'>s</span><span class='semicolon'>;</span> <span class='id has_key?'>has_key?</span><span class='lparen'>(</span><span class='id u'>u</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+
+  <span class='id has_key?'>has_key?</span> <span class='id url'>url</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="pages_linking_to-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>pages_linking_to</strong>(urls) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+If given a single URL (as a String or URI), returns an Array of Pages which
+link to that URL If given an Array of URLs, returns a Hash (URI => [Page,
+Page&#8230;]) of Pages linking to those URLs
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id pages_linking_to'>pages_linking_to</span><span class='lparen'>(</span><span class='id urls'>urls</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id urls'>urls</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+    <span class='id urls'>urls</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id urls'>urls</span><span class='rbracket'>]</span>
+    <span class='id single'>single</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+
+  <span class='id urls'>urls</span><span class='period'>.</span><span class='id map!'>map!</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id url'>url</span><span class='op'>|</span>
+    <span class='kw'>unless</span> <span class='id url'>url</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>URI</span><span class='rparen'>)</span>
+      <span class='const'>URI</span><span class='lparen'>(</span><span class='id url'>url</span><span class='rparen'>)</span> <span class='kw'>rescue</span> <span class='kw'>nil</span>
+    <span class='kw'>else</span>
+      <span class='id url'>url</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id urls'>urls</span><span class='period'>.</span><span class='id compact'>compact</span>
+
+  <span class='id links'>links</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id urls'>urls</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id url'>url</span><span class='op'>|</span> <span class='id links'>links</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+  <span class='id values'>values</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id page'>page</span><span class='op'>|</span>
+    <span class='id urls'>urls</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id url'>url</span><span class='op'>|</span> <span class='id links'>links</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id page'>page</span> <span class='kw'>if</span> <span class='id page'>page</span><span class='period'>.</span><span class='id links'>links</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span><span class='id url'>url</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id single'>single</span> <span class='kw'>and</span> <span class='op'>!</span><span class='id links'>links</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+    <span class='kw'>return</span> <span class='id links'>links</span><span class='lbracket'>[</span><span class='id urls'>urls</span><span class='period'>.</span><span class='id first'>first</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='id links'>links</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shortest_paths!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>shortest_paths!</strong>(root) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Use a breadth-first search to calculate the single-source shortest paths
+from <b>root</b> to all pages in the PageStore
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id shortest_paths!'>shortest_paths!</span><span class='lparen'>(</span><span class='id root'>root</span><span class='rparen'>)</span>
+  <span class='id root'>root</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id root'>root</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id root'>root</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Root node not found</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='op'>!</span><span class='id has_key?'>has_key?</span><span class='lparen'>(</span><span class='id root'>root</span><span class='rparen'>)</span>
+
+  <span class='id q'>q</span> <span class='op'>=</span> <span class='const'>Queue</span><span class='period'>.</span><span class='id new'>new</span>
+
+  <span class='id q'>q</span><span class='period'>.</span><span class='id enq'>enq</span> <span class='id root'>root</span>
+  <span class='id root_page'>root_page</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id root'>root</span><span class='rbracket'>]</span>
+  <span class='id root_page'>root_page</span><span class='period'>.</span><span class='id depth'>depth</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id root_page'>root_page</span><span class='period'>.</span><span class='id visited'>visited</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='id root'>root</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id root_page'>root_page</span>
+  <span class='kw'>while</span> <span class='op'>!</span><span class='id q'>q</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+    <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id q'>q</span><span class='period'>.</span><span class='id deq'>deq</span><span class='rbracket'>]</span>
+    <span class='id page'>page</span><span class='period'>.</span><span class='id links'>links</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id u'>u</span><span class='op'>|</span>
+      <span class='kw'>begin</span>
+        <span class='id link'>link</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id u'>u</span><span class='rbracket'>]</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id link'>link</span><span class='period'>.</span><span class='id nil?'>nil?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id link'>link</span><span class='period'>.</span><span class='id fetched?'>fetched?</span> <span class='op'>||</span> <span class='id link'>link</span><span class='period'>.</span><span class='id visited'>visited</span>
+
+        <span class='id q'>q</span> <span class='op'>&lt;&lt;</span> <span class='id u'>u</span> <span class='kw'>unless</span> <span class='id link'>link</span><span class='period'>.</span><span class='id redirect?'>redirect?</span>
+        <span class='id link'>link</span><span class='period'>.</span><span class='id visited'>visited</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='id link'>link</span><span class='period'>.</span><span class='id depth'>depth</span> <span class='op'>=</span> <span class='id page'>page</span><span class='period'>.</span><span class='id depth'>depth</span> <span class='op'>+</span> <span class='int'>1</span>
+        <span class='kw'>self</span><span class='lbracket'>[</span><span class='id u'>u</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id link'>link</span>
+
+        <span class='kw'>if</span> <span class='id link'>link</span><span class='period'>.</span><span class='id redirect?'>redirect?</span>
+          <span class='id u'>u</span> <span class='op'>=</span> <span class='id link'>link</span><span class='period'>.</span><span class='id redirect_to'>redirect_to</span>
+          <span class='kw'>redo</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="touch_key-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>touch_key</strong>(key) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id touch_key'>touch_key</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Page</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="touch_keys-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>touch_keys</strong>(keys) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 45</span>
+
+<span class='kw'>def</span> <span class='id touch_keys'>touch_keys</span><span class='lparen'>(</span><span class='id keys'>keys</span><span class='rparen'>)</span>
+  <span class='ivar'>@storage</span><span class='period'>.</span><span class='id merge!'>merge!</span> <span class='id keys'>keys</span><span class='period'>.</span><span class='id inject'>inject</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id h'>h</span><span class='comma'>,</span> <span class='id k'>k</span><span class='op'>|</span> <span class='id h'>h</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Page</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id k'>k</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='id h'>h</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="uniq!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>uniq!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Removes all Pages from storage where redirect? is true
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104
+105</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id uniq!'>uniq!</span>
+  <span class='id each_value'>each_value</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id page'>page</span><span class='op'>|</span> <span class='id delete'>delete</span> <span class='id page'>page</span><span class='period'>.</span><span class='id url'>url</span> <span class='kw'>if</span> <span class='id page'>page</span><span class='period'>.</span><span class='id redirect?'>redirect?</span> <span class='rbrace'>}</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="urls_linking_to-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>urls_linking_to</strong>(urls) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+If given a single URL (as a String or URI), returns an Array of URLs which
+link to that URL If given an Array of URLs, returns a Hash (URI => [URI,
+URI&#8230;]) of URLs linking to those URLs
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 143</span>
+
+<span class='kw'>def</span> <span class='id urls_linking_to'>urls_linking_to</span><span class='lparen'>(</span><span class='id urls'>urls</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id urls'>urls</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+    <span class='id urls'>urls</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id urls'>urls</span><span class='rbracket'>]</span> <span class='kw'>unless</span> <span class='id urls'>urls</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+    <span class='id single'>single</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+
+  <span class='id links'>links</span> <span class='op'>=</span> <span class='id pages_linking_to'>pages_linking_to</span><span class='lparen'>(</span><span class='id urls'>urls</span><span class='rparen'>)</span>
+  <span class='id links'>links</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id pages'>pages</span><span class='op'>|</span> <span class='id links'>links</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id pages'>pages</span><span class='period'>.</span><span class='id map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id p'>p</span><span class='op'>|</span> <span class='id p'>p</span><span class='period'>.</span><span class='id url'>url</span><span class='rbrace'>}</span> <span class='rbrace'>}</span>
+
+  <span class='kw'>if</span> <span class='id single'>single</span> <span class='kw'>and</span> <span class='op'>!</span><span class='id links'>links</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+    <span class='kw'>return</span> <span class='id links'>links</span><span class='lbracket'>[</span><span class='id urls'>urls</span><span class='period'>.</span><span class='id first'>first</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='id links'>links</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="values-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>values</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/anemone/page_store.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id values'>values</span>
+  <span class='id result'>result</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id key'>key</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span> <span class='id result'>result</span> <span class='op'>&lt;&lt;</span> <span class='id value'>value</span> <span class='rbrace'>}</span>
+  <span class='id result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Nov 24 17:28:23 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.2 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

@@ -59,34 +59,131 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">reports/ap.rb<span class="defines">,<br />
-  reports/txt.rb,<br /> reports/xml.rb,<br /> reports/html.rb,<br /> reports/stdout.rb</span>
+    <dd class="r1 last">lib/report/manager.rb<span class="defines">,<br />
+  reports/ap.rb,<br /> reports/afr.rb,<br /> reports/xml.rb,<br /> reports/txt.rb,<br /> reports/html.rb,<br /> reports/stdout.rb,<br /> reports/metareport.rb</span>
 </dd>
   
 </dl>
 <div class="clear"></div>
 
-<h2>Defined Under Namespace</h2>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+The namespace under which all modules exist
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><h2>Defined Under Namespace</h2>
 <p class="children">
    
     
    
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Reports/AP.html" title="Arachni::Reports::AP (class)">AP</a></span>, <span class='object_link'><a href="Reports/HTML.html" title="Arachni::Reports::HTML (class)">HTML</a></span>, <span class='object_link'><a href="Reports/Stdout.html" title="Arachni::Reports::Stdout (class)">Stdout</a></span>, <span class='object_link'><a href="Reports/Text.html" title="Arachni::Reports::Text (class)">Text</a></span>, <span class='object_link'><a href="Reports/XML.html" title="Arachni::Reports::XML (class)">XML</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Reports/AFR.html" title="Arachni::Reports::AFR (class)">AFR</a></span>, <span class='object_link'><a href="Reports/AP.html" title="Arachni::Reports::AP (class)">AP</a></span>, <span class='object_link'><a href="Reports/HTML.html" title="Arachni::Reports::HTML (class)">HTML</a></span>, <span class='object_link'><a href="Reports/Metareport.html" title="Arachni::Reports::Metareport (class)">Metareport</a></span>, <span class='object_link'><a href="Reports/Stdout.html" title="Arachni::Reports::Stdout (class)">Stdout</a></span>, <span class='object_link'><a href="Reports/Text.html" title="Arachni::Reports::Text (class)">Text</a></span>, <span class='object_link'><a href="Reports/XML.html" title="Arachni::Reports::XML (class)">XML</a></span>
     
   
 </p>
 
 
 
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset-class_method" title="reset (class method)">+ (Object) <strong>reset</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Resets the namespace unloading all module classes.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="reset-class_method">
+  
+    + (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>reset</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Resets the namespace unloading all module classes
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/report/manager.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id reset'>reset</span>
+    <span class='id constants'>constants</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id const'>const</span><span class='op'>|</span>
+        <span class='id remove_const'>remove_const</span><span class='lparen'>(</span> <span class='id const'>const</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
     
     <div id="footer">
-  Generated on Sun Oct 31 19:21:39 2010 by 
+  Generated on Wed Nov 24 17:28:19 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.1 (ruby-1.9.2).
+  0.6.2 (ruby-1.9.2).
 </div>
 
   </body>

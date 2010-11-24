@@ -55,15 +55,19 @@
     
   
     
-  
-  
-    <dt class="r1">Included in:</dt>
-    <dd class="r1"><span class='object_link'><a href="Trainer.html" title="Arachni::Module::Trainer (class)">Trainer</a></span></dd>
+      <dt class="r1">Includes:</dt>
+      <dd class="r1"><span class='object_link'><a href="Utilities.html" title="Arachni::Module::Utilities (module)">Utilities</a></span></dd>
+      
     
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/module/element_db.rb</dd>
+    <dt class="r2">Included in:</dt>
+    <dd class="r2"><span class='object_link'><a href="Trainer.html" title="Arachni::Module::Trainer (class)">Trainer</a></span></dd>
+    
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/module/element_db.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -88,7 +92,7 @@ For each page that is audited the database is reset.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.2
+@version: 0.2.1
 </p>
 
 
@@ -98,6 +102,10 @@ For each page that is audited the database is reset.
   
 </div>
 
+  
+  
+  
+  
 
   
     <h2>
@@ -106,31 +114,6 @@ For each page that is audited the database is reset.
     </h2>
 
     <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#form_id-instance_method" title="#form_id (instance method)">- (Object) <strong>form_id</strong>(form) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Returns a form ID string disregarding the values of their input
-fields.<br/> Used to compare forms in <span class='object_link'><a href="#update_forms-instance_method" title="Arachni::Module::ElementDB#update_forms (method)">ElementDB#update_forms</a></span>.
-</p>
-</div></span>
-  
-</li>
-
       
         <li class="public ">
   <span class="summary_signature">
@@ -200,48 +183,6 @@ Initializes @@forms with the cookies found during the crawl/analysis.
 Initializes @@links with the links found during the crawl/analysis.
 </p>
 </div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#init_seed-instance_method" title="#init_seed (instance method)">- (Object) <strong>init_seed</strong>(seed) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#seed-instance_method" title="#seed (instance method)">- (Object) <strong>seed</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -325,90 +266,25 @@ analyzing the HTTP responses during the audit.
   
 
 
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Utilities.html" title="Arachni::Module::Utilities (module)">Utilities</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
     
     
       <div class="method_details first">
-  <p class="signature first" id="form_id-instance_method">
+  <p class="signature first" id="init_cookies-instance_method">
   
-    - (<tt>Object</tt>) <strong>form_id</strong>(form) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Returns a form ID string disregarding the values of their input
-fields.<br/> Used to compare forms in <span class='object_link'><a href="#update_forms-instance_method" title="Arachni::Module::ElementDB#update_forms (method)">#update_forms</a></span>.
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-        <span class='name'>form</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 205</span>
-
-<span class='kw'>def</span> <span class='id form_id'>form_id</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
-  
-    <span class='id cform'>cform</span> <span class='op'>=</span> <span class='id form'>form</span><span class='period'>.</span><span class='id dup'>dup</span>
-    <span class='id id'>id</span>    <span class='op'>=</span> <span class='id cform'>cform</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_s'>to_s</span>
-    
-    <span class='id cform'>cform</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span>
-        <span class='id citem'>citem</span> <span class='op'>=</span> <span class='id item'>item</span><span class='period'>.</span><span class='id clone'>clone</span>
-        <span class='id citem'>citem</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-        <span class='id id'>id</span> <span class='op'>+=</span>  <span class='id citem'>citem</span><span class='period'>.</span><span class='id to_s'>to_s</span>
-    <span class='rbrace'>}</span>
-    <span class='kw'>return</span> <span class='id id'>id</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="init_cookies-instance_method">
-  
-    - (<tt>Object</tt>) <strong>init_cookies</strong>(cookies) 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>init_cookies</strong>(cookies) 
   
 
   
@@ -429,21 +305,21 @@ Initializes @@cookies with the cookies found during the crawl/analysis
       <pre class="lines">
 
 
-83
-84
-85
-86
-87
-88
-89
-90</pre>
+62
+63
+64
+65
+66
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 83</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id init_cookies'>init_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
   <span class='cvar'>@@cookies</span> <span class='op'>=</span> <span class='id cookies'>cookies</span>
-  
+
   <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id init_headers'>init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
   <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='id get_cookies_simple'>get_cookies_simple</span><span class='lparen'>(</span> <span class='cvar'>@@cookies</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
   <span class='ivar'>@http</span><span class='period'>.</span><span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
@@ -457,7 +333,7 @@ Initializes @@cookies with the cookies found during the crawl/analysis
       <div class="method_details ">
   <p class="signature " id="init_forms-instance_method">
   
-    - (<tt>Object</tt>) <strong>init_forms</strong>(forms) 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>init_forms</strong>(forms) 
   
 
   
@@ -478,12 +354,12 @@ Initializes @@forms with the cookies found during the crawl/analysis
       <pre class="lines">
 
 
-69
-70
-71</pre>
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id init_forms'>init_forms</span><span class='lparen'>(</span> <span class='id forms'>forms</span> <span class='rparen'>)</span>
   <span class='cvar'>@@forms</span> <span class='op'>=</span> <span class='id forms'>forms</span>
@@ -496,7 +372,7 @@ Initializes @@forms with the cookies found during the crawl/analysis
       <div class="method_details ">
   <p class="signature " id="init_links-instance_method">
   
-    - (<tt>Object</tt>) <strong>init_links</strong>(links) 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>init_links</strong>(links) 
   
 
   
@@ -517,12 +393,12 @@ Initializes @@links with the links found during the crawl/analysis
       <pre class="lines">
 
 
-76
-77
-78</pre>
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id init_links'>init_links</span><span class='lparen'>(</span> <span class='id links'>links</span> <span class='rparen'>)</span>
   <span class='cvar'>@@links</span> <span class='op'>=</span> <span class='id links'>links</span>
@@ -533,65 +409,9 @@ Initializes @@links with the links found during the crawl/analysis
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="init_seed-instance_method">
-  
-    - (<tt>Object</tt>) <strong>init_seed</strong>(seed) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-58
-59
-60</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 58</span>
-
-<span class='kw'>def</span> <span class='id init_seed'>init_seed</span><span class='lparen'>(</span> <span class='id seed'>seed</span> <span class='rparen'>)</span>
-    <span class='cvar'>@@seed</span> <span class='op'>=</span> <span class='id seed'>seed</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="seed-instance_method">
-  
-    - (<tt>Object</tt>) <strong>seed</strong> 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-62
-63
-64</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 62</span>
-
-<span class='kw'>def</span> <span class='id seed'>seed</span>
-  <span class='kw'>return</span> <span class='cvar'>@@seed</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <p class="signature " id="update_cookies-instance_method">
   
-    - (<tt>Object</tt>) <strong>update_cookies</strong>(cookies) 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>update_cookies</strong>(cookies) 
   
 
   
@@ -611,18 +431,12 @@ after analyzing the HTTP responses during the audit.
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
+        <span class='type'>(<tt>Array&lt;Element::Cookie&gt;</tt>)</span>
       
       
         <span class='name'>cookies</span>
       
       
-      
-        &mdash;
-        <div class='inline'><p>
-the return object of <span class='object_link'><a href="../Analyzer.html#get_cookies-instance_method" title="Arachni::Analyzer#get_cookies (method)">Analyzer#get_cookies</a></span>
-</p>
-</div>
       
     </li>
   
@@ -634,85 +448,71 @@ the return object of <span class='object_link'><a href="../Analyzer.html#get_coo
       <pre class="lines">
 
 
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
 160
 161
 162
 163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197</pre>
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 134</span>
 
 <span class='kw'>def</span> <span class='id update_cookies'>update_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
-        
+
     <span class='id cookie_cnt'>cookie_cnt</span> <span class='op'>=</span> <span class='int'>0</span>
     <span class='ivar'>@new_cookies</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    
-    <span class='comment'># @@cookie_mutex.synchronize {
-</span>        <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
-            
-            <span class='cvar'>@@cookies</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
-                <span class='op'>|</span><span class='id page_cookie'>page_cookie</span><span class='comma'>,</span> <span class='id i'>i</span><span class='op'>|</span>
 
-                <span class='kw'>if</span><span class='lparen'>(</span> <span class='id page_cookie'>page_cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id cookie'>cookie</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-                    <span class='cvar'>@@cookies</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id cookie'>cookie</span>
-                <span class='kw'>else</span>
-                    <span class='ivar'>@new_cookies</span> <span class='op'>&lt;&lt;</span> <span class='id cookie'>cookie</span>
-                    <span class='id cookie_cnt'>cookie_cnt</span> <span class='op'>+=</span> <span class='int'>1</span>
-                <span class='kw'>end</span>
-            <span class='rbrace'>}</span>
+    <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
 
+        <span class='cvar'>@@cookies</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id page_cookie'>page_cookie</span><span class='comma'>,</span> <span class='id i'>i</span><span class='op'>|</span>
+
+            <span class='kw'>if</span><span class='lparen'>(</span> <span class='id page_cookie'>page_cookie</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+                <span class='cvar'>@@cookies</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id cookie'>cookie</span>
+            <span class='kw'>else</span>
+                <span class='ivar'>@new_cookies</span> <span class='op'>&lt;&lt;</span> <span class='id cookie'>cookie</span>
+                <span class='id cookie_cnt'>cookie_cnt</span> <span class='op'>+=</span> <span class='int'>1</span>
+            <span class='kw'>end</span>
         <span class='rbrace'>}</span>
-        
-        <span class='cvar'>@@cookies</span><span class='period'>.</span><span class='id flatten!'>flatten!</span>
-        
-        <span class='cvar'>@@cookies</span> <span class='op'>|=</span> <span class='ivar'>@new_cookies</span>
-        
-        <span class='comment'># if( @@cookies.length == 0 )
-</span>        <span class='comment'>#     @@cookies = new_cookies = cookies
-</span>        <span class='comment'># end
-</span>
-        <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id init_headers'>init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-        <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='id get_cookies_simple'>get_cookies_simple</span><span class='lparen'>(</span> <span class='cvar'>@@cookies</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
-        
-        <span class='ivar'>@http</span><span class='period'>.</span><span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
-    <span class='comment'># }
-</span>    <span class='kw'>return</span> <span class='lbracket'>[</span> <span class='cvar'>@@cookies</span><span class='comma'>,</span> <span class='id cookie_cnt'>cookie_cnt</span> <span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+
+    <span class='cvar'>@@cookies</span><span class='period'>.</span><span class='id flatten!'>flatten!</span>
+
+    <span class='cvar'>@@cookies</span> <span class='op'>|=</span> <span class='ivar'>@new_cookies</span>
+
+    <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id init_headers'>init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+    <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='id get_cookies_simple'>get_cookies_simple</span><span class='lparen'>(</span> <span class='cvar'>@@cookies</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
+
+    <span class='ivar'>@http</span><span class='period'>.</span><span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='lbracket'>[</span> <span class='cvar'>@@cookies</span><span class='comma'>,</span> <span class='id cookie_cnt'>cookie_cnt</span> <span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -722,7 +522,7 @@ the return object of <span class='object_link'><a href="../Analyzer.html#get_coo
       <div class="method_details ">
   <p class="signature " id="update_forms-instance_method">
   
-    - (<tt>Object</tt>) <strong>update_forms</strong>(forms) 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>update_forms</strong>(forms) 
   
 
   
@@ -742,18 +542,12 @@ analyzing the HTTP responses during the audit.
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
+        <span class='type'>(<tt>Array&lt;Element::Form&gt;</tt>)</span>
       
       
         <span class='name'>forms</span>
       
       
-      
-        &mdash;
-        <div class='inline'><p>
-the return object of <span class='object_link'><a href="../Analyzer.html#get_forms-instance_method" title="Arachni::Analyzer#get_forms (method)">Analyzer#get_forms</a></span>
-</p>
-</div>
       
     </li>
   
@@ -765,59 +559,55 @@ the return object of <span class='object_link'><a href="../Analyzer.html#get_for
       <pre class="lines">
 
 
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
 98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122</pre>
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id update_forms'>update_forms</span><span class='lparen'>(</span> <span class='id forms'>forms</span> <span class='rparen'>)</span>
-    
+
     <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id forms'>forms</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
-    
+
     <span class='id form_cnt'>form_cnt</span> <span class='op'>=</span> <span class='int'>0</span>
     <span class='ivar'>@new_forms</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='comment'># @@form_mutex.synchronize {
-</span>      
-        <span class='id forms'>forms</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span>
-            
-            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id form'>form</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='cvar'>@@seed</span> <span class='rparen'>)</span>
-            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id form'>form</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
-        
-            <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id index'>index</span> <span class='op'>=</span> <span class='id forms_include?'>forms_include?</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-                <span class='cvar'>@@forms</span> <span class='op'>&lt;&lt;</span> <span class='id form'>form</span>
-                <span class='ivar'>@new_forms</span> <span class='op'>&lt;&lt;</span> <span class='id form'>form</span>
-                <span class='id form_cnt'>form_cnt</span> <span class='op'>+=</span> <span class='int'>1</span> 
-            <span class='kw'>end</span>
-        
-        <span class='rbrace'>}</span>
-    <span class='comment'># }
-</span>    <span class='kw'>return</span> <span class='ivar'>@new_forms</span><span class='comma'>,</span> <span class='id form_cnt'>form_cnt</span>
-    
+
+    <span class='id forms'>forms</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span>
+
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id form'>form</span><span class='period'>.</span><span class='id action'>action</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id seed'>seed</span> <span class='rparen'>)</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id form'>form</span><span class='period'>.</span><span class='id auditable'>auditable</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
+
+        <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id index'>index</span> <span class='op'>=</span> <span class='id forms_include?'>forms_include?</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+            <span class='cvar'>@@forms</span> <span class='op'>&lt;&lt;</span> <span class='id form'>form</span>
+            <span class='ivar'>@new_forms</span> <span class='op'>&lt;&lt;</span> <span class='id form'>form</span>
+            <span class='id form_cnt'>form_cnt</span> <span class='op'>+=</span> <span class='int'>1</span>
+        <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
+
+    <span class='kw'>return</span> <span class='ivar'>@new_forms</span><span class='comma'>,</span> <span class='id form_cnt'>form_cnt</span>
+
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -827,7 +617,7 @@ the return object of <span class='object_link'><a href="../Analyzer.html#get_for
       <div class="method_details ">
   <p class="signature " id="update_links-instance_method">
   
-    - (<tt>Object</tt>) <strong>update_links</strong>(links) 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>update_links</strong>(links) 
   
 
   
@@ -847,18 +637,12 @@ analyzing the HTTP responses during the audit.
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
+        <span class='type'>(<tt>Array&lt;Element::Link&gt;</tt>)</span>
       
       
         <span class='name'>links</span>
       
       
-      
-        &mdash;
-        <div class='inline'><p>
-the return object of <span class='object_link'><a href="../Analyzer.html#get_links-instance_method" title="Arachni::Analyzer#get_links (method)">Analyzer#get_links</a></span>
-</p>
-</div>
       
     </li>
   
@@ -870,56 +654,50 @@ the return object of <span class='object_link'><a href="../Analyzer.html#get_lin
       <pre class="lines">
 
 
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152</pre>
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id update_links'>update_links</span><span class='lparen'>(</span> <span class='id links'>links</span> <span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id links'>links</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
-  
+
   <span class='id link_cnt'>link_cnt</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='ivar'>@new_links</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='comment'># @@link_mutex.synchronize {
-</span>      <span class='id links'>links</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-          <span class='op'>|</span><span class='id link'>link</span><span class='op'>|</span>
-          
-          <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id link'>link</span>
-          <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-          <span class='kw'>next</span> <span class='kw'>if</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='cvar'>@@seed</span> <span class='rparen'>)</span>
-          
-          <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='cvar'>@@links</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-              <span class='cvar'>@@links</span> <span class='op'>&lt;&lt;</span> <span class='id link'>link</span>
-              <span class='ivar'>@new_links</span> <span class='op'>&lt;&lt;</span> <span class='id link'>link</span>
-              <span class='id link_cnt'>link_cnt</span> <span class='op'>+=</span> <span class='int'>1</span>
-          <span class='kw'>end</span>
-      <span class='rbrace'>}</span>
-      
-      <span class='kw'>return</span> <span class='ivar'>@new_links</span><span class='comma'>,</span> <span class='id link_cnt'>link_cnt</span>
-  <span class='comment'># }
-</span><span class='kw'>end</span></pre>
+  <span class='id links'>links</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+      <span class='op'>|</span><span class='id link'>link</span><span class='op'>|</span>
+
+      <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id link'>link</span>
+      <span class='kw'>next</span> <span class='kw'>if</span> <span class='id link'>link</span><span class='period'>.</span><span class='id action'>action</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id seed'>seed</span> <span class='rparen'>)</span>
+
+      <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id index'>index</span> <span class='op'>=</span> <span class='id links_include?'>links_include?</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+          <span class='cvar'>@@links</span>    <span class='op'>&lt;&lt;</span> <span class='id link'>link</span>
+          <span class='ivar'>@new_links</span> <span class='op'>&lt;&lt;</span> <span class='id link'>link</span>
+          <span class='id link_cnt'>link_cnt</span> <span class='op'>+=</span> <span class='int'>1</span>
+      <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+
+  <span class='kw'>return</span> <span class='ivar'>@new_links</span><span class='comma'>,</span> <span class='id link_cnt'>link_cnt</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -930,9 +708,9 @@ the return object of <span class='object_link'><a href="../Analyzer.html#get_lin
 </div>
     
     <div id="footer">
-  Generated on Sun Oct 31 19:21:42 2010 by 
+  Generated on Wed Nov 24 17:28:23 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.1 (ruby-1.9.2).
+  0.6.2 (ruby-1.9.2).
 </div>
 
   </body>

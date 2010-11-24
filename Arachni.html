@@ -59,8 +59,8 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/page.rb<span class="defines">,<br />
-  reports/ap.rb,<br /> lib/spider.rb,<br /> reports/txt.rb,<br /> reports/xml.rb,<br /> lib/options.rb,<br /> lib/analyzer.rb,<br /> reports/html.rb,<br /> lib/framework.rb,<br /> reports/stdout.rb,<br /> lib/exceptions.rb,<br /> lib/ui/cli/cli.rb,<br /> lib/module/base.rb,<br /> lib/report/base.rb,<br /> lib/audit_store.rb,<br /> lib/module/http.rb,<br /> lib/vulnerability.rb,<br /> lib/ui/cli/output.rb,<br /> modules/audit/xss.rb,<br /> lib/module/output.rb,<br /> modules/audit/eval.rb,<br /> modules/audit/csrf.rb,<br /> modules/audit/sqli.rb,<br /> lib/module/trainer.rb,<br /> lib/module/auditor.rb,<br /> lib/report/registry.rb,<br /> lib/module/registry.rb,<br /> lib/report/registrar.rb,<br /> lib/module/utilities.rb,<br /> lib/module/registrar.rb,<br /> modules/audit/xss_uri.rb,<br /> lib/module/key_filler.rb,<br /> lib/module/element_db.rb,<br /> modules/audit/trainer.rb,<br /> modules/audit/xss_path.rb,<br /> modules/audit/simple_rfi.rb,<br /> modules/audit/blind_sqli.rb,<br /> modules/recon/common_files.rb,<br /> modules/recon/backup_files.rb,<br /> modules/audit/audit_objects.rb,<br /> modules/audit/path_traversal.rb,<br /> modules/audit/simple_cmd_exec.rb,<br /> modules/recon/extract_objects.rb,<br /> modules/recon/common_directories.rb,<br /> modules/audit/response_splitting.rb,<br /> modules/audit/unvalidated_redirect.rb,<br /> modules/recon/unencrypted_password_forms.rb</span>
+    <dd class="r1 last">reports/ap.rb<span class="defines">,<br />
+  lib/http.rb,<br /> lib/spider.rb,<br /> lib/options.rb,<br /> reports/afr.rb,<br /> reports/xml.rb,<br /> reports/txt.rb,<br /> reports/html.rb,<br /> plugins/proxy.rb,<br /> lib/framework.rb,<br /> lib/exceptions.rb,<br /> reports/stdout.rb,<br /> plugins/sample.rb,<br /> lib/ui/cli/cli.rb,<br /> lib/report/base.rb,<br /> lib/audit_store.rb,<br /> lib/plugin/base.rb,<br /> lib/parser/page.rb,<br /> lib/module/base.rb,<br /> modules/audit/xss.rb,<br /> lib/ui/cli/output.rb,<br /> modules/recon/xst.rb,<br /> lib/parser/parser.rb,<br /> plugins/autologin.rb,<br /> lib/module/output.rb,<br /> lib/vulnerability.rb,<br /> lib/module/trainer.rb,<br /> lib/module/manager.rb,<br /> modules/audit/sqli.rb,<br /> modules/audit/csrf.rb,<br /> lib/plugin/manager.rb,<br /> modules/audit/eval.rb,<br /> reports/metareport.rb,<br /> lib/module/auditor.rb,<br /> lib/report/manager.rb,<br /> lib/parser/elements.rb,<br /> modules/audit/xpath.rb,<br /> modules/audit/ldapi.rb,<br /> lib/ui/xmlrpc/xmlrpc.rb,<br /> modules/recon/webdav.rb,<br /> plugins/clear_stdout.rb,<br /> plugins/proxy/server.rb,<br /> lib/parser/auditable.rb,<br /> lib/module/utilities.rb,<br /> modules/audit/trainer.rb,<br /> lib/module/element_db.rb,<br /> lib/module/key_filler.rb,<br /> lib/component_options.rb,<br /> lib/component_manager.rb,<br /> lib/ui/xmlrpcd/output.rb,<br /> modules/audit/xss_uri.rb,<br /> modules/audit/xss_path.rb,<br /> lib/ui/xmlrpcd/xmlrpcd.rb,<br /> modules/recon/http_put.rb,<br /> modules/audit/simple_rfi.rb,<br /> modules/audit/blind_sqli.rb,<br /> modules/recon/backup_files.rb,<br /> lib/ui/xmlrpcd/rpc/options.rb,<br /> modules/recon/common_files.rb,<br /> modules/audit/path_traversal.rb,<br /> lib/ui/xmlrpcd/rpc/framework.rb,<br /> modules/recon/grep/private_ip.rb,<br /> modules/recon/allowed_methods.rb,<br /> modules/audit/simple_cmd_exec.rb,<br /> modules/recon/grep/credit_card.rb,<br /> modules/audit/response_splitting.rb,<br /> modules/recon/grep/cvs_svn_users.rb,<br /> modules/recon/common_directories.rb,<br /> lib/ui/xmlrpcd/rpc/module/manager.rb,<br /> lib/ui/xmlrpcd/rpc/plugin/manager.rb,<br /> modules/audit/unvalidated_redirect.rb,<br /> modules/recon/unencrypted_password_forms.rb</span>
 </dd>
   
 </dl>
@@ -88,25 +88,114 @@ $Id$
 <p class="children">
    
     
-      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Arachni/Exceptions.html" title="Arachni::Exceptions (module)">Exceptions</a></span>, <span class='object_link'><a href="Arachni/Module.html" title="Arachni::Module (module)">Module</a></span>, <span class='object_link'><a href="Arachni/Modules.html" title="Arachni::Modules (module)">Modules</a></span>, <span class='object_link'><a href="Arachni/Report.html" title="Arachni::Report (module)">Report</a></span>, <span class='object_link'><a href="Arachni/Reports.html" title="Arachni::Reports (module)">Reports</a></span>, <span class='object_link'><a href="Arachni/UI.html" title="Arachni::UI (module)">UI</a></span>
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Arachni/Element.html" title="Arachni::Element (module)">Element</a></span>, <span class='object_link'><a href="Arachni/Exceptions.html" title="Arachni::Exceptions (module)">Exceptions</a></span>, <span class='object_link'><a href="Arachni/Module.html" title="Arachni::Module (module)">Module</a></span>, <span class='object_link'><a href="Arachni/Modules.html" title="Arachni::Modules (module)">Modules</a></span>, <span class='object_link'><a href="Arachni/Plugin.html" title="Arachni::Plugin (module)">Plugin</a></span>, <span class='object_link'><a href="Arachni/Plugins.html" title="Arachni::Plugins (module)">Plugins</a></span>, <span class='object_link'><a href="Arachni/Report.html" title="Arachni::Report (module)">Report</a></span>, <span class='object_link'><a href="Arachni/Reports.html" title="Arachni::Reports (module)">Reports</a></span>, <span class='object_link'><a href="Arachni/UI.html" title="Arachni::UI (module)">UI</a></span>
     
    
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Arachni/Analyzer.html" title="Arachni::Analyzer (class)">Analyzer</a></span>, <span class='object_link'><a href="Arachni/AuditStore.html" title="Arachni::AuditStore (class)">AuditStore</a></span>, <span class='object_link'><a href="Arachni/Framework.html" title="Arachni::Framework (class)">Framework</a></span>, <span class='object_link'><a href="Arachni/Options.html" title="Arachni::Options (class)">Options</a></span>, <span class='object_link'><a href="Arachni/Page.html" title="Arachni::Page (class)">Page</a></span>, <span class='object_link'><a href="Arachni/Spider.html" title="Arachni::Spider (class)">Spider</a></span>, <span class='object_link'><a href="Arachni/Vulnerability.html" title="Arachni::Vulnerability (class)">Vulnerability</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Arachni/AuditStore.html" title="Arachni::AuditStore (class)">AuditStore</a></span>, <span class='object_link'><a href="Arachni/ComponentManager.html" title="Arachni::ComponentManager (class)">ComponentManager</a></span>, <span class='object_link'><a href="Arachni/Framework.html" title="Arachni::Framework (class)">Framework</a></span>, <span class='object_link'><a href="Arachni/HTTP.html" title="Arachni::HTTP (class)">HTTP</a></span>, <span class='object_link'><a href="Arachni/OptAddress.html" title="Arachni::OptAddress (class)">OptAddress</a></span>, <span class='object_link'><a href="Arachni/OptBase.html" title="Arachni::OptBase (class)">OptBase</a></span>, <span class='object_link'><a href="Arachni/OptBool.html" title="Arachni::OptBool (class)">OptBool</a></span>, <span class='object_link'><a href="Arachni/OptEnum.html" title="Arachni::OptEnum (class)">OptEnum</a></span>, <span class='object_link'><a href="Arachni/OptInt.html" title="Arachni::OptInt (class)">OptInt</a></span>, <span class='object_link'><a href="Arachni/OptPath.html" title="Arachni::OptPath (class)">OptPath</a></span>, <span class='object_link'><a href="Arachni/OptPort.html" title="Arachni::OptPort (class)">OptPort</a></span>, <span class='object_link'><a href="Arachni/OptString.html" title="Arachni::OptString (class)">OptString</a></span>, <span class='object_link'><a href="Arachni/OptUrl.html" title="Arachni::OptUrl (class)">OptUrl</a></span>, <span class='object_link'><a href="Arachni/Options.html" title="Arachni::Options (class)">Options</a></span>, <span class='object_link'><a href="Arachni/Parser.html" title="Arachni::Parser (class)">Parser</a></span>, <span class='object_link'><a href="Arachni/Spider.html" title="Arachni::Spider (class)">Spider</a></span>, <span class='object_link'><a href="Arachni/Vulnerability.html" title="Arachni::Vulnerability (class)">Vulnerability</a></span>
     
   
 </p>
 
 
 
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset-class_method" title="reset (class method)">+ (Object) <strong>reset</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Resets the Framework providing a clean slate.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="reset-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>reset</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Resets the Framework providing a clean slate.
+</p>
+<p>
+This is useful to user interfaces that require the framework to be reused.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id reset'>reset</span>
+    <span class='const'>Element</span><span class='op'>::</span><span class='const'>Auditable</span><span class='period'>.</span><span class='id reset'>reset</span>
+    <span class='const'>Module</span><span class='op'>::</span><span class='const'>Manager</span><span class='period'>.</span><span class='id reset'>reset</span>
+    <span class='const'>Report</span><span class='op'>::</span><span class='const'>Manager</span><span class='period'>.</span><span class='id reset'>reset</span>
+    <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id reset'>reset</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
     
     <div id="footer">
-  Generated on Sun Oct 31 19:21:39 2010 by 
+  Generated on Wed Nov 24 17:28:18 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.1 (ruby-1.9.2).
+  0.6.2 (ruby-1.9.2).
 </div>
 
   </body>

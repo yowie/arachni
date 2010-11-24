@@ -53,10 +53,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName">Object</span>
+      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li>Object</li>
+          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">Arachni::Options</li>
           
@@ -78,7 +78,9 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/options.rb</dd>
+    <dd class="r1 last">lib/options.rb<span class="defines">,<br />
+  lib/ui/xmlrpcd/rpc/options.rb</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -86,11 +88,10 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-Options class.
+Overrides the Options class adding support for direct options parsing.
 </p>
 <p>
-Implements the Singleton pattern and formaly defines all of Arachni&#8217;s
-runtime options.
+Not much to look at but it streamlines XML-RPC server option handling.
 </p>
 <p>
 @author: Tasos &#8220;Zapotek&#8221; Laskos
@@ -100,7 +101,7 @@ runtime options.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1.1
+@version: 0.1
 </p>
 
 
@@ -741,6 +742,33 @@ List modules, based on regexps, and exit?.
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#lsplug-instance_method" title="#lsplug (instance method)">- (Object) <strong>lsplug</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute lsplug.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#lsrep-instance_method" title="#lsrep (instance method)">- (Bool) <strong>lsrep</strong> </a>
     
 
@@ -840,6 +868,33 @@ Should the crawler obery robots.txt files?.
   
     <span class="summary_desc"><div class='inline'><p>
 Output only positive results during the audit?.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#plugins-instance_method" title="#plugins (instance method)">- (Object) <strong>plugins</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute plugins.
 </p>
 </div></span>
   
@@ -1065,33 +1120,6 @@ Location of an Arachni Framework Report (.afr) file to load.
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#repopts-instance_method" title="#repopts (instance method)">- (Hash) <strong>repopts</strong> </a>
-    
-
-    
-  </span>
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Options to be passed to the reports.
-</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#reports-instance_method" title="#reports (instance method)">- (Array) <strong>reports</strong> </a>
     
 
@@ -1119,7 +1147,7 @@ Array of reports to load.
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#repsave-instance_method" title="#repsave (instance method)">- (String) <strong>repsave</strong> </a>
+      <a href="#rpc_port-instance_method" title="#rpc_port (instance method)">- (Object) <strong>rpc_port</strong> </a>
     
 
     
@@ -1136,34 +1164,7 @@ Array of reports to load.
 
   
     <span class="summary_desc"><div class='inline'><p>
-Where to save the Arachni Framework Report (.afr) file.
-</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#resume-instance_method" title="#resume (instance method)">- (Object) <strong>resume</strong> </a>
-    
-
-    
-  </span>
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Not implemented.
+Returns the value of attribute rpc_port.
 </p>
 </div></span>
   
@@ -1200,6 +1201,33 @@ Where to save the Arachni Framework Profile (.afp) file.
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#server-instance_method" title="#server (instance method)">- (Object) <strong>server</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute server.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#show_profile-instance_method" title="#show_profile (instance method)">- (Object) <strong>show_profile</strong> </a>
     
 
@@ -1227,6 +1255,114 @@ Returns the value of attribute show_profile.
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#ssl-instance_method" title="#ssl (instance method)">- (Object) <strong>ssl</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute ssl.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ssl_ca-instance_method" title="#ssl_ca (instance method)">- (Object) <strong>ssl_ca</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute ssl_ca.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ssl_cert-instance_method" title="#ssl_cert (instance method)">- (Object) <strong>ssl_cert</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute ssl_cert.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ssl_pkey-instance_method" title="#ssl_pkey (instance method)">- (Object) <strong>ssl_pkey</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute ssl_pkey.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#start_datetime-instance_method" title="#start_datetime (instance method)">- (Object) <strong>start_datetime</strong> </a>
     
 
@@ -1245,33 +1381,6 @@ Returns the value of attribute show_profile.
   
     <span class="summary_desc"><div class='inline'><p>
 to be populated by the framework.
-</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#threads-instance_method" title="#threads (instance method)">- (Integer) <strong>threads</strong> </a>
-    
-
-    
-  </span>
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-How many threads to spawn?.
 </p>
 </div></span>
   
@@ -1396,6 +1505,31 @@ Merges self with the object in &#8216;options&#8217;.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#reset-instance_method" title="#reset (instance method)">- (Object) <strong>reset</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Resets all important options that can affect the scan during framework
+reuse.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#to_arg-instance_method" title="#to_arg (instance method)">- (Object) <strong>to_arg</strong>(key) </a>
     
 
@@ -1490,6 +1624,21 @@ A new instance of Options
       <pre class="lines">
 
 
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
 334
 335
 336
@@ -1505,48 +1654,41 @@ A new instance of Options
 346
 347
 348
-349
-350
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360</pre>
+349</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 334</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 319</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    
+
     <span class='comment'># nil everything out
 </span>    <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variables'>instance_variables</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id var'>var</span><span class='op'>|</span>
-        <span class='id send'>send</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id var'>var</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+        <span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span> <span class='id var'>var</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
-    
+
     <span class='ivar'>@exclude</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='ivar'>@include</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='ivar'>@redundant</span>  <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='ivar'>@reports</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='ivar'>@reports</span>    <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='ivar'>@lsrep</span>      <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
     <span class='ivar'>@lsmod</span>      <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='ivar'>@repopts</span>    <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
     <span class='ivar'>@dir</span>        <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
     <span class='ivar'>@exclude_cookies</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='ivar'>@load_profile</span>       <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    
+
+    <span class='ivar'>@plugins</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='ivar'>@lsplug</span>  <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
     <span class='comment'># set some defaults
 </span>    <span class='ivar'>@redirect_limit</span> <span class='op'>=</span> <span class='int'>20</span>
-    
+
     <span class='comment'># relatively low but will give good performance without bottleneck
 </span>    <span class='comment'># on low bandwidth conections
 </span>    <span class='ivar'>@http_req_limit</span> <span class='op'>=</span> <span class='int'>60</span>
 
-    
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1598,12 +1740,12 @@ Be verbose?
       <pre class="lines">
 
 
-68
-69
-70</pre>
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id arachni_verbose'>arachni_verbose</span>
   <span class='ivar'>@arachni_verbose</span>
@@ -1653,12 +1795,12 @@ Should Arachni audit cookies?
       <pre class="lines">
 
 
-162
-163
-164</pre>
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 162</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id audit_cookies'>audit_cookies</span>
   <span class='ivar'>@audit_cookies</span>
@@ -1708,12 +1850,12 @@ Should Arachni audit forms?
       <pre class="lines">
 
 
-155
-156
-157</pre>
+143
+144
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 143</span>
 
 <span class='kw'>def</span> <span class='id audit_forms'>audit_forms</span>
   <span class='ivar'>@audit_forms</span>
@@ -1763,12 +1905,12 @@ Should Arachni audit HTTP headers?
       <pre class="lines">
 
 
-169
-170
-171</pre>
+157
+158
+159</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 169</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 157</span>
 
 <span class='kw'>def</span> <span class='id audit_headers'>audit_headers</span>
   <span class='ivar'>@audit_headers</span>
@@ -1818,12 +1960,12 @@ Should Arachni audit links?
       <pre class="lines">
 
 
-148
-149
-150</pre>
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 136</span>
 
 <span class='kw'>def</span> <span class='id audit_links'>audit_links</span>
   <span class='ivar'>@audit_links</span>
@@ -1839,7 +1981,7 @@ Should Arachni audit links?
       <div class="method_details ">
   <p class="signature " id="authed_by-instance_method">
   
-    - (<tt>String</tt>) <strong>authed_by</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>authed_by</strong> 
   
 
   
@@ -1859,7 +2001,7 @@ The person that authorized the scan<br/> It will be added to the HTTP
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -1874,12 +2016,12 @@ The person that authorized the scan<br/> It will be added to the HTTP
       <pre class="lines">
 
 
-229
-230
-231</pre>
+203
+204
+205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 229</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='id authed_by'>authed_by</span>
   <span class='ivar'>@authed_by</span>
@@ -1895,7 +2037,7 @@ The person that authorized the scan<br/> It will be added to the HTTP
       <div class="method_details ">
   <p class="signature " id="cookie_jar-instance_method">
   
-    - (<tt>String</tt>) <strong>cookie_jar</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>cookie_jar</strong> 
   
 
   
@@ -1914,7 +2056,7 @@ Location of the cookiejar
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -1929,12 +2071,12 @@ Location of the cookiejar
       <pre class="lines">
 
 
-280
-281
-282</pre>
+254
+255
+256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 280</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 254</span>
 
 <span class='kw'>def</span> <span class='id cookie_jar'>cookie_jar</span>
   <span class='ivar'>@cookie_jar</span>
@@ -1993,12 +2135,12 @@ name=>value pairs
       <pre class="lines">
 
 
-273
-274
-275</pre>
+247
+248
+249</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 273</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 247</span>
 
 <span class='kw'>def</span> <span class='id cookies'>cookies</span>
   <span class='ivar'>@cookies</span>
@@ -2048,12 +2190,12 @@ Output debugging messages?
       <pre class="lines">
 
 
-75
-76
-77</pre>
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id debug'>debug</span>
   <span class='ivar'>@debug</span>
@@ -2069,7 +2211,7 @@ Output debugging messages?
       <div class="method_details ">
   <p class="signature " id="delta_time-instance_method">
   
-    - (<tt>Object</tt>) <strong>delta_time</strong> 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>delta_time</strong> 
   
 
   
@@ -2090,12 +2232,12 @@ to be populated by the framework
       <pre class="lines">
 
 
-332
-333
-334</pre>
+306
+307
+308</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 332</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 306</span>
 
 <span class='kw'>def</span> <span class='id delta_time'>delta_time</span>
   <span class='ivar'>@delta_time</span>
@@ -2145,12 +2287,12 @@ How deep to go in the site structure?<br/> If nil, depth_limit = inf
       <pre class="lines">
 
 
-97
-98
-99</pre>
+92
+93
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id depth_limit'>depth_limit</span>
   <span class='ivar'>@depth_limit</span>
@@ -2256,12 +2398,12 @@ followed
       <pre class="lines">
 
 
-295
-296
-297</pre>
+269
+270
+271</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 295</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 269</span>
 
 <span class='kw'>def</span> <span class='id exclude'>exclude</span>
   <span class='ivar'>@exclude</span>
@@ -2311,12 +2453,12 @@ Cookies to exclude from audit<br/>
       <pre class="lines">
 
 
-302
-303
-304</pre>
+276
+277
+278</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 302</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 276</span>
 
 <span class='kw'>def</span> <span class='id exclude_cookies'>exclude_cookies</span>
   <span class='ivar'>@exclude_cookies</span>
@@ -2332,7 +2474,7 @@ Cookies to exclude from audit<br/>
       <div class="method_details ">
   <p class="signature " id="finish_datetime-instance_method">
   
-    - (<tt>Object</tt>) <strong>finish_datetime</strong> 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>finish_datetime</strong> 
   
 
   
@@ -2353,12 +2495,12 @@ to be populated by the framework
       <pre class="lines">
 
 
-330
-331
-332</pre>
+304
+305
+306</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 330</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 304</span>
 
 <span class='kw'>def</span> <span class='id finish_datetime'>finish_datetime</span>
   <span class='ivar'>@finish_datetime</span>
@@ -2408,12 +2550,12 @@ Should the crawler follow subdomains?
       <pre class="lines">
 
 
-317
-318
-319</pre>
+291
+292
+293</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 317</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 291</span>
 
 <span class='kw'>def</span> <span class='id follow_subdomains'>follow_subdomains</span>
   <span class='ivar'>@follow_subdomains</span>
@@ -2518,12 +2660,12 @@ Harvest the HTTP responses for the whole site at the end or for each page?
       <pre class="lines">
 
 
-325
-326
-327</pre>
+299
+300
+301</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 325</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 299</span>
 
 <span class='kw'>def</span> <span class='id http_harvest_last'>http_harvest_last</span>
   <span class='ivar'>@http_harvest_last</span>
@@ -2573,12 +2715,12 @@ How many concurrent HTTP requests?
       <pre class="lines">
 
 
-141
-142
-143</pre>
+129
+130
+131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 129</span>
 
 <span class='kw'>def</span> <span class='id http_req_limit'>http_req_limit</span>
   <span class='ivar'>@http_req_limit</span>
@@ -2629,12 +2771,12 @@ followed
       <pre class="lines">
 
 
-310
-311
-312</pre>
+284
+285
+286</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 310</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 284</span>
 
 <span class='kw'>def</span> <span class='id include'>include</span>
   <span class='ivar'>@include</span>
@@ -2684,12 +2826,12 @@ How many links to follow? If nil, link_count_limit = inf
       <pre class="lines">
 
 
-105
-106
-107</pre>
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id link_count_limit'>link_count_limit</span>
   <span class='ivar'>@link_count_limit</span>
@@ -2739,12 +2881,12 @@ Location of Arachni Framework Profile (.afp) files to load
       <pre class="lines">
 
 
-218
-219
-220</pre>
+192
+193
+194</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 218</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 192</span>
 
 <span class='kw'>def</span> <span class='id load_profile'>load_profile</span>
   <span class='ivar'>@load_profile</span>
@@ -2794,15 +2936,57 @@ List modules, based on regexps, and exit?
       <pre class="lines">
 
 
-120
-121
-122</pre>
+115
+116
+117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 120</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id lsmod'>lsmod</span>
   <span class='ivar'>@lsmod</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="lsplug=-instance_method"></span>
+      <span id="lsplug-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="lsplug-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>lsplug</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute lsplug
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+308
+309
+310</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 308</span>
+
+<span class='kw'>def</span> <span class='id lsplug'>lsplug</span>
+  <span class='ivar'>@lsplug</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2849,12 +3033,12 @@ List reports and exit?
       <pre class="lines">
 
 
-127
-128
-129</pre>
+122
+123
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id lsrep'>lsrep</span>
   <span class='ivar'>@lsrep</span>
@@ -2904,12 +3088,12 @@ Array of modules to load
       <pre class="lines">
 
 
-176
-177
-178</pre>
+164
+165
+166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 176</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='id mods'>mods</span>
   <span class='ivar'>@mods</span>
@@ -2959,12 +3143,12 @@ Should the crawler obery robots.txt files?
       <pre class="lines">
 
 
-89
-90
-91</pre>
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id obey_robots_txt'>obey_robots_txt</span>
   <span class='ivar'>@obey_robots_txt</span>
@@ -3030,12 +3214,54 @@ Output only positive results during the audit?
 </div>
     
       
+      <span id="plugins=-instance_method"></span>
+      <span id="plugins-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="plugins-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>plugins</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute plugins
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+309
+310
+311</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 309</span>
+
+<span class='kw'>def</span> <span class='id plugins'>plugins</span>
+  <span class='ivar'>@plugins</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
       <span id="proxy_addr=-instance_method"></span>
       <span id="proxy_addr-instance_method"></span>
       <div class="method_details ">
   <p class="signature " id="proxy_addr-instance_method">
   
-    - (<tt>String</tt>) <strong>proxy_addr</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>proxy_addr</strong> 
   
 
   
@@ -3054,7 +3280,7 @@ The address of the proxy server
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -3069,12 +3295,12 @@ The address of the proxy server
       <pre class="lines">
 
 
-236
-237
-238</pre>
+210
+211
+212</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 236</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 210</span>
 
 <span class='kw'>def</span> <span class='id proxy_addr'>proxy_addr</span>
   <span class='ivar'>@proxy_addr</span>
@@ -3090,7 +3316,7 @@ The address of the proxy server
       <div class="method_details ">
   <p class="signature " id="proxy_pass-instance_method">
   
-    - (<tt>String</tt>) <strong>proxy_pass</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>proxy_pass</strong> 
   
 
   
@@ -3109,7 +3335,7 @@ The proxy password
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -3124,12 +3350,12 @@ The proxy password
       <pre class="lines">
 
 
-250
-251
-252</pre>
+224
+225
+226</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 250</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 224</span>
 
 <span class='kw'>def</span> <span class='id proxy_pass'>proxy_pass</span>
   <span class='ivar'>@proxy_pass</span>
@@ -3145,7 +3371,7 @@ The proxy password
       <div class="method_details ">
   <p class="signature " id="proxy_port-instance_method">
   
-    - (<tt>String</tt>) <strong>proxy_port</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>proxy_port</strong> 
   
 
   
@@ -3164,7 +3390,7 @@ The port to connect on the proxy server
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -3179,12 +3405,12 @@ The port to connect on the proxy server
       <pre class="lines">
 
 
-243
-244
-245</pre>
+217
+218
+219</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 243</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 217</span>
 
 <span class='kw'>def</span> <span class='id proxy_port'>proxy_port</span>
   <span class='ivar'>@proxy_port</span>
@@ -3200,7 +3426,7 @@ The port to connect on the proxy server
       <div class="method_details ">
   <p class="signature " id="proxy_type-instance_method">
   
-    - (<tt>String</tt>) <strong>proxy_type</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>proxy_type</strong> 
   
 
   
@@ -3219,7 +3445,7 @@ The proxy type
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -3237,12 +3463,12 @@ The proxy type
       <pre class="lines">
 
 
-264
-265
-266</pre>
+238
+239
+240</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 264</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 238</span>
 
 <span class='kw'>def</span> <span class='id proxy_type'>proxy_type</span>
   <span class='ivar'>@proxy_type</span>
@@ -3258,7 +3484,7 @@ The proxy type
       <div class="method_details ">
   <p class="signature " id="proxy_user-instance_method">
   
-    - (<tt>String</tt>) <strong>proxy_user</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>proxy_user</strong> 
   
 
   
@@ -3277,7 +3503,7 @@ The proxy user
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -3292,12 +3518,12 @@ The proxy user
       <pre class="lines">
 
 
-257
-258
-259</pre>
+231
+232
+233</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 257</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 231</span>
 
 <span class='kw'>def</span> <span class='id proxy_user'>proxy_user</span>
   <span class='ivar'>@proxy_user</span>
@@ -3347,12 +3573,12 @@ How many redirects to follow? If nil, redirect_limit = inf
       <pre class="lines">
 
 
-113
-114
-115</pre>
+108
+109
+110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id redirect_limit'>redirect_limit</span>
   <span class='ivar'>@redirect_limit</span>
@@ -3402,12 +3628,12 @@ Filters for redundant links
       <pre class="lines">
 
 
-82
-83
-84</pre>
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id redundant'>redundant</span>
   <span class='ivar'>@redundant</span>
@@ -3423,7 +3649,7 @@ Filters for redundant links
       <div class="method_details ">
   <p class="signature " id="repload-instance_method">
   
-    - (<tt>String</tt>) <strong>repload</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>repload</strong> 
   
 
   
@@ -3442,7 +3668,7 @@ Location of an Arachni Framework Report (.afr) file to load
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -3457,76 +3683,15 @@ Location of an Arachni Framework Report (.afr) file to load
       <pre class="lines">
 
 
-190
-191
-192</pre>
+178
+179
+180</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 190</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 178</span>
 
 <span class='kw'>def</span> <span class='id repload'>repload</span>
   <span class='ivar'>@repload</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="repopts=-instance_method"></span>
-      <span id="repopts-instance_method"></span>
-      <div class="method_details ">
-  <p class="signature " id="repopts-instance_method">
-  
-    - (<tt>Hash</tt>) <strong>repopts</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Options to be passed to the reports
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>
-name=>value pairs
-</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-204
-205
-206</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 204</span>
-
-<span class='kw'>def</span> <span class='id repopts'>repopts</span>
-  <span class='ivar'>@repopts</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3573,12 +3738,12 @@ Array of reports to load
       <pre class="lines">
 
 
-183
-184
-185</pre>
+171
+172
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 183</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='id reports'>reports</span>
   <span class='ivar'>@reports</span>
@@ -3589,74 +3754,19 @@ Array of reports to load
 </div>
     
       
-      <span id="repsave=-instance_method"></span>
-      <span id="repsave-instance_method"></span>
+      <span id="rpc_port=-instance_method"></span>
+      <span id="rpc_port-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="repsave-instance_method">
+  <p class="signature " id="rpc_port-instance_method">
   
-    - (<tt>String</tt>) <strong>repsave</strong> 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>rpc_port</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Where to save the Arachni Framework Report (.afr) file
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-197
-198
-199</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 197</span>
-
-<span class='kw'>def</span> <span class='id repsave'>repsave</span>
-  <span class='ivar'>@repsave</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="resume=-instance_method"></span>
-      <span id="resume-instance_method"></span>
-      <div class="method_details ">
-  <p class="signature " id="resume-instance_method">
-  
-    - (<tt>Object</tt>) <strong>resume</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Not implemented
+Returns the value of attribute rpc_port
 </p>
 
 
@@ -3670,15 +3780,15 @@ Not implemented
       <pre class="lines">
 
 
-61
-62
-63</pre>
+311
+312
+313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 311</span>
 
-<span class='kw'>def</span> <span class='id resume'>resume</span>
-  <span class='ivar'>@resume</span>
+<span class='kw'>def</span> <span class='id rpc_port'>rpc_port</span>
+  <span class='ivar'>@rpc_port</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3691,7 +3801,7 @@ Not implemented
       <div class="method_details ">
   <p class="signature " id="save_profile-instance_method">
   
-    - (<tt>String</tt>) <strong>save_profile</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>save_profile</strong> 
   
 
   
@@ -3710,7 +3820,7 @@ Where to save the Arachni Framework Profile (.afp) file
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -3725,15 +3835,57 @@ Where to save the Arachni Framework Profile (.afp) file
       <pre class="lines">
 
 
-211
-212
-213</pre>
+185
+186
+187</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 211</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 185</span>
 
 <span class='kw'>def</span> <span class='id save_profile'>save_profile</span>
   <span class='ivar'>@save_profile</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="server=-instance_method"></span>
+      <span id="server-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="server-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>server</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute server
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+317
+318
+319</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 317</span>
+
+<span class='kw'>def</span> <span class='id server'>server</span>
+  <span class='ivar'>@server</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3746,7 +3898,7 @@ Where to save the Arachni Framework Profile (.afp) file
       <div class="method_details ">
   <p class="signature " id="show_profile-instance_method">
   
-    - (<tt>Object</tt>) <strong>show_profile</strong> 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>show_profile</strong> 
   
 
   
@@ -3767,15 +3919,183 @@ Returns the value of attribute show_profile
       <pre class="lines">
 
 
-221
-222
-223</pre>
+195
+196
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 221</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 195</span>
 
 <span class='kw'>def</span> <span class='id show_profile'>show_profile</span>
   <span class='ivar'>@show_profile</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="ssl=-instance_method"></span>
+      <span id="ssl-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="ssl-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>ssl</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute ssl
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+312
+313
+314</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 312</span>
+
+<span class='kw'>def</span> <span class='id ssl'>ssl</span>
+  <span class='ivar'>@ssl</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="ssl_ca=-instance_method"></span>
+      <span id="ssl_ca-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="ssl_ca-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>ssl_ca</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute ssl_ca
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+315
+316
+317</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 315</span>
+
+<span class='kw'>def</span> <span class='id ssl_ca'>ssl_ca</span>
+  <span class='ivar'>@ssl_ca</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="ssl_cert=-instance_method"></span>
+      <span id="ssl_cert-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="ssl_cert-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>ssl_cert</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute ssl_cert
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+314
+315
+316</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 314</span>
+
+<span class='kw'>def</span> <span class='id ssl_cert'>ssl_cert</span>
+  <span class='ivar'>@ssl_cert</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="ssl_pkey=-instance_method"></span>
+      <span id="ssl_pkey-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="ssl_pkey-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>ssl_pkey</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute ssl_pkey
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+313
+314
+315</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 313</span>
+
+<span class='kw'>def</span> <span class='id ssl_pkey'>ssl_pkey</span>
+  <span class='ivar'>@ssl_pkey</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3788,7 +4108,7 @@ Returns the value of attribute show_profile
       <div class="method_details ">
   <p class="signature " id="start_datetime-instance_method">
   
-    - (<tt>Object</tt>) <strong>start_datetime</strong> 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>start_datetime</strong> 
   
 
   
@@ -3809,70 +4129,15 @@ to be populated by the framework
       <pre class="lines">
 
 
-328
-329
-330</pre>
+302
+303
+304</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 328</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 302</span>
 
 <span class='kw'>def</span> <span class='id start_datetime'>start_datetime</span>
   <span class='ivar'>@start_datetime</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="threads=-instance_method"></span>
-      <span id="threads-instance_method"></span>
-      <div class="method_details ">
-  <p class="signature " id="threads-instance_method">
-  
-    - (<tt>Integer</tt>) <strong>threads</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-How many threads to spawn?
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-134
-135
-136</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 134</span>
-
-<span class='kw'>def</span> <span class='id threads'>threads</span>
-  <span class='ivar'>@threads</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3885,7 +4150,7 @@ How many threads to spawn?
       <div class="method_details ">
   <p class="signature " id="url-instance_method">
   
-    - (<tt>String</tt>, <tt>URI</tt>) <strong>url</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>URI</tt>) <strong>url</strong> 
   
 
   
@@ -3904,7 +4169,7 @@ The URL to audit
   
     <li>
       
-        <span class='type'>(<tt>String</tt>, <tt>URI</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>URI</tt>)</span>
       
       
       
@@ -3940,7 +4205,7 @@ The URL to audit
       <div class="method_details ">
   <p class="signature " id="user_agent-instance_method">
   
-    - (<tt>String</tt>) <strong>user_agent</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>user_agent</strong> 
   
 
   
@@ -3959,7 +4224,7 @@ The HTTP user-agent to use
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -3974,12 +4239,12 @@ The HTTP user-agent to use
       <pre class="lines">
 
 
-287
-288
-289</pre>
+261
+262
+263</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 287</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 261</span>
 
 <span class='kw'>def</span> <span class='id user_agent'>user_agent</span>
   <span class='ivar'>@user_agent</span>
@@ -3999,7 +4264,7 @@ The HTTP user-agent to use
       <div class="method_details first">
   <p class="signature first" id="merge!-instance_method">
   
-    - (<tt>Object</tt>) <strong>merge!</strong>(options) 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>merge!</strong>(options) 
   
 
   
@@ -4035,22 +4300,22 @@ Merges self with the object in &#8216;options&#8217;
       <pre class="lines">
 
 
-381
-382
-383
 384
 385
 386
 387
-388</pre>
+388
+389
+390
+391</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 381</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 384</span>
 
 <span class='kw'>def</span> <span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id options'>options</span> <span class='rparen'>)</span>
     <span class='id options'>options</span><span class='period'>.</span><span class='id to_h'>to_h</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-        
+
         <span class='kw'>next</span> <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id v'>v</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>Array</span> <span class='rparen'>)</span> <span class='op'>||</span> <span class='id v'>v</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>Hash</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id v'>v</span><span class='period'>.</span><span class='id empty?'>empty?</span>
         <span class='id send'>send</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id k'>k</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id v'>v</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id v'>v</span>
     <span class='rbrace'>}</span>
@@ -4061,9 +4326,103 @@ Merges self with the object in &#8216;options&#8217;
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="reset-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>reset</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Resets all important options that can affect the scan during framework
+reuse.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/xmlrpcd/rpc/options.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id reset'>reset</span>
+    <span class='comment'># nil everything out
+</span>    <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variables'>instance_variables</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id var'>var</span><span class='op'>|</span>
+
+        <span class='comment'># do *NOT* nil out @dir, we'll loose our paths!
+</span>        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id var'>var</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@dir</span><span class='tstring_end'>'</span></span>
+
+        <span class='kw'>begin</span>
+            <span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span> <span class='id var'>var</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+            <span class='id ap'>ap</span> <span class='id e'>e</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+            <span class='id ap'>ap</span> <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span>
+        <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
+
+
+    <span class='ivar'>@exclude</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@include</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@redundant</span>  <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@lsmod</span>      <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@exclude_cookies</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='comment'># set some defaults
+</span>    <span class='ivar'>@redirect_limit</span> <span class='op'>=</span> <span class='int'>20</span>
+
+    <span class='comment'># relatively low but will give good performance without bottleneck
+</span>    <span class='comment'># on low bandwidth conections
+</span>    <span class='ivar'>@http_req_limit</span> <span class='op'>=</span> <span class='int'>60</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="to_arg-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_arg</strong>(key) 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_arg</strong>(key) 
   
 
   
@@ -4073,9 +4432,6 @@ Merges self with the object in &#8216;options&#8217;
       <pre class="lines">
 
 
-405
-406
-407
 408
 409
 410
@@ -4145,15 +4501,26 @@ Merges self with the object in &#8216;options&#8217;
 474
 475
 476
-477</pre>
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 405</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 408</span>
 
 <span class='kw'>def</span> <span class='id to_arg'>to_arg</span><span class='lparen'>(</span> <span class='id key'>key</span> <span class='rparen'>)</span>
-    
+
     <span class='id var'>var</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-    
+
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id var'>var</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id var'>var</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>Array</span> <span class='rparen'>)</span> <span class='op'>||</span> <span class='id var'>var</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>Hash</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id var'>var</span><span class='period'>.</span><span class='id empty?'>empty?</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='id key'>key</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>show_profile</span><span class='tstring_end'>'</span></span>
@@ -4164,19 +4531,19 @@ Merges self with the object in &#8216;options&#8217;
 
     <span class='id key'>key</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exclude_cookie</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id key'>key</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exclude_cookies</span><span class='tstring_end'>'</span></span>
     <span class='id key'>key</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>report</span><span class='tstring_end'>'</span></span>         <span class='kw'>if</span> <span class='id key'>key</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>reports</span><span class='tstring_end'>'</span></span>
-    
+
     <span class='id key'>key</span> <span class='op'>=</span> <span class='id key'>key</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    
+
     <span class='id arg'>arg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-    
+
     <span class='kw'>case</span> <span class='id key'>key</span>
-      
+
         <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>mods</span><span class='tstring_end'>'</span></span>
             <span class='id var'>var</span> <span class='op'>=</span> <span class='id var'>var</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>,</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-        
+
         <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arachni-verbose</span><span class='tstring_end'>'</span></span>
             <span class='id key'>key</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>verbosity</span><span class='tstring_end'>'</span></span>
-    
+
         <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>redundant</span><span class='tstring_end'>'</span></span>
             <span class='id var'>var</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
                 <span class='op'>|</span><span class='id rule'>rule</span><span class='op'>|</span>
@@ -4184,11 +4551,19 @@ Merges self with the object in &#8216;options&#8217;
             <span class='rbrace'>}</span>
             <span class='kw'>return</span> <span class='id arg'>arg</span>
 
-        <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>repopts</span><span class='tstring_end'>'</span></span>
-            <span class='id arg'>arg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>report</span><span class='tstring_end'>'</span></span>
+            <span class='id arg'>arg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
             <span class='id var'>var</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
                 <span class='op'>|</span><span class='id opt'>opt</span><span class='comma'>,</span> <span class='id val'>val</span><span class='op'>|</span>
-                <span class='id arg'>arg</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id opt'>opt</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id val'>val</span><span class='rbrace'>}</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span>
+                <span class='id arg'>arg</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='period'>.</span><span class='id chomp'>chomp</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>s</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id opt'>opt</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+                <span class='id arg'>arg</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>:</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='op'>!</span><span class='id val'>val</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+
+                <span class='id val'>val</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+                    <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
+                    <span class='id arg'>arg</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id k'>k</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id v'>v</span><span class='rbrace'>}</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span>
+                <span class='rbrace'>}</span>
+
+                <span class='id arg'>arg</span><span class='period'>.</span><span class='id chomp!'>chomp!</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>,</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
             <span class='rbrace'>}</span>
             <span class='kw'>return</span> <span class='id arg'>arg</span>
 
@@ -4197,30 +4572,30 @@ Merges self with the object in &#8216;options&#8217;
 
         <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>proxy-addr</span><span class='tstring_end'>'</span></span>
             <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--proxy=</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id proxy_addr'>proxy_addr</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id proxy_port'>proxy_port</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
-          
-    
+
+
     <span class='kw'>end</span>
-        
+
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='id var'>var</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>TrueClass</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
         <span class='id arg'>arg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
-        
+
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='id var'>var</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span> <span class='op'>||</span> <span class='id var'>var</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>Fixnum</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
         <span class='id arg'>arg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id var'>var</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
-        
+
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='id var'>var</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>Array</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-        
+
         <span class='id var'>var</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id i'>i</span><span class='op'>|</span>
-            
+
             <span class='id i'>i</span> <span class='op'>=</span> <span class='id i'>i</span><span class='period'>.</span><span class='id source'>source</span> <span class='kw'>if</span> <span class='id i'>i</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>Regexp</span> <span class='rparen'>)</span>
-            
+
             <span class='id arg'>arg</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id i'>i</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
         <span class='rbrace'>}</span>
-        
+
     <span class='kw'>end</span>
-    
+
     <span class='kw'>return</span> <span class='id arg'>arg</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -4231,7 +4606,7 @@ Merges self with the object in &#8216;options&#8217;
       <div class="method_details ">
   <p class="signature " id="to_args-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_args</strong> 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_args</strong> 
   
 
   
@@ -4241,9 +4616,6 @@ Merges self with the object in &#8216;options&#8217;
       <pre class="lines">
 
 
-390
-391
-392
 393
 394
 395
@@ -4254,23 +4626,26 @@ Merges self with the object in &#8216;options&#8217;
 400
 401
 402
-403</pre>
+403
+404
+405
+406</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 390</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 393</span>
 
 <span class='kw'>def</span> <span class='id to_args'>to_args</span>
-    
+
     <span class='id cli_args'>cli_args</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-    
+
     <span class='kw'>self</span><span class='period'>.</span><span class='id to_h'>to_h</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id key'>key</span><span class='op'>|</span>
-        
+
         <span class='id arg'>arg</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id to_arg'>to_arg</span><span class='lparen'>(</span> <span class='id key'>key</span> <span class='rparen'>)</span>
-        
+
         <span class='id cli_args'>cli_args</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id arg'>arg</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id arg'>arg</span>
     <span class='rbrace'>}</span>
-    
+
     <span class='kw'>return</span> <span class='id cli_args'>cli_args</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -4315,23 +4690,23 @@ Converts the Options object to hash
       <pre class="lines">
 
 
-367
-368
-369
 370
 371
 372
 373
-374</pre>
+374
+375
+376
+377</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/options.rb', line 367</span>
+      <pre class="code"><span class="info file"># File 'lib/options.rb', line 370</span>
 
 <span class='kw'>def</span> <span class='id to_h'>to_h</span>
     <span class='id hash'>hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
     <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variables'>instance_variables</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id var'>var</span><span class='op'>|</span>
-        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id normalize_name'>normalize_name</span><span class='lparen'>(</span> <span class='id var'>var</span> <span class='rparen'>)</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span> <span class='id var'>var</span> <span class='rparen'>)</span> 
+        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id normalize_name'>normalize_name</span><span class='lparen'>(</span> <span class='id var'>var</span> <span class='rparen'>)</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span> <span class='id var'>var</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
     <span class='id hash'>hash</span>
 <span class='kw'>end</span></pre>
@@ -4345,9 +4720,9 @@ Converts the Options object to hash
 </div>
     
     <div id="footer">
-  Generated on Sun Oct 31 19:21:39 2010 by 
+  Generated on Wed Nov 24 17:28:19 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.1 (ruby-1.9.2).
+  0.6.2 (ruby-1.9.2).
 </div>
 
   </body>

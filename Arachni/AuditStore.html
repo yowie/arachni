@@ -53,10 +53,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName">Object</span>
+      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li>Object</li>
+          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">Arachni::AuditStore</li>
           
@@ -84,16 +84,10 @@
     <p>
 Arachni::AuditStore class
 </p>
-<pre class="code">
-   
-</pre>
 <p>
 Represents a finished audit session.<br/> It holds information about the
 runtime environment, the results of the audit etc&#8230;
 </p>
-<pre class="code">
-   
-</pre>
 <p>
 @author: Tasos &#8220;Zapotek&#8221; Laskos
 </p>
@@ -111,6 +105,23 @@ runtime environment, the results of the audit etc&#8230;
 <div class="tags">
   
 </div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="ORDER-constant" class="">ORDER =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span>
+    <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>HIGH</span><span class='comma'>,</span>
+    <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>MEDIUM</span><span class='comma'>,</span>
+    <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>LOW</span><span class='comma'>,</span>
+    <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>INFORMATIONAL</span>
+<span class='rbracket'>]</span></pre></dd>
+      
+    </dl>
+  
+
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
@@ -479,16 +490,6 @@ A new instance of AuditStore
       <pre class="lines">
 
 
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
 77
 78
 79
@@ -498,30 +499,42 @@ A new instance of AuditStore
 83
 84
 85
-86</pre>
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id audit'>audit</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
-    
+
     <span class='comment'># set instance variables from audit opts
 </span>    <span class='id audit'>audit</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
         <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
-    
+
     <span class='ivar'>@options</span>         <span class='op'>=</span> <span class='id prepare_options'>prepare_options</span><span class='lparen'>(</span> <span class='ivar'>@options</span> <span class='rparen'>)</span>
-    <span class='ivar'>@vulns</span>           <span class='op'>=</span> <span class='id prepare_variations'>prepare_variations</span><span class='lparen'>(</span> <span class='ivar'>@vulns</span> <span class='rparen'>)</span>
+    <span class='ivar'>@vulns</span>           <span class='op'>=</span> <span class='id sort'>sort</span><span class='lparen'>(</span> <span class='id prepare_variations'>prepare_variations</span><span class='lparen'>(</span> <span class='ivar'>@vulns</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
     <span class='ivar'>@start_datetime</span>  <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>start_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id asctime'>asctime</span>
-    
+
     <span class='kw'>if</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>finish_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
         <span class='ivar'>@finish_datetime</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>finish_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id asctime'>asctime</span>
     <span class='kw'>else</span>
         <span class='ivar'>@finish_datetime</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span><span class='period'>.</span><span class='id asctime'>asctime</span>
     <span class='kw'>end</span>
-    
+
     <span class='ivar'>@delta_time</span>      <span class='op'>=</span> <span class='id secs_to_hms'>secs_to_hms</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>delta_time</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -539,7 +552,7 @@ A new instance of AuditStore
       <div class="method_details first">
   <p class="signature first" id="delta_time-instance_method">
   
-    - (<tt>String</tt>) <strong>delta_time</strong>  <span class="extras">(readonly)</span>
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>delta_time</strong>  <span class="extras">(readonly)</span>
   
 
   
@@ -558,7 +571,7 @@ How long the audit took
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -579,12 +592,12 @@ how long the audit took
       <pre class="lines">
 
 
-65
-66
-67</pre>
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id delta_time'>delta_time</span>
   <span class='ivar'>@delta_time</span>
@@ -600,7 +613,7 @@ how long the audit took
       <div class="method_details ">
   <p class="signature " id="finish_datetime-instance_method">
   
-    - (<tt>String</tt>) <strong>finish_datetime</strong>  <span class="extras">(readonly)</span>
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>finish_datetime</strong>  <span class="extras">(readonly)</span>
   
 
   
@@ -619,7 +632,7 @@ The date and time when the audit finished
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -640,12 +653,12 @@ the date and time when the audit finished
       <pre class="lines">
 
 
-60
-61
-62</pre>
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id finish_datetime'>finish_datetime</span>
   <span class='ivar'>@finish_datetime</span>
@@ -701,12 +714,12 @@ the runtime arguments/options of the environment
       <pre class="lines">
 
 
-40
-41
-42</pre>
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id options'>options</span>
   <span class='ivar'>@options</span>
@@ -722,7 +735,7 @@ the runtime arguments/options of the environment
       <div class="method_details ">
   <p class="signature " id="revision-instance_method">
   
-    - (<tt>String</tt>) <strong>revision</strong>  <span class="extras">(readonly)</span>
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>revision</strong>  <span class="extras">(readonly)</span>
   
 
   
@@ -741,7 +754,7 @@ The revision of the framework class
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -762,12 +775,12 @@ the revision of the framework class
       <pre class="lines">
 
 
-35
-36
-37</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id revision'>revision</span>
   <span class='ivar'>@revision</span>
@@ -823,12 +836,12 @@ all the urls crawled
       <pre class="lines">
 
 
-45
-46
-47</pre>
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id sitemap'>sitemap</span>
   <span class='ivar'>@sitemap</span>
@@ -844,7 +857,7 @@ all the urls crawled
       <div class="method_details ">
   <p class="signature " id="start_datetime-instance_method">
   
-    - (<tt>String</tt>) <strong>start_datetime</strong>  <span class="extras">(readonly)</span>
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>start_datetime</strong>  <span class="extras">(readonly)</span>
   
 
   
@@ -863,7 +876,7 @@ The date and time when the audit started
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -884,12 +897,12 @@ the date and time when the audit started
       <pre class="lines">
 
 
-55
-56
-57</pre>
+57
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id start_datetime'>start_datetime</span>
   <span class='ivar'>@start_datetime</span>
@@ -905,7 +918,7 @@ the date and time when the audit started
       <div class="method_details ">
   <p class="signature " id="version-instance_method">
   
-    - (<tt>String</tt>) <strong>version</strong>  <span class="extras">(readonly)</span>
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>version</strong>  <span class="extras">(readonly)</span>
   
 
   
@@ -924,7 +937,7 @@ The version of the framework
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -945,12 +958,12 @@ the version of the framework
       <pre class="lines">
 
 
-30
-31
-32</pre>
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id version'>version</span>
   <span class='ivar'>@version</span>
@@ -1006,12 +1019,12 @@ the discovered vulnerabilities
       <pre class="lines">
 
 
-50
-51
-52</pre>
+52
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id vulns'>vulns</span>
   <span class='ivar'>@vulns</span>
@@ -1050,7 +1063,7 @@ Loads and returns an AuditStore object from file
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
         <span class='name'>file</span>
@@ -1086,12 +1099,12 @@ the file to load
       <pre class="lines">
 
 
-95
-96
-97</pre>
+106
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='const'>AuditStore</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
      <span class='const'>Marshal</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -1110,7 +1123,7 @@ the file to load
       <div class="method_details first">
   <p class="signature first" id="save-instance_method">
   
-    - (<tt>Object</tt>) <strong>save</strong>(file) 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>save</strong>(file) 
   
 
   
@@ -1129,7 +1142,7 @@ Saves &#8216;self&#8217; to file
   
     <li>
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
         <span class='name'>file</span>
@@ -1146,13 +1159,13 @@ Saves &#8216;self&#8217; to file
       <pre class="lines">
 
 
-104
-105
-106
-107</pre>
+115
+116
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id save'>save</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
     <span class='id f'>f</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -1200,33 +1213,33 @@ Returns &#8216;self&#8217; and all objects in its instance vars as hashes
       <pre class="lines">
 
 
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
 125
-126</pre>
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 125</span>
 
 <span class='kw'>def</span> <span class='id to_h'>to_h</span>
 
     <span class='id hash'>hash</span> <span class='op'>=</span> <span class='id obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span>
-    
+
     <span class='id vulns'>vulns</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vulns</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> 
+    <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vulns</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id vuln'>vuln</span><span class='op'>|</span>
         <span class='id vulns'>vulns</span> <span class='op'>&lt;&lt;</span> <span class='id obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='id vuln'>vuln</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
-    
+
     <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vulns</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id vulns'>vulns</span>
     <span class='kw'>return</span> <span class='id hash'>hash</span>
 <span class='kw'>end</span></pre>
@@ -1240,9 +1253,9 @@ Returns &#8216;self&#8217; and all objects in its instance vars as hashes
 </div>
     
     <div id="footer">
-  Generated on Sun Oct 31 19:21:40 2010 by 
+  Generated on Wed Nov 24 17:28:20 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.1 (ruby-1.9.2).
+  0.6.2 (ruby-1.9.2).
 </div>
 
   </body>

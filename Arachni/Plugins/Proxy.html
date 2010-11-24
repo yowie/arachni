@@ -1,0 +1,1114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Arachni::Plugins::Proxy</title>
+<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../Arachni.html" title="Arachni (module)">Arachni</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Plugins.html" title="Arachni::Plugins (module)">Plugins</a></span></span>
+     &raquo; 
+    <span class="title">Proxy</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Arachni::Plugins::Proxy
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></li>
+          
+            <li class="next">Arachni::Plugins::Proxy</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">plugins/proxy.rb<span class="defines">,<br />
+  plugins/proxy/server.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Passive proxy.
+</p>
+<p>
+Will gather data based on user actions and exchanged HTTP traffic and push
+that data to the <span class='object_link'><a href="../Framework.html#page_queue-instance_method" title="Arachni::Framework#page_queue (method)">Framework#page_queue</a></span> to be audited.
+</p>
+<p>
+@author: Tasos &#8220;Zapotek&#8221; Laskos
+</p>
+<pre class="code">
+                                     &lt;tasos.laskos@gmail.com&gt;
+                                     &lt;zapotek@segfault.gr&gt;
+</pre>
+<p>
+@version: 0.1
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+   
+    
+   
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Proxy/Server.html" title="Arachni::Plugins::Proxy::Server (class)">Server</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="SHUTDOWN_URL-constant" class="">SHUTDOWN_URL =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://arachni.proxy.shutdown/</span><span class='tstring_end'>'</span></span></pre></dd>
+      
+        <dt id="MSG_SHUTDOWN-constant" class="">MSG_SHUTDOWN =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Shutting down the Arachni proxy plug-in...</span><span class='tstring_end'>'</span></span></pre></dd>
+      
+        <dt id="MSG_DISALOWED-constant" class="">MSG_DISALOWED =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You can't access this resource via the Arachni </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>proxy plug-in for the following reasons:</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="MSG_NOT_IN_DOMAIN-constant" class="">MSG_NOT_IN_DOMAIN =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>This resource is on a domain or subdomain</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
+<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> outside the scope of the audit.</span><span class='tstring_end'>'</span></span></pre></dd>
+      
+        <dt id="MSG_EXCLUDED-constant" class="">MSG_EXCLUDED =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>This resource is matched by an exclude rule.</span><span class='tstring_end'>'</span></span></pre></dd>
+      
+        <dt id="MSG_NOT_INCLUDED-constant" class="">MSG_NOT_INCLUDED =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>This resource is disallowed based on an include rule.</span><span class='tstring_end'>'</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#info-class_method" title="info (class method)">+ (Object) <strong>info</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#allowed%3F-instance_method" title="#allowed? (instance method)">- (Boolean) <strong>allowed?</strong>(uri) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Checks if the URL is allowed.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clean_up-instance_method" title="#clean_up (instance method)">- (Object) <strong>clean_up</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handler-instance_method" title="#handler (instance method)">- (Object) <strong>handler</strong>(req, res) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Called by the proxy to process each page.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Proxy) <strong>initialize</strong>(framework, options) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Proxy.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shutdown%3F-instance_method" title="#shutdown? (instance method)">- (Boolean) <strong>shutdown?</strong>(url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_forms-instance_method" title="#update_forms (instance method)">- (Object) <strong>update_forms</strong>(page, req) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_framework_cookies-instance_method" title="#update_framework_cookies (instance method)">- (Object) <strong>update_framework_cookies</strong>(page, req) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Output.html" title="Arachni::Module::Output (module)">Module::Output</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Module/Output.html#print_debug-instance_method" title="Arachni::Module::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../Module/Output.html#print_error-instance_method" title="Arachni::Module::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../Module/Output.html#print_info-instance_method" title="Arachni::Module::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../Module/Output.html#print_line-instance_method" title="Arachni::Module::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../Module/Output.html#print_ok-instance_method" title="Arachni::Module::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../Module/Output.html#print_status-instance_method" title="Arachni::Module::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../Module/Output.html#print_verbose-instance_method" title="Arachni::Module::Output#print_verbose (method)">#print_verbose</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Arachni::Plugins::Proxy (class)">Proxy</a></span></tt>) <strong>initialize</strong>(framework, options) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of Proxy
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a></span></tt>)</span>
+      
+      
+        <span class='name'>framework</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+options passed to the plugin
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 45</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
+    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
+    <span class='ivar'>@options</span>   <span class='op'>=</span> <span class='id options'>options</span>
+
+    <span class='comment'># don't let the framework run just yet
+</span>    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id pause!'>pause!</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="info-class_method">
+  
+    + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>info</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 209</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+    <span class='lbrace'>{</span>
+        <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Proxy</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Gathers data based on user actions and exchanged HTTP
+            traffic and pushes that data to the framework's page-queue to be audited.
+            It also updates the framework cookies with the cookies of the HTTP requests and
+</span><span class='tstring_content'>            responses, thus it can also be used to login to a web application.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+        <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:options</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
+            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptPort</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Port to bind to.</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>8282</span> <span class='rbracket'>]</span> <span class='rparen'>)</span><span class='comma'>,</span>
+            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptAddress</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bind_address</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>IP address to bind to.</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.0.0.0</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="allowed?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>allowed?</strong>(uri) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Checks if the URL is allowed.
+</p>
+<p>
+URLs outside the scope of the scan are not allowed.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 167</span>
+
+<span class='kw'>def</span> <span class='id allowed?'>allowed?</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span>
+
+    <span class='id url'>url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span>
+
+    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Requesting: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
+
+    <span class='comment'># if !(url.to_s =~ /http(s):\/\//)
+</span>    <span class='comment'>#     url = URI( @framework.opts.url.scheme + '://' + url.to_s )
+</span>    <span class='comment'># end
+</span>
+    <span class='id reasons'>reasons</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='kw'>if</span> <span class='id shutdown?'>shutdown?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Shutting down...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='ivar'>@server</span><span class='period'>.</span><span class='id shutdown'>shutdown</span>
+        <span class='id reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_SHUTDOWN</span>
+        <span class='kw'>return</span> <span class='id reasons'>reasons</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@parser</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id url'>url</span>
+
+    <span class='id reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_NOT_IN_DOMAIN</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@parser</span><span class='period'>.</span><span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='id reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_EXCLUDED</span>      <span class='kw'>if</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='id reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_NOT_INCLUDED</span>  <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@parser</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id reasons'>reasons</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MSG_DISALOWED</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='id reasons'>reasons</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id msg'>msg</span><span class='op'>|</span> <span class='id print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id msg'>msg</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+        <span class='id reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_DISALOWED</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>return</span> <span class='id reasons'>reasons</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clean_up-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>clean_up</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+205
+206
+207</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 205</span>
+
+<span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id resume!'>resume!</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="handler-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>handler</strong>(req, res) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Called by the proxy to process each page
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id handler'>handler</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id header'>header</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content-encoding</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>gzip</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='id res'>res</span><span class='period'>.</span><span class='id header'>header</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content-encoding</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='op'>=</span> <span class='const'>Zlib</span><span class='op'>::</span><span class='const'>GzipReader</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>StringIO</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id read'>read</span>
+    <span class='kw'>end</span>
+
+    <span class='id headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id headers'>headers</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id header'>header</span><span class='period'>.</span><span class='id dup'>dup</span> <span class='rparen'>)</span>     <span class='kw'>if</span> <span class='id res'>res</span><span class='period'>.</span><span class='id header'>header</span>
+    <span class='id headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id cookies'>cookies</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id res'>res</span><span class='period'>.</span><span class='id cookies'>cookies</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+
+    <span class='id page'>page</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id run'>run</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='period'>.</span><span class='id unparsed_uri'>unparsed_uri</span><span class='comma'>,</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
+    <span class='id page'>page</span> <span class='op'>=</span> <span class='id update_forms'>update_forms</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id req'>req</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id req'>req</span><span class='period'>.</span><span class='id body'>body</span>
+
+    <span class='id print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id page'>page</span><span class='period'>.</span><span class='id forms'>forms</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> forms</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id page'>page</span><span class='period'>.</span><span class='id links'>links</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> links</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id page'>page</span><span class='period'>.</span><span class='id cookies'>cookies</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> cookies</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='id update_framework_cookies'>update_framework_cookies</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id req'>req</span> <span class='rparen'>)</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id page_queue'>page_queue</span> <span class='op'>&lt;&lt;</span> <span class='id page'>page</span><span class='period'>.</span><span class='id dup'>dup</span>
+
+    <span class='kw'>return</span> <span class='id res'>res</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prepare-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prepare</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id prepare'>prepare</span>
+    <span class='id require'>require</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id dir'>dir</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/proxy/server.rb</span><span class='tstring_end'>'</span></span>
+
+    <span class='comment'># we'll need this to parse server responses into Arachni::Parser::Page objects
+</span>    <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span> <span class='rparen'>)</span>
+
+    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='const'>Server</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span>
+        <span class='symbol'>:BindAddress</span>    <span class='op'>=&gt;</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bind_address</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='symbol'>:Port</span>           <span class='op'>=&gt;</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='symbol'>:ProxyVia</span>       <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='symbol'>:ProxyContentHandler</span> <span class='op'>=&gt;</span> <span class='id method'>method</span><span class='lparen'>(</span> <span class='symbol'>:handler</span> <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:ProxyURITest</span>   <span class='op'>=&gt;</span> <span class='id method'>method</span><span class='lparen'>(</span> <span class='symbol'>:allowed?</span> <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:AccessLog</span>      <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='symbol'>:Logger</span>         <span class='op'>=&gt;</span> <span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Log</span><span class='op'>::</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/dev/null</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>7</span> <span class='rparen'>)</span>
+    <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="run-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>run</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Listening on: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://</span><span class='embexpr_beg'>#{</span><span class='ivar'>@server</span><span class='lbracket'>[</span><span class='symbol'>:BindAddress</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@server</span><span class='lbracket'>[</span><span class='symbol'>:Port</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+
+    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shutdown URL: </span><span class='embexpr_beg'>#{</span><span class='const'>SHUTDOWN_URL</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='ivar'>@server</span><span class='period'>.</span><span class='id start'>start</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shutdown?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>shutdown?</strong>(url) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201
+202
+203</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 201</span>
+
+<span class='kw'>def</span> <span class='id shutdown?'>shutdown?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>==</span> <span class='const'>SHUTDOWN_URL</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="update_forms-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>update_forms</strong>(page, req) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 138</span>
+
+<span class='kw'>def</span> <span class='id update_forms'>update_forms</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id req'>req</span> <span class='rparen'>)</span>
+    <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+    <span class='const'>URI</span><span class='period'>.</span><span class='id decode'>decode</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id param'>param</span><span class='op'>|</span>
+        <span class='id k'>k</span><span class='comma'>,</span><span class='id v'>v</span> <span class='op'>=</span> <span class='id param'>param</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
+        <span class='id params'>params</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span>
+    <span class='rbrace'>}</span>
+
+    <span class='id raw'>raw</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id req'>req</span><span class='period'>.</span><span class='id unparsed_uri'>unparsed_uri</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id req'>req</span><span class='period'>.</span><span class='id request_method'>request_method</span><span class='comma'>,</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+
+    <span class='id form'>form</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>Form</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='period'>.</span><span class='id unparsed_uri'>unparsed_uri</span><span class='comma'>,</span> <span class='id raw'>raw</span> <span class='rparen'>)</span>
+    <span class='id form'>form</span><span class='period'>.</span><span class='id auditable'>auditable</span> <span class='op'>=</span> <span class='id params'>params</span>
+
+    <span class='id page'>page</span><span class='period'>.</span><span class='id forms'>forms</span> <span class='op'>&lt;&lt;</span> <span class='id form'>form</span>
+
+    <span class='kw'>return</span> <span class='id page'>page</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="update_framework_cookies-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>update_framework_cookies</strong>(page, req) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='id update_framework_cookies'>update_framework_cookies</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id req'>req</span> <span class='rparen'>)</span>
+
+    <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Updating framework cookies...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+
+    <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+    <span class='id req'>req</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
+        <span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='op'>=</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
+        <span class='id cookies'>cookies</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='period'>.</span><span class='id strip'>strip</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span><span class='period'>.</span><span class='id strip'>strip</span>
+    <span class='rbrace'>}</span>
+
+    <span class='id page'>page</span><span class='period'>.</span><span class='id cookies'>cookies</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
+        <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id simple'>simple</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+
+    <span class='kw'>if</span> <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Could not extract cookies...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='kw'>return</span>
+    <span class='kw'>else</span>
+        <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Extracted cookies:</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
+            <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  * </span><span class='embexpr_beg'>#{</span><span class='id k'>k</span><span class='rbrace'>}</span><span class='tstring_content'> =&gt; </span><span class='embexpr_beg'>#{</span><span class='id v'>v</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># set the cookies system-wide so that the spider can use it
+</span>    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='id cookies'>cookies</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Nov 24 17:28:19 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.2 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

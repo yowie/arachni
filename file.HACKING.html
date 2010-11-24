@@ -79,9 +79,9 @@ It is unlikely that you will need it, but if you do, use
 <code>select(nil, nil, nil, &lt;time&gt;)</code> instead to avoid multi-threading issues.</p>
 
 <p><strong>3. Avoid creating your own instance of Net::HTTP or other lib.</strong><br/>
-You are provided with pre-configured wrapper (<span class='object_link'><a href="Arachni/Module/Base.html#http-instance_method" title="Arachni::Module::Base#http (method)">Arachni::Module::Base#http</a></span>) of <a href="http://github.com/pauldix/typhoeus">Typhoeus</a>.</p>
+You are provided with a pre-configured wrapper (<span class='object_link'><a href="Arachni/Module/Base.html#http-instance_method" title="Arachni::Module::Base#http (method)">Arachni::Module::Base#http</a></span>) of <a href="http://github.com/pauldix/typhoeus">Typhoeus</a>.</p>
 
-<p>Take a look in the tutorial module to see what you get: <span class='object_link'><a href="Arachni/Modules/Audit/SimpleRFI.html" title="Arachni::Modules::Audit::SimpleRFI (class)">Arachni::Modules::Audit::SimpleRFI</a></span></p>
+<p>Take a look in the tutorial module to see what you get: <span class='object_link'><a href="Arachni/Modules/SimpleRFI.html" title="Arachni::Modules::SimpleRFI (class)">Arachni::Modules::SimpleRFI</a></span></p>
 
 <p>The base module will also give you some insights: <span class='object_link'><a href="Arachni/Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></p>
 
@@ -92,39 +92,27 @@ run-time settings in <span class='object_link'><a href="Arachni/Options.html" ti
 
 <p>Arachni provides you with examples for the usual types of modules.</p>
 
-<p>This is your main guide: <span class='object_link'><a href="Arachni/Modules/Audit/SimpleRFI.html" title="Arachni::Modules::Audit::SimpleRFI (class)">Arachni::Modules::Audit::SimpleRFI</a></span></p>
+<p>This is your main guide: <span class='object_link'><a href="Arachni/Modules/SimpleRFI.html" title="Arachni::Modules::SimpleRFI (class)">Arachni::Modules::SimpleRFI</a></span></p>
 
 <p>This covers most of the usual tasks when writing a module.
 It lets Arachni do all the work.</p>
 
 <p>For something more elaborate look in:<br/>
-- <span class='object_link'><a href="Arachni/Modules/Audit/ResponseSplitting.html" title="Arachni::Modules::Audit::ResponseSplitting (class)">Arachni::Modules::Audit::ResponseSplitting</a></span><br/>
-- <span class='object_link'><a href="Arachni/Modules/Audit/SQLInjection.html" title="Arachni::Modules::Audit::SQLInjection (class)">Arachni::Modules::Audit::SQLInjection</a></span></p>
+- <span class='object_link'><a href="Arachni/Modules/ResponseSplitting.html" title="Arachni::Modules::ResponseSplitting (class)">Arachni::Modules::ResponseSplitting</a></span><br/>
+- <span class='object_link'><a href="Arachni/Modules/SQLInjection.html" title="Arachni::Modules::SQLInjection (class)">Arachni::Modules::SQLInjection</a></span></p>
 
 <p>These modules do their own vulnerability checking and logging.</p>
-
-<p>If you want to create coupled modules take a look in:<br/>
-- <span class='object_link'><a href="Arachni/Modules/Recon/ExtractObjects.html" title="Arachni::Modules::Recon::ExtractObjects (class)">Arachni::Modules::Recon::ExtractObjects</a></span><br/>
-- <span class='object_link'><a href="Arachni/Modules/Audit/AuditObjects.html" title="Arachni::Modules::Audit::AuditObjects (class)">Arachni::Modules::Audit::AuditObjects</a></span></p>
-
-<p>In this case <span class='object_link'><a href="Arachni/Modules/Recon/ExtractObjects.html" title="Arachni::Modules::Recon::ExtractObjects (class)">Arachni::Modules::Recon::ExtractObjects</a></span> extracts information from the
-web pages and saves it in the module datastore.</p>
-
-<p>The datastore is persistent and shared between all modules.</p>
-
-<p><span class='object_link'><a href="Arachni/Modules/Audit/AuditObjects.html" title="Arachni::Modules::Audit::AuditObjects (class)">Arachni::Modules::Audit::AuditObjects</a></span> then gets the data harvested by <span class='object_link'><a href="Arachni/Modules/Recon/ExtractObjects.html" title="Arachni::Modules::Recon::ExtractObjects (class)">Arachni::Modules::Recon::ExtractObjects</a></span>
-and handles it accordingly.</p>
 
 <p>One last note.
 You're probably going to be working with large arrays of strings,
 either regular expressions or strings to inject to the webapp,
 so it's better to keep them in an external file under:</p>
 
-<pre class="code">modules/&lt;modname&gt;/
+<pre class="code">modules/&lt;modtype&gt;/&lt;modname&gt;/
 </pre>
 
-<p>Use "<span class='object_link'><a href="Arachni/Module/Base.html#get_data_file-instance_method" title="Arachni::Module::Base#get_data_file (method)">Arachni::Module::Base#get_data_file</a></span><code>( filename ){ |line| }</code>" to get the file line by line.<br/>
-You just pass the filename (no path), <code>get_data_file()</code> will take care of the rest.</p>
+<p>Use "<span class='object_link'><a href="Arachni/Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">Arachni::Module::Utilities#read_file</a></span><code>( filename ){ |line| }</code>" to get the file line by line.<br/>
+You just pass the filename (no path), <code>read_file()</code> will take care of the rest.</p>
 
 <p>This will make the strings easier to update and keep your modules smaller.</p>
 
@@ -148,15 +136,26 @@ you will have to take care of that yourself.</p>
 <p>Other than that you can do whatever you want, you have all of Ruby's
 power to work with.</p>
 
+<h2>Creating New Plug-ins</h2>
+
+<p>Unlike the two previous types of components (reports and modules) plug-ins are demi-gods.<br/>
+Each plug-in is passed an instance of the framework to do what they please with it.<br/>
+Via the framework they have access to all Arachni subsystems and can alter or extend Arachni's behavior on the fly.<br/>
+Plug-ins are run in parallel with the framework and are executed right before the scan process starts.<br/></p>
+
+<p>Have a look the following demo plug-ins:<br/>
+- <span class='object_link'><a href="Arachni/Plugins/ClearStdout.html" title="Arachni::Plugins::ClearStdout (class)">Arachni::Plugins::ClearStdout</a></span><br/>
+- <span class='object_link'><a href="Arachni/Plugins/Sample.html" title="Arachni::Plugins::Sample (class)">Arachni::Plugins::Sample</a></span></p>
+
 <h2>Licensing</h2>
 
 <p>All code must be contributed with a GPL v2 compatible license.<br/>
 Do place licensing information in your code files.</p></div></div>
     
     <div id="footer">
-  Generated on Sun Oct 31 19:21:39 2010 by 
+  Generated on Wed Nov 24 17:28:18 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.1 (ruby-1.9.2).
+  0.6.2 (ruby-1.9.2).
 </div>
 
   </body>

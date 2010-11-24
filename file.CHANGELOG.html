@@ -43,6 +43,75 @@
     
     <div id="content"><div id='filecontents'><h1>ChangeLog</h1>
 
+<h2>Version 0.2.1</h2>
+
+<ul>
+<li>Major performance improvements</li>
+<li>Major system refactoring and code clean-up</li>
+<li>Major module API refactoring providing even more flexibility regarding element auditing and manipulation</li>
+<li>Integration with the Metasploit Framework via: (<strong>New</strong>)
+
+<ul>
+<li>ArachniMetareport, an Arachni report specifically designed to provide WebApp context to the <a href="http://www.metasploit.com/">Metasploit</a> framework.</li>
+<li>Arachni plug-in for the <a href="http://www.metasploit.com/">Metasploit</a> framework, used to load the ArachniMetareport in order to provide advanced automated and manual exploitation of WebApp vulnerabilities.</li>
+<li>Advanced generic WebApp exploit modules for the <a href="http://www.metasploit.com/">Metasploit</a> framework, utilized either manually or automatically by the Arachni MSF plug-in.</li>
+</ul>
+</li>
+<li>Improved Blind SQL Injection module, significantly less requests per audit.</li>
+<li>XMLRPC server (<strong>New</strong>)</li>
+<li>XMLRPC CLI client (<strong>New</strong>)</li>
+<li>NTLM authentication support (<strong>New</strong>)</li>
+<li>Support for path extractor modules for the Spider (<strong>New</strong>)</li>
+<li>Path extractors: (<strong>New</strong>)
+
+<ul>
+<li>Generic -- extracts URLs from arbitrary text</li>
+<li>Anchors</li>
+<li>Form actions</li>
+<li>Frame sources</li>
+<li>Links</li>
+<li>META refresh</li>
+<li>Script 'src' and script code</li>
+<li>Sitemap</li>
+</ul>
+</li>
+<li>Plug-in support -- allowing the framework to be extended with virtually any functionality (<strong>New</strong>).</li>
+<li>Added plug-ins: (<strong>New</strong>)
+
+<ul>
+<li>Passive proxy</li>
+<li>Automated login</li>
+</ul>
+</li>
+<li>Added modules: (<strong>New</strong>)
+
+<ul>
+<li>Audit
+
+<ul>
+<li>XPath injection</li>
+<li>LDAP injection</li>
+</ul>
+</li>
+<li>Recon
+
+<ul>
+<li>CVS/SVN user disclosure</li>
+<li>Private IP address disclosure</li>
+<li>Robot file reader (in the Common Files module)</li>
+<li>XST</li>
+<li>WebDAV detection</li>
+<li>Allowed HTTP methods</li>
+<li>Credit card number disclosure</li>
+<li>HTTP PUT support</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Extended proxy support (SOCKS4, SOCKS4A, SOCKS5, HTTP/1.1 and HTTP/1.0). (<strong>New</strong>)</li>
+</ul>
+
+
 <h2>Version 0.2</h2>
 
 <ul>
@@ -131,9 +200,9 @@
 </div></div>
     
     <div id="footer">
-  Generated on Sun Oct 31 19:21:39 2010 by 
+  Generated on Wed Nov 24 17:28:18 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.1 (ruby-1.9.2).
+  0.6.2 (ruby-1.9.2).
 </div>
 
   </body>
