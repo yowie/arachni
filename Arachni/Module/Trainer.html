@@ -853,11 +853,11 @@ Analyzes a response looking for new links, forms and cookies.
             <span class='comment'># raise e
 </span>        <span class='kw'>end</span>
 
-        <span class='comment'># ap  res[0].request.headers
-</span>
         <span class='ivar'>@page</span><span class='period'>.</span><span class='id response_headers'>response_headers</span>    <span class='op'>=</span> <span class='id res'>res</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id headers_hash'>headers_hash</span>
         <span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id dup'>dup</span>
         <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span>        <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id url'>url</span><span class='period'>.</span><span class='id dup'>dup</span>
+        <span class='ivar'>@page</span><span class='period'>.</span><span class='id code'>code</span>       <span class='op'>=</span> <span class='id res'>res</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id code'>code</span>
+        <span class='ivar'>@page</span><span class='period'>.</span><span class='id method'>method</span>     <span class='op'>=</span> <span class='id res'>res</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id method'>method</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id upcase'>upcase</span>
 
     <span class='kw'>end</span>
 
@@ -981,7 +981,7 @@ Decodes URLs to reverse multiple encodes and removes NULL characters
 </div>
     
     <div id="footer">
-  Generated on Wed Nov 24 17:39:35 2010 by 
+  Generated on Wed Nov 24 18:25:27 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.2 (ruby-1.9.2).
 </div>

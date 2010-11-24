@@ -671,13 +671,13 @@ code to be executed for every page
       <pre class="lines">
 
 
-182
-183
-184
-185</pre>
+185
+186
+187
+188</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 182</span>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 185</span>
 
 <span class='kw'>def</span> <span class='id on_every_page'>on_every_page</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='ivar'>@on_every_page_blocks</span><span class='period'>.</span><span class='id push'>push</span><span class='lparen'>(</span> <span class='id block'>block</span> <span class='rparen'>)</span>
@@ -801,7 +801,10 @@ Runs the Spider and passes parsed page to the block
 157
 158
 159
-160</pre>
+160
+161
+162
+163</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/spider.rb', line 99</span>
@@ -840,7 +843,10 @@ Runs the Spider and passes parsed page to the block
             <span class='comment'># call the block...if we have one
 </span>            <span class='kw'>if</span> <span class='id block'>block</span>
                 <span class='kw'>begin</span>
-                    <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id run'>run</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id page'>page</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span> <span class='id page'>page</span><span class='period'>.</span><span class='id headers'>headers</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id clone'>clone</span> <span class='rparen'>)</span>
+                    <span class='id new_page'>new_page</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id run'>run</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id page'>page</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span> <span class='id page'>page</span><span class='period'>.</span><span class='id headers'>headers</span> <span class='rparen'>)</span>
+                    <span class='id new_page'>new_page</span><span class='period'>.</span><span class='id code'>code</span>   <span class='op'>=</span> <span class='id page'>page</span><span class='period'>.</span><span class='id code'>code</span>
+                    <span class='id new_page'>new_page</span><span class='period'>.</span><span class='id method'>method</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>GET</span><span class='tstring_end'>'</span></span>
+                    <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id new_page'>new_page</span><span class='period'>.</span><span class='id clone'>clone</span> <span class='rparen'>)</span>
                 <span class='kw'>rescue</span> <span class='const'>Exception</span>
                     <span class='id raise'>raise</span>
                 <span class='kw'>end</span>
@@ -897,17 +903,17 @@ Decodes URLs to reverse multiple encodes and removes NULL characters
       <pre class="lines">
 
 
-165
-166
-167
 168
 169
 170
 171
-172</pre>
+172
+173
+174
+175</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 165</span>
+      <pre class="code"><span class="info file"># File 'lib/spider.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 
@@ -927,7 +933,7 @@ Decodes URLs to reverse multiple encodes and removes NULL characters
 </div>
     
     <div id="footer">
-  Generated on Wed Nov 24 17:39:32 2010 by 
+  Generated on Wed Nov 24 18:25:25 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.2 (ruby-1.9.2).
 </div>

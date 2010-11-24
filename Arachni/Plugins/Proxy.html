@@ -540,8 +540,6 @@ options passed to the plugin
       <pre class="lines">
 
 
-209
-210
 211
 212
 213
@@ -554,10 +552,12 @@ options passed to the plugin
 220
 221
 222
-223</pre>
+223
+224
+225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 209</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 211</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -625,8 +625,6 @@ URLs outside the scope of the scan are not allowed.
       <pre class="lines">
 
 
-167
-168
 169
 170
 171
@@ -657,10 +655,12 @@ URLs outside the scope of the scan are not allowed.
 196
 197
 198
-199</pre>
+199
+200
+201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='id allowed?'>allowed?</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span>
 
@@ -713,12 +713,12 @@ URLs outside the scope of the scan are not allowed.
       <pre class="lines">
 
 
-205
-206
-207</pre>
+207
+208
+209</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 205</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 207</span>
 
 <span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
     <span class='ivar'>@framework</span><span class='period'>.</span><span class='id resume!'>resume!</span>
@@ -774,7 +774,9 @@ Called by the proxy to process each page
 100
 101
 102
-103</pre>
+103
+104
+105</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 81</span>
@@ -792,6 +794,8 @@ Called by the proxy to process each page
 
     <span class='id page'>page</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id run'>run</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='period'>.</span><span class='id unparsed_uri'>unparsed_uri</span><span class='comma'>,</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
     <span class='id page'>page</span> <span class='op'>=</span> <span class='id update_forms'>update_forms</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id req'>req</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id req'>req</span><span class='period'>.</span><span class='id body'>body</span>
+    <span class='id page'>page</span><span class='period'>.</span><span class='id method'>method</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request_method'>request_method</span>
+    <span class='id page'>page</span><span class='period'>.</span><span class='id code'>code</span>   <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id status'>status</span>
 
     <span class='id print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id page'>page</span><span class='period'>.</span><span class='id forms'>forms</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> forms</span><span class='tstring_end'>&quot;</span></span>
     <span class='id print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id page'>page</span><span class='period'>.</span><span class='id links'>links</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> links</span><span class='tstring_end'>&quot;</span></span>
@@ -931,12 +935,12 @@ Called by the proxy to process each page
       <pre class="lines">
 
 
-201
-202
-203</pre>
+203
+204
+205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 201</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='id shutdown?'>shutdown?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>==</span> <span class='const'>SHUTDOWN_URL</span>
@@ -959,8 +963,6 @@ Called by the proxy to process each page
       <pre class="lines">
 
 
-138
-139
 140
 141
 142
@@ -981,10 +983,12 @@ Called by the proxy to process each page
 157
 158
 159
-160</pre>
+160
+161
+162</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 138</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 140</span>
 
 <span class='kw'>def</span> <span class='id update_forms'>update_forms</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id req'>req</span> <span class='rparen'>)</span>
     <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1027,8 +1031,6 @@ Called by the proxy to process each page
       <pre class="lines">
 
 
-105
-106
 107
 108
 109
@@ -1058,10 +1060,12 @@ Called by the proxy to process each page
 133
 134
 135
-136</pre>
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id update_framework_cookies'>update_framework_cookies</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id req'>req</span> <span class='rparen'>)</span>
 
@@ -1105,7 +1109,7 @@ Called by the proxy to process each page
 </div>
     
     <div id="footer">
-  Generated on Wed Nov 24 17:39:33 2010 by 
+  Generated on Wed Nov 24 18:25:25 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.2 (ruby-1.9.2).
 </div>
