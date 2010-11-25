@@ -49,6 +49,7 @@
 <strong>Documentation</strong>:     <a href="http://github.com/Zapotek/arachni/wiki">http://github.com/Zapotek/arachni/wiki</a><br/>
 <strong>Code Documentation</strong>:     <a href="http://zapotek.github.com/arachni/">http://zapotek.github.com/arachni/</a><br/>
 <strong>Author</strong>:       <a href="mailto:tasos.laskos@gmail.com">Tasos</a> "<a href="mailto:zapotek@segfault.gr">Zapotek</a>" <a href="mailto:tasos.laskos@gmail.com">Laskos</a><br/>
+<strong>Twitter</strong>:      <a href="http://twitter.com/Zap0tek">http://twitter.com/Zap0tek</a><br/>
 <strong>Copyright</strong>:    2010<br/>
 <strong>License</strong>:      <a href="file.LICENSE.html">GNU General Public License v2</a></p>
 
@@ -58,53 +59,32 @@
 
 <h2>Synopsis</h2>
 
-<p><span class='object_link'><a href="Arachni.html" title="Arachni (module)">Arachni</a></span> is a feature-full, modular, high-performance Ruby framework aimed towards helping
+<p>Arachni is a feature-full, modular, high-performance Ruby framework aimed towards helping
 penetration testers and administrators evaluate the security of web applications.</p>
 
-<p><span class='object_link'><a href="Arachni.html" title="Arachni (module)">Arachni</a></span> is smart, it trains itself by learning from the HTTP responses it receives
-during the audit process.<br/>
-Unlike other scanners, Arachni takes into account the dynamic
-nature of web applications and can detect changes caused while travelling<br/>
+<p>Arachni is smart, it trains itself by learning from the HTTP responses it receives during the audit process.<br/>
+Unlike other scanners, Arachni takes into account the dynamic nature of web applications and can detect changes caused while travelling<br/>
 through the paths of a web application's cyclomatic complexity.<br/>
-This way attack/input vectors that would otherwise be undetectable by non-humans
-are seamlessly handled by Arachni.</p>
+This way attack/input vectors that would otherwise be undetectable by non-humans are seamlessly handled by Arachni.</p>
 
-<p>Finally, Arachni yields great performance due to its asynchronous HTTP  model (courtesy of Typhoeus).<br/>
+<p>Finally, Arachni yields great performance due to its asynchronous HTTP  model (courtesy of <a href="https://github.com/pauldix/typhoeus">Typhoeus</a>).<br/>
 Thus, you'll only be limited by the responsiveness of the server under audit and your available bandwidth.</p>
 
-<p>Note: Despite the fact that Arachni is mostly targeted towards web application security,
-it can easily be used for general purpose scraping, data-mining, etc with the addition of custom modules.</p>
+<p><strong>Note</strong>: <em>Despite the fact that Arachni is mostly targeted towards web application security, it can easily be used for general purpose scraping, data-mining, etc with the addition of custom modules.</em></p>
 
-<p><span class='object_link'><a href="Arachni.html" title="Arachni (module)">Arachni</a></span> offers:</p>
+<h3>Arachni offers:</h3>
 
-<p><strong>1 A stable, efficient, high-performance framework</strong><br/></p>
+<h4>A stable, efficient, high-performance framework</h4>
 
-<p>Module and report writers are allowed to easily and quickly create and deploy modules
-with the minimum amount of restrictions imposed upon them, while provided
-with the necessary infrastructure to accomplish their goals.<br/>
-Furthermore, they are encouraged to take full advantage of the Ruby language
-under a unified framework that will increase their productivity
-without stifling them or complicating their tasks.<br/>
-Basically, Arachni gives you the right tools for the job and gets the hell out of your way.</p>
+<p>Module, report and plugin writers are allowed to easily and quickly create and deploy their components
+with the minimum amount of restrictions imposed upon them, while provided with the necessary infrastructure to accomplish their goals.<br/>
+Furthermore, they are encouraged to take full advantage of the Ruby language under a unified framework that will increase their productivity
+without stifling them or complicating their tasks.<br/></p>
 
-<p><strong>2 Simplicity</strong><br/>
-Although some parts of the Framework are fairly complex you will never have to deal them directly.<br/>
-From a user's or a module developer's point of view everything appears simple and straight-forward
-all the while providing power, performance and flexibility.</p>
+<h4>Simplicity</h4>
 
-<p>There are only a couple of rules a developer needs to follow:</p>
-
-<ul>
-<li>Implement an abstract class</li>
-<li>Do his thing</li>
-</ul>
-
-
-<p>That's pretty much all you are expected and need to do...
-A glance at an existing report or module will be all you need to get you going.</p>
-
-<p>Users just need to take a look at the help output.<br/>
-However, extensive <a href="http://github.com/Zapotek/arachni/wiki">documentation</a> exists for those who want to be aware of all the details.</p>
+<p>Although some parts of the Framework are fairly complex you will never have to deal them directly.<br/>
+From a user's or a component developer's point of view everything appears simple and straight-forward all the while providing power, performance and flexibility.</p>
 
 <h2>Feature List</h2>
 
@@ -118,35 +98,35 @@ However, extensive <a href="http://github.com/Zapotek/arachni/wiki">documentatio
 <li>Proxy authentication.</li>
 <li>Site authentication (Automated form-based, Cookie-Jar, Basic-Digest, NTLM and others)</li>
 <li>Highlighted command line output.</li>
-<li>UI abstraction.</li>
-<li>Pause/resume functionality.
+<li>UI abstraction.
 
 <ul>
-<li>Interrupts pause the system, the user then has the option to either resume or exit.</li>
+<li>Command line UI</li>
+<li>XMLRPC command line client/server</li>
 </ul>
 </li>
+<li>Pause/resume functionality.</li>
 <li>High performance asynchronous HTTP requests.</li>
 </ul>
 
 
-<h3>Website Crawler (<span class='object_link'><a href="Arachni/Spider.html" title="Arachni::Spider (class)">Arachni::Spider</a></span>)</h3>
+<h3>Website Crawler</h3>
 
-<p>The crawler is provided by <a href="http://anemone.rubyforge.org/">Anemone</a> -- with some slight modifications to accommodate extra features.</p>
+<p>The crawler is provided by a modified version of <a href="http://anemone.rubyforge.org/">Anemone</a>.</p>
 
 <ul>
 <li>Filters for redundant pages like galleries, catalogs, etc based on regular expressions and counters.</li>
 <li>URL exclusion filter based on regular expressions.</li>
 <li>URL inclusion filter based on regular expressions.</li>
-<li>Stays in domain by default and it'll probably stay that way.</li>
 <li>Can optionally follow subdomains.</li>
-<li>Multi-threaded with adjustable thread count.</li>
 <li>Adjustable depth limit.</li>
-<li>Adjustable  link count limit.</li>
+<li>Adjustable link count limit.</li>
 <li>Adjustable redirect limit.</li>
+<li>Modular path extraction via "Path Extractor" components.</li>
 </ul>
 
 
-<h3>HTML Parser (<span class='object_link'><a href="Arachni/Parser.html" title="Arachni::Parser (class)">Arachni::Parser</a></span>)</h3>
+<h3>HTML Parser</h3>
 
 <p>Can extract and analyze:</p>
 
@@ -157,77 +137,103 @@ However, extensive <a href="http://github.com/Zapotek/arachni/wiki">documentatio
 </ul>
 
 
-<p>The analyzer can graciously handle badly written HTML code
-due to the combination of regular expression analysis and <a href="http://nokogiri.org/">Nokogiri</a> HTML parser.</p>
+<p>The analyzer can graciously handle badly written HTML code due to a combination of regular expression analysis and the <a href="http://nokogiri.org/">Nokogiri</a> HTML parser.</p>
 
-<p>This way the system can be extended to be able to handle virtually anything.</p>
-
-<h3>Module Management (<span class='object_link'><a href="Arachni/Module.html" title="Arachni::Module (module)">Arachni::Module</a></span>)</h3>
+<h3>Module Management</h3>
 
 <ul>
-<li>Modular design
+<li>Very simple and easy to use module API providing access to multiple levels of complexity.</li>
+<li>Helper audit methods:
 
 <ul>
-<li>Very simple and easy to use module API providing access at multiple levels.</li>
+<li>For forms, links and cookies auditing.</li>
+<li>A wide range of injection strings/input combinations.</li>
+<li>Writing RFI, SQL injection, XSS etc modules is a matter of minutes if not seconds.</li>
 </ul>
 </li>
-<li>Helper audit methods
+<li>Currently available modules:
 
 <ul>
-<li>For forms, links and cookies.</li>
-<li>Writing RFI, SQL injection, XSS etc mods is a matter of minutes if not seconds.</li>
+<li>Audit:
+
+<ul>
+<li>Blind SQL injection</li>
+<li>CSRF detection</li>
+<li>Eval/Code injection</li>
+<li>LDAP injection</li>
+<li>Path traversal</li>
+<li>Response splitting</li>
+<li>OS command injection</li>
+<li>Remote file inclusion</li>
+<li>SQL injection</li>
+<li>Unvalidated redirects</li>
+<li>XPath injection</li>
+<li>Path XSS</li>
+<li>URI XSS</li>
+<li>XSS</li>
 </ul>
 </li>
-<li>Helper <span class='object_link'><a href="Arachni/HTTP.html" title="Arachni::HTTP (class)">Arachni::HTTP</a></span> interface
+<li>Recon:
 
 <ul>
-<li>A high-performance, simple and easy to use Typhoeus wrapper.</li>
+<li>Allowed HTTP methods</li>
+<li>Back-up files</li>
+<li>Common directories</li>
+<li>Common files</li>
+<li>HTTP PUT</li>
+<li>Insufficient Transport Layer Protection for password forms</li>
+<li>WebDAV detection</li>
+<li>HTTP TRACE detection</li>
+<li>Credit Card number disclosure</li>
+<li>CVS/SVN user disclosure</li>
+<li>Private IP address disclosure</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 
 
-<p>You can find a tutorial module here: <span class='object_link'><a href="Arachni/Modules/SimpleRFI.html" title="Arachni::Modules::SimpleRFI (class)">Arachni::Modules::SimpleRFI</a></span></p>
-
-<h3>Report Management (<span class='object_link'><a href="Arachni/Report.html" title="Arachni::Report (module)">Arachni::Report</a></span>)</h3>
+<h3>Report Management</h3>
 
 <ul>
-<li>Modular design
+<li>Modular design.</li>
+<li>Currently available reports:
 
 <ul>
-<li>Very easy to add new reports.</li>
-<li>Reports are similar to modules...but a lot simpler.</li>
+<li>Standard output</li>
+<li>HTML</li>
+<li>XML</li>
+<li>TXT</li>
+<li>YAML serialization</li>
+<li>Metareport (providing Metasploit integration to allow for <a href="http://zapotek.github.com/arachni/file.EXPLOITATION.html">automated and assisted exploitation</a>)</li>
 </ul>
 </li>
 </ul>
 
 
-<p>You can find an up-to-date sample report here: <span class='object_link'><a href="Arachni/Reports/AP.html" title="Arachni::Reports::AP (class)">Arachni::Reports::AP</a></span><br/>
-And a more complex HTML report here: <span class='object_link'><a href="Arachni/Reports/HTML.html" title="Arachni::Reports::HTML (class)">Arachni::Reports::HTML</a></span></p>
-
-<h3>Plug-in Management (<span class='object_link'><a href="Arachni/Plugin.html" title="Arachni::Plugin (module)">Arachni::Plugin</a></span>)</h3>
+<h3>Plug-in Management</h3>
 
 <ul>
-<li>Modular design
-
-<ul>
-<li>Very easy to add new plug-ins.</li>
+<li>Modular design</li>
 <li>Plug-ins are framework demi-gods, they have direct access to the framework instance.</li>
 <li>Can be used to add any functionality to Arachni.</li>
+<li>Currently available plugins:
+
+<ul>
+<li>Passive Proxy</li>
+<li>Form based AutoLogin</li>
 </ul>
 </li>
 </ul>
 
 
-<h3>Trainer subsystem (<span class='object_link'><a href="Arachni/Module/Trainer.html" title="Arachni::Module::Trainer (class)">Arachni::Module::Trainer</a></span>)</h3>
+<h3>Trainer subsystem</h3>
 
-<p>The Trainer is what enables Arachni to learn from the scan it performs
-and incorporate that knowledge, on the fly, for the duration of the audit.</p>
+<p>The Trainer is what enables Arachni to learn from the scan it performs and incorporate that knowledge, on the fly, for the duration of the audit.</p>
 
-<p>Modules have the ability to individually force the Framework to learn from the HTTP responses they are
-going to induce.<br/>
-However, this is usually not required since Arachni is aware of which requests are more likely
-to uncover new elements or attack vectors and will adapt itself accordingly.</p>
+<p>Modules have the ability to individually force the Framework to learn from the HTTP responses they are going to induce.<br/>
+However, this is usually not required since Arachni is aware of which requests are more likely to uncover new elements or attack vectors and will adapt itself accordingly.</p>
 
 <p>Still, this can be an invaluable asset to Fuzzer modules.</p>
 
@@ -424,36 +430,34 @@ The results of the audit will be saved in the the file <i>test.com.afr</i>.</p>
 <pre class="code">$ ./arachni.rb --lsrep
 </pre>
 
-<p>For a full explenation of all available options you can consult the <a href="http://github.com/Zapotek/arachni/wiki/User-guide">User Guide</a>.</p>
+<p>For a full explanation of all available options you can consult the <a href="http://github.com/Zapotek/arachni/wiki/User-guide">User Guide</a>.</p>
 
 <h2>Requirements</h2>
 
-<p>As of (the upcoming) version 0.2.1 Arachni will also be released as <a href="http://stanford.edu/~pgbovine/cde.html">CDE packages</a> for 32bit and 64bit architectures.<br/>
-CDE packages are self contained and thus alleviate the need for Ruby and other dependencies to be installed.<br/>
-You can choose the CDE package that suits you best from the <a href="https://github.com/Zapotek/arachni/downloads">download</a> page and escape the dependency hell.<br/></p>
+<ul>
+<li>ruby1.9.1 or later (<strong>Version 1.9.2 would be preferable.</strong>)</li>
+<li>Nokogiri</li>
+<li>Typhoeus</li>
+<li>Awesome print</li>
+<li>Liquid (for HTML reporting)</li>
+<li>Yardoc (to generate the documentation)</li>
+<li>Robots</li>
+</ul>
 
-<p>Otherwise, in order to use Arachni you will need the following:
-  * ruby1.9.1 or later (<strong>Version 1.9.2 would be preferable.</strong>)
-  * Nokogiri
-  * Typhoeus
-  * Awesome print
-  * Liquid (For <span class='object_link'><a href="Arachni/Reports/HTML.html" title="Arachni::Reports::HTML (class)">Arachni::Reports::HTML</a></span> reporting)
-  * Yardoc (if you want to generate the documentation)
-  * Robots</p>
 
 <p>Run the following to install all required system libraries:</p>
 
 <pre class="code">sudo apt-get install libxml2-dev libxslt1-dev libcurl4-openssl-dev ruby1.9.1-full ruby1.8-dev rubygems
 </pre>
 
-<p>(Adapt the above line to your Linux distro.)</p>
+<p><em>Adapt the above line to your Linux distro.</em></p>
 
 <p>Run the following to install all gem dependencies:</p>
 
 <pre class="code"><span class='id sudo'>sudo</span> <span class='id gem'>gem</span> <span class='id install'>install</span> <span class='id nokogiri'>nokogiri</span> <span class='id typhoeus'>typhoeus</span> <span class='id awesome_print'>awesome_print</span> <span class='id liquid'>liquid</span> <span class='id yard'>yard</span> <span class='id robots'>robots</span>
 </pre>
 
-<p>(If you have more than one Ruby version installed make sure that you install the gems and run Arachni with the proper version.)</p>
+<p><em>If you have more than one Ruby version installed make sure that you install the gems and run Arachni with the proper version.</em></p>
 
 <h2>Supported platforms</h2>
 
@@ -481,7 +485,7 @@ caused by the use of this software.</p>
 <p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p></div></div>
     
     <div id="footer">
-  Generated on Wed Nov 24 22:20:03 2010 by 
+  Generated on Thu Nov 25 02:19:56 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.2 (ruby-1.9.2).
 </div>
