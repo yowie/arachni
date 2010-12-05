@@ -435,6 +435,12 @@ The results of the audit will be saved in the the file <i>test.com.afr</i>.</p>
 
 <h2>Requirements</h2>
 
+<p>As of version 0.2.1 Arachni will also be released as <a href="http://stanford.edu/~pgbovine/cde.html">CDE packages</a> for 32bit and 64bit architectures.<br/>
+CDE packages are self contained and thus alleviate the need for Ruby and other dependencies to be installed.<br/>
+You can choose the CDE package that suits you best from the <a href="https://github.com/Zapotek/arachni/downloads">download</a> page and escape the dependency hell.<br/></p>
+
+<p>Otherwise, in order to use Arachni you will need the following:</p>
+
 <ul>
 <li>ruby1.9.1 or later (<strong>Version 1.9.2 would be preferable.</strong>)</li>
 <li>Nokogiri</li>
@@ -452,6 +458,12 @@ The results of the audit will be saved in the the file <i>test.com.afr</i>.</p>
 </pre>
 
 <p><em>Adapt the above line to your Linux distro.</em></p>
+
+<p>Users are <strong>strongly</strong> encouraged to compile Ruby 1.9.2 from source and use it to run Arachni,
+in which case the following system packages don't need to be installed:</p>
+
+<pre class="code">ruby1.9.1-full ruby1.8-dev rubygems
+</pre>
 
 <p>Run the following to install all gem dependencies:</p>
 
@@ -486,7 +498,7 @@ caused by the use of this software.</p>
 <p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p></div></div>
     
     <div id="footer">
-  Generated on Thu Nov 25 02:50:51 2010 by 
+  Generated on Sun Dec  5 16:37:39 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.2 (ruby-1.9.2).
 </div>
