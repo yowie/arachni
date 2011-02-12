@@ -43,7 +43,7 @@
     
     <div id="content"><div id='filecontents'><h1>Arachni - Web Application Security Scanner Framework</h1>
 
-<p><strong>Version</strong>:     0.2.1<br/>
+<p><strong>Version</strong>:     0.2.2<br/>
 <strong>Homepage</strong>:     <a href="http://github.com/zapotek/arachni">http://github.com/zapotek/arachni</a><br/>
 <strong>News</strong>:     <a href="http://trainofthought.segfault.gr/category/projects/arachni/">http://trainofthought.segfault.gr/category/projects/arachni/</a><br/>
 <strong>Documentation</strong>:     <a href="http://github.com/Zapotek/arachni/wiki">http://github.com/Zapotek/arachni/wiki</a><br/>
@@ -51,12 +51,15 @@
 <strong>Google Group</strong>: <a href="http://groups.google.com/group/arachni">http://groups.google.com/group/arachni</a><br/>
 <strong>Author</strong>:       <a href="mailto:tasos.laskos@gmail.com">Tasos</a> "<a href="mailto:zapotek@segfault.gr">Zapotek</a>" <a href="mailto:tasos.laskos@gmail.com">Laskos</a><br/>
 <strong>Twitter</strong>:      <a href="http://twitter.com/Zap0tek">http://twitter.com/Zap0tek</a><br/>
-<strong>Copyright</strong>:    2010<br/>
+<strong>Copyright</strong>:    2010-2011<br/>
 <strong>License</strong>:      <a href="file.LICENSE.html">GNU General Public License v2</a></p>
 
 <p><img src="http://zapotek.github.com/arachni/logo.png" alt="Arachni logo" /></p>
 
 <p>Kindly sponsored by: <a href="http://www.nopsec.com"><img src="http://zapotek.github.com/arachni/nopsec_logo.png" alt="NopSec" /></a></p>
+
+<p>Help by donating:
+<a href="http://www.pledgie.com/campaigns/14482"><img src="http://pledgie.com/campaigns/14482.png" alt="Click here to lend your support to: Arachni - Web Application Security Scanner Framework and make a donation at www.pledgie.com!" /></a></p>
 
 <h2>Synopsis</h2>
 
@@ -99,11 +102,21 @@ From a user's or a component developer's point of view everything appears simple
 <li>Proxy authentication.</li>
 <li>Site authentication (Automated form-based, Cookie-Jar, Basic-Digest, NTLM and others)</li>
 <li>Highlighted command line output.</li>
-<li>UI abstraction.
+<li>UI abstraction:
 
 <ul>
 <li>Command line UI</li>
-<li>XMLRPC command line client/server</li>
+<li>XMLRPC Client/Dispatch server
+
+<ul>
+<li>Centralised deployment</li>
+<li>Multiple clients</li>
+<li>Parallel scans</li>
+<li>SSL encryption</li>
+<li>SSL cert based client authentication</li>
+<li>Remote monitoring</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Pause/resume functionality.</li>
@@ -158,20 +171,26 @@ From a user's or a component developer's point of view everything appears simple
 <li>Audit:
 
 <ul>
-<li>Blind SQL injection</li>
+<li>SQL injection</li>
+<li>Blind SQL injection using rDiff analysis</li>
+<li>Blind SQL injection using timing attacks</li>
 <li>CSRF detection</li>
-<li>Eval/Code injection</li>
+<li>Code injection (PHP, Ruby, Python, JSP, ASP.NET)</li>
+<li>Blind code injection using timing attacks (PHP, Ruby, Python, JSP, ASP.NET)</li>
 <li>LDAP injection</li>
 <li>Path traversal</li>
 <li>Response splitting</li>
-<li>OS command injection</li>
+<li>OS command injection (*nix, Windows)</li>
+<li>Blind OS command injection using timing attacks (*nix, Windows)</li>
 <li>Remote file inclusion</li>
-<li>SQL injection</li>
 <li>Unvalidated redirects</li>
 <li>XPath injection</li>
 <li>Path XSS</li>
 <li>URI XSS</li>
 <li>XSS</li>
+<li>XSS in event attributes of HTML elements</li>
+<li>XSS in HTML tags</li>
+<li>XSS in HTML 'script' tags</li>
 </ul>
 </li>
 <li>Recon:
@@ -188,6 +207,13 @@ From a user's or a component developer's point of view everything appears simple
 <li>Credit Card number disclosure</li>
 <li>CVS/SVN user disclosure</li>
 <li>Private IP address disclosure</li>
+<li>Common backdoors</li>
+<li>.htaccess LIMIT misconfiguration</li>
+<li>Interesting responses</li>
+<li>HTML object grepper</li>
+<li>E-mail address disclosure</li>
+<li>US Social Security Number disclosure</li>
+<li>Forceful directory listing</li>
 </ul>
 </li>
 </ul>
@@ -224,6 +250,11 @@ From a user's or a component developer's point of view everything appears simple
 <ul>
 <li>Passive Proxy</li>
 <li>Form based AutoLogin</li>
+<li>Dictionary attacker for HTTP Auth</li>
+<li>Dictionary attacker for form based authentication</li>
+<li>Cookie collector</li>
+<li>Healthmap -- Generates sitemap showing the health of each crawled/audited URL</li>
+<li>Content-types -- Logs content-types of server responses aiding in the identification of interesting (possibly leaked) files</li>
 </ul>
 </li>
 </ul>
@@ -240,7 +271,7 @@ However, this is usually not required since Arachni is aware of which requests a
 
 <h2>Usage</h2>
 
-<pre class="code">   Arachni - Web Application Security Scanner Framework v0.2.1 [0.2]
+<pre class="code">   Arachni - Web Application Security Scanner Framework v0.2.2 [0.2]
    Author: Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;
                                   &lt;zapotek@segfault.gr&gt;
            (With the support of the community and the Arachni Team.)
@@ -268,11 +299,12 @@ However, this is usually not required since Arachni is aware of which requests a
 
 --http-req-limit            concurent HTTP requests limit
                               (Be carefull not to kill your server.)
-                              (Default: 200)
-                              (NOTE: If your scan seems unresponsive try lowering the limit.)
+                              (Default: 60)
+                              (*NOTE*: If your scan seems unresponsive try lowering the limit.)
 
 --http-harvest-last         build up the HTTP request queue of the audit for the whole site
                              and harvest the HTTP responses at the end of the crawl.
+                             (In some test cases this option has split the scan time in half.)
                              (Default: responses will be harvested for each page)
                              (*NOTE*: If you are scanning a high-end server and
                                you are using a powerful machine with enough bandwidth
@@ -331,6 +363,8 @@ However, this is usually not required since Arachni is aware of which requests a
 --link-count=&lt;number&gt;       how many links to follow (default: inf)
 
 --redirect-limit=&lt;number&gt;   how many redirects to follow (default: inf)
+
+--spider-first              spider first, audit later
 </pre>
 
 <h3>Auditor</h3>
@@ -366,13 +400,34 @@ However, this is usually not required since Arachni is aware of which requests a
 
 -m &lt;modname,modname..&gt;
 --mods=&lt;modname,modname..&gt;  comma separated list of modules to deploy
-                              (Use '*' to deploy all modules)
-                              (You can exclude modules by prefixing their name with a dash:
+                              (Use '*' as a module name to deploy all modules or inside module names like so:
+                                  xss_*   to load all xss modules
+                                  sqli_*  to load all sql injection modules
+                                  etc.
+
+                               You can exclude modules by prefixing their name with a dash:
                                   --mods=*,-backup_files,-xss
-                               The above will load all modules except for the 'backup_files' and 'xss' modules. )
+                               The above will load all modules except for the 'backup_files' and 'xss' modules.
+
+                               Or mix and match:
+                                  -xss_*   to unload all xss modules. )
 </pre>
 
 <h3>Reports</h3>
+
+<pre class="code">--lsrep                       list available reports
+
+--repload=&lt;file&gt;              load audit results from an .afr file
+                                (Allows you to create new reports from finished scans.)
+
+--report='&lt;report&gt;:&lt;optname&gt;=&lt;val&gt;,&lt;optname2&gt;=&lt;val2&gt;,...'
+
+                              &lt;report&gt;: the name of the report as displayed by '--lsrep'
+                                (Default: stdout)
+                                (Can be used multiple times.)
+</pre>
+
+<h3>Plugins</h3>
 
 <pre class="code">--lsrep                       list available reports
 
@@ -408,9 +463,9 @@ However, this is usually not required since Arachni is aware of which requests a
 
 <h3>Examples</h3>
 
-<p>As of v0.2.1 you can simply run Arachni like so:</p>
+<p>You can simply run Arachni like so:</p>
 
-<pre class="code">$ ./arachni.rb http://test.com
+<pre class="code">$ arachni http://test.com
 </pre>
 
 <p>which will load all modules and audit all forms, links and cookies.</p>
@@ -418,59 +473,93 @@ However, this is usually not required since Arachni is aware of which requests a
 <p>In the following example all modules will be run against <i>http://test.com</i>, auditing links/forms/cookies and following subdomains --with verbose output enabled.<br/>
 The results of the audit will be saved in the the file <i>test.com.afr</i>.</p>
 
-<pre class="code">$ ./arachni.rb -fv http://test.com --report=afr:outfile=test.com.afr
+<pre class="code">$ arachni -fv http://test.com --report=afr:outfile=test.com.afr
 </pre>
 
 <p>The Arachni Framework Report (.afr) file can later be loaded by Arachni to create a report, like so:</p>
 
-<pre class="code">$ ./arachni.rb --repload=test.com.afr --report=html:outfile=my_report.html
+<pre class="code">$ arachni --repload=test.com.afr --report=html:outfile=my_report.html
 </pre>
 
 <p>or any other report type as shown by:</p>
 
-<pre class="code">$ ./arachni.rb --lsrep
+<pre class="code">$ arachni --lsrep
+</pre>
+
+<h4>You can make module loading easier by using wildcards (*) and exclusions (-).</h4>
+
+<p>To load all <em>xss</em> modules using a wildcard:</p>
+
+<pre class="code">$ arachni http://example.net --mods=xss_*
+</pre>
+
+<p>To load all <em>audit</em> modules using a wildcard:</p>
+
+<pre class="code">$ arachni http://example.net --mods=audit*
+</pre>
+
+<p>To exclude only the <em>csrf</em> module:</p>
+
+<pre class="code">$ arachni http://example.net --mods=*,-csrf
+</pre>
+
+<p>Or you can mix and match; to run everything but the <em>xss</em> modules:</p>
+
+<pre class="code">$ arachni http://example.net --mods=*,-xss_*
 </pre>
 
 <p>For a full explanation of all available options you can consult the <a href="http://github.com/Zapotek/arachni/wiki/User-guide">User Guide</a>.</p>
 
-<h2>Requirements</h2>
+<h4>Performing a comprehensive scan quickly</h4>
 
-<p>As of version 0.2.1 Arachni will also be released as <a href="http://stanford.edu/~pgbovine/cde.html">CDE packages</a> for 32bit and 64bit architectures.<br/>
+<p>Arachni comes with a preconfigured profile (<em>profiles/comprehensive.afp</em>) for a comprehensive audit.
+This profile loads all modules, audits links/forms/cookies and loads the HealthMap and Content-Types plugins.</p>
+
+<p>You can use it like so:</p>
+
+<pre class="code">$ arachni --load-profile=profiles/comprehensive.afp http://example.net
+</pre>
+
+<h4>Performing a full scan quickly</h4>
+
+<p>The <em>full</em> profile adds header auditing to the <em>comprehensive</em> profile.</p>
+
+<p><em>NOTICE: Auditing headers can increase scan time by an order of magnitude (depending on the website) and may be considered over-the-top in most scenarios.</em></p>
+
+<p>You can use it like so:</p>
+
+<pre class="code">$ arachni --load-profile=profiles/full.afp http://example.net
+</pre>
+
+<p><em>If you installed the Gem then you'll have to look for the "profiles" directory in your gems path.</em></p>
+
+<h2>Installation</h2>
+
+<h3>CDE packages</h3>
+
+<p>Arachni is released as <a href="http://stanford.edu/~pgbovine/cde.html">CDE packages</a> for 32bit and 64bit architectures.<br/>
 CDE packages are self contained and thus alleviate the need for Ruby and other dependencies to be installed.<br/>
-You can choose the CDE package that suits you best from the <a href="https://github.com/Zapotek/arachni/downloads">download</a> page and escape the dependency hell.<br/></p>
+You can choose the CDE package that suits you best from the <a href="https://github.com/Zapotek/arachni/downloads">download</a> page and escape the dependency hell.<br/>
+If you decide to go the CDE route you can skip the rest, you're done.</p>
 
-<p>Otherwise, in order to use Arachni you will need the following:</p>
+<p><em>The CDE packages are for Linux <strong>only</strong> and do not include the XMLRPC server components for security reasons.</em></p>
 
-<ul>
-<li>ruby1.9.1 or later (<strong>Version 1.9.2 would be preferable.</strong>)</li>
-<li>Nokogiri</li>
-<li>Typhoeus</li>
-<li>Awesome print</li>
-<li>Liquid (for HTML reporting)</li>
-<li>Yardoc (to generate the documentation)</li>
-<li>Robots</li>
-</ul>
+<h3>Gem</h3>
 
+<p>In order to use Arachni you will need to have Ruby 1.9.2 installed <em>including</em> the dev package/headers.<br/>
+The prefered ways to accomplish this is by either using <a href="http://rvm.beginrescueend.com/">RVM</a> or by downloading and compiling the source code for <a href="http://www.ruby-lang.org/en/downloads/">Ruby 1.9.2</a> manually.</p>
 
-<p>Run the following to install all required system libraries:</p>
+<p>To install Arachni:</p>
 
-<pre class="code">sudo apt-get install libxml2-dev libxslt1-dev libcurl4-openssl-dev ruby1.9.1-full ruby1.8-dev rubygems
+<pre class="code">$ gem install arachni
 </pre>
 
-<p><em>Adapt the above line to your Linux distro.</em></p>
+<h3>Source</h3>
 
-<p>Users are <strong>strongly</strong> encouraged to compile Ruby 1.9.2 from source and use it to run Arachni,
-in which case the following system packages don't need to be installed:</p>
+<p>If you want to clone and repository and work with the source code then you'll need to run the following to install all gem dependencies:</p>
 
-<pre class="code">ruby1.9.1-full ruby1.8-dev rubygems
+<pre class="code">$ gem install nokogiri typhoeus awesome_print liquid yard robots sys-proctable terminal-table
 </pre>
-
-<p>Run the following to install all gem dependencies:</p>
-
-<pre class="code"><span class='id sudo'>sudo</span> <span class='id gem'>gem</span> <span class='id install'>install</span> <span class='id nokogiri'>nokogiri</span> <span class='id typhoeus'>typhoeus</span> <span class='id awesome_print'>awesome_print</span> <span class='id liquid'>liquid</span> <span class='id yard'>yard</span> <span class='id robots'>robots</span>
-</pre>
-
-<p><em>If you have more than one Ruby version installed make sure that you install the gems and run Arachni with the proper version.</em></p>
 
 <h2>Supported platforms</h2>
 
@@ -498,9 +587,9 @@ caused by the use of this software.</p>
 <p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p></div></div>
     
     <div id="footer">
-  Generated on Sun Dec  5 16:37:39 2010 by 
+  Generated on Fri Jan 28 16:24:41 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.2 (ruby-1.9.2).
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>

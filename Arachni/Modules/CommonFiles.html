@@ -88,9 +88,6 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-Backup file discovery module.
-</p>
-<p>
 Looks for sensitive common files on the server.
 </p>
 <p>
@@ -101,7 +98,7 @@ Looks for sensitive common files on the server.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1.2
+@version: 0.1.3
 </p>
 
 
@@ -193,8 +190,8 @@ Looks for sensitive common files on the server.
 
   
     <span class="summary_desc"><div class='inline'><p>
-Adds a vulnerability to the @results array<br/> and outputs an
-&#8220;OK&#8221; message with the filename and its url.
+Adds an issue to the @results array<br/> and outputs an &#8220;OK&#8221;
+message with the filename and its url.
 </p>
 </div></span>
   
@@ -223,6 +220,27 @@ Adds a vulnerability to the @results array<br/> and outputs an
 A new instance of CommonFiles.
 </p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -270,7 +288,7 @@ A new instance of CommonFiles.
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Module/Base.html#prepare-instance_method" title="Arachni::Module::Base#prepare (method)">#prepare</a></span>, <span class='object_link'><a href="../Module/Base.html#register_results-instance_method" title="Arachni::Module::Base#register_results (method)">#register_results</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Module/Base.html#register_results-instance_method" title="Arachni::Module::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Module/Base.html#skip%3F-instance_method" title="Arachni::Module::Base#skip? (method)">#skip?</a></span></p>
 
   
   
@@ -280,7 +298,7 @@ A new instance of CommonFiles.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Auditor.html" title="Arachni::Module::Auditor (module)">Arachni::Module::Auditor</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Auditor.html#audit-instance_method" title="Arachni::Module::Auditor#audit (method)">#audit</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_elems-instance_method" title="Arachni::Module::Auditor#audit_elems (method)">#audit_elems</a></span>, <span class='object_link'><a href="../Module/Auditor.html#log_match-instance_method" title="Arachni::Module::Auditor#log_match (method)">#log_match</a></span>, <span class='object_link'><a href="../Module/Auditor.html#match_and_log-instance_method" title="Arachni::Module::Auditor#match_and_log (method)">#match_and_log</a></span>, <span class='object_link'><a href="../Module/Auditor.html#method_missing-instance_method" title="Arachni::Module::Auditor#method_missing (method)">#method_missing</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Auditor.html#audit-instance_method" title="Arachni::Module::Auditor#audit (method)">#audit</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_elems-instance_method" title="Arachni::Module::Auditor#audit_elems (method)">#audit_elems</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout-instance_method" title="Arachni::Module::Auditor#audit_timeout (method)">#audit_timeout</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_debug_msg-instance_method" title="Arachni::Module::Auditor#audit_timeout_debug_msg (method)">#audit_timeout_debug_msg</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_phase_2-instance_method" title="Arachni::Module::Auditor#audit_timeout_phase_2 (method)">#audit_timeout_phase_2</a></span>, <span class='object_link'><a href="../Module/Auditor.html#log-instance_method" title="Arachni::Module::Auditor#log (method)">#log</a></span>, <span class='object_link'><a href="../Module/Auditor.html#match_and_log-instance_method" title="Arachni::Module::Auditor#match_and_log (method)">#match_and_log</a></span>, <span class='object_link'><a href="../Module/Auditor.html#method_missing-instance_method" title="Arachni::Module::Auditor#method_missing (method)">#method_missing</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timing_attack-instance_method" title="Arachni::Module::Auditor#timing_attack (method)">#timing_attack</a></span></p>
 
   
   
@@ -300,7 +318,7 @@ A new instance of CommonFiles.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -328,31 +346,15 @@ A new instance of CommonFiles
       <pre class="lines">
 
 
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40</pre>
+28
+29
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
-
-    <span class='ivar'>@__common_files</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>filenames.txt</span><span class='tstring_end'>'</span></span>
-
-    <span class='comment'># to keep track of the requests and not repeat them
-</span>    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-
-    <span class='comment'># our results array
-</span>    <span class='ivar'>@results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -389,11 +391,6 @@ A new instance of CommonFiles
       <pre class="lines">
 
 
-76
-77
-78
-79
-80
 81
 82
 83
@@ -409,10 +406,15 @@ A new instance of CommonFiles
 93
 94
 95
-96</pre>
+96
+97
+98
+99
+100
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -420,14 +422,14 @@ A new instance of CommonFiles
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Tries to find common sensitive files on the server.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:elements</span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.3</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:references</span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='symbol'>:targets</span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
-        <span class='symbol'>:vulnerability</span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='symbol'>:issue</span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='symbol'>:name</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>A common sensitive file exists on the server.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
             <span class='symbol'>:description</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-            <span class='symbol'>:cwe</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>530</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-            <span class='symbol'>:severity</span>    <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>LOW</span><span class='comma'>,</span>
+            <span class='symbol'>:cwe</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='symbol'>:severity</span>    <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>LOW</span><span class='comma'>,</span>
             <span class='symbol'>:cvssv2</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:remedy_guidance</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:remedy_code</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -456,8 +458,8 @@ A new instance of CommonFiles
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Adds a vulnerability to the @results array<br/> and outputs an
-&#8220;OK&#8221; message with the filename and its url.
+Adds an issue to the @results array<br/> and outputs an &#8220;OK&#8221;
+message with the filename and its url.
 </p>
 
 
@@ -501,23 +503,6 @@ the discovered filename
       
     </li>
   
-    <li>
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-        <span class='name'>url</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>
-the url of the discovered file
-</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -526,10 +511,6 @@ the url of the discovered file
       <pre class="lines">
 
 
-106
-107
-108
-109
 110
 111
 112
@@ -552,25 +533,29 @@ the url of the discovered file
 129
 130
 131
-132</pre>
+132
+133
+134
+135
+136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id filename'>filename</span> <span class='rparen'>)</span>
 
-    <span class='kw'>return</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>!=</span> <span class='int'>200</span> <span class='op'>||</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id custom_404?'>custom_404?</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>!=</span> <span class='int'>200</span> <span class='op'>||</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id custom_404?'>custom_404?</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 
     <span class='id url'>url</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span>
     <span class='comment'># append the result to the results array
-</span>    <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Vulnerability</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
+</span>    <span class='ivar'>@results</span> <span class='op'>&lt;&lt;</span> <span class='const'>Issue</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
         <span class='symbol'>:var</span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:url</span>          <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span>
         <span class='symbol'>:injected</span>     <span class='op'>=&gt;</span> <span class='id filename'>filename</span><span class='comma'>,</span>
         <span class='symbol'>:id</span>           <span class='op'>=&gt;</span> <span class='id filename'>filename</span><span class='comma'>,</span>
         <span class='symbol'>:regexp</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:regexp_match</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:elem</span>         <span class='op'>=&gt;</span> <span class='const'>Vulnerability</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>PATH</span><span class='comma'>,</span>
+        <span class='symbol'>:elem</span>         <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>PATH</span><span class='comma'>,</span>
         <span class='symbol'>:response</span>     <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span>
         <span class='symbol'>:headers</span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='symbol'>:request</span>    <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id headers'>headers</span><span class='comma'>,</span>
@@ -590,6 +575,58 @@ the url of the discovered file
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="prepare-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prepare</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id prepare'>prepare</span>
+    <span class='comment'># to keep track of the requests and not repeat them
+</span>    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id new'>new</span>
+
+    <span class='comment'># our results array
+</span>    <span class='ivar'>@results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='cvar'>@@__filenames</span> <span class='op'>||=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='cvar'>@@__filenames</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+
+    <span class='id read_file'>read_file</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>filenames.txt</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id file'>file</span><span class='op'>|</span>
+        <span class='cvar'>@@__filenames</span> <span class='op'>&lt;&lt;</span> <span class='id file'>file</span>
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="run-instance_method">
   
     - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>run</strong> 
@@ -602,12 +639,6 @@ the url of the discovered file
       <pre class="lines">
 
 
-42
-43
-44
-45
-46
-47
 48
 49
 50
@@ -633,18 +664,23 @@ the url of the discovered file
 70
 71
 72
-73</pre>
+73
+74
+75
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/common_files.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Scanning...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-
     <span class='id path'>path</span> <span class='op'>=</span> <span class='id get_path'>get_path</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span>
 
-    <span class='id read_file'>read_file</span><span class='lparen'>(</span> <span class='ivar'>@__common_files</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Scanning...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='cvar'>@@__filenames</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id file'>file</span><span class='op'>|</span>
 
         <span class='comment'>#
@@ -656,11 +692,9 @@ the url of the discovered file
 </span>
         <span class='id url'>url</span>  <span class='op'>=</span> <span class='id path'>path</span> <span class='op'>+</span> <span class='id file'>file</span>
 
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
         <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Checking for </span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
         <span class='id req'>req</span>  <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='symbol'>:train</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='rparen'>)</span>
-        <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='id url'>url</span>
 
         <span class='id req'>req</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
@@ -669,6 +703,7 @@ the url of the discovered file
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
 
+    <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='id path'>path</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -680,9 +715,9 @@ the url of the discovered file
 </div>
     
     <div id="footer">
-  Generated on Sun Dec  5 16:37:44 2010 by 
+  Generated on Fri Jan 28 16:24:47 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.2 (ruby-1.9.2).
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>

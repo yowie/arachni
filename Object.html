@@ -162,13 +162,21 @@ Deep-clones self using a Marshal dump-load.
 
 24
 25
-26</pre>
+26
+27
+28
+29
+30</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/ruby/object.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id deep_clone'>deep_clone</span>
-    <span class='kw'>return</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span>  <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='kw'>begin</span>
+        <span class='kw'>return</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span>  <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span>
+        <span class='kw'>return</span> <span class='kw'>self</span>
+    <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -180,9 +188,9 @@ Deep-clones self using a Marshal dump-load.
 </div>
     
     <div id="footer">
-  Generated on Sun Dec  5 16:37:41 2010 by 
+  Generated on Fri Jan 28 16:24:43 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.2 (ruby-1.9.2).
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>

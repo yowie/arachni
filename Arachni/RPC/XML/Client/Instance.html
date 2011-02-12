@@ -1,0 +1,677 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Arachni::RPC::XML::Client::Instance</title>
+<link rel="stylesheet" href="../../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../../../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../../_index.html">Index (I)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../../../Arachni.html" title="Arachni (module)">Arachni</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../RPC.html" title="Arachni::RPC (module)">RPC</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../XML.html" title="Arachni::RPC::XML (module)">XML</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Client.html" title="Arachni::RPC::XML::Client (module)">Client</a></span></span>
+     &raquo; 
+    <span class="title">Instance</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Arachni::RPC::XML::Client::Instance
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Arachni::RPC::XML::Client::Instance</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/rpc/xml/client/instance.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+XMLRPC client for remote instances spawned by a remote dispatcher
+</p>
+<p>
+@author: Tasos &#8220;Zapotek&#8221; Laskos
+</p>
+<pre class="code">
+                                     &lt;tasos.laskos@gmail.com&gt;
+                                     &lt;zapotek@segfault.gr&gt;
+</pre>
+<p>
+@version: 0.1
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+   
+    
+   
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Instance/Mapper.html" title="Arachni::RPC::XML::Client::Instance::Mapper (class)">Mapper</a></span>, <span class='object_link'><a href="Instance/OptsMapper.html" title="Arachni::RPC::XML::Client::Instance::OptsMapper (class)">OptsMapper</a></span>
+    
+  
+</p>
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#framework-instance_method" title="#framework (instance method)">- (Object) <strong>framework</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute framework.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#modules-instance_method" title="#modules (instance method)">- (Object) <strong>modules</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute modules.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#opts-instance_method" title="#opts (instance method)">- (Object) <strong>opts</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute opts.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#plugins-instance_method" title="#plugins (instance method)">- (Object) <strong>plugins</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute plugins.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#service-instance_method" title="#service (instance method)">- (Object) <strong>service</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute service.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#call-instance_method" title="#call (instance method)">- (Object) <strong>call</strong>(method, *args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Used to make old school XMLRPC calls.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Instance) <strong>initialize</strong>(opts, url) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Instance.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Arachni::RPC::XML::Client::Instance (class)">Instance</a></span></tt>) <strong>initialize</strong>(opts, url) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of Instance
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/client/instance.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+
+    <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='id opts'>opts</span>
+
+    <span class='comment'># start the XMLRPC client
+</span>    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>XMLRPC</span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id new2'>new2</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+
+    <span class='comment'># there'll be a HELL of lot of output so things might get..laggy.
+</span>    <span class='comment'># a big timeout is required to avoid Timeout exceptions...
+</span>    <span class='ivar'>@server</span><span class='period'>.</span><span class='id timeout'>timeout</span> <span class='op'>=</span> <span class='int'>9999999</span>
+
+
+    <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id ssl_pkey'>ssl_pkey</span> <span class='op'>||</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id ssl_pkey'>ssl_pkey</span>
+        <span class='ivar'>@server</span><span class='period'>.</span><span class='id instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span> <span class='symbol'>:@http</span> <span class='rparen'>)</span><span class='period'>.</span>
+            <span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span> <span class='symbol'>:@ssl_context</span><span class='comma'>,</span> <span class='id prep_ssl_context'>prep_ssl_context</span><span class='lparen'>(</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='kw'>else</span>
+        <span class='ivar'>@server</span><span class='period'>.</span><span class='id instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span> <span class='symbol'>:@http</span> <span class='rparen'>)</span><span class='period'>.</span>
+            <span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span> <span class='symbol'>:@verify_mode</span><span class='comma'>,</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>SSL</span><span class='op'>::</span><span class='const'>VERIFY_NONE</span> <span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@opts</span>      <span class='op'>=</span> <span class='const'>OptsMapper</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@server</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>opts</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='const'>Mapper</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@server</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>framework</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='ivar'>@modules</span>   <span class='op'>=</span> <span class='const'>Mapper</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@server</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>modules</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='ivar'>@plugins</span>   <span class='op'>=</span> <span class='const'>Mapper</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@server</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='ivar'>@service</span>   <span class='op'>=</span> <span class='const'>Mapper</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@server</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>service</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="framework-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="framework-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>framework</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute framework
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/client/instance.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id framework'>framework</span>
+  <span class='ivar'>@framework</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="modules-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="modules-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>modules</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute modules
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/client/instance.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id modules'>modules</span>
+  <span class='ivar'>@modules</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="opts-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="opts-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>opts</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute opts
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/client/instance.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id opts'>opts</span>
+  <span class='ivar'>@opts</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="plugins-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="plugins-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>plugins</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute plugins
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/client/instance.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id plugins'>plugins</span>
+  <span class='ivar'>@plugins</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="service-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="service-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>service</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute service
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/client/instance.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id service'>service</span>
+  <span class='ivar'>@service</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="call-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>call</strong>(method, *args) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Used to make old school XMLRPC calls
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/client/instance.rb', line 100</span>
+
+<span class='kw'>def</span> <span class='id call'>call</span><span class='lparen'>(</span> <span class='id method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
+    <span class='ivar'>@server</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Jan 28 16:24:48 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

@@ -43,7 +43,98 @@
     
     <div id="content"><div id='filecontents'><h1>ChangeLog</h1>
 
-<h2>Version 0.2.1</h2>
+<h2>Version 0.2.2 <em>(Under development)</em></h2>
+
+<ul>
+<li>Changed classification from "Vulnerabilities" to "Issues" (<strong>New</strong>)</li>
+<li>Improved detection of custom 404 pages.</li>
+<li>Reports updated to show plug-in results.</li>
+<li>Updated framework-wide cookie handling.</li>
+<li>Added a simple update script based on <em>git</em>.</li>
+<li>Major performance optimizations (4x faster in most tests)
+
+<ul>
+<li>All modules now use asynchronous requests and are optimized for highest traffic efficiency</li>
+<li>All index Arrays have been replaced by Sets to minimize look-up times</li>
+<li>Mark-up parsing has been reduced dramatically</li>
+<li>File I/O blocking in modules has been eliminated</li>
+</ul>
+</li>
+<li>Crawler
+
+<ul>
+<li>Improved performance</li>
+<li>Added '--spider-first" option  (<strong>New</strong>)</li>
+</ul>
+</li>
+<li>Substituted the XMLRPC server with an XMLRPC dispatch server  (<strong>New</strong>)
+
+<ul>
+<li>Multiple clients</li>
+<li>Parallel scans</li>
+<li>Extensive logging</li>
+<li>SSL cert based client authentication</li>
+</ul>
+</li>
+<li>Added modules  (<strong>New</strong>)
+
+<ul>
+<li>Audit
+
+<ul>
+<li>XSS in event attributes of HTML elements</li>
+<li>XSS in HTML tags</li>
+<li>XSS in HTML 'script' tags</li>
+<li>Blind SQL injection using timing attacks</li>
+<li>Blind code injection using timing attacks (PHP, Ruby, Python, JSP, ASP.NET)</li>
+<li>Blind OS command injection using timing attacks (*nix, Windows)</li>
+</ul>
+</li>
+<li>Recon
+
+<ul>
+<li>Common backdoors    -- Looks for common shell names</li>
+<li>.htaccess LIMIT misconfiguration</li>
+<li>Interesting responses   -- Listens to all traffic and logs interesting server messages</li>
+<li>HTML object grepper</li>
+<li>E-mail address disclosure</li>
+<li>US Social Security Number disclosure</li>
+<li>Forceful directory listing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Added plugins  (<strong>New</strong>)
+
+<ul>
+<li>Dictionary attacker for HTTP Auth</li>
+<li>Dictionary attacker for form based authentication</li>
+<li>Cookie collector    -- Listens to all traffic and logs changes in cookies</li>
+<li>Healthmap -- Generates sitemap showing the health of each crawled/audited URL</li>
+<li>Content-types -- Logs content-types of server responses aiding in the identification of interesting (possibly leaked) files</li>
+</ul>
+</li>
+<li>New behavior on Ctrl+C
+
+<ul>
+<li>The system continues to run in the background instead of pausing</li>
+<li>The user is presented with an auto-refreshing report and progress stats</li>
+</ul>
+</li>
+<li>Updated module API
+
+<ul>
+<li>Timing/delay attacks have been abstracted and simplified via helper methods</li>
+<li>The modules are given access to vector skipping decisions</li>
+<li>Simplified issue logging</li>
+<li>Added the option of substring matching instead of regexp matching in order to improve performance.</li>
+<li>Substituted regular expression matching with substring matching wherever possible.</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Version 0.2.1 <em>(November 25, 2010)</em></h2>
 
 <ul>
 <li>Major performance improvements</li>
@@ -112,7 +203,7 @@
 </ul>
 
 
-<h2>Version 0.2</h2>
+<h2>Version 0.2 <em>(October 14, 2010)</em></h2>
 
 <ul>
 <li>Improved output.
@@ -200,9 +291,9 @@
 </div></div>
     
     <div id="footer">
-  Generated on Sun Dec  5 16:37:39 2010 by 
+  Generated on Fri Jan 28 16:24:41 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.2 (ruby-1.9.2).
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>

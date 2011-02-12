@@ -91,9 +91,6 @@ Trainer class
 <p>
 Analyzes all HTTP responses looking for new auditable elements.
 </p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
 <pre class="code">
                                      &lt;tasos.laskos@gmail.com&gt;
                                      &lt;zapotek@segfault.gr&gt;
@@ -382,7 +379,7 @@ Decodes URLs to reverse multiple encodes and removes NULL characters.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -410,18 +407,16 @@ A new instance of Trainer
       <pre class="lines">
 
 
+35
 36
 37
-38
-39
-40</pre>
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span>
   <span class='ivar'>@opts</span>     <span class='op'>=</span> <span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span>
-  <span class='ivar'>@parser</span>   <span class='op'>=</span> <span class='const'>Parser</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span>
   <span class='ivar'>@updated</span>  <span class='op'>=</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -461,12 +456,12 @@ Returns the value of attribute http
       <pre class="lines">
 
 
+32
 33
-34
-35</pre>
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id http'>http</span>
   <span class='ivar'>@http</span>
@@ -517,26 +512,22 @@ updates
       <pre class="lines">
 
 
+93
 94
 95
 96
 97
 98
 99
-100
-101
-102
-103</pre>
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id page'>page</span>
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@updated</span>  <span class='rparen'>)</span>
           <span class='ivar'>@updated</span> <span class='op'>=</span> <span class='kw'>false</span>
-          <span class='comment'># page = @page.dup
-</span>          <span class='comment'># @page = nil
-</span>          <span class='kw'>return</span>  <span class='ivar'>@page</span>
+          <span class='kw'>return</span>  <span class='ivar'>@page</span>
       <span class='kw'>else</span>
           <span class='kw'>return</span> <span class='kw'>nil</span>
     <span class='kw'>end</span>
@@ -573,12 +564,12 @@ Returns the value of attribute parser
       <pre class="lines">
 
 
+33
 34
-35
-36</pre>
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id parser'>parser</span>
   <span class='ivar'>@parser</span>
@@ -617,7 +608,7 @@ Passes the reponse to <span class='object_link'><a href="#analyze-instance_metho
   
     <li>
       
-        <span class='type'>(<tt>Typhoeus::Response</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../../Typhoeus/Response.html" title="Typhoeus::Response (class)">Typhoeus::Response</a></span></tt>)</span>
       
       
         <span class='name'>res</span>
@@ -653,6 +644,8 @@ was the response forcing a redirection?
       <pre class="lines">
 
 
+46
+47
 48
 49
 50
@@ -670,16 +663,16 @@ was the response forcing a redirection?
 62
 63
 64
-65
-66</pre>
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id add_response'>add_response</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id redir'>redir</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
 
-    <span class='comment'># return if res.code != 200 &amp;&amp; res.code != 0
-</span>
+    <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='const'>Parser</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+    <span class='ivar'>@parser</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span>
+
     <span class='kw'>begin</span>
         <span class='id url'>url</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span>
         <span class='id url'>url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -691,8 +684,8 @@ was the response forcing a redirection?
 
     <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
         <span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid URL, probably broken redirection. Ignoring...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-        <span class='comment'># raise e
-</span>    <span class='kw'>end</span>
+        <span class='id raise'>raise</span> <span class='id e'>e</span>
+    <span class='kw'>end</span>
 
 <span class='kw'>end</span></pre>
     </td>
@@ -722,7 +715,7 @@ Analyzes a response looking for new links, forms and cookies.
   
     <li>
       
-        <span class='type'>(<tt>Typhoeus::Response</tt>, <tt>Bool</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../../Typhoeus/Response.html" title="Typhoeus::Response (class)">Typhoeus::Response</a></span></tt>, <tt>Bool</tt>)</span>
       
       
         <span class='name'>res</span>
@@ -739,6 +732,9 @@ Analyzes a response looking for new links, forms and cookies.
       <pre class="lines">
 
 
+108
+109
+110
 111
 112
 113
@@ -796,18 +792,17 @@ Analyzes a response looking for new links, forms and cookies.
 165
 166
 167
-168
-169
-170</pre>
+168</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id analyze'>analyze</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
 
     <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Started for response with request ID: #</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
       <span class='id res'>res</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id id'>id</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
 
+    <span class='ivar'>@parser</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='id res'>res</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id effective_url'>effective_url</span><span class='period'>.</span><span class='id clone'>clone</span>
 
     <span class='id cookies'>cookies</span><span class='comma'>,</span> <span class='id cookie_cnt'>cookie_cnt</span> <span class='op'>=</span> <span class='id train_cookies'>train_cookies</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id cookie_cnt'>cookie_cnt</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='rparen'>)</span>
@@ -902,17 +897,17 @@ Analyzes a response looking for new links, forms and cookies.
       <pre class="lines">
 
 
+79
 80
 81
 82
 83
 84
 85
-86
-87</pre>
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id follow?'>follow?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='ivar'>@parser</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span>
@@ -951,17 +946,17 @@ Decodes URLs to reverse multiple encodes and removes NULL characters
       <pre class="lines">
 
 
+70
 71
 72
 73
 74
 75
 76
-77
-78</pre>
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 
@@ -981,9 +976,9 @@ Decodes URLs to reverse multiple encodes and removes NULL characters
 </div>
     
     <div id="footer">
-  Generated on Sun Dec  5 16:37:42 2010 by 
+  Generated on Fri Jan 28 16:24:45 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.2 (ruby-1.9.2).
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>

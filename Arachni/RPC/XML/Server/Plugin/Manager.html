@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Arachni::RPC::XML::Server::Plugin::Manager</title>
+<link rel="stylesheet" href="../../../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../../../../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../../../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../../../_index.html">Index (M)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../../../../Arachni.html" title="Arachni (module)">Arachni</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../../RPC.html" title="Arachni::RPC (module)">RPC</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../XML.html" title="Arachni::RPC::XML (module)">XML</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Server.html" title="Arachni::RPC::XML::Server (module)">Server</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Plugin.html" title="Arachni::RPC::XML::Server::Plugin (module)">Plugin</a></span></span>
+     &raquo; 
+    <span class="title">Manager</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Arachni::RPC::XML::Server::Plugin::Manager
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../../../../Plugin/Manager.html" title="Arachni::Plugin::Manager (class)">Plugin::Manager</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Hash</li>
+          
+            <li class="next"><span class='object_link'><a href="../../../../ComponentManager.html" title="Arachni::ComponentManager (class)">ComponentManager</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../../../../Plugin/Manager.html" title="Arachni::Plugin::Manager (class)">Plugin::Manager</a></span></li>
+          
+            <li class="next">Arachni::RPC::XML::Server::Plugin::Manager</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/rpc/xml/server/plugin/manager.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+We need to extend the original Manager and redeclare its inherited methods
+which are required over XMLRPC.
+</p>
+<p>
+@author: Tasos &#8220;Zapotek&#8221; Laskos
+</p>
+<pre class="code">
+                                     &lt;tasos.laskos@gmail.com&gt;
+                                     &lt;zapotek@segfault.gr&gt;
+</pre>
+<p>
+@version: 0.1.1
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+  <h2>Constant Summary</h2>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Constants inherited from <span class='object_link'><a href="../../../../ComponentManager.html" title="Arachni::ComponentManager (class)">ComponentManager</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../../../ComponentManager.html#EXCLUDE-constant" title="Arachni::ComponentManager::EXCLUDE (constant)">EXCLUDE</a></span>, <span class='object_link'><a href="../../../../ComponentManager.html#WILDCARD-constant" title="Arachni::ComponentManager::WILDCARD (constant)">WILDCARD</a></span></p>
+
+  
+  
+  
+  
+  
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#available-instance_method" title="#available (instance method)">- (Object) <strong>available</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-instance_method" title="#create (instance method)">- (Object) <strong>create</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Manager) <strong>initialize</strong>(framework) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Manager.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load-instance_method" title="#load (instance method)">- (Object) <strong>load</strong>(plugins) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../../../../Plugin/Manager.html" title="Arachni::Plugin::Manager (class)">Plugin::Manager</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../../../Plugin/Manager.html#block%21-instance_method" title="Arachni::Plugin::Manager#block! (method)">#block!</a></span>, <span class='object_link'><a href="../../../../Plugin/Manager.html#busy%3F-instance_method" title="Arachni::Plugin::Manager#busy? (method)">#busy?</a></span>, <span class='object_link'><a href="../../../../Plugin/Manager.html#get-instance_method" title="Arachni::Plugin::Manager#get (method)">#get</a></span>, <span class='object_link'><a href="../../../../Plugin/Manager.html#job_names-instance_method" title="Arachni::Plugin::Manager#job_names (method)">#job_names</a></span>, <span class='object_link'><a href="../../../../Plugin/Manager.html#jobs-instance_method" title="Arachni::Plugin::Manager#jobs (method)">#jobs</a></span>, <span class='object_link'><a href="../../../../Plugin/Manager.html#kill-instance_method" title="Arachni::Plugin::Manager#kill (method)">#kill</a></span>, <span class='object_link'><a href="../../../../Plugin/Manager.html#run-instance_method" title="Arachni::Plugin::Manager#run (method)">#run</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../../../../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../../../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../../../../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../../../../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../../../../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../../../../ComponentManager.html" title="Arachni::ComponentManager (class)">ComponentManager</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../../../ComponentManager.html#%5B%5D-instance_method" title="Arachni::ComponentManager#[] (method)">#[]</a></span>, <span class='object_link'><a href="../../../../ComponentManager.html#include_formatters%21-instance_method" title="Arachni::ComponentManager#include_formatters! (method)">#include_formatters!</a></span>, <span class='object_link'><a href="../../../../ComponentManager.html#name_to_path-instance_method" title="Arachni::ComponentManager#name_to_path (method)">#name_to_path</a></span>, <span class='object_link'><a href="../../../../ComponentManager.html#parse-instance_method" title="Arachni::ComponentManager#parse (method)">#parse</a></span>, <span class='object_link'><a href="../../../../ComponentManager.html#path_to_name-instance_method" title="Arachni::ComponentManager#path_to_name (method)">#path_to_name</a></span>, <span class='object_link'><a href="../../../../ComponentManager.html#paths-instance_method" title="Arachni::ComponentManager#paths (method)">#paths</a></span>, <span class='object_link'><a href="../../../../ComponentManager.html#prep_opts-instance_method" title="Arachni::ComponentManager#prep_opts (method)">#prep_opts</a></span>, <span class='object_link'><a href="../../../../ComponentManager.html#wilcard_to_names-instance_method" title="Arachni::ComponentManager#wilcard_to_names (method)">#wilcard_to_names</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../../../../UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../../../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../../../../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Arachni::RPC::XML::Server::Plugin::Manager (class)">Manager</a></span></tt>) <strong>initialize</strong>(framework) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of Manager
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/plugin/manager.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span> <span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id framework'>framework</span> <span class='rparen'>)</span>
+
+    <span class='ivar'>@plugin_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="available-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>available</strong> 
+  
+
+  
+</p>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="create-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>create</strong>(name) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/plugin/manager.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id create'>create</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='comma'>,</span> <span class='id prep_opts'>prep_opts</span><span class='lparen'>(</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@plugin_opts</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="load-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>load</strong>(plugins) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/plugin/manager.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id load'>load</span><span class='lparen'>(</span> <span class='id plugins'>plugins</span> <span class='rparen'>)</span>
+    <span class='ivar'>@plugin_opts</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id plugins'>plugins</span> <span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id plugins'>plugins</span><span class='period'>.</span><span class='id keys'>keys</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Jan 28 16:24:49 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

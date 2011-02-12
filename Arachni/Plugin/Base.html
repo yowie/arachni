@@ -113,7 +113,7 @@ An abstract class for the plugins.<br/> All plugins must extend this.
   
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="../Plugins/AutoLogin.html" title="Arachni::Plugins::AutoLogin (class)">Arachni::Plugins::AutoLogin</a></span>, <span class='object_link'><a href="../Plugins/ClearStdout.html" title="Arachni::Plugins::ClearStdout (class)">Arachni::Plugins::ClearStdout</a></span>, <span class='object_link'><a href="../Plugins/Proxy.html" title="Arachni::Plugins::Proxy (class)">Arachni::Plugins::Proxy</a></span>, <span class='object_link'><a href="../Plugins/Sample.html" title="Arachni::Plugins::Sample (class)">Arachni::Plugins::Sample</a></span></p>
+  <p class="children"><span class='object_link'><a href="../Plugins/AutoLogin.html" title="Arachni::Plugins::AutoLogin (class)">Arachni::Plugins::AutoLogin</a></span>, <span class='object_link'><a href="../Plugins/ClearStdout.html" title="Arachni::Plugins::ClearStdout (class)">Arachni::Plugins::ClearStdout</a></span>, <span class='object_link'><a href="../Plugins/ContentTypes.html" title="Arachni::Plugins::ContentTypes (class)">Arachni::Plugins::ContentTypes</a></span>, <span class='object_link'><a href="../Plugins/CookieCollector.html" title="Arachni::Plugins::CookieCollector (class)">Arachni::Plugins::CookieCollector</a></span>, <span class='object_link'><a href="../Plugins/FormDicattack.html" title="Arachni::Plugins::FormDicattack (class)">Arachni::Plugins::FormDicattack</a></span>, <span class='object_link'><a href="../Plugins/HTTPDicattack.html" title="Arachni::Plugins::HTTPDicattack (class)">Arachni::Plugins::HTTPDicattack</a></span>, <span class='object_link'><a href="../Plugins/HealthMap.html" title="Arachni::Plugins::HealthMap (class)">Arachni::Plugins::HealthMap</a></span>, <span class='object_link'><a href="../Plugins/Proxy.html" title="Arachni::Plugins::Proxy (class)">Arachni::Plugins::Proxy</a></span>, <span class='object_link'><a href="../Plugins/Sample.html" title="Arachni::Plugins::Sample (class)">Arachni::Plugins::Sample</a></span></p>
 </div>
 
 
@@ -194,6 +194,32 @@ OPTIONAL.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Base) <strong>initialize</strong>(framework, options) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Base.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
     
 
@@ -211,6 +237,27 @@ OPTIONAL.
 OPTIONAL.
 </p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_results-instance_method" title="#register_results (instance method)">- (Object) <strong>register_results</strong>(results) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -261,7 +308,84 @@ REQUIRED.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Arachni::Plugin::Base (class)">Base</a></span></tt>) <strong>initialize</strong>(framework, options) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of Base
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a></span></tt>)</span>
+      
+      
+        <span class='name'>framework</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+options passed to the plugin
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/plugin/base.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
+    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
+    <span class='ivar'>@options</span>   <span class='op'>=</span> <span class='id options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
 
 
   <div id="class_method_details" class="method_details_list">
@@ -295,22 +419,22 @@ Do not ommit any of the info.
       <pre class="lines">
 
 
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70</pre>
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/base.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/plugin/base.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -360,12 +484,12 @@ OPTIONAL
       <pre class="lines">
 
 
-48
-49
-50</pre>
+80
+81
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/base.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/plugin/base.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id clean_up'>clean_up</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -399,15 +523,43 @@ OPTIONAL
       <pre class="lines">
 
 
-34
-35
-36</pre>
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/base.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/plugin/base.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="register_results-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>register_results</strong>(results) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/plugin/base.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id plugin_store'>plugin_store</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id results'>results</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -438,12 +590,12 @@ REQUIRED
       <pre class="lines">
 
 
-41
-42
-43</pre>
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/base.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/plugin/base.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -458,9 +610,9 @@ REQUIRED
 </div>
     
     <div id="footer">
-  Generated on Sun Dec  5 16:37:41 2010 by 
+  Generated on Fri Jan 28 16:24:44 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.2 (ruby-1.9.2).
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>

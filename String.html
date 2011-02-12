@@ -135,6 +135,27 @@ Gets the reverse diff between self and str on a word level.
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#substring%3F-instance_method" title="#substring? (instance method)">- (Boolean) <strong>substring?</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -259,14 +280,65 @@ Gets the reverse diff between self and str on a word level.
 </table>
 </div>
     
+      <div class="method_details ">
+  <p class="signature " id="substring?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>substring?</strong>(string) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ruby/string.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id substring?'>substring?</span><span class='lparen'>(</span> <span class='id string'>string</span> <span class='rparen'>)</span>
+    <span class='id match'>match</span> <span class='op'>=</span> <span class='id match'>match</span><span class='lparen'>(</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id string'>string</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='id match'>match</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id match'>match</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
     
     <div id="footer">
-  Generated on Sun Dec  5 16:37:41 2010 by 
+  Generated on Fri Jan 28 16:24:43 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.2 (ruby-1.9.2).
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>

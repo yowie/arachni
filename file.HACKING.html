@@ -55,11 +55,9 @@ adhere to the following guidelines:</p>
 <li>Maximum line length 75-80 columns, try not to exceed that limit.</li>
 <li>{} instead of "<code>do</code>" for blocks and keep the iterator var in it's own line.<br/>
  Like so:
-
-<pre class="code"> <span class='id arr'>arr</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-     <span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span>
- <span class='rbrace'>}</span>
-</pre></li>
+     arr.each {
+         |item|
+     }</li>
 </ul>
 
 
@@ -81,7 +79,7 @@ It is unlikely that you will need it, but if you do, use
 <p><strong>3. Avoid creating your own instance of Net::HTTP or other lib.</strong><br/>
 You are provided with a pre-configured wrapper (<span class='object_link'><a href="Arachni/Module/Base.html#http-instance_method" title="Arachni::Module::Base#http (method)">Arachni::Module::Base#http</a></span>) of <a href="http://github.com/pauldix/typhoeus">Typhoeus</a>.</p>
 
-<p>Take a look in the tutorial module to see what you get: <span class='object_link'><a href="Arachni/Modules/SimpleRFI.html" title="Arachni::Modules::SimpleRFI (class)">Arachni::Modules::SimpleRFI</a></span></p>
+<p>Take a look in the tutorial module to see what you get: <span class='object_link'><a href="Arachni/Modules/RFI.html" title="Arachni::Modules::RFI (class)">Arachni::Modules::RFI</a></span></p>
 
 <p>The base module will also give you some insights: <span class='object_link'><a href="Arachni/Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></p>
 
@@ -92,7 +90,7 @@ run-time settings in <span class='object_link'><a href="Arachni/Options.html" ti
 
 <p>Arachni provides you with examples for the usual types of modules.</p>
 
-<p>This is your main guide: <span class='object_link'><a href="Arachni/Modules/SimpleRFI.html" title="Arachni::Modules::SimpleRFI (class)">Arachni::Modules::SimpleRFI</a></span></p>
+<p>This is your main guide: <span class='object_link'><a href="Arachni/Modules/RFI.html" title="Arachni::Modules::RFI (class)">Arachni::Modules::RFI</a></span></p>
 
 <p>This covers most of the usual tasks when writing a module.
 It lets Arachni do all the work.</p>
@@ -153,9 +151,9 @@ Plug-ins run in parallel to the framework and are executed right before the scan
 Do place licensing information in your code files.</p></div></div>
     
     <div id="footer">
-  Generated on Sun Dec  5 16:37:39 2010 by 
+  Generated on Fri Jan 28 16:24:41 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.2 (ruby-1.9.2).
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>
