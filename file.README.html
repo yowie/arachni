@@ -43,7 +43,7 @@
     
     <div id="content"><div id='filecontents'><h1>Arachni - Web Application Security Scanner Framework</h1>
 
-<p><strong>Version</strong>:     0.2.2<br/>
+<p><strong>Version</strong>:     0.2.2.1<br/>
 <strong>Homepage</strong>:     <a href="http://github.com/zapotek/arachni">http://github.com/zapotek/arachni</a><br/>
 <strong>News</strong>:     <a href="http://trainofthought.segfault.gr/category/projects/arachni/">http://trainofthought.segfault.gr/category/projects/arachni/</a><br/>
 <strong>Documentation</strong>:     <a href="http://github.com/Zapotek/arachni/wiki">http://github.com/Zapotek/arachni/wiki</a><br/>
@@ -296,6 +296,8 @@ However, this is usually not required since Arachni is aware of which requests a
 <pre class="code">$ arachni_web
 </pre>
 
+<p><em>If you get any permission errors then you probably installed the Gem using 'sudo', so use 'sudo' to start the servers too.</em></p>
+
 <p>And finally open up a browser window and visit: http://localhost:4567/</p>
 
 <h4>Options</h4>
@@ -437,19 +439,15 @@ This profile loads all modules, audits links/forms/cookies and loads the HealthM
 
 <h2>Installation</h2>
 
-<h3>CDE packages</h3>
+<p>To install the Gem or work with the source code you'll also need the following system libraries:</p>
 
-<p>Arachni is released as <a href="http://stanford.edu/~pgbovine/cde.html">CDE packages</a> for 32bit and 64bit architectures.<br/>
-CDE packages are self contained and thus alleviate the need for Ruby and other dependencies to be installed.<br/>
-You can choose the CDE package that suits you best from the <a href="https://github.com/Zapotek/arachni/downloads">download</a> page and escape the dependency hell.<br/>
-If you decide to go the CDE route you can skip the rest, you're done.</p>
+<pre class="code">$ sudo apt-get install libxml2-dev libxslt1-dev libcurl4-openssl-dev libsqlite3-dev
+</pre>
 
-<p><em>The CDE packages are for Linux <strong>only</strong> and do not include the XMLRPC server components for security reasons.</em></p>
+<p>You will also need to have Ruby 1.9.2 installed <em>including</em> the dev package/headers.<br/>
+The prefered ways to accomplish this is by either using <a href="http://rvm.beginrescueend.com/">RVM</a> or by downloading and compiling the source code for <a href="http://www.ruby-lang.org/en/downloads/">Ruby 1.9.2</a> manually.</p>
 
 <h3>Gem</h3>
-
-<p>In order to use Arachni you will need to have Ruby 1.9.2 installed <em>including</em> the dev package/headers.<br/>
-The prefered ways to accomplish this is by either using <a href="http://rvm.beginrescueend.com/">RVM</a> or by downloading and compiling the source code for <a href="http://www.ruby-lang.org/en/downloads/">Ruby 1.9.2</a> manually.</p>
 
 <p>To install Arachni:</p>
 
@@ -461,13 +459,6 @@ The prefered ways to accomplish this is by either using <a href="http://rvm.begi
 <p>If you want to clone the repository and work with the source code then you'll need to run the following to install all gem dependencies and Arachni:</p>
 
 <pre class="code">$ rake install
-</pre>
-
-<h3><em>Notice</em></h3>
-
-<p>To install the Gem or work with the source code you'll also need the following system libraries:</p>
-
-<pre class="code">$ sudo apt-get install libxml2-dev libxslt1-dev libcurl4-openssl-dev libsqlite3-dev
 </pre>
 
 <h2>Supported platforms</h2>
@@ -496,7 +487,7 @@ caused by the use of this software.</p>
 <p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p></div></div>
     
     <div id="footer">
-  Generated on Sun Feb 13 13:51:22 2011 by 
+  Generated on Sun Feb 13 14:59:39 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>
