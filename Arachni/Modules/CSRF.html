@@ -523,6 +523,13 @@ A new instance of CSRF
       <pre class="lines">
 
 
+261
+262
+263
+264
+265
+266
+267
 268
 269
 270
@@ -552,16 +559,10 @@ A new instance of CSRF
 294
 295
 296
-297
-298
-299
-300
-301
-302
-303</pre>
+297</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 268</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 261</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -572,8 +573,8 @@ A new instance of CSRF
         <span class='symbol'>:elements</span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
             <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span>
         <span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt; </span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:references</span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Wikipedia</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://en.wikipedia.org/wiki/Cross-site_request_forgery</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>OWASP</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -588,6 +589,7 @@ A new instance of CSRF
                  request was intentionally provided by the user who submitted the request.
                  This is due to a lack of secure anti-CSRF tokens to verify
 </span><span class='tstring_content'>                 the freshness of the submitted data.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='symbol'>:tags</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>csrf</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rdiff</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>form</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span><span class='comma'>,</span>
             <span class='symbol'>:cwe</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>352</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:severity</span>    <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>HIGH</span><span class='comma'>,</span>
             <span class='symbol'>:cvssv2</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -623,7 +625,6 @@ A new instance of CSRF
       <pre class="lines">
 
 
-235
 236
 237
 238
@@ -647,26 +648,19 @@ A new instance of CSRF
 256
 257
 258
-259
-260
-261
-262
-263
-264
-265
-266</pre>
+259</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 235</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 236</span>
 
 <span class='kw'>def</span> <span class='id __log'>__log</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
 
     <span class='id url'>url</span>  <span class='op'>=</span> <span class='id form'>form</span><span class='period'>.</span><span class='id action'>action</span>
-    <span class='id name'>name</span> <span class='op'>=</span> <span class='id form'>form</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id form'>form</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>id</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span>
+    <span class='id name'>name</span> <span class='op'>=</span> <span class='id form'>form</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id form'>form</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>id</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
 
-    <span class='kw'>if</span> <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
         <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Skipping already audited form with name \'</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
-            <span class='id name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\' of url: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+            <span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\' of url: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
         <span class='kw'>return</span>
     <span class='kw'>end</span>
 
@@ -676,16 +670,8 @@ A new instance of CSRF
 </span>    <span class='id issue'>issue</span> <span class='op'>=</span> <span class='const'>Issue</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
         <span class='symbol'>:var</span>          <span class='op'>=&gt;</span> <span class='id name'>name</span><span class='comma'>,</span>
         <span class='symbol'>:url</span>          <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span>
-        <span class='symbol'>:injected</span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:id</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:regexp</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:regexp_match</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:elem</span>         <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span><span class='comma'>,</span>
         <span class='symbol'>:response</span>     <span class='op'>=&gt;</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span><span class='comma'>,</span>
-        <span class='symbol'>:headers</span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-            <span class='symbol'>:request</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-            <span class='symbol'>:response</span>   <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='rbrace'>}</span>
     <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 
     <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found unprotected form with name '</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>' at '</span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
@@ -748,7 +734,6 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
       <pre class="lines">
 
 
-194
 195
 196
 197
@@ -786,10 +771,11 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
 229
 230
 231
-232</pre>
+232
+233</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 194</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 195</span>
 
 <span class='kw'>def</span> <span class='id csrf_token?'>csrf_token?</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
 
@@ -869,7 +855,6 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
       <pre class="lines">
 
 
-175
 176
 177
 178
@@ -881,10 +866,11 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
 184
 185
 186
-187</pre>
+187
+188</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 175</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 176</span>
 
 <span class='kw'>def</span> <span class='id forms_include?'>forms_include?</span><span class='lparen'>(</span> <span class='id forms'>forms</span><span class='comma'>,</span> <span class='id form'>form</span> <span class='rparen'>)</span>
 
@@ -971,7 +957,6 @@ forms to be checked for CSRF
       <pre class="lines">
 
 
-158
 159
 160
 161
@@ -986,10 +971,11 @@ forms to be checked for CSRF
 170
 171
 172
-173</pre>
+173
+174</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 158</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='id logged_in_only'>logged_in_only</span><span class='lparen'>(</span> <span class='id logged_out'>logged_out</span> <span class='rparen'>)</span>
     <span class='id csrf_forms'>csrf_forms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1107,7 +1093,8 @@ forms to be checked for CSRF
 106
 107
 108
-109</pre>
+109
+110</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 67</span>
@@ -1122,7 +1109,8 @@ forms to be checked for CSRF
 </span>    <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
         <span class='symbol'>:headers</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-        <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='symbol'>:remove_id</span> <span class='op'>=&gt;</span> <span class='kw'>true</span>
     <span class='rbrace'>}</span>
 
     <span class='comment'># request page without cookies, simulating a logged-out user
@@ -1131,10 +1119,10 @@ forms to be checked for CSRF
 
         <span class='comment'># set-up the parser with the proper url so that it
 </span>        <span class='comment'># can fix broken 'action' attrs and the like
-</span>        <span class='ivar'>@__trainer</span><span class='period'>.</span><span class='id parser'>parser</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span><span class='period'>.</span><span class='id clone'>clone</span>
+</span>        <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span>
 
         <span class='comment'># extract forms from the body of the response
-</span>        <span class='id forms_logged_out'>forms_logged_out</span> <span class='op'>=</span> <span class='ivar'>@__trainer</span><span class='period'>.</span><span class='id parser'>parser</span><span class='period'>.</span><span class='id forms'>forms</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id reject'>reject</span> <span class='lbrace'>{</span>
+</span>        <span class='id forms_logged_out'>forms_logged_out</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id forms'>forms</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id reject'>reject</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span>
             <span class='id form'>form</span><span class='period'>.</span><span class='id auditable'>auditable</span><span class='period'>.</span><span class='id empty?'>empty?</span>
         <span class='rbrace'>}</span>
@@ -1218,7 +1206,6 @@ true if the form if vulnerable, false otherwise
       <pre class="lines">
 
 
-118
 119
 120
 121
@@ -1246,10 +1233,11 @@ true if the form if vulnerable, false otherwise
 143
 144
 145
-146</pre>
+146
+147</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 119</span>
 
 <span class='kw'>def</span> <span class='id unsafe?'>unsafe?</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
 
@@ -1268,13 +1256,13 @@ true if the form if vulnerable, false otherwise
         <span class='id found_token'>found_token</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id csrf_token?'>csrf_token?</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id query'>query</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id form'>form</span><span class='period'>.</span><span class='id action'>action</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id query'>query</span> <span class='rparen'>)</span>
+    <span class='id link_vars'>link_vars</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='id form'>form</span><span class='period'>.</span><span class='id action'>action</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id link_vars'>link_vars</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
         <span class='comment'># and we also need to check for a token in the form action
-</span>        <span class='id action_splits'>action_splits</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id form'>form</span><span class='period'>.</span><span class='id action'>action</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id query'>query</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-        <span class='id form'>form</span><span class='period'>.</span><span class='id simple'>simple</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_a'>to_a</span><span class='period'>.</span><span class='id flatten'>flatten</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id str'>str</span><span class='op'>|</span>
-            <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id str'>str</span>
-            <span class='id found_token'>found_token</span> <span class='op'>=</span> <span class='kw'>true</span>  <span class='kw'>if</span><span class='lparen'>(</span> <span class='id csrf_token?'>csrf_token?</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+</span>        <span class='id link_vars'>link_vars</span><span class='period'>.</span><span class='id values'>values</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id val'>val</span><span class='op'>|</span>
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id val'>val</span>
+            <span class='id found_token'>found_token</span> <span class='op'>=</span> <span class='kw'>true</span>  <span class='kw'>if</span><span class='lparen'>(</span> <span class='id csrf_token?'>csrf_token?</span><span class='lparen'>(</span> <span class='id val'>val</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='kw'>end</span>
 
@@ -1290,7 +1278,7 @@ true if the form if vulnerable, false otherwise
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:45 2011 by 
+  Generated on Sun Feb 13 12:47:25 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

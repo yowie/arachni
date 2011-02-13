@@ -46,11 +46,20 @@
 <h2>Version 0.2.2 <em>(Under development)</em></h2>
 
 <ul>
+<li>Web UI v0.1-pre (Utilizing the Client - Dispatch-server XMLRPC architecture) (<strong>New</strong>)
+
+<ul>
+<li>Basically a front-end to the XMLRPC client</li>
+<li>Support for parallel scans</li>
+<li>Report management</li>
+<li>Can be used to monitor and control any running Dispatcher</li>
+</ul>
+</li>
 <li>Changed classification from "Vulnerabilities" to "Issues" (<strong>New</strong>)</li>
 <li>Improved detection of custom 404 pages.</li>
 <li>Reports updated to show plug-in results.</li>
 <li>Updated framework-wide cookie handling.</li>
-<li>Added a simple update script based on <em>git</em>.</li>
+<li>Added parameter flipping functionality ( cheers to Nilesh Bhosale <nilesh at gslab.com >)</li>
 <li>Major performance optimizations (4x faster in most tests)
 
 <ul>
@@ -104,7 +113,7 @@
 </li>
 </ul>
 </li>
-<li>Added plugins  (<strong>New</strong>)
+<li><p>Added plugins  (<strong>New</strong>)</p>
 
 <ul>
 <li>Dictionary attacker for HTTP Auth</li>
@@ -112,9 +121,19 @@
 <li>Cookie collector    -- Listens to all traffic and logs changes in cookies</li>
 <li>Healthmap -- Generates sitemap showing the health of each crawled/audited URL</li>
 <li>Content-types -- Logs content-types of server responses aiding in the identification of interesting (possibly leaked) files</li>
+<li>WAF (Web Application Firewall) Detector</li>
+<li>MetaModules -- Loads and runs high-level meta-analysis modules pre/mid/post-scan
+
+<ul>
+<li>AutoThrottle -- Dynamically adjusts HTTP throughput during the scan for maximum bandwidth utilization</li>
+<li>TimeoutNotice -- Provides a notice for issues uncovered by timing attacks when the affected audited pages returned unusually high response times to begin with.</br>
+   It also points out the danger of DoS attacks against pages that perform heavy-duty processing.</li>
+<li>Uniformity -- Reports inputs that are uniformly vulnerable across a number of pages hinting to the lack of a central point of input sanitization.</li>
 </ul>
 </li>
-<li>New behavior on Ctrl+C
+</ul>
+</li>
+<li><p>New behavior on Ctrl+C</p>
 
 <ul>
 <li>The system continues to run in the background instead of pausing</li>
@@ -291,7 +310,7 @@
 </div></div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:41 2011 by 
+  Generated on Sun Feb 13 12:47:21 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

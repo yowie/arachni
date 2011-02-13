@@ -304,7 +304,7 @@ A new instance of AllowedMethods.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Arachni::Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
 
   
   
@@ -437,7 +437,8 @@ A new instance of AllowedMethods
 71
 72
 73
-74</pre>
+74
+75</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/recon/allowed_methods.rb', line 54</span>
@@ -454,7 +455,8 @@ A new instance of AllowedMethods
         <span class='symbol'>:targets</span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Generic</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>all</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='symbol'>:issue</span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='symbol'>:name</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Allowed HTTP methods</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-            <span class='symbol'>:description</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='symbol'>:description</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>The webserver claims that it supports the logged methods.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='symbol'>:tags</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>methods</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>options</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span><span class='comma'>,</span>
             <span class='symbol'>:cwe</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:severity</span>    <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>INFORMATIONAL</span><span class='comma'>,</span>
             <span class='symbol'>:cvssv2</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -487,7 +489,6 @@ A new instance of AllowedMethods
       <pre class="lines">
 
 
-76
 77
 78
 79
@@ -511,13 +512,10 @@ A new instance of AllowedMethods
 97
 98
 99
-100
-101
-102
-103</pre>
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/allowed_methods.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/allowed_methods.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
 
@@ -526,12 +524,8 @@ A new instance of AllowedMethods
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id methods'>methods</span> <span class='op'>||</span> <span class='id methods'>methods</span><span class='period'>.</span><span class='id empty?'>empty?</span>
 
     <span class='id issue'>issue</span> <span class='op'>=</span> <span class='const'>Issue</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
-        <span class='symbol'>:var</span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:url</span>          <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span><span class='comma'>,</span>
-        <span class='symbol'>:injected</span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:method</span>       <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id method'>method</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id upcase'>upcase</span><span class='comma'>,</span>
-        <span class='symbol'>:id</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:regexp</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:regexp_match</span> <span class='op'>=&gt;</span> <span class='id methods'>methods</span><span class='comma'>,</span>
         <span class='symbol'>:elem</span>         <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>SERVER</span><span class='comma'>,</span>
         <span class='symbol'>:response</span>     <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span>
@@ -642,7 +636,7 @@ A new instance of AllowedMethods
 
     <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Checking...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
-    <span class='ivar'>@http</span><span class='period'>.</span><span class='id request'>request</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span><span class='comma'>,</span> <span class='symbol'>:method</span> <span class='op'>=&gt;</span> <span class='symbol'>:options</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
+    <span class='ivar'>@http</span><span class='period'>.</span><span class='id request'>request</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span><span class='comma'>,</span> <span class='symbol'>:method</span> <span class='op'>=&gt;</span> <span class='symbol'>:options</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
         <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
@@ -657,7 +651,7 @@ A new instance of AllowedMethods
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:48 2011 by 
+  Generated on Sun Feb 13 12:47:29 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

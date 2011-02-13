@@ -286,11 +286,11 @@ A new instance of HealthMap
       <pre class="code"><span class="info file"># File 'reports/plugin_formatters/stdout/healthmap.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span>
-    <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>URL health list.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>--------------------</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>URL health-map</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>~~~~~~~~~~~~~~~~</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 
     <span class='id print_line'>print_line</span>
-    <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Color codes:</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Legend:</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>No issues</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Has issues</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='id print_line'>print_line</span>
@@ -328,7 +328,7 @@ A new instance of HealthMap
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:49 2011 by 
+  Generated on Sun Feb 13 12:47:30 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

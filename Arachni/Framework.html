@@ -781,7 +781,7 @@ Returns the version of the framework.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
 
   
   
@@ -859,7 +859,8 @@ Initializes system components.
 150
 151
 152
-153</pre>
+153
+154</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/framework.rb', line 128</span>
@@ -889,6 +890,7 @@ Initializes system components.
 
     <span class='ivar'>@plugin_store</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
 
+    <span class='ivar'>@current_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1438,6 +1440,8 @@ Runs the spider, analyzes each page as it appears and passes it to
       <pre class="lines">
 
 
+238
+239
 240
 241
 242
@@ -1461,12 +1465,10 @@ Runs the spider, analyzes each page as it appears and passes it to
 260
 261
 262
-263
-264
-265</pre>
+263</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 240</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 238</span>
 
 <span class='kw'>def</span> <span class='id audit'>audit</span>
 
@@ -1512,6 +1514,8 @@ Runs the spider, analyzes each page as it appears and passes it to
       <pre class="lines">
 
 
+265
+266
 267
 268
 269
@@ -1527,12 +1531,10 @@ Runs the spider, analyzes each page as it appears and passes it to
 279
 280
 281
-282
-283
-284</pre>
+282</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 267</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 265</span>
 
 <span class='kw'>def</span> <span class='id audit_queue'>audit_queue</span>
 
@@ -1601,6 +1603,8 @@ Returns the results of the audit as an <span class='object_link'><a href="AuditS
       <pre class="lines">
 
 
+292
+293
 294
 295
 296
@@ -1618,12 +1622,10 @@ Returns the results of the audit as an <span class='object_link'><a href="AuditS
 308
 309
 310
-311
-312
-313</pre>
+311</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 294</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 292</span>
 
 <span class='kw'>def</span> <span class='id audit_store'>audit_store</span><span class='lparen'>(</span> <span class='id fresh'>fresh</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
 
@@ -1687,6 +1689,8 @@ Returns an array of hashes with information about all available modules
       <pre class="lines">
 
 
+335
+336
 337
 338
 339
@@ -1716,12 +1720,10 @@ Returns an array of hashes with information about all available modules
 363
 364
 365
-366
-367
-368</pre>
+366</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 337</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 335</span>
 
 <span class='kw'>def</span> <span class='id lsmod'>lsmod</span>
 
@@ -1797,6 +1799,8 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
+398
+399
 400
 401
 402
@@ -1813,12 +1817,10 @@ Returns an array of hashes with information about all available reports
 413
 414
 415
-416
-417
-418</pre>
+416</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 400</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 398</span>
 
 <span class='kw'>def</span> <span class='id lsplug'>lsplug</span>
 
@@ -1881,6 +1883,8 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
+374
+375
 376
 377
 378
@@ -1895,12 +1899,10 @@ Returns an array of hashes with information about all available reports
 387
 388
 389
-390
-391
-392</pre>
+390</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 376</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 374</span>
 
 <span class='kw'>def</span> <span class='id lsrep'>lsrep</span>
 
@@ -1937,13 +1939,13 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
+426
+427
 428
-429
-430
-431</pre>
+429</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 428</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 426</span>
 
 <span class='kw'>def</span> <span class='id pause!'>pause!</span>
     <span class='ivar'>@paused</span> <span class='op'>&lt;&lt;</span> <span class='id caller'>caller</span>
@@ -1988,12 +1990,12 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
-424
-425
-426</pre>
+422
+423
+424</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 424</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 422</span>
 
 <span class='kw'>def</span> <span class='id paused?'>paused?</span>
     <span class='op'>!</span><span class='ivar'>@paused</span><span class='period'>.</span><span class='id empty?'>empty?</span>
@@ -2016,6 +2018,8 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
+313
+314
 315
 316
 317
@@ -2028,12 +2032,10 @@ Returns an array of hashes with information about all available reports
 324
 325
 326
-327
-328
-329</pre>
+327</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 315</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 313</span>
 
 <span class='kw'>def</span> <span class='id plugin_store'>plugin_store</span><span class='lparen'>(</span> <span class='id plugin'>plugin</span><span class='comma'>,</span> <span class='id obj'>obj</span> <span class='rparen'>)</span>
     <span class='id name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -2068,13 +2070,13 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
+431
+432
 433
-434
-435
-436</pre>
+434</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 433</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 431</span>
 
 <span class='kw'>def</span> <span class='id resume!'>resume!</span>
     <span class='ivar'>@paused</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id caller'>caller</span> <span class='rparen'>)</span>
@@ -2122,12 +2124,12 @@ Returns the revision of the <span class='object_link'><a href="" title="Arachni:
       <pre class="lines">
 
 
-452
-453
-454</pre>
+450
+451
+452</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 452</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 450</span>
 
 <span class='kw'>def</span> <span class='id revision'>revision</span>
     <span class='const'>REVISION</span>
@@ -2185,7 +2187,6 @@ a block to call after the audit has finished but before running the reports
       <pre class="lines">
 
 
-167
 168
 169
 170
@@ -2215,25 +2216,10 @@ a block to call after the audit has finished but before running the reports
 194
 195
 196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212</pre>
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='ivar'>@running</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -2252,23 +2238,7 @@ a block to call after the audit has finished but before running the reports
     <span class='kw'>rescue</span> <span class='const'>Exception</span>
     <span class='kw'>end</span>
 
-    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id finish_datetime'>finish_datetime</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span>
-    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id delta_time'>delta_time</span> <span class='op'>=</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id finish_datetime'>finish_datetime</span> <span class='op'>-</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id start_datetime'>start_datetime</span>
-
-    <span class='comment'># make sure this is disabled or it'll break report output
-</span>    <span class='cvar'>@@only_positives</span> <span class='op'>=</span> <span class='kw'>false</span>
-
-    <span class='ivar'>@running</span> <span class='op'>=</span> <span class='kw'>false</span>
-
-    <span class='comment'># wait for the plugins to finish
-</span>    <span class='ivar'>@plugins</span><span class='period'>.</span><span class='id block!'>block!</span>
-
-    <span class='comment'># a plug-in may have updated the page queue, rock it!
-</span>    <span class='id audit_queue'>audit_queue</span>
-
-    <span class='comment'># refresh the audit store
-</span>    <span class='id audit_store'>audit_store</span><span class='lparen'>(</span> <span class='kw'>true</span> <span class='rparen'>)</span>
-
+    <span class='id clean_up!'>clean_up!</span>
     <span class='kw'>begin</span>
         <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span> <span class='kw'>if</span> <span class='id block'>block</span>
     <span class='kw'>rescue</span> <span class='const'>Exception</span>
@@ -2320,12 +2290,12 @@ a block to call after the audit has finished but before running the reports
       <pre class="lines">
 
 
-420
-421
-422</pre>
+418
+419
+420</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 420</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 418</span>
 
 <span class='kw'>def</span> <span class='id running?'>running?</span>
     <span class='ivar'>@running</span>
@@ -2348,6 +2318,21 @@ a block to call after the audit has finished but before running the reports
       <pre class="lines">
 
 
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
 214
 215
 216
@@ -2364,30 +2349,41 @@ a block to call after the audit has finished but before running the reports
 227
 228
 229
-230
-231
-232</pre>
+230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 214</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 199</span>
 
 <span class='kw'>def</span> <span class='id stats'>stats</span><span class='lparen'>(</span> <span class='id refresh_time'>refresh_time</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
     <span class='id req_cnt'>req_cnt</span> <span class='op'>=</span> <span class='id http'>http</span><span class='period'>.</span><span class='id request_count'>request_count</span>
     <span class='id res_cnt'>res_cnt</span> <span class='op'>=</span> <span class='id http'>http</span><span class='period'>.</span><span class='id response_count'>response_count</span>
 
+    <span class='ivar'>@auditmap</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@sitemap</span>  <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='kw'>if</span> <span class='op'>!</span><span class='id refresh_time'>refresh_time</span> <span class='op'>||</span> <span class='ivar'>@auditmap</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='ivar'>@sitemap</span><span class='period'>.</span><span class='id size'>size</span>
         <span class='ivar'>@opts</span><span class='period'>.</span><span class='id delta_time'>delta_time</span> <span class='op'>||=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span> <span class='op'>-</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id start_datetime'>start_datetime</span>
     <span class='kw'>else</span>
         <span class='ivar'>@opts</span><span class='period'>.</span><span class='id delta_time'>delta_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span> <span class='op'>-</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id start_datetime'>start_datetime</span>
     <span class='kw'>end</span>
 
+    <span class='id curr_avg'>curr_avg</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='kw'>if</span> <span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_cnt'>curr_res_cnt</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+        <span class='id curr_avg'>curr_avg</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_cnt'>curr_res_cnt</span> <span class='op'>/</span> <span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_time'>curr_res_time</span><span class='rparen'>)</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+    <span class='kw'>end</span>
+
     <span class='kw'>return</span> <span class='lbrace'>{</span>
         <span class='symbol'>:requests</span>   <span class='op'>=&gt;</span> <span class='id req_cnt'>req_cnt</span><span class='comma'>,</span>
         <span class='symbol'>:responses</span>  <span class='op'>=&gt;</span> <span class='id res_cnt'>res_cnt</span><span class='comma'>,</span>
         <span class='symbol'>:time</span>       <span class='op'>=&gt;</span> <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id delta_time'>delta_time</span><span class='comma'>,</span>
-        <span class='symbol'>:avg</span>        <span class='op'>=&gt;</span> <span class='lparen'>(</span> <span class='id req_cnt'>req_cnt</span> <span class='op'>/</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id delta_time'>delta_time</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span>
+        <span class='symbol'>:avg</span>        <span class='op'>=&gt;</span> <span class='lparen'>(</span> <span class='id res_cnt'>res_cnt</span> <span class='op'>/</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id delta_time'>delta_time</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span>
         <span class='symbol'>:sitemap_size</span>  <span class='op'>=&gt;</span> <span class='ivar'>@sitemap</span><span class='period'>.</span><span class='id size'>size</span><span class='comma'>,</span>
-        <span class='symbol'>:auditmap_size</span> <span class='op'>=&gt;</span> <span class='ivar'>@auditmap</span><span class='period'>.</span><span class='id size'>size</span>
+        <span class='symbol'>:auditmap_size</span> <span class='op'>=&gt;</span> <span class='ivar'>@auditmap</span><span class='period'>.</span><span class='id size'>size</span><span class='comma'>,</span>
+        <span class='symbol'>:curr_res_time</span> <span class='op'>=&gt;</span> <span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_time'>curr_res_time</span><span class='comma'>,</span>
+        <span class='symbol'>:curr_res_cnt</span>  <span class='op'>=&gt;</span> <span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_cnt'>curr_res_cnt</span><span class='comma'>,</span>
+        <span class='symbol'>:curr_avg</span>      <span class='op'>=&gt;</span> <span class='id curr_avg'>curr_avg</span><span class='comma'>,</span>
+        <span class='symbol'>:average_res_time</span> <span class='op'>=&gt;</span> <span class='id http'>http</span><span class='period'>.</span><span class='id average_res_time'>average_res_time</span><span class='comma'>,</span>
+        <span class='symbol'>:max_concurrency</span> <span class='op'>=&gt;</span> <span class='id http'>http</span><span class='period'>.</span><span class='id max_concurrency'>max_concurrency</span><span class='comma'>,</span>
+        <span class='symbol'>:current_page</span>    <span class='op'>=&gt;</span> <span class='ivar'>@current_url</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2432,12 +2428,12 @@ Returns the version of the framework
       <pre class="lines">
 
 
-443
-444
-445</pre>
+441
+442
+443</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 443</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 441</span>
 
 <span class='kw'>def</span> <span class='id version'>version</span>
     <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>VERSION</span>
@@ -2452,7 +2448,7 @@ Returns the version of the framework
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:43 2011 by 
+  Generated on Sun Feb 13 12:47:22 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

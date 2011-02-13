@@ -406,7 +406,8 @@ A new instance of ResponseSplitting
 97
 98
 99
-100</pre>
+100
+101</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/response_splitting.rb', line 68</span>
@@ -422,7 +423,7 @@ A new instance of ResponseSplitting
             <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>COOKIE</span><span class='comma'>,</span>
             <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>HEADER</span>
         <span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt; </span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.5</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:references</span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
              <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>SecuriTeam</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://www.securiteam.com/securityreviews/5WP0E2KFGK.html</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -434,6 +435,7 @@ A new instance of ResponseSplitting
             <span class='symbol'>:name</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Response splitting</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
             <span class='symbol'>:description</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>The web application includes user input
 </span><span class='tstring_content'>                 in the response HTTP header.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='symbol'>:tags</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>response</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>splitting</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>injection</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>header</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span><span class='comma'>,</span>
             <span class='symbol'>:cwe</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>20</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:severity</span>    <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>MEDIUM</span><span class='comma'>,</span>
             <span class='symbol'>:cvssv2</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>5.0</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -530,7 +532,7 @@ A new instance of ResponseSplitting
 
     <span class='comment'># try to inject the headers into all vectors
 </span>    <span class='comment'># and pass a block that will check for a positive result
-</span>    <span class='id audit'>audit</span><span class='lparen'>(</span> <span class='ivar'>@__header</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+</span>    <span class='id audit'>audit</span><span class='lparen'>(</span> <span class='ivar'>@__header</span><span class='comma'>,</span> <span class='symbol'>:param_flip</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id res'>res</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='op'>|</span>
         <span class='kw'>if</span> <span class='id res'>res</span><span class='period'>.</span><span class='id headers_hash'>headers_hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>X-CRLF-Safe</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span>
            <span class='op'>!</span><span class='id res'>res</span><span class='period'>.</span><span class='id headers_hash'>headers_hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>X-CRLF-Safe</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id empty?'>empty?</span>
@@ -550,7 +552,7 @@ A new instance of ResponseSplitting
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:49 2011 by 
+  Generated on Sun Feb 13 12:47:29 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

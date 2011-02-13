@@ -115,7 +115,7 @@ It is usually extended to fill-in for system specific functionality.
   
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="Module/Manager.html" title="Arachni::Module::Manager (class)">Module::Manager</a></span>, <span class='object_link'><a href="Plugin/Manager.html" title="Arachni::Plugin::Manager (class)">Plugin::Manager</a></span>, <span class='object_link'><a href="Report/Manager.html" title="Arachni::Report::Manager (class)">Report::Manager</a></span></p>
+  <p class="children"><span class='object_link'><a href="Module/Manager.html" title="Arachni::Module::Manager (class)">Module::Manager</a></span>, <span class='object_link'><a href="Plugin/Manager.html" title="Arachni::Plugin::Manager (class)">Plugin::Manager</a></span>, <span class='object_link'><a href="Report/FormatterManager.html" title="Arachni::Report::FormatterManager (class)">Report::FormatterManager</a></span>, <span class='object_link'><a href="Report/Manager.html" title="Arachni::Report::Manager (class)">Report::Manager</a></span></p>
 </div>
 
   <h2>Constant Summary</h2>
@@ -208,27 +208,6 @@ Returns a component class object by name, loading it on the fly need be.
 Returns array of available component names.
 </p>
 </div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#include_formatters%21-instance_method" title="#include_formatters! (instance method)">- (Object) <strong>include_formatters!</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -678,34 +657,6 @@ Returns array of available component names.
         <span class='id components'>components</span> <span class='op'>&lt;&lt;</span> <span class='id name'>name</span>
     <span class='rbrace'>}</span>
     <span class='kw'>return</span> <span class='id components'>components</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="include_formatters!-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>include_formatters!</strong> 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-252
-253
-254</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/component_manager.rb', line 252</span>
-
-<span class='kw'>def</span> <span class='id include_formatters!'>include_formatters!</span>
-    <span class='ivar'>@include_formatters</span> <span class='op'>=</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1391,7 +1342,7 @@ the prepared options to be passed to the component
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:46 2011 by 
+  Generated on Sun Feb 13 12:47:27 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

@@ -72,11 +72,15 @@
     
   
     
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Arachni::Module::Utilities</a></span></dd>
+      
+    
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">modules/audit/sqli_blind_rdiff.rb</dd>
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">modules/audit/sqli_blind_rdiff.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -122,6 +126,10 @@ blind SQL injections.
   
 
 
+  
+  
+  
+  
   
   
   
@@ -421,6 +429,16 @@ presentation.
   
   
   
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Arachni::Module::Utilities</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="../Module/Base.html#register_results-instance_method" title="Arachni::Module::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Module/Base.html#skip%3F-instance_method" title="Arachni::Module::Base#skip? (method)">#skip?</a></span></p>
 
@@ -480,12 +498,12 @@ A new instance of BlindrDiffSQLInjection
       <pre class="lines">
 
 
-32
-33
-34</pre>
+34
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
@@ -525,8 +543,6 @@ A new instance of BlindrDiffSQLInjection
       <pre class="lines">
 
 
-239
-240
 241
 242
 243
@@ -560,10 +576,13 @@ A new instance of BlindrDiffSQLInjection
 271
 272
 273
-274</pre>
+274
+275
+276
+277</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 239</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 241</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -576,7 +595,7 @@ A new instance of BlindrDiffSQLInjection
         <span class='symbol'>:elements</span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
             <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span>
         <span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='symbol'>:author</span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>zapotek</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt; </span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:version</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:references</span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>OWASP</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://www.owasp.org/index.php/Blind_SQL_Injection</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -588,6 +607,7 @@ A new instance of BlindrDiffSQLInjection
             <span class='symbol'>:name</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Blind SQL Injection</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
             <span class='symbol'>:description</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>SQL code can be injected into the web application
 </span><span class='tstring_content'>                even though it may not be obvious due to suppression of error messages.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='symbol'>:tags</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sql</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>blind</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rdiff</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>injection</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>database</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span><span class='comma'>,</span>
             <span class='symbol'>:cwe</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>89</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:severity</span>    <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>HIGH</span><span class='comma'>,</span>
             <span class='symbol'>:cvssv2</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>9.0</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -625,15 +645,15 @@ A new instance of BlindrDiffSQLInjection
       <pre class="lines">
 
 
-230
-231
-232</pre>
+232
+233
+234</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 230</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 232</span>
 
 <span class='kw'>def</span> <span class='id __audit_id'>__audit_id</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span><span class='rbrace'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span><span class='period'>.</span><span class='id keys'>keys</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span><span class='rbrace'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span><span class='period'>.</span><span class='id keys'>keys</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -674,12 +694,12 @@ A new instance of BlindrDiffSQLInjection
       <pre class="lines">
 
 
-234
-235
-236</pre>
+236
+237
+238</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 234</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 236</span>
 
 <span class='kw'>def</span> <span class='id __audited?'>__audited?</span>
     <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id __audit_id'>__audit_id</span><span class='lparen'>(</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -763,8 +783,6 @@ the vulnerable variable
       <pre class="lines">
 
 
-213
-214
 215
 216
 217
@@ -774,10 +792,12 @@ the vulnerable variable
 221
 222
 223
-224</pre>
+224
+225
+226</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 213</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id __check'>__check</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span> <span class='rparen'>)</span>
 
@@ -821,18 +841,18 @@ their code
       <pre class="lines">
 
 
-196
-197
 198
 199
 200
 201
 202
 203
-204</pre>
+204
+205
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 196</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id analyze'>analyze</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:good</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -861,12 +881,12 @@ their code
       <pre class="lines">
 
 
-226
-227
-228</pre>
+228
+229
+230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 226</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 228</span>
 
 <span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
     <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='id __audit_id'>__audit_id</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -900,8 +920,6 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
       <pre class="lines">
 
 
-120
-121
 122
 123
 124
@@ -933,10 +951,12 @@ Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
 150
 151
 152
-153</pre>
+153
+154
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 120</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id prep_bad_responses'>prep_bad_responses</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -1002,8 +1022,6 @@ presentation
       <pre class="lines">
 
 
-156
-157
 158
 159
 160
@@ -1039,10 +1057,12 @@ presentation
 190
 191
 192
-193</pre>
+193
+194
+195</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 156</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 158</span>
 
 <span class='kw'>def</span> <span class='id prep_good_responses'>prep_good_responses</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -1100,8 +1120,6 @@ presentation
       <pre class="lines">
 
 
-36
-37
 38
 39
 40
@@ -1140,10 +1158,12 @@ presentation
 73
 74
 75
-76</pre>
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -1204,8 +1224,6 @@ presentation
       <pre class="lines">
 
 
-78
-79
 80
 81
 82
@@ -1243,10 +1261,12 @@ presentation
 114
 115
 116
-117</pre>
+117
+118
+119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
@@ -1298,7 +1318,7 @@ presentation
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:48 2011 by 
+  Generated on Sun Feb 13 12:47:29 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

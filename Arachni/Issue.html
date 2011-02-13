@@ -691,6 +691,33 @@ To be assigned a constant form <span class='object_link'><a href="Issue/Severity
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#tags-instance_method" title="#tags (instance method)">- (Object) <strong>tags</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute tags.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#url-instance_method" title="#url (instance method)">- (String) <strong>url</strong> </a>
     
 
@@ -949,7 +976,6 @@ attributes
       <pre class="lines">
 
 
-233
 234
 235
 236
@@ -976,10 +1002,11 @@ attributes
 257
 258
 259
-260</pre>
+260
+261</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/issue.rb', line 233</span>
+      <pre class="code"><span class="info file"># File 'lib/issue.rb', line 234</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
 
@@ -1046,12 +1073,12 @@ Returns the value of attribute _hash
       <pre class="lines">
 
 
-222
 223
-224</pre>
+224
+225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/issue.rb', line 222</span>
+      <pre class="code"><span class="info file"># File 'lib/issue.rb', line 223</span>
 
 <span class='kw'>def</span> <span class='id _hash'>_hash</span>
   <span class='ivar'>@_hash</span>
@@ -2219,6 +2246,48 @@ To be assigned a constant form <span class='object_link'><a href="Issue/Severity
 </div>
     
       
+      <span id="tags=-instance_method"></span>
+      <span id="tags-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="tags-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>tags</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute tags
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+222
+223
+224</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/issue.rb', line 222</span>
+
+<span class='kw'>def</span> <span class='id tags'>tags</span>
+  <span class='ivar'>@tags</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
       <span id="url=-instance_method"></span>
       <span id="url-instance_method"></span>
       <div class="method_details ">
@@ -2458,15 +2527,15 @@ Is manual verification required?
       <pre class="lines">
 
 
-274
 275
 276
 277
 278
-279</pre>
+279
+280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/issue.rb', line 274</span>
+      <pre class="code"><span class="info file"># File 'lib/issue.rb', line 275</span>
 
 <span class='kw'>def</span> <span class='id each'>each</span>
     <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variables'>instance_variables</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -2492,15 +2561,15 @@ Is manual verification required?
       <pre class="lines">
 
 
-281
 282
 283
 284
 285
-286</pre>
+286
+287</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/issue.rb', line 281</span>
+      <pre class="code"><span class="info file"># File 'lib/issue.rb', line 282</span>
 
 <span class='kw'>def</span> <span class='id each_pair'>each_pair</span>
     <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variables'>instance_variables</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -2526,12 +2595,12 @@ Is manual verification required?
       <pre class="lines">
 
 
-288
 289
-290</pre>
+290
+291</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/issue.rb', line 288</span>
+      <pre class="code"><span class="info file"># File 'lib/issue.rb', line 289</span>
 
 <span class='kw'>def</span> <span class='id remove_instance_var'>remove_instance_var</span><span class='lparen'>(</span> <span class='id var'>var</span> <span class='rparen'>)</span>
     <span class='id remove_instance_variable'>remove_instance_variable</span><span class='lparen'>(</span> <span class='id var'>var</span> <span class='rparen'>)</span>
@@ -2546,7 +2615,7 @@ Is manual verification required?
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:42 2011 by 
+  Generated on Sun Feb 13 12:47:21 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

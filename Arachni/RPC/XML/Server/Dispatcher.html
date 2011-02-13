@@ -53,10 +53,12 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName"><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName"><span class='object_link'><a href="Base.html" title="Arachni::RPC::XML::Server::Base (class)">Base</a></span></span>
       
         <ul class="fullTree">
           <li><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="Base.html" title="Arachni::RPC::XML::Server::Base (class)">Base</a></span></li>
           
             <li class="next">Arachni::RPC::XML::Server::Dispatcher</li>
           
@@ -133,6 +135,10 @@ instances of XMLRPC servers.
   
   
   
+  
+  
+  
+  
 
   
     <h2>
@@ -145,11 +151,9 @@ instances of XMLRPC servers.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#alive%3F-instance_method" title="#alive? (instance method)">- (Boolean) <strong>alive?</strong> </a>
+      <a href="#alive%3F-instance_method" title="#alive? (instance method)">- (Object) <strong>alive?</strong> </a>
     
 
-    
-      (also: #is_alive)
     
   </span>
   
@@ -336,6 +340,27 @@ Starts the dispatcher&#8217;s server.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#shutdown-instance_method" title="#shutdown (instance method)">- (Object) <strong>shutdown</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#stats-instance_method" title="#stats (instance method)">- (Hash) <strong>stats</strong> </a>
     
 
@@ -380,7 +405,17 @@ Returns server stats regarding the jobs and pool.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../../../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../../../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../../../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Base.html" title="Arachni::RPC::XML::Server::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Base.html#add_handler-instance_method" title="Arachni::RPC::XML::Server::Base#add_handler (method)">#add_handler</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -408,10 +443,6 @@ A new instance of Dispatcher
       <pre class="lines">
 
 
-49
-50
-51
-52
 53
 54
 55
@@ -446,73 +477,31 @@ A new instance of Dispatcher
 84
 85
 86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106</pre>
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+
+    <span class='id banner'>banner</span>
 
     <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='id opts'>opts</span>
     <span class='ivar'>@opts</span><span class='period'>.</span><span class='id rpc_port'>rpc_port</span>  <span class='op'>||=</span> <span class='int'>7331</span>
     <span class='ivar'>@opts</span><span class='period'>.</span><span class='id pool_size'>pool_size</span> <span class='op'>||=</span> <span class='int'>5</span>
-
-    <span class='id banner'>banner</span>
 
     <span class='kw'>if</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id help'>help</span>
         <span class='id print_help'>print_help</span>
         <span class='id exit'>exit</span> <span class='int'>0</span>
     <span class='kw'>end</span>
 
+    <span class='kw'>super</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span>
 
     <span class='id prep_logging'>prep_logging</span>
 
-    <span class='id pkey'>pkey</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>PKey</span><span class='op'>::</span><span class='const'>RSA</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_pkey'>ssl_pkey</span> <span class='rparen'>)</span> <span class='rparen'>)</span>         <span class='kw'>if</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_pkey'>ssl_pkey</span>
-    <span class='id cert'>cert</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>X509</span><span class='op'>::</span><span class='const'>Certificate</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_cert'>ssl_cert</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_cert'>ssl_cert</span>
-
-    <span class='kw'>if</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_pkey'>ssl_pkey</span> <span class='op'>||</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_pkey'>ssl_pkey</span>
-        <span class='id verification'>verification</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>SSL</span><span class='op'>::</span><span class='const'>VERIFY_PEER</span> <span class='op'>|</span>
-            <span class='op'>::</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>SSL</span><span class='op'>::</span><span class='const'>VERIFY_FAIL_IF_NO_PEER_CERT</span>
-    <span class='kw'>else</span>
-        <span class='id verification'>verification</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>SSL</span><span class='op'>::</span><span class='const'>VERIFY_NONE</span>
-    <span class='kw'>end</span>
-
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Initing HTTP Server...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-
-    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>HTTPServer</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span>
-        <span class='symbol'>:Port</span>            <span class='op'>=&gt;</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id rpc_port'>rpc_port</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLEnable</span>       <span class='op'>=&gt;</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id ssl'>ssl</span>      <span class='op'>||</span> <span class='kw'>false</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLVerifyClient</span> <span class='op'>=&gt;</span> <span class='id verification'>verification</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLCertName</span>     <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CN</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>::</span><span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Utils</span><span class='op'>::</span><span class='id getservername'>getservername</span> <span class='rbracket'>]</span> <span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLCertificate</span>  <span class='op'>=&gt;</span> <span class='id cert'>cert</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLPrivateKey</span>   <span class='op'>=&gt;</span> <span class='id pkey'>pkey</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLCACertificateFile</span> <span class='op'>=&gt;</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id ssl_ca'>ssl_ca</span>
-    <span class='rparen'>)</span>
-
     <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Initing XMLRPC Server...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    <span class='ivar'>@service</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>XMLRPC</span><span class='op'>::</span><span class='const'>WEBrickServlet</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span>  <span class='rparen'>)</span>
-    <span class='ivar'>@service</span><span class='period'>.</span><span class='id add_introspection'>add_introspection</span>
-    <span class='ivar'>@server</span><span class='period'>.</span><span class='id mount'>mount</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/RPC2</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@service</span> <span class='rparen'>)</span>
-    <span class='ivar'>@service</span><span class='period'>.</span><span class='id add_handler'>add_handler</span><span class='lparen'>(</span> <span class='op'>::</span><span class='const'>XMLRPC</span><span class='op'>::</span><span class='id iPIMethods'>iPIMethods</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dispatcher</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='kw'>self</span> <span class='rparen'>)</span>
+
+    <span class='id add_handler'>add_handler</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dispatcher</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>self</span> <span class='rparen'>)</span>
 
     <span class='comment'># trap interupts and exit cleanly when required
 </span>    <span class='id trap'>trap</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>HUP</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id shutdown'>shutdown</span> <span class='rbrace'>}</span>
@@ -543,54 +532,11 @@ A new instance of Dispatcher
       <div class="method_details first">
   <p class="signature first" id="alive?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>alive?</strong> 
+    - (<tt><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>alive?</strong> 
   
 
   
-    <span class="aliases">Also known as:
-    <span class="names"><span id='is_alive-instance_method'>is_alive</span></span>
-    </span>
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-194
-195
-196</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 194</span>
-
-<span class='kw'>def</span> <span class='id alive?'>alive?</span>
-    <span class='kw'>return</span> <span class='kw'>true</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
+</p>
 </div>
     
       <div class="method_details ">
@@ -618,22 +564,22 @@ author details etc.
       <pre class="lines">
 
 
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215</pre>
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 203</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 185</span>
 
 <span class='kw'>def</span> <span class='id banner'>banner</span>
 
@@ -719,26 +665,26 @@ includes port number, owner, clock info and proc info
       <pre class="lines">
 
 
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
 121
 122
 123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137</pre>
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id dispatch'>dispatch</span><span class='lparen'>(</span> <span class='id owner'>owner</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>unknown</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 
@@ -814,23 +760,23 @@ Returns proc info for a given pid
       <pre class="lines">
 
 
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
-159</pre>
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 146</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id job'>job</span><span class='lparen'>(</span> <span class='id pid'>pid</span> <span class='rparen'>)</span>
     <span class='ivar'>@jobs</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -888,18 +834,18 @@ Returns proc info for all jobs
       <pre class="lines">
 
 
-166
-167
-168
-169
-170
-171
-172
-173
-174</pre>
+153
+154
+155
+156
+157
+158
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 166</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='id jobs'>jobs</span>
     <span class='id jobs'>jobs</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -928,6 +874,24 @@ Returns proc info for all jobs
       <pre class="lines">
 
 
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
 217
 218
 219
@@ -948,25 +912,13 @@ Returns proc info for all jobs
 234
 235
 236
-237
-238
-239
-240
-241
-242
-243
-244
-245
-246
-247
-248
-249</pre>
+237</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 217</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 199</span>
 
 <span class='kw'>def</span> <span class='id print_help'>print_help</span>
-    <span class='id puts'>puts</span> <span class='heredoc_beg'>&lt;&lt;USAGE</span><span class='tstring_content'>  Usage:  arachni_xmlrpcd.rb \[options\]
+    <span class='id puts'>puts</span> <span class='heredoc_beg'>&lt;&lt;USAGE</span><span class='tstring_content'>  Usage:  arachni_xmlrpcd \[options\]
 
   Supported options:
 
@@ -974,6 +926,7 @@ Returns proc info for all jobs
 --help                      output this
 
 --port                      specify port to listen to
+</span><span class='tstring_content'>                                (Default: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id rpc_port'>rpc_port</span><span class='rbrace'>}</span><span class='tstring_content'>)
 
 --reroute-to-logfile        reroute all output to a logfile under 'logs/'
 
@@ -987,15 +940,20 @@ Returns proc info for all jobs
 SSL --------------------------
 
 (All SSL options will be honored by the dispatched XMLRPC instances as well.)
+(Do *not* use encrypted keys!)
 
 --ssl                       use SSL?
+                               (If you want encryption without authentication
+                                you can skip rest of the SSL options.)
 
---ssl_pkey   &lt;file&gt;         location of the SSL private key (.key)
+--ssl-pkey   &lt;file&gt;         location of the SSL private key (.pem)
+                                (Used to verify the server to the clients.)
 
---ssl_cert   &lt;file&gt;         location of the SSL certificate (.cert)
+--ssl-cert   &lt;file&gt;         location of the SSL certificate (.pem)
+                                (Used to verify the server to the clients.)
 
---ssl_ca     &lt;file&gt;         location of the CA file (.cert)
-
+--ssl-ca     &lt;file&gt;         location of the CA certificate (.pem)
+                                (Used to verify the clients to the server.)
 </span><span class='heredoc_end'>USAGE
 </span><span class='kw'>end</span></pre>
     </td>
@@ -1027,17 +985,49 @@ Starts the dispatcher&#8217;s server
       <pre class="lines">
 
 
-109
-110
-111
-112</pre>
+90
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span>
     <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Starting the server...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    <span class='ivar'>@server</span><span class='period'>.</span><span class='id start'>start</span>
+    <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shutdown-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>shutdown</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='id shutdown'>shutdown</span>
+    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Shutting down...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='kw'>super</span>
+    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Done.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1081,21 +1071,21 @@ Returns server stats regarding the jobs and pool
       <pre class="lines">
 
 
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192</pre>
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 181</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id stats'>stats</span>
     <span class='id cjobs'>cjobs</span>    <span class='op'>=</span> <span class='id jobs'>jobs</span><span class='lparen'>(</span> <span class='rparen'>)</span>
@@ -1119,7 +1109,7 @@ Returns server stats regarding the jobs and pool
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:48 2011 by 
+  Generated on Sun Feb 13 12:47:29 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

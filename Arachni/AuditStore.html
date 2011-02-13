@@ -1243,13 +1243,21 @@ the file to load
 
 113
 114
-115</pre>
+115
+116
+117
+118
+119</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='const'>AuditStore</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
-     <span class='const'>Marshal</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+     <span class='kw'>begin</span>
+        <span class='const'>Marshal</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+     <span class='kw'>rescue</span>
+         <span class='const'>YAML</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1301,19 +1309,27 @@ Saves &#8216;self&#8217; to file
       <pre class="lines">
 
 
-122
-123
-124
-125
-126</pre>
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 126</span>
 
 <span class='kw'>def</span> <span class='id save'>save</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
     <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
     <span class='id f'>f</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    <span class='const'>Marshal</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id f'>f</span> <span class='rparen'>)</span>
+    <span class='kw'>begin</span>
+        <span class='const'>Marshal</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id f'>f</span> <span class='rparen'>)</span>
+    <span class='kw'>rescue</span>
+        <span class='const'>YAML</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id f'>f</span> <span class='rparen'>)</span>
+    <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1357,22 +1373,22 @@ Returns &#8216;self&#8217; and all objects in its instance vars as hashes
       <pre class="lines">
 
 
-133
-134
-135
-136
-137
-138
-139
-140
 141
 142
 143
 144
-145</pre>
+145
+146
+147
+148
+149
+150
+151
+152
+153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id to_h'>to_h</span>
 
@@ -1397,7 +1413,7 @@ Returns &#8216;self&#8217; and all objects in its instance vars as hashes
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:43 2011 by 
+  Generated on Sun Feb 13 12:47:23 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

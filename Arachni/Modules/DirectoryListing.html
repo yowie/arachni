@@ -350,7 +350,7 @@ A new instance of DirectoryListing.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Arachni::Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
 
   
   
@@ -483,7 +483,8 @@ A new instance of DirectoryListing
 142
 143
 144
-145</pre>
+145
+146</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/recon/directory_listing.rb', line 125</span>
@@ -501,6 +502,7 @@ A new instance of DirectoryListing
             <span class='symbol'>:name</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Directory listing is enabled.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
             <span class='symbol'>:description</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>In most circumstances enabling directory listings is a bad practise
 </span><span class='tstring_content'>                as it allows an attacker to better grasp the web application's structure.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            <span class='symbol'>:tags</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>path</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>directory</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>listing</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>index</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span><span class='comma'>,</span>
             <span class='symbol'>:cwe</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>548</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:severity</span>    <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>LOW</span><span class='comma'>,</span>
             <span class='symbol'>:cvssv2</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -678,7 +680,6 @@ A new instance of DirectoryListing
       <pre class="lines">
 
 
-147
 148
 149
 150
@@ -698,31 +699,20 @@ A new instance of DirectoryListing
 164
 165
 166
-167
-168
-169
-170
-171
-172</pre>
+167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/directory_listing.rb', line 147</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/directory_listing.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
 
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>!=</span> <span class='int'>200</span> <span class='op'>||</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='period'>.</span><span class='id empty?'>empty?</span>
 
     <span class='id issue'>issue</span> <span class='op'>=</span> <span class='const'>Issue</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
-        <span class='symbol'>:var</span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:url</span>          <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span><span class='comma'>,</span>
-        <span class='symbol'>:injected</span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:method</span>       <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id method'>method</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id upcase'>upcase</span><span class='comma'>,</span>
-        <span class='symbol'>:id</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:regexp</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:regexp_match</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>n/a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:elem</span>         <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>SERVER</span><span class='comma'>,</span>
         <span class='symbol'>:response</span>     <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span>
-        <span class='symbol'>:verification</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>true</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:headers</span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='symbol'>:request</span>    <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id headers'>headers</span><span class='comma'>,</span>
             <span class='symbol'>:response</span>   <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id headers'>headers</span><span class='comma'>,</span>
@@ -921,7 +911,7 @@ A new instance of DirectoryListing
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:49 2011 by 
+  Generated on Sun Feb 13 12:47:29 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>

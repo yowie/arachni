@@ -208,6 +208,29 @@ Checks to see if an audit is running.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#clean_up%21-instance_method" title="#clean_up! (instance method)">- (Object) <strong>clean_up!</strong> </a>
+    
+
+    
+      (also: #clean_up)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#debug%3F-instance_method" title="#debug? (instance method)">- (Boolean) <strong>debug?</strong> </a>
     
 
@@ -607,7 +630,7 @@ Enables debugging output.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../../../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../../../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../../../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
 
   
   
@@ -645,14 +668,14 @@ A new instance of Framework
       <pre class="lines">
 
 
-88
 89
 90
 91
-92</pre>
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
@@ -755,7 +778,6 @@ YAML dump of the AuditStore
       <pre class="lines">
 
 
-161
 162
 163
 164
@@ -764,10 +786,11 @@ YAML dump of the AuditStore
 167
 168
 169
-170</pre>
+170
+171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 162</span>
 
 <span class='kw'>def</span> <span class='id auditstore'>auditstore</span>
     <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
@@ -840,6 +863,20 @@ Checks to see if an audit is running.
     </td>
   </tr>
 </table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clean_up!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>clean_up!</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='clean_up-instance_method'>clean_up</span></span>
+    </span>
+  
+</p>
 </div>
     
       <div class="method_details ">
@@ -922,12 +959,12 @@ Disables debugging output
       <pre class="lines">
 
 
-182
 183
-184</pre>
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 182</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 183</span>
 
 <span class='kw'>def</span> <span class='id debug_off'>debug_off</span>
     <span class='cvar'>@@debug</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -961,12 +998,12 @@ Enables debugging output
       <pre class="lines">
 
 
-175
 176
-177</pre>
+177
+178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 175</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 176</span>
 
 <span class='kw'>def</span> <span class='id debug_on'>debug_on</span>
     <span class='cvar'>@@debug</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -1023,7 +1060,6 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
-100
 101
 102
 103
@@ -1049,10 +1085,11 @@ Returns an array of hashes with information about all available reports
 123
 124
 125
-126</pre>
+126
+127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id lsplug'>lsplug</span>
 
@@ -1167,7 +1204,6 @@ YAML dump of the results hash
       <pre class="lines">
 
 
-146
 147
 148
 149
@@ -1175,10 +1211,11 @@ YAML dump of the results hash
 151
 152
 153
-154</pre>
+154
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 146</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id report'>report</span>
     <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
@@ -1239,15 +1276,15 @@ The audit is started in a new thread to avoid service blocking.
       <pre class="lines">
 
 
-134
 135
 136
 137
 138
-139</pre>
+139
+140</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span>
     <span class='ivar'>@job</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id new'>new</span> <span class='lbrace'>{</span>
@@ -1350,12 +1387,12 @@ Disables debugging output
       <pre class="lines">
 
 
-196
 197
-198</pre>
+198
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 196</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 197</span>
 
 <span class='kw'>def</span> <span class='id verbose_off'>verbose_off</span>
     <span class='cvar'>@@verbose</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -1389,12 +1426,12 @@ Enables debugging output
       <pre class="lines">
 
 
-189
 190
-191</pre>
+191
+192</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 189</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/framework.rb', line 190</span>
 
 <span class='kw'>def</span> <span class='id verbose_on'>verbose_on</span>
     <span class='cvar'>@@verbose</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -1409,7 +1446,7 @@ Enables debugging output
 </div>
     
     <div id="footer">
-  Generated on Fri Jan 28 16:24:48 2011 by 
+  Generated on Sun Feb 13 12:47:28 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.4 (ruby-1.9.2).
 </div>
