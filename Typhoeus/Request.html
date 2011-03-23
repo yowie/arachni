@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: Typhoeus::Request</title>
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -258,8 +258,6 @@ Returns the value of attribute proxy_username.
     
 
     
-      (also: #old_initialize)
-    
   </span>
   
     <span class="note title constructor">constructor</span>
@@ -275,6 +273,27 @@ Returns the value of attribute proxy_username.
 A new instance of Request.
 </p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#old_initialize-instance_method" title="#old_initialize (instance method)">- (Object) <strong>old_initialize</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -375,10 +394,6 @@ A new instance of Request.
     - (<tt><span class='object_link'><a href="" title="Typhoeus::Request (class)">Request</a></span></tt>) <strong>initialize</strong>(url, options = {}) 
   
 
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='old_initialize-instance_method'>old_initialize</span></span>
-    </span>
   
 </p><div class="docstring">
   <div class="discussion">
@@ -707,6 +722,30 @@ Returns the value of attribute proxy_username
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="old_initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>old_initialize</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/typhoeus/request.rb', line 25</span>
+
+<span class='kw'>alias</span> <span class='symbol'>:old_initialize</span> <span class='symbol'>:initialize</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="on_complete-instance_method">
   
     - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>on_complete</strong>(multi = false, &amp;block) 
@@ -876,9 +915,9 @@ Returns the value of attribute proxy_username
 </div>
     
     <div id="footer">
-  Generated on Mon Feb 14 15:42:59 2011 by 
+  Generated on Wed Mar 23 02:13:29 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.4 (ruby-1.9.2).
+  0.6.5 (ruby-1.9.2).
 </div>
 
   </body>

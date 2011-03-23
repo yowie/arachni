@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: Arachni::UI::Web::Server</title>
 <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -759,6 +759,15 @@ a number.
       <pre class="lines">
 
 
+847
+848
+849
+850
+851
+852
+853
+854
+855
 856
 857
 858
@@ -773,19 +782,10 @@ a number.
 867
 868
 869
-870
-871
-872
-873
-874
-875
-876
-877
-878
-879</pre>
+870</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 856</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 847</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id prep_webrick'>prep_webrick</span>
     <span class='kw'>if</span> <span class='cvar'>@@conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
@@ -841,6 +841,15 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
       <pre class="lines">
 
 
+826
+827
+828
+829
+830
+831
+832
+833
+834
 835
 836
 837
@@ -851,19 +860,10 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
 842
 843
 844
-845
-846
-847
-848
-849
-850
-851
-852
-853
-854</pre>
+845</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 835</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 826</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id run!'>run!</span><span class='lparen'>(</span> <span class='id options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='id set'>set</span> <span class='id options'>options</span>
@@ -1865,7 +1865,7 @@ Saves the report and shuts down the instance
       <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 468</span>
 
 <span class='kw'>def</span> <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span> <span class='rparen'>)</span>
-    <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id clean_up!'>clean_up!</span>
+    <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id clean_up!'>clean_up!</span><span class='lparen'>(</span> <span class='kw'>true</span> <span class='rparen'>)</span>
     <span class='id report_path'>report_path</span> <span class='op'>=</span> <span class='id settings'>settings</span><span class='period'>.</span><span class='id reports'>reports</span><span class='period'>.</span><span class='id save'>save</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id auditstore'>auditstore</span> <span class='rparen'>)</span>
     <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id service'>service</span><span class='period'>.</span><span class='id shutdown!'>shutdown!</span>
     <span class='kw'>return</span> <span class='id report_path'>report_path</span>
@@ -1925,7 +1925,7 @@ to be sent back to the user&#8217;s browser.
 
 <span class='kw'>def</span> <span class='id save_shutdown_and_show'>save_shutdown_and_show</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span> <span class='rparen'>)</span>
     <span class='id report'>report</span> <span class='op'>=</span> <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span> <span class='rparen'>)</span>
-    <span class='id settings'>settings</span><span class='period'>.</span><span class='id reports'>reports</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>html</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='const'>File</span><span class='period'>.</span><span class='id basename'>basename</span><span class='lparen'>(</span> <span class='id report'>report</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.afr</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='id settings'>settings</span><span class='period'>.</span><span class='id reports'>reports</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>html</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id settings'>settings</span><span class='period'>.</span><span class='id reports'>reports</span><span class='period'>.</span><span class='id all'>all</span><span class='period'>.</span><span class='id last'>last</span><span class='period'>.</span><span class='id id'>id</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2313,9 +2313,9 @@ a number
 </div>
     
     <div id="footer">
-  Generated on Mon Feb 14 15:42:57 2011 by 
+  Generated on Wed Mar 23 02:13:27 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.4 (ruby-1.9.2).
+  0.6.5 (ruby-1.9.2).
 </div>
 
   </body>

@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Module: Anemone</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -59,8 +59,8 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/anemone/http.rb<span class="defines">,<br />
-  lib/anemone/core.rb,<br /> lib/anemone/page.rb,<br /> lib/anemone/storage.rb,<br /> lib/anemone/tentacle.rb,<br /> lib/anemone/exceptions.rb,<br /> lib/anemone/page_store.rb,<br /> lib/anemone/storage/base.rb,<br /> lib/anemone/storage/redis.rb,<br /> lib/anemone/storage/pstore.rb,<br /> lib/anemone/storage/mongodb.rb,<br /> lib/anemone/storage/exceptions.rb,<br /> lib/anemone/storage/tokyo_cabinet.rb,<br /> lib/anemone/cookie_store.rb</span>
+    <dd class="r1 last">lib/anemone/page.rb<span class="defines">,<br />
+  lib/anemone/core.rb,<br /> lib/anemone/http.rb,<br /> lib/anemone/storage.rb,<br /> lib/anemone/tentacle.rb,<br /> lib/anemone/exceptions.rb,<br /> lib/anemone/page_store.rb,<br /> lib/anemone/storage/base.rb,<br /> lib/anemone/storage/redis.rb,<br /> lib/anemone/storage/pstore.rb,<br /> lib/anemone/storage/mongodb.rb,<br /> lib/anemone/storage/exceptions.rb,<br /> lib/anemone/storage/tokyo_cabinet.rb,<br /> lib/anemone/cookie_store.rb</span>
 </dd>
   
 </dl>
@@ -69,10 +69,12 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-Overides Anemone&#8217;s Page class methods:<br/> o in_domain?( uri ):
-adding support for subdomain crawling<br/> o links(): adding support for
-frame and iframe src URLs<br/>
+Overides Anemone&#8217;s HTTP class methods:
 </p>
+<pre class="code">
+ o refresh_connection( ): added proxy support
+ o get_response( ): upped the retry counter to 7 and generalized exception handling
+</pre>
 <p>
 @author: Tasos &#8220;Zapotek&#8221; Laskos
 </p>
@@ -81,7 +83,7 @@ frame and iframe src URLs<br/>
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1
+@version: 0.1.1
 </p>
 
 
@@ -109,7 +111,7 @@ frame and iframe src URLs<br/>
         <dt id="VERSION-constant" class="">VERSION =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.5.0</span><span class='tstring_end'>'</span></span><span class='semicolon'>;</span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.5.0</span><span class='tstring_end'>'</span></span></pre></dd>
       
     </dl>
   
@@ -201,9 +203,9 @@ Convenience method to start a crawl
 </div>
     
     <div id="footer">
-  Generated on Mon Feb 14 15:42:56 2011 by 
+  Generated on Wed Mar 23 02:13:26 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.4 (ruby-1.9.2).
+  0.6.5 (ruby-1.9.2).
 </div>
 
   </body>

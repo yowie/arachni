@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: Anemone::Extractors::Generic</title>
 <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -187,7 +187,7 @@ Returns an array of paths as plain strings
   
     <li>
       
-        <span class='type'>(<tt>Nokogiri</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../../Nokogiri.html" title="Nokogiri (module)">Nokogiri</a></span></tt>)</span>
       
       
         <span class='name'>Nokogiri</span>
@@ -231,13 +231,21 @@ paths
 
 34
 35
-36</pre>
+36
+37
+38
+39
+40</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'path_extractors/generic.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='id doc'>doc</span> <span class='rparen'>)</span>
-    <span class='const'>URI</span><span class='period'>.</span><span class='id extract'>extract</span><span class='lparen'>(</span> <span class='id doc'>doc</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
+    <span class='kw'>begin</span>
+        <span class='const'>URI</span><span class='period'>.</span><span class='id extract'>extract</span><span class='lparen'>(</span> <span class='id doc'>doc</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
+    <span class='kw'>rescue</span>
+        <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -249,9 +257,9 @@ paths
 </div>
     
     <div id="footer">
-  Generated on Mon Feb 14 15:43:00 2011 by 
+  Generated on Wed Mar 23 02:13:30 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.4 (ruby-1.9.2).
+  0.6.5 (ruby-1.9.2).
 </div>
 
   </body>

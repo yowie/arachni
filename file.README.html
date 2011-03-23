@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Arachni - Web Application Security Scanner Framework</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,9 +43,10 @@
     
     <div id="content"><div id='filecontents'><h1>Arachni - Web Application Security Scanner Framework</h1>
 
-<p><strong>Version</strong>:     0.2.2.1<br/>
-<strong>Homepage</strong>:     <a href="http://github.com/zapotek/arachni">http://github.com/zapotek/arachni</a><br/>
-<strong>News</strong>:     <a href="http://trainofthought.segfault.gr/category/projects/arachni/">http://trainofthought.segfault.gr/category/projects/arachni/</a><br/>
+<p><strong>Version</strong>:     0.2.2.2<br/>
+<strong>Homepage</strong>:     <a href="http://arachni.segfault.gr">http://arachni.segfault.gr</a><br/>
+<strong>Blog</strong>:         <a href="http://trainofthought.segfault.gr/category/projects/arachni/">http://trainofthought.segfault.gr/category/projects/arachni/</a><br/>
+<strong>Github page</strong>:  <a href="http://github.com/zapotek/arachni">http://github.com/zapotek/arachni</a><br/>
 <strong>Documentation</strong>:     <a href="http://github.com/Zapotek/arachni/wiki">http://github.com/Zapotek/arachni/wiki</a><br/>
 <strong>Code Documentation</strong>:     <a href="http://zapotek.github.com/arachni/">http://zapotek.github.com/arachni/</a><br/>
 <strong>Google Group</strong>: <a href="http://groups.google.com/group/arachni">http://groups.google.com/group/arachni</a><br/>
@@ -249,14 +250,15 @@ From a user's or a component developer's point of view everything appears simple
 <li>Currently available plugins:
 
 <ul>
-<li>Passive Proxy</li>
+<li>Passive Proxy -- Analyzes requests and responses between the web app and the browser assisting in AJAX audits, logging-in and/or restricting the scope of the audit</li>
 <li>Form based AutoLogin</li>
 <li>Dictionary attacker for HTTP Auth</li>
 <li>Dictionary attacker for form based authentication</li>
-<li>Cookie collector</li>
+<li>Profiler -- Performs taint analysis (with benign inputs) and response time analysis</li>
+<li>Cookie collector -- Keeps track of cookies while establishing a timeline of changes</li>
 <li>Healthmap -- Generates sitemap showing the health of each crawled/audited URL</li>
 <li>Content-types -- Logs content-types of server responses aiding in the identification of interesting (possibly leaked) files</li>
-<li>WAF (Web Application Firewall) Detector</li>
+<li>WAF (Web Application Firewall) Detector -- Establishes a baseline of normal behavior and uses rDiff analysis to determine if malicious inputs cause any behavioral changes</li>
 <li>MetaModules -- Loads and runs high-level meta-analysis modules pre/mid/post-scan
 
 <ul>
@@ -286,7 +288,18 @@ However, this is usually not required since Arachni is aware of which requests a
 
 <p>The Web User Interface is basically a Sinatra app which acts as an Arachni XMLRPC client and connects to a running XMLRPC Dispatch server.</p>
 
-<p>Thus, you first need to start a Dispatcher like so:</p>
+<h4>Autostart</h4>
+
+<p>There's an autostart script to start all systems that are required by the WebUI:</p>
+
+<pre class="code">$ arachni_web_autostart
+</pre>
+
+<p><strong>Note:</strong>: <em>The "arachni</em>xmlrpcd" and "arachni<em>web" executables will need to be in your PATH.</em></p>
+
+<h4>Manually</h4>
+
+<p>You first need to start a Dispatcher like so:</p>
 
 <pre class="code">$ arachni_xmlrpcd &amp;
 </pre>
@@ -494,9 +507,9 @@ caused by the use of this software.</p>
 <p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p></div></div>
     
     <div id="footer">
-  Generated on Mon Feb 14 15:42:52 2011 by 
+  Generated on Wed Mar 23 02:13:23 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.4 (ruby-1.9.2).
+  0.6.5 (ruby-1.9.2).
 </div>
 
   </body>

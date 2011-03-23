@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: Arachni::Plugin::Base</title>
 <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -113,7 +113,7 @@ An abstract class for the plugins.<br/> All plugins must extend this.
   
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="../Plugins/AutoLogin.html" title="Arachni::Plugins::AutoLogin (class)">Arachni::Plugins::AutoLogin</a></span>, <span class='object_link'><a href="../Plugins/ContentTypes.html" title="Arachni::Plugins::ContentTypes (class)">Arachni::Plugins::ContentTypes</a></span>, <span class='object_link'><a href="../Plugins/CookieCollector.html" title="Arachni::Plugins::CookieCollector (class)">Arachni::Plugins::CookieCollector</a></span>, <span class='object_link'><a href="../Plugins/FormDicattack.html" title="Arachni::Plugins::FormDicattack (class)">Arachni::Plugins::FormDicattack</a></span>, <span class='object_link'><a href="../Plugins/HTTPDicattack.html" title="Arachni::Plugins::HTTPDicattack (class)">Arachni::Plugins::HTTPDicattack</a></span>, <span class='object_link'><a href="../Plugins/HealthMap.html" title="Arachni::Plugins::HealthMap (class)">Arachni::Plugins::HealthMap</a></span>, <span class='object_link'><a href="../Plugins/MetaModules.html" title="Arachni::Plugins::MetaModules (class)">Arachni::Plugins::MetaModules</a></span>, <span class='object_link'><a href="../Plugins/Proxy.html" title="Arachni::Plugins::Proxy (class)">Arachni::Plugins::Proxy</a></span>, <span class='object_link'><a href="../Plugins/WAFDetector.html" title="Arachni::Plugins::WAFDetector (class)">Arachni::Plugins::WAFDetector</a></span></p>
+  <p class="children"><span class='object_link'><a href="../Plugins/AutoLogin.html" title="Arachni::Plugins::AutoLogin (class)">Arachni::Plugins::AutoLogin</a></span>, <span class='object_link'><a href="../Plugins/ContentTypes.html" title="Arachni::Plugins::ContentTypes (class)">Arachni::Plugins::ContentTypes</a></span>, <span class='object_link'><a href="../Plugins/CookieCollector.html" title="Arachni::Plugins::CookieCollector (class)">Arachni::Plugins::CookieCollector</a></span>, <span class='object_link'><a href="../Plugins/FormDicattack.html" title="Arachni::Plugins::FormDicattack (class)">Arachni::Plugins::FormDicattack</a></span>, <span class='object_link'><a href="../Plugins/HTTPDicattack.html" title="Arachni::Plugins::HTTPDicattack (class)">Arachni::Plugins::HTTPDicattack</a></span>, <span class='object_link'><a href="../Plugins/HealthMap.html" title="Arachni::Plugins::HealthMap (class)">Arachni::Plugins::HealthMap</a></span>, <span class='object_link'><a href="../Plugins/MetaModules.html" title="Arachni::Plugins::MetaModules (class)">Arachni::Plugins::MetaModules</a></span>, <span class='object_link'><a href="../Plugins/Profiler.html" title="Arachni::Plugins::Profiler (class)">Arachni::Plugins::Profiler</a></span>, <span class='object_link'><a href="../Plugins/Proxy.html" title="Arachni::Plugins::Proxy (class)">Arachni::Plugins::Proxy</a></span>, <span class='object_link'><a href="../Plugins/WAFDetector.html" title="Arachni::Plugins::WAFDetector (class)">Arachni::Plugins::WAFDetector</a></span></p>
 </div>
 
 
@@ -298,7 +298,7 @@ REQUIRED.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Output.html" title="Arachni::Module::Output (module)">Module::Output</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Output.html#print_debug-instance_method" title="Arachni::Module::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../Module/Output.html#print_error-instance_method" title="Arachni::Module::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../Module/Output.html#print_info-instance_method" title="Arachni::Module::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../Module/Output.html#print_line-instance_method" title="Arachni::Module::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../Module/Output.html#print_ok-instance_method" title="Arachni::Module::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../Module/Output.html#print_status-instance_method" title="Arachni::Module::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../Module/Output.html#print_verbose-instance_method" title="Arachni::Module::Output#print_verbose (method)">#print_verbose</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Output.html#o_print_debug-instance_method" title="Arachni::Module::Output#o_print_debug (method)">#o_print_debug</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_error-instance_method" title="Arachni::Module::Output#o_print_error (method)">#o_print_error</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_info-instance_method" title="Arachni::Module::Output#o_print_info (method)">#o_print_info</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_line-instance_method" title="Arachni::Module::Output#o_print_line (method)">#o_print_line</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_ok-instance_method" title="Arachni::Module::Output#o_print_ok (method)">#o_print_ok</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_status-instance_method" title="Arachni::Module::Output#o_print_status (method)">#o_print_status</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_verbose-instance_method" title="Arachni::Module::Output#o_print_verbose (method)">#o_print_verbose</a></span>, <span class='object_link'><a href="../Module/Output.html#print_debug-instance_method" title="Arachni::Module::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../Module/Output.html#print_error-instance_method" title="Arachni::Module::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../Module/Output.html#print_info-instance_method" title="Arachni::Module::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../Module/Output.html#print_line-instance_method" title="Arachni::Module::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../Module/Output.html#print_ok-instance_method" title="Arachni::Module::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../Module/Output.html#print_status-instance_method" title="Arachni::Module::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../Module/Output.html#print_verbose-instance_method" title="Arachni::Module::Output#print_verbose (method)">#print_verbose</a></span></p>
 
   
   
@@ -610,9 +610,9 @@ REQUIRED
 </div>
     
     <div id="footer">
-  Generated on Mon Feb 14 15:42:56 2011 by 
+  Generated on Wed Mar 23 02:13:25 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.4 (ruby-1.9.2).
+  0.6.5 (ruby-1.9.2).
 </div>
 
   </body>

@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Arachni::Plugins::Profiler</title>
+<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../Arachni.html" title="Arachni (module)">Arachni</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Plugins.html" title="Arachni::Plugins (module)">Plugins</a></span></span>
+     &raquo; 
+    <span class="title">Profiler</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Arachni::Plugins::Profiler
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></li>
+          
+            <li class="next">Arachni::Plugins::Profiler</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">plugins/profiler.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Profiler plugin.
+</p>
+<p>
+Examines the behavior of the web application gathering general statistics
+and performs taint analysis to determine which inputs affect the output.
+</p>
+<p>
+@author: Tasos &#8220;Zapotek&#8221; Laskos
+</p>
+<pre class="code">
+                                     &lt;tasos.laskos@gmail.com&gt;
+                                     &lt;zapotek@segfault.gr&gt;
+</pre>
+<p>
+@version: 0.1
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+   
+    
+   
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Profiler/Auditor.html" title="Arachni::Plugins::Profiler::Auditor (class)">Auditor</a></span>
+    
+  
+</p>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#info-class_method" title="info (class method)">+ (Object) <strong>info</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clean_up-instance_method" title="#clean_up (instance method)">- (Object) <strong>clean_up</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Profiler) <strong>initialize</strong>(framework, options) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Profiler.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#log-instance_method" title="#log (instance method)">- (Object) <strong>log</strong>(taint, res, elem, landed_elems) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Output.html" title="Arachni::Module::Output (module)">Module::Output</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Module/Output.html#o_print_debug-instance_method" title="Arachni::Module::Output#o_print_debug (method)">#o_print_debug</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_error-instance_method" title="Arachni::Module::Output#o_print_error (method)">#o_print_error</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_info-instance_method" title="Arachni::Module::Output#o_print_info (method)">#o_print_info</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_line-instance_method" title="Arachni::Module::Output#o_print_line (method)">#o_print_line</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_ok-instance_method" title="Arachni::Module::Output#o_print_ok (method)">#o_print_ok</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_status-instance_method" title="Arachni::Module::Output#o_print_status (method)">#o_print_status</a></span>, <span class='object_link'><a href="../Module/Output.html#o_print_verbose-instance_method" title="Arachni::Module::Output#o_print_verbose (method)">#o_print_verbose</a></span>, <span class='object_link'><a href="../Module/Output.html#print_debug-instance_method" title="Arachni::Module::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../Module/Output.html#print_error-instance_method" title="Arachni::Module::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../Module/Output.html#print_info-instance_method" title="Arachni::Module::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../Module/Output.html#print_line-instance_method" title="Arachni::Module::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../Module/Output.html#print_ok-instance_method" title="Arachni::Module::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../Module/Output.html#print_status-instance_method" title="Arachni::Module::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../Module/Output.html#print_verbose-instance_method" title="Arachni::Module::Output#print_verbose (method)">#print_verbose</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Arachni::Plugins::Profiler (class)">Profiler</a></span></tt>) <strong>initialize</strong>(framework, options) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of Profiler
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a></span></tt>)</span>
+      
+      
+        <span class='name'>framework</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>options</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+options passed to the plugin
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/profiler.rb', line 141</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
+    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
+    <span class='ivar'>@http</span>      <span class='op'>=</span> <span class='id framework'>framework</span><span class='period'>.</span><span class='id http'>http</span>
+    <span class='ivar'>@options</span>   <span class='op'>=</span> <span class='id options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="info-class_method">
+  
+    + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>info</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/profiler.rb', line 222</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+    <span class='lbrace'>{</span>
+        <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Profiler</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Examines the behavior of the web application gathering general statistics
+            and performs taint analysis to determine which inputs affect the output.
+
+</span><span class='tstring_content'>            It's does not perform any vulnerability assesment nor does it send attack payloads.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+        <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span>
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="clean_up-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>clean_up</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+178
+179
+180
+181
+182</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/profiler.rb', line 178</span>
+
+<span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
+    <span class='op'>::</span><span class='const'>IO</span><span class='period'>.</span><span class='id select'>select</span><span class='lparen'>(</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='int'>1</span> <span class='rparen'>)</span> <span class='kw'>while</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id running?'>running?</span> <span class='rparen'>)</span>
+
+    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>inputs</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@inputs</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>times</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@times</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="log-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>log</strong>(taint, res, elem, landed_elems) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/profiler.rb', line 184</span>
+
+<span class='kw'>def</span> <span class='id log'>log</span><span class='lparen'>(</span> <span class='id taint'>taint</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id elem'>elem</span><span class='comma'>,</span> <span class='id landed_elems'>landed_elems</span> <span class='rparen'>)</span>
+
+    <span class='id res_hash'>res_hash</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id to_hash'>to_hash</span>
+    <span class='id res_hash'>res_hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>headers</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id res_hash'>res_hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>headers_hash</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+
+     <span class='id result'>result</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>taint</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='id taint'>taint</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>element</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span>  <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>type</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id type'>type</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id auditable'>auditable</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>altered</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id altered'>altered</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>owner</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id action'>action</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id method'>method</span> <span class='op'>?</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id method'>method</span><span class='period'>.</span><span class='id upcase'>upcase</span> <span class='op'>:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>response</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='id res_hash'>res_hash</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>request</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id method'>method</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id upcase'>upcase</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>params</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id params'>params</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>headers</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id headers'>headers</span><span class='comma'>,</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+
+    <span class='id result'>result</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>landed</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id landed_elems'>landed_elems</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id elem'>elem</span><span class='op'>|</span>
+        <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>type</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id type'>type</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id method'>method</span> <span class='op'>?</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id method'>method</span><span class='period'>.</span><span class='id upcase'>upcase</span> <span class='op'>:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id auditable'>auditable</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+
+    <span class='ivar'>@inputs</span> <span class='op'>&lt;&lt;</span> <span class='id result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prepare-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prepare</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149
+150
+151
+152
+153</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/profiler.rb', line 147</span>
+
+<span class='kw'>def</span> <span class='id prepare'>prepare</span>
+
+    <span class='const'>Struct</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Body</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:type</span><span class='comma'>,</span> <span class='symbol'>:method</span><span class='comma'>,</span> <span class='symbol'>:raw</span><span class='comma'>,</span> <span class='symbol'>:auditable</span> <span class='rparen'>)</span>
+
+    <span class='ivar'>@inputs</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@times</span>  <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="run-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>run</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/profiler.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id run'>run</span>
+
+    <span class='ivar'>@http</span><span class='period'>.</span><span class='id add_on_complete'>add_on_complete</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
+        <span class='ivar'>@times</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id method'>method</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id upcase'>upcase</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>params</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request'>request</span><span class='period'>.</span><span class='id params'>params</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>time</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id start_transfer_time'>start_transfer_time</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id add_on_run_mods'>add_on_run_mods</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id page'>page</span><span class='op'>|</span>
+
+        <span class='const'>Auditor</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id run'>run</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id taint'>taint</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id elem'>elem</span><span class='comma'>,</span> <span class='id found_in'>found_in</span><span class='op'>|</span>
+            <span class='id log'>log</span><span class='lparen'>(</span> <span class='id taint'>taint</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id elem'>elem</span><span class='comma'>,</span> <span class='id found_in'>found_in</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
+
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Mar 23 02:13:26 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.5 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>File: CHANGELOG</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -42,6 +42,80 @@
     <iframe id="search_frame"></iframe>
     
     <div id="content"><div id='filecontents'><h1>ChangeLog</h1>
+
+<h2>Version 0.2.2.2 <em>(March 22, 2011)</em></h2>
+
+<ul>
+<li>Added "arachni<em>web</em>autostart" under bin -- Automatically starts all systems required by the WebUI and makes shutting down everything easier too (Original by: Brandon Potter <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x62;&#112;&#x6f;&#x74;&#x74;&#x65;&#x72;&#56;&#x37;&#x30;&#x35;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x62;&#x70;&#x6f;&#x74;&#x74;&#101;&#114;&#56;&#x37;&#48;&#x35;&#x40;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a>)</li>
+<li>Overrided Nokogiri to revert to UTF-8 when it comes across an unknown charset instead of throwing exceptions</li>
+<li>Dependency versions are now defined explicitly [Issue #23]</li>
+<li>Updated to Sinatra v1.2.1</li>
+<li>HTTP
+
+<ul>
+<li>Disabled peer verification on SSL [Issue #19]</li>
+<li>Replaced callbacks with the new <em>Observable</em> mixin (also updated components to use the new conventions)</li>
+</ul>
+</li>
+<li>WebUI
+
+<ul>
+<li>Plug-in options are preserved [Issue #19]</li>
+<li>Check-all now skips disabled checkboxes</li>
+<li>Report info is stored in a database [Issue #19]</li>
+<li>Reports are now displayed in descending order based on scan completion datetime [Issue #19]</li>
+<li>Any existing reports will be migrated into the new database [Issue #19]</li>
+</ul>
+</li>
+<li>XMLRPC service
+
+<ul>
+<li>Fixed segfault on forced shutdown when spider-first was enabled</li>
+</ul>
+</li>
+<li>Plug-ins
+
+<ul>
+<li>AutoLogin now registers its results</li>
+</ul>
+</li>
+<li>Reports -- Added formatters for the AutoLogin [Issue #19] and Profiler plug-ins
+
+<ul>
+<li>HMTL
+
+<ul>
+<li>Fixed exception on empty issue list</li>
+<li>Fixed encoding exceptions (cheers to Chris Weber <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x63;&#x68;&#x72;&#105;&#115;&#64;&#99;&#97;&#115;&#97;&#98;&#x61;&#46;&#x63;&#x6f;&#x6d;">&#x63;&#x68;&#x72;&#x69;&#115;&#x40;&#x63;&#x61;&#115;&#x61;&#x62;&#97;&#46;&#x63;&#111;&#x6d;</a>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Path extractors
+
+<ul>
+<li>Generic -- fixed error on invalid encoding sequences</li>
+</ul>
+</li>
+<li>Modules
+
+<ul>
+<li>Recon
+
+<ul>
+<li>Directory listing -- Now skips non-200 pages because it used to log false positives on redirections</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Plug-ins
+
+<ul>
+<li>Added Profiler -- Performs taint analysis (with benign inputs) and response time analysis</li>
+</ul>
+</li>
+</ul>
+
 
 <h2>Version 0.2.2.1 <em>(February 13, 2011)</em></h2>
 
@@ -325,9 +399,9 @@
 </div></div>
     
     <div id="footer">
-  Generated on Mon Feb 14 15:42:52 2011 by 
+  Generated on Wed Mar 23 02:13:23 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.4 (ruby-1.9.2).
+  0.6.5 (ruby-1.9.2).
 </div>
 
   </body>

@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: Arachni::RPC::XML::Server::Framework</title>
 <link rel="stylesheet" href="../../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -114,6 +114,10 @@ Extends the Framework adding XML-RPC specific functionality
   <h3 class="inherited">Constants inherited from <span class='object_link'><a href="../../../Framework.html" title="Arachni::Framework (class)">Framework</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="../../../Framework.html#REVISION-constant" title="Arachni::Framework::REVISION (constant)">REVISION</a></span></p>
 
+  
+  
+  
+  
   
   
   
@@ -494,8 +498,6 @@ Returns the results of the audit.
     
 
     
-      (also: #old_run)
-    
   </span>
   
   
@@ -629,6 +631,16 @@ Enables debugging output.
   
   
   
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../../../Mixins/Observable.html" title="Arachni::Mixins::Observable (module)">Mixins::Observable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../../Mixins/Observable.html#method_missing-instance_method" title="Arachni::Mixins::Observable#method_missing (method)">#method_missing</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../../../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="../../../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
 
@@ -686,6 +698,16 @@ A new instance of Framework
   </tr>
 </table>
 </div>
+  
+</div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice super">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+      in the class <span class='object_link'><a href="../../../Mixins/Observable.html#method_missing-instance_method" title="Arachni::Mixins::Observable#method_missing (method)">Arachni::Mixins::Observable</a></span>
+    
+  </p>
   
 </div>
 
@@ -1252,10 +1274,6 @@ YAML dump of the results hash
   
 
   
-    <span class="aliases">Also known as:
-    <span class="names"><span id='old_run-instance_method'>old_run</span></span>
-    </span>
-  
 </p><div class="docstring">
   <div class="discussion">
     <p>
@@ -1446,9 +1464,9 @@ Enables debugging output
 </div>
     
     <div id="footer">
-  Generated on Mon Feb 14 15:43:02 2011 by 
+  Generated on Wed Mar 23 02:13:31 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.4 (ruby-1.9.2).
+  0.6.5 (ruby-1.9.2).
 </div>
 
   </body>
