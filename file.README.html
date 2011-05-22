@@ -43,17 +43,52 @@
     
     <div id="content"><div id='filecontents'><h1>Arachni - Web Application Security Scanner Framework</h1>
 
-<p><strong>Version</strong>:     0.2.2.2<br/>
-<strong>Homepage</strong>:     <a href="http://arachni.segfault.gr">http://arachni.segfault.gr</a><br/>
-<strong>Blog</strong>:         <a href="http://trainofthought.segfault.gr/category/projects/arachni/">http://trainofthought.segfault.gr/category/projects/arachni/</a><br/>
-<strong>Github page</strong>:  <a href="http://github.com/zapotek/arachni">http://github.com/zapotek/arachni</a><br/>
-<strong>Documentation</strong>:     <a href="http://github.com/Zapotek/arachni/wiki">http://github.com/Zapotek/arachni/wiki</a><br/>
-<strong>Code Documentation</strong>:     <a href="http://zapotek.github.com/arachni/">http://zapotek.github.com/arachni/</a><br/>
-<strong>Google Group</strong>: <a href="http://groups.google.com/group/arachni">http://groups.google.com/group/arachni</a><br/>
-<strong>Author</strong>:       <a href="mailto:tasos.laskos@gmail.com">Tasos</a> "<a href="mailto:zapotek@segfault.gr">Zapotek</a>" <a href="mailto:tasos.laskos@gmail.com">Laskos</a><br/>
-<strong>Twitter</strong>:      <a href="http://twitter.com/Zap0tek">http://twitter.com/Zap0tek</a><br/>
-<strong>Copyright</strong>:    2010-2011<br/>
-<strong>License</strong>:      <a href="file.LICENSE.html">GNU General Public License v2</a></p>
+<table>
+    <tr>
+        <th>Version</th>
+        <td>0.2.3</td>
+    </tr>
+    <tr>
+        <th>Homepage</th>
+        <td><a href="http://arachni.segfault.gr">http://arachni.segfault.gr</a></td>
+    </tr>
+    <tr>
+        <th>Blog</th>
+        <td><a href="http://trainofthought.segfault.gr/category/projects/arachni/">http://trainofthought.segfault.gr/category/projects/arachni/</a></td>
+    <tr>
+        <th>Github page</th>
+        <td><a href="http://github.com/zapotek/arachni">http://github.com/zapotek/arachni</a></td>
+     <tr/>
+    <tr>
+        <th>Documentation</th>
+        <td><a href="http://github.com/Zapotek/arachni/wiki">http://github.com/Zapotek/arachni/wiki</a></td>
+    </tr>
+    <tr>
+        <th>Code Documentation</th>
+        <td><a href="http://zapotek.github.com/arachni/">http://zapotek.github.com/arachni/</a></td>
+    </tr>
+    <tr>
+        <th>Google Group</th>
+        <td><a href="http://groups.google.com/group/arachni">http://groups.google.com/group/arachni</a></td>
+    </tr>
+    <tr>
+       <th>Author</th>
+       <td><a href="mailto:tasos.laskos@gmail.com">Tasos</a> <a href="mailto:zapotek@segfault.gr">Zapotek</a> <a href="mailto:tasos.laskos@gmail.com">Laskos</a></td>
+    </tr>
+    <tr>
+        <th>Twitter</th>
+        <td><a href="http://twitter.com/Zap0tek">@Zap0tek</a></td>
+    </tr>
+    <tr>
+        <th>Copyright</th>
+        <td>2010-2011</td>
+    </tr>
+    <tr>
+        <th>License</th>
+        <td><a href="file.LICENSE.html">GNU General Public License v2</a></td>
+    </tr>
+</table>
+
 
 <p><img src="http://zapotek.github.com/arachni/logo.png" alt="Arachni logo" /></p>
 
@@ -284,171 +319,9 @@ However, this is usually not required since Arachni is aware of which requests a
 
 <h2>Usage</h2>
 
-<h3>WebUI</h3>
+<h3><a href="https://github.com/Zapotek/arachni/wiki/Web-user-interface">WebUI</a></h3>
 
-<p>The Web User Interface is basically a Sinatra app which acts as an Arachni XMLRPC client and connects to a running XMLRPC Dispatch server.</p>
-
-<h4>Autostart</h4>
-
-<p>There's an autostart script to start all systems that are required by the WebUI:</p>
-
-<pre class="code">$ arachni_web_autostart
-</pre>
-
-<p><strong>Note:</strong>: <em>The "arachni</em>xmlrpcd" and "arachni<em>web" executables will need to be in your PATH.</em></p>
-
-<h4>Manually</h4>
-
-<p>You first need to start a Dispatcher like so:</p>
-
-<pre class="code">$ arachni_xmlrpcd &amp;
-</pre>
-
-<p>Then start the WebUI by running:</p>
-
-<pre class="code">$ arachni_web
-</pre>
-
-<p><em>If you get any permission errors then you probably installed the Gem using 'sudo', so use 'sudo' to start the servers too.</em></p>
-
-<p>And finally open up a browser window and visit: http://localhost:4567/</p>
-
-<h4>Options</h4>
-
-<p>You can see all available options using:</p>
-
-<pre class="code">$ arachni_web -h
-</pre>
-
-<h4>Shutdown</h4>
-
-<p>You can kill the WebUI by sending <em>Ctrl+C</em> to the console from which you started it.</p>
-
-<p>However, in order to kill the Dispatcher (and all the processes in its pool) you will need to <em>killall -9 arachni</em>xmlrpcd<em> (or </em>killall -9 ruby_ depending on your setup) or hunt them down manually.
-This inconvenience is by design; it guarantees that Arachni instances will be available (and usable) instantly and that running scans will continue unaffected even if the dispatcher has (for some reason) died.</p>
-
-<h4>Parallel scans</h4>
-
-<p>As you might have guessed by the use of the word <em>pool</em> in the previous paragraph, the WebUI allows you to run as many scans as you wish at the same time.
-Of course, the amount of parallel scans you'll be able to perform will be limited by your available resources (Network bandwidth/RAM/CPU).</p>
-
-<p>Should you shutdown the WebUI while a scan is running you'll be able to re-attach to the running process and view its progress or (if the scan has already finished) grab the report the next time you visit the WebUI.
-In most cases, you won't even need to re-attach to a process in order to get the report of the finished scan, the WebUI's zombie reaper will grab and save the report for you.</p>
-
-<h4>General</h4>
-
-<p>In cases where the Dispatcher is started with its default settings on localhost (like the above example) the WebUI will connect to it automatically.</p>
-
-<p>However, if you see an error message informing you that the WebUI could not find a dispatcher to connect to then you probably visited the WebUI before it had a chance to connect to the Dispatcher, you can just click on the "Dispatcher" tab to force it to try again; if the error does not re-appear then it connected successfully.</p>
-
-<p>If you get a scary "Broken pipe" exception a simple refresh will solve the problem.</p>
-
-<h4>Remote deployment</h4>
-
-<p>As noted above, the WebUI is, in essence, a user-friendly Arachni XMLRPC client, this means that you can start a Dispatcher on a remote host and manage it via the WebUI.
-Simple as that really.</p>
-
-<h4>Encryption &amp; Authentication</h4>
-
-<p>WebUI-client (browser) and XMLRPC Client-Dispatch server authentication takes place using SSL certificate/key pairs.</p>
-
-<p>These are the 3 basic models:</p>
-
-<ul>
-<li>No encryption &amp; no authentication -- Default behavior</li>
-<li>Encryption &amp; no authentication    -- Just enable SSL in the WebUI configuration file (<em>conf/webui.yaml</em>) and the Dispatcher and all components will generate their own certificate/key pairs and disable peer verification.</li>
-<li>Encryption &amp; authentication       -- Enable SSL and use your own cert/key pairs to authenticate clients to the WebUI and vice verse, and authenticate the XMLRPC clients controlled by the WebUI to the Dispatcher and vice versa.</li>
-</ul>
-
-
-<p>However, you can go even further and create combinations specific to each component.</p>
-
-<p><em>Beware:</em> This interface is brand new so if you encounter any issues please do report them.</p>
-
-<h3>Command line interface</h3>
-
-<p>The command-line interface is the oldest, most tested and thus more reliable.</p>
-
-<h4>Help</h4>
-
-<p>In order to see everything Arachni has to offer execute:</p>
-
-<pre class="code">$ arachni -h
-</pre>
-
-<p>Or visit the Wiki.</p>
-
-<h4>Examples</h4>
-
-<p>You can simply run Arachni like so:</p>
-
-<pre class="code">$ arachni http://test.com
-</pre>
-
-<p>which will load all modules and audit all forms, links and cookies.</p>
-
-<p>In the following example all modules will be run against <i>http://test.com</i>, auditing links/forms/cookies and following subdomains --with verbose output enabled.<br/>
-The results of the audit will be saved in the the file <i>test.com.afr</i>.</p>
-
-<pre class="code">$ arachni -fv http://test.com --report=afr:outfile=test.com.afr
-</pre>
-
-<p>The Arachni Framework Report (.afr) file can later be loaded by Arachni to create a report, like so:</p>
-
-<pre class="code">$ arachni --repload=test.com.afr --report=html:outfile=my_report.html
-</pre>
-
-<p>or any other report type as shown by:</p>
-
-<pre class="code">$ arachni --lsrep
-</pre>
-
-<h4>You can make module loading easier by using wildcards (*) and exclusions (-).</h4>
-
-<p>To load all <em>xss</em> modules using a wildcard:</p>
-
-<pre class="code">$ arachni http://example.net --mods=xss_*
-</pre>
-
-<p>To load all <em>audit</em> modules using a wildcard:</p>
-
-<pre class="code">$ arachni http://example.net --mods=audit*
-</pre>
-
-<p>To exclude only the <em>csrf</em> module:</p>
-
-<pre class="code">$ arachni http://example.net --mods=*,-csrf
-</pre>
-
-<p>Or you can mix and match; to run everything but the <em>xss</em> modules:</p>
-
-<pre class="code">$ arachni http://example.net --mods=*,-xss_*
-</pre>
-
-<p>For a full explanation of all available options you can consult the <a href="http://github.com/Zapotek/arachni/wiki/User-guide">User Guide</a>.</p>
-
-<h4>Performing a comprehensive scan quickly</h4>
-
-<p>Arachni comes with a preconfigured profile (<em>profiles/comprehensive.afp</em>) for a comprehensive audit.
-This profile loads all modules, audits links/forms/cookies and loads the HealthMap and Content-Types plugins.</p>
-
-<p>You can use it like so:</p>
-
-<pre class="code">$ arachni --load-profile=profiles/comprehensive.afp http://example.net
-</pre>
-
-<h4>Performing a full scan quickly</h4>
-
-<p>The <em>full</em> profile adds header auditing to the <em>comprehensive</em> profile.</p>
-
-<p><em>NOTICE: Auditing headers can increase scan time by an order of magnitude (depending on the website) and may be considered over-the-top in most scenarios.</em></p>
-
-<p>You can use it like so:</p>
-
-<pre class="code">$ arachni --load-profile=profiles/full.afp http://example.net
-</pre>
-
-<p><em>If you installed the Gem then you'll have to look for the "profiles" directory in your gems path.</em></p>
+<h3><a href="https://github.com/Zapotek/arachni/wiki/Command-line-user-interface">Command line interface</a></h3>
 
 <h2>Installation</h2>
 
@@ -507,7 +380,7 @@ caused by the use of this software.</p>
 <p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p></div></div>
     
     <div id="footer">
-  Generated on Wed Mar 23 02:13:23 2011 by 
+  Generated on Sun May 22 20:18:09 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

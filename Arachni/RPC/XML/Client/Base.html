@@ -93,7 +93,7 @@ client/server authentication
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1
+@version: 0.1.1
 </p>
 
 
@@ -143,7 +143,7 @@ Used to make old school XMLRPC calls.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Base) <strong>initialize</strong>(opts, url) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Base) <strong>initialize</strong>(opts, url, token = nil) </a>
     
 
     
@@ -175,7 +175,7 @@ A new instance of Base.
     <div class="method_details first">
   <p class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Arachni::RPC::XML::Client::Base (class)">Base</a></span></tt>) <strong>initialize</strong>(opts, url) 
+    - (<tt><span class='object_link'><a href="" title="Arachni::RPC::XML::Client::Base (class)">Base</a></span></tt>) <strong>initialize</strong>(opts, url, token = nil) 
   
 
   
@@ -224,17 +224,27 @@ A new instance of Base
 54
 55
 56
-57</pre>
+57
+58
+59
+60
+61
+62</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/rpc/xml/client/base.rb', line 29</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
 
     <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='id opts'>opts</span>
 
+    <span class='id url'>url</span>        <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='id url'>url</span><span class='period'>.</span><span class='id scheme'>scheme</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>https</span><span class='tstring_end'>'</span></span>
+
     <span class='comment'># start the XMLRPC client
-</span>    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>XMLRPC</span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id new2'>new2</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+</span>    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>XMLRPC</span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id new2'>new2</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
+
+    <span class='ivar'>@server</span><span class='period'>.</span><span class='id cookie'>cookie</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token=</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id token'>token</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id token'>token</span>
 
     <span class='comment'># there'll be a HELL of lot of output so things might get..laggy.
 </span>    <span class='comment'># a big timeout is required to avoid Timeout exceptions...
@@ -294,12 +304,12 @@ Used to make old school XMLRPC calls
       <pre class="lines">
 
 
-62
-63
-64</pre>
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/client/base.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/client/base.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id call'>call</span><span class='lparen'>(</span> <span class='id method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
     <span class='ivar'>@server</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
@@ -314,7 +324,7 @@ Used to make old school XMLRPC calls
 </div>
     
     <div id="footer">
-  Generated on Wed Mar 23 02:13:30 2011 by 
+  Generated on Sun May 22 20:18:15 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

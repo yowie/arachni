@@ -364,7 +364,6 @@ Do not ommit any of the info.
       <pre class="lines">
 
 
-122
 123
 124
 125
@@ -376,10 +375,11 @@ Do not ommit any of the info.
 131
 132
 133
-134</pre>
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/metareport.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'reports/metareport.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -484,7 +484,8 @@ Do not ommit any of the info.
 101
 102
 103
-104</pre>
+104
+105</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'reports/metareport.rb', line 38</span>
@@ -553,6 +554,7 @@ Do not ommit any of the info.
 </span>
     <span class='id outfile'>outfile</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>outfile</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
     <span class='const'>YAML</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='id msf'>msf</span><span class='comma'>,</span> <span class='id outfile'>outfile</span> <span class='rparen'>)</span>
+    <span class='id outfile'>outfile</span><span class='period'>.</span><span class='id close'>close</span>
 
     <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Saved in \'</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>outfile</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -574,7 +576,6 @@ Do not ommit any of the info.
       <pre class="lines">
 
 
-106
 107
 108
 109
@@ -583,10 +584,11 @@ Do not ommit any of the info.
 112
 113
 114
-115</pre>
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/metareport.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'reports/metareport.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id sub_cookie'>sub_cookie</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='rparen'>)</span>
     <span class='id hash'>hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -608,7 +610,7 @@ Do not ommit any of the info.
 </div>
     
     <div id="footer">
-  Generated on Wed Mar 23 02:13:28 2011 by 
+  Generated on Sun May 22 20:18:13 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

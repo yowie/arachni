@@ -116,7 +116,7 @@ instances of XMLRPC servers.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1.1
+@version: 0.1.2
 </p>
 
 
@@ -908,11 +908,7 @@ Returns proc info for all jobs
 230
 231
 232
-233
-234
-235
-236
-237</pre>
+233</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 199</span>
@@ -941,10 +937,6 @@ SSL --------------------------
 
 (All SSL options will be honored by the dispatched XMLRPC instances as well.)
 (Do *not* use encrypted keys!)
-
---ssl                       use SSL?
-                               (If you want encryption without authentication
-                                you can skip rest of the SSL options.)
 
 --ssl-pkey   &lt;file&gt;         location of the SSL private key (.pem)
                                 (Used to verify the server to the clients.)
@@ -1109,7 +1101,7 @@ Returns server stats regarding the jobs and pool
 </div>
     
     <div id="footer">
-  Generated on Wed Mar 23 02:13:31 2011 by 
+  Generated on Sun May 22 20:18:17 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

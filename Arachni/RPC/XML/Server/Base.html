@@ -92,7 +92,7 @@ Dispatcher class
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1
+@version: 0.1.1
 </p>
 
 
@@ -104,6 +104,16 @@ Dispatcher class
   <h2>Direct Known Subclasses</h2>
   <p class="children"><span class='object_link'><a href="Dispatcher.html" title="Arachni::RPC::XML::Server::Dispatcher (class)">Dispatcher</a></span>, <span class='object_link'><a href="Instance.html" title="Arachni::RPC::XML::Server::Instance (class)">Instance</a></span></p>
 </div>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+   
+    
+   
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Base/WebServ.html" title="Arachni::RPC::XML::Server::Base::WebServ (class)">WebServ</a></span>
+    
+  
+</p>
 
 
 
@@ -162,7 +172,7 @@ Dispatcher class
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Base) <strong>initialize</strong>(opts) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Base) <strong>initialize</strong>(opts, token = nil) </a>
     
 
     
@@ -236,7 +246,7 @@ A new instance of Base.
     <div class="method_details first">
   <p class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Arachni::RPC::XML::Server::Base (class)">Base</a></span></tt>) <strong>initialize</strong>(opts) 
+    - (<tt><span class='object_link'><a href="" title="Arachni::RPC::XML::Server::Base (class)">Base</a></span></tt>) <strong>initialize</strong>(opts, token = nil) 
   
 
   
@@ -257,37 +267,38 @@ A new instance of Base
       <pre class="lines">
 
 
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
 50
 51
 52
 53
-54</pre>
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/base.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/base.rb', line 50</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
 
     <span class='id pkey'>pkey</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>PKey</span><span class='op'>::</span><span class='const'>RSA</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_pkey'>ssl_pkey</span> <span class='rparen'>)</span> <span class='rparen'>)</span>         <span class='kw'>if</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_pkey'>ssl_pkey</span>
     <span class='id cert'>cert</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>X509</span><span class='op'>::</span><span class='const'>Certificate</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_cert'>ssl_cert</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_cert'>ssl_cert</span>
@@ -298,14 +309,15 @@ A new instance of Base
         <span class='id verification'>verification</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>SSL</span><span class='op'>::</span><span class='const'>VERIFY_NONE</span>
     <span class='kw'>end</span>
 
-    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>HTTPServer</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span>
+    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='const'>WebServ</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span>
         <span class='symbol'>:Port</span>            <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id rpc_port'>rpc_port</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLEnable</span>       <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl'>ssl</span>  <span class='op'>||</span> <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='symbol'>:SSLEnable</span>       <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
         <span class='symbol'>:SSLVerifyClient</span> <span class='op'>=&gt;</span> <span class='id verification'>verification</span><span class='comma'>,</span>
         <span class='symbol'>:SSLCertName</span>     <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CN</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>::</span><span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Utils</span><span class='op'>::</span><span class='id getservername'>getservername</span> <span class='rbracket'>]</span> <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:SSLCertificate</span>  <span class='op'>=&gt;</span> <span class='id cert'>cert</span><span class='comma'>,</span>
         <span class='symbol'>:SSLPrivateKey</span>   <span class='op'>=&gt;</span> <span class='id pkey'>pkey</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLCACertificateFile</span> <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_ca'>ssl_ca</span>
+        <span class='symbol'>:SSLCACertificateFile</span> <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_ca'>ssl_ca</span><span class='comma'>,</span>
+        <span class='symbol'>:Token</span>           <span class='op'>=&gt;</span> <span class='id token'>token</span>
     <span class='rparen'>)</span>
 
     <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Initing XMLRPC Server...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -338,12 +350,12 @@ A new instance of Base
       <pre class="lines">
 
 
-56
-57
-58</pre>
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/base.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/base.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id add_handler'>add_handler</span><span class='lparen'>(</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='id klass'>klass</span> <span class='rparen'>)</span>
     <span class='ivar'>@service</span><span class='period'>.</span><span class='id add_handler'>add_handler</span><span class='lparen'>(</span> <span class='op'>::</span><span class='const'>XMLRPC</span><span class='op'>::</span><span class='id iPIMethods'>iPIMethods</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='id klass'>klass</span> <span class='rparen'>)</span>
@@ -391,12 +403,12 @@ A new instance of Base
       <pre class="lines">
 
 
-64
-65
-66</pre>
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/base.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/base.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id alive?'>alive?</span>
     <span class='kw'>return</span> <span class='kw'>true</span>
@@ -419,12 +431,12 @@ A new instance of Base
       <pre class="lines">
 
 
-60
-61
-62</pre>
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/base.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/base.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span>
     <span class='ivar'>@server</span><span class='period'>.</span><span class='id start'>start</span>
@@ -447,12 +459,12 @@ A new instance of Base
       <pre class="lines">
 
 
-69
-70
-71</pre>
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/base.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/base.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id shutdown'>shutdown</span>
     <span class='ivar'>@server</span><span class='period'>.</span><span class='id shutdown'>shutdown</span>
@@ -467,7 +479,7 @@ A new instance of Base
 </div>
     
     <div id="footer">
-  Generated on Wed Mar 23 02:13:30 2011 by 
+  Generated on Sun May 22 20:18:15 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>
