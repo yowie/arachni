@@ -71,7 +71,7 @@
   
     
       <dt class="r2">Includes:</dt>
-      <dd class="r2"><span class='object_link'><a href="ElementDB.html" title="Arachni::Module::ElementDB (module)">ElementDB</a></span>, <span class='object_link'><a href="Output.html" title="Arachni::Module::Output (module)">Output</a></span></dd>
+      <dd class="r2"><span class='object_link'><a href="ElementDB.html" title="Arachni::Module::ElementDB (module)">ElementDB</a></span>, <span class='object_link'><a href="Output.html" title="Arachni::Module::Output (module)">Output</a></span>, <span class='object_link'><a href="Utilities.html" title="Arachni::Module::Utilities (module)">Utilities</a></span></dd>
       
     
   
@@ -313,30 +313,6 @@ A new instance of Trainer.
 </li>
 
       
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#url_sanitize-instance_method" title="#url_sanitize (instance method)">- (Object) <strong>url_sanitize</strong>(url) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Decodes URLs to reverse multiple encodes and removes NULL characters.
-</p>
-</div></span>
-  
-</li>
-
-      
     </ul>
   
 
@@ -348,8 +324,8 @@ Decodes URLs to reverse multiple encodes and removes NULL characters.
   
   
   
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="ElementDB.html" title="Arachni::Module::ElementDB (module)">ElementDB</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="ElementDB.html#init_cookies-instance_method" title="Arachni::Module::ElementDB#init_cookies (method)">#init_cookies</a></span>, <span class='object_link'><a href="ElementDB.html#init_forms-instance_method" title="Arachni::Module::ElementDB#init_forms (method)">#init_forms</a></span>, <span class='object_link'><a href="ElementDB.html#init_links-instance_method" title="Arachni::Module::ElementDB#init_links (method)">#init_links</a></span>, <span class='object_link'><a href="ElementDB.html#update_cookies-instance_method" title="Arachni::Module::ElementDB#update_cookies (method)">#update_cookies</a></span>, <span class='object_link'><a href="ElementDB.html#update_forms-instance_method" title="Arachni::Module::ElementDB#update_forms (method)">#update_forms</a></span>, <span class='object_link'><a href="ElementDB.html#update_links-instance_method" title="Arachni::Module::ElementDB#update_links (method)">#update_links</a></span></p>
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Utilities.html" title="Arachni::Module::Utilities (module)">Utilities</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
 
   
   
@@ -358,8 +334,8 @@ Decodes URLs to reverse multiple encodes and removes NULL characters.
   
   
   
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="Utilities.html" title="Arachni::Module::Utilities (module)">Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="ElementDB.html" title="Arachni::Module::ElementDB (module)">ElementDB</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ElementDB.html#init_cookies-instance_method" title="Arachni::Module::ElementDB#init_cookies (method)">#init_cookies</a></span>, <span class='object_link'><a href="ElementDB.html#init_forms-instance_method" title="Arachni::Module::ElementDB#init_forms (method)">#init_forms</a></span>, <span class='object_link'><a href="ElementDB.html#init_links-instance_method" title="Arachni::Module::ElementDB#init_links (method)">#init_links</a></span>, <span class='object_link'><a href="ElementDB.html#update_cookies-instance_method" title="Arachni::Module::ElementDB#update_cookies (method)">#update_cookies</a></span>, <span class='object_link'><a href="ElementDB.html#update_forms-instance_method" title="Arachni::Module::ElementDB#update_forms (method)">#update_forms</a></span>, <span class='object_link'><a href="ElementDB.html#update_links-instance_method" title="Arachni::Module::ElementDB#update_links (method)">#update_links</a></span></p>
 
   
   
@@ -407,13 +383,13 @@ A new instance of Trainer
       <pre class="lines">
 
 
-35
 36
 37
-38</pre>
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span>
   <span class='ivar'>@opts</span>     <span class='op'>=</span> <span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span>
@@ -456,12 +432,12 @@ Returns the value of attribute http
       <pre class="lines">
 
 
-32
 33
-34</pre>
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id http'>http</span>
   <span class='ivar'>@http</span>
@@ -512,17 +488,17 @@ updates
       <pre class="lines">
 
 
-99
-100
-101
-102
-103
-104
-105
-106</pre>
+88
+89
+90
+91
+92
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id page'>page</span>
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@updated</span>  <span class='rparen'>)</span>
@@ -564,12 +540,12 @@ Returns the value of attribute parser
       <pre class="lines">
 
 
-33
 34
-35</pre>
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id parser'>parser</span>
   <span class='ivar'>@parser</span>
@@ -644,7 +620,6 @@ was the response forcing a redirection?
       <pre class="lines">
 
 
-46
 47
 48
 49
@@ -669,10 +644,11 @@ was the response forcing a redirection?
 68
 69
 70
-71</pre>
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id add_response'>add_response</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id redir'>redir</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
 
@@ -744,6 +720,17 @@ Analyzes a response looking for new links, forms and cookies.
       <pre class="lines">
 
 
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
 114
 115
 116
@@ -773,21 +760,10 @@ Analyzes a response looking for new links, forms and cookies.
 140
 141
 142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154</pre>
+143</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id analyze'>analyze</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
 
@@ -869,17 +845,17 @@ Analyzes a response looking for new links, forms and cookies.
       <pre class="lines">
 
 
-85
-86
-87
-88
-89
-90
-91
-92</pre>
+74
+75
+76
+77
+78
+79
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id follow?'>follow?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='ivar'>@parser</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span>
@@ -894,61 +870,12 @@ Analyzes a response looking for new links, forms and cookies.
 </table>
 </div>
     
-      <div class="method_details ">
-  <p class="signature " id="url_sanitize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>url_sanitize</strong>(url) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Decodes URLs to reverse multiple encodes and removes NULL characters
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-76
-77
-78
-79
-80
-81
-82
-83</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/module/trainer.rb', line 76</span>
-
-<span class='kw'>def</span> <span class='id url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-
-    <span class='kw'>while</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>%</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span>
-        <span class='id url'>url</span> <span class='op'>=</span> <span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id decode'>decode</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id unpack'>unpack</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>A*</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-    <span class='kw'>end</span>
-
-    <span class='kw'>return</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
   </div>
 
 </div>
     
     <div id="footer">
-  Generated on Sun May 22 20:18:13 2011 by 
+  Generated on Tue Jul 26 21:35:16 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

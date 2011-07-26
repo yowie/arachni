@@ -191,119 +191,6 @@ blind SQL injections.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#__audit_id-instance_method" title="#__audit_id (instance method)">- (Object) <strong>__audit_id</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#__audited%3F-instance_method" title="#__audited? (instance method)">- (Boolean) <strong>__audited?</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#__check-instance_method" title="#__check (instance method)">- (Object) <strong>__check</strong>(str, res, var) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Compares HTML responses in order to identify successful blind sql
-injections.
-</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#analyze-instance_method" title="#analyze (instance method)">- (Object) <strong>analyze</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Goes through the responses induced by <span class='object_link'><a href="#prep_good_responses-instance_method" title="Arachni::Modules::BlindrDiffSQLInjection#prep_good_responses (method)">#prep_good_responses</a></span> and <span class='object_link'><a href="#__check-instance_method" title="Arachni::Modules::BlindrDiffSQLInjection#__check (method)">#__check</a></span>
-their code.
-</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#clean_up-instance_method" title="#clean_up (instance method)">- (Object) <strong>clean_up</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#initialize-instance_method" title="#initialize (instance method)">- (BlindrDiffSQLInjection) <strong>initialize</strong>(page) </a>
     
 
@@ -321,55 +208,6 @@ their code.
   
     <span class="summary_desc"><div class='inline'><p>
 A new instance of BlindrDiffSQLInjection.
-</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#prep_bad_responses-instance_method" title="#prep_bad_responses (instance method)">- (Object) <strong>prep_bad_responses</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Audits page with &#8216;bad&#8217; SQL characters and gathers error pages.
-</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#prep_good_responses-instance_method" title="#prep_good_responses (instance method)">- (Object) <strong>prep_good_responses</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Injects SQL code that doesn&#8217;t affect the flow of execution nor
-presentation.
 </p>
 </div></span>
   
@@ -430,7 +268,7 @@ presentation.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Arachni::Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="../Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
 
   
   
@@ -440,7 +278,7 @@ presentation.
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#register_results-instance_method" title="Arachni::Module::Base#register_results (method)">#register_results</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Module/Base.html#redundant-instance_method" title="Arachni::Module::Base#redundant (method)">#redundant</a></span>, <span class='object_link'><a href="../Module/Base.html#register_results-instance_method" title="Arachni::Module::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Module/Base.html#set_framework-instance_method" title="Arachni::Module::Base#set_framework (method)">#set_framework</a></span></p>
 
   
   
@@ -450,7 +288,7 @@ presentation.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Auditor.html" title="Arachni::Module::Auditor (module)">Arachni::Module::Auditor</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Auditor.html#audit-instance_method" title="Arachni::Module::Auditor#audit (method)">#audit</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_elems-instance_method" title="Arachni::Module::Auditor#audit_elems (method)">#audit_elems</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout-instance_method" title="Arachni::Module::Auditor#audit_timeout (method)">#audit_timeout</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_debug_msg-instance_method" title="Arachni::Module::Auditor#audit_timeout_debug_msg (method)">#audit_timeout_debug_msg</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_phase_2-instance_method" title="Arachni::Module::Auditor#audit_timeout_phase_2 (method)">#audit_timeout_phase_2</a></span>, <span class='object_link'><a href="../Module/Auditor.html#log-instance_method" title="Arachni::Module::Auditor#log (method)">#log</a></span>, <span class='object_link'><a href="../Module/Auditor.html#match_and_log-instance_method" title="Arachni::Module::Auditor#match_and_log (method)">#match_and_log</a></span>, <span class='object_link'><a href="../Module/Auditor.html#method_missing-instance_method" title="Arachni::Module::Auditor#method_missing (method)">#method_missing</a></span>, <span class='object_link'><a href="../Module/Auditor.html#skip%3F-instance_method" title="Arachni::Module::Auditor#skip? (method)">#skip?</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timing_attack-instance_method" title="Arachni::Module::Auditor#timing_attack (method)">#timing_attack</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Auditor.html#__rdiff_audit_id-instance_method" title="Arachni::Module::Auditor#__rdiff_audit_id (method)">#__rdiff_audit_id</a></span>, <span class='object_link'><a href="../Module/Auditor.html#__rdiff_audited%21-instance_method" title="Arachni::Module::Auditor#__rdiff_audited! (method)">#__rdiff_audited!</a></span>, <span class='object_link'><a href="../Module/Auditor.html#__rdiff_audited%3F-instance_method" title="Arachni::Module::Auditor#__rdiff_audited? (method)">#__rdiff_audited?</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit-instance_method" title="Arachni::Module::Auditor#audit (method)">#audit</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_elems-instance_method" title="Arachni::Module::Auditor#audit_elems (method)">#audit_elems</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_rdiff-instance_method" title="Arachni::Module::Auditor#audit_rdiff (method)">#audit_rdiff</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_rdiff_elem-instance_method" title="Arachni::Module::Auditor#audit_rdiff_elem (method)">#audit_rdiff_elem</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout-instance_method" title="Arachni::Module::Auditor#audit_timeout (method)">#audit_timeout</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_debug_msg-instance_method" title="Arachni::Module::Auditor#audit_timeout_debug_msg (method)">#audit_timeout_debug_msg</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_phase_2-class_method" title="Arachni::Module::Auditor.audit_timeout_phase_2 (method)">audit_timeout_phase_2</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_stabilize-class_method" title="Arachni::Module::Auditor.audit_timeout_stabilize (method)">audit_timeout_stabilize</a></span>, <span class='object_link'><a href="../Module/Auditor.html#included-class_method" title="Arachni::Module::Auditor.included (method)">included</a></span>, <span class='object_link'><a href="../Module/Auditor.html#log-instance_method" title="Arachni::Module::Auditor#log (method)">#log</a></span>, <span class='object_link'><a href="../Module/Auditor.html#match_and_log-instance_method" title="Arachni::Module::Auditor#match_and_log (method)">#match_and_log</a></span>, <span class='object_link'><a href="../Module/Auditor.html#method_missing-instance_method" title="Arachni::Module::Auditor#method_missing (method)">#method_missing</a></span>, <span class='object_link'><a href="../Module/Auditor.html#skip%3F-instance_method" title="Arachni::Module::Auditor#skip? (method)">#skip?</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timeout_audit_blocks-class_method" title="Arachni::Module::Auditor.timeout_audit_blocks (method)">timeout_audit_blocks</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timeout_audit_run-class_method" title="Arachni::Module::Auditor.timeout_audit_run (method)">timeout_audit_run</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timeout_loaded_modules-class_method" title="Arachni::Module::Auditor.timeout_loaded_modules (method)">timeout_loaded_modules</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timing_attack-instance_method" title="Arachni::Module::Auditor#timing_attack (method)">#timing_attack</a></span></p>
 
   
   
@@ -543,46 +381,48 @@ A new instance of BlindrDiffSQLInjection
       <pre class="lines">
 
 
-241
-242
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
-267
-268
-269
-270
-271
-272
-273
-274
-275
-276
-277</pre>
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 241</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -593,7 +433,9 @@ A new instance of BlindrDiffSQLInjection
             (Note: This module may get confused by certain types of XSS vulnerabilities.
 </span><span class='tstring_content'>                If this module returns a positive result you should investigate nonetheless.)</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:elements</span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
-            <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span>
+            <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>LINK</span><span class='comma'>,</span>
+            <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span><span class='comma'>,</span>
+            <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>COOKIE</span>
         <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt; </span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:version</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.3</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -633,482 +475,7 @@ A new instance of BlindrDiffSQLInjection
     
     
       <div class="method_details first">
-  <p class="signature first" id="__audit_id-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>__audit_id</strong> 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-232
-233
-234</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 232</span>
-
-<span class='kw'>def</span> <span class='id __audit_id'>__audit_id</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span><span class='rbrace'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span><span class='period'>.</span><span class='id keys'>keys</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="__audited?-instance_method">
-  
-    - (<tt>Boolean</tt>) <strong>__audited?</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-236
-237
-238</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 236</span>
-
-<span class='kw'>def</span> <span class='id __audited?'>__audited?</span>
-    <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id __audit_id'>__audit_id</span><span class='lparen'>(</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="__check-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>__check</strong>(str, res, var) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Compares HTML responses in order to identify successful blind sql
-injections
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-        <span class='name'>str</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>
-the string that unveiled the vulnerability
-</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../Typhoeus/Response.html" title="Typhoeus::Response (class)">Typhoeus::Response</a></span></tt>)</span>
-      
-      
-        <span class='name'></span>
-      
-      
-      
-    </li>
-  
-    <li>
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-        <span class='name'>var</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>
-the vulnerable variable
-</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 215</span>
-
-<span class='kw'>def</span> <span class='id __check'>__check</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id var'>var</span> <span class='rparen'>)</span>
-
-    <span class='comment'># if one of the injections gives the same results as the
-</span>    <span class='comment'># original page then a blind SQL injection exists
-</span>    <span class='id check'>check</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span> <span class='rparen'>)</span>
-
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id check'>check</span> <span class='op'>==</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:orig</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:bad</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id var'>var</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id check'>check</span> <span class='op'>&amp;&amp;</span>
-        <span class='op'>!</span><span class='ivar'>@http</span><span class='period'>.</span><span class='id custom_404?'>custom_404?</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>==</span> <span class='int'>200</span> <span class='rparen'>)</span>
-        <span class='id __log_results'>__log_results</span><span class='lparen'>(</span> <span class='id var'>var</span><span class='comma'>,</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id str'>str</span> <span class='rparen'>)</span>
-    <span class='kw'>end</span>
-
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="analyze-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>analyze</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Goes through the responses induced by <span class='object_link'><a href="#prep_good_responses-instance_method" title="Arachni::Modules::BlindrDiffSQLInjection#prep_good_responses (method)">#prep_good_responses</a></span> and <span class='object_link'><a href="#__check-instance_method" title="Arachni::Modules::BlindrDiffSQLInjection#__check (method)">#__check</a></span>
-their code
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-198
-199
-200
-201
-202
-203
-204
-205
-206</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 198</span>
-
-<span class='kw'>def</span> <span class='id analyze'>analyze</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:good</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id key'>key</span><span class='op'>|</span>
-        <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:good</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-            <span class='id __check'>__check</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>str</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id res'>res</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>res</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id key'>key</span> <span class='rparen'>)</span>
-        <span class='rbrace'>}</span>
-    <span class='rbrace'>}</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="clean_up-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>clean_up</strong> 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-228
-229
-230</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 228</span>
-
-<span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
-    <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='id __audit_id'>__audit_id</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="prep_bad_responses-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prep_bad_responses</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Audits page with &#8216;bad&#8217; SQL characters and gathers error pages
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 122</span>
-
-<span class='kw'>def</span> <span class='id prep_bad_responses'>prep_bad_responses</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-
-    <span class='ivar'>@__bad_chars</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id str'>str</span><span class='op'>|</span>
-
-        <span class='comment'># get injection variations that will hopefully cause an internal/silent
-</span>        <span class='comment'># SQL error
-</span>        <span class='id variations'>variations</span> <span class='op'>=</span> <span class='ivar'>@__candidate</span><span class='period'>.</span><span class='id injection_sets'>injection_sets</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='ivar'>@__opts</span> <span class='rparen'>)</span>
-
-        <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:bad_total</span><span class='rbracket'>]</span> <span class='op'>=</span>  <span class='id variations'>variations</span><span class='period'>.</span><span class='id size'>size</span>
-
-        <span class='id variations'>variations</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id link'>link</span><span class='op'>|</span>
-
-            <span class='comment'># the altered link variable
-</span>            <span class='id altered'>altered</span> <span class='op'>=</span> <span class='id link'>link</span><span class='period'>.</span><span class='id altered'>altered</span>
-
-            <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='ivar'>@__candidate</span><span class='period'>.</span><span class='id get_status_str'>get_status_str</span><span class='lparen'>(</span> <span class='id altered'>altered</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-
-            <span class='comment'># register us as the auditor
-</span>            <span class='id link'>link</span><span class='period'>.</span><span class='id auditor'>auditor</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span>
-            <span class='comment'># submit the link and get the response
-</span>            <span class='id link'>link</span><span class='period'>.</span><span class='id submit'>submit</span><span class='lparen'>(</span> <span class='ivar'>@__opts</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
-                <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-
-                <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:bad</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id altered'>altered</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='period'>.</span><span class='id clone'>clone</span>
-
-                <span class='comment'># remove context-irrelevant dynamic content like banners and such
-</span>                <span class='comment'># from the error page
-</span>                <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:bad</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id altered'>altered</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:bad</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id altered'>altered</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='period'>.</span><span class='id clone'>clone</span> <span class='rparen'>)</span>
-            <span class='rbrace'>}</span>
-        <span class='rbrace'>}</span>
-    <span class='rbrace'>}</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="prep_good_responses-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prep_good_responses</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Injects SQL code that doesn&#8217;t affect the flow of execution nor
-presentation
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 158</span>
-
-<span class='kw'>def</span> <span class='id prep_good_responses'>prep_good_responses</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-
-    <span class='ivar'>@__quotes</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id quote'>quote</span><span class='op'>|</span>
-
-        <span class='comment'># prepare the statement with combinations of quote characters
-</span>        <span class='id str'>str</span> <span class='op'>=</span> <span class='ivar'>@__injection</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%q%</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id quote'>quote</span> <span class='rparen'>)</span>
-
-        <span class='id variations'>variations</span> <span class='op'>=</span> <span class='ivar'>@__candidate</span><span class='period'>.</span><span class='id injection_sets'>injection_sets</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='ivar'>@__opts</span> <span class='rparen'>)</span>
-
-        <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:good_total</span><span class='rbracket'>]</span> <span class='op'>=</span>  <span class='id variations'>variations</span><span class='period'>.</span><span class='id size'>size</span>
-
-        <span class='id variations'>variations</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id link'>link</span><span class='op'>|</span>
-
-            <span class='comment'># the altered link variable
-</span>            <span class='id altered'>altered</span> <span class='op'>=</span> <span class='id link'>link</span><span class='period'>.</span><span class='id altered'>altered</span>
-
-            <span class='comment'># register us as the auditor
-</span>            <span class='id link'>link</span><span class='period'>.</span><span class='id auditor'>auditor</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span>
-
-            <span class='comment'># submit the link and get the response
-</span>            <span class='id link'>link</span><span class='period'>.</span><span class='id submit'>submit</span><span class='lparen'>(</span> <span class='ivar'>@__opts</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
-                <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-
-                <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:good</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id altered'>altered</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-
-                <span class='comment'># save the response for later analysis
-</span>                <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:good</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id altered'>altered</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span>
-                    <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>str</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='id str'>str</span><span class='comma'>,</span>
-                    <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>res</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='id res'>res</span>
-                <span class='rbrace'>}</span>
-            <span class='rbrace'>}</span>
-
-        <span class='rbrace'>}</span>
-    <span class='rbrace'>}</span>
-
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="prepare-instance_method">
+  <p class="signature first" id="prepare-instance_method">
   
     - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prepare</strong> 
   
@@ -1133,78 +500,24 @@ presentation
 48
 49
 50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78</pre>
+51</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 38</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id prepare'>prepare</span>
+    <span class='cvar'>@@__bools</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
-    <span class='comment'># possible quote characters used in SQL statements
-</span>    <span class='ivar'>@__quotes</span> <span class='op'>=</span> <span class='lbracket'>[</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-    <span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='cvar'>@@__bools</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id read_file'>read_file</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>payloads.txt</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id str'>str</span><span class='op'>|</span>
 
-    <span class='comment'># this will cause a silent error if there's a blind SQL injection
-</span>    <span class='ivar'>@__bad_chars</span> <span class='op'>=</span><span class='lbracket'>[</span>
-       <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'&quot;`</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-       <span class='comment'># we need 2 requests thus we change the second one a little bit to
-</span>       <span class='comment'># fool the Auditor's redundancy filter
-</span>       <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'&quot;``</span><span class='tstring_end'>'</span></span>
-     <span class='rbracket'>]</span>
-
-    <span class='comment'># %q% will be replaced by a character in @__quotes
-</span>    <span class='ivar'>@__injection</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%q% and %q%1</span><span class='tstring_end'>'</span></span>
-
-    <span class='ivar'>@__opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-        <span class='symbol'>:format</span>      <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='const'>Format</span><span class='op'>::</span><span class='const'>APPEND</span> <span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='comment'># we need to do our own redundancy checks
-</span>        <span class='symbol'>:redundant</span>   <span class='op'>=&gt;</span> <span class='kw'>true</span>
-    <span class='rbrace'>}</span>
-
-    <span class='comment'># used for redundancy checks
-</span>    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id new'>new</span>
-
-    <span class='comment'># this is the structure of the responses
-</span>    <span class='ivar'>@responses</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-        <span class='symbol'>:orig</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-
-        <span class='symbol'>:good</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-
-        <span class='rbrace'>}</span><span class='comma'>,</span>
-        <span class='symbol'>:bad</span>  <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+            <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id quote'>quote</span><span class='op'>|</span>
+                <span class='cvar'>@@__bools</span> <span class='op'>&lt;&lt;</span> <span class='id str'>str</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%q%</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id quote'>quote</span> <span class='rparen'>)</span>
+            <span class='rbrace'>}</span>
         <span class='rbrace'>}</span>
-    <span class='rbrace'>}</span>
-
+    <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1224,89 +537,29 @@ presentation
       <pre class="lines">
 
 
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119</pre>
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/sqli_blind_rdiff.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
-    <span class='kw'>return</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id __audited?'>__audited?</span> <span class='rparen'>)</span>
+    <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='comment'># fault injection seeds
+</span>    <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:faults</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'&quot;`</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span>
+    <span class='comment'># boolean injection seeds
+</span>    <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:bools</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='cvar'>@@__bools</span>
 
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span> <span class='op'>||</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
-        <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Nothing to audit on current page, skipping...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-        <span class='kw'>return</span>
-    <span class='kw'>end</span>
-
-    <span class='comment'># get the link object that fits the URL of the page
-</span>    <span class='comment'># this will be the one to audit
-</span>    <span class='ivar'>@page</span><span class='period'>.</span><span class='id links'>links</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id link'>link</span><span class='op'>|</span>
-        <span class='ivar'>@__candidate</span> <span class='op'>=</span> <span class='id link'>link</span> <span class='kw'>if</span> <span class='id link'>link</span><span class='period'>.</span><span class='id action'>action</span> <span class='op'>==</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span>
-    <span class='rbrace'>}</span>
-
-    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@__candidate</span>
-
-    <span class='comment'># let's get a fresh rendering of the page to assist us with
-</span>    <span class='comment'># irrelevant dynamic content elimination (banners, ads, etc...)
-</span>    <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span> <span class='symbol'>:params</span> <span class='op'>=&gt;</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id query_vars'>query_vars</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-
-        <span class='comment'># eliminate dynamic content that's context-irrelevant
-</span>        <span class='comment'># ie. changing with every refresh
-</span>        <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:orig</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span>
-    <span class='rbrace'>}</span>
-
-    <span class='comment'># force the webapp to return an error page
-</span>    <span class='id prep_bad_responses'>prep_bad_responses</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-
-    <span class='comment'># start injecting 'good' SQL queries
-</span>    <span class='id prep_good_responses'>prep_good_responses</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-
-    <span class='ivar'>@http</span><span class='period'>.</span><span class='id after_run'>after_run</span> <span class='lbrace'>{</span>
-        <span class='comment'># analyze the HTML code of the responses in order to determine
-</span>        <span class='comment'># which injections were succesfull
-</span>        <span class='id analyze'>analyze</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='rbrace'>}</span>
+    <span class='id audit_rdiff'>audit_rdiff</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1318,7 +571,7 @@ presentation
 </div>
     
     <div id="footer">
-  Generated on Sun May 22 20:18:17 2011 by 
+  Generated on Tue Jul 26 21:35:21 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

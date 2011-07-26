@@ -1,0 +1,1199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Arachni::UI::Web::Addons::AutoDeploy::Manager</title>
+<link rel="stylesheet" href="../../../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../../../../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../../../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../../../_index.html">Index (M)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../../../../Arachni.html" title="Arachni (module)">Arachni</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../../UI.html" title="Arachni::UI (module)">UI</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../Web.html" title="Arachni::UI::Web (module)">Web</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Addons.html" title="Arachni::UI::Web::Addons (module)">Addons</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../AutoDeploy.html" title="Arachni::UI::Web::Addons::AutoDeploy (class)">AutoDeploy</a></span></span>
+     &raquo; 
+    <span class="title">Manager</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Arachni::UI::Web::Addons::AutoDeploy::Manager
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Arachni::UI::Web::Addons::AutoDeploy::Manager</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="../../Utilities.html" title="Arachni::UI::Web::Utilities (module)">Utilities</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/ui/web/addons/autodeploy/lib/manager.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+@author: Tasos &#8220;Zapotek&#8221; Laskos
+</p>
+<pre class="code">
+                                     &lt;tasos.laskos@gmail.com&gt;
+                                     &lt;zapotek@segfault.gr&gt;
+</pre>
+<p>
+@version: 0.1
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+   
+    
+   
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Manager/Deployment.html" title="Arachni::UI::Web::Addons::AutoDeploy::Manager::Deployment (class)">Deployment</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="ARCHIVE_PATH-constant" class="">ARCHIVE_PATH =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>https://github.com/downloads/Zapotek/arachni/</span><span class='tstring_end'>'</span></span></pre></dd>
+      
+        <dt id="ARCHIVE_NAME-constant" class="">ARCHIVE_NAME =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arachni-v0.3-autodeploy</span><span class='tstring_end'>'</span></span></pre></dd>
+      
+        <dt id="ARCHIVE_EXT-constant" class="">ARCHIVE_EXT =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.tar.gz</span><span class='tstring_end'>'</span></span></pre></dd>
+      
+        <dt id="EXEC-constant" class="">EXEC =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arachni_xmlrpcd</span><span class='tstring_end'>'</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+  
+  
+  
+  
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete-instance_method" title="#delete (instance method)">- (Object) <strong>delete</strong>(id, password) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#finalize_setup-instance_method" title="#finalize_setup (instance method)">- (Object) <strong>finalize_setup</strong>(channel) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_url-instance_method" title="#get_url (instance method)">- (Object) <strong>get_url</strong>(deployment) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Manager) <strong>initialize</strong>(opts, settings) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Initializes the Scheduler and starts the clock.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#list-instance_method" title="#list (instance method)">- (Object) <strong>list</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#output-instance_method" title="#output (instance method)">- (Object) <strong>output</strong>(channel) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong>(deployment, password) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup-instance_method" title="#setup (instance method)">- (Object) <strong>setup</strong>(deployment, password) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shutdown-instance_method" title="#shutdown (instance method)">- (Object) <strong>shutdown</strong>(deployment, password) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ssh-instance_method" title="#ssh (instance method)">- (Object) <strong>ssh</strong>(deployment, password) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ssh_exec%21-instance_method" title="#ssh_exec! (instance method)">- (Object) <strong>ssh_exec!</strong>(deployment, ssh, command) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#uninstall-instance_method" title="#uninstall (instance method)">- (Object) <strong>uninstall</strong>(deployment, password) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../../Utilities.html" title="Arachni::UI::Web::Utilities (module)">Utilities</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../Utilities.html#escape-instance_method" title="Arachni::UI::Web::Utilities#escape (method)">#escape</a></span>, <span class='object_link'><a href="../../Utilities.html#escape_hash-instance_method" title="Arachni::UI::Web::Utilities#escape_hash (method)">#escape_hash</a></span>, <span class='object_link'><a href="../../Utilities.html#parse_datetime-instance_method" title="Arachni::UI::Web::Utilities#parse_datetime (method)">#parse_datetime</a></span>, <span class='object_link'><a href="../../Utilities.html#port_to_url-instance_method" title="Arachni::UI::Web::Utilities#port_to_url (method)">#port_to_url</a></span>, <span class='object_link'><a href="../../Utilities.html#remove_proto-instance_method" title="Arachni::UI::Web::Utilities#remove_proto (method)">#remove_proto</a></span>, <span class='object_link'><a href="../../Utilities.html#unescape-instance_method" title="Arachni::UI::Web::Utilities#unescape (method)">#unescape</a></span>, <span class='object_link'><a href="../../Utilities.html#unescape_hash-instance_method" title="Arachni::UI::Web::Utilities#unescape_hash (method)">#unescape_hash</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Arachni::UI::Web::Addons::AutoDeploy::Manager (class)">Manager</a></span></tt>) <strong>initialize</strong>(opts, settings) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Initializes the Scheduler and starts the clock.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id settings'>settings</span> <span class='rparen'>)</span>
+    <span class='ivar'>@opts</span>     <span class='op'>=</span> <span class='id opts'>opts</span>
+    <span class='ivar'>@settings</span> <span class='op'>=</span> <span class='id settings'>settings</span>
+
+    <span class='const'>DataMapper</span><span class='op'>::</span><span class='id setup'>setup</span><span class='lparen'>(</span> <span class='symbol'>:default</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sqlite3://</span><span class='embexpr_beg'>#{</span><span class='ivar'>@settings</span><span class='period'>.</span><span class='id db'>db</span><span class='rbrace'>}</span><span class='tstring_content'>/default.db</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='const'>DataMapper</span><span class='period'>.</span><span class='id finalize'>finalize</span>
+
+    <span class='const'>Deployment</span><span class='period'>.</span><span class='id auto_upgrade!'>auto_upgrade!</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="delete-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>delete</strong>(id, password) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+204
+205
+206
+207
+208
+209
+210</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 204</span>
+
+<span class='kw'>def</span> <span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id id'>id</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+    <span class='id deployment'>deployment</span> <span class='op'>=</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span>
+    <span class='id ret'>ret</span> <span class='op'>=</span> <span class='id uninstall'>uninstall</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id ret'>ret</span> <span class='kw'>if</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span>
+    <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id destroy'>destroy</span>
+    <span class='kw'>return</span> <span class='id ret'>ret</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="finalize_setup-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>finalize_setup</strong>(channel) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134
+135</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 132</span>
+
+<span class='kw'>def</span> <span class='id finalize_setup'>finalize_setup</span><span class='lparen'>(</span> <span class='id channel'>channel</span> <span class='rparen'>)</span>
+    <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id channel'>channel</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:deployment</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id save'>save</span>
+    <span class='kw'>return</span> <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id channel'>channel</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:deployment</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>get</strong>(id) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+200
+201
+202</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 200</span>
+
+<span class='kw'>def</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span>
+    <span class='const'>Deployment</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_url-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>get_url</strong>(deployment) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+223
+224
+225
+226</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 223</span>
+
+<span class='kw'>def</span> <span class='id get_url'>get_url</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span> <span class='rparen'>)</span>
+    <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id user'>user</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id host'>host</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>:</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id port'>port</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>$</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="list-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>list</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 196</span>
+
+<span class='kw'>def</span> <span class='id list'>list</span>
+    <span class='const'>Deployment</span><span class='period'>.</span><span class='id all'>all</span><span class='period'>.</span><span class='id reverse'>reverse</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="output-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>output</strong>(channel) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 128</span>
+
+<span class='kw'>def</span> <span class='id output'>output</span><span class='lparen'>(</span> <span class='id channel'>channel</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id channel'>channel</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="run-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>run</strong>(deployment, password) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 158</span>
+
+<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+   <span class='kw'>begin</span>
+       <span class='id session'>session</span> <span class='op'>=</span> <span class='id ssh'>ssh</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+   <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+       <span class='kw'>return</span> <span class='lbrace'>{</span>
+           <span class='symbol'>:output</span> <span class='op'>=&gt;</span> <span class='id e'>e</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='comma'>,</span>
+           <span class='symbol'>:status</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+           <span class='symbol'>:code</span>   <span class='op'>=&gt;</span> <span class='int'>1</span>
+       <span class='rbrace'>}</span>
+   <span class='kw'>end</span>
+
+   <span class='id session'>session</span><span class='period'>.</span><span class='id exec!'>exec!</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nohup ./</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
+           <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>EXEC</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> --port=</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span> <span class='op'>+</span>
+       <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> &gt; arachni-xmlrpcd-startup.log 2&gt;&amp;1 &amp;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+
+   <span class='id sleep'>sleep</span><span class='lparen'>(</span> <span class='int'>5</span> <span class='rparen'>)</span>
+   <span class='lbrace'>{</span> <span class='symbol'>:code</span>   <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="setup-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>setup</strong>(deployment, password) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id setup'>setup</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+
+    <span class='cvar'>@@setup</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id url'>url</span> <span class='op'>=</span> <span class='id get_url'>get_url</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span> <span class='rparen'>)</span>
+    <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+    <span class='const'>Thread</span><span class='period'>.</span><span class='id new'>new</span> <span class='lbrace'>{</span>
+        <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:deployment</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id deployment'>deployment</span>
+        <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:status</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>working</span><span class='tstring_end'>'</span></span>
+
+        <span class='kw'>begin</span>
+            <span class='id session'>session</span> <span class='op'>=</span> <span class='id ssh'>ssh</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+            <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:status</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span>
+            <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:output</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id e'>e</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+            <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='int'>1</span>
+            <span class='kw'>return</span>
+        <span class='kw'>end</span>
+
+
+        <span class='id wget'>wget</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>wget --output-document=</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span> <span class='op'>+</span>
+            <span class='const'>ARCHIVE_EXT</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_PATH</span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='const'>ARCHIVE_EXT</span>
+        <span class='id ret'>ret</span> <span class='op'>=</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='id wget'>wget</span> <span class='rparen'>)</span>
+
+        <span class='kw'>if</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='int'>0</span>
+            <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:status</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span>
+            <span class='kw'>return</span>
+        <span class='kw'>end</span>
+
+        <span class='id mkdir'>mkdir</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>mkdir </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span>
+        <span class='id ret'>ret</span> <span class='op'>=</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span>  <span class='id mkdir'>mkdir</span> <span class='rparen'>)</span>
+
+        <span class='kw'>if</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='int'>0</span>
+            <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:status</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span>
+            <span class='kw'>return</span>
+        <span class='kw'>end</span>
+
+
+        <span class='id tar'>tar</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tar xvf </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span> <span class='op'>+</span> <span class='const'>ARCHIVE_EXT</span> <span class='op'>+</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> -C </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span>
+        <span class='id ret'>ret</span> <span class='op'>=</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span>  <span class='id tar'>tar</span> <span class='rparen'>)</span>
+
+        <span class='kw'>if</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='int'>0</span>
+            <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:status</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span>
+            <span class='kw'>return</span>
+        <span class='kw'>end</span>
+
+
+        <span class='id chmod'>chmod</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>chmod +x </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
+            <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>EXEC</span>
+        <span class='id ret'>ret</span> <span class='op'>=</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='id chmod'>chmod</span> <span class='rparen'>)</span>
+
+        <span class='kw'>if</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='int'>0</span>
+            <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:status</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span>
+            <span class='kw'>return</span>
+        <span class='kw'>end</span>
+
+        <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:status</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>finished</span><span class='tstring_end'>'</span></span>
+    <span class='rbrace'>}</span>
+
+    <span class='kw'>return</span> <span class='id get_url'>get_url</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shutdown-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>shutdown</strong>(deployment, password) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 177</span>
+
+<span class='kw'>def</span> <span class='id shutdown'>shutdown</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+
+   <span class='id url'>url</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id host'>host</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+   <span class='id proc'>proc</span> <span class='op'>=</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id proc_info'>proc_info</span>
+
+   <span class='kw'>begin</span>
+       <span class='id session'>session</span> <span class='op'>=</span> <span class='id ssh'>ssh</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+   <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+       <span class='kw'>return</span> <span class='lbrace'>{</span>
+           <span class='symbol'>:output</span> <span class='op'>=&gt;</span> <span class='id e'>e</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='comma'>,</span>
+           <span class='symbol'>:status</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+           <span class='symbol'>:code</span>   <span class='op'>=&gt;</span> <span class='int'>1</span>
+       <span class='rbrace'>}</span>
+   <span class='kw'>end</span>
+
+    <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>kill -9 -</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id proc'>proc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pgrp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="ssh-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>ssh</strong>(deployment, password) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 212</span>
+
+<span class='kw'>def</span> <span class='id ssh'>ssh</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+    <span class='cvar'>@@ssh</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='cvar'>@@ssh</span><span class='lbracket'>[</span><span class='id get_url'>get_url</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>$</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>Digest</span><span class='op'>::</span><span class='const'>MD5</span><span class='period'>.</span><span class='id hexdigest'>hexdigest</span><span class='lparen'>(</span> <span class='id password'>password</span> <span class='rparen'>)</span> <span class='rbracket'>]</span> <span class='op'>||=</span>
+        <span class='const'>Net</span><span class='op'>::</span><span class='const'>SSH</span><span class='period'>.</span><span class='id start'>start</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id host'>host</span><span class='comma'>,</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id user'>user</span><span class='comma'>,</span>
+            <span class='lbrace'>{</span>
+              <span class='symbol'>:port</span>     <span class='op'>=&gt;</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id port'>port</span><span class='comma'>,</span>
+              <span class='symbol'>:password</span> <span class='op'>=&gt;</span> <span class='id password'>password</span>
+            <span class='rbrace'>}</span>
+        <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="ssh_exec!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>ssh_exec!</strong>(deployment, ssh, command) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 228</span>
+
+<span class='kw'>def</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id ssh'>ssh</span><span class='comma'>,</span> <span class='id command'>command</span> <span class='rparen'>)</span>
+
+    <span class='id stdout_data'>stdout_data</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id stderr_data'>stderr_data</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='id exit_code'>exit_code</span>   <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id exit_signal'>exit_signal</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+    <span class='cvar'>@@setup</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+    <span class='id url'>url</span> <span class='op'>=</span> <span class='id get_url'>get_url</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span> <span class='rparen'>)</span>
+
+    <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='int'>0</span>
+    <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:output</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+    <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:output</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id command'>command</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='id ssh'>ssh</span><span class='period'>.</span><span class='id open_channel'>open_channel</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id channel'>channel</span><span class='op'>|</span>
+        <span class='id channel'>channel</span><span class='period'>.</span><span class='id exec'>exec</span><span class='lparen'>(</span><span class='id command'>command</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id ch'>ch</span><span class='comma'>,</span> <span class='id success'>success</span><span class='op'>|</span>
+            <span class='kw'>unless</span> <span class='id success'>success</span>
+                <span class='id abort'>abort</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FAILED: couldn't execute command (ssh.channel.exec)</span><span class='tstring_end'>&quot;</span></span>
+            <span class='kw'>end</span>
+
+            <span class='id channel'>channel</span><span class='period'>.</span><span class='id on_data'>on_data</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id ch'>ch</span><span class='comma'>,</span> <span class='id data'>data</span><span class='op'>|</span>
+                <span class='id stdout_data'>stdout_data</span> <span class='op'>+=</span> <span class='id data'>data</span>
+                <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:output</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='id data'>data</span>
+            <span class='rbrace'>}</span>
+
+            <span class='id channel'>channel</span><span class='period'>.</span><span class='id on_extended_data'>on_extended_data</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id ch'>ch</span><span class='comma'>,</span> <span class='id type'>type</span><span class='comma'>,</span> <span class='id data'>data</span><span class='op'>|</span>
+                <span class='id stderr_data'>stderr_data</span> <span class='op'>+=</span> <span class='id data'>data</span>
+                <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:output</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='id data'>data</span>
+            <span class='rbrace'>}</span>
+
+            <span class='id channel'>channel</span><span class='period'>.</span><span class='id on_request'>on_request</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>exit-status</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id ch'>ch</span><span class='comma'>,</span> <span class='id data'>data</span><span class='op'>|</span>
+                <span class='id exit_code'>exit_code</span> <span class='op'>=</span> <span class='id data'>data</span><span class='period'>.</span><span class='id read_long'>read_long</span>
+                <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id data'>data</span><span class='period'>.</span><span class='id read_long'>read_long</span>
+            <span class='rbrace'>}</span>
+
+            <span class='id channel'>channel</span><span class='period'>.</span><span class='id on_request'>on_request</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>exit-signal</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id ch'>ch</span><span class='comma'>,</span> <span class='id data'>data</span><span class='op'>|</span>
+                <span class='id exit_signal'>exit_signal</span> <span class='op'>=</span> <span class='id data'>data</span><span class='period'>.</span><span class='id read_long'>read_long</span>
+            <span class='rbrace'>}</span>
+
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id ssh'>ssh</span><span class='period'>.</span><span class='id loop'>loop</span>
+    <span class='kw'>return</span> <span class='lbrace'>{</span>
+        <span class='symbol'>:stdout</span> <span class='op'>=&gt;</span> <span class='id stdout_data'>stdout_data</span><span class='comma'>,</span>
+        <span class='symbol'>:stderr</span> <span class='op'>=&gt;</span> <span class='id stderr_data'>stderr_data</span><span class='comma'>,</span>
+        <span class='symbol'>:code</span>   <span class='op'>=&gt;</span> <span class='id exit_code'>exit_code</span><span class='comma'>,</span>
+        <span class='symbol'>:signal</span> <span class='op'>=&gt;</span> <span class='id exit_signal'>exit_signal</span>
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="uninstall-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>uninstall</strong>(deployment, password) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/addons/autodeploy/lib/manager.rb', line 137</span>
+
+<span class='kw'>def</span> <span class='id uninstall'>uninstall</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+
+    <span class='kw'>begin</span>
+        <span class='id session'>session</span> <span class='op'>=</span> <span class='id ssh'>ssh</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+        <span class='kw'>return</span> <span class='lbrace'>{</span>
+            <span class='symbol'>:output</span> <span class='op'>=&gt;</span> <span class='id e'>e</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='comma'>,</span>
+            <span class='symbol'>:status</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+            <span class='symbol'>:code</span>   <span class='op'>=&gt;</span> <span class='int'>1</span>
+         <span class='rbrace'>}</span>
+     <span class='kw'>end</span>
+
+    <span class='id out'>out</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id rm'>rm</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rm -rf </span><span class='embexpr_beg'>#{</span><span class='const'>ARCHIVE_NAME</span><span class='rbrace'>}</span><span class='tstring_content'>-</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='rbrace'>}</span><span class='tstring_content'>*</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id ret'>ret</span> <span class='op'>=</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='id rm'>rm</span> <span class='rparen'>)</span>
+    <span class='id out'>out</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:stdout</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:stderr</span><span class='rbracket'>]</span>
+
+    <span class='kw'>return</span> <span class='lbrace'>{</span> <span class='symbol'>:output</span> <span class='op'>=&gt;</span> <span class='id out'>out</span><span class='comma'>,</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:status</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='int'>0</span>
+
+    <span class='kw'>return</span> <span class='lbrace'>{</span> <span class='symbol'>:output</span> <span class='op'>=&gt;</span> <span class='id out'>out</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Tue Jul 26 21:35:22 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.5 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

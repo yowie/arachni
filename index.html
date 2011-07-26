@@ -46,7 +46,7 @@
 <table>
     <tr>
         <th>Version</th>
-        <td>0.2.3</td>
+        <td>0.3</td>
     </tr>
     <tr>
         <th>Homepage</th>
@@ -163,14 +163,11 @@ From a user's or a component developer's point of view everything appears simple
 
 <h3>Website Crawler</h3>
 
-<p>The crawler is provided by a modified version of <a href="http://anemone.rubyforge.org/">Anemone</a>.</p>
-
 <ul>
 <li>Filters for redundant pages like galleries, catalogs, etc based on regular expressions and counters.</li>
 <li>URL exclusion filter based on regular expressions.</li>
 <li>URL inclusion filter based on regular expressions.</li>
 <li>Can optionally follow subdomains.</li>
-<li>Adjustable depth limit.</li>
 <li>Adjustable link count limit.</li>
 <li>Adjustable redirect limit.</li>
 <li>Modular path extraction via "Path Extractor" components.</li>
@@ -185,6 +182,7 @@ From a user's or a component developer's point of view everything appears simple
 <li>Forms</li>
 <li>Links</li>
 <li>Cookies</li>
+<li>Headers</li>
 </ul>
 
 
@@ -332,6 +330,8 @@ CDE packages are self contained and thus alleviate the need for Ruby and other d
 You can download the latest CDE package from the <a href="https://github.com/Zapotek/arachni/downloads">download</a> page and escape the dependency hell.<br/>
 If you decide to go the CDE route you can skip the rest, you're done.</p>
 
+<p>Due to some incompatibility this release does not have a CDE package yet.</p>
+
 <h3>Gem</h3>
 
 <p>To install the Gem or work with the source code you'll also need the following system libraries:</p>
@@ -380,7 +380,7 @@ caused by the use of this software.</p>
 <p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p></div></div>
     
     <div id="footer">
-  Generated on Sun May 22 20:18:09 2011 by 
+  Generated on Tue Jul 26 21:35:11 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

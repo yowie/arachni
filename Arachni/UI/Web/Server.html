@@ -72,11 +72,15 @@
     
   
     
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="Utilities.html" title="Arachni::UI::Web::Utilities (module)">Utilities</a></span></dd>
+      
+    
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/ui/web/server.rb</dd>
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/ui/web/server.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -106,6 +110,10 @@ This will be used for the &#8220;owner&#8221; field of the helper instance
   
 
 
+  
+  
+  
+  
   
 
   
@@ -174,7 +182,7 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#component_cache_filled%3F-instance_method" title="#component_cache_filled? (instance method)">- (Boolean) <strong>component_cache_filled?</strong> </a>
+      <a href="#addons-instance_method" title="#addons (instance method)">- (Object) <strong>addons</strong> </a>
     
 
     
@@ -195,7 +203,7 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#connect_to_instance-instance_method" title="#connect_to_instance (instance method)">- (Object) <strong>connect_to_instance</strong>(url, token = nil) </a>
+      <a href="#component_cache_filled%3F-instance_method" title="#component_cache_filled? (instance method)">- (Boolean) <strong>component_cache_filled?</strong> </a>
     
 
     
@@ -208,10 +216,7 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Provides an easy way to connect to an instance by port.
-</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -310,27 +315,6 @@ appropriate error page.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#escape_hash-instance_method" title="#escape_hash (instance method)">- (Object) <strong>escape_hash</strong>(hash) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#exception_jail-instance_method" title="#exception_jail (instance method)">- (Object) <strong>exception_jail</strong>(&amp;block) </a>
     
 
@@ -394,7 +378,7 @@ appropriate error page.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#options-instance_method" title="#options (instance method)">- (Object) <strong>options</strong> </a>
+      <a href="#instances-instance_method" title="#instances (instance method)">- (Object) <strong>instances</strong> </a>
     
 
     
@@ -415,7 +399,7 @@ appropriate error page.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#port_to_url-instance_method" title="#port_to_url (instance method)">- (Object) <strong>port_to_url</strong>(port, dispatcher_url, no_scheme = nil) </a>
+      <a href="#log-instance_method" title="#log (instance method)">- (Object) <strong>log</strong> </a>
     
 
     
@@ -428,10 +412,28 @@ appropriate error page.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Converts a port to a URL instance.
-</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#options-instance_method" title="#options (instance method)">- (Object) <strong>options</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -530,7 +532,7 @@ values.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sanitize_url-instance_method" title="#sanitize_url (instance method)">- (Object) <strong>sanitize_url</strong>(url) </a>
+      <a href="#reports-instance_method" title="#reports (instance method)">- (Object) <strong>reports</strong> </a>
     
 
     
@@ -593,6 +595,27 @@ Saves the report, shuts down the instance and returns the content as HTML
 to be sent back to the user&#8217;s browser.
 </p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scheduler-instance_method" title="#scheduler (instance method)">- (Object) <strong>scheduler</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -694,27 +717,6 @@ a number.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unescape_hash-instance_method" title="#unescape_hash (instance method)">- (Object) <strong>unescape_hash</strong>(hash) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#welcomed%21-instance_method" title="#welcomed! (instance method)">- (Object) <strong>welcomed!</strong> </a>
     
 
@@ -759,6 +761,16 @@ a number.
 
 
   
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Utilities.html" title="Arachni::UI::Web::Utilities (module)">Utilities</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Utilities.html#escape-instance_method" title="Arachni::UI::Web::Utilities#escape (method)">#escape</a></span>, <span class='object_link'><a href="Utilities.html#escape_hash-instance_method" title="Arachni::UI::Web::Utilities#escape_hash (method)">#escape_hash</a></span>, <span class='object_link'><a href="Utilities.html#parse_datetime-instance_method" title="Arachni::UI::Web::Utilities#parse_datetime (method)">#parse_datetime</a></span>, <span class='object_link'><a href="Utilities.html#port_to_url-instance_method" title="Arachni::UI::Web::Utilities#port_to_url (method)">#port_to_url</a></span>, <span class='object_link'><a href="Utilities.html#remove_proto-instance_method" title="Arachni::UI::Web::Utilities#remove_proto (method)">#remove_proto</a></span>, <span class='object_link'><a href="Utilities.html#unescape-instance_method" title="Arachni::UI::Web::Utilities#unescape (method)">#unescape</a></span>, <span class='object_link'><a href="Utilities.html#unescape_hash-instance_method" title="Arachni::UI::Web::Utilities#unescape_hash (method)">#unescape_hash</a></span></p>
+
+  
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
@@ -777,33 +789,33 @@ a number.
       <pre class="lines">
 
 
-936
-937
-938
-939
-940
-941
-942
-943
-944
-945
-946
-947
-948
-949
-950
-951
-952
-953
-954
-955
-956
-957
-958
-959</pre>
+878
+879
+880
+881
+882
+883
+884
+885
+886
+887
+888
+889
+890
+891
+892
+893
+894
+895
+896
+897
+898
+899
+900
+901</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 936</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 878</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id prep_webrick'>prep_webrick</span>
     <span class='kw'>if</span> <span class='cvar'>@@conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
@@ -859,29 +871,29 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
       <pre class="lines">
 
 
-915
-916
-917
-918
-919
-920
-921
-922
-923
-924
-925
-926
-927
-928
-929
-930
-931
-932
-933
-934</pre>
+857
+858
+859
+860
+861
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874
+875
+876</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 915</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 857</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id run!'>run!</span><span class='lparen'>(</span> <span class='id options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='id set'>set</span> <span class='id options'>options</span>
@@ -915,7 +927,35 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
     
     
       <div class="method_details first">
-  <p class="signature first" id="component_cache_filled?-instance_method">
+  <p class="signature first" id="addons-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>addons</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 191</span>
+
+<span class='kw'>def</span> <span class='id addons'>addons</span>
+    <span class='id settings'>settings</span><span class='period'>.</span><span class='id addons'>addons</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="component_cache_filled?-instance_method">
   
     - (<tt>Boolean</tt>) <strong>component_cache_filled?</strong> 
   
@@ -948,146 +988,22 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
       <pre class="lines">
 
 
-436
-437
-438
-439
-440
-441
-442</pre>
+365
+366
+367
+368
+369
+370
+371</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 436</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 365</span>
 
 <span class='kw'>def</span> <span class='id component_cache_filled?'>component_cache_filled?</span>
     <span class='kw'>begin</span>
         <span class='kw'>return</span> <span class='cvar'>@@modules</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>+</span> <span class='cvar'>@@plugins</span><span class='period'>.</span><span class='id size'>size</span>
     <span class='kw'>rescue</span>
         <span class='kw'>return</span> <span class='kw'>false</span>
-    <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="connect_to_instance-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>connect_to_instance</strong>(url, token = nil) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Provides an easy way to connect to an instance by port
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-        <span class='name'>port</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-226
-227
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 226</span>
-
-<span class='kw'>def</span> <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
-    <span class='id prep_session'>prep_session</span>
-
-    <span class='id url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>https://</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='kw'>if</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id scheme'>scheme</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>https</span><span class='tstring_end'>'</span></span>
-
-    <span class='cvar'>@@connections</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-
-    <span class='kw'>begin</span>
-        <span class='kw'>if</span> <span class='cvar'>@@connections</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='cvar'>@@connections</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id alive?'>alive?</span>
-          <span class='kw'>return</span> <span class='cvar'>@@connections</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span>
-        <span class='kw'>end</span>
-    <span class='kw'>rescue</span>
-    <span class='kw'>end</span>
-
-    <span class='kw'>begin</span>
-
-        <span class='comment'>#
-</span>        <span class='comment'># Sync up the session authentication tokens with the ones in the
-</span>        <span class='comment'># class variables.
-</span>        <span class='comment'>#
-</span>        <span class='comment'># This will allow users to still connect to instances even if they
-</span>        <span class='comment'># shutdown the WebUI or removed their cookies.
-</span>        <span class='comment'>#
-</span>
-        <span class='cvar'>@@tokens</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-        <span class='id session'>session</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tokens</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-        <span class='cvar'>@@tokens</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id token'>token</span> <span class='kw'>if</span> <span class='id token'>token</span>
-
-        <span class='id session'>session</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tokens</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='cvar'>@@tokens</span> <span class='rparen'>)</span>
-        <span class='cvar'>@@tokens</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id session'>session</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tokens</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-        <span class='id session'>session</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tokens</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='cvar'>@@tokens</span> <span class='rparen'>)</span>
-
-        <span class='kw'>return</span> <span class='cvar'>@@connections</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span>
-            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>RPC</span><span class='op'>::</span><span class='const'>XML</span><span class='op'>::</span><span class='const'>Client</span><span class='op'>::</span><span class='const'>Instance</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id options'>options</span><span class='comma'>,</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id session'>session</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tokens</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
-        <span class='id raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Instance at </span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_content'> has shutdown.</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1119,51 +1035,15 @@ Provides statistics about running jobs etc using the dispatcher
       <pre class="lines">
 
 
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306</pre>
+210
+211
+212</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 286</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 210</span>
 
 <span class='kw'>def</span> <span class='id dispatcher_stats'>dispatcher_stats</span>
-
-    <span class='id stats'>stats</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id all'>all</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id dispatcher'>dispatcher</span><span class='op'>|</span>
-
-        <span class='kw'>begin</span>
-            <span class='id stats'>stats</span><span class='lbracket'>[</span><span class='id dispatcher'>dispatcher</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id dispatcher'>dispatcher</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id stats'>stats</span>
-            <span class='id stats'>stats</span><span class='lbracket'>[</span><span class='id dispatcher'>dispatcher</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>running_jobs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-                <span class='op'>|</span><span class='id job'>job</span><span class='op'>|</span>
-                <span class='kw'>begin</span>
-                    <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>paused</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id dispatcher'>dispatcher</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id paused?'>paused?</span>
-                <span class='kw'>rescue</span>
-                <span class='kw'>end</span>
-            <span class='rbrace'>}</span>
-        <span class='kw'>rescue</span>
-        <span class='kw'>end</span>
-    <span class='rbrace'>}</span>
-
-    <span class='kw'>return</span> <span class='id stats'>stats</span>
+    <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id stats'>stats</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1183,12 +1063,12 @@ Provides statistics about running jobs etc using the dispatcher
       <pre class="lines">
 
 
-279
-280
-281</pre>
+203
+204
+205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 279</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='id dispatchers'>dispatchers</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id dispatchers'>dispatchers</span>
@@ -1242,15 +1122,15 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-499
-500
-501</pre>
+428
+429
+430</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 499</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 428</span>
 
 <span class='kw'>def</span> <span class='id ensure_dispatcher'>ensure_dispatcher</span>
-    <span class='id redirect'>redirect</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/dispatchers/edit</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id all'>all</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+    <span class='id redirect'>redirect</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/dispatchers/edit</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='op'>!</span><span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id first_alive'>first_alive</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1270,61 +1150,21 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-214
-215
-216
-217
-218
-219</pre>
+247
+248
+249
+250
+251
+252</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 214</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 247</span>
 
 <span class='kw'>def</span> <span class='id ensure_welcomed'>ensure_welcomed</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='id welcomed?'>welcomed?</span>
 
     <span class='id welcomed!'>welcomed!</span>
     <span class='id redirect'>redirect</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/welcome</span><span class='tstring_end'>'</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="escape_hash-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>escape_hash</strong>(hash) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-379
-380
-381
-382
-383
-384
-385
-386
-387</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 379</span>
-
-<span class='kw'>def</span> <span class='id escape_hash'>escape_hash</span><span class='lparen'>(</span> <span class='id hash'>hash</span> <span class='rparen'>)</span>
-    <span class='id hash'>hash</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span>
-        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id escape_hash'>escape_hash</span><span class='lparen'>(</span> <span class='id v'>v</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id v'>v</span><span class='period'>.</span><span class='id is_a?'>is_a?</span> <span class='const'>Hash</span>
-    <span class='rbrace'>}</span>
-
-    <span class='kw'>return</span> <span class='id hash'>hash</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1344,16 +1184,16 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-189
-190
-191
-192
-193
-194
-195</pre>
+222
+223
+224
+225
+226
+227
+228</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 189</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 222</span>
 
 <span class='kw'>def</span> <span class='id exception_jail'>exception_jail</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='comment'># begin
@@ -1380,23 +1220,23 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-444
-445
-446
-447
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457</pre>
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 444</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 373</span>
 
 <span class='kw'>def</span> <span class='id fill_component_cache'>fill_component_cache</span>
 
@@ -1430,43 +1270,105 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-418
-419
-420
-421
-422
-423
-424
-425
-426
-427
-428
-429
-430
-431
-432
-433
-434</pre>
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 418</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 344</span>
 
 <span class='kw'>def</span> <span class='id helper_instance'>helper_instance</span>
     <span class='kw'>begin</span>
         <span class='cvar'>@@arachni</span> <span class='op'>||=</span> <span class='kw'>nil</span>
         <span class='kw'>if</span> <span class='op'>!</span><span class='cvar'>@@arachni</span>
 
-            <span class='id d_url'>d_url</span>    <span class='op'>=</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id all'>all</span><span class='period'>.</span><span class='id first'>first</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-            <span class='id instance'>instance</span> <span class='op'>=</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id d_url'>d_url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id dispatch'>dispatch</span><span class='lparen'>(</span> <span class='const'>HELPER_OWNER</span> <span class='rparen'>)</span>
-            <span class='id instance_url'>instance_url</span> <span class='op'>=</span> <span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id d_url'>d_url</span> <span class='rparen'>)</span>
+            <span class='id d_url'>d_url</span> <span class='op'>=</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id first_alive'>first_alive</span><span class='period'>.</span><span class='id url'>url</span>
 
-            <span class='cvar'>@@arachni</span> <span class='op'>=</span> <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span><span class='comma'>,</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+            <span class='id instance'>instance</span> <span class='op'>=</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id d_url'>d_url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id dispatch'>dispatch</span><span class='lparen'>(</span> <span class='const'>HELPER_OWNER</span> <span class='rparen'>)</span>
+            <span class='id instance_url'>instance_url</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id d_url'>d_url</span> <span class='rparen'>)</span>
+
+            <span class='cvar'>@@arachni</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
         <span class='kw'>end</span>
 
         <span class='kw'>return</span> <span class='cvar'>@@arachni</span>
-    <span class='kw'>rescue</span>
-        <span class='id redirect'>redirect</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/dispatchers/edit</span><span class='tstring_end'>'</span></span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+        <span class='comment'># ap e
+</span>        <span class='comment'># ap e.backtrace
+</span>        <span class='id redirect'>redirect</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/dispatchers/edit</span><span class='tstring_end'>'</span></span>
     <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="instances-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>instances</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+218
+219
+220</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 218</span>
+
+<span class='kw'>def</span> <span class='id instances'>instances</span>
+    <span class='id settings'>settings</span><span class='period'>.</span><span class='id instances'>instances</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="log-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>log</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+195
+196
+197</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 195</span>
+
+<span class='kw'>def</span> <span class='id log'>log</span>
+    <span class='id settings'>settings</span><span class='period'>.</span><span class='id log'>log</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1486,79 +1388,15 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-308
-309
-310</pre>
+254
+255
+256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 308</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 254</span>
 
 <span class='kw'>def</span> <span class='id options'>options</span>
     <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="port_to_url-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>port_to_url</strong>(port, dispatcher_url, no_scheme = nil) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Converts a port to a URL instance.
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-        <span class='name'>port</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-270
-271
-272
-273
-274
-275
-276
-277</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 270</span>
-
-<span class='kw'>def</span> <span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id port'>port</span><span class='comma'>,</span> <span class='id dispatcher_url'>dispatcher_url</span><span class='comma'>,</span> <span class='id no_scheme'>no_scheme</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
-    <span class='id uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id dispatcher_url'>dispatcher_url</span> <span class='rparen'>)</span>
-    <span class='id uri'>uri</span><span class='period'>.</span><span class='id port'>port</span> <span class='op'>=</span> <span class='id port'>port</span><span class='period'>.</span><span class='id to_i'>to_i</span>
-    <span class='id uri'>uri</span> <span class='op'>=</span> <span class='id uri'>uri</span><span class='period'>.</span><span class='id to_s'>to_s</span>
-
-    <span class='id uri'>uri</span> <span class='op'>=</span> <span class='id sanitize_url'>sanitize_url</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id no_scheme'>no_scheme</span>
-    <span class='kw'>return</span> <span class='id uri'>uri</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1578,15 +1416,15 @@ Converts a port to a URL instance.
       <pre class="lines">
 
 
-399
-400
-401
-402
-403
-404</pre>
+325
+326
+327
+328
+329
+330</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 399</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 325</span>
 
 <span class='kw'>def</span> <span class='id prep_modules'>prep_modules</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>modules</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
@@ -1657,55 +1495,55 @@ normalized hash
       <pre class="lines">
 
 
-332
-333
-334
-335
-336
-337
-338
-339
-340
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360
-361
-362
-363
-364
-365
-366
-367
-368
-369
-370
-371
-372
-373
-374
-375
-376
-377</pre>
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 332</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 278</span>
 
 <span class='kw'>def</span> <span class='id prep_opts'>prep_opts</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
 
@@ -1771,20 +1609,20 @@ normalized hash
       <pre class="lines">
 
 
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416</pre>
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 406</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 332</span>
 
 <span class='kw'>def</span> <span class='id prep_plugins'>prep_plugins</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
     <span class='id plugins'>plugins</span>  <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1827,39 +1665,39 @@ values
       <pre class="lines">
 
 
-462
-463
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476
-477
-478
-479
-480
-481
-482
-483
-484
-485
-486
-487
-488
-489
-490
-491</pre>
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 462</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 391</span>
 
 <span class='kw'>def</span> <span class='id prep_session'>prep_session</span>
     <span class='id ensure_dispatcher'>ensure_dispatcher</span>
@@ -1897,9 +1735,9 @@ values
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="sanitize_url-instance_method">
+  <p class="signature " id="reports-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>sanitize_url</strong>(url) 
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>reports</strong> 
   
 
   
@@ -1909,17 +1747,15 @@ values
       <pre class="lines">
 
 
-593
-594
-595
-596</pre>
+199
+200
+201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 593</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 199</span>
 
-<span class='kw'>def</span> <span class='id sanitize_url'>sanitize_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='id url'>url</span><span class='period'>.</span><span class='id gsub!'>gsub!</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    <span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>https://</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id reports'>reports</span>
+    <span class='id settings'>settings</span><span class='period'>.</span><span class='id reports'>reports</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1965,19 +1801,19 @@ Saves the report and shuts down the instance
       <pre class="lines">
 
 
-519
-520
-521
-522
-523
-524</pre>
+448
+449
+450
+451
+452
+453</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 519</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 448</span>
 
 <span class='kw'>def</span> <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span> <span class='rparen'>)</span>
     <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id clean_up!'>clean_up!</span><span class='lparen'>(</span> <span class='kw'>true</span> <span class='rparen'>)</span>
-    <span class='id report_path'>report_path</span> <span class='op'>=</span> <span class='id settings'>settings</span><span class='period'>.</span><span class='id reports'>reports</span><span class='period'>.</span><span class='id save'>save</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id auditstore'>auditstore</span> <span class='rparen'>)</span>
+    <span class='id report_path'>report_path</span> <span class='op'>=</span> <span class='id reports'>reports</span><span class='period'>.</span><span class='id save'>save</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id auditstore'>auditstore</span> <span class='rparen'>)</span>
     <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id service'>service</span><span class='period'>.</span><span class='id shutdown!'>shutdown!</span>
     <span class='kw'>return</span> <span class='id report_path'>report_path</span>
 <span class='kw'>end</span></pre>
@@ -2026,17 +1862,45 @@ to be sent back to the user&#8217;s browser.
       <pre class="lines">
 
 
-509
-510
-511
-512</pre>
+438
+439
+440
+441</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 509</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 438</span>
 
 <span class='kw'>def</span> <span class='id save_shutdown_and_show'>save_shutdown_and_show</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span> <span class='rparen'>)</span>
     <span class='id report'>report</span> <span class='op'>=</span> <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span> <span class='rparen'>)</span>
-    <span class='id settings'>settings</span><span class='period'>.</span><span class='id reports'>reports</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>html</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id settings'>settings</span><span class='period'>.</span><span class='id reports'>reports</span><span class='period'>.</span><span class='id all'>all</span><span class='period'>.</span><span class='id last'>last</span><span class='period'>.</span><span class='id id'>id</span> <span class='rparen'>)</span>
+    <span class='id reports'>reports</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>html</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id reports'>reports</span><span class='period'>.</span><span class='id all'>all</span><span class='period'>.</span><span class='id last'>last</span><span class='period'>.</span><span class='id id'>id</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="scheduler-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>scheduler</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 214</span>
+
+<span class='kw'>def</span> <span class='id scheduler'>scheduler</span>
+    <span class='id settings'>settings</span><span class='period'>.</span><span class='id scheduler'>scheduler</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2056,17 +1920,17 @@ to be sent back to the user&#8217;s browser.
       <pre class="lines">
 
 
-197
-198
-199
-200
-201
-202
-203
-204</pre>
+230
+231
+232
+233
+234
+235
+236
+237</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 230</span>
 
 <span class='kw'>def</span> <span class='id show'>show</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id layout'>layout</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='id page'>page</span> <span class='op'>==</span> <span class='symbol'>:dispatchers</span>
@@ -2105,62 +1969,62 @@ Kills all running instances
       <pre class="lines">
 
 
-529
-530
-531
-532
-533
-534
-535
-536
-537
-538
-539
-540
-541
-542
-543
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553
-554
-555
-556</pre>
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 529</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 458</span>
 
 <span class='kw'>def</span> <span class='id shutdown_all'>shutdown_all</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='id settings'>settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id dispatcher_global_shutdown'>dispatcher_global_shutdown</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='id log'>log</span><span class='period'>.</span><span class='id dispatcher_global_shutdown'>dispatcher_global_shutdown</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 
     <span class='id dispatcher_stats'>dispatcher_stats</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id d_url'>d_url</span><span class='comma'>,</span> <span class='id stats'>stats</span><span class='op'>|</span>
 
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id sanitize_url'>sanitize_url</span><span class='lparen'>(</span> <span class='id d_url'>d_url</span><span class='period'>.</span><span class='id dup'>dup</span> <span class='rparen'>)</span> <span class='op'>!=</span> <span class='id url'>url</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id remove_proto'>remove_proto</span><span class='lparen'>(</span> <span class='id d_url'>d_url</span><span class='period'>.</span><span class='id dup'>dup</span> <span class='rparen'>)</span> <span class='op'>!=</span> <span class='id url'>url</span>
 
         <span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>running_jobs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id job'>job</span><span class='op'>|</span>
 
-            <span class='id instance_url'>instance_url</span> <span class='op'>=</span> <span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id d_url'>d_url</span> <span class='rparen'>)</span>
+            <span class='id instance_url'>instance_url</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id d_url'>d_url</span> <span class='rparen'>)</span>
             <span class='kw'>begin</span>
-                <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+                <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
             <span class='kw'>rescue</span>
                 <span class='kw'>begin</span>
-                    <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id service'>service</span><span class='period'>.</span><span class='id shutdown!'>shutdown!</span>
+                    <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id service'>service</span><span class='period'>.</span><span class='id shutdown!'>shutdown!</span>
                 <span class='kw'>rescue</span>
-                    <span class='id settings'>settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id instance_fucker_wont_die'>instance_fucker_wont_die</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span>
+                    <span class='id log'>log</span><span class='period'>.</span><span class='id instance_fucker_wont_die'>instance_fucker_wont_die</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span>
                     <span class='kw'>next</span>
                 <span class='kw'>end</span>
             <span class='kw'>end</span>
 
-            <span class='id settings'>settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id instance_shutdown'>instance_shutdown</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span>
+            <span class='id log'>log</span><span class='period'>.</span><span class='id instance_shutdown'>instance_shutdown</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
 
@@ -2213,38 +2077,38 @@ the number of reaped instances
       <pre class="lines">
 
 
-563
-564
-565
-566
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584
-585
-586
-587
-588
-589
-590
-591</pre>
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 563</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 492</span>
 
 <span class='kw'>def</span> <span class='id shutdown_zombies'>shutdown_zombies</span>
     <span class='id i'>i</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -2256,13 +2120,13 @@ the number of reaped instances
             <span class='op'>|</span><span class='id job'>job</span><span class='op'>|</span>
 
             <span class='kw'>begin</span>
-                <span class='id instance_url'>instance_url</span> <span class='op'>=</span> <span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-                <span class='id arachni'>arachni</span> <span class='op'>=</span> <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span>
+                <span class='id instance_url'>instance_url</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+                <span class='id arachni'>arachni</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='rparen'>)</span>
 
                 <span class='kw'>begin</span>
                     <span class='kw'>if</span> <span class='op'>!</span><span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id busy?'>busy?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>owner</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='const'>HELPER_OWNER</span>
                         <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span> <span class='rparen'>)</span>
-                        <span class='id settings'>settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id webui_zombie_cleanup'>webui_zombie_cleanup</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span>
+                        <span class='id log'>log</span><span class='period'>.</span><span class='id webui_zombie_cleanup'>webui_zombie_cleanup</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span>
                         <span class='id i'>i</span><span class='op'>+=</span><span class='int'>1</span>
                     <span class='kw'>end</span>
                 <span class='kw'>rescue</span>
@@ -2305,18 +2169,18 @@ a number
       <pre class="lines">
 
 
-315
-316
-317
-318
-319
-320
-321
-322
-323</pre>
+261
+262
+263
+264
+265
+266
+267
+268
+269</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 315</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 261</span>
 
 <span class='kw'>def</span> <span class='id to_i'>to_i</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id str'>str</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id str'>str</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span>
@@ -2326,46 +2190,6 @@ a number
     <span class='kw'>else</span>
         <span class='kw'>return</span> <span class='id str'>str</span>
     <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="unescape_hash-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>unescape_hash</strong>(hash) 
-  
-
-  
-</p><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-389
-390
-391
-392
-393
-394
-395
-396
-397</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 389</span>
-
-<span class='kw'>def</span> <span class='id unescape_hash'>unescape_hash</span><span class='lparen'>(</span> <span class='id hash'>hash</span> <span class='rparen'>)</span>
-    <span class='id hash'>hash</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id unescape'>unescape</span><span class='lparen'>(</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span>
-        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id unescape_hash'>unescape_hash</span><span class='lparen'>(</span> <span class='id v'>v</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id v'>v</span><span class='period'>.</span><span class='id is_a?'>is_a?</span> <span class='const'>Hash</span>
-    <span class='rbrace'>}</span>
-
-    <span class='kw'>return</span> <span class='id hash'>hash</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2385,12 +2209,12 @@ a number
       <pre class="lines">
 
 
-210
-211
-212</pre>
+243
+244
+245</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 210</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 243</span>
 
 <span class='kw'>def</span> <span class='id welcomed!'>welcomed!</span>
     <span class='const'>File</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id settings'>settings</span><span class='period'>.</span><span class='id db'>db</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/welcomed</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id close'>close</span>
@@ -2434,12 +2258,12 @@ a number
       <pre class="lines">
 
 
-206
-207
-208</pre>
+239
+240
+241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 206</span>
+      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 239</span>
 
 <span class='kw'>def</span> <span class='id welcomed?'>welcomed?</span>
     <span class='const'>File</span><span class='period'>.</span><span class='id exist?'>exist?</span><span class='lparen'>(</span> <span class='id settings'>settings</span><span class='period'>.</span><span class='id db'>db</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/welcomed</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -2454,7 +2278,7 @@ a number
 </div>
     
     <div id="footer">
-  Generated on Sun May 22 20:18:12 2011 by 
+  Generated on Tue Jul 26 21:35:15 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

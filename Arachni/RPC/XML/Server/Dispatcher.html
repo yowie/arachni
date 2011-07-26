@@ -316,6 +316,27 @@ Returns proc info for all jobs.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#proc_info-instance_method" title="#proc_info (instance method)">- (Object) <strong>proc_info</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong> </a>
     
 
@@ -405,7 +426,7 @@ Returns server stats regarding the jobs and pool.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../../../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../../../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../../../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="../../../Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
 
   
   
@@ -564,10 +585,6 @@ author details etc.
       <pre class="lines">
 
 
-185
-186
-187
-188
 189
 190
 191
@@ -576,10 +593,14 @@ author details etc.
 194
 195
 196
-197</pre>
+197
+198
+199
+200
+201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 185</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 189</span>
 
 <span class='kw'>def</span> <span class='id banner'>banner</span>
 
@@ -874,10 +895,6 @@ Returns proc info for all jobs
       <pre class="lines">
 
 
-199
-200
-201
-202
 203
 204
 205
@@ -908,10 +925,14 @@ Returns proc info for all jobs
 230
 231
 232
-233</pre>
+233
+234
+235
+236
+237</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 199</span>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='id print_help'>print_help</span>
     <span class='id puts'>puts</span> <span class='heredoc_beg'>&lt;&lt;USAGE</span><span class='tstring_content'>  Usage:  arachni_xmlrpcd \[options\]
@@ -948,6 +969,34 @@ SSL --------------------------
                                 (Used to verify the clients to the server.)
 </span><span class='heredoc_end'>USAGE
 </span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="proc_info-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>proc_info</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 181</span>
+
+<span class='kw'>def</span> <span class='id proc_info'>proc_info</span>
+    <span class='id unnil'>unnil</span><span class='lparen'>(</span> <span class='id proc'>proc</span><span class='lparen'>(</span> <span class='const'>Process</span><span class='period'>.</span><span class='id pid'>pid</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1101,7 +1150,7 @@ Returns server stats regarding the jobs and pool
 </div>
     
     <div id="footer">
-  Generated on Sun May 22 20:18:17 2011 by 
+  Generated on Tue Jul 26 21:35:20 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

@@ -43,7 +43,148 @@
     
     <div id="content"><div id='filecontents'><h1>ChangeLog</h1>
 
-<h2>Version 0.2.3 <em>(Under development)</em></h2>
+<h2>Version 0.3 <em>(July 26, 2011)</em></h2>
+
+<ul>
+<li>HTTP client
+
+<ul>
+<li>Fixed race condition in timeout options.</li>
+</ul>
+</li>
+<li>Spider (<strong>New</strong>)
+
+<ul>
+<li>Replaced Anemone with a lightweight custom-written spider.</li>
+</ul>
+</li>
+<li>WebUI
+
+<ul>
+<li>Major refactoring.</li>
+<li>Improved handling of connection errors during scan progress updates.</li>
+<li>Added support for add-ons. (<strong>New</strong>)</li>
+<li>Add-ons (<strong>New</strong>)
+
+<ul>
+<li>Scan scheduler</li>
+<li>Auto-deploy -- Automatically converts any SSH enabled Linux box into an Arachni Dispatcher.</li>
+</ul>
+</li>
+<li>Fixed bug when IP addresses are used, instead of hostnames, for the Dispatchers.</li>
+</ul>
+</li>
+<li>Parser
+
+<ul>
+<li>Form action attributes are now sanitized using iterative URI decoding.</li>
+<li>Link variables are extracted before URL sanitization takes place in order to keep values with URL-encoded characters intact.</li>
+<li>The link variables of any current page's URL are now pushed to 'page.links'.</li>
+</ul>
+</li>
+<li>Auditor
+
+<ul>
+<li>Abstracted the rDiff audit methods from the "Blind (rDiff) SQL Injection" module and moved them in the Auditor.</li>
+<li>Timing attack technique has been greatly improved and all timing attacks are now scheduled to run at the end of the scan.</li>
+</ul>
+</li>
+<li>Modules
+
+<ul>
+<li>API
+
+<ul>
+<li>Added the "redundant()" method -- Allows a module to prevents itself from auditting elements that have been previously logged by other modules.</li>
+<li>Modules are now passed an instance of the framework.</li>
+</ul>
+</li>
+<li>Audit
+
+<ul>
+<li>Blind (rDiff) SQL Injection
+
+<ul>
+<li>Updated to support all element types (Links, Forms, Cookies, Headers).</li>
+<li>Optimized using the new "redundant()" method -- It will no longer audit elements that have been previously logged by the 'sqli' or 'sqli<em>blind</em>rdiff' modules.</li>
+</ul>
+</li>
+<li>OS command injection (timing)
+
+<ul>
+<li>Optimized using the new "redundant()" method -- It will no longer audit elements that have been previously logged by the 'os<em>cmd</em>injection' module.</li>
+</ul>
+</li>
+<li>Code injection (timing)
+
+<ul>
+<li>Optimized using the new "redundant()" method -- It will no longer audit elements that have been previously logged by the 'code_injection' module.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Version 0.2.4 <em>(July 1, 2011)</em></h2>
+
+<ul>
+<li>HTTP
+
+<ul>
+<li>Implemented a 10s time-out [Issue #40]</li>
+</ul>
+</li>
+<li>Command Line Interface
+
+<ul>
+<li>The interrupt handler (Ctrl+C) now presents the option to generate reports mid-scan. [Issue #41]</li>
+<li>Added a counter of timed-out requests in the stats.</li>
+</ul>
+</li>
+<li>WebUI
+
+<ul>
+<li>The "Replay" form's action attribute now contains the full URL, including params. [Issue #38]</li>
+<li>Fixed path clash that caused the "shutdown" button in the Dispatchers screen not to work. [Issue #39]</li>
+<li>Fixed mix-up of output messages from different instances. [Issue #36]</li>
+<li>Added a counter of timed-out requests in "Instance" screens.</li>
+</ul>
+</li>
+<li>External
+
+<ul>
+<li>Metasploit
+
+<ul>
+<li>Updated SQL injection exploit module to work with SQLmap 0.9. [Issue #37]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Reports
+
+<ul>
+<li>HTML
+
+<ul>
+<li>Fixed yet another error condition occuring with broken encodings. [Issue #31]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Auditor
+
+<ul>
+<li>Timing attacks now have a "control" to verify that the server is indeed alive i.e. requests won't time-out by default.</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Version 0.2.3 <em>(May 22, 2011)</em></h2>
 
 <ul>
 <li>WebUI
@@ -95,7 +236,7 @@
 <h2>Version 0.2.2.2 <em>(March 22, 2011)</em></h2>
 
 <ul>
-<li>Added "arachni<em>web</em>autostart" under bin -- Automatically starts all systems required by the WebUI and makes shutting down everything easier too (Original by: Brandon Potter <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x62;&#x70;&#x6f;&#x74;&#x74;&#x65;&#x72;&#x38;&#55;&#48;&#53;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;">&#98;&#112;&#x6f;&#116;&#116;&#101;&#x72;&#56;&#55;&#48;&#53;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;</a>)</li>
+<li>Added "arachni<em>web</em>autostart" under bin -- Automatically starts all systems required by the WebUI and makes shutting down everything easier too (Original by: Brandon Potter <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x62;&#112;&#x6f;&#x74;&#116;&#101;&#114;&#x38;&#55;&#x30;&#x35;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#98;&#x70;&#111;&#116;&#x74;&#101;&#x72;&#x38;&#x37;&#48;&#53;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a>)</li>
 <li>Overrided Nokogiri to revert to UTF-8 when it comes across an unknown charset instead of throwing exceptions</li>
 <li>Dependency versions are now defined explicitly [Issue #23]</li>
 <li>Updated to Sinatra v1.2.1</li>
@@ -135,7 +276,7 @@
 
 <ul>
 <li>Fixed exception on empty issue list</li>
-<li>Fixed encoding exceptions (cheers to Chris Weber <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#99;&#104;&#x72;&#105;&#115;&#64;&#99;&#97;&#115;&#x61;&#98;&#97;&#x2e;&#99;&#111;&#109;">&#x63;&#104;&#114;&#105;&#115;&#64;&#99;&#97;&#x73;&#97;&#x62;&#97;&#x2e;&#x63;&#111;&#x6d;</a>)</li>
+<li>Fixed encoding exceptions (cheers to Chris Weber <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x63;&#x68;&#x72;&#x69;&#115;&#64;&#x63;&#97;&#115;&#97;&#x62;&#x61;&#46;&#99;&#111;&#109;">&#x63;&#x68;&#x72;&#x69;&#x73;&#x40;&#99;&#97;&#x73;&#x61;&#98;&#97;&#x2e;&#x63;&#x6f;&#109;</a>)</li>
 </ul>
 </li>
 </ul>
@@ -448,7 +589,7 @@
 </div></div>
     
     <div id="footer">
-  Generated on Sun May 22 20:18:09 2011 by 
+  Generated on Tue Jul 26 21:35:11 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

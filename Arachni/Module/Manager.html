@@ -103,7 +103,7 @@ Holds and manages the modules and their results.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1
+@version: 0.1.1
 </p>
 
 
@@ -140,6 +140,69 @@ Holds and manages the modules and their results.
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#issue_set-class_method" title="issue_set (class method)">+ (Object) <strong>issue_set</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#issue_set_id_from_elem-class_method" title="issue_set_id_from_elem (class method)">+ (Object) <strong>issue_set_id_from_elem</strong>(mod_name, elem) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#issue_set_id_from_issue-class_method" title="issue_set_id_from_issue (class method)">+ (Object) <strong>issue_set_id_from_issue</strong>(issue) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -248,6 +311,27 @@ A new instance of Manager.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#issue_set-instance_method" title="#issue_set (instance method)">- (Object) <strong>issue_set</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#results-instance_method" title="#results (instance method)">- (Object) <strong>results</strong> </a>
     
 
@@ -336,7 +420,8 @@ A new instance of Manager
 49
 50
 51
-52</pre>
+52
+53</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 48</span>
@@ -344,7 +429,8 @@ A new instance of Manager
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id dir'>dir</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>modules</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Modules</span> <span class='rparen'>)</span>
     <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='id opts'>opts</span>
-    <span class='cvar'>@@results</span>  <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='cvar'>@@results</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='cvar'>@@issue_set</span>  <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id new'>new</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -359,7 +445,101 @@ A new instance of Manager
     
     
       <div class="method_details first">
-  <p class="signature first" id="register_results-class_method">
+  <p class="signature first" id="issue_set-class_method">
+  
+    + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>issue_set</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 80</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id issue_set'>issue_set</span>
+    <span class='cvar'>@@issue_set</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="issue_set_id_from_elem-class_method">
+  
+    + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>issue_set_id_from_elem</strong>(mod_name, elem) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id issue_set_id_from_elem'>issue_set_id_from_elem</span><span class='lparen'>(</span> <span class='id mod_name'>mod_name</span><span class='comma'>,</span> <span class='id elem'>elem</span> <span class='rparen'>)</span>
+    <span class='id elem_url'>elem_url</span>  <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id action'>action</span> <span class='rparen'>)</span>
+    <span class='id elem_url_str'>elem_url_str</span>  <span class='op'>=</span> <span class='id elem_url'>elem_url</span><span class='period'>.</span><span class='id scheme'>scheme</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>://</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id elem_url'>elem_url</span><span class='period'>.</span><span class='id host'>host</span> <span class='op'>+</span> <span class='id elem_url'>elem_url</span><span class='period'>.</span><span class='id path'>path</span>
+
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id mod_name'>mod_name</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id elem'>elem</span><span class='period'>.</span><span class='id type'>type</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id elem'>elem</span><span class='period'>.</span><span class='id altered'>altered</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id elem_url_str'>elem_url_str</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="issue_set_id_from_issue-class_method">
+  
+    + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>issue_set_id_from_issue</strong>(issue) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id issue_set_id_from_issue'>issue_set_id_from_issue</span><span class='lparen'>(</span> <span class='id issue'>issue</span> <span class='rparen'>)</span>
+    <span class='id issue_url'>issue_url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='id issue_url_str'>issue_url_str</span> <span class='op'>=</span> <span class='id issue_url'>issue_url</span><span class='period'>.</span><span class='id scheme'>scheme</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>://</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id issue_url'>issue_url</span><span class='period'>.</span><span class='id host'>host</span> <span class='op'>+</span> <span class='id issue_url'>issue_url</span><span class='period'>.</span><span class='id path'>path</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id issue'>issue</span><span class='period'>.</span><span class='id mod_name'>mod_name</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id issue'>issue</span><span class='period'>.</span><span class='id elem'>elem</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id issue'>issue</span><span class='period'>.</span><span class='id var'>var</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id issue_url_str'>issue_url_str</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="register_results-class_method">
   
     + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>register_results</strong>(results) 
   
@@ -400,15 +580,17 @@ Registers module results with&#8230;well..us.
       <pre class="lines">
 
 
-61
 62
-63</pre>
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
     <span class='cvar'>@@results</span> <span class='op'>|=</span> <span class='id results'>results</span>
+    <span class='id results'>results</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id issue'>issue</span><span class='op'>|</span> <span class='cvar'>@@issue_set</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id issue_set_id_from_issue'>issue_set_id_from_issue</span><span class='lparen'>(</span> <span class='id issue'>issue</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -428,13 +610,13 @@ Registers module results with&#8230;well..us.
       <pre class="lines">
 
 
-80
-81
-82
-83</pre>
+104
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id reset'>reset</span>
     <span class='cvar'>@@results</span><span class='period'>.</span><span class='id clear'>clear</span>
@@ -487,12 +669,12 @@ Gets module results
       <pre class="lines">
 
 
-72
-73
-74</pre>
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id results'>results</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='cvar'>@@results</span>
@@ -509,7 +691,35 @@ Gets module results
     
     
       <div class="method_details first">
-  <p class="signature first" id="results-instance_method">
+  <p class="signature first" id="issue_set-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>issue_set</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id issue_set'>issue_set</span>
+    <span class='cvar'>@@issue_set</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="results-instance_method">
   
     - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>results</strong> 
   
@@ -521,12 +731,12 @@ Gets module results
       <pre class="lines">
 
 
-76
-77
-78</pre>
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/module/manager.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id results'>results</span>
     <span class='cvar'>@@results</span>
@@ -541,7 +751,7 @@ Gets module results
 </div>
     
     <div id="footer">
-  Generated on Sun May 22 20:18:13 2011 by 
+  Generated on Tue Jul 26 21:35:15 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

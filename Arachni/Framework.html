@@ -105,7 +105,7 @@ according to user options.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.2.2
+@version: 0.2.3
 </p>
 
 
@@ -136,7 +136,7 @@ the version of <b>this</b> class
   
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2.1</span><span class='tstring_end'>'</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2.3</span><span class='tstring_end'>'</span></span></pre></dd>
       
     </dl>
   
@@ -795,7 +795,7 @@ Returns the version of the framework.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
 
   
   
@@ -1464,23 +1464,6 @@ Runs the spider, analyzes each page as it appears and passes it to
       <pre class="lines">
 
 
-239
-240
-241
-242
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
-255
 256
 257
 258
@@ -1489,10 +1472,36 @@ Runs the spider, analyzes each page as it appears and passes it to
 261
 262
 263
-264</pre>
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 239</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 256</span>
 
 <span class='kw'>def</span> <span class='id audit'>audit</span>
 
@@ -1507,10 +1516,19 @@ Runs the spider, analyzes each page as it appears and passes it to
 </span>    <span class='ivar'>@spider</span><span class='period'>.</span><span class='id run'>run</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id page'>page</span><span class='op'>|</span>
 
-        <span class='ivar'>@sitemap</span> <span class='op'>|=</span> <span class='ivar'>@spider</span><span class='period'>.</span><span class='id pages'>pages</span>
+        <span class='ivar'>@sitemap</span> <span class='op'>|=</span> <span class='ivar'>@spider</span><span class='period'>.</span><span class='id sitemap'>sitemap</span>
 
         <span class='ivar'>@page_queue</span> <span class='op'>&lt;&lt;</span> <span class='id page'>page</span>
         <span class='id audit_queue'>audit_queue</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id spider_first'>spider_first</span>
+    <span class='rbrace'>}</span>
+
+    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Auditor</span><span class='period'>.</span><span class='id timeout_audit_blocks'>timeout_audit_blocks</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+            <span class='id print_line'>print_line</span>
+            <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Running timing attacks.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+            <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>---------------------------------------</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Auditor</span><span class='period'>.</span><span class='id timeout_audit_run'>timeout_audit_run</span>
+        <span class='kw'>end</span>
     <span class='rbrace'>}</span>
 
     <span class='id audit_queue'>audit_queue</span>
@@ -1538,27 +1556,27 @@ Runs the spider, analyzes each page as it appears and passes it to
       <pre class="lines">
 
 
-266
-267
-268
-269
-270
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-281
-282
-283</pre>
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 266</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 292</span>
 
 <span class='kw'>def</span> <span class='id audit_queue'>audit_queue</span>
 
@@ -1627,29 +1645,29 @@ Returns the results of the audit as an <span class='object_link'><a href="AuditS
       <pre class="lines">
 
 
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312</pre>
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 293</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 319</span>
 
 <span class='kw'>def</span> <span class='id audit_store'>audit_store</span><span class='lparen'>(</span> <span class='id fresh'>fresh</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
 
@@ -1713,41 +1731,41 @@ Returns an array of hashes with information about all available modules
       <pre class="lines">
 
 
-338
-339
-340
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360
-361
-362
-363
 364
 365
 366
 367
 368
-369</pre>
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 338</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 364</span>
 
 <span class='kw'>def</span> <span class='id lsmod'>lsmod</span>
 
@@ -1823,28 +1841,28 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419</pre>
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 401</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 427</span>
 
 <span class='kw'>def</span> <span class='id lsplug'>lsplug</span>
 
@@ -1907,26 +1925,26 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
-377
-378
-379
-380
-381
-382
-383
-384
-385
-386
-387
-388
-389
-390
-391
-392
-393</pre>
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 377</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 403</span>
 
 <span class='kw'>def</span> <span class='id lsrep'>lsrep</span>
 
@@ -1963,15 +1981,17 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
-429
-430
-431
-432</pre>
+455
+456
+457
+458
+459</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 429</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 455</span>
 
 <span class='kw'>def</span> <span class='id pause!'>pause!</span>
+    <span class='ivar'>@spider</span><span class='period'>.</span><span class='id pause!'>pause!</span> <span class='kw'>if</span> <span class='ivar'>@spider</span>
     <span class='ivar'>@paused</span> <span class='op'>&lt;&lt;</span> <span class='id caller'>caller</span>
     <span class='kw'>return</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
@@ -2014,12 +2034,12 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
-425
-426
-427</pre>
+451
+452
+453</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 425</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 451</span>
 
 <span class='kw'>def</span> <span class='id paused?'>paused?</span>
     <span class='op'>!</span><span class='ivar'>@paused</span><span class='period'>.</span><span class='id empty?'>empty?</span>
@@ -2042,26 +2062,26 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
-314
-315
-316
-317
-318
-319
-320
-321
-322
-323
-324
-325
-326
-327
-328
-329
-330</pre>
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 314</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 340</span>
 
 <span class='kw'>def</span> <span class='id plugin_store'>plugin_store</span><span class='lparen'>(</span> <span class='id plugin'>plugin</span><span class='comma'>,</span> <span class='id obj'>obj</span> <span class='rparen'>)</span>
     <span class='id name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -2098,16 +2118,18 @@ Returns an array of hashes with information about all available reports
       <pre class="lines">
 
 
-434
-435
-436
-437</pre>
+461
+462
+463
+464
+465</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 434</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 461</span>
 
 <span class='kw'>def</span> <span class='id resume!'>resume!</span>
     <span class='ivar'>@paused</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id caller'>caller</span> <span class='rparen'>)</span>
+    <span class='ivar'>@spider</span><span class='period'>.</span><span class='id resume!'>resume!</span> <span class='kw'>if</span> <span class='ivar'>@spider</span>
     <span class='kw'>return</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2152,12 +2174,12 @@ Returns the revision of the <span class='object_link'><a href="" title="Arachni:
       <pre class="lines">
 
 
-453
-454
-455</pre>
+481
+482
+483</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 453</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 481</span>
 
 <span class='kw'>def</span> <span class='id revision'>revision</span>
     <span class='const'>REVISION</span>
@@ -2318,12 +2340,12 @@ a block to call after the audit has finished but before running the reports
       <pre class="lines">
 
 
-421
-422
-423</pre>
+447
+448
+449</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 421</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 447</span>
 
 <span class='kw'>def</span> <span class='id running?'>running?</span>
     <span class='ivar'>@running</span>
@@ -2377,7 +2399,24 @@ a block to call after the audit has finished but before running the reports
 228
 229
 230
-231</pre>
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/framework.rb', line 200</span>
@@ -2395,23 +2434,40 @@ a block to call after the audit has finished but before running the reports
     <span class='kw'>end</span>
 
     <span class='id curr_avg'>curr_avg</span> <span class='op'>=</span> <span class='int'>0</span>
-    <span class='kw'>if</span> <span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_cnt'>curr_res_cnt</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='kw'>if</span> <span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_cnt'>curr_res_cnt</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_time'>curr_res_time</span> <span class='op'>&gt;</span> <span class='int'>0</span>
         <span class='id curr_avg'>curr_avg</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_cnt'>curr_res_cnt</span> <span class='op'>/</span> <span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_time'>curr_res_time</span><span class='rparen'>)</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+    <span class='kw'>end</span>
+
+    <span class='id avg'>avg</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='kw'>if</span> <span class='id res_cnt'>res_cnt</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+        <span class='id avg'>avg</span> <span class='op'>=</span> <span class='lparen'>(</span> <span class='id res_cnt'>res_cnt</span> <span class='op'>/</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id delta_time'>delta_time</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+    <span class='kw'>end</span>
+
+    <span class='id progress'>progress</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Float</span><span class='lparen'>(</span> <span class='ivar'>@auditmap</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span> <span class='op'>/</span> <span class='ivar'>@sitemap</span><span class='period'>.</span><span class='id size'>size</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span>
+
+    <span class='kw'>if</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Auditor</span><span class='period'>.</span><span class='id timeout_loaded_modules'>timeout_loaded_modules</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span>
+        <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Auditor</span><span class='period'>.</span><span class='id timeout_audit_blocks'>timeout_audit_blocks</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+
+        <span class='id progress'>progress</span> <span class='op'>/=</span> <span class='int'>2</span>
+        <span class='id progress'>progress</span> <span class='op'>+=</span> <span class='lparen'>(</span> <span class='const'>Float</span><span class='lparen'>(</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Auditor</span><span class='period'>.</span><span class='id timeout_loaded_modules'>timeout_loaded_modules</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span> <span class='op'>/</span>
+            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Auditor</span><span class='period'>.</span><span class='id timeout_audit_blocks'>timeout_audit_blocks</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>50</span>
     <span class='kw'>end</span>
 
     <span class='kw'>return</span> <span class='lbrace'>{</span>
         <span class='symbol'>:requests</span>   <span class='op'>=&gt;</span> <span class='id req_cnt'>req_cnt</span><span class='comma'>,</span>
         <span class='symbol'>:responses</span>  <span class='op'>=&gt;</span> <span class='id res_cnt'>res_cnt</span><span class='comma'>,</span>
+        <span class='symbol'>:time_out_count</span>  <span class='op'>=&gt;</span> <span class='id http'>http</span><span class='period'>.</span><span class='id time_out_count'>time_out_count</span><span class='comma'>,</span>
         <span class='symbol'>:time</span>       <span class='op'>=&gt;</span> <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id delta_time'>delta_time</span><span class='comma'>,</span>
-        <span class='symbol'>:avg</span>        <span class='op'>=&gt;</span> <span class='lparen'>(</span> <span class='id res_cnt'>res_cnt</span> <span class='op'>/</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id delta_time'>delta_time</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span>
+        <span class='symbol'>:avg</span>        <span class='op'>=&gt;</span> <span class='id avg'>avg</span><span class='comma'>,</span>
         <span class='symbol'>:sitemap_size</span>  <span class='op'>=&gt;</span> <span class='ivar'>@sitemap</span><span class='period'>.</span><span class='id size'>size</span><span class='comma'>,</span>
         <span class='symbol'>:auditmap_size</span> <span class='op'>=&gt;</span> <span class='ivar'>@auditmap</span><span class='period'>.</span><span class='id size'>size</span><span class='comma'>,</span>
+        <span class='symbol'>:progress</span>      <span class='op'>=&gt;</span> <span class='id progress'>progress</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>...</span><span class='int'>5</span><span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:curr_res_time</span> <span class='op'>=&gt;</span> <span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_time'>curr_res_time</span><span class='comma'>,</span>
         <span class='symbol'>:curr_res_cnt</span>  <span class='op'>=&gt;</span> <span class='id http'>http</span><span class='period'>.</span><span class='id curr_res_cnt'>curr_res_cnt</span><span class='comma'>,</span>
         <span class='symbol'>:curr_avg</span>      <span class='op'>=&gt;</span> <span class='id curr_avg'>curr_avg</span><span class='comma'>,</span>
         <span class='symbol'>:average_res_time</span> <span class='op'>=&gt;</span> <span class='id http'>http</span><span class='period'>.</span><span class='id average_res_time'>average_res_time</span><span class='comma'>,</span>
-        <span class='symbol'>:max_concurrency</span> <span class='op'>=&gt;</span> <span class='id http'>http</span><span class='period'>.</span><span class='id max_concurrency'>max_concurrency</span><span class='comma'>,</span>
-        <span class='symbol'>:current_page</span>    <span class='op'>=&gt;</span> <span class='ivar'>@current_url</span>
+        <span class='symbol'>:max_concurrency</span>  <span class='op'>=&gt;</span> <span class='id http'>http</span><span class='period'>.</span><span class='id max_concurrency'>max_concurrency</span><span class='comma'>,</span>
+        <span class='symbol'>:current_page</span>     <span class='op'>=&gt;</span> <span class='ivar'>@current_url</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2456,12 +2512,12 @@ Returns the version of the framework
       <pre class="lines">
 
 
-444
-445
-446</pre>
+472
+473
+474</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 444</span>
+      <pre class="code"><span class="info file"># File 'lib/framework.rb', line 472</span>
 
 <span class='kw'>def</span> <span class='id version'>version</span>
     <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>VERSION</span>
@@ -2476,7 +2532,7 @@ Returns the version of the framework
 </div>
     
     <div id="footer">
-  Generated on Sun May 22 20:18:11 2011 by 
+  Generated on Tue Jul 26 21:35:13 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

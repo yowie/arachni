@@ -513,6 +513,9 @@ options passed to the plugin
       <pre class="lines">
 
 
+157
+158
+159
 160
 161
 162
@@ -529,13 +532,10 @@ options passed to the plugin
 173
 174
 175
-176
-177
-178
-179</pre>
+176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 157</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -767,16 +767,14 @@ options passed to the plugin
 132
 133
 134
-135
-136</pre>
+135</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id queue_original'>queue_original</span>
     <span class='ivar'>@precision</span><span class='period'>.</span><span class='id times'>times</span> <span class='lbrace'>{</span>
-        <span class='comment'># grab the page containing the login form
-</span>        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
+        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
             <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:original</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span>
             <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:original</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:original</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span>
@@ -801,24 +799,22 @@ options passed to the plugin
       <pre class="lines">
 
 
+147
+148
 149
 150
 151
 152
 153
 154
-155
-156
-157
-158</pre>
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 149</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id queue_spicy'>queue_spicy</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='ivar'>@precision</span><span class='period'>.</span><span class='id times'>times</span> <span class='lbrace'>{</span>
-        <span class='comment'># grab the page containing the login form
-</span>        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='symbol'>:params</span> <span class='op'>=&gt;</span> <span class='ivar'>@unsafe</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
+        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='symbol'>:params</span> <span class='op'>=&gt;</span> <span class='ivar'>@unsafe</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
             <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:spicy</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span>
             <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:spicy</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:spicy</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span>
@@ -843,6 +839,7 @@ options passed to the plugin
       <pre class="lines">
 
 
+137
 138
 139
 140
@@ -850,17 +847,14 @@ options passed to the plugin
 142
 143
 144
-145
-146
-147</pre>
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 138</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 137</span>
 
 <span class='kw'>def</span> <span class='id queue_vanilla'>queue_vanilla</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='ivar'>@precision</span><span class='period'>.</span><span class='id times'>times</span> <span class='lbrace'>{</span>
-        <span class='comment'># grab the page containing the login form
-</span>        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='symbol'>:params</span> <span class='op'>=&gt;</span> <span class='ivar'>@safe</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
+        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='symbol'>:params</span> <span class='op'>=&gt;</span> <span class='ivar'>@safe</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
             <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:vanilla</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span>
             <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:vanilla</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:vanilla</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span>
@@ -957,7 +951,7 @@ options passed to the plugin
 </div>
     
     <div id="footer">
-  Generated on Sun May 22 20:18:14 2011 by 
+  Generated on Tue Jul 26 21:35:17 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

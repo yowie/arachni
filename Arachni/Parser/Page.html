@@ -95,7 +95,7 @@ It holds page data like elements, cookies, headers, etc&#8230;
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.2
+@version: 0.2.1
 </p>
 
 
@@ -309,6 +309,33 @@ The HTML response.
   
     <span class="summary_desc"><div class='inline'><p>
 The request method that returned the page.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#paths-instance_method" title="#paths (instance method)">- (Object) <strong>paths</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute paths.
 </p>
 </div></span>
   
@@ -554,16 +581,16 @@ A new instance of Page
       <pre class="lines">
 
 
-91
-92
 93
 94
 95
 96
-97</pre>
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='id opts'>opts</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -683,12 +710,12 @@ Cookies extracted from the supplied cookiejar
       <pre class="lines">
 
 
-89
-90
-91</pre>
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id cookiejar'>cookiejar</span>
   <span class='ivar'>@cookiejar</span>
@@ -742,12 +769,12 @@ Cookies extracted from the supplied cookiejar
       <pre class="lines">
 
 
-82
-83
-84</pre>
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id cookies'>cookies</span>
   <span class='ivar'>@cookies</span>
@@ -801,12 +828,12 @@ Cookies extracted from the supplied cookiejar
       <pre class="lines">
 
 
-75
-76
-77</pre>
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id forms'>forms</span>
   <span class='ivar'>@forms</span>
@@ -976,12 +1003,12 @@ the HTML response
       <pre class="lines">
 
 
-68
-69
-70</pre>
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id links'>links</span>
   <span class='ivar'>@links</span>
@@ -1046,6 +1073,48 @@ the request method that returned the page
 
 <span class='kw'>def</span> <span class='id method'>method</span>
   <span class='ivar'>@method</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="paths=-instance_method"></span>
+      <span id="paths-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="paths-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>paths</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute paths
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id paths'>paths</span>
+  <span class='ivar'>@paths</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1246,12 +1315,12 @@ url of the page
       <pre class="lines">
 
 
-99
-100
-101</pre>
+101
+102
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id body'>body</span>
     <span class='ivar'>@html</span>
@@ -1304,18 +1373,18 @@ the cookie attributes, values, etc
       <pre class="lines">
 
 
-137
-138
 139
 140
 141
 142
 143
 144
-145</pre>
+145
+146
+147</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 139</span>
 
 <span class='kw'>def</span> <span class='id cookies_simple'>cookies_simple</span>
     <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span>
@@ -1369,17 +1438,17 @@ auditable inputs as a name=>value hash
       <pre class="lines">
 
 
-109
-110
 111
 112
 113
 114
 115
-116</pre>
+116
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id forms_simple'>forms_simple</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='id forms'>forms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1431,17 +1500,17 @@ Returns links from <span class='object_link'><a href="#links-instance_method" ti
       <pre class="lines">
 
 
-123
-124
 125
 126
 127
 128
 129
-130</pre>
+130
+131
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/parser/page.rb', line 125</span>
 
 <span class='kw'>def</span> <span class='id links_simple'>links_simple</span>
     <span class='id links'>links</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1461,7 +1530,7 @@ Returns links from <span class='object_link'><a href="#links-instance_method" ti
 </div>
     
     <div id="footer">
-  Generated on Sun May 22 20:18:11 2011 by 
+  Generated on Tue Jul 26 21:35:14 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>

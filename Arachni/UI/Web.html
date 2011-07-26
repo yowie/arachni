@@ -60,7 +60,7 @@
   
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">lib/ui/web/server.rb<span class="defines">,<br />
-  lib/ui/web/log.rb,<br /> lib/ui/web/output_stream.rb,<br /> lib/ui/web/report_manager.rb,<br /> lib/ui/web/dispatcher_manager.rb</span>
+  lib/ui/web/log.rb,<br /> lib/ui/web/scheduler.rb,<br /> lib/ui/web/utilities.rb,<br /> lib/ui/web/addon_manager.rb,<br /> lib/ui/web/output_stream.rb,<br /> lib/ui/web/addons/sample.rb,<br /> lib/ui/web/report_manager.rb,<br /> lib/ui/web/addons/scheduler.rb,<br /> lib/ui/web/instance_manager.rb,<br /> lib/ui/web/addons/autodeploy.rb,<br /> lib/ui/web/dispatcher_manager.rb,<br /> lib/ui/web/addons/autodeploy/lib/manager.rb</span>
 </dd>
   
 </dl>
@@ -69,7 +69,11 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-Provides a web user interface for the Arachni Framework using Sinatra.<br/>
+Provides a web user interface for the Arachni Framework using Sinatra.
+</p>
+<p>
+It&#8217;s basically an XMLRPC client for Dispatchers and Instances wearing
+a pretty frock.
 </p>
 <p>
 @author: Tasos &#8220;Zapotek&#8221; Laskos
@@ -79,7 +83,7 @@ Provides a web user interface for the Arachni Framework using Sinatra.<br/>
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1.3
+@version: 0.2
 </p>
 
 
@@ -100,9 +104,11 @@ Provides a web user interface for the Arachni Framework using Sinatra.<br/>
 <p class="children">
    
     
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Web/Addons.html" title="Arachni::UI::Web::Addons (module)">Addons</a></span>, <span class='object_link'><a href="Web/Utilities.html" title="Arachni::UI::Web::Utilities (module)">Utilities</a></span>
+    
    
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Web/DispatcherManager.html" title="Arachni::UI::Web::DispatcherManager (class)">DispatcherManager</a></span>, <span class='object_link'><a href="Web/Log.html" title="Arachni::UI::Web::Log (class)">Log</a></span>, <span class='object_link'><a href="Web/OutputStream.html" title="Arachni::UI::Web::OutputStream (class)">OutputStream</a></span>, <span class='object_link'><a href="Web/ReportManager.html" title="Arachni::UI::Web::ReportManager (class)">ReportManager</a></span>, <span class='object_link'><a href="Web/Server.html" title="Arachni::UI::Web::Server (class)">Server</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Web/AddonManager.html" title="Arachni::UI::Web::AddonManager (class)">AddonManager</a></span>, <span class='object_link'><a href="Web/DispatcherManager.html" title="Arachni::UI::Web::DispatcherManager (class)">DispatcherManager</a></span>, <span class='object_link'><a href="Web/InstanceManager.html" title="Arachni::UI::Web::InstanceManager (class)">InstanceManager</a></span>, <span class='object_link'><a href="Web/Log.html" title="Arachni::UI::Web::Log (class)">Log</a></span>, <span class='object_link'><a href="Web/OutputStream.html" title="Arachni::UI::Web::OutputStream (class)">OutputStream</a></span>, <span class='object_link'><a href="Web/ReportManager.html" title="Arachni::UI::Web::ReportManager (class)">ReportManager</a></span>, <span class='object_link'><a href="Web/Scheduler.html" title="Arachni::UI::Web::Scheduler (class)">Scheduler</a></span>, <span class='object_link'><a href="Web/Server.html" title="Arachni::UI::Web::Server (class)">Server</a></span>
     
   
 </p>
@@ -114,7 +120,7 @@ Provides a web user interface for the Arachni Framework using Sinatra.<br/>
         <dt id="VERSION-constant" class="">VERSION =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.3</span><span class='tstring_end'>'</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2</span><span class='tstring_end'>'</span></span></pre></dd>
       
     </dl>
   
@@ -126,7 +132,7 @@ Provides a web user interface for the Arachni Framework using Sinatra.<br/>
 </div>
     
     <div id="footer">
-  Generated on Sun May 22 20:18:11 2011 by 
+  Generated on Tue Jul 26 21:35:13 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.5 (ruby-1.9.2).
 </div>
