@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::UI::Web::Server</title>
-<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::UI::Web::Server
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -73,14 +86,14 @@
   
     
       <dt class="r2">Includes:</dt>
-      <dd class="r2"><span class='object_link'><a href="Utilities.html" title="Arachni::UI::Web::Utilities (module)">Utilities</a></span></dd>
+      <dd class="r2"><span class='object_link'><a href="../../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span>, <span class='object_link'><a href="Utilities.html" title="Arachni::UI::Web::Utilities (module)">Utilities</a></span></dd>
       
     
   
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/ui/web/server.rb</dd>
+    <dd class="r1 last">lib/arachni/ui/web/server.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -93,15 +106,15 @@
         <dt id="HELPER_OWNER-constant" class="">HELPER_OWNER =
           <div class="docstring">
   <div class="discussion">
-    <p>
-This will be used for the &#8220;owner&#8221; field of the helper instance
-</p>
+    
+<p>This will be used for the "owner" field of the helper instance</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
         </dt>
         <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WebUI helper</span><span class='tstring_end'>&quot;</span></span></pre></dd>
@@ -110,6 +123,19 @@ This will be used for the &#8220;owner&#8221; field of the helper instance
   
 
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+  
   
   
   
@@ -127,7 +153,7 @@ This will be used for the &#8220;owner&#8221; field of the helper instance
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#prep_webrick-class_method" title="prep_webrick (class method)">+ (Object) <strong>prep_webrick</strong> </a>
+      <a href="#prep_thin-class_method" title="prep_thin (class method)">+ (Object) <strong>prep_thin</strong> </a>
     
 
     
@@ -161,10 +187,9 @@ This will be used for the &#8220;owner&#8221; field of the helper instance
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-override run! using this patch: <a
-href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pull/132</a>.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>override run! using this patch: <a
+href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pull/132</a>.</p>
 </div></span>
   
 </li>
@@ -183,6 +208,27 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
   <span class="summary_signature">
     
       <a href="#addons-instance_method" title="#addons (instance method)">- (Object) <strong>addons</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#async_redirect-instance_method" title="#async_redirect (instance method)">- (Object) <strong>async_redirect</strong>(location, opts = {}) </a>
     
 
     
@@ -237,9 +283,8 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Provides statistics about running jobs etc using the dispatcher.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Provides statistics about running jobs etc using the dispatcher.</p>
 </div></span>
   
 </li>
@@ -282,10 +327,9 @@ Provides statistics about running jobs etc using the dispatcher.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Makes sure that we have a dispatcher, if not it redirects the user to an
-appropriate error page.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Makes sure that we have a dispatcher, if not it redirects the user to an
+appropriate error page.</p>
 </div></span>
   
 </li>
@@ -336,7 +380,7 @@ appropriate error page.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fill_component_cache-instance_method" title="#fill_component_cache (instance method)">- (Object) <strong>fill_component_cache</strong> </a>
+      <a href="#fill_component_cache-instance_method" title="#fill_component_cache (instance method)">- (Object) <strong>fill_component_cache</strong>(&amp;block) </a>
     
 
     
@@ -357,7 +401,7 @@ appropriate error page.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#helper_instance-instance_method" title="#helper_instance (instance method)">- (Object) <strong>helper_instance</strong> </a>
+      <a href="#helper_instance-instance_method" title="#helper_instance (instance method)">- (Object) <strong>helper_instance</strong>(&amp;block) </a>
     
 
     
@@ -475,9 +519,8 @@ appropriate error page.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Prepares form params to be used as options for XMLRPC transmission.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepares form params to be used as options for RPC transmission.</p>
 </div></span>
   
 </li>
@@ -507,7 +550,7 @@ Prepares form params to be used as options for XMLRPC transmission.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#prep_session-instance_method" title="#prep_session (instance method)">- (Object) <strong>prep_session</strong> </a>
+      <a href="#prep_session-instance_method" title="#prep_session (instance method)">- (Object) <strong>prep_session</strong>(skip_dispatcher = false) </a>
     
 
     
@@ -520,11 +563,31 @@ Prepares form params to be used as options for XMLRPC transmission.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Makes sure that all systems are go and populates the session with default
-values.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Makes sure that all systems are go and populates the session with default
+values.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#redirect-instance_method" title="#redirect (instance method)">- (Object) <strong>redirect</strong>(location, opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -553,7 +616,7 @@ values.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#save_and_shutdown-instance_method" title="#save_and_shutdown (instance method)">- (Object) <strong>save_and_shutdown</strong>(arachni) </a>
+      <a href="#save_and_shutdown-instance_method" title="#save_and_shutdown (instance method)">- (Object) <strong>save_and_shutdown</strong>(url, &amp;block) </a>
     
 
     
@@ -566,34 +629,8 @@ values.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Saves the report and shuts down the instance.
-</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#save_shutdown_and_show-instance_method" title="#save_shutdown_and_show (instance method)">- (Object) <strong>save_shutdown_and_show</strong>(arachni) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Saves the report, shuts down the instance and returns the content as HTML
-to be sent back to the user&#8217;s browser.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Saves the report and shuts down the instance.</p>
 </div></span>
   
 </li>
@@ -644,7 +681,7 @@ to be sent back to the user&#8217;s browser.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#shutdown_all-instance_method" title="#shutdown_all (instance method)">- (Object) <strong>shutdown_all</strong>(url) </a>
+      <a href="#show_dispatcher_line-instance_method" title="#show_dispatcher_line (instance method)">- (Object) <strong>show_dispatcher_line</strong>(stats) </a>
     
 
     
@@ -657,9 +694,71 @@ to be sent back to the user&#8217;s browser.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Kills all running instances.
-</p>
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show_dispatcher_node_line-instance_method" title="#show_dispatcher_node_line (instance method)">- (Object) <strong>show_dispatcher_node_line</strong>(stats) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show_error-instance_method" title="#show_error (instance method)">- (Object) <strong>show_error</strong>(title, message = '', backtrace = []) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shutdown_all-instance_method" title="#shutdown_all (instance method)">- (Object) <strong>shutdown_all</strong>(url, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Kills all running instances.</p>
 </div></span>
   
 </li>
@@ -681,9 +780,8 @@ Kills all running instances.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Kills all idle instances.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Kills all idle instances.</p>
 </div></span>
   
 </li>
@@ -705,10 +803,9 @@ Kills all idle instances.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Similar to String.to_i but it returns the original object if String is not
-a number.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Similar to String.to_i but it returns the original object if String is not
+a number.</p>
 </div></span>
   
 </li>
@@ -771,15 +868,25 @@ a number.
   <p class="inherited"><span class='object_link'><a href="Utilities.html#escape-instance_method" title="Arachni::UI::Web::Utilities#escape (method)">#escape</a></span>, <span class='object_link'><a href="Utilities.html#escape_hash-instance_method" title="Arachni::UI::Web::Utilities#escape_hash (method)">#escape_hash</a></span>, <span class='object_link'><a href="Utilities.html#parse_datetime-instance_method" title="Arachni::UI::Web::Utilities#parse_datetime (method)">#parse_datetime</a></span>, <span class='object_link'><a href="Utilities.html#port_to_url-instance_method" title="Arachni::UI::Web::Utilities#port_to_url (method)">#port_to_url</a></span>, <span class='object_link'><a href="Utilities.html#remove_proto-instance_method" title="Arachni::UI::Web::Utilities#remove_proto (method)">#remove_proto</a></span>, <span class='object_link'><a href="Utilities.html#unescape-instance_method" title="Arachni::UI::Web::Utilities#unescape (method)">#unescape</a></span>, <span class='object_link'><a href="Utilities.html#unescape_hash-instance_method" title="Arachni::UI::Web::Utilities#unescape_hash (method)">#unescape_hash</a></span></p>
 
   
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#hash_keys_to_str-instance_method" title="Arachni::Module::Utilities#hash_keys_to_str (method)">#hash_keys_to_str</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#uri_decode-instance_method" title="Arachni::Module::Utilities#uri_decode (method)">#uri_decode</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#uri_encode-instance_method" title="Arachni::Module::Utilities#uri_encode (method)">#uri_encode</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#uri_parser-instance_method" title="Arachni::Module::Utilities#uri_parser (method)">#uri_parser</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
+
+  
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
     
     
       <div class="method_details first">
-  <p class="signature first" id="prep_webrick-class_method">
+  <p class="signature first" id="prep_thin-class_method">
   
-    + (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prep_webrick</strong> 
+    + (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prep_thin</strong> 
   
 
   
@@ -789,35 +896,31 @@ a number.
       <pre class="lines">
 
 
-878
-879
-880
-881
-882
-883
-884
-885
-886
-887
-888
-889
-890
-891
-892
-893
-894
-895
-896
-897
-898
-899
-900
-901</pre>
+1093
+1094
+1095
+1096
+1097
+1098
+1099
+1100
+1101
+1102
+1103
+1104
+1105
+1106
+1107
+1108
+1109
+1110
+1111
+1112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 878</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 1093</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id prep_webrick'>prep_webrick</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id prep_thin'>prep_thin</span>
     <span class='kw'>if</span> <span class='cvar'>@@conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
         <span class='id pkey'>pkey</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>PKey</span><span class='op'>::</span><span class='const'>RSA</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='cvar'>@@conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
@@ -827,18 +930,14 @@ a number.
     <span class='kw'>end</span>
 
     <span class='kw'>if</span> <span class='cvar'>@@conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='cvar'>@@conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cert</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='cvar'>@@conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ca</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-        <span class='id verification'>verification</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>SSL</span><span class='op'>::</span><span class='const'>VERIFY_PEER</span> <span class='op'>|</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>SSL</span><span class='op'>::</span><span class='const'>VERIFY_FAIL_IF_NO_PEER_CERT</span>
-    <span class='kw'>else</span>
-        <span class='id verification'>verification</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>SSL</span><span class='op'>::</span><span class='const'>VERIFY_NONE</span>
+        <span class='id verification'>verification</span> <span class='op'>=</span> <span class='kw'>true</span>
     <span class='kw'>end</span>
 
     <span class='kw'>return</span> <span class='lbrace'>{</span>
-        <span class='symbol'>:SSLEnable</span>       <span class='op'>=&gt;</span> <span class='cvar'>@@conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>enable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='kw'>false</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLVerifyClient</span> <span class='op'>=&gt;</span> <span class='id verification'>verification</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLCertName</span>     <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CN</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id server'>server</span> <span class='op'>||</span> <span class='op'>::</span><span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Utils</span><span class='op'>::</span><span class='id getservername'>getservername</span> <span class='rbracket'>]</span> <span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLCertificate</span>  <span class='op'>=&gt;</span> <span class='id cert'>cert</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLPrivateKey</span>   <span class='op'>=&gt;</span> <span class='id pkey'>pkey</span><span class='comma'>,</span>
-        <span class='symbol'>:SSLCACertificateFile</span> <span class='op'>=&gt;</span> <span class='cvar'>@@conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ca</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+        <span class='symbol'>:ssl</span>        <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
+        <span class='symbol'>:ssl_verify</span> <span class='op'>=&gt;</span> <span class='id verification'>verification</span><span class='comma'>,</span>
+        <span class='symbol'>:ssl_cert_file</span>  <span class='op'>=&gt;</span> <span class='id cert'>cert</span><span class='comma'>,</span>
+        <span class='symbol'>:ssl_key_file</span>   <span class='op'>=&gt;</span> <span class='id pkey'>pkey</span><span class='comma'>,</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -855,45 +954,46 @@ a number.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-override run! using this patch: <a
-href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pull/132</a>
-</p>
+    
+<p>override run! using this patch: <a
+href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pull/132</a></p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-857
-858
-859
-860
-861
-862
-863
-864
-865
-866
-867
-868
-869
-870
-871
-872
-873
-874
-875
-876</pre>
+1071
+1072
+1073
+1074
+1075
+1076
+1077
+1078
+1079
+1080
+1081
+1082
+1083
+1084
+1085
+1086
+1087
+1088
+1089
+1090
+1091</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 857</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 1071</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id run!'>run!</span><span class='lparen'>(</span> <span class='id options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='id set'>set</span> <span class='id options'>options</span>
@@ -907,7 +1007,8 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
     <span class='id puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>== Sinatra/</span><span class='embexpr_beg'>#{</span><span class='const'>Sinatra</span><span class='op'>::</span><span class='const'>VERSION</span><span class='rbrace'>}</span><span class='tstring_content'> has taken the stage </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>on </span><span class='embexpr_beg'>#{</span><span class='id port'>port</span><span class='rbrace'>}</span><span class='tstring_content'> for </span><span class='embexpr_beg'>#{</span><span class='id environment'>environment</span><span class='rbrace'>}</span><span class='tstring_content'> with backup from </span><span class='embexpr_beg'>#{</span><span class='id handler_name'>handler_name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id handler_name'>handler_name</span> <span class='op'>=~</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cgi</span><span class='regexp_end'>/i</span></span>
 
-    <span class='id handler'>handler</span><span class='period'>.</span><span class='id run'>run</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id handler_opts'>handler_opts</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='symbol'>:Host</span> <span class='op'>=&gt;</span> <span class='id bind'>bind</span><span class='comma'>,</span> <span class='symbol'>:Port</span> <span class='op'>=&gt;</span> <span class='id port'>port</span> <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id server'>server</span><span class='op'>|</span>
+    <span class='id handler'>handler</span><span class='period'>.</span><span class='id run'>run</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id handler_opts'>handler_opts</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='symbol'>:Host</span> <span class='op'>=&gt;</span> <span class='id bind'>bind</span><span class='comma'>,</span> <span class='symbol'>:Port</span> <span class='op'>=&gt;</span> <span class='id port'>port</span> <span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='op'>|</span><span class='id server'>server</span><span class='op'>|</span>
         <span class='lbracket'>[</span> <span class='symbol'>:INT</span><span class='comma'>,</span> <span class='symbol'>:TERM</span> <span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id sig'>sig</span><span class='op'>|</span> <span class='id trap'>trap</span><span class='lparen'>(</span> <span class='id sig'>sig</span> <span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id quit!'>quit!</span><span class='lparen'>(</span> <span class='id server'>server</span><span class='comma'>,</span> <span class='id handler_name'>handler_name</span> <span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
 
         <span class='id set'>set</span> <span class='symbol'>:running</span><span class='comma'>,</span> <span class='kw'>true</span>
@@ -939,15 +1040,67 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
       <pre class="lines">
 
 
-191
-192
-193</pre>
+280
+281
+282</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 191</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 280</span>
 
 <span class='kw'>def</span> <span class='id addons'>addons</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id addons'>addons</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="async_redirect-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>async_redirect</strong>(location, opts = {}) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 251</span>
+
+<span class='kw'>def</span> <span class='id async_redirect'>async_redirect</span><span class='lparen'>(</span> <span class='id location'>location</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
+    <span class='id response'>response</span><span class='period'>.</span><span class='id status'>status</span> <span class='op'>=</span> <span class='int'>302</span>
+
+    <span class='kw'>if</span> <span class='id methods'>methods</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='symbol'>:current_addon</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id current_addon'>current_addon</span>
+        <span class='id location'>location</span> <span class='op'>=</span> <span class='id current_addon'>current_addon</span><span class='period'>.</span><span class='id path_root'>path_root</span> <span class='op'>+</span> <span class='id location'>location</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id flash'>flash</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:flash</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id flash'>flash</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id location'>location</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>?</span><span class='embexpr_beg'>#{</span><span class='id flash'>flash</span><span class='period'>.</span><span class='id keys'>keys</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id flash'>flash</span><span class='period'>.</span><span class='id values'>values</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id response'>response</span><span class='period'>.</span><span class='id headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Location</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id location'>location</span>
+
+    <span class='id body'>body</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -968,13 +1121,14 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
       
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -988,16 +1142,16 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
       <pre class="lines">
 
 
-365
-366
-367
-368
-369
-370
-371</pre>
+499
+500
+501
+502
+503
+504
+505</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 365</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 499</span>
 
 <span class='kw'>def</span> <span class='id component_cache_filled?'>component_cache_filled?</span>
     <span class='kw'>begin</span>
@@ -1020,27 +1174,27 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Provides statistics about running jobs etc using the dispatcher
-</p>
+    
+<p>Provides statistics about running jobs etc using the dispatcher</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-210
-211
-212</pre>
+299
+300
+301</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 210</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 299</span>
 
 <span class='kw'>def</span> <span class='id dispatcher_stats'>dispatcher_stats</span>
     <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id stats'>stats</span>
@@ -1063,12 +1217,12 @@ Provides statistics about running jobs etc using the dispatcher
       <pre class="lines">
 
 
-203
-204
-205</pre>
+292
+293
+294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 203</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 292</span>
 
 <span class='kw'>def</span> <span class='id dispatchers'>dispatchers</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id dispatchers'>dispatchers</span>
@@ -1087,29 +1241,28 @@ Provides statistics about running jobs etc using the dispatcher
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Makes sure that we have a dispatcher, if not it redirects the user to an
-appropriate error page.
-</p>
+    
+<p>Makes sure that we have a dispatcher, if not it redirects the user to an
+appropriate error page.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt>Bool</tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-true if alive, redirect if not
-</p>
+        <div class='inline'>
+<p>true if alive, redirect if not</p>
 </div>
       
     </li>
@@ -1122,15 +1275,29 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-428
-429
-430</pre>
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 428</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 582</span>
 
 <span class='kw'>def</span> <span class='id ensure_dispatcher'>ensure_dispatcher</span>
-    <span class='id redirect'>redirect</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/dispatchers/edit</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='op'>!</span><span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id first_alive'>first_alive</span>
+    <span class='kw'>if</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id all'>all</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id async_redirect'>async_redirect</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/dispatchers/edit</span><span class='tstring_end'>'</span></span>
+    <span class='kw'>else</span>
+        <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id first_alive'>first_alive</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id dispatcher'>dispatcher</span><span class='op'>|</span>
+            <span class='id async_redirect'>async_redirect</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/dispatchers/edit</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='op'>!</span><span class='id dispatcher'>dispatcher</span>
+        <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1150,15 +1317,15 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-247
-248
-249
-250
-251
-252</pre>
+374
+375
+376
+377
+378
+379</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 247</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 374</span>
 
 <span class='kw'>def</span> <span class='id ensure_welcomed'>ensure_welcomed</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='id welcomed?'>welcomed?</span>
@@ -1184,16 +1351,16 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-222
-223
-224
-225
-226
-227
-228</pre>
+311
+312
+313
+314
+315
+316
+317</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 222</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='id exception_jail'>exception_jail</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='comment'># begin
@@ -1210,7 +1377,7 @@ true if alive, redirect if not
       <div class="method_details ">
   <p class="signature " id="fill_component_cache-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>fill_component_cache</strong> 
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>fill_component_cache</strong>(&amp;block) 
   
 
   
@@ -1220,37 +1387,75 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-373
-374
-375
-376
-377
-378
-379
-380
-381
-382
-383
-384
-385
-386</pre>
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 373</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 507</span>
 
-<span class='kw'>def</span> <span class='id fill_component_cache'>fill_component_cache</span>
-
+<span class='kw'>def</span> <span class='id fill_component_cache'>fill_component_cache</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='op'>!</span><span class='id component_cache_filled?'>component_cache_filled?</span>
-        <span class='id do_shutdown'>do_shutdown</span> <span class='op'>=</span> <span class='kw'>true</span>
+
+        <span class='id helper_instance'>helper_instance</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id inst'>inst</span><span class='op'>|</span>
+
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id inst'>inst</span>
+                <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span>
+            <span class='kw'>else</span>
+
+                <span class='id inst'>inst</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id lsmod'>lsmod</span> <span class='lbrace'>{</span>
+                    <span class='op'>|</span><span class='id mods'>mods</span><span class='op'>|</span>
+
+                    <span class='cvar'>@@modules</span> <span class='op'>=</span> <span class='id mods'>mods</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id mod'>mod</span><span class='op'>|</span> <span class='id hash_keys_to_str'>hash_keys_to_str</span><span class='lparen'>(</span> <span class='id mod'>mod</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+
+                    <span class='id inst'>inst</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id lsplug'>lsplug</span> <span class='lbrace'>{</span>
+                        <span class='op'>|</span><span class='id plugs'>plugs</span><span class='op'>|</span>
+
+                        <span class='cvar'>@@plugins</span> <span class='op'>=</span> <span class='id plugs'>plugs</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id plug'>plug</span><span class='op'>|</span> <span class='id hash_keys_to_str'>hash_keys_to_str</span><span class='lparen'>(</span> <span class='id plug'>plug</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+
+                        <span class='comment'># shutdown the helper instance, we got what we wanted
+</span>                        <span class='id inst'>inst</span><span class='period'>.</span><span class='id service'>service</span><span class='period'>.</span><span class='id shutdown!'>shutdown!</span><span class='lbrace'>{</span>
+                            <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span>
+                        <span class='rbrace'>}</span>
+                    <span class='rbrace'>}</span>
+                <span class='rbrace'>}</span>
+            <span class='kw'>end</span>
+        <span class='rbrace'>}</span>
+
     <span class='kw'>else</span>
-        <span class='id do_shutdown'>do_shutdown</span> <span class='op'>=</span> <span class='kw'>false</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span>
     <span class='kw'>end</span>
-
-    <span class='cvar'>@@modules</span> <span class='op'>||=</span> <span class='id helper_instance'>helper_instance</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id lsmod'>lsmod</span><span class='period'>.</span><span class='id dup'>dup</span>
-    <span class='cvar'>@@plugins</span> <span class='op'>||=</span> <span class='id helper_instance'>helper_instance</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id lsplug'>lsplug</span><span class='period'>.</span><span class='id dup'>dup</span>
-
-    <span class='comment'># shutdown the helper instance, we got what we wanted
-</span>    <span class='id helper_instance'>helper_instance</span><span class='period'>.</span><span class='id service'>service</span><span class='period'>.</span><span class='id shutdown!'>shutdown!</span> <span class='kw'>if</span> <span class='id do_shutdown'>do_shutdown</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1260,7 +1465,7 @@ true if alive, redirect if not
       <div class="method_details ">
   <p class="signature " id="helper_instance-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>helper_instance</strong> 
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>helper_instance</strong>(&amp;block) 
   
 
   
@@ -1270,49 +1475,41 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360
-361
-362
-363</pre>
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 344</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 482</span>
 
-<span class='kw'>def</span> <span class='id helper_instance'>helper_instance</span>
-    <span class='kw'>begin</span>
-        <span class='cvar'>@@arachni</span> <span class='op'>||=</span> <span class='kw'>nil</span>
-        <span class='kw'>if</span> <span class='op'>!</span><span class='cvar'>@@arachni</span>
+<span class='kw'>def</span> <span class='id helper_instance'>helper_instance</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='id raise'>raise</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This method requires a block!</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id block_given?'>block_given?</span>
 
-            <span class='id d_url'>d_url</span> <span class='op'>=</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id first_alive'>first_alive</span><span class='period'>.</span><span class='id url'>url</span>
-
-            <span class='id instance'>instance</span> <span class='op'>=</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id d_url'>d_url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id dispatch'>dispatch</span><span class='lparen'>(</span> <span class='const'>HELPER_OWNER</span> <span class='rparen'>)</span>
-            <span class='id instance_url'>instance_url</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id d_url'>d_url</span> <span class='rparen'>)</span>
-
-            <span class='cvar'>@@arachni</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+    <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id first_alive'>first_alive</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id dispatcher'>dispatcher</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id dispatcher'>dispatcher</span>
+            <span class='id async_redirect'>async_redirect</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/dispatchers/edit</span><span class='tstring_end'>'</span></span>
+        <span class='kw'>else</span>
+            <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id dispatcher'>dispatcher</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id dispatch'>dispatch</span><span class='lparen'>(</span> <span class='const'>HELPER_OWNER</span> <span class='rparen'>)</span><span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id instance'>instance</span><span class='op'>|</span>
+                <span class='cvar'>@@arachni</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+                <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='cvar'>@@arachni</span> <span class='rparen'>)</span>
+            <span class='rbrace'>}</span>
         <span class='kw'>end</span>
-
-        <span class='kw'>return</span> <span class='cvar'>@@arachni</span>
-    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
-        <span class='comment'># ap e
-</span>        <span class='comment'># ap e.backtrace
-</span>        <span class='id redirect'>redirect</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/dispatchers/edit</span><span class='tstring_end'>'</span></span>
-    <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1332,12 +1529,12 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-218
-219
-220</pre>
+307
+308
+309</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 218</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 307</span>
 
 <span class='kw'>def</span> <span class='id instances'>instances</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id instances'>instances</span>
@@ -1360,12 +1557,12 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-195
-196
-197</pre>
+284
+285
+286</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 195</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 284</span>
 
 <span class='kw'>def</span> <span class='id log'>log</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id log'>log</span>
@@ -1388,12 +1585,12 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-254
-255
-256</pre>
+381
+382
+383</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 254</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 381</span>
 
 <span class='kw'>def</span> <span class='id options'>options</span>
     <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span>
@@ -1416,15 +1613,15 @@ true if alive, redirect if not
       <pre class="lines">
 
 
-325
-326
-327
-328
-329
-330</pre>
+463
+464
+465
+466
+467
+468</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 325</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 463</span>
 
 <span class='kw'>def</span> <span class='id prep_modules'>prep_modules</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>modules</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
@@ -1446,9 +1643,8 @@ true if alive, redirect if not
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Prepares form params to be used as options for XMLRPC transmission
-</p>
+    
+<p>Prepares form params to be used as options for RPC transmission</p>
 
 
   </div>
@@ -1459,30 +1655,30 @@ Prepares form params to be used as options for XMLRPC transmission
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
+      
         <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-normalized hash
-</p>
+        <div class='inline'>
+<p>normalized hash</p>
 </div>
       
     </li>
@@ -1495,55 +1691,66 @@ normalized hash
       <pre class="lines">
 
 
-278
-279
-280
-281
-282
-283
-284
-285
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312
-313
-314
-315
-316
-317
-318
-319
-320
-321
-322
-323</pre>
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 278</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 405</span>
 
 <span class='kw'>def</span> <span class='id prep_opts'>prep_opts</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
 
@@ -1563,6 +1770,10 @@ normalized hash
 
         <span class='kw'>if</span> <span class='id name'>name</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookiejar</span><span class='tstring_end'>'</span></span>
            <span class='id cparams'>cparams</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookies</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id parse_cookiejar'>parse_cookiejar</span><span class='lparen'>(</span> <span class='id value'>value</span><span class='lbracket'>[</span><span class='symbol'>:tempfile</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='kw'>elsif</span> <span class='id name'>name</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>extend_paths</span><span class='tstring_end'>'</span></span>
+           <span class='id cparams'>cparams</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>extend_paths</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id paths_from_file'>paths_from_file</span><span class='lparen'>(</span> <span class='id value'>value</span><span class='lbracket'>[</span><span class='symbol'>:tempfile</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='kw'>elsif</span> <span class='id name'>name</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>restrict_paths</span><span class='tstring_end'>'</span></span>
+           <span class='id cparams'>cparams</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>restrict_paths</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id paths_from_file'>paths_from_file</span><span class='lparen'>(</span> <span class='id value'>value</span><span class='lbracket'>[</span><span class='symbol'>:tempfile</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
         <span class='kw'>elsif</span> <span class='id need_to_split'>need_to_split</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id value'>value</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span>
             <span class='id cparams'>cparams</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id value'>value</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\r\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
@@ -1575,6 +1786,13 @@ normalized hash
                     <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>regexp</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='id regexp'>regexp</span><span class='comma'>,</span>
                     <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>count</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id counter'>counter</span>
                 <span class='rbrace'>}</span>
+            <span class='rbrace'>}</span>
+        <span class='kw'>elsif</span> <span class='id name'>name</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>custom_headers</span><span class='tstring_end'>'</span></span>
+            <span class='id cparams'>cparams</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+            <span class='id value'>value</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\r\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id line'>line</span><span class='op'>|</span>
+                <span class='id header'>header</span><span class='comma'>,</span> <span class='id val'>val</span> <span class='op'>=</span> <span class='id line'>line</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>=</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
+                <span class='id cparams'>cparams</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id header'>header</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id val'>val</span>
             <span class='rbrace'>}</span>
         <span class='kw'>else</span>
             <span class='id cparams'>cparams</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id to_i'>to_i</span><span class='lparen'>(</span> <span class='id value'>value</span> <span class='rparen'>)</span>
@@ -1609,20 +1827,20 @@ normalized hash
       <pre class="lines">
 
 
-332
-333
-334
-335
-336
-337
-338
-339
-340
-341
-342</pre>
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 332</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 470</span>
 
 <span class='kw'>def</span> <span class='id prep_plugins'>prep_plugins</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
     <span class='id plugins'>plugins</span>  <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1643,64 +1861,67 @@ normalized hash
       <div class="method_details ">
   <p class="signature " id="prep_session-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prep_session</strong> 
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prep_session</strong>(skip_dispatcher = false) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Makes sure that all systems are go and populates the session with default
-values
-</p>
+    
+<p>Makes sure that all systems are go and populates the session with default
+values</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-391
-392
-393
-394
-395
-396
-397
-398
-399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419
-420</pre>
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 391</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 544</span>
 
-<span class='kw'>def</span> <span class='id prep_session'>prep_session</span>
-    <span class='id ensure_dispatcher'>ensure_dispatcher</span>
+<span class='kw'>def</span> <span class='id prep_session'>prep_session</span><span class='lparen'>(</span> <span class='id skip_dispatcher'>skip_dispatcher</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
+    <span class='id session'>session</span><span class='lbracket'>[</span><span class='symbol'>:flash</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+    <span class='id ensure_dispatcher'>ensure_dispatcher</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id skip_dispatcher'>skip_dispatcher</span>
 
     <span class='id session'>session</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>opts</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='id session'>session</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>opts</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>settings</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span>
@@ -1712,22 +1933,65 @@ values
     <span class='rbrace'>}</span>
     <span class='id session'>session</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>opts</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>modules</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>*</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span>
     <span class='id session'>session</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>opts</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>YAML</span><span class='op'>::</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content_types</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>healthmap</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>metamodules</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>healthmap</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>timing_attacks</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discovery</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>uniformity</span><span class='tstring_end'>&quot;</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_types</span><span class='tstring_end'>&quot;</span></span>  <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>autothrottle</span><span class='tstring_end'>&quot;</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>manual_verification</span><span class='tstring_end'>&quot;</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
     <span class='rbrace'>}</span> <span class='rparen'>)</span>
 
-
     <span class='comment'>#
-</span>    <span class='comment'># Garbage collector, zombie killer. Reaps idle processes every 5 seconds.
+</span>    <span class='comment'># Garbage collector, zombie killer. Reaps idle processes every 60 seconds.
 </span>    <span class='comment'>#
-</span>    <span class='cvar'>@@reaper</span> <span class='op'>||=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id new'>new</span> <span class='lbrace'>{</span>
-        <span class='kw'>while</span><span class='lparen'>(</span> <span class='kw'>true</span> <span class='rparen'>)</span>
-            <span class='id shutdown_zombies'>shutdown_zombies</span>
-            <span class='op'>::</span><span class='const'>IO</span><span class='op'>::</span><span class='id select'>select</span><span class='lparen'>(</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='int'>5</span> <span class='rparen'>)</span>
-        <span class='kw'>end</span>
-    <span class='rbrace'>}</span>
+</span>    <span class='cvar'>@@zombie_reaper</span> <span class='op'>||=</span>
+        <span class='op'>::</span><span class='const'>EM</span><span class='period'>.</span><span class='id add_periodic_timer'>add_periodic_timer</span><span class='lparen'>(</span> <span class='int'>60</span> <span class='rparen'>)</span><span class='lbrace'>{</span> <span class='op'>::</span><span class='const'>EM</span><span class='period'>.</span><span class='id defer'>defer</span> <span class='lbrace'>{</span> <span class='id shutdown_zombies'>shutdown_zombies</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="redirect-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>redirect</strong>(location, opts = {}) 
+  
 
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 267</span>
+
+<span class='kw'>def</span> <span class='id redirect'>redirect</span><span class='lparen'>(</span> <span class='id location'>location</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id methods'>methods</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='symbol'>:current_addon</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id current_addon'>current_addon</span>
+        <span class='id location'>location</span> <span class='op'>=</span> <span class='id current_addon'>current_addon</span><span class='period'>.</span><span class='id path_root'>path_root</span> <span class='op'>+</span> <span class='id location'>location</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id flash'>flash</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:flash</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id flash'>flash</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id location'>location</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>?</span><span class='embexpr_beg'>#{</span><span class='id flash'>flash</span><span class='period'>.</span><span class='id keys'>keys</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id flash'>flash</span><span class='period'>.</span><span class='id values'>values</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id location'>location</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1747,12 +2011,12 @@ values
       <pre class="lines">
 
 
-199
-200
-201</pre>
+288
+289
+290</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 199</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 288</span>
 
 <span class='kw'>def</span> <span class='id reports'>reports</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id reports'>reports</span>
@@ -1765,76 +2029,14 @@ values
       <div class="method_details ">
   <p class="signature " id="save_and_shutdown-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>save_and_shutdown</strong>(arachni) 
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>save_and_shutdown</strong>(url, &amp;block) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Saves the report and shuts down the instance
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../RPC/XML/Client/Instance.html" title="Arachni::RPC::XML::Client::Instance (class)">Arachni::RPC::XML::Client::Instance</a></span></tt>)</span>
-      
-      
-        <span class='name'>arachni</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-448
-449
-450
-451
-452
-453</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 448</span>
-
-<span class='kw'>def</span> <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span> <span class='rparen'>)</span>
-    <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id clean_up!'>clean_up!</span><span class='lparen'>(</span> <span class='kw'>true</span> <span class='rparen'>)</span>
-    <span class='id report_path'>report_path</span> <span class='op'>=</span> <span class='id reports'>reports</span><span class='period'>.</span><span class='id save'>save</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id auditstore'>auditstore</span> <span class='rparen'>)</span>
-    <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id service'>service</span><span class='period'>.</span><span class='id shutdown!'>shutdown!</span>
-    <span class='kw'>return</span> <span class='id report_path'>report_path</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
     
-      <div class="method_details ">
-  <p class="signature " id="save_shutdown_and_show-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>save_shutdown_and_show</strong>(arachni) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Saves the report, shuts down the instance and returns the content as HTML
-to be sent back to the user&#8217;s browser.
-</p>
+<p>Saves the report and shuts down the instance</p>
 
 
   </div>
@@ -1845,10 +2047,10 @@ to be sent back to the user&#8217;s browser.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../RPC/XML/Client/Instance.html" title="Arachni::RPC::XML::Client::Instance (class)">Arachni::RPC::XML::Client::Instance</a></span></tt>)</span>
-      
-      
         <span class='name'>arachni</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../RPC/Client/Instance.html" title="Arachni::RPC::Client::Instance (class)">Arachni::RPC::Client::Instance</a></span></tt>)</span>
       
       
       
@@ -1856,23 +2058,64 @@ to be sent back to the user&#8217;s browser.
   
 </ul>
 
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-438
-439
-440
-441</pre>
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 438</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 598</span>
 
-<span class='kw'>def</span> <span class='id save_shutdown_and_show'>save_shutdown_and_show</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span> <span class='rparen'>)</span>
-    <span class='id report'>report</span> <span class='op'>=</span> <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span> <span class='rparen'>)</span>
-    <span class='id reports'>reports</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>html</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id reports'>reports</span><span class='period'>.</span><span class='id all'>all</span><span class='period'>.</span><span class='id last'>last</span><span class='period'>.</span><span class='id id'>id</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='id instance'>instance</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='rparen'>)</span>
+    <span class='id instance'>instance</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id clean_up!'>clean_up!</span><span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
+
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id res'>res</span><span class='period'>.</span><span class='id rpc_connection_error?'>rpc_connection_error?</span>
+            <span class='id instance'>instance</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id auditstore'>auditstore</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id auditstore'>auditstore</span><span class='op'>|</span>
+
+                <span class='kw'>if</span> <span class='op'>!</span><span class='id auditstore'>auditstore</span><span class='period'>.</span><span class='id rpc_connection_error?'>rpc_connection_error?</span>
+                    <span class='id log'>log</span><span class='period'>.</span><span class='id webui_save_and_shutdown_auditstore_success'>webui_save_and_shutdown_auditstore_success</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+                    <span class='id report_path'>report_path</span> <span class='op'>=</span> <span class='id reports'>reports</span><span class='period'>.</span><span class='id save'>save</span><span class='lparen'>(</span> <span class='id auditstore'>auditstore</span> <span class='rparen'>)</span>
+                    <span class='id instance'>instance</span><span class='period'>.</span><span class='id service'>service</span><span class='period'>.</span><span class='id shutdown!'>shutdown!</span><span class='lbrace'>{</span> <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id report_path'>report_path</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+                <span class='kw'>else</span>
+                    <span class='id log'>log</span><span class='period'>.</span><span class='id webui_save_and_shutdown_auditstore_failed'>webui_save_and_shutdown_auditstore_failed</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+                    <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id auditstore'>auditstore</span> <span class='rparen'>)</span>
+                <span class='kw'>end</span>
+            <span class='rbrace'>}</span>
+        <span class='kw'>else</span>
+            <span class='id log'>log</span><span class='period'>.</span><span class='id webui_save_and_shutdown_clean_up_failed'>webui_save_and_shutdown_clean_up_failed</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+            <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1892,12 +2135,12 @@ to be sent back to the user&#8217;s browser.
       <pre class="lines">
 
 
-214
-215
-216</pre>
+303
+304
+305</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 214</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 303</span>
 
 <span class='kw'>def</span> <span class='id scheduler'>scheduler</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id scheduler'>scheduler</span>
@@ -1920,25 +2163,225 @@ to be sent back to the user&#8217;s browser.
       <pre class="lines">
 
 
-230
-231
-232
-233
-234
-235
-236
-237</pre>
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 230</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 319</span>
 
 <span class='kw'>def</span> <span class='id show'>show</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id layout'>layout</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id page'>page</span> <span class='op'>==</span> <span class='symbol'>:dispatchers</span>
-        <span class='id ensure_dispatcher'>ensure_dispatcher</span>
-        <span class='id erb'>erb</span> <span class='symbol'>:dispatchers</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='symbol'>:layout</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='symbol'>:stats</span> <span class='op'>=&gt;</span> <span class='id dispatcher_stats'>dispatcher_stats</span>
-    <span class='kw'>else</span>
-        <span class='id erb'>erb</span> <span class='id page'>page</span><span class='period'>.</span><span class='id to_sym'>to_sym</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='symbol'>:layout</span> <span class='op'>=&gt;</span> <span class='id layout'>layout</span> <span class='rbrace'>}</span>
+
+    <span class='kw'>case</span> <span class='id page'>page</span>
+        <span class='kw'>when</span> <span class='symbol'>:dispatchers</span>
+            <span class='id ensure_dispatcher'>ensure_dispatcher</span>
+            <span class='id dispatcher'>dispatcher</span><span class='period'>.</span><span class='id stats'>stats</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id stats'>stats</span><span class='op'>|</span>
+                <span class='id erb'>erb</span> <span class='symbol'>:dispatchers</span>
+            <span class='rbrace'>}</span>
+
+        <span class='kw'>when</span> <span class='symbol'>:home</span>
+            <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id stats'>stats</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id stats'>stats</span><span class='op'>|</span>
+                <span class='id body'>body</span> <span class='id erb'>erb</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='symbol'>:layout</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='symbol'>:stats</span> <span class='op'>=&gt;</span> <span class='id stats'>stats</span>
+            <span class='rbrace'>}</span>
+        <span class='kw'>else</span>
+            <span class='id erb'>erb</span> <span class='id page'>page</span><span class='period'>.</span><span class='id to_sym'>to_sym</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='symbol'>:layout</span> <span class='op'>=&gt;</span> <span class='id layout'>layout</span> <span class='rbrace'>}</span>
     <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="show_dispatcher_line-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>show_dispatcher_line</strong>(stats) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 339</span>
+
+<span class='kw'>def</span> <span class='id show_dispatcher_line'>show_dispatcher_line</span><span class='lparen'>(</span> <span class='id stats'>stats</span> <span class='rparen'>)</span>
+
+    <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>node</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> - </span><span class='embexpr_beg'>#{</span><span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>running_jobs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> running scans, </span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='id rss'>rss</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id mem'>mem</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id cpu'>cpu</span> <span class='op'>=</span> <span class='int'>0</span>
+
+    <span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>running_jobs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id job'>job</span><span class='op'>|</span>
+        <span class='id rss'>rss</span> <span class='op'>+=</span> <span class='id proc_mem'>proc_mem</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>proc</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rss</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+        <span class='id mem'>mem</span> <span class='op'>+=</span> <span class='const'>Float</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>proc</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pctmem</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='id cpu'>cpu</span> <span class='op'>+=</span> <span class='const'>Float</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>proc</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pctcpu</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+    <span class='id str'>str</span> <span class='op'>+=</span> <span class='id rss'>rss</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>MB RAM usage </span><span class='tstring_end'>'</span></span>
+    <span class='id str'>str</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>(</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id mem'>mem</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>4</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%), </span><span class='tstring_end'>'</span></span>
+    <span class='id str'>str</span> <span class='op'>+=</span> <span class='id cpu'>cpu</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>4</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>% CPU usage</span><span class='tstring_end'>'</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="show_dispatcher_node_line-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>show_dispatcher_node_line</strong>(stats) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+359
+360
+361
+362
+363
+364</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 359</span>
+
+<span class='kw'>def</span> <span class='id show_dispatcher_node_line'>show_dispatcher_node_line</span><span class='lparen'>(</span> <span class='id stats'>stats</span> <span class='rparen'>)</span>
+    <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Nickname: </span><span class='embexpr_beg'>#{</span><span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>node</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nickname</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'> - </span><span class='tstring_end'>&quot;</span></span>
+    <span class='id str'>str</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Pipe ID: </span><span class='embexpr_beg'>#{</span><span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>node</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pipe_id</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'> - </span><span class='tstring_end'>&quot;</span></span>
+    <span class='id str'>str</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weight: </span><span class='embexpr_beg'>#{</span><span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>node</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>weight</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'> - </span><span class='tstring_end'>&quot;</span></span>
+    <span class='comment'># str += &quot;Cost: #{stats['node']['cost']} &quot;
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="show_error-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>show_error</strong>(title, message = '', backtrace = []) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 670</span>
+
+<span class='kw'>def</span> <span class='id show_error'>show_error</span><span class='lparen'>(</span> <span class='id title'>title</span><span class='comma'>,</span> <span class='id message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id backtrace'>backtrace</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+    <span class='id skip'>skip</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rack.input</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rack.errors</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>async.callback</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>async.close</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rack.logger</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+
+    <span class='id err_env'>err_env</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id env'>env</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id skip'>skip</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span>
+        <span class='id err_env'>err_env</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span>
+    <span class='rbrace'>}</span>
+
+    <span class='id err_env'>err_env</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rack.session.options</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='symbol'>:coder</span> <span class='rparen'>)</span>
+    <span class='id err_env'>err_env</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rack.session.options</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='symbol'>:secure_random</span> <span class='rparen'>)</span>
+
+    <span class='id err_env'>err_env</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span>
+        <span class='symbol'>:title</span>     <span class='op'>=&gt;</span> <span class='id title'>title</span><span class='comma'>,</span>
+        <span class='symbol'>:message</span>   <span class='op'>=&gt;</span> <span class='id message'>message</span><span class='comma'>,</span>
+        <span class='symbol'>:backtrace</span> <span class='op'>=&gt;</span> <span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='rparen'>)</span>
+
+    <span class='id erb'>erb</span> <span class='symbol'>:error</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='symbol'>:layout</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='symbol'>:title</span>     <span class='op'>=&gt;</span> <span class='id title'>title</span><span class='comma'>,</span>
+        <span class='symbol'>:message</span>   <span class='op'>=&gt;</span> <span class='id message'>message</span><span class='comma'>,</span>
+        <span class='symbol'>:backtrace</span> <span class='op'>=&gt;</span> <span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:env</span>       <span class='op'>=&gt;</span> <span class='id err_env'>err_env</span><span class='period'>.</span><span class='id to_yaml'>to_yaml</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1948,86 +2391,64 @@ to be sent back to the user&#8217;s browser.
       <div class="method_details ">
   <p class="signature " id="shutdown_all-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>shutdown_all</strong>(url) 
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>shutdown_all</strong>(url, &amp;block) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Kills all running instances
-</p>
+    
+<p>Kills all running instances</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-458
-459
-460
-461
-462
-463
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476
-477
-478
-479
-480
-481
-482
-483
-484
-485</pre>
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 458</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 626</span>
 
-<span class='kw'>def</span> <span class='id shutdown_all'>shutdown_all</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='id log'>log</span><span class='period'>.</span><span class='id dispatcher_global_shutdown'>dispatcher_global_shutdown</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-
-    <span class='id dispatcher_stats'>dispatcher_stats</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id d_url'>d_url</span><span class='comma'>,</span> <span class='id stats'>stats</span><span class='op'>|</span>
-
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id remove_proto'>remove_proto</span><span class='lparen'>(</span> <span class='id d_url'>d_url</span><span class='period'>.</span><span class='id dup'>dup</span> <span class='rparen'>)</span> <span class='op'>!=</span> <span class='id url'>url</span>
+<span class='kw'>def</span> <span class='id shutdown_all'>shutdown_all</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id stats'>stats</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id stats'>stats</span><span class='op'>|</span>
+        <span class='id log'>log</span><span class='period'>.</span><span class='id dispatcher_global_shutdown'>dispatcher_global_shutdown</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 
         <span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>running_jobs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id job'>job</span><span class='op'>|</span>
+            <span class='op'>|</span><span class='id instance'>instance</span><span class='op'>|</span>
 
-            <span class='id instance_url'>instance_url</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id d_url'>d_url</span> <span class='rparen'>)</span>
-            <span class='kw'>begin</span>
-                <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-            <span class='kw'>rescue</span>
-                <span class='kw'>begin</span>
-                    <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id service'>service</span><span class='period'>.</span><span class='id shutdown!'>shutdown!</span>
-                <span class='kw'>rescue</span>
-                    <span class='id log'>log</span><span class='period'>.</span><span class='id instance_fucker_wont_die'>instance_fucker_wont_die</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span>
-                    <span class='kw'>next</span>
-                <span class='kw'>end</span>
-            <span class='kw'>end</span>
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>helpers</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rank</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>slave</span><span class='tstring_end'>'</span></span>
 
-            <span class='id log'>log</span><span class='period'>.</span><span class='id instance_shutdown'>instance_shutdown</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span>
+            <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='lbrace'>{</span>
+                <span class='id log'>log</span><span class='period'>.</span><span class='id instance_shutdown'>instance_shutdown</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+            <span class='rbrace'>}</span>
         <span class='rbrace'>}</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span>
     <span class='rbrace'>}</span>
-
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2043,28 +2464,27 @@ Kills all running instances
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Kills all idle instances
-</p>
+    
+<p>Kills all idle instances</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt>Integer</tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-the number of reaped instances
-</p>
+        <div class='inline'>
+<p>the number of reaped instances</p>
 </div>
       
     </li>
@@ -2077,67 +2497,49 @@ the number of reaped instances
       <pre class="lines">
 
 
-492
-493
-494
-495
-496
-497
-498
-499
-500
-501
-502
-503
-504
-505
-506
-507
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517
-518
-519
-520</pre>
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 492</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 649</span>
 
 <span class='kw'>def</span> <span class='id shutdown_zombies'>shutdown_zombies</span>
-    <span class='id i'>i</span> <span class='op'>=</span> <span class='int'>0</span>
-
-    <span class='id dispatcher_stats'>dispatcher_stats</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id stats'>stats</span><span class='op'>|</span>
-
-        <span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>running_jobs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+    <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id jobs'>jobs</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id jobs'>jobs</span><span class='op'>|</span>
+        <span class='id jobs'>jobs</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
             <span class='op'>|</span><span class='id job'>job</span><span class='op'>|</span>
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>helpers</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rank</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>slave</span><span class='tstring_end'>'</span></span> <span class='op'>||</span>
+                <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>owner</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'>HELPER_OWNER</span>
 
-            <span class='kw'>begin</span>
-                <span class='id instance_url'>instance_url</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-                <span class='id arachni'>arachni</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='rparen'>)</span>
+            <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id busy?'>busy?</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id busy'>busy</span><span class='op'>|</span>
 
-                <span class='kw'>begin</span>
-                    <span class='kw'>if</span> <span class='op'>!</span><span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id busy?'>busy?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>owner</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='const'>HELPER_OWNER</span>
-                        <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id arachni'>arachni</span> <span class='rparen'>)</span>
-                        <span class='id log'>log</span><span class='period'>.</span><span class='id webui_zombie_cleanup'>webui_zombie_cleanup</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span>
-                        <span class='id i'>i</span><span class='op'>+=</span><span class='int'>1</span>
-                    <span class='kw'>end</span>
-                <span class='kw'>rescue</span>
+                <span class='kw'>if</span> <span class='op'>!</span><span class='id busy'>busy</span><span class='period'>.</span><span class='id rpc_exception?'>rpc_exception?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id busy'>busy</span>
+                    <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='lbrace'>{</span>
+                        <span class='id log'>log</span><span class='period'>.</span><span class='id webui_zombie_cleanup'>webui_zombie_cleanup</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+                    <span class='rbrace'>}</span>
                 <span class='kw'>end</span>
-
-            <span class='kw'>rescue</span>
-            <span class='kw'>end</span>
+            <span class='rbrace'>}</span>
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
-
-    <span class='kw'>return</span> <span class='id i'>i</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2153,34 +2555,34 @@ the number of reaped instances
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Similar to String.to_i but it returns the original object if String is not
-a number
-</p>
+    
+<p>Similar to String.to_i but it returns the original object if String is not
+a number</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-261
-262
-263
-264
-265
-266
-267
-268
-269</pre>
+388
+389
+390
+391
+392
+393
+394
+395
+396</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 261</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 388</span>
 
 <span class='kw'>def</span> <span class='id to_i'>to_i</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id str'>str</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id str'>str</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span>
@@ -2209,12 +2611,12 @@ a number
       <pre class="lines">
 
 
-243
-244
-245</pre>
+370
+371
+372</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 243</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 370</span>
 
 <span class='kw'>def</span> <span class='id welcomed!'>welcomed!</span>
     <span class='const'>File</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id settings'>settings</span><span class='period'>.</span><span class='id db'>db</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/welcomed</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id close'>close</span>
@@ -2238,13 +2640,14 @@ a number
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
       
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -2258,12 +2661,12 @@ a number
       <pre class="lines">
 
 
-239
-240
-241</pre>
+366
+367
+368</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/server.rb', line 239</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 366</span>
 
 <span class='kw'>def</span> <span class='id welcomed?'>welcomed?</span>
     <span class='const'>File</span><span class='period'>.</span><span class='id exist?'>exist?</span><span class='lparen'>(</span> <span class='id settings'>settings</span><span class='period'>.</span><span class='id db'>db</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/welcomed</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -2278,9 +2681,9 @@ a number
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:15 2011 by 
+  Generated on Tue Dec  6 12:30:10 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

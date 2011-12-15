@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::HTTP</title>
-<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::HTTP
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -78,46 +91,41 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/http.rb</dd>
+    <dd class="r1 last">lib/arachni/http.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Arachni::Module::HTTP class
-</p>
-<p>
-Provides a simple, high-performance and thread-safe HTTP interface to
-modules.
-</p>
-<p>
-All requests are run Async (compliments of Typhoeus) providing great speed
-and performance.
-</p>
+    
+<p>Arachni::Module::HTTP class</p>
+
+<p>Provides a simple, high-performance and thread-safe HTTP interface to
+modules.</p>
+
+<p>All requests are run Async (compliments of Typhoeus) providing great speed
+and performance.</p>
+
 <h3>Exceptions</h3>
-<p>
-Any exceptions or session corruption is handled by the class.<br/> Some are
-ignored, on others the HTTP session is refreshed.<br/> Point is, you
-don&#8217;t need to worry about it.
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.2.6
-</p>
+
+<p>Any exceptions or session corruption is handled by the class.&lt;br/&gt;
+Some are ignored, on others the HTTP session is refreshed.&lt;br/&gt; Point
+is, you don't need to worry about it.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.2.7</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
 
   
@@ -155,9 +163,8 @@ don&#8217;t need to worry about it.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The user supplied cookie jar.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The user supplied cookie jar.</p>
 </div></span>
   
 </li>
@@ -182,9 +189,8 @@ The user supplied cookie jar.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute curr_res_cnt.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute curr_res_cnt.</p>
 </div></span>
   
 </li>
@@ -209,9 +215,8 @@ Returns the value of attribute curr_res_cnt.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute curr_res_time.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute curr_res_time.</p>
 </div></span>
   
 </li>
@@ -236,10 +241,9 @@ Returns the value of attribute curr_res_time.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The headers with which the HTTP client is initialized<br/> This is always
-kept updated.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The headers with which the HTTP client is initialized&lt;br/&gt; This is
+always kept updated.</p>
 </div></span>
   
 </li>
@@ -288,9 +292,8 @@ kept updated.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute request_count.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute request_count.</p>
 </div></span>
   
 </li>
@@ -315,9 +318,8 @@ Returns the value of attribute request_count.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute response_count.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute response_count.</p>
 </div></span>
   
 </li>
@@ -342,9 +344,8 @@ Returns the value of attribute response_count.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute time_out_count.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute time_out_count.</p>
 </div></span>
   
 </li>
@@ -369,9 +370,8 @@ Returns the value of attribute time_out_count.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute trainer.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute trainer.</p>
 </div></span>
   
 </li>
@@ -379,6 +379,18 @@ Returns the value of attribute trainer.
     
   </ul>
 
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
     <h2>
@@ -425,9 +437,8 @@ Returns the value of attribute trainer.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Class method.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Class method.</p>
 </div></span>
   
 </li>
@@ -479,9 +490,8 @@ Class method.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Gets called each time a hydra run finishes.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets called each time a hydra run finishes.</p>
 </div></span>
   
 </li>
@@ -524,9 +534,8 @@ Gets called each time a hydra run finishes.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Gets a url with cookies and url variables.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a url with cookies and url variables.</p>
 </div></span>
   
 </li>
@@ -569,9 +578,8 @@ Gets a url with cookies and url variables.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Checks whether or not the provided response is a custom 404 page.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks whether or not the provided response is a custom 404 page.</p>
 </div></span>
   
 </li>
@@ -614,9 +622,8 @@ Checks whether or not the provided response is a custom 404 page.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Gets a URL passing the provided query parameters.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a URL passing the provided query parameters.</p>
 </div></span>
   
 </li>
@@ -625,7 +632,7 @@ Gets a URL passing the provided query parameters.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_cookies_str-instance_method" title="#get_cookies_str (instance method)">- (string) <strong>get_cookies_str</strong>(cookies = { }) </a>
+      <a href="#get_cookies_str-instance_method" title="#get_cookies_str (instance method)">- (string) <strong>get_cookies_str</strong>(cookies = { }, with_existing = true) </a>
     
 
     
@@ -638,9 +645,8 @@ Gets a URL passing the provided query parameters.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns a hash of cookies as a string (merged with the cookie-jar).
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a hash of cookies as a string (merged with the cookie-jar).</p>
 </div></span>
   
 </li>
@@ -662,9 +668,8 @@ Returns a hash of cookies as a string (merged with the cookie-jar).
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Gets a url with optional url variables and modified headers.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a url with optional url variables and modified headers.</p>
 </div></span>
   
 </li>
@@ -688,9 +693,8 @@ Gets a url with optional url variables and modified headers.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-A new instance of HTTP.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of HTTP.</p>
 </div></span>
   
 </li>
@@ -775,9 +779,8 @@ A new instance of HTTP.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Converts HTTP cookies from string to Hash.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Converts HTTP cookies from string to Hash.</p>
 </div></span>
   
 </li>
@@ -799,9 +802,8 @@ Converts HTTP cookies from string to Hash.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Encodes and parses a URL String.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Encodes and parses a URL String.</p>
 </div></span>
   
 </li>
@@ -823,9 +825,8 @@ Encodes and parses a URL String.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Posts a form to a URL with the provided query parameters.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Posts a form to a URL with the provided query parameters.</p>
 </div></span>
   
 </li>
@@ -868,10 +869,9 @@ Posts a form to a URL with the provided query parameters.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Queues a Tyhpoeus::Request and applies an &#8216;on_complete&#8217;
-callback on behal of the trainer.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Queues a Tyhpoeus::Request and applies an 'on_complete' callback on behalf
+of the trainer.</p>
 </div></span>
   
 </li>
@@ -893,9 +893,8 @@ callback on behal of the trainer.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Makes a generic request.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Makes a generic request.</p>
 </div></span>
   
 </li>
@@ -938,9 +937,8 @@ Makes a generic request.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Runs Hydra (all the asynchronous queued HTTP requests).
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Runs Hydra (all the asynchronous queued HTTP requests).</p>
 </div></span>
   
 </li>
@@ -962,9 +960,8 @@ Runs Hydra (all the asynchronous queued HTTP requests).
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Sets cookies for the HTTP session.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sets cookies for the HTTP session.</p>
 </div></span>
   
 </li>
@@ -986,9 +983,8 @@ Sets cookies for the HTTP session.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Sends an HTTP TRACE request to &#8220;url&#8221;.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sends an HTTP TRACE request to "url".</p>
 </div></span>
   
 </li>
@@ -1037,7 +1033,7 @@ Sends an HTTP TRACE request to &#8220;url&#8221;.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Module/Utilities.html#hash_keys_to_str-instance_method" title="Arachni::Module::Utilities#hash_keys_to_str (method)">#hash_keys_to_str</a></span>, <span class='object_link'><a href="Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_decode-instance_method" title="Arachni::Module::Utilities#uri_decode (method)">#uri_decode</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_encode-instance_method" title="Arachni::Module::Utilities#uri_encode (method)">#uri_encode</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_parser-instance_method" title="Arachni::Module::Utilities#uri_parser (method)">#uri_parser</a></span>, <span class='object_link'><a href="Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
 
   
   
@@ -1048,7 +1044,7 @@ Sends an HTTP TRACE request to &#8220;url&#8221;.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="UI/Output.html#uncap_buffer%21-instance_method" title="Arachni::UI::Output#uncap_buffer! (method)">#uncap_buffer!</a></span>, <span class='object_link'><a href="UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -1061,27 +1057,27 @@ Sends an HTTP TRACE request to &#8220;url&#8221;.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-A new instance of HTTP
-</p>
+    
+<p>A new instance of HTTP</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-76
 77
-78</pre>
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='id reset'>reset</span>
@@ -1118,21 +1114,21 @@ A new instance of HTTP
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The user supplied cookie jar
-</p>
+    
+<p>The user supplied cookie jar</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
       
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
@@ -1146,12 +1142,12 @@ The user supplied cookie jar
       <pre class="lines">
 
 
-64
 65
-66</pre>
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id cookie_jar'>cookie_jar</span>
   <span class='ivar'>@cookie_jar</span>
@@ -1173,27 +1169,27 @@ The user supplied cookie jar
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute curr_res_cnt
-</p>
+    
+<p>Returns the value of attribute curr_res_cnt</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-72
 73
-74</pre>
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id curr_res_cnt'>curr_res_cnt</span>
   <span class='ivar'>@curr_res_cnt</span>
@@ -1215,27 +1211,27 @@ Returns the value of attribute curr_res_cnt
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute curr_res_time
-</p>
+    
+<p>Returns the value of attribute curr_res_time</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-71
 72
-73</pre>
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id curr_res_time'>curr_res_time</span>
   <span class='ivar'>@curr_res_time</span>
@@ -1257,22 +1253,22 @@ Returns the value of attribute curr_res_time
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The headers with which the HTTP client is initialized<br/> This is always
-kept updated.
-</p>
+    
+<p>The headers with which the HTTP client is initialized&lt;br/&gt; This is
+always kept updated.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
       
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
@@ -1286,12 +1282,12 @@ kept updated.
       <pre class="lines">
 
 
-57
 58
-59</pre>
+59
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id init_headers'>init_headers</span>
   <span class='ivar'>@init_headers</span>
@@ -1318,13 +1314,14 @@ kept updated.
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>URI</tt>)</span>
       
+        <span class='type'>(<tt>URI</tt>)</span>
       
       
       
@@ -1338,12 +1335,12 @@ kept updated.
       <pre class="lines">
 
 
-49
 50
-51</pre>
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id last_url'>last_url</span>
   <span class='ivar'>@last_url</span>
@@ -1365,27 +1362,27 @@ kept updated.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute request_count
-</p>
+    
+<p>Returns the value of attribute request_count</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-66
 67
-68</pre>
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id request_count'>request_count</span>
   <span class='ivar'>@request_count</span>
@@ -1407,27 +1404,27 @@ Returns the value of attribute request_count
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute response_count
-</p>
+    
+<p>Returns the value of attribute response_count</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-67
 68
-69</pre>
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id response_count'>response_count</span>
   <span class='ivar'>@response_count</span>
@@ -1449,27 +1446,27 @@ Returns the value of attribute response_count
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute time_out_count
-</p>
+    
+<p>Returns the value of attribute time_out_count</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-69
 70
-71</pre>
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id time_out_count'>time_out_count</span>
   <span class='ivar'>@time_out_count</span>
@@ -1491,27 +1488,27 @@ Returns the value of attribute time_out_count
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute trainer
-</p>
+    
+<p>Returns the value of attribute trainer</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-74
 75
-76</pre>
+76
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id trainer'>trainer</span>
   <span class='ivar'>@trainer</span>
@@ -1541,19 +1538,19 @@ Returns the value of attribute trainer
       <pre class="lines">
 
 
-717
-718
-719
-720
-721
-722
-723
-724
-725
-726</pre>
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 717</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 614</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id content_type'>content_type</span><span class='lparen'>(</span> <span class='id headers_hash'>headers_hash</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id headers_hash'>headers_hash</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>Hash</span> <span class='rparen'>)</span>
@@ -1579,12 +1576,10 @@ Returns the value of attribute trainer
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Class method
-</p>
-<p>
-Parses netscape HTTP cookie files
-</p>
+    
+<p>Class method</p>
+
+<p>Parses netscape HTTP cookie files</p>
 
 
   </div>
@@ -1595,36 +1590,35 @@ Parses netscape HTTP cookie files
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>cookie_jar</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-the location of the cookie file
-</p>
+        <div class='inline'>
+<p>the location of the cookie file</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
+      
         <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-cookies     in name=>value pairs
-</p>
+        <div class='inline'>
+<p>cookies     in name=&gt;value pairs</p>
 </div>
       
     </li>
@@ -1637,30 +1631,30 @@ cookies     in name=>value pairs
       <pre class="lines">
 
 
-695
-696
-697
-698
-699
-700
-701
-702
-703
-704
-705
-706
-707
-708
-709
-710
-711
-712
-713
-714
-715</pre>
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 695</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 592</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id parse_cookiejar'>parse_cookiejar</span><span class='lparen'>(</span> <span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span>
 
@@ -1714,7 +1708,7 @@ cookies     in name=>value pairs
 181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 177</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 177</span>
 
 <span class='kw'>def</span> <span class='id abort'>abort</span>
     <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
@@ -1735,15 +1729,15 @@ cookies     in name=>value pairs
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Gets called each time a hydra run finishes
-</p>
+    
+<p>Gets called each time a hydra run finishes</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -1755,7 +1749,7 @@ Gets called each time a hydra run finishes
 277</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 275</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 275</span>
 
 <span class='kw'>def</span> <span class='id after_run'>after_run</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='ivar'>@after_run</span> <span class='op'>&lt;&lt;</span> <span class='id block'>block</span>
@@ -1784,7 +1778,7 @@ Gets called each time a hydra run finishes
 186</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 183</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 183</span>
 
 <span class='kw'>def</span> <span class='id average_res_time'>average_res_time</span>
     <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='ivar'>@curr_res_cnt</span> <span class='op'>==</span> <span class='int'>0</span>
@@ -1804,9 +1798,8 @@ Gets called each time a hydra run finishes
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Gets a url with cookies and url variables
-</p>
+    
+<p>Gets a url with cookies and url variables</p>
 
 
   </div>
@@ -1817,66 +1810,56 @@ Gets a url with cookies and url variables
   
     <li>
       
-        <span class='type'>(<tt>URI</tt>)</span>
-      
-      
         <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>URI</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-URL to GET
-</p>
+        <div class='inline'>
+<p>URL to GET</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{ }</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>
-request options
-</p>
-<ul>
-<li><p>
-:params  => cookies || {}
-</p>
-</li>
-<li><p>
-:train   => force Arachni to analyze the HTML code || false
-</p>
-</li>
-<li><p>
-:async   => make the request async? || true
-</p>
-</li>
-<li><p>
-:headers => HTTP request headers  || {}
-</p>
-</li>
-</ul>
+        <div class='inline'>
+<p>request options</p>
+<ul><li>
+<p>:params  =&gt; cookies || {}</p>
+</li><li>
+<p>:train   =&gt; force Arachni to analyze the HTML code || false</p>
+</li><li>
+<p>:async   =&gt; make the request async? || true</p>
+</li><li>
+<p>:headers =&gt; HTTP request headers  || {}</p>
+</li></ul>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
       
       
@@ -1890,79 +1873,19 @@ request options
       <pre class="lines">
 
 
-475
-476
-477
-478
-479
-480
-481
-482
-483
-484
-485
-486
-487
-488
-489
-490
-491
-492
-493
-494
-495
-496
-497
-498
-499
-500
-501
-502
-503
-504
-505
-506
-507
-508
-509</pre>
+417
+418
+419
+420
+421</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 475</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 417</span>
 
 <span class='kw'>def</span> <span class='id cookie'>cookie</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
-
-    <span class='id cookies'>cookies</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='comment'># params    = opts[:params]
-</span>    <span class='id train'>train</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span>
-    <span class='id timeout'>timeout</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:timeout</span><span class='rbracket'>]</span>
-
-
-    <span class='id async'>async</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span>
-    <span class='id async'>async</span>     <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id async'>async</span> <span class='op'>==</span> <span class='kw'>nil</span>
-
-    <span class='id headers'>headers</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-
-    <span class='id headers'>headers</span> <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id dup'>dup</span><span class='period'>.</span>
-      <span class='id merge'>merge</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id get_cookies_str'>get_cookies_str</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
-
-    <span class='comment'># wrap the code in exception handling
-</span>    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
-
-        <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-            <span class='symbol'>:headers</span>         <span class='op'>=&gt;</span> <span class='id headers'>headers</span><span class='comma'>,</span>
-            <span class='symbol'>:follow_location</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
-            <span class='comment'># :params          =&gt; params
-</span>            <span class='symbol'>:timeout</span>       <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:timeout</span><span class='rbracket'>]</span>
-        <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span>
-        <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:timeout</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id timeout'>timeout</span> <span class='kw'>if</span> <span class='id timeout'>timeout</span>
-
-
-        <span class='id req'>req</span> <span class='op'>=</span> <span class='const'>Typhoeus</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
-        <span class='id req'>req</span><span class='period'>.</span><span class='id train!'>train!</span> <span class='kw'>if</span> <span class='id train'>train</span>
-
-        <span class='id queue'>queue</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id async'>async</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='id req'>req</span>
-    <span class='rbrace'>}</span>
+    <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:cookies</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id dup'>dup</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id request'>request</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1982,12 +1905,12 @@ request options
       <pre class="lines">
 
 
-573
-574
-575</pre>
+468
+469
+470</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 573</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 468</span>
 
 <span class='kw'>def</span> <span class='id current_cookies'>current_cookies</span>
     <span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
@@ -2006,9 +1929,8 @@ request options
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Checks whether or not the provided response is a custom 404 page
-</p>
+    
+<p>Checks whether or not the provided response is a custom 404 page</p>
 
 
   </div>
@@ -2019,40 +1941,40 @@ Checks whether or not the provided response is a custom 404 page
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Response.html" title="Typhoeus::Response (class)">Typhoeus::Response</a></span></tt>)</span>
-      
-      
         <span class='name'>res</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Response.html" title="Typhoeus::Response (class)">Typhoeus::Response</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-the response to check
-</p>
+        <div class='inline'>
+<p>the response to check</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='type'>(<tt>Bool</tt>)</span>
-      
-      
         <span class='name'></span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
       
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -2066,42 +1988,42 @@ the response to check
       <pre class="lines">
 
 
-746
-747
-748
-749
-750
-751
-752
-753
-754
-755
-756
-757
-758
-759
-760
-761
-762
-763
-764
-765
-766
-767
-768
-769
-770
-771
-772
-773
-774
-775
-776
-777
-778</pre>
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 746</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 643</span>
 
 <span class='kw'>def</span> <span class='id custom_404?'>custom_404?</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
 
@@ -2161,7 +2083,7 @@ the response to check
 175</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 171</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='id fire_and_forget'>fire_and_forget</span>
     <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
@@ -2182,9 +2104,8 @@ the response to check
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Gets a URL passing the provided query parameters
-</p>
+    
+<p>Gets a URL passing the provided query parameters</p>
 
 
   </div>
@@ -2195,70 +2116,58 @@ Gets a URL passing the provided query parameters
   
     <li>
       
-        <span class='type'>(<tt>URI</tt>)</span>
-      
-      
         <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>URI</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-URL to GET
-</p>
+        <div class='inline'>
+<p>URL to GET</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{ }</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>
-request options
-</p>
-<ul>
-<li><p>
-:params  => request parameters || {}
-</p>
-</li>
-<li><p>
-:train   => force Arachni to analyze the HTML code || false
-</p>
-</li>
-<li><p>
-:async   => make the request async? || true
-</p>
-</li>
-<li><p>
-:headers => HTTP request headers  || {}
-</p>
-</li>
-<li><p>
-:follow_location => follow redirects || false
-</p>
-</li>
-</ul>
+        <div class='inline'>
+<p>request options</p>
+<ul><li>
+<p>:params  =&gt; request parameters || {}</p>
+</li><li>
+<p>:train   =&gt; force Arachni to analyze the HTML code || false</p>
+</li><li>
+<p>:async   =&gt; make the request async? || true</p>
+</li><li>
+<p>:headers =&gt; HTTP request headers  || {}</p>
+</li><li>
+<p>:follow_location =&gt; follow redirects || false</p>
+</li></ul>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
       
       
@@ -2272,131 +2181,15 @@ request options
       <pre class="lines">
 
 
-318
-319
-320
-321
-322
-323
-324
-325
-326
-327
-328
-329
-330
-331
-332
-333
-334
-335
-336
-337
-338
-339
-340
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360
-361
-362
-363
-364
-365
-366
-367
 368
 369
-370
-371
-372
-373
-374
-375
-376
-377
-378</pre>
+370</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 318</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 368</span>
 
 <span class='kw'>def</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
-
-    <span class='id params'>params</span>    <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span>    <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id remove_id'>remove_id</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:remove_id</span><span class='rbracket'>]</span>
-    <span class='id train'>train</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span>
-    <span class='id timeout'>timeout</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:timeout</span><span class='rbracket'>]</span>
-
-    <span class='id follow_location'>follow_location</span>    <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:follow_location</span><span class='rbracket'>]</span>    <span class='op'>||</span> <span class='kw'>false</span>
-
-    <span class='id async'>async</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span>
-    <span class='id async'>async</span>     <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id async'>async</span> <span class='op'>==</span> <span class='kw'>nil</span>
-
-    <span class='id headers'>headers</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span>   <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id headers'>headers</span>   <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id dup'>dup</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
-
-
-    <span class='id params'>params</span> <span class='op'>=</span> <span class='id params'>params</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='ivar'>@rand_seed</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id remove_id'>remove_id</span>
-
-    <span class='comment'>#
-</span>    <span class='comment'># the exception jail function wraps the block passed to it
-</span>    <span class='comment'># in exception handling and runs it
-</span>    <span class='comment'>#
-</span>    <span class='comment'># how cool is Ruby? Seriously....
-</span>    <span class='comment'>#
-</span>    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
-
-        <span class='comment'>#
-</span>        <span class='comment'># There are cases where the url already has a query and we also have
-</span>        <span class='comment'># some params to work with. Some webapp frameworks will break
-</span>        <span class='comment'># or get confused...plus the url will not be RFC compliant.
-</span>        <span class='comment'>#
-</span>        <span class='comment'># Thus we need to merge the provided params with the
-</span>        <span class='comment'># params of the url query and remove the latter from the url.
-</span>        <span class='comment'>#
-</span>        <span class='id cparams'>cparams</span> <span class='op'>=</span> <span class='id params'>params</span><span class='period'>.</span><span class='id dup'>dup</span>
-        <span class='id curl'>curl</span>    <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='period'>.</span><span class='id dup'>dup</span> <span class='rparen'>)</span>
-
-        <span class='id cparams'>cparams</span> <span class='op'>=</span> <span class='id q_to_h'>q_to_h</span><span class='lparen'>(</span> <span class='id curl'>curl</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id cparams'>cparams</span> <span class='rparen'>)</span>
-
-        <span class='kw'>begin</span>
-            <span class='id curl'>curl</span><span class='period'>.</span><span class='id gsub!'>gsub!</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>?</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='lparen'>(</span><span class='id curl'>curl</span><span class='rparen'>)</span><span class='period'>.</span><span class='id query'>query</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id curl'>curl</span><span class='rparen'>)</span><span class='period'>.</span><span class='id query'>query</span>
-        <span class='kw'>rescue</span>
-            <span class='kw'>return</span>
-        <span class='kw'>end</span>
-
-        <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-            <span class='symbol'>:headers</span>       <span class='op'>=&gt;</span> <span class='id headers'>headers</span><span class='comma'>,</span>
-            <span class='symbol'>:params</span>        <span class='op'>=&gt;</span> <span class='id cparams'>cparams</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='id cparams'>cparams</span><span class='comma'>,</span>
-            <span class='symbol'>:follow_location</span> <span class='op'>=&gt;</span> <span class='id follow_location'>follow_location</span><span class='comma'>,</span>
-        <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span>
-
-        <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:timeout</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id timeout'>timeout</span> <span class='kw'>if</span> <span class='id timeout'>timeout</span>
-
-        <span class='id req'>req</span> <span class='op'>=</span> <span class='const'>Typhoeus</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id curl'>curl</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
-        <span class='id req'>req</span><span class='period'>.</span><span class='id train!'>train!</span> <span class='kw'>if</span> <span class='id train'>train</span>
-
-        <span class='id queue'>queue</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id async'>async</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='id req'>req</span>
-    <span class='rbrace'>}</span>
-
+    <span class='id request'>request</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2406,15 +2199,14 @@ request options
       <div class="method_details ">
   <p class="signature " id="get_cookies_str-instance_method">
   
-    - (<tt>string</tt>) <strong>get_cookies_str</strong>(cookies = { }) 
+    - (<tt>string</tt>) <strong>get_cookies_str</strong>(cookies = { }, with_existing = true) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns a hash of cookies as a string (merged with the cookie-jar)
-</p>
+    
+<p>Returns a hash of cookies as a string (merged with the cookie-jar)</p>
 
 
   </div>
@@ -2425,31 +2217,31 @@ Returns a hash of cookies as a string (merged with the cookie-jar)
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>cookies</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{ }</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>
-name=>value pairs
-</p>
+        <div class='inline'>
+<p>name=&gt;value pairs</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>string</tt>)</span>
       
+        <span class='type'>(<tt>string</tt>)</span>
       
       
       
@@ -2463,34 +2255,38 @@ name=>value pairs
       <pre class="lines">
 
 
-655
-656
-657
-658
-659
-660
-661
-662
-663
-664
-665
-666
-667
-668</pre>
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 655</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 550</span>
 
-<span class='kw'>def</span> <span class='id get_cookies_str'>get_cookies_str</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id get_cookies_str'>get_cookies_str</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id with_existing'>with_existing</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='rparen'>)</span>
 
-    <span class='id jar'>jar</span> <span class='op'>=</span> <span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-    <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='id jar'>jar</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id with_existing'>with_existing</span>
+        <span class='id jar'>jar</span> <span class='op'>=</span> <span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='id jar'>jar</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
+    <span class='kw'>end</span>
 
     <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
     <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
         <span class='id value'>value</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='op'>!</span><span class='id value'>value</span>
-        <span class='id val'>val</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id value'>value</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>+;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='id val'>val</span> <span class='op'>=</span> <span class='id uri_encode'>uri_encode</span><span class='lparen'>(</span> <span class='id uri_encode'>uri_encode</span><span class='lparen'>(</span> <span class='id value'>value</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>+;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
         <span class='id str'>str</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id val'>val</span><span class='rbrace'>}</span><span class='tstring_content'>;</span><span class='tstring_end'>&quot;</span></span>
     <span class='rbrace'>}</span>
     <span class='kw'>return</span> <span class='id str'>str</span>
@@ -2509,9 +2305,8 @@ name=>value pairs
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Gets a url with optional url variables and modified headers
-</p>
+    
+<p>Gets a url with optional url variables and modified headers</p>
 
 
   </div>
@@ -2522,62 +2317,54 @@ Gets a url with optional url variables and modified headers
   
     <li>
       
-        <span class='type'>(<tt>URI</tt>)</span>
-      
-      
         <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>URI</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-URL to GET
-</p>
+        <div class='inline'>
+<p>URL to GET</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{ }</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>
-request options
-</p>
-<ul>
-<li><p>
-:params  => headers || {}
-</p>
-</li>
-<li><p>
-:train   => force Arachni to analyze the HTML code || false
-</p>
-</li>
-<li><p>
-:async   => make the request async? || true
-</p>
-</li>
-</ul>
+        <div class='inline'>
+<p>request options</p>
+<ul><li>
+<p>:params  =&gt; headers || {}</p>
+</li><li>
+<p>:train   =&gt; force Arachni to analyze the HTML code || false</p>
+</li><li>
+<p>:async   =&gt; make the request async? || true</p>
+</li></ul>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
       
       
@@ -2591,73 +2378,39 @@ request options
       <pre class="lines">
 
 
-522
-523
-524
-525
-526
-527
-528
-529
-530
-531
-532
-533
-534
-535
-536
-537
-538
-539
-540
-541
-542
-543
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553</pre>
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 522</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 434</span>
 
 <span class='kw'>def</span> <span class='id header'>header</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
 
     <span class='id headers'>headers</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='comment'># params    = opts[:params]
-</span>    <span class='id train'>train</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span>
 
-    <span class='id async'>async</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span>
-    <span class='id async'>async</span>     <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id async'>async</span> <span class='op'>==</span> <span class='kw'>nil</span>
+    <span class='id orig_headers'>orig_headers</span>      <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id clone'>clone</span>
+    <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='ivar'>@init_headers</span> <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
+    <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:user_agent</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>User-Agent</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
 
+    <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>
 
-    <span class='comment'># wrap the code in exception handling
-</span>    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
+    <span class='id req'>req</span> <span class='op'>=</span> <span class='id request'>request</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
 
-        <span class='id orig_headers'>orig_headers</span>  <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id clone'>clone</span>
-        <span class='ivar'>@init_headers</span> <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
-
-        <span class='id req'>req</span> <span class='op'>=</span> <span class='const'>Typhoeus</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='comma'>,</span>
-            <span class='symbol'>:headers</span>       <span class='op'>=&gt;</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id dup'>dup</span><span class='comma'>,</span>
-            <span class='symbol'>:user_agent</span>    <span class='op'>=&gt;</span> <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>User-Agent</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
-            <span class='symbol'>:follow_location</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
-            <span class='comment'># :params        =&gt; params
-</span>            <span class='symbol'>:timeout</span>       <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:timeout</span><span class='rbracket'>]</span>
-        <span class='rparen'>)</span>
-        <span class='id req'>req</span><span class='period'>.</span><span class='id train!'>train!</span> <span class='kw'>if</span> <span class='id train'>train</span>
-
-        <span class='ivar'>@init_headers</span> <span class='op'>=</span> <span class='id orig_headers'>orig_headers</span><span class='period'>.</span><span class='id clone'>clone</span>
-
-        <span class='id queue'>queue</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id async'>async</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='id req'>req</span>
-    <span class='rbrace'>}</span>
-
+    <span class='ivar'>@init_headers</span> <span class='op'>=</span> <span class='id orig_headers'>orig_headers</span><span class='period'>.</span><span class='id clone'>clone</span>
+    <span class='kw'>return</span> <span class='id req'>req</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2682,7 +2435,7 @@ request options
 194</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 192</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 192</span>
 
 <span class='kw'>def</span> <span class='id max_concurrency'>max_concurrency</span>
     <span class='ivar'>@hydra</span><span class='period'>.</span><span class='id max_concurrency'>max_concurrency</span>
@@ -2710,7 +2463,7 @@ request options
 190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 188</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 188</span>
 
 <span class='kw'>def</span> <span class='id max_concurrency!'>max_concurrency!</span><span class='lparen'>(</span> <span class='id max_concurrency'>max_concurrency</span> <span class='rparen'>)</span>
     <span class='ivar'>@hydra</span><span class='period'>.</span><span class='id max_concurrency'>max_concurrency</span> <span class='op'>=</span> <span class='id max_concurrency'>max_concurrency</span>
@@ -2733,60 +2486,60 @@ request options
       <pre class="lines">
 
 
-596
-597
-598
-599
-600
-601
-602
-603
-604
-605
-606
-607
-608
-609
-610
-611
-612
-613
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626
-627
-628
-629
-630
-631
-632
-633
-634
-635
-636
-637
-638
-639
-640
-641
-642
-643
-644
-645
-646</pre>
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 596</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 491</span>
 
 <span class='kw'>def</span> <span class='id parse_and_set_cookies'>parse_and_set_cookies</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
     <span class='id cookie_hash'>cookie_hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -2853,9 +2606,8 @@ request options
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Converts HTTP cookies from string to Hash
-</p>
+    
+<p>Converts HTTP cookies from string to Hash</p>
 
 
   </div>
@@ -2866,23 +2618,24 @@ Converts HTTP cookies from string to Hash
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
       
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
@@ -2896,17 +2649,17 @@ Converts HTTP cookies from string to Hash
       <pre class="lines">
 
 
-677
-678
-679
-680
-681
-682
-683
-684</pre>
+574
+575
+576
+577
+578
+579
+580
+581</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 677</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 574</span>
 
 <span class='kw'>def</span> <span class='id parse_cookie_str'>parse_cookie_str</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
     <span class='id cookie_jar'>cookie_jar</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
@@ -2930,9 +2683,8 @@ Converts HTTP cookies from string to Hash
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Encodes and parses a URL String
-</p>
+    
+<p>Encodes and parses a URL String</p>
 
 
   </div>
@@ -2943,36 +2695,35 @@ Encodes and parses a URL String
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-URL String
-</p>
+        <div class='inline'>
+<p>URL String</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
+      
         <span class='type'>(<tt>URI</tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-URI object
-</p>
+        <div class='inline'>
+<p>URI object</p>
 </div>
       
     </li>
@@ -2985,12 +2736,12 @@ URI object
       <pre class="lines">
 
 
-735
-736
-737</pre>
+632
+633
+634</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 735</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 632</span>
 
 <span class='kw'>def</span> <span class='id parse_url'>parse_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -3009,9 +2760,8 @@ URI object
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Posts a form to a URL with the provided query parameters
-</p>
+    
+<p>Posts a form to a URL with the provided query parameters</p>
 
 
   </div>
@@ -3022,66 +2772,56 @@ Posts a form to a URL with the provided query parameters
   
     <li>
       
-        <span class='type'>(<tt>URI</tt>)</span>
-      
-      
         <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>URI</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-URL to POST
-</p>
+        <div class='inline'>
+<p>URL to POST</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{ }</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>
-request options
-</p>
-<ul>
-<li><p>
-:params  => request parameters || {}
-</p>
-</li>
-<li><p>
-:train   => force Arachni to analyze the HTML code || false
-</p>
-</li>
-<li><p>
-:async   => make the request async? || true
-</p>
-</li>
-<li><p>
-:headers => HTTP request headers  || {}
-</p>
-</li>
-</ul>
+        <div class='inline'>
+<p>request options</p>
+<ul><li>
+<p>:params  =&gt; request parameters || {}</p>
+</li><li>
+<p>:train   =&gt; force Arachni to analyze the HTML code || false</p>
+</li><li>
+<p>:async   =&gt; make the request async? || true</p>
+</li><li>
+<p>:headers =&gt; HTTP request headers  || {}</p>
+</li></ul>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
       
       
@@ -3095,67 +2835,15 @@ request options
       <pre class="lines">
 
 
-392
-393
-394
-395
-396
-397
-398
-399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419
-420</pre>
+384
+385
+386</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 392</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 384</span>
 
 <span class='kw'>def</span> <span class='id post'>post</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
-
-    <span class='id params'>params</span>    <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span>
-    <span class='id train'>train</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span>
-    <span class='id timeout'>timeout</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:timeout</span><span class='rbracket'>]</span>
-
-    <span class='id async'>async</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span>
-    <span class='id async'>async</span>     <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id async'>async</span> <span class='op'>==</span> <span class='kw'>nil</span>
-
-    <span class='id headers'>headers</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id headers'>headers</span>   <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id dup'>dup</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
-
-    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
-
-        <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-            <span class='symbol'>:method</span>        <span class='op'>=&gt;</span> <span class='symbol'>:post</span><span class='comma'>,</span>
-            <span class='symbol'>:headers</span>       <span class='op'>=&gt;</span> <span class='id headers'>headers</span><span class='comma'>,</span>
-            <span class='symbol'>:params</span>        <span class='op'>=&gt;</span> <span class='id params'>params</span><span class='comma'>,</span>
-            <span class='symbol'>:follow_location</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
-        <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span>
-        <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:timeout</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id timeout'>timeout</span> <span class='kw'>if</span> <span class='id timeout'>timeout</span>
-
-        <span class='id req'>req</span> <span class='op'>=</span> <span class='const'>Typhoeus</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
-        <span class='id req'>req</span><span class='period'>.</span><span class='id train!'>train!</span> <span class='kw'>if</span> <span class='id train'>train</span>
-
-        <span class='id queue'>queue</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id async'>async</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='id req'>req</span>
-    <span class='rbrace'>}</span>
+    <span class='id request'>request</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='symbol'>:method</span> <span class='op'>=&gt;</span> <span class='symbol'>:post</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3175,26 +2863,26 @@ request options
       <pre class="lines">
 
 
-555
-556
-557
-558
-559
-560
-561
-562
-563
-564
-565
-566
-567
-568
-569
-570
-571</pre>
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 555</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 450</span>
 
 <span class='kw'>def</span> <span class='id q_to_h'>q_to_h</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -3227,10 +2915,9 @@ request options
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Queues a Tyhpoeus::Request and applies an &#8216;on_complete&#8217;
-callback on behal of the trainer.
-</p>
+    
+<p>Queues a Tyhpoeus::Request and applies an 'on_complete' callback on behalf
+of the trainer.</p>
 
 
   </div>
@@ -3241,41 +2928,40 @@ callback on behal of the trainer.
   
     <li>
       
-        <span class='type'>(<tt>Tyhpoeus::Request</tt>)</span>
-      
-      
         <span class='name'>req</span>
+      
+      
+        <span class='type'>(<tt>Tyhpoeus::Request</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-the request to queue
-</p>
+        <div class='inline'>
+<p>the request to queue</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='type'>(<tt>Bool</tt>)</span>
-      
-      
         <span class='name'>async</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>true</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>
-run request async?
-</p>
+        <div class='inline'>
+<p>run request async?</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -3353,7 +3039,7 @@ run request async?
 270</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 203</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='id queue'>queue</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id async'>async</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='rparen'>)</span>
 
@@ -3388,7 +3074,7 @@ run request async?
 
         <span class='id call_on_complete'>call_on_complete</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
 
-        <span class='id parse_and_set_cookies'>parse_and_set_cookies</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+        <span class='id parse_and_set_cookies'>parse_and_set_cookies</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id req'>req</span><span class='period'>.</span><span class='id update_cookies?'>update_cookies?</span>
 
         <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>------------</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
         <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Got response.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -3437,9 +3123,8 @@ run request async?
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Makes a generic request
-</p>
+    
+<p>Makes a generic request</p>
 
 
   </div>
@@ -3450,10 +3135,10 @@ Makes a generic request
   
     <li>
       
-        <span class='type'>(<tt>URI</tt>)</span>
-      
-      
         <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>URI</tt>)</span>
       
       
       
@@ -3461,23 +3146,24 @@ Makes a generic request
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
       
       
@@ -3507,23 +3193,123 @@ Makes a generic request
 300
 301
 302
-303</pre>
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 287</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 287</span>
 
 <span class='kw'>def</span> <span class='id request'>request</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
-    <span class='id headers'>headers</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span>   <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id dup'>dup</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
-
+    <span class='id params'>params</span>    <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span>    <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id remove_id'>remove_id</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:remove_id</span><span class='rbracket'>]</span>
     <span class='id train'>train</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span>
+    <span class='id timeout'>timeout</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:timeout</span><span class='rbracket'>]</span>
+    <span class='id cookies'>cookies</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:cookies</span><span class='rbracket'>]</span>
+
+    <span class='id update_cookies'>update_cookies</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:update_cookies</span><span class='rbracket'>]</span>
+
     <span class='id async'>async</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span>
     <span class='id async'>async</span>     <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id async'>async</span> <span class='op'>==</span> <span class='kw'>nil</span>
 
-    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
+    <span class='id follow_location'>follow_location</span>    <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:follow_location</span><span class='rbracket'>]</span>    <span class='op'>||</span> <span class='kw'>false</span>
 
-        <span class='id req'>req</span> <span class='op'>=</span> <span class='const'>Typhoeus</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='id headers'>headers</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span>   <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+    <span class='comment'>#
+</span>    <span class='comment'># the exception jail function wraps the block passed to it
+</span>    <span class='comment'># in exception handling and runs it
+</span>    <span class='comment'>#
+</span>    <span class='comment'># how cool is Ruby? Seriously....
+</span>    <span class='comment'>#
+</span>    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
+
+        <span class='id headers'>headers</span>       <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
+        <span class='id headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id get_cookies_str'>get_cookies_str</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span><span class='comma'>,</span> <span class='kw'>false</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id cookies'>cookies</span>
+
+        <span class='id params'>params</span> <span class='op'>=</span> <span class='id params'>params</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='ivar'>@rand_seed</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id remove_id'>remove_id</span>
+
+        <span class='comment'>#
+</span>        <span class='comment'># There are cases where the url already has a query and we also have
+</span>        <span class='comment'># some params to work with. Some webapp frameworks will break
+</span>        <span class='comment'># or get confused...plus the url will not be RFC compliant.
+</span>        <span class='comment'>#
+</span>        <span class='comment'># Thus we need to merge the provided params with the
+</span>        <span class='comment'># params of the url query and remove the latter from the url.
+</span>        <span class='comment'>#
+</span>        <span class='id cparams'>cparams</span> <span class='op'>=</span> <span class='id params'>params</span><span class='period'>.</span><span class='id dup'>dup</span>
+        <span class='id curl'>curl</span>    <span class='op'>=</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='period'>.</span><span class='id dup'>dup</span> <span class='rparen'>)</span>
+
+        <span class='kw'>if</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:method</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='symbol'>:post</span>
+            <span class='kw'>begin</span>
+                <span class='id cparams'>cparams</span> <span class='op'>=</span> <span class='id q_to_h'>q_to_h</span><span class='lparen'>(</span> <span class='id curl'>curl</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id cparams'>cparams</span> <span class='rparen'>)</span>
+                <span class='id curl'>curl</span><span class='period'>.</span><span class='id gsub!'>gsub!</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>?</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='lparen'>(</span><span class='id curl'>curl</span><span class='rparen'>)</span><span class='period'>.</span><span class='id query'>query</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id curl'>curl</span><span class='rparen'>)</span><span class='period'>.</span><span class='id query'>query</span>
+            <span class='kw'>rescue</span>
+                <span class='kw'>return</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+
+        <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+            <span class='symbol'>:headers</span>       <span class='op'>=&gt;</span> <span class='id headers'>headers</span><span class='comma'>,</span>
+            <span class='symbol'>:params</span>        <span class='op'>=&gt;</span> <span class='id cparams'>cparams</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='id cparams'>cparams</span><span class='comma'>,</span>
+            <span class='symbol'>:method</span>        <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:method</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id nil?'>nil?</span> <span class='op'>?</span> <span class='symbol'>:get</span> <span class='op'>:</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:method</span><span class='rbracket'>]</span>
+        <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span>
+
+        <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:follow_location</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id follow_location'>follow_location</span> <span class='kw'>if</span> <span class='id follow_location'>follow_location</span>
+
+        <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:timeout</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id timeout'>timeout</span> <span class='kw'>if</span> <span class='id timeout'>timeout</span>
+
+        <span class='id req'>req</span> <span class='op'>=</span> <span class='const'>Typhoeus</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id curl'>curl</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
         <span class='id req'>req</span><span class='period'>.</span><span class='id train!'>train!</span> <span class='kw'>if</span> <span class='id train'>train</span>
+        <span class='id req'>req</span><span class='period'>.</span><span class='id update_cookies!'>update_cookies!</span> <span class='kw'>if</span> <span class='id update_cookies'>update_cookies</span>
 
         <span class='id queue'>queue</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id async'>async</span> <span class='rparen'>)</span>
         <span class='kw'>return</span> <span class='id req'>req</span>
@@ -3547,7 +3333,6 @@ Makes a generic request
       <pre class="lines">
 
 
-80
 81
 82
 83
@@ -3616,7 +3401,7 @@ Makes a generic request
 146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id reset'>reset</span>
 
@@ -3650,7 +3435,7 @@ Makes a generic request
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>From</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id authed_by'>authed_by</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Accept</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>User-Agent</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id user_agent'>user_agent</span>
-    <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id custom_headers'>custom_headers</span> <span class='rparen'>)</span>
 
     <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id parse_cookiejar'>parse_cookiejar</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id cookie_jar'>cookie_jar</span>
@@ -3667,7 +3452,6 @@ Makes a generic request
     <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id proxy_addr'>proxy_addr</span>
 
     <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-        <span class='symbol'>:user_agent</span>      <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id user_agent'>user_agent</span><span class='comma'>,</span>
         <span class='symbol'>:follow_location</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
         <span class='symbol'>:disable_ssl_peer_verification</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
         <span class='symbol'>:timeout</span>         <span class='op'>=&gt;</span> <span class='int'>50000</span>
@@ -3699,19 +3483,18 @@ Makes a generic request
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Runs Hydra (all the asynchronous queued HTTP requests)
-</p>
-<p>
-Should only be called by the framework after all module threads have beed
-joined!
-</p>
+    
+<p>Runs Hydra (all the asynchronous queued HTTP requests)</p>
+
+<p>Should only be called by the framework after all module threads have been
+joined!</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -3736,7 +3519,7 @@ joined!
 169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 154</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span>
     <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
@@ -3768,9 +3551,8 @@ joined!
   
 </p><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>
-Sets cookies for the HTTP session
-</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Sets cookies for the HTTP session</p>
 
 
   </div>
@@ -3781,22 +3563,22 @@ Sets cookies for the HTTP session
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>cookies</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-name=>value pairs
-</p>
+        <div class='inline'>
+<p>name=&gt;value pairs</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -3804,16 +3586,16 @@ name=>value pairs
       <pre class="lines">
 
 
-588
-589
-590
-591
-592
-593
-594</pre>
+483
+484
+485
+486
+487
+488
+489</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 588</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 483</span>
 
 <span class='kw'>def</span> <span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='ivar'>@init_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -3836,9 +3618,8 @@ name=>value pairs
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Sends an HTTP TRACE request to &#8220;url&#8221;.
-</p>
+    
+<p>Sends an HTTP TRACE request to "url".</p>
 
 
   </div>
@@ -3849,66 +3630,56 @@ Sends an HTTP TRACE request to &#8220;url&#8221;.
   
     <li>
       
-        <span class='type'>(<tt>URI</tt>)</span>
-      
-      
         <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>URI</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-URL to POST
-</p>
+        <div class='inline'>
+<p>URL to POST</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{ }</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>
-request options
-</p>
-<ul>
-<li><p>
-:params  => request parameters || {}
-</p>
-</li>
-<li><p>
-:train   => force Arachni to analyze the HTML code || false
-</p>
-</li>
-<li><p>
-:async   => make the request async? || true
-</p>
-</li>
-<li><p>
-:headers => HTTP request headers  || {}
-</p>
-</li>
-</ul>
+        <div class='inline'>
+<p>request options</p>
+<ul><li>
+<p>:params  =&gt; request parameters || {}</p>
+</li><li>
+<p>:train   =&gt; force Arachni to analyze the HTML code || false</p>
+</li><li>
+<p>:async   =&gt; make the request async? || true</p>
+</li><li>
+<p>:headers =&gt; HTTP request headers  || {}</p>
+</li></ul>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Typhoeus/Request.html" title="Typhoeus::Request (class)">Typhoeus::Request</a></span></tt>)</span>
       
       
       
@@ -3922,63 +3693,15 @@ request options
       <pre class="lines">
 
 
-434
-435
-436
-437
-438
-439
-440
-441
-442
-443
-444
-445
-446
-447
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458
-459
-460</pre>
+400
+401
+402</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 434</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 400</span>
 
 <span class='kw'>def</span> <span class='id trace'>trace</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
-
-    <span class='id params'>params</span>    <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span>
-    <span class='id train'>train</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:train</span><span class='rbracket'>]</span>
-
-    <span class='id async'>async</span>     <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:async</span><span class='rbracket'>]</span>
-    <span class='id async'>async</span>     <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id async'>async</span> <span class='op'>==</span> <span class='kw'>nil</span>
-
-    <span class='id headers'>headers</span>   <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id headers'>headers</span>   <span class='op'>=</span> <span class='ivar'>@init_headers</span><span class='period'>.</span><span class='id dup'>dup</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id headers'>headers</span> <span class='rparen'>)</span>
-
-    <span class='id exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
-
-        <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-            <span class='symbol'>:method</span>        <span class='op'>=&gt;</span> <span class='symbol'>:trace</span><span class='comma'>,</span>
-            <span class='symbol'>:headers</span>       <span class='op'>=&gt;</span> <span class='id headers'>headers</span><span class='comma'>,</span>
-            <span class='symbol'>:params</span>        <span class='op'>=&gt;</span> <span class='id params'>params</span><span class='comma'>,</span>
-            <span class='symbol'>:follow_location</span> <span class='op'>=&gt;</span> <span class='kw'>false</span>
-        <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span>
-
-        <span class='id req'>req</span> <span class='op'>=</span> <span class='const'>Typhoeus</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
-        <span class='id req'>req</span><span class='period'>.</span><span class='id train!'>train!</span> <span class='kw'>if</span> <span class='id train'>train</span>
-
-        <span class='id queue'>queue</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id async'>async</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='id req'>req</span>
-    <span class='rbrace'>}</span>
+    <span class='id request'>request</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='symbol'>:method</span> <span class='op'>=&gt;</span> <span class='symbol'>:trace</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3998,12 +3721,12 @@ request options
       <pre class="lines">
 
 
-577
-578
-579</pre>
+472
+473
+474</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/http.rb', line 577</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/http.rb', line 472</span>
 
 <span class='kw'>def</span> <span class='id update_cookies'>update_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='id set_cookies'>set_cookies</span><span class='lparen'>(</span> <span class='id current_cookies'>current_cookies</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -4018,9 +3741,9 @@ request options
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:12 2011 by 
+  Generated on Tue Dec  6 12:29:58 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

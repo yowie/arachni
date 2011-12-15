@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Reports::HTML::PluginFormatters::MetaModules::MetaFormatters::Uniformity</title>
-<link rel="stylesheet" href="../../../../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../../../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::Reports::HTML::PluginFormatters::MetaModules::MetaFormatters::Uniformity
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../../../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../../../../../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../../../../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../../../../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../../../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -102,10 +115,19 @@ HTML formatter for the results of the Uniformity metamodule
 </div>
 <div class="tags">
   
+
 </div>
 
   
   
+  
+  
+  
+  
+  
+  
+
+
   
   
   
@@ -228,6 +250,7 @@ A new instance of Uniformity
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -320,28 +343,24 @@ A new instance of Uniformity
 57
 58
 59
-60
-61
-62</pre>
+60</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'reports/plugin_formatters/html/metaformatters/uniformity.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id tpl'>tpl</span>
     <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>
-            &lt;h4&gt;Uniformity (Lack of centralised sanitization)&lt;/h4&gt;
-            &lt;blockquote&gt;&lt;pre&gt;&lt;%=::Arachni::Reports::HTML.prep_description(@description)%&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-
             &lt;ul&gt;
             &lt;%@results['uniformals'].each_pair do |id, uniformal| %&gt;
                 &lt;% issue = uniformal['issue'] %&gt;
                 &lt;li&gt;
-                    &lt;%=issue['name']%&gt; in &lt;%=issue['elem']%&gt; variable '&lt;%=issue['var']%&gt;' using &lt;%=issue['method']%&gt; at the following pages:
+                    &lt;%=issue['name']%&gt; in &lt;%=issue['elem']%&gt; variable
+                    '&lt;%=issue['var']%&gt;' using &lt;%=issue['method']%&gt; at the following pages:
                     &lt;ul&gt;
 
                     &lt;%@results['pages'][id].each_with_index do |url, i|%&gt;
                         &lt;li&gt;
-                            &lt;a href=&quot;#issue_&lt;%=uniformal['indices'][i]%&gt;&quot;&gt;&lt;%=url%&gt;&lt;/a&gt;
+                            [&lt;%=uniformal['indices'][i]%&gt;] &lt;a href=&quot;#issue_&lt;%=uniformal['indices'][i]%&gt;&quot;&gt;&lt;%=url%&gt;&lt;/a&gt;
                         &lt;/li&gt;
                     &lt;%end%&gt;
 
@@ -349,7 +368,7 @@ A new instance of Uniformity
                 &lt;/li&gt;
             &lt;%end%&gt;
             &lt;/ul&gt;
-</span><span class='tstring_content'>    </span><span class='tstring_end'>}</span></span>
+    </span><span class='tstring_end'>}</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -361,9 +380,9 @@ A new instance of Uniformity
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:23 2011 by 
+  Generated on Tue Nov  1 13:11:47 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.2).
 </div>
 
   </body>

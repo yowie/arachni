@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: RSA_AES_CBC</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: RSA_AES_CBC
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -74,38 +87,36 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/crypto/rsa_aes_cbc.rb</dd>
+    <dd class="r2 last">lib/arachni/crypto/rsa_aes_cbc.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Simple hybrid crypto class using RSA for public key encryption and AES with
-CBC for bulk data encryption/decryption.
-</p>
-<p>
-RSA is used to encrypt the AES primitives which are used to encrypt the
-plaintext.
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.1
-</p>
+    
+<p>Simple hybrid crypto class using RSA for public key encryption and AES with
+CBC for bulk data encryption/decryption.</p>
+
+<p>RSA is used to encrypt the AES primitives which are used to encrypt the
+plaintext.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.1</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
+
+
 
 
   
@@ -132,9 +143,8 @@ plaintext.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Decrypts data.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Decrypts data.</p>
 </div></span>
   
 </li>
@@ -156,10 +166,9 @@ Decrypts data.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Encrypts data and returns a Base64 representation of the ciphertext and AES
-CBC primitives encrypted using the public key.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Encrypts data and returns a Base64 representation of the ciphertext and AES
+CBC primitives encrypted using the public key.</p>
 </div></span>
   
 </li>
@@ -183,9 +192,8 @@ CBC primitives encrypted using the public key.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-If only encryption is required the private key parameter can be omitted.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>If only encryption is required the private key parameter can be omitted.</p>
 </div></span>
   
 </li>
@@ -206,9 +214,8 @@ If only encryption is required the private key parameter can be omitted.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-If only encryption is required the private key parameter can be omitted.
-</p>
+    
+<p>If only encryption is required the private key parameter can be omitted.</p>
 
 
   </div>
@@ -219,41 +226,40 @@ If only encryption is required the private key parameter can be omitted.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>public_pem</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-location of the Public key in PEM format
-</p>
+        <div class='inline'>
+<p>location of the Public key in PEM format</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>private_pem</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>
-location of the Private key in PEM format
-</p>
+        <div class='inline'>
+<p>location of the Private key in PEM format</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -261,13 +267,13 @@ location of the Private key in PEM format
       <pre class="lines">
 
 
+33
 34
 35
-36
-37</pre>
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/crypto/rsa_aes_cbc.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/crypto/rsa_aes_cbc.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id public_pem'>public_pem</span><span class='comma'>,</span> <span class='id private_pem'>private_pem</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
     <span class='ivar'>@public_pem</span>  <span class='op'>=</span> <span class='id public_pem'>public_pem</span>
@@ -294,9 +300,8 @@ location of the Private key in PEM format
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Decrypts data.
-</p>
+    
+<p>Decrypts data.</p>
 
 
   </div>
@@ -307,30 +312,30 @@ Decrypts data.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
+      
         <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-plaintext
-</p>
+        <div class='inline'>
+<p>plaintext</p>
 </div>
       
     </li>
@@ -343,6 +348,7 @@ plaintext
       <pre class="lines">
 
 
+78
 79
 80
 81
@@ -359,11 +365,10 @@ plaintext
 92
 93
 94
-95
-96</pre>
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/crypto/rsa_aes_cbc.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/crypto/rsa_aes_cbc.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id decrypt'>decrypt</span><span class='lparen'>(</span> <span class='id data'>data</span> <span class='rparen'>)</span>
     <span class='id rsa'>rsa</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>PKey</span><span class='op'>::</span><span class='const'>RSA</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='ivar'>@private_pem</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -397,10 +402,9 @@ plaintext
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Encrypts data and returns a Base64 representation of the ciphertext and AES
-CBC primitives encrypted using the public key.
-</p>
+    
+<p>Encrypts data and returns a Base64 representation of the ciphertext and AES
+CBC primitives encrypted using the public key.</p>
 
 
   </div>
@@ -411,31 +415,31 @@ CBC primitives encrypted using the public key.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
+      
         <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-Base64 representation of the ciphertext and AES CBC primitives encrypted
-using the public key.
-</p>
+        <div class='inline'>
+<p>Base64 representation of the ciphertext and AES CBC primitives encrypted
+using the public key.</p>
 </div>
       
     </li>
@@ -448,6 +452,7 @@ using the public key.
       <pre class="lines">
 
 
+47
 48
 49
 50
@@ -469,11 +474,10 @@ using the public key.
 66
 67
 68
-69
-70</pre>
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/crypto/rsa_aes_cbc.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/crypto/rsa_aes_cbc.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id encrypt'>encrypt</span><span class='lparen'>(</span> <span class='id data'>data</span> <span class='rparen'>)</span>
     <span class='id rsa'>rsa</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>PKey</span><span class='op'>::</span><span class='const'>RSA</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='ivar'>@public_pem</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -508,9 +512,9 @@ using the public key.
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:18 2011 by 
+  Generated on Tue Dec  6 12:30:06 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::UI::Web::Scheduler</title>
-<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::UI::Web::Scheduler
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -78,32 +91,29 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/ui/web/scheduler.rb</dd>
+    <dd class="r1 last">lib/arachni/ui/web/scheduler.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Schedules and executes scan jobs.
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.1.1
-</p>
+    
+<p>Schedules and executes scan jobs.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.1.2</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
    
@@ -117,6 +127,11 @@ Schedules and executes scan jobs.
 
 
   
+  
+  
+  
+
+
   
   
   
@@ -145,9 +160,8 @@ Schedules and executes scan jobs.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Removed a job.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Removed a job.</p>
 </div></span>
   
 </li>
@@ -169,9 +183,8 @@ Removed a job.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Removes all jobs.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Removes all jobs.</p>
 </div></span>
   
 </li>
@@ -195,9 +208,8 @@ Removes all jobs.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Initializes the Scheduler and starts the clock.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes the Scheduler and starts the clock.</p>
 </div></span>
   
 </li>
@@ -219,9 +231,8 @@ Initializes the Scheduler and starts the clock.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns all scheduled jobs.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns all scheduled jobs.</p>
 </div></span>
   
 </li>
@@ -230,7 +241,7 @@ Returns all scheduled jobs.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#run-instance_method" title="#run (instance method)">- (String) <strong>run</strong>(job, env = nil, session = nil) </a>
+      <a href="#run-instance_method" title="#run (instance method)">- (String) <strong>run</strong>(job, env = nil, session = nil, &amp;block) </a>
     
 
     
@@ -243,9 +254,8 @@ Returns all scheduled jobs.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Runs a job.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Runs a job.</p>
 </div></span>
   
 </li>
@@ -254,7 +264,7 @@ Runs a job.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#run_and_destroy-instance_method" title="#run_and_destroy (instance method)">- (Object) <strong>run_and_destroy</strong>(job) </a>
+      <a href="#run_and_destroy-instance_method" title="#run_and_destroy (instance method)">- (Object) <strong>run_and_destroy</strong>(job, &amp;block) </a>
     
 
     
@@ -267,9 +277,8 @@ Runs a job.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Runs a job and removed it from the DB.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Runs a job and removed it from the DB.</p>
 </div></span>
   
 </li>
@@ -300,15 +309,15 @@ Runs a job and removed it from the DB.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Initializes the Scheduler and starts the clock.
-</p>
+    
+<p>Initializes the Scheduler and starts the clock.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -325,15 +334,10 @@ Initializes the Scheduler and starts the clock.
 58
 59
 60
-61
-62
-63
-64
-65
-66</pre>
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/scheduler.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id settings'>settings</span> <span class='rparen'>)</span>
     <span class='ivar'>@opts</span>     <span class='op'>=</span> <span class='id opts'>opts</span>
@@ -344,12 +348,7 @@ Initializes the Scheduler and starts the clock.
 
     <span class='const'>Job</span><span class='period'>.</span><span class='id auto_upgrade!'>auto_upgrade!</span>
 
-    <span class='kw'>begin</span>
-        <span class='id ticktock!'>ticktock!</span>
-    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
-        <span class='id ap'>ap</span> <span class='id e'>e</span>
-        <span class='id ap'>ap</span> <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span>
-    <span class='kw'>end</span>
+    <span class='id ticktock!'>ticktock!</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -372,9 +371,8 @@ Initializes the Scheduler and starts the clock.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Removed a job.
-</p>
+    
+<p>Removed a job.</p>
 
 
   </div>
@@ -385,10 +383,10 @@ Removed a job.
   
     <li>
       
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
         <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
       
       
       
@@ -396,18 +394,19 @@ Removed a job.
   
 </ul>
 
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-135
-136
-137</pre>
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/scheduler.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 137</span>
 
 <span class='kw'>def</span> <span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span>
     <span class='const'>Job</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id destroy'>destroy</span>
@@ -426,27 +425,27 @@ Removed a job.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Removes all jobs.
-</p>
+    
+<p>Removes all jobs.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-126
-127
-128</pre>
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/scheduler.rb', line 126</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id delete_all'>delete_all</span>
     <span class='id jobs'>jobs</span><span class='period'>.</span><span class='id destroy'>destroy</span>
@@ -459,27 +458,27 @@ Removes all jobs.
       <div class="method_details ">
   <p class="signature " id="jobs-instance_method">
   
-    - (<tt>Array</tt>) <strong>jobs</strong>(*args) 
+    - (<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>) <strong>jobs</strong>(*args) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns all scheduled jobs.
-</p>
+    
+<p>Returns all scheduled jobs.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
       
       
       
@@ -493,12 +492,12 @@ Returns all scheduled jobs.
       <pre class="lines">
 
 
-119
-120
-121</pre>
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/scheduler.rb', line 119</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='id jobs'>jobs</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
     <span class='const'>Job</span><span class='period'>.</span><span class='id all'>all</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
@@ -511,15 +510,14 @@ Returns all scheduled jobs.
       <div class="method_details ">
   <p class="signature " id="run-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>) <strong>run</strong>(job, env = nil, session = nil) 
+    - (<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>) <strong>run</strong>(job, env = nil, session = nil, &amp;block) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Runs a job.
-</p>
+    
+<p>Runs a job.</p>
 
 
   </div>
@@ -530,10 +528,10 @@ Runs a job.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="Scheduler/Job.html" title="Arachni::UI::Web::Scheduler::Job (class)">Job</a></span></tt>)</span>
-      
-      
         <span class='name'>job</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Scheduler/Job.html" title="Arachni::UI::Web::Scheduler::Job (class)">Job</a></span></tt>)</span>
       
       
       
@@ -541,53 +539,51 @@ Runs a job.
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>Sinatra</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-environment
-</p>
+        <div class='inline'>
+<p>environment</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>Rack</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-session
-</p>
+        <div class='inline'>
+<p>session</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
+      
         <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-URL of the laucnhed scanner instance
-</p>
+        <div class='inline'>
+<p>URL of the laucnhed scanner instance</p>
 </div>
       
     </li>
@@ -600,6 +596,11 @@ URL of the laucnhed scanner instance
       <pre class="lines">
 
 
+72
+73
+74
+75
+76
 77
 78
 79
@@ -624,37 +625,40 @@ URL of the laucnhed scanner instance
 98
 99
 100
-101
-102</pre>
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/scheduler.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 72</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='comma'>,</span> <span class='id env'>env</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
-    <span class='id instance'>instance</span>     <span class='op'>=</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='period'>.</span><span class='id dispatcher'>dispatcher</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id dispatch'>dispatch</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='id instance_url'>instance_url</span> <span class='op'>=</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id instances'>instances</span><span class='period'>.</span><span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id job'>job</span><span class='period'>.</span><span class='id dispatcher'>dispatcher</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='comma'>,</span> <span class='id env'>env</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='id raise'>raise</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This method requires a block!</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id block_given?'>block_given?</span>
 
-    <span class='id env'>env</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>REMOTE_ADDR</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id job'>job</span><span class='period'>.</span><span class='id owner_addr'>owner_addr</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>REMOTE_HOST</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id job'>job</span><span class='period'>.</span><span class='id owner_host'>owner_host</span>
-    <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id env'>env</span><span class='period'>.</span><span class='id nil?'>nil?</span>
+    <span class='ivar'>@settings</span><span class='period'>.</span><span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='period'>.</span><span class='id dispatcher'>dispatcher</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id dispatch'>dispatch</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id instance'>instance</span><span class='op'>|</span>
 
-    <span class='ivar'>@settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id scheduler_instance_dispatched'>scheduler_instance_dispatched</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance_url'>instance_url</span> <span class='rparen'>)</span>
-    <span class='ivar'>@settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id scheduler_instance_owner_assigned'>scheduler_instance_owner_assigned</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id job'>job</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='id env'>env</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>REMOTE_ADDR</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id job'>job</span><span class='period'>.</span><span class='id owner_addr'>owner_addr</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>REMOTE_HOST</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id job'>job</span><span class='period'>.</span><span class='id owner_host'>owner_host</span>
+        <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id env'>env</span><span class='period'>.</span><span class='id nil?'>nil?</span>
 
-    <span class='id arachni'>arachni</span>  <span class='op'>=</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance_url'>instance_url</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='ivar'>@settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id scheduler_instance_dispatched'>scheduler_instance_dispatched</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='ivar'>@settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id scheduler_instance_owner_assigned'>scheduler_instance_owner_assigned</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id job'>job</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
 
-    <span class='id opts'>opts</span> <span class='op'>=</span> <span class='const'>YAML</span><span class='op'>::</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='period'>.</span><span class='id opts'>opts</span> <span class='rparen'>)</span>
+        <span class='id arachni'>arachni</span> <span class='op'>=</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
-    <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id set'>set</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>settings</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-    <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id modules'>modules</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>modules</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-    <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id plugins'>plugins</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='id opts'>opts</span> <span class='op'>=</span> <span class='const'>YAML</span><span class='op'>::</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='period'>.</span><span class='id opts'>opts</span> <span class='rparen'>)</span>
 
-    <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id run'>run</span>
-
-    <span class='ivar'>@settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id scheduler_scan_started'>scheduler_scan_started</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id job'>job</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
-
-    <span class='kw'>return</span> <span class='id instance_url'>instance_url</span>
+        <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id set'>set</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>settings</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='lbrace'>{</span>
+            <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id plugins'>plugins</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+                <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id modules'>modules</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>modules</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+                    <span class='id arachni'>arachni</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id run'>run</span><span class='lbrace'>{</span>
+                        <span class='ivar'>@settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id scheduler_scan_started'>scheduler_scan_started</span><span class='lparen'>(</span> <span class='id env'>env</span><span class='comma'>,</span> <span class='id job'>job</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+                        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+                    <span class='rbrace'>}</span>
+                <span class='rbrace'>}</span>
+            <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -664,15 +668,14 @@ URL of the laucnhed scanner instance
       <div class="method_details ">
   <p class="signature " id="run_and_destroy-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>run_and_destroy</strong>(job) 
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>run_and_destroy</strong>(job, &amp;block) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Runs a job and removed it from the DB.
-</p>
+    
+<p>Runs a job and removed it from the DB.</p>
 
 
   </div>
@@ -683,10 +686,10 @@ Runs a job and removed it from the DB.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="Scheduler/Job.html" title="Arachni::UI::Web::Scheduler::Job (class)">Job</a></span></tt>)</span>
-      
-      
         <span class='name'>job</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Scheduler/Job.html" title="Arachni::UI::Web::Scheduler::Job (class)">Job</a></span></tt>)</span>
       
       
       
@@ -694,23 +697,30 @@ Runs a job and removed it from the DB.
   
 </ul>
 
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+108
 109
 110
 111
-112</pre>
+112
+113
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/scheduler.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 108</span>
 
-<span class='kw'>def</span> <span class='id run_and_destroy'>run_and_destroy</span><span class='lparen'>(</span> <span class='id job'>job</span> <span class='rparen'>)</span>
-    <span class='id run'>run</span><span class='lparen'>(</span> <span class='id job'>job</span> <span class='rparen'>)</span>
-    <span class='id job'>job</span><span class='period'>.</span><span class='id destroy'>destroy</span>
+<span class='kw'>def</span> <span class='id run_and_destroy'>run_and_destroy</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='id run'>run</span><span class='lparen'>(</span> <span class='id job'>job</span> <span class='rparen'>)</span><span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id url'>url</span><span class='op'>|</span>
+        <span class='id job'>job</span><span class='period'>.</span><span class='id destroy'>destroy</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
+    <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -722,9 +732,9 @@ Runs a job and removed it from the DB.
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:17 2011 by 
+  Generated on Tue Dec  6 12:30:04 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

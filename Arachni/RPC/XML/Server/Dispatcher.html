@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::RPC::XML::Server::Dispatcher</title>
-<link rel="stylesheet" href="../../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::RPC::XML::Server::Dispatcher
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../../../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -124,11 +137,24 @@ instances of XMLRPC servers.
 </div>
 <div class="tags">
   
+
 </div>
 
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
   
   
   
@@ -458,6 +484,7 @@ A new instance of Dispatcher
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -579,6 +606,7 @@ author details etc.
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -610,7 +638,7 @@ author details etc.
            (With the support of the community and the Arachni Team.)
 
    Website:       http://github.com/Zapotek/arachni
-</span><span class='tstring_content'>   Documentation: http://github.com/Zapotek/arachni/wiki</span><span class='tstring_end'>'</span></span>
+   Documentation: http://github.com/Zapotek/arachni/wiki</span><span class='tstring_end'>'</span></span>
     <span class='id puts'>puts</span>
     <span class='id puts'>puts</span>
 
@@ -642,10 +670,10 @@ Dispatches an XMLRPC server instance from the pool
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>owner</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>'unknown'</tt>)</em>
@@ -660,13 +688,14 @@ an owner assign to the dispatched XMLRPC server
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
       
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
@@ -751,23 +780,24 @@ Returns proc info for a given pid
   
     <li>
       
-        <span class='type'>(<tt>Fixnum</tt>)</span>
-      
-      
         <span class='name'>pid</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
       
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
@@ -835,13 +865,14 @@ Returns proc info for all jobs
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
       
+        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
       
       
       
@@ -935,7 +966,8 @@ Returns proc info for all jobs
       <pre class="code"><span class="info file"># File 'lib/rpc/xml/server/dispatcher.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='id print_help'>print_help</span>
-    <span class='id puts'>puts</span> <span class='heredoc_beg'>&lt;&lt;USAGE</span><span class='tstring_content'>  Usage:  arachni_xmlrpcd \[options\]
+    <span class='id puts'>puts</span> <span class='heredoc_beg'>&lt;&lt;USAGE</span>
+<span class='tstring_content'>  Usage:  arachni_xmlrpcd \[options\]
 
   Supported options:
 
@@ -943,13 +975,12 @@ Returns proc info for all jobs
 --help                      output this
 
 --port                      specify port to listen to
-</span><span class='tstring_content'>                                (Default: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id rpc_port'>rpc_port</span><span class='rbrace'>}</span><span class='tstring_content'>)
+</span><span class='embexpr_beg'>                                (Default: #{</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id rpc_port'>rpc_port</span><span class='rbrace'>}</span><span class='tstring_content'>)
 
 --reroute-to-logfile        reroute all output to a logfile under 'logs/'
 
 --pool-size                 how many server workers/processes should be available
-</span><span class='tstring_content'>                              at any given moment (Default: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id pool_size'>pool_size</span><span class='rbrace'>}</span>
-<span class='tstring_content'>)
+</span><span class='embexpr_beg'>                              at any given moment (Default: #{</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id pool_size'>pool_size</span><span class='rbrace'>}</span><span class='tstring_content'>)
 
 --debug
 
@@ -1020,6 +1051,7 @@ Starts the dispatcher&#8217;s server
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -1092,13 +1124,14 @@ Returns server stats regarding the jobs and pool
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
       
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
@@ -1150,9 +1183,9 @@ Returns server stats regarding the jobs and pool
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:20 2011 by 
+  Generated on Mon Oct 17 03:42:32 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.2).
 </div>
 
   </body>

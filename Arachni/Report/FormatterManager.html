@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Report::FormatterManager</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::Report::FormatterManager
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -78,7 +91,7 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/report/base.rb</dd>
+    <dd class="r2 last">lib/arachni/report/base.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -95,6 +108,15 @@
   <h3 class="inherited">Constants inherited from <span class='object_link'><a href="../ComponentManager.html" title="Arachni::ComponentManager (class)">ComponentManager</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="../ComponentManager.html#EXCLUDE-constant" title="Arachni::ComponentManager::EXCLUDE (constant)">EXCLUDE</a></span>, <span class='object_link'><a href="../ComponentManager.html#WILDCARD-constant" title="Arachni::ComponentManager::WILDCARD (constant)">WILDCARD</a></span></p>
 
+  
+  
+  
+  
+  
+
+
+  
+  
   
   
   
@@ -152,7 +174,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#uncap_buffer%21-instance_method" title="Arachni::UI::Output#uncap_buffer! (method)">#uncap_buffer!</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
 
   <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
@@ -179,13 +201,13 @@
       <pre class="lines">
 
 
-16
-17
-18
-19</pre>
+47
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/report/base.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/report/base.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id paths'>paths</span>
     <span class='id cpaths'>cpaths</span> <span class='op'>=</span> <span class='id paths'>paths</span> <span class='op'>=</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id glob'>glob</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@lib</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>*.rb</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='rparen'>)</span>
@@ -201,9 +223,9 @@
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:14 2011 by 
+  Generated on Tue Dec  6 12:30:02 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

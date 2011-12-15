@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::AuditStore</title>
-<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::AuditStore
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -74,40 +87,41 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/audit_store.rb</dd>
+    <dd class="r2 last">lib/arachni/audit_store.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Arachni::AuditStore class
-</p>
-<p>
-Represents a finished audit session.<br/> It holds information about the
-runtime environment, the results of the audit etc&#8230;
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.1.1
-</p>
+    
+<p>Arachni::AuditStore class</p>
+
+<p>Represents a finished audit session.&lt;br/&gt; It holds information about
+the runtime environment, the results of the audit etc...</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.1.2</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
   <h2>Constant Summary</h2>
   
     <dl class="constants">
+      
+        <dt id="MODULE_NAMESPACE-constant" class="">MODULE_NAMESPACE =
+          
+        </dt>
+        <dd><pre class="code"><span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Modules</span></pre></dd>
       
         <dt id="ORDER-constant" class="">ORDER =
           
@@ -145,9 +159,8 @@ runtime environment, the results of the audit etc&#8230;
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-How long the audit took.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>How long the audit took.</p>
 </div></span>
   
 </li>
@@ -172,36 +185,8 @@ How long the audit took.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The date and time when the audit finished.
-</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#framework-instance_method" title="#framework (instance method)">- (Object) <strong>framework</strong> </a>
-    
-
-    
-  </span>
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute framework.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The date and time when the audit finished.</p>
 </div></span>
   
 </li>
@@ -226,9 +211,8 @@ Returns the value of attribute framework.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The discovered issues.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The discovered issues.</p>
 </div></span>
   
 </li>
@@ -253,9 +237,8 @@ The discovered issues.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The runtime arguments/options of the environment.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The runtime arguments/options of the environment.</p>
 </div></span>
   
 </li>
@@ -264,7 +247,7 @@ The runtime arguments/options of the environment.
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#plugins-instance_method" title="#plugins (instance method)">- (Object) <strong>plugins</strong> </a>
+      <a href="#plugins-instance_method" title="#plugins (instance method)">- (Hash) <strong>plugins</strong> </a>
     
 
     
@@ -280,9 +263,8 @@ The runtime arguments/options of the environment.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the value of attribute plugins.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Plugin results.</p>
 </div></span>
   
 </li>
@@ -307,9 +289,8 @@ Returns the value of attribute plugins.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The revision of the framework class.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The revision of the framework class.</p>
 </div></span>
   
 </li>
@@ -334,9 +315,8 @@ The revision of the framework class.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-All the urls crawled.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>All the urls crawled.</p>
 </div></span>
   
 </li>
@@ -361,9 +341,8 @@ All the urls crawled.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The date and time when the audit started.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The date and time when the audit started.</p>
 </div></span>
   
 </li>
@@ -388,15 +367,16 @@ The date and time when the audit started.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The version of the framework.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The version of the framework.</p>
 </div></span>
   
 </li>
 
     
   </ul>
+
+
 
 
   
@@ -423,9 +403,8 @@ The version of the framework.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Loads and returns an AuditStore object from file.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Loads and returns an AuditStore object from file.</p>
 </div></span>
   
 </li>
@@ -443,7 +422,7 @@ Loads and returns an AuditStore object from file.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (AuditStore) <strong>initialize</strong>(audit = {}, framework) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (AuditStore) <strong>initialize</strong>(audit = {}) </a>
     
 
     
@@ -458,9 +437,8 @@ Loads and returns an AuditStore object from file.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-A new instance of AuditStore.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of AuditStore.</p>
 </div></span>
   
 </li>
@@ -482,9 +460,8 @@ A new instance of AuditStore.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Saves &#8216;self&#8217; to file.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Saves 'self' to file.</p>
 </div></span>
   
 </li>
@@ -506,9 +483,8 @@ Saves &#8216;self&#8217; to file.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns &#8216;self&#8217; and all objects in its instance vars as hashes.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns 'self' and all objects in its instance vars as hashes.</p>
 </div></span>
   
 </li>
@@ -523,29 +499,27 @@ Returns &#8216;self&#8217; and all objects in its instance vars as hashes.
     <div class="method_details first">
   <p class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Arachni::AuditStore (class)">AuditStore</a></span></tt>) <strong>initialize</strong>(audit = {}, framework) 
+    - (<tt><span class='object_link'><a href="" title="Arachni::AuditStore (class)">AuditStore</a></span></tt>) <strong>initialize</strong>(audit = {}) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-A new instance of AuditStore
-</p>
+    
+<p>A new instance of AuditStore</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-82
-83
 84
 85
 86
@@ -566,14 +540,19 @@ A new instance of AuditStore
 101
 102
 103
-104</pre>
+104
+105
+106
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 84</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id audit'>audit</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id framework'>framework</span> <span class='rparen'>)</span>
-
-    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id audit'>audit</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
+    <span class='ivar'>@plugins</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='ivar'>@sitemap</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
     <span class='comment'># set instance variables from audit opts
 </span>    <span class='id audit'>audit</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -583,7 +562,11 @@ A new instance of AuditStore
 
     <span class='ivar'>@options</span>         <span class='op'>=</span> <span class='id prepare_options'>prepare_options</span><span class='lparen'>(</span> <span class='ivar'>@options</span> <span class='rparen'>)</span>
     <span class='ivar'>@issues</span>          <span class='op'>=</span> <span class='id sort'>sort</span><span class='lparen'>(</span> <span class='id prepare_variations'>prepare_variations</span><span class='lparen'>(</span> <span class='ivar'>@issues</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-    <span class='ivar'>@start_datetime</span>  <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>start_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id asctime'>asctime</span>
+    <span class='kw'>if</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>start_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+        <span class='ivar'>@start_datetime</span>  <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>start_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id asctime'>asctime</span>
+    <span class='kw'>else</span>
+        <span class='ivar'>@start_datetime</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span><span class='period'>.</span><span class='id asctime'>asctime</span>
+    <span class='kw'>end</span>
 
     <span class='kw'>if</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>finish_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
         <span class='ivar'>@finish_datetime</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>finish_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id asctime'>asctime</span>
@@ -591,8 +574,7 @@ A new instance of AuditStore
         <span class='ivar'>@finish_datetime</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span><span class='period'>.</span><span class='id asctime'>asctime</span>
     <span class='kw'>end</span>
 
-    <span class='ivar'>@delta_time</span>      <span class='op'>=</span> <span class='id secs_to_hms'>secs_to_hms</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>delta_time</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-
+    <span class='ivar'>@delta_time</span> <span class='op'>=</span> <span class='id secs_to_hms'>secs_to_hms</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>delta_time</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -616,28 +598,27 @@ A new instance of AuditStore
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-How long the audit took
-</p>
+    
+<p>How long the audit took</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-how long the audit took
-</p>
+        <div class='inline'>
+<p>how long the audit took</p>
 </div>
       
     </li>
@@ -650,12 +631,12 @@ how long the audit took
       <pre class="lines">
 
 
-70
-71
-72</pre>
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id delta_time'>delta_time</span>
   <span class='ivar'>@delta_time</span>
@@ -677,28 +658,27 @@ how long the audit took
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The date and time when the audit finished
-</p>
+    
+<p>The date and time when the audit finished</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-the date and time when the audit finished
-</p>
+        <div class='inline'>
+<p>the date and time when the audit finished</p>
 </div>
       
     </li>
@@ -711,57 +691,15 @@ the date and time when the audit finished
       <pre class="lines">
 
 
-65
-66
-67</pre>
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id finish_datetime'>finish_datetime</span>
   <span class='ivar'>@finish_datetime</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="framework=-instance_method"></span>
-      <span id="framework-instance_method"></span>
-      <div class="method_details ">
-  <p class="signature " id="framework-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>framework</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Returns the value of attribute framework
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-72
-73
-74</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 72</span>
-
-<span class='kw'>def</span> <span class='id framework'>framework</span>
-  <span class='ivar'>@framework</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -774,34 +712,33 @@ Returns the value of attribute framework
       <div class="method_details ">
   <p class="signature " id="issues-instance_method">
   
-    - (<tt>Array&lt;<span class='object_link'><a href="Issue.html" title="Arachni::Issue (class)">Issue</a></span>&gt;</tt>) <strong>issues</strong>  <span class="extras">(readonly)</span>
+    - (<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Issue.html" title="Arachni::Issue (class)">Issue</a></span>&gt;</tt>) <strong>issues</strong>  <span class="extras">(readonly)</span>
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The discovered issues
-</p>
+    
+<p>The discovered issues</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Issue.html" title="Arachni::Issue (class)">Issue</a></span>&gt;</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Issue.html" title="Arachni::Issue (class)">Issue</a></span>&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-the discovered issues
-</p>
+        <div class='inline'>
+<p>the discovered issues</p>
 </div>
       
     </li>
@@ -819,7 +756,7 @@ the discovered issues
 55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id issues'>issues</span>
   <span class='ivar'>@issues</span>
@@ -841,28 +778,27 @@ the discovered issues
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The runtime arguments/options of the environment
-</p>
+    
+<p>The runtime arguments/options of the environment</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-the runtime arguments/options of the environment
-</p>
+        <div class='inline'>
+<p>the runtime arguments/options of the environment</p>
 </div>
       
     </li>
@@ -880,7 +816,7 @@ the runtime arguments/options of the environment
 45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id options'>options</span>
   <span class='ivar'>@options</span>
@@ -896,33 +832,51 @@ the runtime arguments/options of the environment
       <div class="method_details ">
   <p class="signature " id="plugins-instance_method">
   
-    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>plugins</strong>  <span class="extras">(readonly)</span>
+    - (<tt>Hash</tt>) <strong>plugins</strong>  <span class="extras">(readonly)</span>
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the value of attribute plugins
-</p>
+    
+<p>Plugin results</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>plugin results</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-55
-56
-57</pre>
+58
+59
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id plugins'>plugins</span>
   <span class='ivar'>@plugins</span>
@@ -944,28 +898,27 @@ Returns the value of attribute plugins
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The revision of the framework class
-</p>
+    
+<p>The revision of the framework class</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-the revision of the framework class
-</p>
+        <div class='inline'>
+<p>the revision of the framework class</p>
 </div>
       
     </li>
@@ -983,7 +936,7 @@ the revision of the framework class
 40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id revision'>revision</span>
   <span class='ivar'>@revision</span>
@@ -999,34 +952,33 @@ the revision of the framework class
       <div class="method_details ">
   <p class="signature " id="sitemap-instance_method">
   
-    - (<tt>Array</tt>) <strong>sitemap</strong>  <span class="extras">(readonly)</span>
+    - (<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span></tt>) <strong>sitemap</strong>  <span class="extras">(readonly)</span>
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-All the urls crawled
-</p>
+    
+<p>All the urls crawled</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-all the urls crawled
-</p>
+        <div class='inline'>
+<p>all the urls crawled</p>
 </div>
       
     </li>
@@ -1044,7 +996,7 @@ all the urls crawled
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id sitemap'>sitemap</span>
   <span class='ivar'>@sitemap</span>
@@ -1066,28 +1018,27 @@ all the urls crawled
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The date and time when the audit started
-</p>
+    
+<p>The date and time when the audit started</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-the date and time when the audit started
-</p>
+        <div class='inline'>
+<p>the date and time when the audit started</p>
 </div>
       
     </li>
@@ -1100,12 +1051,12 @@ the date and time when the audit started
       <pre class="lines">
 
 
-60
-61
-62</pre>
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id start_datetime'>start_datetime</span>
   <span class='ivar'>@start_datetime</span>
@@ -1127,28 +1078,27 @@ the date and time when the audit started
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The version of the framework
-</p>
+    
+<p>The version of the framework</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-the version of the framework
-</p>
+        <div class='inline'>
+<p>the version of the framework</p>
 </div>
       
     </li>
@@ -1166,7 +1116,7 @@ the version of the framework
 35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id version'>version</span>
   <span class='ivar'>@version</span>
@@ -1192,9 +1142,8 @@ the version of the framework
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Loads and returns an AuditStore object from file
-</p>
+    
+<p>Loads and returns an AuditStore object from file</p>
 
 
   </div>
@@ -1205,29 +1154,29 @@ Loads and returns an AuditStore object from file
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-the file to load
-</p>
+        <div class='inline'>
+<p>the file to load</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Arachni::AuditStore (class)">AuditStore</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Arachni::AuditStore (class)">AuditStore</a></span></tt>)</span>
       
       
       
@@ -1241,22 +1190,26 @@ the file to load
       <pre class="lines">
 
 
-113
-114
-115
-116
-117
 118
-119</pre>
+119
+120
+121
+122
+123
+124
+125
+126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='const'>AuditStore</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
      <span class='kw'>begin</span>
-        <span class='const'>Marshal</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-     <span class='kw'>rescue</span>
-         <span class='const'>YAML</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+         <span class='id r'>r</span> <span class='op'>=</span> <span class='const'>YAML</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+         <span class='id r'>r</span><span class='period'>.</span><span class='id version'>version</span>
+         <span class='id r'>r</span>
+     <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+         <span class='const'>Marshal</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id binread'>binread</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
      <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1279,9 +1232,8 @@ the file to load
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Saves &#8216;self&#8217; to file
-</p>
+    
+<p>Saves 'self' to file</p>
 
 
   </div>
@@ -1292,10 +1244,10 @@ Saves &#8216;self&#8217; to file
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -1303,32 +1255,41 @@ Saves &#8216;self&#8217; to file
   
 </ul>
 
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-126
-127
-128
-129
-130
-131
-132
 133
-134</pre>
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 126</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id save'>save</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
-    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-    <span class='id f'>f</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='kw'>begin</span>
-        <span class='const'>Marshal</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id f'>f</span> <span class='rparen'>)</span>
+        <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id f'>f</span><span class='op'>|</span>
+            <span class='id f'>f</span><span class='period'>.</span><span class='id write'>write</span><span class='lparen'>(</span> <span class='const'>YAML</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
     <span class='kw'>rescue</span>
-        <span class='const'>YAML</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id f'>f</span> <span class='rparen'>)</span>
+        <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>wb</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id f'>f</span><span class='op'>|</span>
+            <span class='id f'>f</span><span class='period'>.</span><span class='id write'>write</span><span class='lparen'>(</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1345,21 +1306,21 @@ Saves &#8216;self&#8217; to file
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns &#8216;self&#8217; and all objects in its instance vars as hashes
-</p>
+    
+<p>Returns 'self' and all objects in its instance vars as hashes</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
       
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
@@ -1373,34 +1334,50 @@ Returns &#8216;self&#8217; and all objects in its instance vars as hashes
       <pre class="lines">
 
 
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
 152
-153</pre>
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/audit_store.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 152</span>
 
 <span class='kw'>def</span> <span class='id to_h'>to_h</span>
+    <span class='id hash'>hash</span> <span class='op'>=</span> <span class='id obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id dup'>dup</span>
 
-    <span class='id hash'>hash</span> <span class='op'>=</span> <span class='id obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span>
-
-    <span class='id issues'>issues</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+    <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id issue'>issue</span><span class='op'>|</span>
-        <span class='id issues'>issues</span> <span class='op'>&lt;&lt;</span> <span class='id obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='id issue'>issue</span> <span class='rparen'>)</span>
+        <span class='id issue'>issue</span><span class='period'>.</span><span class='id variations'>variations</span> <span class='op'>=</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id variations'>variations</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id var'>var</span><span class='op'>|</span> <span class='id obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='id var'>var</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+        <span class='id obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='id issue'>issue</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id issues'>issues</span>
+    <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id plugin'>plugin</span><span class='comma'>,</span> <span class='id results'>results</span><span class='op'>|</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id results'>results</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span>
+
+        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id plugin'>plugin</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id plugin'>plugin</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id opt'>opt</span><span class='op'>|</span>
+            <span class='id opt'>opt</span><span class='period'>.</span><span class='id to_h'>to_h</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+
     <span class='kw'>return</span> <span class='id hash'>hash</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1413,9 +1390,9 @@ Returns &#8216;self&#8217; and all objects in its instance vars as hashes
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:14 2011 by 
+  Generated on Tue Dec  6 12:30:02 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

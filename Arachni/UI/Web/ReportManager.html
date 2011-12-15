@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::UI::Web::ReportManager</title>
-<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::UI::Web::ReportManager
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -74,33 +87,30 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/ui/web/report_manager.rb</dd>
+    <dd class="r2 last">lib/arachni/ui/web/report_manager.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Provides nice little wrapper for the Arachni::Report::Manager while also
-handling<br/> conversions, storing etc.
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.1.1
-</p>
+    
+<p>Provides nice little wrapper for the Arachni::Report::Manager while also
+handling&lt;br/&gt; conversions, storing etc.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.2</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
    
@@ -131,6 +141,8 @@ handling<br/> conversions, storing etc.
 
 
 
+
+
   
     <h2>
       Instance Method Summary
@@ -155,9 +167,8 @@ handling<br/> conversions, storing etc.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the paths of all saved report files as an array.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the paths of all saved report files as an array.</p>
 </div></span>
   
 </li>
@@ -179,9 +190,8 @@ Returns the paths of all saved report files as an array.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns all available report types.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns all available report types.</p>
 </div></span>
   
 </li>
@@ -203,9 +213,8 @@ Returns all available report types.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns all available report classes.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns all available report classes.</p>
 </div></span>
   
 </li>
@@ -269,34 +278,8 @@ Returns all available report classes.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns a stored report as a <type> file.
-</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#get_filename-instance_method" title="#get_filename (instance method)">- (String) <strong>get_filename</strong>(report) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Generates a filename based on the contents of the report in the form of
-host:audit_date.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a stored report as a &lt;type&gt; file.</p>
 </div></span>
   
 </li>
@@ -383,9 +366,8 @@ host:audit_date.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-A new instance of ReportManager.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of ReportManager.</p>
 </div></span>
   
 </li>
@@ -407,10 +389,33 @@ A new instance of ReportManager.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Migrates AFR reports from the savedir folder into the DB so that users will
-be able to manage them via the WebUI.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Migrates AFR reports from the savedir folder into the DB so that users will
+be able to manage them via the WebUI.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#report_to_filename-instance_method" title="#report_to_filename (instance method)">- (String) <strong>report_to_filename</strong>(report) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Generates a filename based on the contents of the report in the form of
+host:audit_date.</p>
 </div></span>
   
 </li>
@@ -432,9 +437,8 @@ be able to manage them via the WebUI.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Gets the path to a given report based on the contents of the report.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets the path to a given report based on the contents of the report.</p>
 </div></span>
   
 </li>
@@ -456,9 +460,8 @@ Gets the path to a given report based on the contents of the report.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Saves the report to a file.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Saves the report to a file.</p>
 </div></span>
   
 </li>
@@ -480,9 +483,8 @@ Saves the report to a file.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Save directory.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Save directory.</p>
 </div></span>
   
 </li>
@@ -504,9 +506,8 @@ Save directory.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Tmp directory for storage while converting.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Tmp directory for storage while converting.</p>
 </div></span>
   
 </li>
@@ -528,9 +529,8 @@ Tmp directory for storage while converting.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Checks whether the provided type is a usable report.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks whether the provided type is a usable report.</p>
 </div></span>
   
 </li>
@@ -551,21 +551,22 @@ Checks whether the provided type is a usable report.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-A new instance of ReportManager
-</p>
+    
+<p>A new instance of ReportManager</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+42
 43
 44
 45
@@ -580,7 +581,7 @@ A new instance of ReportManager
 54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id settings'>settings</span> <span class='rparen'>)</span>
     <span class='ivar'>@opts</span>     <span class='op'>=</span> <span class='id opts'>opts</span>
@@ -590,7 +591,8 @@ A new instance of ReportManager
     <span class='const'>DataMapper</span><span class='op'>::</span><span class='id setup'>setup</span><span class='lparen'>(</span> <span class='symbol'>:default</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sqlite3://</span><span class='embexpr_beg'>#{</span><span class='ivar'>@settings</span><span class='period'>.</span><span class='id db'>db</span><span class='rbrace'>}</span><span class='tstring_content'>/default.db</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
     <span class='const'>DataMapper</span><span class='period'>.</span><span class='id finalize'>finalize</span>
 
-    <span class='const'>Report</span><span class='period'>.</span><span class='id auto_upgrade!'>auto_upgrade!</span>
+    <span class='comment'># Report.raise_on_save_failure = true
+</span>    <span class='const'>Report</span><span class='period'>.</span><span class='id auto_upgrade!'>auto_upgrade!</span>
 
     <span class='id migrate_files'>migrate_files</span>
 <span class='kw'>end</span></pre>
@@ -609,27 +611,27 @@ A new instance of ReportManager
       <div class="method_details first">
   <p class="signature first" id="all-instance_method">
   
-    - (<tt>Array</tt>) <strong>all</strong>(*args) 
+    - (<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>) <strong>all</strong>(*args) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the paths of all saved report files as an array
-</p>
+    
+<p>Returns the paths of all saved report files as an array</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
       
       
       
@@ -643,12 +645,12 @@ Returns the paths of all saved report files as an array
       <pre class="lines">
 
 
-132
 133
-134</pre>
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id all'>all</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
     <span class='const'>Report</span><span class='period'>.</span><span class='id all'>all</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
@@ -661,27 +663,27 @@ Returns the paths of all saved report files as an array
       <div class="method_details ">
   <p class="signature " id="available-instance_method">
   
-    - (<tt>Array</tt>) <strong>available</strong> 
+    - (<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>) <strong>available</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns all available report types
-</p>
+    
+<p>Returns all available report types</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
       
       
       
@@ -695,12 +697,12 @@ Returns all available report types
       <pre class="lines">
 
 
-207
-208
-209</pre>
+215
+216
+217</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 207</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id available'>available</span>
     <span class='kw'>return</span> <span class='cvar'>@@available</span>
@@ -713,27 +715,27 @@ Returns all available report types
       <div class="method_details ">
   <p class="signature " id="classes-instance_method">
   
-    - (<tt>Array</tt>) <strong>classes</strong> 
+    - (<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>) <strong>classes</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns all available report classes
-</p>
+    
+<p>Returns all available report classes</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
       
       
       
@@ -747,12 +749,12 @@ Returns all available report classes
       <pre class="lines">
 
 
-216
-217
-218</pre>
+224
+225
+226</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 216</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 224</span>
 
 <span class='kw'>def</span> <span class='id classes'>classes</span>
     <span class='cvar'>@@available_rep_classes</span>
@@ -775,7 +777,6 @@ Returns all available report classes
       <pre class="lines">
 
 
-144
 145
 146
 147
@@ -786,10 +787,11 @@ Returns all available report classes
 152
 153
 154
-155</pre>
+155
+156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 145</span>
 
 <span class='kw'>def</span> <span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span>
     <span class='id report'>report</span> <span class='op'>=</span> <span class='const'>Report</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span>
@@ -821,16 +823,16 @@ Returns all available report classes
       <pre class="lines">
 
 
-136
 137
 138
 139
 140
 141
-142</pre>
+142
+143</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 137</span>
 
 <span class='kw'>def</span> <span class='id delete_all'>delete_all</span>
     <span class='id all'>all</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -853,10 +855,9 @@ Returns all available report classes
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns a stored report as a <type> file. Basically a convertion/export
-method.
-</p>
+    
+<p>Returns a stored report as a &lt;type&gt; file. Basically a
+convertion/export method.</p>
 
 
   </div>
@@ -867,53 +868,51 @@ method.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-html, txt, xml, etc
-</p>
+        <div class='inline'>
+<p>html, txt, xml, etc</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
         <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-report id
-</p>
+        <div class='inline'>
+<p>report id</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
+      
         <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-the converted report
-</p>
+        <div class='inline'>
+<p>the converted report</p>
 </div>
       
     </li>
@@ -935,103 +934,36 @@ the converted report
 197
 198
 199
-200</pre>
+200
+201
+202
+203
+204
+205
+206
+207
+208</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 191</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id type'>type</span><span class='comma'>,</span> <span class='id id'>id</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id valid_class?'>valid_class?</span><span class='lparen'>(</span> <span class='id type'>type</span> <span class='rparen'>)</span>
 
     <span class='kw'>begin</span>
         <span class='id location'>location</span> <span class='op'>=</span> <span class='id savedir'>savedir</span> <span class='op'>+</span> <span class='const'>Report</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id filename'>filename</span> <span class='op'>+</span> <span class='const'>EXTENSION</span>
-        <span class='id convert'>convert</span><span class='lparen'>(</span> <span class='id type'>type</span><span class='comma'>,</span> <span class='const'>File</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id location'>location</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-    <span class='kw'>rescue</span>
+
+        <span class='comment'># if it's the default report type don't waste time converting
+</span>        <span class='kw'>if</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id type'>type</span> <span class='op'>==</span> <span class='const'>EXTENSION</span>
+            <span class='kw'>return</span> <span class='const'>File</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id location'>location</span> <span class='rparen'>)</span>
+        <span class='kw'>else</span>
+            <span class='kw'>return</span> <span class='id convert'>convert</span><span class='lparen'>(</span> <span class='id type'>type</span><span class='comma'>,</span> <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>AuditStore</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id location'>location</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+        <span class='id ap'>ap</span> <span class='id e'>e</span>
+        <span class='id ap'>ap</span> <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span>
         <span class='kw'>return</span> <span class='kw'>nil</span>
     <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="get_filename-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>) <strong>get_filename</strong>(report) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Generates a filename based on the contents of the report in the form of
-host:audit_date
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-        <span class='name'>report</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>
-YAML serialized audistore object as returned by the Arachni XMLRPC server.
-Basically an &#8216;afr&#8217; report as a string.
-</p>
-</div>
-      
-    </li>
-  
-</ul>
-<h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>
-host:audit_date
-</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-166
-167
-168
-169</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 166</span>
-
-<span class='kw'>def</span> <span class='id get_filename'>get_filename</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
-    <span class='id rep'>rep</span> <span class='op'>=</span> <span class='id unserialize'>unserialize</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
-    <span class='id filename'>filename</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='lparen'>(</span><span class='id rep'>rep</span><span class='period'>.</span><span class='id options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id rep'>rep</span><span class='period'>.</span><span class='id start_datetime'>start_datetime</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1056,10 +988,10 @@ host:audit_date
 181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 179</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 179</span>
 
 <span class='kw'>def</span> <span class='id get_finish_datetime'>get_finish_datetime</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='id unserialize'>unserialize</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id finish_datetime'>finish_datetime</span>
+    <span class='kw'>return</span> <span class='id report'>report</span><span class='period'>.</span><span class='id finish_datetime'>finish_datetime</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1084,10 +1016,10 @@ host:audit_date
 177</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 175</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 175</span>
 
 <span class='kw'>def</span> <span class='id get_host'>get_host</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id unserialize'>unserialize</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span>
+    <span class='kw'>return</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id report'>report</span><span class='period'>.</span><span class='id options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1112,10 +1044,10 @@ host:audit_date
 173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 171</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='id get_issue_count'>get_issue_count</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
-    <span class='id unserialize'>unserialize</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id issues'>issues</span><span class='period'>.</span><span class='id size'>size</span>
+    <span class='id report'>report</span><span class='period'>.</span><span class='id issues'>issues</span><span class='period'>.</span><span class='id size'>size</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1131,16 +1063,16 @@ host:audit_date
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Migrates AFR reports from the savedir folder into the DB so that users will
-be able to manage them via the WebUI
-</p>
+    
+<p>Migrates AFR reports from the savedir folder into the DB so that users will
+be able to manage them via the WebUI</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -1163,10 +1095,13 @@ be able to manage them via the WebUI
 73
 74
 75
-76</pre>
+76
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id migrate_files'>migrate_files</span>
     <span class='const'>Dir</span><span class='period'>.</span><span class='id glob'>glob</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id savedir'>savedir</span><span class='rbrace'>}</span><span class='tstring_content'>*</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='const'>EXTENSION</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -1174,16 +1109,94 @@ be able to manage them via the WebUI
         <span class='kw'>next</span> <span class='kw'>if</span> <span class='const'>Report</span><span class='period'>.</span><span class='id first'>first</span><span class='lparen'>(</span> <span class='symbol'>:filename</span> <span class='op'>=&gt;</span> <span class='const'>File</span><span class='period'>.</span><span class='id basename'>basename</span><span class='lparen'>(</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='const'>EXTENSION</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 
         <span class='kw'>begin</span>
-            <span class='id data'>data</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
+            <span class='id report'>report</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>AuditStore</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
             <span class='const'>Report</span><span class='period'>.</span><span class='id create'>create</span><span class='lparen'>(</span>
-                <span class='symbol'>:issue_count</span> <span class='op'>=&gt;</span> <span class='id get_issue_count'>get_issue_count</span><span class='lparen'>(</span> <span class='id data'>data</span> <span class='rparen'>)</span><span class='comma'>,</span>
-                <span class='symbol'>:host</span>        <span class='op'>=&gt;</span> <span class='id get_host'>get_host</span><span class='lparen'>(</span> <span class='id data'>data</span> <span class='rparen'>)</span><span class='comma'>,</span>
+                <span class='symbol'>:issue_count</span> <span class='op'>=&gt;</span> <span class='id get_issue_count'>get_issue_count</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span><span class='comma'>,</span>
+                <span class='symbol'>:host</span>        <span class='op'>=&gt;</span> <span class='id get_host'>get_host</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span><span class='comma'>,</span>
                 <span class='symbol'>:filename</span>    <span class='op'>=&gt;</span> <span class='const'>File</span><span class='period'>.</span><span class='id basename'>basename</span><span class='lparen'>(</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='const'>EXTENSION</span> <span class='rparen'>)</span><span class='comma'>,</span>
-                <span class='symbol'>:datestamp</span>   <span class='op'>=&gt;</span> <span class='id get_finish_datetime'>get_finish_datetime</span><span class='lparen'>(</span> <span class='id data'>data</span> <span class='rparen'>)</span>
+                <span class='symbol'>:datestamp</span>   <span class='op'>=&gt;</span> <span class='id get_finish_datetime'>get_finish_datetime</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
             <span class='rparen'>)</span>
-        <span class='kw'>rescue</span>
-        <span class='kw'>end</span>
+        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+            <span class='comment'># p file
+</span>            <span class='comment'># ap e
+</span>            <span class='comment'># ap e.backtrace
+</span>        <span class='kw'>end</span>
     <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="report_to_filename-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>) <strong>report_to_filename</strong>(report) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Generates a filename based on the contents of the report in the form of
+host:audit_date</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>report</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../AuditStore.html" title="Arachni::AuditStore (class)">Arachni::AuditStore</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>host.audit_date.ext</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+166
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 166</span>
+
+<span class='kw'>def</span> <span class='id report_to_filename'>report_to_filename</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
+    <span class='id filename'>filename</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='lparen'>(</span><span class='id report'>report</span><span class='period'>.</span><span class='id options'>options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id report'>report</span><span class='period'>.</span><span class='id start_datetime'>start_datetime</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id filename'>filename</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>:</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>__</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1199,9 +1212,8 @@ be able to manage them via the WebUI
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Gets the path to a given report based on the contents of the report
-</p>
+    
+<p>Gets the path to a given report based on the contents of the report</p>
 
 
   </div>
@@ -1212,30 +1224,24 @@ Gets the path to a given report based on the contents of the report
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>report</span>
       
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../AuditStore.html" title="Arachni::AuditStore (class)">Arachni::AuditStore</a></span></tt>)</span>
       
-        &mdash;
-        <div class='inline'><p>
-YAML serialized audistore object as returned by the Arachni XMLRPC server.
-Basically an &#8216;afr&#8217; report as a string.
-</p>
-</div>
+      
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -1249,15 +1255,15 @@ Basically an &#8216;afr&#8217; report as a string.
       <pre class="lines">
 
 
-112
 113
-114</pre>
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id report_to_path'>report_to_path</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
-    <span class='id savedir'>savedir</span> <span class='op'>+</span> <span class='const'>File</span><span class='period'>.</span><span class='id basename'>basename</span><span class='lparen'>(</span> <span class='id get_filename'>get_filename</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='const'>EXTENSION</span> <span class='rparen'>)</span>
+    <span class='id savedir'>savedir</span> <span class='op'>+</span> <span class='const'>File</span><span class='period'>.</span><span class='id basename'>basename</span><span class='lparen'>(</span> <span class='id report_to_filename'>report_to_filename</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='const'>EXTENSION</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1273,9 +1279,8 @@ Basically an &#8216;afr&#8217; report as a string.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Saves the report to a file
-</p>
+    
+<p>Saves the report to a file</p>
 
 
   </div>
@@ -1286,37 +1291,30 @@ Saves the report to a file
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>report</span>
       
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../AuditStore.html" title="Arachni::AuditStore (class)">Arachni::AuditStore</a></span></tt>)</span>
       
-        &mdash;
-        <div class='inline'><p>
-YAML serialized audistore object as returned by the Arachni XMLRPC server.
-Basically an &#8216;afr&#8217; report as a string.
-</p>
-</div>
+      
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
+      
         <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-the path to the saved report
-</p>
+        <div class='inline'>
+<p>the path to the saved report</p>
 </div>
       
     </li>
@@ -1329,16 +1327,16 @@ the path to the saved report
       <pre class="lines">
 
 
-100
-101
 102
-103</pre>
+103
+104
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id save'>save</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span>
-    <span class='ivar'>@settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id report_saved'>report_saved</span><span class='lparen'>(</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id get_filename'>get_filename</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='ivar'>@settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id report_saved'>report_saved</span><span class='lparen'>(</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id report_to_filename'>report_to_filename</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id save_to_file'>save_to_file</span><span class='lparen'>(</span> <span class='id report'>report</span><span class='comma'>,</span> <span class='id report_to_path'>report_to_path</span><span class='lparen'>(</span> <span class='id report'>report</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1355,28 +1353,27 @@ the path to the saved report
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Save directory
-</p>
+    
+<p>Save directory</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-save directory
-</p>
+        <div class='inline'>
+<p>save directory</p>
 </div>
       
     </li>
@@ -1389,15 +1386,15 @@ save directory
       <pre class="lines">
 
 
-81
-82
-83</pre>
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id savedir'>savedir</span>
-    <span class='ivar'>@settings</span><span class='period'>.</span><span class='id public'>public</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='const'>FOLDERNAME</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@settings</span><span class='period'>.</span><span class='id public_folder'>public_folder</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='const'>FOLDERNAME</span><span class='rbrace'>}</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1413,28 +1410,27 @@ save directory
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Tmp directory for storage while converting
-</p>
+    
+<p>Tmp directory for storage while converting</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-tmp directory for storage while converting
-</p>
+        <div class='inline'>
+<p>tmp directory for storage while converting</p>
 </div>
       
     </li>
@@ -1447,12 +1443,12 @@ tmp directory for storage while converting
       <pre class="lines">
 
 
-88
-89
-90</pre>
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id tmpdir'>tmpdir</span>
     <span class='ivar'>@settings</span><span class='period'>.</span><span class='id tmp'>tmp</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span>
@@ -1471,9 +1467,8 @@ tmp directory for storage while converting
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Checks whether the provided type is a usable report
-</p>
+    
+<p>Checks whether the provided type is a usable report</p>
 
 
   </div>
@@ -1484,29 +1479,29 @@ Checks whether the provided type is a usable report
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-usually html,txt,xml etc
-</p>
+        <div class='inline'>
+<p>usually html,txt,xml etc</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Bool</tt>)</span>
       
+        <span class='type'>(<tt>Bool</tt>)</span>
       
       
       
@@ -1520,12 +1515,12 @@ usually html,txt,xml etc
       <pre class="lines">
 
 
-123
 124
-125</pre>
+125
+126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/report_manager.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/report_manager.rb', line 124</span>
 
 <span class='kw'>def</span> <span class='id valid_class?'>valid_class?</span><span class='lparen'>(</span> <span class='id type'>type</span> <span class='rparen'>)</span>
     <span class='id classes'>classes</span><span class='lbracket'>[</span><span class='id type'>type</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='kw'>false</span>
@@ -1540,9 +1535,9 @@ usually html,txt,xml etc
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:19 2011 by 
+  Generated on Tue Dec  6 12:30:07 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

@@ -1,0 +1,3233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Arachni::RPC::Server::Framework
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../../..';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../_index.html">Index (F)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../../Arachni.html" title="Arachni (module)">Arachni</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../RPC.html" title="Arachni::RPC (module)">RPC</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Server.html" title="Arachni::RPC::Server (class)">Server</a></span></span>
+     &raquo; 
+    <span class="title">Framework</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Arachni::RPC::Server::Framework
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../../Framework.html" title="Arachni::Framework (class)">Framework</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../../Framework.html" title="Arachni::Framework (class)">Framework</a></span></li>
+          
+            <li class="next">Arachni::RPC::Server::Framework</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="../../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/arachni/rpc/server/framework.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Wraps the framework of the local instance and the frameworks of all remote
+slaves (when in High Performance Grid mode) into a neat, little, easy to
+handle package.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.1</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="MAX_CONCURRENCY-constant" class="">MAX_CONCURRENCY =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>20</span></pre></dd>
+      
+        <dt id="MIN_PAGES_PER_INSTANCE-constant" class="">MIN_PAGES_PER_INSTANCE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>30</span></pre></dd>
+      
+    </dl>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Constants inherited from <span class='object_link'><a href="../../Framework.html" title="Arachni::Framework (class)">Framework</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../Framework.html#REVISION-constant" title="Arachni::Framework::REVISION (constant)">REVISION</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#instances-instance_method" title="#instances (instance method)">- (Object) <strong>instances</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute instances.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#modules-instance_method" title="#modules (instance method)">- (Object) <strong>modules</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute modules.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#opts-instance_method" title="#opts (instance method)">- (Object) <strong>opts</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute opts.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#plugins-instance_method" title="#plugins (instance method)">- (Object) <strong>plugins</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute plugins.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../../Framework.html" title="Arachni::Framework (class)">Framework</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../Framework.html#auditmap-instance_method" title="Arachni::Framework#auditmap (method)">auditmap</a></span>, <span class='object_link'><a href="../../Framework.html#modules-instance_method" title="Arachni::Framework#modules (method)">modules</a></span>, <span class='object_link'><a href="../../Framework.html#opts-instance_method" title="Arachni::Framework#opts (method)">opts</a></span>, <span class='object_link'><a href="../../Framework.html#page_queue_size-instance_method" title="Arachni::Framework#page_queue_size (method)">page_queue_size</a></span>, <span class='object_link'><a href="../../Framework.html#page_queue_total_size-instance_method" title="Arachni::Framework#page_queue_total_size (method)">page_queue_total_size</a></span>, <span class='object_link'><a href="../../Framework.html#plugins-instance_method" title="Arachni::Framework#plugins (method)">plugins</a></span>, <span class='object_link'><a href="../../Framework.html#reports-instance_method" title="Arachni::Framework#reports (method)">reports</a></span>, <span class='object_link'><a href="../../Framework.html#sitemap-instance_method" title="Arachni::Framework#sitemap (method)">sitemap</a></span>, <span class='object_link'><a href="../../Framework.html#spider-instance_method" title="Arachni::Framework#spider (method)">spider</a></span>, <span class='object_link'><a href="../../Framework.html#url_queue_size-instance_method" title="Arachni::Framework#url_queue_size (method)">url_queue_size</a></span>, <span class='object_link'><a href="../../Framework.html#url_queue_total_size-instance_method" title="Arachni::Framework#url_queue_total_size (method)">url_queue_total_size</a></span></p>
+
+  
+  
+  
+  
+  
+  
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#audit_store-instance_method" title="#audit_store (instance method)">- (Object) <strong>audit_store</strong> </a>
+    
+
+    
+      (also: #auditstore)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#busy%3F-instance_method" title="#busy? (instance method)">- (Boolean) <strong>busy?</strong>(include_slaves = true, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns true if the system is scanning, false if <span class='object_link'><a href="#run-instance_method" title="Arachni::RPC::Server::Framework#run (method)">#run</a></span> hasn't been called
+yet or if the scan has finished.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clean_up%21-instance_method" title="#clean_up! (instance method)">- (Object) <strong>clean_up!</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If the scan needs to be aborted abruptly this method takes care of any
+unfinished business (like running plug-ins).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect_to_instance-instance_method" title="#connect_to_instance (instance method)">- (Object) <strong>connect_to_instance</strong>(instance) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Connects to a remote Instance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_plugin_store-instance_method" title="#get_plugin_store (instance method)">- (Hash) <strong>get_plugin_store</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the results of the plug-ins.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#high_performance%3F-instance_method" title="#high_performance? (instance method)">- (Bool) <strong>high_performance?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns true if running in HPG (High Performance Grid) mode and we're the
+master, false otherwise.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Framework) <strong>initialize</strong>(opts) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Framework.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#issues-instance_method" title="#issues (instance method)">- (Array) <strong>issues</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a array containing summaries of all discovered issues (i.e. no
+variations).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lsmod-instance_method" title="#lsmod (instance method)">- (Object) <strong>lsmod</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lsplug-instance_method" title="#lsplug (instance method)">- (Object) <strong>lsplug</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns an array containing information about all available plug-ins.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#master-instance_method" title="#master (instance method)">- (String) <strong>master</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the master's URL.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#output-instance_method" title="#output (instance method)">- (Object) <strong>output</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the merged output of all running instances.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pause%21-instance_method" title="#pause! (instance method)">- (Object) <strong>pause!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Pauses the running scan on a best effort basis.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#paused%3F-instance_method" title="#paused? (instance method)">- (Object) <strong>paused?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#progress_data-instance_method" title="#progress_data (instance method)">- (Object) <strong>progress_data</strong>(opts = {}, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns aggregated progress data and helps to limit the amount of calls
+required in order to get an accurate depiction of a scan's progress and
+includes:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_issues-instance_method" title="#register_issues (instance method)">- (Bool) <strong>register_issues</strong>(issues, token) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers an array holding [Arachni::Issue] objects with the local
+instance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#report-instance_method" title="#report (instance method)">- (Hash) <strong>report</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the results of the audit as a hash.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#restrict_to_elements%21-instance_method" title="#restrict_to_elements! (instance method)">- (Bool) <strong>restrict_to_elements!</strong>(elements, token = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Restricts the scope of the audit to individual elements.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resume%21-instance_method" title="#resume! (instance method)">- (Object) <strong>resume!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Resumes a paused scan right away.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#revision-instance_method" title="#revision (instance method)">- (Object) <strong>revision</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-instance_method" title="#run (instance method)">- (Bool) <strong>run</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Starts the audit.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_master-instance_method" title="#set_master (instance method)">- (Bool) <strong>set_master</strong>(url, token) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the URL and authentication token required to connect to our master.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stats-instance_method" title="#stats (instance method)">- (Object) <strong>stats</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#status-instance_method" title="#status (instance method)">- (String) <strong>status</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the status of the instance as a string.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_page_queue%21-instance_method" title="#update_page_queue! (instance method)">- (Bool) <strong>update_page_queue!</strong>(pages, token = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Updates the page queue with the provided pages.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#version-instance_method" title="#version (instance method)">- (Object) <strong>version</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#hash_keys_to_str-instance_method" title="Arachni::Module::Utilities#hash_keys_to_str (method)">#hash_keys_to_str</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#uri_decode-instance_method" title="Arachni::Module::Utilities#uri_decode (method)">#uri_decode</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#uri_encode-instance_method" title="Arachni::Module::Utilities#uri_encode (method)">#uri_encode</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#uri_parser-instance_method" title="Arachni::Module::Utilities#uri_parser (method)">#uri_parser</a></span>, <span class='object_link'><a href="../../Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../../Framework.html" title="Arachni::Framework (class)">Framework</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../Framework.html#audit-instance_method" title="Arachni::Framework#audit (method)">#audit</a></span>, <span class='object_link'><a href="../../Framework.html#audit_page_queue-instance_method" title="Arachni::Framework#audit_page_queue (method)">#audit_page_queue</a></span>, <span class='object_link'><a href="../../Framework.html#audit_queue-instance_method" title="Arachni::Framework#audit_queue (method)">#audit_queue</a></span>, <span class='object_link'><a href="../../Framework.html#audit_store_sitemap-instance_method" title="Arachni::Framework#audit_store_sitemap (method)">#audit_store_sitemap</a></span>, <span class='object_link'><a href="../../Framework.html#http-instance_method" title="Arachni::Framework#http (method)">#http</a></span>, <span class='object_link'><a href="../../Framework.html#lsrep-instance_method" title="Arachni::Framework#lsrep (method)">#lsrep</a></span>, <span class='object_link'><a href="../../Framework.html#plugin_store-instance_method" title="Arachni::Framework#plugin_store (method)">#plugin_store</a></span>, <span class='object_link'><a href="../../Framework.html#prepare-instance_method" title="Arachni::Framework#prepare (method)">#prepare</a></span>, <span class='object_link'><a href="../../Framework.html#push_to_page_queue-instance_method" title="Arachni::Framework#push_to_page_queue (method)">#push_to_page_queue</a></span>, <span class='object_link'><a href="../../Framework.html#push_to_url_queue-instance_method" title="Arachni::Framework#push_to_url_queue (method)">#push_to_url_queue</a></span>, <span class='object_link'><a href="../../Framework.html#running%3F-instance_method" title="Arachni::Framework#running? (method)">#running?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../../Mixins/Observable.html" title="Arachni::Mixins::Observable (module)">Mixins::Observable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../Mixins/Observable.html#method_missing-instance_method" title="Arachni::Mixins::Observable#method_missing (method)">#method_missing</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../../UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../../UI/Output.html#uncap_buffer%21-instance_method" title="Arachni::UI::Output#uncap_buffer! (method)">#uncap_buffer!</a></span>, <span class='object_link'><a href="../../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Arachni::RPC::Server::Framework (class)">Framework</a></span></tt>) <strong>initialize</strong>(opts) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of Framework</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+
+    <span class='ivar'>@modules</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>RPC</span><span class='op'>::</span><span class='const'>Server</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Manager</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+    <span class='ivar'>@plugins</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>RPC</span><span class='op'>::</span><span class='const'>Server</span><span class='op'>::</span><span class='const'>Plugin</span><span class='op'>::</span><span class='const'>Manager</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span>
+
+    <span class='comment'># holds all running instances
+</span>    <span class='ivar'>@instances</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='ivar'>@crawling_done</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@override_sitemap</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='comment'># if we're a slave this var will hold the URL of our master
+</span>    <span class='ivar'>@master_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+
+    <span class='ivar'>@local_token</span> <span class='op'>=</span> <span class='id gen_token'>gen_token</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice super">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+      in the class <span class='object_link'><a href="../../Mixins/Observable.html#method_missing-instance_method" title="Arachni::Mixins::Observable#method_missing (method)">Arachni::Mixins::Observable</a></span>
+    
+  </p>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="instances-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="instances-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>instances</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute instances</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id instances'>instances</span>
+  <span class='ivar'>@instances</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="modules-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="modules-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>modules</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute modules</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id modules'>modules</span>
+  <span class='ivar'>@modules</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="opts-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="opts-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>opts</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute opts</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id opts'>opts</span>
+  <span class='ivar'>@opts</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="plugins-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="plugins-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>plugins</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute plugins</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id plugins'>plugins</span>
+  <span class='ivar'>@plugins</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="audit_store-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>audit_store</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='auditstore-instance_method'>auditstore</span></span>
+    </span>
+  
+</p>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="busy?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>busy?</strong>(include_slaves = true, &amp;block) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if the system is scanning, false if <span class='object_link'><a href="#run-instance_method" title="Arachni::RPC::Server::Framework#run (method)">#run</a></span> hasn't been called
+yet or if the scan has finished.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>include_slaves</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>take slave status into account too? &lt;br/&gt; If so, it will only return
+false if slaves are done too.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>&amp;block</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>block to which to pass the result</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 89</span>
+
+<span class='kw'>def</span> <span class='id busy?'>busy?</span><span class='lparen'>(</span> <span class='id include_slaves'>include_slaves</span> <span class='op'>=</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+
+    <span class='id busyness'>busyness</span> <span class='op'>=</span> <span class='lbracket'>[</span> <span class='id extended_running?'>extended_running?</span> <span class='rbracket'>]</span>
+
+    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id include_slaves'>include_slaves</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id busyness'>busyness</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
+        <span class='kw'>return</span>
+    <span class='kw'>end</span>
+
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span><span class='lparen'>(</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
+        <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id busy?'>busy?</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
+            <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
+        <span class='id busyness'>busyness</span> <span class='op'>&lt;&lt;</span> <span class='id res'>res</span>
+        <span class='id busyness'>busyness</span><span class='period'>.</span><span class='id flatten!'>flatten!</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id busyness'>busyness</span><span class='period'>.</span><span class='id reject'>reject</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id is_busy'>is_busy</span><span class='op'>|</span> <span class='op'>!</span><span class='id is_busy'>is_busy</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clean_up!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>clean_up!</strong>(&amp;block) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>If the scan needs to be aborted abruptly this method takes care of any
+unfinished business (like running plug-ins).</p>
+
+<p>Should be called before grabbing the <span class='object_link'><a href="#auditstore-instance_method" title="Arachni::RPC::Server::Framework#auditstore (method)">#auditstore</a></span>, especially when running
+in HPG mode as it will take care of merging the plug-in results of all
+instances.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>&amp;block</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>block to be called once the cleanup has finished</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 302</span>
+
+<span class='kw'>def</span> <span class='id clean_up!'>clean_up!</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='id old_clean_up!'>old_clean_up!</span><span class='lparen'>(</span> <span class='kw'>true</span> <span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span> <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
+        <span class='kw'>return</span>
+    <span class='kw'>end</span>
+
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span><span class='lparen'>(</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
+        <span class='id instance_conn'>instance_conn</span> <span class='op'>=</span> <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span>
+
+        <span class='id instance_conn'>instance_conn</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id clean_up!'>clean_up!</span> <span class='lbrace'>{</span>
+            <span class='id instance_conn'>instance_conn</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id get_plugin_store'>get_plugin_store</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
+                <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id res'>res</span><span class='period'>.</span><span class='id rpc_exception?'>rpc_exception?</span> <span class='op'>?</span>  <span class='id res'>res</span> <span class='op'>:</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+            <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+
+    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id results'>results</span><span class='op'>|</span>
+        <span class='id results'>results</span><span class='period'>.</span><span class='id compact!'>compact!</span>
+        <span class='id results'>results</span> <span class='op'>&lt;&lt;</span> <span class='id get_plugin_store'>get_plugin_store</span>
+        <span class='id update_plugin_results!'>update_plugin_results!</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span>
+    <span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="connect_to_instance-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>connect_to_instance</strong>(instance) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Connects to a remote Instance.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>instance</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the hash must hold the 'url' and the 'token'. In subsequent calls the
+'token' can be omitted.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+559
+560
+561
+562
+563
+564</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 559</span>
+
+<span class='kw'>def</span> <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span>
+    <span class='ivar'>@tokens</span>  <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+    <span class='ivar'>@tokens</span><span class='lbracket'>[</span><span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+    <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>RPC</span><span class='op'>::</span><span class='const'>Client</span><span class='op'>::</span><span class='const'>Instance</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='comma'>,</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@tokens</span><span class='lbracket'>[</span><span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_plugin_store-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>get_plugin_store</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the results of the plug-ins</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>plugin name =&gt; result</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id get_plugin_store'>get_plugin_store</span>
+    <span class='ivar'>@plugin_store</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="high_performance?-instance_method">
+  
+    - (<tt>Bool</tt>) <strong>high_performance?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if running in HPG (High Performance Grid) mode and we're the
+master, false otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='id high_performance?'>high_performance?</span>
+    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id grid_mode'>grid_mode</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>high_performance</span><span class='tstring_end'>'</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="issues-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>) <strong>issues</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a array containing summaries of all discovered issues (i.e. no
+variations).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+544
+545
+546
+547
+548
+549
+550
+551</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 544</span>
+
+<span class='kw'>def</span> <span class='id issues'>issues</span>
+    <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id issues'>issues</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id issue'>issue</span><span class='op'>|</span>
+        <span class='id tmp_issue'>tmp_issue</span> <span class='op'>=</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id deep_clone'>deep_clone</span>
+        <span class='id tmp_issue'>tmp_issue</span><span class='period'>.</span><span class='id variations'>variations</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+        <span class='id tmp_issue'>tmp_issue</span>
+    <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="lsmod-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>lsmod</strong> 
+  
+
+  
+</p>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="lsplug-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>lsplug</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns an array containing information about all available plug-ins.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'></span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id lsplug'>lsplug</span>
+    <span class='id plug_info'>plug_info</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='kw'>super</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id plugin'>plugin</span><span class='op'>|</span>
+
+        <span class='id plugin'>plugin</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id plugin'>plugin</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id flatten'>flatten</span><span class='period'>.</span><span class='id compact'>compact</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id opt'>opt</span><span class='op'>|</span>
+            <span class='id opt'>opt</span><span class='period'>.</span><span class='id to_h'>to_h</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>type</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id opt'>opt</span><span class='period'>.</span><span class='id type'>type</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
+
+        <span class='id plug_info'>plug_info</span> <span class='op'>&lt;&lt;</span> <span class='id plugin'>plugin</span>
+    <span class='rbrace'>}</span>
+
+    <span class='kw'>return</span> <span class='id plug_info'>plug_info</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="master-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>) <strong>master</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the master's URL</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+359
+360
+361</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 359</span>
+
+<span class='kw'>def</span> <span class='id master'>master</span>
+    <span class='ivar'>@master_url</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="output-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>output</strong>(&amp;block) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the merged output of all running instances.</p>
+
+<p>This is going probably to be wildly out of sync and lack A LOT of messages.</p>
+
+<p>It's here to give the notion of scan progress to the end-user rather than
+provide an accurate depiction of the actual progress.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>&amp;block</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>block to which to pass the result</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 373</span>
+
+<span class='kw'>def</span> <span class='id output'>output</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+
+    <span class='id buffer'>buffer</span> <span class='op'>=</span> <span class='id flush_buffer'>flush_buffer</span>
+
+    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id buffer'>buffer</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span>
+    <span class='kw'>end</span>
+
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='const'>MAX_CONCURRENCY</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span><span class='lparen'>(</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
+        <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id service'>service</span><span class='period'>.</span><span class='id output'>output</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id out'>out</span><span class='op'>|</span>
+            <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='id out'>out</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id out'>out</span><span class='op'>|</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='lparen'>(</span><span class='id buffer'>buffer</span> <span class='op'>|</span> <span class='id out'>out</span><span class='rparen'>)</span><span class='period'>.</span><span class='id flatten'>flatten</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="pause!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>pause!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Pauses the running scan on a best effort basis.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+333
+334
+335
+336
+337
+338
+339
+340</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 333</span>
+
+<span class='kw'>def</span> <span class='id pause!'>pause!</span>
+    <span class='kw'>super</span>
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
+        <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id pause!'>pause!</span><span class='lbrace'>{</span> <span class='id iter'>iter</span><span class='period'>.</span><span class='id next'>next</span> <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="paused?-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>paused?</strong> 
+  
+
+  
+</p>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="progress_data-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>progress_data</strong>(opts = {}, &amp;block) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns aggregated progress data and helps to limit the amount of calls
+required in order to get an accurate depiction of a scan's progress and
+includes:</p>
+
+<pre class="code"><span class='id o'>o</span> <span class='id output'>output</span> <span class='id messages'>messages</span>
+<span class='id o'>o</span> <span class='id discovered'>discovered</span> <span class='id issues'>issues</span>
+<span class='id o'>o</span> <span class='id overall'>overall</span> <span class='id statistics'>statistics</span>
+<span class='id o'>o</span> <span class='id overall'>overall</span> <span class='id scan'>scan</span> <span class='id status'>status</span>
+<span class='id o'>o</span> <span class='id statistics'>statistics</span> <span class='id of'>of</span> <span class='id all'>all</span> <span class='id instances'>instances</span> <span class='id individually'>individually</span></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>contains info about what data to return:</p>
+<ul><li>
+<p>:messages -- include output messages</p>
+</li><li>
+<p>:slaves   -- include slave data</p>
+</li><li>
+<p>:issues   -- include issue summaries</p>
+</li></ul>
+
+<p>Uses an implicit include (i.e. nil will be considered true).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>&amp;block</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>block to which to pass the result</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 434</span>
+
+<span class='kw'>def</span> <span class='id progress_data'>progress_data</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:messages</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id nil?'>nil?</span>
+        <span class='id include_messages'>include_messages</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>else</span>
+        <span class='id include_messages'>include_messages</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:messages</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:slaves</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id nil?'>nil?</span>
+        <span class='id include_slaves'>include_slaves</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>else</span>
+        <span class='id include_slaves'>include_slaves</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:slaves</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:issues</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id nil?'>nil?</span>
+        <span class='id include_issues'>include_issues</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>else</span>
+        <span class='id include_issues'>include_issues</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:issues</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+
+    <span class='id data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id status'>status</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>busy</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='id extended_running?'>extended_running?</span>
+    <span class='rbrace'>}</span>
+
+    <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>messages</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id flush_buffer'>flush_buffer</span> <span class='kw'>if</span> <span class='id include_messages'>include_messages</span>
+    <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id issues'>issues</span> <span class='kw'>if</span> <span class='id include_issues'>include_issues</span>
+    <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id include_slaves'>include_slaves</span>
+
+    <span class='id stats'>stats</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id stat_hash'>stat_hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id stats'>stats</span><span class='lparen'>(</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='kw'>true</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
+        <span class='id stat_hash'>stat_hash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span>
+    <span class='rbrace'>}</span>
+
+    <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='symbol'>:dispatcher_url</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id include_slaves'>include_slaves</span>
+        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id self_url'>self_url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id stat_hash'>stat_hash</span><span class='period'>.</span><span class='id dup'>dup</span>
+        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id self_url'>self_url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id self_url'>self_url</span>
+        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id self_url'>self_url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id status'>status</span>
+    <span class='kw'>end</span>
+
+    <span class='id stats'>stats</span> <span class='op'>&lt;&lt;</span> <span class='id stat_hash'>stat_hash</span>
+
+    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id include_slaves'>include_slaves</span>
+        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id merge_stats'>merge_stats</span><span class='lparen'>(</span> <span class='id stats'>stats</span> <span class='rparen'>)</span>
+        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id values'>values</span> <span class='kw'>if</span> <span class='id include_slaves'>include_slaves</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id data'>data</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span>
+    <span class='kw'>end</span>
+
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='const'>MAX_CONCURRENCY</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span><span class='lparen'>(</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
+        <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id progress_data'>progress_data</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id tmp'>tmp</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id tmp'>tmp</span><span class='period'>.</span><span class='id rpc_exception?'>rpc_exception?</span>
+                <span class='id tmp'>tmp</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+                <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='id tmp'>tmp</span> <span class='rparen'>)</span>
+            <span class='kw'>else</span>
+                <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+            <span class='kw'>end</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id slave_data'>slave_data</span><span class='op'>|</span>
+
+        <span class='id slave_data'>slave_data</span><span class='period'>.</span><span class='id compact!'>compact!</span>
+        <span class='id slave_data'>slave_data</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id slave'>slave</span><span class='op'>|</span>
+            <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>messages</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>  <span class='op'>|=</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>messages</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id include_messages'>include_messages</span>
+            <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>|=</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id include_issues'>include_issues</span>
+
+            <span class='kw'>if</span> <span class='id include_slaves'>include_slaves</span>
+                <span class='id url'>url</span> <span class='op'>=</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+                <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span>           <span class='op'>=</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+                <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id url'>url</span>
+                <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+            <span class='kw'>end</span>
+
+            <span class='id stats'>stats</span> <span class='op'>&lt;&lt;</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+        <span class='rbrace'>}</span>
+
+        <span class='kw'>if</span> <span class='id include_slaves'>include_slaves</span>
+            <span class='id sorted_data_instances'>sorted_data_instances</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+            <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id sort'>sort</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id url'>url</span><span class='op'>|</span>
+                <span class='id sorted_data_instances'>sorted_data_instances</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span>
+            <span class='rbrace'>}</span>
+            <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id sorted_data_instances'>sorted_data_instances</span><span class='period'>.</span><span class='id values'>values</span>
+        <span class='kw'>end</span>
+
+        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id merge_stats'>merge_stats</span><span class='lparen'>(</span> <span class='id stats'>stats</span> <span class='rparen'>)</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id data'>data</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="register_issues-instance_method">
+  
+    - (<tt>Bool</tt>) <strong>register_issues</strong>(issues, token) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers an array holding [Arachni::Issue] objects with the local
+instance.</p>
+
+<p>Primarily used by slaves to register issues they find on the spot.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>issues</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="../../Issue.html" title="Arachni::Issue (class)">Arachni::Issue</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>token</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>privileged token, prevents this method from being called by 3rd parties.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>true on success, false on invalid token</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+639
+640
+641
+642
+643
+644</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 639</span>
+
+<span class='kw'>def</span> <span class='id register_issues'>register_issues</span><span class='lparen'>(</span> <span class='id issues'>issues</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id token'>token</span> <span class='rparen'>)</span>
+
+    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='id issues'>issues</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="report-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>report</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the results of the audit as a hash.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+535
+536
+537</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 535</span>
+
+<span class='kw'>def</span> <span class='id report'>report</span>
+    <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id to_h'>to_h</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="restrict_to_elements!-instance_method">
+  
+    - (<tt>Bool</tt>) <strong>restrict_to_elements!</strong>(elements, token = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Restricts the scope of the audit to individual elements.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>elements</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>list of element IDs</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>token</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>privileged token, prevents this method from being called by 3rd parties.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>true on success, false on invalid token</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+582
+583
+584
+585
+586
+587</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 582</span>
+
+<span class='kw'>def</span> <span class='id restrict_to_elements!'>restrict_to_elements!</span><span class='lparen'>(</span> <span class='id elements'>elements</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id token'>token</span> <span class='rparen'>)</span>
+
+    <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>Auditable</span><span class='period'>.</span><span class='id restrict_to_elements!'>restrict_to_elements!</span><span class='lparen'>(</span> <span class='id elements'>elements</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="resume!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>resume!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Resumes a paused scan right away.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+345
+346
+347
+348
+349
+350
+351
+352</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 345</span>
+
+<span class='kw'>def</span> <span class='id resume!'>resume!</span>
+    <span class='kw'>super</span>
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
+        <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id resume!'>resume!</span><span class='lbrace'>{</span> <span class='id iter'>iter</span><span class='period'>.</span><span class='id next'>next</span> <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="revision-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>revision</strong> 
+  
+
+  
+</p>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="run-instance_method">
+  
+    - (<tt>Bool</tt>) <strong>run</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Starts the audit.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>false if already running, true otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 149</span>
+
+<span class='kw'>def</span> <span class='id run'>run</span>
+    <span class='comment'># return if we're already running
+</span>    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id extended_running?'>extended_running?</span>
+
+    <span class='comment'># EventMachine.add_periodic_timer( 1 ) do
+</span>        <span class='comment'># print &quot;Arachni::RPC::Client::Handler objects: &quot;
+</span>        <span class='comment'># puts ObjectSpace.each_object( Arachni::RPC::Client::Handler ) {}
+</span><span class='comment'>#
+</span>        <span class='comment'># print &quot;Arachni::RPC::Server::Proxy objects: &quot;
+</span>        <span class='comment'># puts ObjectSpace.each_object( Arachni::RPC::Server::Proxy ) {}
+</span><span class='comment'>#
+</span>        <span class='comment'># puts &quot;Active connections: #{::EM.connection_count}&quot;
+</span>        <span class='comment'># puts '--------------------------------------------'
+</span>    <span class='comment'># end
+</span>
+    <span class='ivar'>@extended_running</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='op'>::</span><span class='const'>EM</span><span class='period'>.</span><span class='id defer'>defer</span> <span class='lbrace'>{</span>
+
+        <span class='comment'>#
+</span>        <span class='comment'># if we're in HPG mode do fancy stuff like distributing and balancing workload
+</span>        <span class='comment'># as well as starting slave instances and deal with some lower level
+</span>        <span class='comment'># operations of the local instance like running plug-ins etc...
+</span>        <span class='comment'>#
+</span>        <span class='comment'># otherwise just run the local instance, nothing special...
+</span>        <span class='comment'>#
+</span>        <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span>
+
+            <span class='comment'>#
+</span>            <span class='comment'># We're in HPG (High Performance Grid) mode,
+</span>            <span class='comment'># things are going to get weird...
+</span>            <span class='comment'>#
+</span>
+            <span class='comment'># we'll need analyze the pages prior to assigning
+</span>            <span class='comment'># them to each instance at the element level so as to gain
+</span>            <span class='comment'># more granular control over the assigned workload
+</span>            <span class='comment'>#
+</span>            <span class='comment'># put simply, we'll need to perform some magic in order
+</span>            <span class='comment'># to prevent different instances from auditing the same elements
+</span>            <span class='comment'># and wasting bandwidth
+</span>            <span class='comment'>#
+</span>            <span class='comment'># for example: search forms, logout links and the like will
+</span>            <span class='comment'># most likely exist on most pages of the site and since each
+</span>            <span class='comment'># instance is assigned a set of URLs/pages to audit they will end up
+</span>            <span class='comment'># with common elements so we have to prevent instances from
+</span>            <span class='comment'># performing identical checks.
+</span>            <span class='comment'>#
+</span>            <span class='comment'># interesting note: should previously unseen elements dynamically
+</span>            <span class='comment'># appear during the audit they will override these restrictions
+</span>            <span class='comment'># and each instance will audit them at will.
+</span>            <span class='comment'>#
+</span>            <span class='id pages'>pages</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Database</span><span class='op'>::</span><span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+
+            <span class='comment'># prepare the local instance (runs plugins and start the timer)
+</span>            <span class='id prepare'>prepare</span>
+
+            <span class='comment'># we need to take our cues from the local framework as some
+</span>            <span class='comment'># plug-ins may need the system to wait for them to finish
+</span>            <span class='comment'># before moving on.
+</span>            <span class='id sleep'>sleep</span><span class='lparen'>(</span> <span class='float'>0.2</span> <span class='rparen'>)</span> <span class='kw'>while</span> <span class='id paused?'>paused?</span>
+
+            <span class='comment'># start the crawl and extract all paths
+</span>            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Spider</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id run'>run</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id page'>page</span><span class='op'>|</span>
+                <span class='ivar'>@override_sitemap</span> <span class='op'>&lt;&lt;</span> <span class='id page'>page</span><span class='period'>.</span><span class='id url'>url</span>
+                <span class='id pages'>pages</span><span class='lbracket'>[</span><span class='id page'>page</span><span class='period'>.</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id page'>page</span>
+            <span class='rbrace'>}</span>
+            <span class='ivar'>@crawling_done</span> <span class='op'>=</span> <span class='kw'>true</span>
+
+            <span class='comment'># the plug-ins may have update the framework page queue
+</span>            <span class='comment'># so we need to distribute these pages as well
+</span>            <span class='id page_a'>page_a</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+            <span class='id page_q'>page_q</span> <span class='op'>=</span> <span class='ivar'>@page_queue</span>
+            <span class='kw'>while</span> <span class='op'>!</span><span class='id page_q'>page_q</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='id page_q'>page_q</span><span class='period'>.</span><span class='id pop'>pop</span>
+                <span class='id page_a'>page_a</span> <span class='op'>&lt;&lt;</span> <span class='id page'>page</span>
+                <span class='id pages'>pages</span><span class='lbracket'>[</span><span class='id page'>page</span><span class='period'>.</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id page'>page</span>
+            <span class='kw'>end</span>
+
+            <span class='comment'># get the Dispatchers with unique Pipe IDs
+</span>            <span class='comment'># in order to take advantage of line aggregation
+</span>            <span class='id prefered_dispatchers'>prefered_dispatchers</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id pref_dispatchers'>pref_dispatchers</span><span class='op'>|</span>
+
+                <span class='comment'># split the URLs of the pages in equal chunks
+</span>                <span class='id chunks'>chunks</span>    <span class='op'>=</span> <span class='id split_urls'>split_urls</span><span class='lparen'>(</span> <span class='id pages'>pages</span><span class='period'>.</span><span class='id keys'>keys</span><span class='comma'>,</span> <span class='id pref_dispatchers'>pref_dispatchers</span> <span class='rparen'>)</span>
+                <span class='id chunk_cnt'>chunk_cnt</span> <span class='op'>=</span> <span class='id chunks'>chunks</span><span class='period'>.</span><span class='id size'>size</span>
+
+                <span class='comment'># split the page array into chunks that will be distributed
+</span>                <span class='comment'># across the instances
+</span>                <span class='id page_chunks'>page_chunks</span> <span class='op'>=</span> <span class='id page_a'>page_a</span><span class='period'>.</span><span class='id chunk'>chunk</span><span class='lparen'>(</span> <span class='id chunk_cnt'>chunk_cnt</span> <span class='rparen'>)</span>
+
+                <span class='comment'># assign us our fair share of plug-in discovered pages
+</span>                <span class='id update_page_queue!'>update_page_queue!</span><span class='lparen'>(</span> <span class='id page_chunks'>page_chunks</span><span class='period'>.</span><span class='id pop'>pop</span><span class='comma'>,</span> <span class='ivar'>@local_token</span> <span class='rparen'>)</span>
+
+                <span class='comment'># remove duplicate elements across the (per instance) chunks
+</span>                <span class='comment'># while spreading them out evenly
+</span>                <span class='id elements'>elements</span> <span class='op'>=</span> <span class='id distribute_elements'>distribute_elements</span><span class='lparen'>(</span> <span class='id chunks'>chunks</span><span class='comma'>,</span> <span class='id pages'>pages</span> <span class='rparen'>)</span>
+
+                <span class='comment'># empty out the Hash and remove temporary files
+</span>                <span class='id pages'>pages</span><span class='period'>.</span><span class='id clear'>clear</span>
+
+                <span class='comment'># restrict the local instance to its assigned elements
+</span>                <span class='id restrict_to_elements!'>restrict_to_elements!</span><span class='lparen'>(</span> <span class='id elements'>elements</span><span class='period'>.</span><span class='id pop'>pop</span><span class='comma'>,</span> <span class='ivar'>@local_token</span> <span class='rparen'>)</span>
+
+                <span class='comment'># set the URLs to be audited by the local instance
+</span>                <span class='ivar'>@opts</span><span class='period'>.</span><span class='id restrict_paths'>restrict_paths</span> <span class='op'>=</span> <span class='id chunks'>chunks</span><span class='period'>.</span><span class='id pop'>pop</span>
+
+                <span class='id chunks'>chunks</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+                    <span class='op'>|</span><span class='id chunk'>chunk</span><span class='comma'>,</span> <span class='id i'>i</span><span class='op'>|</span>
+
+                    <span class='comment'># spawn a remote instance, assign a chunk of URLs
+</span>                    <span class='comment'># and elements to it and run it
+</span>                    <span class='id spawn'>spawn</span><span class='lparen'>(</span> <span class='id chunk'>chunk</span><span class='comma'>,</span> <span class='id page_chunks'>page_chunks</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id pref_dispatchers'>pref_dispatchers</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+                        <span class='op'>|</span><span class='id inst'>inst</span><span class='op'>|</span>
+                        <span class='ivar'>@instances</span> <span class='op'>&lt;&lt;</span> <span class='id inst'>inst</span>
+                    <span class='rbrace'>}</span>
+                <span class='rbrace'>}</span>
+
+                <span class='comment'># start the local instance
+</span>                <span class='const'>Thread</span><span class='period'>.</span><span class='id new'>new</span> <span class='lbrace'>{</span>
+                    <span class='comment'># ap 'AUDITING'
+</span>                    <span class='id audit'>audit</span>
+
+                    <span class='comment'># ap 'OLD CLEAN UP'
+</span>                    <span class='id old_clean_up!'>old_clean_up!</span>
+
+                    <span class='comment'># ap 'DONE'
+</span>                    <span class='ivar'>@extended_running</span> <span class='op'>=</span> <span class='kw'>false</span>
+                <span class='rbrace'>}</span>
+            <span class='rbrace'>}</span>
+        <span class='kw'>else</span>
+            <span class='comment'># start the local instance
+</span>            <span class='const'>Thread</span><span class='period'>.</span><span class='id new'>new</span> <span class='lbrace'>{</span>
+                <span class='comment'># ap 'AUDITING'
+</span>                <span class='kw'>super</span>
+                <span class='comment'># ap 'DONE'
+</span>                <span class='ivar'>@extended_running</span> <span class='op'>=</span> <span class='kw'>false</span>
+            <span class='rbrace'>}</span>
+        <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
+
+    <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="set_master-instance_method">
+  
+    - (<tt>Bool</tt>) <strong>set_master</strong>(url, token) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets the URL and authentication token required to connect to our master.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>master's URL in 'hostname:port' form</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>token</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>master's authentication token</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>true on success, false if this is the master of the HPG (in which case this
+is not applicable).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 598</span>
+
+<span class='kw'>def</span> <span class='id set_master'>set_master</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span>
+
+    <span class='ivar'>@master_url</span> <span class='op'>=</span> <span class='id url'>url</span>
+    <span class='ivar'>@master</span> <span class='op'>=</span> <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id token'>token</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+
+    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id do_not_store!'>do_not_store!</span>
+    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id on_register_results'>on_register_results</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id results'>results</span><span class='op'>|</span>
+        <span class='id report_issues_to_master'>report_issues_to_master</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+
+    <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="stats-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>stats</strong> 
+  
+
+  
+</p>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="status-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>) <strong>status</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the status of the instance as a string.</p>
+
+<p>Possible values are:</p>
+
+<pre class="code"><span class='id o'>o</span> <span class='id crawling'>crawling</span>
+<span class='id o'>o</span> <span class='id paused'>paused</span>
+<span class='id o'>o</span> <span class='id done'>done</span>
+<span class='id o'>o</span> <span class='id busy'>busy</span></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 405</span>
+
+<span class='kw'>def</span> <span class='id status'>status</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@crawling_done</span> <span class='op'>&amp;&amp;</span> <span class='id master'>master</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='id high_performance?'>high_performance?</span>
+        <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>crawling</span><span class='tstring_end'>'</span></span>
+    <span class='kw'>elsif</span> <span class='id paused?'>paused?</span>
+        <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>paused</span><span class='tstring_end'>'</span></span>
+    <span class='kw'>elsif</span> <span class='op'>!</span><span class='id extended_running?'>extended_running?</span>
+        <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>done</span><span class='tstring_end'>'</span></span>
+    <span class='kw'>else</span>
+        <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>busy</span><span class='tstring_end'>'</span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="update_page_queue!-instance_method">
+  
+    - (<tt>Bool</tt>) <strong>update_page_queue!</strong>(pages, token = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Updates the page queue with the provided pages.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>pages</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>list of pages</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>token</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>privileged token, prevents this method from being called by 3rd parties.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>true on success, false on invalid token</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+622
+623
+624
+625
+626</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 622</span>
+
+<span class='kw'>def</span> <span class='id update_page_queue!'>update_page_queue!</span><span class='lparen'>(</span> <span class='id pages'>pages</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id token'>token</span> <span class='rparen'>)</span>
+    <span class='id pages'>pages</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id page'>page</span><span class='op'>|</span> <span class='ivar'>@page_queue</span> <span class='op'>&lt;&lt;</span> <span class='id page'>page</span> <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="version-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>version</strong> 
+  
+
+  
+</p>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Tue Dec  6 12:30:07 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.3 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

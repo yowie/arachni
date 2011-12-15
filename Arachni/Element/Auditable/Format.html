@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Module: Arachni::Element::Auditable::Format</title>
-<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Module: Arachni::Element::Auditable::Format
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -59,23 +72,23 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/parser/auditable.rb</dd>
+    <dd class="r1 last">lib/arachni/parser/auditable.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Holds constant bitfields that describe the preferred formatting of
-injection strings.
-</p>
+    
+<p>Holds constant bitfields that describe the preferred formatting of
+injection strings.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
   <h2>Constant Summary</h2>
   
@@ -84,15 +97,15 @@ injection strings.
         <dt id="STRAIGHT-constant" class="">STRAIGHT =
           <div class="docstring">
   <div class="discussion">
-    <p>
-Leaves the injection string as is.
-</p>
+    
+<p>Leaves the injection string as is.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
         </dt>
         <dd><pre class="code"><span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='int'>0</span></pre></dd>
@@ -100,16 +113,16 @@ Leaves the injection string as is.
         <dt id="APPEND-constant" class="">APPEND =
           <div class="docstring">
   <div class="discussion">
-    <p>
-Apends the injection string to the default value of the input vector.<br/>
-(If no default value exists Arachni will choose one.)
-</p>
+    
+<p>Apends the injection string to the default value of the input
+vector.&lt;br/&gt; (If no default value exists Arachni will choose one.)</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
         </dt>
         <dd><pre class="code"><span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='int'>1</span></pre></dd>
@@ -117,15 +130,15 @@ Apends the injection string to the default value of the input vector.<br/>
         <dt id="NULL-constant" class="">NULL =
           <div class="docstring">
   <div class="discussion">
-    <p>
-Terminates the injection string with a null character.
-</p>
+    
+<p>Terminates the injection string with a null character.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
         </dt>
         <dd><pre class="code"><span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='int'>2</span></pre></dd>
@@ -133,16 +146,15 @@ Terminates the injection string with a null character.
         <dt id="SEMICOLON-constant" class="">SEMICOLON =
           <div class="docstring">
   <div class="discussion">
-    <p>
-Prefix the string with a &#8217;;&#8217;, useful for command injection
-modules
-</p>
+    
+<p>Prefix the string with a ';', useful for command injection modules</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
         </dt>
         <dd><pre class="code"><span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='int'>3</span></pre></dd>
@@ -154,12 +166,14 @@ modules
 
 
 
+
+
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:17 2011 by 
+  Generated on Tue Dec  6 12:30:04 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

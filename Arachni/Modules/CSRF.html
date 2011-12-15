@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Modules::CSRF</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::Modules::CSRF
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -83,73 +96,53 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Cross-Site Request Forgery audit module.
-</p>
-<p>
-It uses 4-pass reverse-diff analysis to determine which forms affect
-business logic and audits them for CSRF.
-</p>
-<p>
-Using this technique noise/false-positives should be kept to a minimum,
-however we do need to jump through some hoops.
-</p>
-<p>
-The technique used to identify which forms are CSRF worthy is described
-bellow.
-</p>
+    
+<p>Cross-Site Request Forgery audit module.</p>
+
+<p>It uses 4-pass reverse-diff analysis to determine which forms affect
+business logic and audits them for CSRF.</p>
+
+<p>Using this technique noise/false-positives should be kept to a minimum,
+however we do need to jump through some hoops.</p>
+
+<p>The technique used to identify which forms are CSRF worthy is described
+bellow.</p>
+
 <h3>4-pass rDiff CSRF detection:</h3>
-<ul>
-<li><p>
-Request each page <b>without</b> cookies
-</p>
-<ul>
-<li><p>
-Extract forms.
-</p>
-</li>
-</ul>
-</li>
-<li><p>
-Request each page <b>with</b> cookies
-</p>
-<ul>
-<li><p>
-Extract forms.
-</p>
-</li>
-</ul>
-</li>
-<li><p>
-Check forms that appear <b>only</b> when logged-in for CSRF.
-</p>
-</li>
-</ul>
-<p>
-In order for the module to give meaningful results a valid cookie-jar of a
-logged-in user must be supplied to the framework.
-</p>
-<p>
-However, as Arachni goes through the system it will gather cookies just
+<ul><li>
+<p>Request each page <b>without</b> cookies</p>
+<ul><li>
+<p>Extract forms.</p>
+</li></ul>
+</li><li>
+<p>Request each page <b>with</b> cookies</p>
+<ul><li>
+<p>Extract forms.</p>
+</li></ul>
+</li><li>
+<p>Check forms that appear <b>only</b> when logged-in for CSRF.</p>
+</li></ul>
+
+<p>In order for the module to give meaningful results a valid cookie-jar of a
+logged-in user must be supplied to the framework.</p>
+
+<p>However, as Arachni goes through the system it will gather cookies just
 like a user would, so if there are forms that only appear after a guest has
-performed a previous event it will check these too.
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.2
-</p>
+performed a previous event it will check these too.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.2.1</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
   <h3>See Also:</h3>
   <ul class="see">
     
@@ -177,8 +170,27 @@ performed a previous event it will check these too.
   
   
   <h3 class="inherited">Constants included from <span class='object_link'><a href="../Module/Auditor.html" title="Arachni::Module::Auditor (module)">Arachni::Module::Auditor</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Auditor.html#OPTIONS-constant" title="Arachni::Module::Auditor::OPTIONS (constant)">OPTIONS</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Auditor.html#OPTIONS-constant" title="Arachni::Module::Auditor::OPTIONS (constant)">OPTIONS</a></span>, <span class='object_link'><a href="../Module/Auditor.html#RDIFF_OPTIONS-constant" title="Arachni::Module::Auditor::RDIFF_OPTIONS (constant)">RDIFF_OPTIONS</a></span></p>
 
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+  
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#http-instance_method" title="Arachni::Module::Base#http (method)">http</a></span>, <span class='object_link'><a href="../Module/Base.html#page-instance_method" title="Arachni::Module::Base#page (method)">page</a></span></p>
+
+  
   
   
   
@@ -263,9 +275,8 @@ performed a previous event it will check these too.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Checks if the str is an anti-CSRF token of base10/16/32/64.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if the str is an anti-CSRF token of base10/16/32/64.</p>
 </div></span>
   
 </li>
@@ -310,9 +321,8 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-A new instance of CSRF.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of CSRF.</p>
 </div></span>
   
 </li>
@@ -334,9 +344,8 @@ A new instance of CSRF.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns forms that only appear when the user is logged-in.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns forms that only appear when the user is logged-in.</p>
 </div></span>
   
 </li>
@@ -400,9 +409,8 @@ Returns forms that only appear when the user is logged-in.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Tries to detect if a form is protected using an anti-CSRF token.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Tries to detect if a form is protected using an anti-CSRF token.</p>
 </div></span>
   
 </li>
@@ -420,7 +428,7 @@ Tries to detect if a form is protected using an anti-CSRF token.
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Module/Base.html#redundant-instance_method" title="Arachni::Module::Base#redundant (method)">#redundant</a></span>, <span class='object_link'><a href="../Module/Base.html#register_results-instance_method" title="Arachni::Module::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Module/Base.html#set_framework-instance_method" title="Arachni::Module::Base#set_framework (method)">#set_framework</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Module/Base.html#framework-instance_method" title="Arachni::Module::Base#framework (method)">#framework</a></span>, <span class='object_link'><a href="../Module/Base.html#set_framework-instance_method" title="Arachni::Module::Base#set_framework (method)">#set_framework</a></span></p>
 
   
   
@@ -430,7 +438,7 @@ Tries to detect if a form is protected using an anti-CSRF token.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Auditor.html" title="Arachni::Module::Auditor (module)">Arachni::Module::Auditor</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Auditor.html#__rdiff_audit_id-instance_method" title="Arachni::Module::Auditor#__rdiff_audit_id (method)">#__rdiff_audit_id</a></span>, <span class='object_link'><a href="../Module/Auditor.html#__rdiff_audited%21-instance_method" title="Arachni::Module::Auditor#__rdiff_audited! (method)">#__rdiff_audited!</a></span>, <span class='object_link'><a href="../Module/Auditor.html#__rdiff_audited%3F-instance_method" title="Arachni::Module::Auditor#__rdiff_audited? (method)">#__rdiff_audited?</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit-instance_method" title="Arachni::Module::Auditor#audit (method)">#audit</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_elems-instance_method" title="Arachni::Module::Auditor#audit_elems (method)">#audit_elems</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_rdiff-instance_method" title="Arachni::Module::Auditor#audit_rdiff (method)">#audit_rdiff</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_rdiff_elem-instance_method" title="Arachni::Module::Auditor#audit_rdiff_elem (method)">#audit_rdiff_elem</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout-instance_method" title="Arachni::Module::Auditor#audit_timeout (method)">#audit_timeout</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_debug_msg-instance_method" title="Arachni::Module::Auditor#audit_timeout_debug_msg (method)">#audit_timeout_debug_msg</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_phase_2-class_method" title="Arachni::Module::Auditor.audit_timeout_phase_2 (method)">audit_timeout_phase_2</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_stabilize-class_method" title="Arachni::Module::Auditor.audit_timeout_stabilize (method)">audit_timeout_stabilize</a></span>, <span class='object_link'><a href="../Module/Auditor.html#included-class_method" title="Arachni::Module::Auditor.included (method)">included</a></span>, <span class='object_link'><a href="../Module/Auditor.html#log-instance_method" title="Arachni::Module::Auditor#log (method)">#log</a></span>, <span class='object_link'><a href="../Module/Auditor.html#match_and_log-instance_method" title="Arachni::Module::Auditor#match_and_log (method)">#match_and_log</a></span>, <span class='object_link'><a href="../Module/Auditor.html#method_missing-instance_method" title="Arachni::Module::Auditor#method_missing (method)">#method_missing</a></span>, <span class='object_link'><a href="../Module/Auditor.html#skip%3F-instance_method" title="Arachni::Module::Auditor#skip? (method)">#skip?</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timeout_audit_blocks-class_method" title="Arachni::Module::Auditor.timeout_audit_blocks (method)">timeout_audit_blocks</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timeout_audit_run-class_method" title="Arachni::Module::Auditor.timeout_audit_run (method)">timeout_audit_run</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timeout_loaded_modules-class_method" title="Arachni::Module::Auditor.timeout_loaded_modules (method)">timeout_loaded_modules</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timing_attack-instance_method" title="Arachni::Module::Auditor#timing_attack (method)">#timing_attack</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Auditor.html#__rdiff_audit_id-instance_method" title="Arachni::Module::Auditor#__rdiff_audit_id (method)">#__rdiff_audit_id</a></span>, <span class='object_link'><a href="../Module/Auditor.html#__rdiff_audited%21-instance_method" title="Arachni::Module::Auditor#__rdiff_audited! (method)">#__rdiff_audited!</a></span>, <span class='object_link'><a href="../Module/Auditor.html#__rdiff_audited%3F-instance_method" title="Arachni::Module::Auditor#__rdiff_audited? (method)">#__rdiff_audited?</a></span>, <span class='object_link'><a href="../Module/Auditor.html#add_timeout_audit_block-class_method" title="Arachni::Module::Auditor.add_timeout_audit_block (method)">add_timeout_audit_block</a></span>, <span class='object_link'><a href="../Module/Auditor.html#add_timeout_candidate-class_method" title="Arachni::Module::Auditor.add_timeout_candidate (method)">add_timeout_candidate</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit-instance_method" title="Arachni::Module::Auditor#audit (method)">#audit</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_elems-instance_method" title="Arachni::Module::Auditor#audit_elems (method)">#audit_elems</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_rdiff-instance_method" title="Arachni::Module::Auditor#audit_rdiff (method)">#audit_rdiff</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_rdiff_elem-instance_method" title="Arachni::Module::Auditor#audit_rdiff_elem (method)">#audit_rdiff_elem</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout-instance_method" title="Arachni::Module::Auditor#audit_timeout (method)">#audit_timeout</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_debug_msg-instance_method" title="Arachni::Module::Auditor#audit_timeout_debug_msg (method)">#audit_timeout_debug_msg</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_phase_2-class_method" title="Arachni::Module::Auditor.audit_timeout_phase_2 (method)">audit_timeout_phase_2</a></span>, <span class='object_link'><a href="../Module/Auditor.html#audit_timeout_stabilize-class_method" title="Arachni::Module::Auditor.audit_timeout_stabilize (method)">audit_timeout_stabilize</a></span>, <span class='object_link'><a href="../Module/Auditor.html#call_on_timing_blocks-class_method" title="Arachni::Module::Auditor.call_on_timing_blocks (method)">call_on_timing_blocks</a></span>, <span class='object_link'><a href="../Module/Auditor.html#call_on_timing_blocks-instance_method" title="Arachni::Module::Auditor#call_on_timing_blocks (method)">#call_on_timing_blocks</a></span>, <span class='object_link'><a href="../Module/Auditor.html#current_timeout_audit_operations_cnt-class_method" title="Arachni::Module::Auditor.current_timeout_audit_operations_cnt (method)">current_timeout_audit_operations_cnt</a></span>, <span class='object_link'><a href="../Module/Auditor.html#included-class_method" title="Arachni::Module::Auditor.included (method)">included</a></span>, <span class='object_link'><a href="../Module/Auditor.html#log-instance_method" title="Arachni::Module::Auditor#log (method)">#log</a></span>, <span class='object_link'><a href="../Module/Auditor.html#log_issue-instance_method" title="Arachni::Module::Auditor#log_issue (method)">#log_issue</a></span>, <span class='object_link'><a href="../Module/Auditor.html#log_remote_file-instance_method" title="Arachni::Module::Auditor#log_remote_file (method)">#log_remote_file</a></span>, <span class='object_link'><a href="../Module/Auditor.html#log_remote_file_if_exists-instance_method" title="Arachni::Module::Auditor#log_remote_file_if_exists (method)">#log_remote_file_if_exists</a></span>, <span class='object_link'><a href="../Module/Auditor.html#match_and_log-instance_method" title="Arachni::Module::Auditor#match_and_log (method)">#match_and_log</a></span>, <span class='object_link'><a href="../Module/Auditor.html#method_missing-instance_method" title="Arachni::Module::Auditor#method_missing (method)">#method_missing</a></span>, <span class='object_link'><a href="../Module/Auditor.html#on_timing_attacks-class_method" title="Arachni::Module::Auditor.on_timing_attacks (method)">on_timing_attacks</a></span>, <span class='object_link'><a href="../Module/Auditor.html#redundant-instance_method" title="Arachni::Module::Auditor#redundant (method)">#redundant</a></span>, <span class='object_link'><a href="../Module/Auditor.html#register_results-instance_method" title="Arachni::Module::Auditor#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Module/Auditor.html#remote_file_exist%3F-instance_method" title="Arachni::Module::Auditor#remote_file_exist? (method)">#remote_file_exist?</a></span>, <span class='object_link'><a href="../Module/Auditor.html#running_timeout_attacks%3F-class_method" title="Arachni::Module::Auditor.running_timeout_attacks? (method)">running_timeout_attacks?</a></span>, <span class='object_link'><a href="../Module/Auditor.html#skip%3F-instance_method" title="Arachni::Module::Auditor#skip? (method)">#skip?</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timeout_audit_blocks-class_method" title="Arachni::Module::Auditor.timeout_audit_blocks (method)">timeout_audit_blocks</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timeout_audit_operations_cnt-class_method" title="Arachni::Module::Auditor.timeout_audit_operations_cnt (method)">timeout_audit_operations_cnt</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timeout_audit_run-class_method" title="Arachni::Module::Auditor.timeout_audit_run (method)">timeout_audit_run</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timeout_loaded_modules-class_method" title="Arachni::Module::Auditor.timeout_loaded_modules (method)">timeout_loaded_modules</a></span>, <span class='object_link'><a href="../Module/Auditor.html#timing_attack-instance_method" title="Arachni::Module::Auditor#timing_attack (method)">#timing_attack</a></span></p>
 
   
   
@@ -450,7 +458,7 @@ Tries to detect if a form is protected using an anti-CSRF token.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#uncap_buffer%21-instance_method" title="Arachni::UI::Output#uncap_buffer! (method)">#uncap_buffer!</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -463,15 +471,15 @@ Tries to detect if a form is protected using an anti-CSRF token.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-A new instance of CSRF
-</p>
+    
+<p>A new instance of CSRF</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -523,6 +531,10 @@ A new instance of CSRF
       <pre class="lines">
 
 
+257
+258
+259
+260
 261
 262
 263
@@ -555,26 +567,22 @@ A new instance of CSRF
 290
 291
 292
-293
-294
-295
-296
-297</pre>
+293</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 261</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 257</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CSRF</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>It uses 2-pass rDiff analysis to determine
             which forms affect business logic and audits them for CSRF.
-</span><span class='tstring_content'>            It requires a logged-in user's cookie-jar.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            It requires a logged-in user's cookie-jar.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:elements</span>       <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
             <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span>
         <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt; </span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:references</span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Wikipedia</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://en.wikipedia.org/wiki/Cross-site_request_forgery</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>OWASP</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -588,14 +596,14 @@ A new instance of CSRF
                  sufficiently verify whether a well-formed, valid, consistent
                  request was intentionally provided by the user who submitted the request.
                  This is due to a lack of secure anti-CSRF tokens to verify
-</span><span class='tstring_content'>                 the freshness of the submitted data.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+                 the freshness of the submitted data.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
             <span class='symbol'>:tags</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>csrf</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rdiff</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>form</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span><span class='comma'>,</span>
             <span class='symbol'>:cwe</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>352</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:severity</span>    <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Severity</span><span class='op'>::</span><span class='const'>HIGH</span><span class='comma'>,</span>
             <span class='symbol'>:cvssv2</span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:remedy_guidance</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>A unique token that guaranties freshness of submitted
                 data must be added to all web application elements that can affect
-</span><span class='tstring_content'>                business logic.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+                business logic.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
             <span class='symbol'>:remedy_code</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='rbrace'>}</span>
 
@@ -625,6 +633,8 @@ A new instance of CSRF
       <pre class="lines">
 
 
+234
+235
 236
 237
 238
@@ -644,14 +654,10 @@ A new instance of CSRF
 252
 253
 254
-255
-256
-257
-258
-259</pre>
+255</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 236</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 234</span>
 
 <span class='kw'>def</span> <span class='id __log'>__log</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
 
@@ -666,16 +672,14 @@ A new instance of CSRF
 
     <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
 
-    <span class='comment'># append the result to the results array
-</span>    <span class='id issue'>issue</span> <span class='op'>=</span> <span class='const'>Issue</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
+    <span class='id log_issue'>log_issue</span><span class='lparen'>(</span>
         <span class='symbol'>:var</span>          <span class='op'>=&gt;</span> <span class='id name'>name</span><span class='comma'>,</span>
         <span class='symbol'>:url</span>          <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span>
         <span class='symbol'>:elem</span>         <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span><span class='comma'>,</span>
         <span class='symbol'>:response</span>     <span class='op'>=&gt;</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span><span class='comma'>,</span>
-    <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='rparen'>)</span>
 
     <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found unprotected form with name '</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>' at '</span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='lbracket'>[</span> <span class='id issue'>issue</span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -691,9 +695,8 @@ A new instance of CSRF
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Checks if the str is an anti-CSRF token of base10/16/32/64.
-</p>
+    
+<p>Checks if the str is an anti-CSRF token of base10/16/32/64.</p>
 
 
   </div>
@@ -704,23 +707,24 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
       
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -734,6 +738,8 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
       <pre class="lines">
 
 
+193
+194
 195
 196
 197
@@ -770,12 +776,10 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
 228
 229
 230
-231
-232
-233</pre>
+231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 195</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 193</span>
 
 <span class='kw'>def</span> <span class='id csrf_token?'>csrf_token?</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
 
@@ -835,13 +839,14 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
       
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -855,6 +860,8 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
       <pre class="lines">
 
 
+174
+175
 176
 177
 178
@@ -865,12 +872,10 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
 183
 184
 185
-186
-187
-188</pre>
+186</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 176</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='id forms_include?'>forms_include?</span><span class='lparen'>(</span> <span class='id forms'>forms</span><span class='comma'>,</span> <span class='id form'>form</span> <span class='rparen'>)</span>
 
@@ -893,18 +898,16 @@ Checks if the str is an anti-CSRF token of base10/16/32/64.
       <div class="method_details ">
   <p class="signature " id="logged_in_only-instance_method">
   
-    - (<tt>Array</tt>) <strong>logged_in_only</strong>(logged_out) 
+    - (<tt><span class='object_link'><a href="../../Array.html" title="Array (class)">Array</a></span></tt>) <strong>logged_in_only</strong>(logged_out) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns forms that only appear when the user is logged-in.
-</p>
-<p>
-These are the forms that will most likely affect business logic.
-</p>
+    
+<p>Returns forms that only appear when the user is logged-in.</p>
+
+<p>These are the forms that will most likely affect business logic.</p>
 
 
   </div>
@@ -915,36 +918,35 @@ These are the forms that will most likely affect business logic.
   
     <li>
       
-        <span class='type'>(<tt>Array</tt>)</span>
-      
-      
         <span class='name'>forms_logged_out</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-forms that appear while logged-out in order to eliminate them.
-</p>
+        <div class='inline'>
+<p>forms that appear while logged-out in order to eliminate them.</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-forms to be checked for CSRF
-</p>
+        <div class='inline'>
+<p>forms to be checked for CSRF</p>
 </div>
       
     </li>
@@ -957,6 +959,8 @@ forms to be checked for CSRF
       <pre class="lines">
 
 
+157
+158
 159
 160
 161
@@ -970,12 +974,10 @@ forms to be checked for CSRF
 169
 170
 171
-172
-173
-174</pre>
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 159</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 157</span>
 
 <span class='kw'>def</span> <span class='id logged_in_only'>logged_in_only</span><span class='lparen'>(</span> <span class='id logged_out'>logged_out</span> <span class='rparen'>)</span>
     <span class='id csrf_forms'>csrf_forms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1092,9 +1094,7 @@ forms to be checked for CSRF
 105
 106
 107
-108
-109
-110</pre>
+108</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 67</span>
@@ -1107,9 +1107,7 @@ forms to be checked for CSRF
 
     <span class='comment'># setup opts with empty cookies
 </span>    <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-        <span class='symbol'>:headers</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='symbol'>:cookies</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='symbol'>:remove_id</span> <span class='op'>=&gt;</span> <span class='kw'>true</span>
     <span class='rbrace'>}</span>
 
@@ -1157,9 +1155,8 @@ forms to be checked for CSRF
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Tries to detect if a form is protected using an anti-CSRF token.
-</p>
+    
+<p>Tries to detect if a form is protected using an anti-CSRF token.</p>
 
 
   </div>
@@ -1170,30 +1167,30 @@ Tries to detect if a form is protected using an anti-CSRF token.
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>form</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
+      
         <span class='type'>(<tt>Bool</tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-true if the form if vulnerable, false otherwise
-</p>
+        <div class='inline'>
+<p>true if the form if vulnerable, false otherwise</p>
 </div>
       
     </li>
@@ -1206,6 +1203,8 @@ true if the form if vulnerable, false otherwise
       <pre class="lines">
 
 
+117
+118
 119
 120
 121
@@ -1232,12 +1231,10 @@ true if the form if vulnerable, false otherwise
 142
 143
 144
-145
-146
-147</pre>
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 119</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id unsafe?'>unsafe?</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
 
@@ -1278,9 +1275,9 @@ true if the form if vulnerable, false otherwise
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:16 2011 by 
+  Generated on Tue Dec  6 12:29:59 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

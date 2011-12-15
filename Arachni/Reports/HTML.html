@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Reports::HTML</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::Reports::HTML
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -72,12 +85,16 @@
     
   
     
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="HTML/Utils.html" title="Arachni::Reports::HTML::Utils (module)">Utils</a></span></dd>
+      
+    
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">reports/html.rb<span class="defines">,<br />
-  reports/plugin_formatters/html/profiler.rb,<br /> reports/plugin_formatters/html/healthmap.rb,<br /> reports/plugin_formatters/html/autologin.rb,<br /> reports/plugin_formatters/html/metamodules.rb,<br /> reports/plugin_formatters/html/waf_detector.rb,<br /> reports/plugin_formatters/html/content_types.rb,<br /> reports/plugin_formatters/html/http_dicattack.rb,<br /> reports/plugin_formatters/html/form_dicattack.rb,<br /> reports/plugin_formatters/html/cookie_collector.rb,<br /> reports/plugin_formatters/html/metaformatters/uniformity.rb,<br /> reports/plugin_formatters/html/metaformatters/timeout_notice.rb</span>
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">reports/html.rb<span class="defines">,<br />
+  reports/plugin_formatters/html/profiler.rb,<br /> reports/plugin_formatters/html/healthmap.rb,<br /> reports/plugin_formatters/html/discovery.rb,<br /> reports/plugin_formatters/html/autologin.rb,<br /> reports/plugin_formatters/html/uniformity.rb,<br /> reports/plugin_formatters/html/waf_detector.rb,<br /> reports/plugin_formatters/html/content_types.rb,<br /> reports/plugin_formatters/html/http_dicattack.rb,<br /> reports/plugin_formatters/html/timing_attacks.rb,<br /> reports/plugin_formatters/html/form_dicattack.rb,<br /> reports/plugin_formatters/html/cookie_collector.rb</span>
 </dd>
   
 </dl>
@@ -85,49 +102,43 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Creates an HTML report of the audit.
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.2.2
-</p>
+    
+<p>Creates an HTML report of the audit.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.3</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
    
     
-      <strong class="modules">Modules:</strong> <span class='object_link'><a href="HTML/PluginFormatters.html" title="Arachni::Reports::HTML::PluginFormatters (module)">PluginFormatters</a></span>
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="HTML/PluginFormatters.html" title="Arachni::Reports::HTML::PluginFormatters (module)">PluginFormatters</a></span>, <span class='object_link'><a href="HTML/Utils.html" title="Arachni::Reports::HTML::Utils (module)">Utils</a></span>
     
    
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="HTML/TemplateScope.html" title="Arachni::Reports::HTML::TemplateScope (class)">TemplateScope</a></span>
     
   
 </p>
 
   <h2>Constant Summary</h2>
   
-    <dl class="constants">
-      
-        <dt id="REPORT_FP_URL-constant" class="">REPORT_FP_URL =
-          
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://arachni.segfault.gr/false_positive</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-      
-    </dl>
+
+
   
-
-
+  
+  
+  
   
   
   
@@ -135,6 +146,17 @@ Creates an HTML report of the audit.
   <h3 class="inherited">Constants inherited from <span class='object_link'><a href="../Report/Base.html" title="Arachni::Report::Base (class)">Arachni::Report::Base</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="../Report/Base.html#REPORT_FP-constant" title="Arachni::Report::Base::REPORT_FP (constant)">REPORT_FP</a></span></p>
 
+  
+  
+  
+  
+
+
+  
+  
+  
+  
+  
   
   
   
@@ -196,9 +218,8 @@ Creates an HTML report of the audit.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-A new instance of HTML.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of HTML.</p>
 </div></span>
   
 </li>
@@ -220,9 +241,8 @@ A new instance of HTML.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Runs the HTML report.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Runs the HTML report.</p>
 </div></span>
   
 </li>
@@ -231,6 +251,16 @@ Runs the HTML report.
     </ul>
   
 
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="HTML/Utils.html" title="Arachni::Reports::HTML::Utils (module)">Utils</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="HTML/Utils.html#erb-instance_method" title="Arachni::Reports::HTML::Utils#erb (method)">#erb</a></span>, <span class='object_link'><a href="HTML/Utils.html#for_anomalous_metamodules-instance_method" title="Arachni::Reports::HTML::Utils#for_anomalous_metamodules (method)">#for_anomalous_metamodules</a></span></p>
 
   
   
@@ -250,7 +280,7 @@ Runs the HTML report.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#uncap_buffer%21-instance_method" title="Arachni::UI::Output#uncap_buffer! (method)">#uncap_buffer!</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -263,9 +293,8 @@ Runs the HTML report.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-A new instance of HTML
-</p>
+    
+<p>A new instance of HTML</p>
 
 
   </div>
@@ -276,10 +305,10 @@ A new instance of HTML
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../AuditStore.html" title="Arachni::AuditStore (class)">AuditStore</a></span></tt>)</span>
-      
-      
         <span class='name'>audit_store</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../AuditStore.html" title="Arachni::AuditStore (class)">AuditStore</a></span></tt>)</span>
       
       
       
@@ -287,22 +316,22 @@ A new instance of HTML
   
     <li>
       
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
         <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-options passed to the report
-</p>
+        <div class='inline'>
+<p>options passed to the report</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -310,15 +339,15 @@ options passed to the report
       <pre class="lines">
 
 
-38
-39
-40
-41
-42
-43</pre>
+134
+135
+136
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/html.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'reports/html.rb', line 134</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id audit_store'>audit_store</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
     <span class='ivar'>@audit_store</span>   <span class='op'>=</span> <span class='id audit_store'>audit_store</span>
@@ -351,23 +380,22 @@ options passed to the report
       <pre class="lines">
 
 
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83</pre>
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/html.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'reports/html.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
@@ -378,8 +406,7 @@ options passed to the report
         <span class='symbol'>:options</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
             <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptPath</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tpl</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Template to use.</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
                 <span class='const'>File</span><span class='period'>.</span><span class='id dirname'>dirname</span><span class='lparen'>(</span> <span class='kw'>__FILE__</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/html/default.erb</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span> <span class='rparen'>)</span><span class='comma'>,</span>
-            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptString</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>outfile</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Where to save the report.</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-                <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.html</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span> <span class='rparen'>)</span><span class='comma'>,</span>
+            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Report</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id outfile'>outfile</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.html</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
         <span class='rbracket'>]</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -403,56 +430,59 @@ options passed to the report
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Runs the HTML report.
-</p>
+    
+<p>Runs the HTML report.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68</pre>
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/html.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'reports/html.rb', line 144</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
     <span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Creating HTML report...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 
-    <span class='id report'>report</span> <span class='op'>=</span> <span class='const'>ERB</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tpl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-
-    <span class='id __prepare_data'>__prepare_data</span>
-
-    <span class='ivar'>@plugins</span> <span class='op'>=</span> <span class='id format_plugin_results'>format_plugin_results</span><span class='lparen'>(</span> <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id plugins'>plugins</span> <span class='rparen'>)</span>
+    <span class='id plugins'>plugins</span>   <span class='op'>=</span> <span class='id format_plugin_results'>format_plugin_results</span><span class='lparen'>(</span> <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id plugins'>plugins</span> <span class='rparen'>)</span>
+    <span class='ivar'>@base_path</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id dirname'>dirname</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tpl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
+        <span class='const'>File</span><span class='period'>.</span><span class='id basename'>basename</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tpl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.erb</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span>
 
     <span class='id conf'>conf</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='id conf'>conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>options</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id options'>options</span>
@@ -460,7 +490,14 @@ Runs the HTML report.
     <span class='id conf'>conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>revision</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id revision'>revision</span>
     <span class='id conf'>conf</span> <span class='op'>=</span> <span class='ivar'>@crypto</span><span class='period'>.</span><span class='id encrypt'>encrypt</span><span class='lparen'>(</span> <span class='id conf'>conf</span><span class='period'>.</span><span class='id to_yaml'>to_yaml</span> <span class='rparen'>)</span>
 
-    <span class='id __save'>__save</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>outfile</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id report'>report</span><span class='period'>.</span><span class='id result'>result</span><span class='lparen'>(</span> <span class='id binding'>binding</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='id params'>params</span> <span class='op'>=</span> <span class='id __prepare_data'>__prepare_data</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span>
+        <span class='symbol'>:conf</span>        <span class='op'>=&gt;</span> <span class='id conf'>conf</span><span class='comma'>,</span>
+        <span class='symbol'>:audit_store</span> <span class='op'>=&gt;</span> <span class='ivar'>@audit_store</span><span class='comma'>,</span>
+        <span class='symbol'>:plugins</span>     <span class='op'>=&gt;</span> <span class='id plugins'>plugins</span><span class='comma'>,</span>
+        <span class='symbol'>:base_path</span>   <span class='op'>=&gt;</span> <span class='ivar'>@base_path</span>
+    <span class='rparen'>)</span>
+
+    <span class='id __save'>__save</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>outfile</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id erb'>erb</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tpl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 
     <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Saved in \'</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>outfile</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -474,9 +511,9 @@ Runs the HTML report.
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:13 2011 by 
+  Generated on Tue Dec  6 12:29:58 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

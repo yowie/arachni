@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::UI::Web::Log</title>
-<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::UI::Web::Log
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -74,32 +87,29 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/ui/web/log.rb</dd>
+    <dd class="r2 last">lib/arachni/ui/web/log.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-A simple logger using DataMapper
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.1.1
-</p>
+    
+<p>A simple logger using DataMapper</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.1.1</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
    
@@ -110,6 +120,8 @@ A simple logger using DataMapper
     
   
 </p>
+
+
 
 
 
@@ -160,9 +172,8 @@ A simple logger using DataMapper
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-A new instance of Log.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Log.</p>
 </div></span>
   
 </li>
@@ -204,15 +215,15 @@ A new instance of Log.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-A new instance of Log
-</p>
+    
+<p>A new instance of Log</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -232,7 +243,7 @@ A new instance of Log
 54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/log.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/log.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id settings'>settings</span> <span class='rparen'>)</span>
 
@@ -297,7 +308,7 @@ A new instance of Log
 83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/log.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/log.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id method_missing'>method_missing</span><span class='lparen'>(</span> <span class='id sym'>sym</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
 
@@ -353,7 +364,7 @@ A new instance of Log
 58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/log.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/log.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id entry'>entry</span>
     <span class='const'>DataMapper</span><span class='period'>.</span><span class='id repository'>repository</span><span class='lparen'>(</span> <span class='symbol'>:log</span> <span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'>Entry</span> <span class='rbrace'>}</span>
@@ -368,9 +379,9 @@ A new instance of Log
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:13 2011 by 
+  Generated on Tue Dec  6 12:30:01 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

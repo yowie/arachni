@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Plugins::Proxy::Server</title>
-<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::Plugins::Proxy::Server
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -83,28 +96,28 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-We add our own type of WEBrick::HTTPProxyServer class that supports
+    
+<p>We add our own type of WEBrick::HTTPProxyServer class that supports
 notifications when the user tries to access a resource irrelevant to the
-scan and does not restrict header exchange.
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.1.1
-</p>
+scan and does not restrict header exchange.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.1.2</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
+
+  
+
 
   
 
@@ -224,7 +237,7 @@ scan and does not restrict header exchange.
     <span class='id src'>src</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id key'>key</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
         <span class='id key'>key</span> <span class='op'>=</span> <span class='id key'>key</span><span class='period'>.</span><span class='id downcase'>downcase</span>
         <span class='kw'>if</span> <span class='const'>HopByHop</span><span class='period'>.</span><span class='id member?'>member?</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span>          <span class='op'>||</span> <span class='comment'># RFC2616: 13.5.1
-</span>           <span class='id connections'>connections</span><span class='period'>.</span><span class='id member?'>member?</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span>       <span class='op'>||</span> <span class='comment'># RFC2616: 14.10
+</span>           <span class='id connections'>connections</span><span class='period'>.</span><span class='id member?'>member?</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span>       <span class='comment'>#|| # RFC2616: 14.10
 </span>           <span class='comment'># ShouldNotTransfer.member?(key)    # pragmatics
 </span>          <span class='ivar'>@logger</span><span class='period'>.</span><span class='id debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>choose_header: `</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id value'>value</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
           <span class='kw'>next</span>
@@ -318,9 +331,9 @@ scan and does not restrict header exchange.
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:17 2011 by 
+  Generated on Tue Dec  6 12:30:00 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

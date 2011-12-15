@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: String</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: String
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -74,33 +87,32 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/ruby/string.rb</dd>
+    <dd class="r2 last">lib/arachni/ruby/string.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Overloads the <span class='object_link'><a href="" title="String (class)">String</a></span> class.
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.1
-</p>
+    
+<p>Overloads the <span class='object_link'><a href="" title="String (class)">String</a></span> class.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.1</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
+
+
 
 
   
@@ -127,9 +139,8 @@ Overloads the <span class='object_link'><a href="" title="String (class)">String
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Gets the reverse diff between self and str on a word level.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets the reverse diff between self and str on a word level.</p>
 </div></span>
   
 </li>
@@ -174,23 +185,22 @@ Gets the reverse diff between self and str on a word level.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Gets the reverse diff between self and str on a word level.
-</p>
-<pre class="code">
-  self = &lt;&lt;END
-  This is the first test.
-  Not really sure what else to put here...
-  END
+    
+<p>Gets the reverse diff between self and str on a word level.</p>
 
-  str = &lt;&lt;END
-  This is the second test.
-  Not really sure what else to put here...
-  Boo-Yah!
-  END
-
-  self.rdiff( str )
-  # =&gt; &quot;This is the test.\nNot really sure what else to put here...\n&quot;</pre>
+<pre class="code"><span class='kw'>self</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;END</span>
+<span class='tstring_content'>This is the first test.
+Not really sure what else to put here...
+</span><span class='heredoc_end'>END
+</span>
+<span class='id str'>str</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;END</span>
+<span class='tstring_content'>This is the second test.
+Not really sure what else to put here...
+Boo-Yah!
+</span><span class='heredoc_end'>END
+</span>
+<span class='kw'>self</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='comment'># =&gt; &quot;This is the test.\nNot really sure what else to put here...\n&quot;</span></pre>
 
 
   </div>
@@ -201,23 +211,24 @@ Gets the reverse diff between self and str on a word level.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -253,7 +264,7 @@ Gets the reverse diff between self and str on a word level.
 63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ruby/string.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ruby/string.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
 
@@ -294,13 +305,14 @@ Gets the reverse diff between self and str on a word level.
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
       
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -324,7 +336,7 @@ Gets the reverse diff between self and str on a word level.
 72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ruby/string.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ruby/string.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id substring?'>substring?</span><span class='lparen'>(</span> <span class='id string'>string</span> <span class='rparen'>)</span>
     <span class='kw'>begin</span>
@@ -344,9 +356,9 @@ Gets the reverse diff between self and str on a word level.
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:13 2011 by 
+  Generated on Tue Dec  6 12:30:02 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

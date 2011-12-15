@@ -2,17 +2,27 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>File: CHANGELOG</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: CHANGELOG
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
 
   </head>
   <body>
@@ -31,17 +41,316 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
     <iframe id="search_frame"></iframe>
     
     <div id="content"><div id='filecontents'><h1>ChangeLog</h1>
+
+<h2>Version 0.4 <em>(Under development)</em></h2>
+
+<ul>
+<li>RPC Infrastructure (<strong>New</strong>)
+
+<ul>
+<li>Dispatcher
+
+<ul>
+<li>Dispatchers can now be connected to form a High Performance Grid and share scan workloads.</li>
+<li>Users can now specify a range of ports to be used for spawned Instances. [Issue #76]</li>
+<li>Now checks for signal availability before using <em>trap()</em>. (<strong>New</strong>) [Issue #71]</li>
+<li>Now uses Windows compliant filenames for the logs. (<strong>New</strong>) [Issue #70]</li>
+<li>Now includes <em>win32/process</em> to provide <em>Process.pid</em>/<em>fork()</em> (and others) under Windows platforms. (<strong>New</strong>)</li>
+</ul>
+</li>
+<li>Ruby's XMLRPC libraries have been replaced by <a href="https://github.com/Arachni/arachni-rpc">Arachni-RPC</a>,
+a light-weight and high-performance custom client/server RPC implementation.</li>
+</ul>
+</li>
+<li>Added <em>extras</em> directory holding components that are considered too specialised, dangerous or in some way unsuitable for
+  utilising without explicit user interaction. (<strong>New</strong>)
+
+<ul>
+<li>Modules
+
+<ul>
+<li>Recon
+
+<ul>
+<li>SVN Digger dirs -- Finds directories, based on wordlists created from open source repositories</li>
+<li>SVN Digger files -- Finds files, based on wordlists created from open source repositories</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Framework
+
+<ul>
+<li><em>stats()</em>
+
+<ul>
+<li>Fixed bug that caused the <em>current_page</em> to not be refreshed during timing attacks.</li>
+<li>Fixed bug that caused a less than 100% progress at the end of scans. [Issue #86]</li>
+</ul>
+</li>
+<li>Significantly reduced memory footprint by re-scheduling the consumption of Trainer generated pages.</li>
+</ul>
+</li>
+<li>User Interfaces
+
+<ul>
+<li>WebUI
+
+<ul>
+<li>Sinatra
+
+<ul>
+<li>Updated to use the light-weight and high-performance <a href="http://code.macournoyer.com/thin/">Thin</a> server.</li>
+<li>Added <a href="https://github.com/raggi/async_sinatra">async_sinatra</a> to allow for asynchronous responses.</li>
+</ul>
+</li>
+<li>Added support for HTTP Basic Auth (<strong>New</strong>)</li>
+<li>Updated screens to provide access to HPG (High Performance Grid) features:
+
+<ul>
+<li>Home
+
+<ul>
+<li>Added option to enable HPG mode on a per scan basis (<strong>New</strong>)</li>
+</ul>
+</li>
+<li>Dispatchers
+
+<ul>
+<li>Added node information (Nickname, Pipe ID, Weight, Cost). (<strong>New</strong>)</li>
+<li>Added neighbour inspection per dispatcher. (<strong>New</strong>)</li>
+<li>Added log inspection per dispatcher. (<strong>New</strong>)</li>
+<li>Improved accuracy of instance statuses.</li>
+<li>Added percentages for memory and CPU usage per instance. (<strong>New</strong>)</li>
+</ul>
+</li>
+<li>Instance (scan management)
+
+<ul>
+<li>Provides an average of all stats of scanner instances. (<strong>New</strong>)</li>
+<li>Added per instance progress bars. (<strong>New</strong>)</li>
+<li>Added per instance statuses. (<strong>New</strong>)</li>
+</ul>
+</li>
+<li>Settings
+
+<ul>
+<li>Added proxy settings. [Issue #74] (<strong>New</strong>)</li>
+<li>Added settings for restrict and extend paths options. (<strong>New</strong>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Fixed small typo in "Settings" screen. [Issue #62]</li>
+<li>Reports -- AFR report is now served straight-up to avoid corruption. [Issue #55]</li>
+<li>Add-ons -- Updated to use the new async libraries.</li>
+</ul>
+</li>
+<li>CLI
+
+<ul>
+<li>Improved interrupt handler, it now exits in a cleaner fashion and is more obedient.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>HTTP client
+
+<ul>
+<li>Added support for including custom headers. [Issue #90] (<strong>New</strong>)</li>
+<li>Refactored in order for all methods to use <em>request()</em>.</li>
+<li>Bug-fixed cookie preservation.</li>
+</ul>
+</li>
+<li>Spider
+
+<ul>
+<li>spider-first option removed and set to true by default.</li>
+<li>Added "--depth" parameter. (<strong>New</strong>)</li>
+<li>Fixed incorrect implementation of the inclusion filters.</li>
+<li>Now follows "Location" headers directly and bypasses the trainer.</li>
+<li>Added support for extending the crawl scope with a file that contains newline separated URLs. (<strong>New</strong>) [Issue #67]</li>
+<li>Added support for restricting the crawl scope with a file that contains newline separated URLs. (<strong>New</strong>)</li>
+<li>Made more resilient against malformed/non-standard URLs. [Issue #57]</li>
+</ul>
+</li>
+<li>Parser
+
+<ul>
+<li>Encoded URLs with fragments right after the host caused URI.parse to fail. [Issue #66]</li>
+<li>Auditable elements
+
+<ul>
+<li>If there are 2 or more password fields in a form an extra variation is added with
+the same inputs for all passwords in case it's a 'please repeat your password' thing. (<strong>New</strong>) [Issue #59]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Plugins
+
+<ul>
+<li>API -- Added <code>distributable?()</code> and <code>merge()</code> class methods which declare
+   if a plug-in can be distributed to all instances when running in Grid mode and merge an array of its own results respectively.
+
+<ul>
+<li>Distributable plug-ins:
+
+<ul>
+<li>Content-Types</li>
+<li>Cookie collector</li>
+<li>Healthmap</li>
+<li>Profiler</li>
+<li>AutoThrottle</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Proxy -- Fixed bug which caused some headers not to be forwarded. [Issue #64]</li>
+<li>Discovery (accompanied by appropriate report formatters). (<strong>New</strong>) [Issue #81]
+
+<ul>
+<li>Performs anomaly detection on issues logged by discovery modules and warns of the possibility of false positives where applicable.</li>
+</ul>
+</li>
+<li>Added the 'defaults' subdirectory which contains plug-ins that should be loaded by default.</li>
+<li>Added: (<strong>New</strong>)
+
+<ul>
+<li>ReScan -- It uses the AFR report of a previous scan to extract the sitemap in order to avoid a redundant crawl.</li>
+<li>BeepNotify -- Beeps when the scan finishes.</li>
+<li>LibNotify -- Uses the libnotify library to send notifications for each discovered issue and a summary at the end of the scan.</li>
+<li>EmailNotify -- Sends a notification (and optionally a report) over SMTP at the end of the scan.</li>
+<li>Manual verification -- Flags issues that require manual verification as untrusted in order to reduce the signal-to-noise ratio.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Reports
+
+<ul>
+<li>HTML report
+
+<ul>
+<li>Fixed replay forms to include URL params in the <em>action</em> attribute. [Issue #73]</li>
+<li>Refactored and broken into erb partials.</li>
+<li>Organised subsections into tabs. (<strong>New</strong>)</li>
+<li>HTML responses of logged Issues are now rendered on-demand. [Issue #88]</li>
+<li>Added graph showing issue trust totals. (<strong>New</strong>)</li>
+<li>The main issue graph shows trusted and untrusted issues in 2 different series.</li>
+<li>ALl JavaScript and CSS code is now included in the report for off-line viewing.</li>
+</ul>
+</li>
+<li>Added (<strong>New</strong>)
+
+<ul>
+<li>JSON -- Exports the audit results as a JSON serialized Hash.</li>
+<li>Marshal -- Exports the audit results as a Marshal serialized Hash.</li>
+<li>YAML -- Exports the audit results as a YAML serialized Hash.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Heeded Ruby's warnings (<em>ruby -w</em>).</li>
+<li>Modules
+
+<ul>
+<li>API
+
+<ul>
+<li>Auditor
+
+<ul>
+<li>Added helper methods for checking the existence of remote files and directories. (<strong>New</strong>)</li>
+<li>Added helper methods for issue logging. (<strong>New</strong>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Refactored modules replacing duplicate code with the new helper methods.</li>
+<li>Audit
+
+<ul>
+<li>XSS -- Updated to actually inject an element, parse the HTML response and
+look for that element before logging in order to eliminate false positives. [Issue #59]</li>
+<li>Path traversal -- Fixed broken regular expressions</li>
+<li>SQL Injection -- Fixed broken regular expressions</li>
+</ul>
+</li>
+<li>Recon
+
+<ul>
+<li>Added MixedResource detection module (<a href="http://googleonlinesecurity.blogspot.com/2011/06/trying-to-end-mixed-scripting.html">Reference</a>) (<strong>New</strong>) [Issue #56]</li>
+</ul>
+</li>
+<li>Extras (<strong>New</strong>)
+
+<ul>
+<li>SVN Digger dirs (Herman Stevens)</li>
+<li>SVN Digger files (Herman Stevens)</li>
+<li>RAFT dirs (Herman Stevens)</li>
+<li>RAFT files (Herman Stevens)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Meta-Modules
+
+<ul>
+<li>Have all been converted to regular plug-ins in order to make distribution across the Grid easier.</li>
+</ul>
+</li>
+<li>Dependencies
+
+<ul>
+<li>Added
+
+<ul>
+<li>Arachni-RPC</li>
+<li>EventMachine</li>
+<li>EM Synchrony</li>
+<li>AsyncSinatra</li>
+</ul>
+</li>
+<li>Updated
+
+<ul>
+<li>Typhoeus => 0.3.3</li>
+<li>Sys-proctable => 0.9.1</li>
+<li>Nokogiri => 1.5.0</li>
+<li>Sinatra => 1.3.1</li>
+<li>Datamapper => 1.1.0</li>
+<li>Json => 1.6.1</li>
+<li>Datamapper SQLite adapter => 1.1.0</li>
+<li>Net-SSH => 2.2.1</li>
+</ul>
+</li>
+<li>Removed
+
+<ul>
+<li>JSON (Provided by DataMapper)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
 
 <h2>Version 0.3 <em>(July 26, 2011)</em></h2>
 
@@ -106,13 +415,13 @@
 
 <ul>
 <li>Updated to support all element types (Links, Forms, Cookies, Headers).</li>
-<li>Optimized using the new "redundant()" method -- It will no longer audit elements that have been previously logged by the 'sqli' or 'sqli<em>blind</em>rdiff' modules.</li>
+<li>Optimized using the new "redundant()" method -- It will no longer audit elements that have been previously logged by the 'sqli' or 'sqli_blind_rdiff' modules.</li>
 </ul>
 </li>
 <li>OS command injection (timing)
 
 <ul>
-<li>Optimized using the new "redundant()" method -- It will no longer audit elements that have been previously logged by the 'os<em>cmd</em>injection' module.</li>
+<li>Optimized using the new "redundant()" method -- It will no longer audit elements that have been previously logged by the 'os_cmd_injection' module.</li>
 </ul>
 </li>
 <li>Code injection (timing)
@@ -236,7 +545,7 @@
 <h2>Version 0.2.2.2 <em>(March 22, 2011)</em></h2>
 
 <ul>
-<li>Added "arachni<em>web</em>autostart" under bin -- Automatically starts all systems required by the WebUI and makes shutting down everything easier too (Original by: Brandon Potter <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x62;&#112;&#x6f;&#x74;&#116;&#101;&#114;&#x38;&#55;&#x30;&#x35;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#98;&#x70;&#111;&#116;&#x74;&#101;&#x72;&#x38;&#x37;&#48;&#53;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a>)</li>
+<li>Added "arachni_web_autostart" under bin -- Automatically starts all systems required by the WebUI and makes shutting down everything easier too (Original by: Brandon Potter <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x62;&#x70;&#x6f;&#x74;&#116;&#x65;&#114;&#x38;&#x37;&#x30;&#53;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x62;&#112;&#x6f;&#x74;&#116;&#101;&#x72;&#56;&#55;&#x30;&#x35;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>)</li>
 <li>Overrided Nokogiri to revert to UTF-8 when it comes across an unknown charset instead of throwing exceptions</li>
 <li>Dependency versions are now defined explicitly [Issue #23]</li>
 <li>Updated to Sinatra v1.2.1</li>
@@ -276,7 +585,7 @@
 
 <ul>
 <li>Fixed exception on empty issue list</li>
-<li>Fixed encoding exceptions (cheers to Chris Weber <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x63;&#x68;&#x72;&#x69;&#115;&#64;&#x63;&#97;&#115;&#97;&#x62;&#x61;&#46;&#99;&#111;&#109;">&#x63;&#x68;&#x72;&#x69;&#x73;&#x40;&#99;&#97;&#x73;&#x61;&#98;&#97;&#x2e;&#x63;&#x6f;&#109;</a>)</li>
+<li>Fixed encoding exceptions (cheers to Chris Weber <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#x63;&#104;&#114;&#x69;&#115;&#x40;&#99;&#97;&#115;&#x61;&#98;&#97;&#46;&#x63;&#x6f;&#x6d;">&#99;&#x68;&#x72;&#x69;&#115;&#64;&#x63;&#x61;&#115;&#x61;&#98;&#x61;&#x2e;&#99;&#x6f;&#x6d;</a>)</li>
 </ul>
 </li>
 </ul>
@@ -586,12 +895,13 @@
 </ul>
 </li>
 </ul>
+
 </div></div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:11 2011 by 
+  Generated on Tue Dec  6 12:29:57 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

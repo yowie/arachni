@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Plugins::MetaModules</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::Plugins::MetaModules
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -95,7 +108,7 @@ meta-modules.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1
+@version: 0.1.1
 </p>
 
 
@@ -103,7 +116,26 @@ meta-modules.
 </div>
 <div class="tags">
   
+
 </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
   
   
@@ -257,7 +289,17 @@ A new instance of MetaModules.
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#distributable%3F-class_method" title="Arachni::Plugin::Base.distributable? (method)">distributable?</a></span>, <span class='object_link'><a href="../Plugin/Base.html#merge-class_method" title="Arachni::Plugin::Base.merge (method)">merge</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#hash_keys_to_str-instance_method" title="Arachni::Module::Utilities#hash_keys_to_str (method)">#hash_keys_to_str</a></span>, <span class='object_link'><a href="../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_decode-instance_method" title="Arachni::Module::Utilities#uri_decode (method)">#uri_decode</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_encode-instance_method" title="Arachni::Module::Utilities#uri_encode (method)">#uri_encode</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_parser-instance_method" title="Arachni::Module::Utilities#uri_parser (method)">#uri_parser</a></span>, <span class='object_link'><a href="../Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
 
   
   
@@ -299,28 +341,29 @@ A new instance of MetaModules
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-59
-60
-61
-62
-63
-64
-65
-66
-67
 68
 69
 70
-71</pre>
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
     <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
@@ -360,28 +403,28 @@ A new instance of MetaModules
       <pre class="lines">
 
 
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113</pre>
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Metamodules</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Performs high-level meta-analysis on the results of the scan using abstract meta-modules.
             Before reviewing the scan results you are strongly encouraged to take full advantage of the data gathered via meta-analysis.
-</span><span class='tstring_content'>            They will help you shed light into the inner workings of the web application and even caution you about possible false positives and/or inconclusive test results.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            They will help you shed light into the inner workings of the web application and even caution you about possible false positives and/or inconclusive test results.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.1</span><span class='tstring_end'>'</span></span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -408,16 +451,16 @@ A new instance of MetaModules
       <pre class="lines">
 
 
-99
-100
-101
-102</pre>
+110
+111
+112
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
-    <span class='comment'># let the meta-modules clean up after themselves
+    <span class='comment'># tell the metamodules to clean up after themselves
 </span>    <span class='ivar'>@inited</span><span class='period'>.</span><span class='id values'>values</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id meta'>meta</span><span class='op'>|</span> <span class='id meta'>meta</span><span class='period'>.</span><span class='id clean_up'>clean_up</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -438,26 +481,28 @@ A new instance of MetaModules
       <pre class="lines">
 
 
-73
-74
-75
-76
-77
-78
-79
-80
-81
 82
 83
-84</pre>
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id prepare'>prepare</span>
-    <span class='comment'># prepare all meta modules here to give them a chance to set up their hooks
+    <span class='comment'># let the metamodules know that the scan is about to start
+</span>    <span class='comment'># to give them a chance to set up their hooks
 </span>    <span class='comment'># and callbacks to other framework interfaces.
-</span>    <span class='ivar'>@inited</span><span class='period'>.</span><span class='id values'>values</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id meta'>meta</span><span class='op'>|</span> <span class='id meta'>meta</span><span class='period'>.</span><span class='id prepare'>prepare</span> <span class='rbrace'>}</span>
+</span>    <span class='ivar'>@inited</span><span class='period'>.</span><span class='id values'>values</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id meta'>meta</span><span class='op'>|</span> <span class='id meta'>meta</span><span class='period'>.</span><span class='id pre'>pre</span> <span class='rbrace'>}</span>
 
     <span class='comment'># we need to wait until the framework has finished running
 </span>    <span class='comment'># in order to work with the full report
@@ -484,29 +529,31 @@ A new instance of MetaModules
       <pre class="lines">
 
 
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
 96
-97</pre>
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span>
     <span class='id results'>results</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span>
-    <span class='comment'># run all meta-modules
+    <span class='comment'># let the metamodules know that the scan has finished
 </span>    <span class='ivar'>@inited</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id meta'>meta</span><span class='op'>|</span>
-        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id metaresult'>metaresult</span> <span class='op'>=</span> <span class='id meta'>meta</span><span class='period'>.</span><span class='id run'>run</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id metaresult'>metaresult</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-            <span class='id results'>results</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:results</span> <span class='op'>=&gt;</span> <span class='id metaresult'>metaresult</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id meta'>meta</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id metaresult'>metaresult</span> <span class='op'>=</span> <span class='id meta'>meta</span><span class='period'>.</span><span class='id post'>post</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id metaresult'>metaresult</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+            <span class='id results'>results</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:results</span> <span class='op'>=&gt;</span> <span class='id metaresult'>metaresult</span> <span class='rbrace'>}</span><span class='period'>.</span>
+                <span class='id merge'>merge</span><span class='lparen'>(</span> <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>MetaModules</span><span class='op'>::</span><span class='const'>Base</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id meta'>meta</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id info'>info</span> <span class='rparen'>)</span>
         <span class='kw'>end</span>
     <span class='rbrace'>}</span>
 
@@ -522,9 +569,9 @@ A new instance of MetaModules
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:16 2011 by 
+  Generated on Tue Nov  1 13:11:41 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.2).
 </div>
 
   </body>

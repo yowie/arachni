@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::MetaModules::AutoThrottle</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::MetaModules::AutoThrottle
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -94,7 +107,7 @@ Auto adjusts HTTP throughput for maximum network utilization.
                                      &lt;zapotek@segfault.gr&gt;
 </pre>
 <p>
-@version: 0.1.1
+@version: 0.1.2
 </p>
 
 
@@ -102,6 +115,7 @@ Auto adjusts HTTP throughput for maximum network utilization.
 </div>
 <div class="tags">
   
+
 </div>
   <h2>Constant Summary</h2>
   
@@ -134,6 +148,7 @@ easy on the throttle
 </div>
 <div class="tags">
   
+
 </div>
         </dt>
         <dd><pre class="code"><span class='int'>1</span></pre></dd>
@@ -150,9 +165,10 @@ hard on the breaks
 </div>
 <div class="tags">
   
+
 </div>
         </dt>
-        <dd><pre class="code"><span class='int'>3</span></pre></dd>
+        <dd><pre class="code"><span class='op'>-</span><span class='int'>3</span></pre></dd>
       
         <dt id="MIN_CONCURRENCY-constant" class="">MIN_CONCURRENCY =
           
@@ -166,6 +182,17 @@ hard on the breaks
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
   
   
   
@@ -213,7 +240,7 @@ A new instance of AutoThrottle.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
+      <a href="#pre-instance_method" title="#pre (instance method)">- (Object) <strong>pre</strong> </a>
     
 
     
@@ -243,7 +270,7 @@ A new instance of AutoThrottle.
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Base.html" title="Arachni::MetaModules::Base (class)">Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Base.html#clean_up-instance_method" title="Arachni::MetaModules::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="Base.html#info-class_method" title="Arachni::MetaModules::Base.info (method)">info</a></span>, <span class='object_link'><a href="Base.html#run-instance_method" title="Arachni::MetaModules::Base#run (method)">#run</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Base.html#clean_up-instance_method" title="Arachni::MetaModules::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="Base.html#info-class_method" title="Arachni::MetaModules::Base.info (method)">info</a></span>, <span class='object_link'><a href="Base.html#post-instance_method" title="Arachni::MetaModules::Base#post (method)">#post</a></span></p>
 
   
   
@@ -285,6 +312,7 @@ A new instance of AutoThrottle
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -316,9 +344,9 @@ A new instance of AutoThrottle
     
     
       <div class="method_details first">
-  <p class="signature first" id="prepare-instance_method">
+  <p class="signature first" id="pre-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prepare</strong> 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>pre</strong> 
   
 
   
@@ -362,7 +390,7 @@ A new instance of AutoThrottle
     <td>
       <pre class="code"><span class="info file"># File 'metamodules/autothrottle.rb', line 40</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span>
+<span class='kw'>def</span> <span class='id pre'>pre</span>
 
     <span class='comment'># run for each response as it arrives
 </span>    <span class='ivar'>@http</span><span class='period'>.</span><span class='id add_on_complete'>add_on_complete</span> <span class='lbrace'>{</span>
@@ -402,9 +430,9 @@ A new instance of AutoThrottle
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:19 2011 by 
+  Generated on Tue Nov  1 13:11:43 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.2).
 </div>
 
   </body>

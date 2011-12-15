@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Parser</title>
-<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::Parser
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -78,8 +91,8 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/parser/parser.rb<span class="defines">,<br />
-  lib/parser/page.rb,<br /> lib/parser/elements.rb</span>
+    <dd class="r1 last">lib/arachni/parser/parser.rb<span class="defines">,<br />
+  lib/arachni/parser/page.rb,<br /> lib/arachni/parser/elements.rb</span>
 </dd>
   
 </dl>
@@ -87,53 +100,47 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Analyzer class
-</p>
-<p>
-Analyzes HTML code extracting forms, links and cookies depending on user
-opts.<br/>
-</p>
-<p>
-It grabs <b>all</b> element attributes not just URLs and variables.<br/>
-All URLs are converted to absolute and URLs outside the domain are
-ignored.<br/>
-</p>
+    
+<p>Analyzer class</p>
+
+<p>Analyzes HTML code extracting forms, links and cookies depending on user
+opts.&lt;br/&gt;</p>
+
+<p>It grabs <b>all</b> element attributes not just URLs and
+variables.&lt;br/&gt; All URLs are converted to absolute and URLs outside
+the domain are ignored.&lt;br/&gt;</p>
+
 <h3>Forms</h3>
-<p>
-Form analysis uses both regular expressions and the Nokogiri parser<br/> in
-order to be able to handle badly written HTML code, such as not closed<br/>
-tags and tag overlaps.
-</p>
-<p>
-In order to ease audits, in addition to parsing forms into data
-structures<br/> like &#8220;select&#8221; and &#8220;option&#8221;, all
-auditable inputs are put under the<br/> &#8220;auditable&#8221; key.
-</p>
+
+<p>Form analysis uses both regular expressions and the Nokogiri
+parser&lt;br/&gt; in order to be able to handle badly written HTML code,
+such as not closed&lt;br/&gt; tags and tag overlaps.</p>
+
+<p>In order to ease audits, in addition to parsing forms into data
+structures&lt;br/&gt; like "select" and "option", all auditable inputs are
+put under the&lt;br/&gt; "auditable" key.</p>
+
 <h3>Links</h3>
-<p>
-Links are extracted using the Nokogiri parser.
-</p>
+
+<p>Links are extracted using the Nokogiri parser.</p>
+
 <h3>Cookies</h3>
-<p>
-Cookies are extracted from the HTTP headers and parsed by WEBrick::Cookie
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.2.1
-</p>
+
+<p>Cookies are extracted from the HTTP headers and parsed by WEBrick::Cookie</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.2.1</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
    
@@ -178,9 +185,8 @@ Cookies are extracted from the HTTP headers and parsed by WEBrick::Cookie
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Options instance.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Options instance.</p>
 </div></span>
   
 </li>
@@ -205,9 +211,8 @@ Options instance.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The url of the page.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The url of the page.</p>
 </div></span>
   
 </li>
@@ -215,6 +220,14 @@ The url of the page.
     
   </ul>
 
+
+
+  
+  
+  
+  
+  
+  
 
   
     <h2>
@@ -261,9 +274,8 @@ The url of the page.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Extracts cookies from an HTTP headers.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Extracts cookies from an HTTP headers.</p>
 </div></span>
   
 </li>
@@ -348,9 +360,8 @@ Extracts cookies from an HTTP headers.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Extracts the domain from a URI object.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Extracts the domain from a URI object.</p>
 </div></span>
   
 </li>
@@ -372,9 +383,8 @@ Extracts the domain from a URI object.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-TODO: Add support for radio buttons.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>TODO: Add support for radio buttons.</p>
 </div></span>
   
 </li>
@@ -396,9 +406,8 @@ TODO: Add support for radio buttons.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns a list of valid auditable HTTP header fields.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a list of valid auditable HTTP header fields.</p>
 </div></span>
   
 </li>
@@ -420,10 +429,9 @@ Returns a list of valid auditable HTTP header fields.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns <tt>true</tt> if <b>uri</b> is in the same domain as the page,
-returns <tt>false</tt> otherwise.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns <tt>true</tt> if <b>uri</b> is in the same domain as the page,
+returns <tt>false</tt> otherwise.</p>
 </div></span>
   
 </li>
@@ -468,9 +476,8 @@ returns <tt>false</tt> otherwise.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Constructor <br/> Instantiates Analyzer class with user options.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Constructor &lt;br/&gt; Instantiates Analyzer class with user options.</p>
 </div></span>
   
 </li>
@@ -492,9 +499,8 @@ Constructor <br/> Instantiates Analyzer class with user options.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Extracts variables and their values from a link.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Extracts variables and their values from a link.</p>
 </div></span>
   
 </li>
@@ -516,9 +522,8 @@ Extracts variables and their values from a link.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Extracts links from HTML document.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Extracts links from HTML document.</p>
 </div></span>
   
 </li>
@@ -540,9 +545,8 @@ Extracts links from HTML document.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Merges &#8216;cookies&#8217; with the cookiejar and returns it as an array.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Merges 'cookies' with the cookiejar and returns it as an array.</p>
 </div></span>
   
 </li>
@@ -585,9 +589,8 @@ Merges &#8216;cookies&#8217; with the cookiejar and returns it as an array.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Array of distinct links to follow.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Array of distinct links to follow.</p>
 </div></span>
   
 </li>
@@ -609,10 +612,51 @@ Array of distinct links to follow.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Runs the Analyzer and extracts forms, links and cookies.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Runs the Analyzer and extracts forms, links and cookies.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#skip%3F-instance_method" title="#skip? (instance method)">- (Boolean) <strong>skip?</strong>(path) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text%3F-instance_method" title="#text? (instance method)">- (Boolean) <strong>text?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -633,11 +677,31 @@ Runs the Analyzer and extracts forms, links and cookies.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Converts relative URL <b>link</b> into an absolute URL based on the
-location of the page.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Converts relative URL <b>link</b> into an absolute URL based on the
+location of the page.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#too_deep%3F-instance_method" title="#too_deep? (instance method)">- (Boolean) <strong>too_deep?</strong>(url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -654,7 +718,7 @@ location of the page.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Module/Utilities.html#hash_keys_to_str-instance_method" title="Arachni::Module::Utilities#hash_keys_to_str (method)">#hash_keys_to_str</a></span>, <span class='object_link'><a href="Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_decode-instance_method" title="Arachni::Module::Utilities#uri_decode (method)">#uri_decode</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_encode-instance_method" title="Arachni::Module::Utilities#uri_encode (method)">#uri_encode</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_parser-instance_method" title="Arachni::Module::Utilities#uri_parser (method)">#uri_parser</a></span>, <span class='object_link'><a href="Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
 
   
   
@@ -664,7 +728,7 @@ location of the page.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="UI/Output.html#uncap_buffer%21-instance_method" title="Arachni::UI::Output#uncap_buffer! (method)">#uncap_buffer!</a></span>, <span class='object_link'><a href="UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -677,9 +741,8 @@ location of the page.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Constructor <br/> Instantiates Analyzer class with user options.
-</p>
+    
+<p>Constructor &lt;br/&gt; Instantiates Analyzer class with user options.</p>
 
 
   </div>
@@ -690,16 +753,17 @@ Constructor <br/> Instantiates Analyzer class with user options.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="Options.html" title="Arachni::Options (class)">Options</a></span></tt>)</span>
-      
-      
         <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Options.html" title="Arachni::Options (class)">Options</a></span></tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -713,17 +777,25 @@ Constructor <br/> Instantiates Analyzer class with user options.
 102
 103
 104
-105</pre>
+105
+106
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span>
     <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='id opts'>opts</span>
 
+    <span class='ivar'>@code</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span>
     <span class='ivar'>@url</span>  <span class='op'>=</span> <span class='id url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span> <span class='rparen'>)</span>
     <span class='ivar'>@html</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span>
     <span class='ivar'>@response_headers</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id headers_hash'>headers_hash</span>
+
+    <span class='ivar'>@doc</span>   <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@paths</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -747,21 +819,21 @@ Constructor <br/> Instantiates Analyzer class with user options.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Options instance
-</p>
+    
+<p>Options instance</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="Options.html" title="Arachni::Options (class)">Options</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="Options.html" title="Arachni::Options (class)">Options</a></span></tt>)</span>
       
       
       
@@ -780,7 +852,7 @@ Options instance
 93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id opts'>opts</span>
   <span class='ivar'>@opts</span>
@@ -802,28 +874,27 @@ Options instance
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The url of the page
-</p>
+    
+<p>The url of the page</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-the url of the page
-</p>
+        <div class='inline'>
+<p>the url of the page</p>
 </div>
       
     </li>
@@ -841,7 +912,7 @@ the url of the page
 86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id url'>url</span>
   <span class='ivar'>@url</span>
@@ -871,17 +942,17 @@ the url of the page
       <pre class="lines">
 
 
-536
-537
-538
-539
-540
-541
-542
-543</pre>
+547
+548
+549
+550
+551
+552
+553
+554</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 536</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 547</span>
 
 <span class='kw'>def</span> <span class='id base'>base</span>
     <span class='kw'>begin</span>
@@ -899,15 +970,14 @@ the url of the page
       <div class="method_details ">
   <p class="signature " id="cookies-instance_method">
   
-    - (<tt>Array&lt;<span class='object_link'><a href="Parser/Element/Cookie.html" title="Arachni::Parser::Element::Cookie (class)">Element::Cookie</a></span>&gt;</tt>) <strong>cookies</strong> 
+    - (<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Parser/Element/Cookie.html" title="Arachni::Parser::Element::Cookie (class)">Element::Cookie</a></span>&gt;</tt>) <strong>cookies</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Extracts cookies from an HTTP headers
-</p>
+    
+<p>Extracts cookies from an HTTP headers</p>
 
 
   </div>
@@ -918,53 +988,51 @@ Extracts cookies from an HTTP headers
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>headers</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-HTTP headers
-</p>
+        <div class='inline'>
+<p>HTTP headers</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>html</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-the HTML code of the page
-</p>
+        <div class='inline'>
+<p>the HTML code of the page</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Parser/Element/Cookie.html" title="Arachni::Parser::Element::Cookie (class)">Element::Cookie</a></span>&gt;</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Parser/Element/Cookie.html" title="Arachni::Parser::Element::Cookie (class)">Element::Cookie</a></span>&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-of cookies
-</p>
+        <div class='inline'>
+<p>of cookies</p>
 </div>
       
     </li>
@@ -977,12 +1045,6 @@ of cookies
       <pre class="lines">
 
 
-395
-396
-397
-398
-399
-400
 401
 402
 403
@@ -1026,10 +1088,20 @@ of cookies
 441
 442
 443
-444</pre>
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 395</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 401</span>
 
 <span class='kw'>def</span> <span class='id cookies'>cookies</span>
 
@@ -1044,17 +1116,21 @@ of cookies
             <span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='op'>=</span> <span class='id elem'>elem</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
             <span class='id cookies_arr'>cookies_arr</span> <span class='op'>&lt;&lt;</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id k'>k</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id v'>v</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
-    <span class='kw'>rescue</span>
-    <span class='kw'>end</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+        <span class='comment'># ap e
+</span>        <span class='comment'># ap e.backtrace
+</span>    <span class='kw'>end</span>
 
 
     <span class='comment'># don't ask me why....
-</span>    <span class='kw'>if</span> <span class='ivar'>@response_headers</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id substring?'>substring?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+</span>    <span class='kw'>if</span> <span class='ivar'>@response_headers</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id downcase'>downcase</span><span class='period'>.</span><span class='id substring?'>substring?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
         <span class='kw'>begin</span>
             <span class='id cookies'>cookies</span> <span class='op'>&lt;&lt;</span> <span class='op'>::</span><span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id parse_set_cookies'>parse_set_cookies</span><span class='lparen'>(</span> <span class='ivar'>@response_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Set-Cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
             <span class='id cookies'>cookies</span> <span class='op'>&lt;&lt;</span> <span class='op'>::</span><span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id parse_set_cookies'>parse_set_cookies</span><span class='lparen'>(</span> <span class='ivar'>@response_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
-        <span class='kw'>rescue</span>
-            <span class='kw'>return</span> <span class='id cookies_arr'>cookies_arr</span>
+        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+            <span class='comment'># ap e
+</span>            <span class='comment'># ap e.backtrace
+</span>            <span class='kw'>return</span> <span class='id cookies_arr'>cookies_arr</span>
         <span class='kw'>end</span>
     <span class='kw'>end</span>
 
@@ -1099,12 +1175,12 @@ of cookies
       <pre class="lines">
 
 
-446
-447
-448</pre>
+456
+457
+458</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 446</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 456</span>
 
 <span class='kw'>def</span> <span class='id dir'>dir</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='const'>URI</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id dirname'>dirname</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -1127,13 +1203,13 @@ of cookies
       <pre class="lines">
 
 
-168
-169
-170
-171</pre>
+179
+180
+181
+182</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 179</span>
 
 <span class='kw'>def</span> <span class='id doc'>doc</span>
   <span class='kw'>return</span> <span class='ivar'>@doc</span> <span class='kw'>if</span> <span class='ivar'>@doc</span>
@@ -1158,13 +1234,14 @@ of cookies
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
       
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -1178,17 +1255,17 @@ of cookies
       <pre class="lines">
 
 
-578
-579
-580
-581
-582
-583
-584
-585</pre>
+598
+599
+600
+601
+602
+603
+604
+605</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 578</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 598</span>
 
 <span class='kw'>def</span> <span class='id exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='ivar'>@opts</span><span class='period'>.</span><span class='id exclude'>exclude</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -1212,9 +1289,8 @@ of cookies
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Extracts the domain from a URI object
-</p>
+    
+<p>Extracts the domain from a URI object</p>
 
 
   </div>
@@ -1225,23 +1301,24 @@ Extracts the domain from a URI object
   
     <li>
       
-        <span class='type'>(<tt>URI</tt>)</span>
-      
-      
         <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>URI</tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -1255,19 +1332,19 @@ Extracts the domain from a URI object
       <pre class="lines">
 
 
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576</pre>
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 567</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 587</span>
 
 <span class='kw'>def</span> <span class='id extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 
@@ -1287,18 +1364,16 @@ Extracts the domain from a URI object
       <div class="method_details ">
   <p class="signature " id="forms-instance_method">
   
-    - (<tt>Array&lt;<span class='object_link'><a href="Parser/Element/Form.html" title="Arachni::Parser::Element::Form (class)">Element::Form</a></span>&gt;</tt>) <strong>forms</strong>(html = nil) 
+    - (<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Parser/Element/Form.html" title="Arachni::Parser::Element::Form (class)">Element::Form</a></span>&gt;</tt>) <strong>forms</strong>(html = nil) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-TODO: Add support for radio buttons.
-</p>
-<p>
-Extracts forms from HTML document
-</p>
+    
+<p>TODO: Add support for radio buttons.</p>
+
+<p>Extracts forms from HTML document</p>
 
 
   </div>
@@ -1309,10 +1384,10 @@ Extracts forms from HTML document
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>html</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>nil</tt>)</em>
@@ -1321,20 +1396,20 @@ Extracts forms from HTML document
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Parser/Element/Form.html" title="Arachni::Parser::Element::Form (class)">Element::Form</a></span>&gt;</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Parser/Element/Form.html" title="Arachni::Parser::Element::Form (class)">Element::Form</a></span>&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-array of forms
-</p>
+        <div class='inline'>
+<p>array of forms</p>
 </div>
       
     </li>
@@ -1362,17 +1437,6 @@ array of forms
       <pre class="lines">
 
 
-270
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
 281
 282
 283
@@ -1436,10 +1500,18 @@ array of forms
 341
 342
 343
-344</pre>
+344
+345
+346
+347
+348
+349
+350
+351
+352</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 270</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 281</span>
 
 <span class='kw'>def</span> <span class='id forms'>forms</span><span class='lparen'>(</span> <span class='id html'>html</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
 
@@ -1477,7 +1549,7 @@ array of forms
         <span class='kw'>else</span>
             <span class='id action'>action</span> <span class='op'>=</span> <span class='id url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
         <span class='kw'>end</span>
-        <span class='id action'>action</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id action'>action</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+        <span class='id action'>action</span> <span class='op'>=</span> <span class='id uri_encode'>uri_encode</span><span class='lparen'>(</span> <span class='id action'>action</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
 
         <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id action'>action</span><span class='period'>.</span><span class='id clone'>clone</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
 
@@ -1488,10 +1560,7 @@ array of forms
                 <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id downcase'>downcase</span>
         <span class='kw'>end</span>
 
-        <span class='id url'>url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-        <span class='kw'>if</span> <span class='op'>!</span><span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-            <span class='kw'>next</span>
-        <span class='kw'>end</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id skip?'>skip?</span><span class='lparen'>(</span> <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
         <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>textarea</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id form_textareas'>form_textareas</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
         <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>select</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='id form_selects'>form_selects</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
@@ -1530,33 +1599,31 @@ array of forms
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns a list of valid auditable HTTP header fields.
-</p>
-<p>
-It&#8217;s more of a placeholder method, it doesn&#8217;t actually analyze
-anything.<br/> It&#8217;s a long shot that any of these will be vulnerable
-but better be safe than sorry.
-</p>
+    
+<p>Returns a list of valid auditable HTTP header fields.</p>
+
+<p>It's more of a placeholder method, it doesn't actually analyze
+anything.&lt;br/&gt; It's a long shot that any of these will be vulnerable
+but better be safe than sorry.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
+      
       
         <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-HTTP header fields
-</p>
+        <div class='inline'>
+<p>HTTP header fields</p>
 </div>
       
     </li>
@@ -1569,17 +1636,6 @@ HTTP header fields
       <pre class="lines">
 
 
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245
-246
 247
 248
 249
@@ -1587,10 +1643,21 @@ HTTP header fields
 251
 252
 253
-254</pre>
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 236</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 247</span>
 
 <span class='kw'>def</span> <span class='id headers'>headers</span><span class='lparen'>(</span> <span class='rparen'>)</span>
     <span class='id headers_arr'>headers_arr</span>  <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1625,22 +1692,22 @@ HTTP header fields
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns <tt>true</tt> if <b>uri</b> is in the same domain as the page,
-returns <tt>false</tt> otherwise
-</p>
+    
+<p>Returns <tt>true</tt> if <b>uri</b> is in the same domain as the page,
+returns <tt>false</tt> otherwise</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
       
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -1654,20 +1721,22 @@ returns <tt>false</tt> otherwise
       <pre class="lines">
 
 
-550
-551
-552
-553
-554
-555
-556
-557
-558</pre>
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 550</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 569</span>
 
 <span class='kw'>def</span> <span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span>
+
     <span class='id curi'>curi</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id uri'>uri</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 
     <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id follow_subdomains'>follow_subdomains</span> <span class='rparen'>)</span>
@@ -1695,13 +1764,14 @@ returns <tt>false</tt> otherwise
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
       
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -1715,24 +1785,26 @@ returns <tt>false</tt> otherwise
       <pre class="lines">
 
 
-587
-588
-589
-590
-591
-592
-593
-594
-595</pre>
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 587</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 607</span>
 
 <span class='kw'>def</span> <span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id include'>include</span><span class='period'>.</span><span class='id empty?'>empty?</span>
 
     <span class='ivar'>@opts</span><span class='period'>.</span><span class='id include'>include</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id pattern'>pattern</span><span class='op'>|</span>
+        <span class='id pattern'>pattern</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id pattern'>pattern</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id pattern'>pattern</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span>
         <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>=~</span> <span class='id pattern'>pattern</span>
     <span class='rbrace'>}</span>
     <span class='kw'>return</span> <span class='kw'>false</span>
@@ -1751,9 +1823,8 @@ returns <tt>false</tt> otherwise
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Extracts variables and their values from a link
-</p>
+    
+<p>Extracts variables and their values from a link</p>
 
 
   </div>
@@ -1764,30 +1835,30 @@ Extracts variables and their values from a link
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>link</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
+      
         <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
-      
         &mdash;
-        <div class='inline'><p>
-name=>value pairs
-</p>
+        <div class='inline'>
+<p>name=&gt;value pairs</p>
 </div>
       
     </li>
@@ -1807,8 +1878,6 @@ name=>value pairs
       <pre class="lines">
 
 
-481
-482
 483
 484
 485
@@ -1824,10 +1893,12 @@ name=>value pairs
 495
 496
 497
-498</pre>
+498
+499
+500</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 481</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 483</span>
 
 <span class='kw'>def</span> <span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='op'>!</span><span class='id link'>link</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>end</span>
@@ -1855,15 +1926,14 @@ name=>value pairs
       <div class="method_details ">
   <p class="signature " id="links-instance_method">
   
-    - (<tt>Array&lt;<span class='object_link'><a href="Parser/Element/Link.html" title="Arachni::Parser::Element::Link (class)">Element::Link</a></span>&gt;</tt>) <strong>links</strong> 
+    - (<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Parser/Element/Link.html" title="Arachni::Parser::Element::Link (class)">Element::Link</a></span>&gt;</tt>) <strong>links</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Extracts links from HTML document
-</p>
+    
+<p>Extracts links from HTML document</p>
 
 
   </div>
@@ -1874,30 +1944,30 @@ Extracts links from HTML document
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>html</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Parser/Element/Link.html" title="Arachni::Parser::Element::Link (class)">Element::Link</a></span>&gt;</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Parser/Element/Link.html" title="Arachni::Parser::Element::Link (class)">Element::Link</a></span>&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-of links
-</p>
+        <div class='inline'>
+<p>of links</p>
 </div>
       
     </li>
@@ -1917,14 +1987,6 @@ of links
       <pre class="lines">
 
 
-355
-356
-357
-358
-359
-360
-361
-362
 363
 364
 365
@@ -1947,10 +2009,16 @@ of links
 382
 383
 384
-385</pre>
+385
+386
+387
+388
+389
+390
+391</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 355</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 363</span>
 
 <span class='kw'>def</span> <span class='id links'>links</span>
 
@@ -1961,9 +2029,7 @@ of links
         <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
         <span class='kw'>if</span> <span class='op'>!</span><span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
-        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
-        <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
-        <span class='kw'>if</span> <span class='op'>!</span><span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id skip?'>skip?</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
         <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
         <span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
@@ -1991,15 +2057,14 @@ of links
       <div class="method_details ">
   <p class="signature " id="merge_with_cookiejar-instance_method">
   
-    - (<tt>Array&lt;<span class='object_link'><a href="Parser/Element/Cookie.html" title="Arachni::Parser::Element::Cookie (class)">Element::Cookie</a></span>&gt;</tt>) <strong>merge_with_cookiejar</strong>(cookies) 
+    - (<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Parser/Element/Cookie.html" title="Arachni::Parser::Element::Cookie (class)">Element::Cookie</a></span>&gt;</tt>) <strong>merge_with_cookiejar</strong>(cookies) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Merges &#8216;cookies&#8217; with the cookiejar and returns it as an array
-</p>
+    
+<p>Merges 'cookies' with the cookiejar and returns it as an array</p>
 
 
   </div>
@@ -2010,30 +2075,30 @@ Merges &#8216;cookies&#8217; with the cookiejar and returns it as an array
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
-      
-      
         <span class='name'>cookies</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;Hash&gt;</tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Parser/Element/Cookie.html" title="Arachni::Parser::Element::Cookie (class)">Element::Cookie</a></span>&gt;</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Parser/Element/Cookie.html" title="Arachni::Parser::Element::Cookie (class)">Element::Cookie</a></span>&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-the merged cookies
-</p>
+        <div class='inline'>
+<p>the merged cookies</p>
 </div>
       
     </li>
@@ -2046,23 +2111,23 @@ the merged cookies
       <pre class="lines">
 
 
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
 222
 223
-224</pre>
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 211</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 222</span>
 
 <span class='kw'>def</span> <span class='id merge_with_cookiejar'>merge_with_cookiejar</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id cookies'>cookies</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id cookies'>cookies</span>
@@ -2096,17 +2161,6 @@ the merged cookies
       <pre class="lines">
 
 
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
 184
 185
 186
@@ -2125,10 +2179,21 @@ the merged cookies
 199
 200
 201
-202</pre>
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 184</span>
 
 <span class='kw'>def</span> <span class='id merge_with_cookiestore'>merge_with_cookiestore</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
 
@@ -2168,27 +2233,27 @@ the merged cookies
       <div class="method_details ">
   <p class="signature " id="paths-instance_method">
   
-    - (<tt>Array&lt;URI&gt;</tt>) <strong>paths</strong> 
+    - (<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;URI&gt;</tt>) <strong>paths</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Array of distinct links to follow
-</p>
+    
+<p>Array of distinct links to follow</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;URI&gt;</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span>&lt;URI&gt;</tt>)</span>
       
       
       
@@ -2202,40 +2267,24 @@ Array of distinct links to follow
       <pre class="lines">
 
 
-455
-456
-457
-458
-459
-460
-461
-462
-463
-464
 465
 466
 467
 468
 469
-470</pre>
+470
+471
+472</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 455</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 465</span>
 
 <span class='kw'>def</span> <span class='id paths'>paths</span>
   <span class='kw'>return</span> <span class='ivar'>@paths</span> <span class='kw'>unless</span> <span class='ivar'>@paths</span><span class='period'>.</span><span class='id nil?'>nil?</span>
   <span class='ivar'>@paths</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='kw'>return</span> <span class='ivar'>@paths</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id doc'>doc</span>
 
-  <span class='id run_extractors'>run_extractors</span><span class='lparen'>(</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-      <span class='op'>|</span><span class='id path'>path</span><span class='op'>|</span>
-      <span class='kw'>next</span> <span class='kw'>if</span> <span class='id path'>path</span><span class='period'>.</span><span class='id nil?'>nil?</span> <span class='kw'>or</span> <span class='id path'>path</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-      <span class='id abs'>abs</span> <span class='op'>=</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span> <span class='kw'>rescue</span> <span class='kw'>next</span>
-
-      <span class='ivar'>@paths</span> <span class='op'>&lt;&lt;</span> <span class='id abs'>abs</span> <span class='kw'>if</span> <span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id abs'>abs</span> <span class='rparen'>)</span>
-  <span class='rbrace'>}</span>
-
-  <span class='ivar'>@paths</span><span class='period'>.</span><span class='id uniq!'>uniq!</span>
+  <span class='ivar'>@paths</span> <span class='op'>=</span> <span class='id run_extractors'>run_extractors</span>
   <span class='kw'>return</span> <span class='ivar'>@paths</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2252,21 +2301,21 @@ Array of distinct links to follow
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Runs the Analyzer and extracts forms, links and cookies
-</p>
+    
+<p>Runs the Analyzer and extracts forms, links and cookies</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="Parser/Page.html" title="Arachni::Parser::Page (class)">Page</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="Parser/Page.html" title="Arachni::Parser::Page (class)">Page</a></span></tt>)</span>
       
       
       
@@ -2280,10 +2329,6 @@ Runs the Analyzer and extracts forms, links and cookies
       <pre class="lines">
 
 
-112
-113
-114
-115
 116
 117
 118
@@ -2334,17 +2379,22 @@ Runs the Analyzer and extracts forms, links and cookies
 163
 164
 165
-166</pre>
+166
+167
+168
+169
+170
+171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span>
 
     <span class='comment'># non text files won't contain any auditable elements
-</span>    <span class='id type'>type</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id content_type'>content_type</span><span class='lparen'>(</span> <span class='ivar'>@response_headers</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id type'>type</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id type'>type</span><span class='period'>.</span><span class='id substring?'>substring?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>text</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+</span>    <span class='kw'>if</span> <span class='op'>!</span><span class='id text?'>text?</span>
         <span class='kw'>return</span> <span class='const'>Page</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
+            <span class='symbol'>:code</span>        <span class='op'>=&gt;</span> <span class='ivar'>@code</span><span class='comma'>,</span>
             <span class='symbol'>:url</span>         <span class='op'>=&gt;</span> <span class='ivar'>@url</span><span class='comma'>,</span>
             <span class='symbol'>:query_vars</span>  <span class='op'>=&gt;</span> <span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span><span class='comma'>,</span>
             <span class='symbol'>:html</span>        <span class='op'>=&gt;</span> <span class='ivar'>@html</span><span class='comma'>,</span>
@@ -2381,6 +2431,7 @@ Runs the Analyzer and extracts forms, links and cookies
     <span class='kw'>end</span>
 
     <span class='kw'>return</span> <span class='const'>Page</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
+        <span class='symbol'>:code</span>        <span class='op'>=&gt;</span> <span class='ivar'>@code</span><span class='comma'>,</span>
         <span class='symbol'>:url</span>         <span class='op'>=&gt;</span> <span class='ivar'>@url</span><span class='comma'>,</span>
         <span class='symbol'>:query_vars</span>  <span class='op'>=&gt;</span> <span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span><span class='comma'>,</span>
         <span class='symbol'>:html</span>        <span class='op'>=&gt;</span> <span class='ivar'>@html</span><span class='comma'>,</span>
@@ -2400,45 +2451,27 @@ Runs the Analyzer and extracts forms, links and cookies
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="to_absolute-instance_method">
+  <p class="signature " id="skip?-instance_method">
   
-    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>to_absolute</strong>(link) 
+    - (<tt>Boolean</tt>) <strong>skip?</strong>(path) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Converts relative URL <b>link</b> into an absolute URL based on the
-location of the page
-</p>
-
+    
 
   </div>
 </div>
 <div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
   
-    <li>
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-        <span class='name'>link</span>
-      
-      
-      
-    </li>
-  
-</ul>
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -2452,8 +2485,146 @@ location of the page
       <pre class="lines">
 
 
-508
-509
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 618</span>
+
+<span class='kw'>def</span> <span class='id skip?'>skip?</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id path'>path</span>
+
+    <span class='kw'>begin</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id too_deep?'>too_deep?</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span>
+    <span class='kw'>rescue</span>
+        <span class='kw'>true</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="text?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>text?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+173
+174
+175
+176
+177</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 173</span>
+
+<span class='kw'>def</span> <span class='id text?'>text?</span>
+    <span class='id type'>type</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id content_type'>content_type</span><span class='lparen'>(</span> <span class='ivar'>@response_headers</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id type'>type</span>
+    <span class='kw'>return</span> <span class='id type'>type</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id substring?'>substring?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>text</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_absolute-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>to_absolute</strong>(link) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Converts relative URL <b>link</b> into an absolute URL based on the
+location of the page</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>link</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
 510
 511
 512
@@ -2477,36 +2648,114 @@ location of the page
 530
 531
 532
-533</pre>
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/parser/parser.rb', line 508</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 510</span>
 
 <span class='kw'>def</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span>
 
     <span class='kw'>begin</span>
-        <span class='kw'>if</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span>
+        <span class='id link'>link</span> <span class='op'>=</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id uri_parser'>uri_parser</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span>
             <span class='kw'>return</span> <span class='id link'>link</span>
         <span class='kw'>end</span>
     <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
-        <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id link'>link</span><span class='period'>.</span><span class='id nil?'>nil?</span>
+        <span class='comment'># ap e
+</span>        <span class='comment'># ap e.backtrace
+</span>        <span class='kw'>return</span> <span class='kw'>nil</span>
     <span class='kw'>end</span>
 
-    <span class='comment'># remove anchor
-</span>    <span class='id link'>link</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>#[a-zA-Z0-9_-]*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='kw'>begin</span>
+        <span class='comment'># remove anchor
+</span>        <span class='id link'>link</span> <span class='op'>=</span> <span class='id uri_encode'>uri_encode</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>#[a-zA-Z0-9_-]*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 
-    <span class='kw'>if</span> <span class='id url'>url</span> <span class='op'>=</span> <span class='id base'>base</span>
-        <span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id url'>url</span> <span class='op'>=</span> <span class='id base'>base</span>
+            <span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='id uri_parser'>uri_parser</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='kw'>else</span>
+            <span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='id uri_parser'>uri_parser</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span>
+        <span class='kw'>end</span>
+
+        <span class='id relative'>relative</span> <span class='op'>=</span> <span class='id uri_parser'>uri_parser</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span>
+        <span class='id absolute'>absolute</span> <span class='op'>=</span> <span class='id base_url'>base_url</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id relative'>relative</span> <span class='rparen'>)</span>
+
+        <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>&amp;&amp;</span> <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id path'>path</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+
+        <span class='kw'>return</span> <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+        <span class='comment'># ap e
+</span>        <span class='comment'># ap e.backtrace
+</span>        <span class='kw'>return</span> <span class='kw'>nil</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="too_deep?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>too_deep?</strong>(url) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+557
+558
+559
+560
+561
+562
+563</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 557</span>
+
+<span class='kw'>def</span> <span class='id too_deep?'>too_deep?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id depth_limit'>depth_limit</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id depth_limit'>depth_limit</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>&lt;=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span><span class='period'>.</span><span class='id count'>count</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>true</span>
     <span class='kw'>else</span>
-        <span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>false</span>
     <span class='kw'>end</span>
-
-    <span class='id relative'>relative</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span>
-    <span class='id absolute'>absolute</span> <span class='op'>=</span> <span class='id base_url'>base_url</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id relative'>relative</span> <span class='rparen'>)</span>
-
-    <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>&amp;&amp;</span> <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id path'>path</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-
-    <span class='kw'>return</span> <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id to_s'>to_s</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2518,9 +2767,9 @@ location of the page
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:14 2011 by 
+  Generated on Tue Dec  6 12:30:02 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

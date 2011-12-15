@@ -2,17 +2,27 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>File: HACKING</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: HACKING
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
 
   </head>
   <body>
@@ -31,11 +41,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -55,9 +68,11 @@ adhere to the following guidelines:</p>
 <li>Maximum line length 75-80 columns, try not to exceed that limit.</li>
 <li>{} instead of "<code>do</code>" for blocks and keep the iterator var in it's own line.<br/>
  Like so:
-     arr.each {
-         |item|
-     }</li>
+
+<pre class="code"> <span class='id arr'>arr</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+     <span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span>
+ <span class='rbrace'>}</span>
+</pre></li>
 </ul>
 
 
@@ -144,12 +159,13 @@ Plug-ins run in parallel to the framework and are executed right before the scan
 <h2>Licensing</h2>
 
 <p>All code must be contributed with a GPL v2 compatible license.<br/>
-Do place licensing information in your code files.</p></div></div>
+Do place licensing information in your code files.</p>
+</div></div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:11 2011 by 
+  Generated on Tue Dec  6 12:29:57 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

@@ -2,17 +2,27 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Arachni - Web Application Security Scanner Framework</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
 
   </head>
   <body>
@@ -31,22 +41,130 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><h1>Arachni - Web Application Security Scanner Framework</h1>
+    <div id="content"><div id='filecontents'><h1>Experimental (unstable) branch</h1>
+
+<p>This branch holds experimental code which is planned for release once it has been properly tested.</p>
+
+<p>The newest addition to the branch is the brand new High Performance Grid.</p>
+
+<h2>Installation</h2>
+
+<p>You first need to install EventMachine from source:</p>
+
+<pre class="code">git clone git://github.com/eventmachine/eventmachine.git
+cd eventmachine
+gem build eventmachine.gemspec
+gem install eventmachine-1.0.0.beta.4.gem
+</pre>
+
+<p>Secondly, you need to install the Arachni-RPC system from source (it's still under development so there's no gem yet):</p>
+
+<pre class="code"><span class='id git'>git</span> <span class='id clone'>clone</span> <span class='label'>git:</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/github</span></span><span class='period'>.</span><span class='id com'>com</span><span class='op'>/</span><span class='const'>Arachni</span><span class='op'>/</span><span class='id arachni'>arachni</span><span class='op'>-</span><span class='id rpc'>rpc</span><span class='period'>.</span><span class='id git'>git</span>
+<span class='id cd'>cd</span> <span class='id arachni'>arachni</span><span class='op'>-</span><span class='id rpc'>rpc</span>
+<span class='id rake'>rake</span> <span class='id install'>install</span>
+</pre>
+
+<p>and</p>
+
+<pre class="code"><span class='id git'>git</span> <span class='id clone'>clone</span> <span class='label'>git:</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/github</span></span><span class='period'>.</span><span class='id com'>com</span><span class='op'>/</span><span class='const'>Arachni</span><span class='op'>/</span><span class='id arachni'>arachni</span><span class='op'>-</span><span class='id rpc'>rpc</span><span class='op'>-</span><span class='id em'>em</span><span class='period'>.</span><span class='id git'>git</span>
+<span class='id cd'>cd</span> <span class='id arachni'>arachni</span><span class='op'>-</span><span class='id rpc'>rpc</span><span class='op'>-</span><span class='id em'>em</span>
+<span class='id rake'>rake</span> <span class='id install'>install</span>
+</pre>
+
+<br/><br/>
+
+
+<p>Then things go as usual:</p>
+
+<pre class="code"><span class='id git'>git</span> <span class='id clone'>clone</span> <span class='label'>git:</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/github</span></span><span class='period'>.</span><span class='id com'>com</span><span class='op'>/</span><span class='const'>Zapotek</span><span class='op'>/</span><span class='id arachni'>arachni</span><span class='period'>.</span><span class='id git'>git</span>
+<span class='id cd'>cd</span> <span class='id arachni'>arachni</span>
+<span class='id git'>git</span> <span class='id checkout'>checkout</span> <span class='id experimental'>experimental</span>
+<span class='id rake'>rake</span> <span class='id install'>install</span>
+</pre>
+
+<p>If you encounter a Typhoeus related error while running Arachni issue:</p>
+
+<pre class="code"><span class='id gem'>gem</span> <span class='id clean'>clean</span>
+</pre>
+
+<h2>Setting up the High Performance Grid (HPG)</h2>
+
+<p>Pretty much the same as setting up the WebUI but instead of running only one Dispatcher you can run as many as you can handle.</p>
+
+<p>In order to connect the Dispatchers into a grid you'll need to:</p>
+
+<ul>
+<li>specify an IP address or hostname on which the Dispatcher will be accessible by the rest of the Grid nodes (i.e. other Dispatchers)</li>
+<li>specify a neighbouring Dispatcher when running a new one</li>
+<li>use different Pipe IDs -- these are used to identify independent bandwidth lines to the target in order to split the workload in a way that will aggregate the collective bandwidth</li>
+</ul>
+
+
+<p>After that they will build their network themselves.</p>
+
+<p>Here's how it's done:</p>
+
+<p>Firing up the first one:</p>
+
+<pre class="code">arachni_rpcd --pipe-id=&quot;Pipe 1&quot; --nickname=&quot;My Dispatcher&quot; --address=192.168.0.1
+</pre>
+
+<p>Adding more to make a Grid:</p>
+
+<pre class="code">arachni_rpcd --pipe-id=&quot;Pipe 2&quot; --nickname=&quot;My second Dispatcher&quot; --address=192.168.0.2 --neighbour=192.168.0.1:7331
+</pre>
+
+<p>Lather, rinse, repeat:</p>
+
+<pre class="code">arachni_rpcd --pipe-id=&quot;Pipe 3&quot; --nickname=&quot;My third Dispatcher&quot; --address=192.168.0.3 --neighbour=192.168.0.2:7331
+
+arachni_rpcd --pipe-id=&quot;Pipe 4&quot; --nickname=&quot;My forth Dispatcher&quot; --address=192.168.0.4 --neighbour=192.168.0.3:7331
+</pre>
+
+<p>That sort of setup assumes that each Dispatcher is on a machine with independent bandwidth lines (to the target website at least).</p>
+
+<p>If you want to, out of curiosity, start a few Dispatchers on localhost you will need to specify the ports:</p>
+
+<pre class="code">arachni_rpcd --pipe-id=&quot;Pipe 1&quot; --nickname=&quot;My Dispatcher&quot;
+
+arachni_rpcd --pipe-id=&quot;Pipe 2&quot; --nickname=&quot;My second Dispatcher&quot; --port=1111 --neighbour=localhost:7331
+
+arachni_rpcd --pipe-id=&quot;Pipe 3&quot; --nickname=&quot;My third Dispatcher&quot; --port=2222 --neighbour=localhost:1111
+</pre>
+
+<p>etc.</p>
+
+<h2>Usage</h2>
+
+<p>After setting everything up you simply start the WebUI as usual.<br/>
+When it asks you to specify a Dispatcher you pick one, enter it and the WebUI will grab its neighbours automatically.</p>
+
+<p>Despite the fact that there haven't been any dramatic changes to the front-end of the WebUI you'll immediatly notice a sizable<br/>
+performance increase, both when browsing around and when monitoring running scans.<br/></p>
+
+<p>You can find some more technical stuff here: <a href="http://trainofthought.segfault.gr/2011/07/29/arachni-grid-draft-design/">http://trainofthought.segfault.gr/2011/07/29/arachni-grid-draft-design/</a></p>
+
+<p>And some screenshots here: <a href="http://trainofthought.segfault.gr/2011/09/02/arachni-a-sneak-peek-at-the-grid-with-screenshots/">http://trainofthought.segfault.gr/2011/09/02/arachni-a-sneak-peek-at-the-grid-with-screenshots/</a></p>
+
+<h1>Arachni - Web Application Security Scanner Framework</h1>
 
 <table>
     <tr>
         <th>Version</th>
-        <td>0.3</td>
+        <td>0.4</td>
     </tr>
     <tr>
         <th>Homepage</th>
@@ -73,7 +191,7 @@
     </tr>
     <tr>
        <th>Author</th>
-       <td><a href="mailto:tasos.laskos@gmail.com">Tasos</a> <a href="mailto:zapotek@segfault.gr">Zapotek</a> <a href="mailto:tasos.laskos@gmail.com">Laskos</a></td>
+       <td><a href="mailto:tasos.laskos@gmail.com">Tasos</a> "<a href="mailto:zapotek@segfault.gr">Zapotek</a>" <a href="mailto:tasos.laskos@gmail.com">Laskos</a></td>
     </tr>
     <tr>
         <th>Twitter</th>
@@ -93,9 +211,6 @@
 <p><img src="http://zapotek.github.com/arachni/logo.png" alt="Arachni logo" /></p>
 
 <p>Kindly sponsored by: <a href="http://www.nopsec.com"><img src="http://zapotek.github.com/arachni/nopsec_logo.png" alt="NopSec" /></a></p>
-
-<p>Help by donating:
-<a href="http://www.pledgie.com/campaigns/14482"><img src="http://pledgie.com/campaigns/14482.png" alt="Click here to lend your support to: Arachni - Web Application Security Scanner Framework and make a donation at www.pledgie.com!" /></a></p>
 
 <h2>Synopsis</h2>
 
@@ -133,6 +248,7 @@ From a user's or a component developer's point of view everything appears simple
 <ul>
 <li>Cookie-jar support</li>
 <li>SSL support.</li>
+<li>Support for custom headers.</li>
 <li>User Agent spoofing.</li>
 <li>Proxy support for SOCKS4, SOCKS4A, SOCKS5, HTTP/1.1 and HTTP/1.0.</li>
 <li>Proxy authentication.</li>
@@ -142,22 +258,22 @@ From a user's or a component developer's point of view everything appears simple
 
 <ul>
 <li>Command line UI</li>
-<li>Web UI (Utilizing the Client - Dispatch-server XMLRPC architecture)</li>
-<li>XMLRPC Client/Dispatch server
-
-<ul>
-<li>Centralised deployment</li>
-<li>Multiple clients</li>
-<li>Parallel scans</li>
-<li>SSL encryption</li>
-<li>SSL cert based client authentication</li>
-<li>Remote monitoring</li>
-</ul>
-</li>
+<li>Web UI (Utilizing the Client - Dispatch-server RPC infrastructure)</li>
 </ul>
 </li>
 <li>Pause/resume functionality.</li>
 <li>High performance asynchronous HTTP requests.</li>
+<li>Open RPC Client/Dispatch-server Infrastructure
+
+<ul>
+<li>Distributed deployment</li>
+<li>Multiple clients</li>
+<li>Parallel scans</li>
+<li>SSL encryption (with peer authentication)</li>
+<li>Remote monitoring</li>
+<li>Support for High Performance Grid configuration, utilizing multiple nodes to perform single scans.</li>
+</ul>
+</li>
 </ul>
 
 
@@ -171,6 +287,7 @@ From a user's or a component developer's point of view everything appears simple
 <li>Adjustable link count limit.</li>
 <li>Adjustable redirect limit.</li>
 <li>Modular path extraction via "Path Extractor" components.</li>
+<li>Can read paths from multiple user supplied files (to both restrict and extend the scope of the crawl).</li>
 </ul>
 
 
@@ -249,6 +366,16 @@ From a user's or a component developer's point of view everything appears simple
 <li>E-mail address disclosure</li>
 <li>US Social Security Number disclosure</li>
 <li>Forceful directory listing</li>
+<li>Mixed Resource/Scripting</li>
+</ul>
+</li>
+<li>Extras
+
+<ul>
+<li>SVN Digger dirs</li>
+<li>SVN Digger files</li>
+<li>RAFT dirs</li>
+<li>RAFT files</li>
 </ul>
 </li>
 </ul>
@@ -267,8 +394,11 @@ From a user's or a component developer's point of view everything appears simple
 <li>HTML (Cheers to <a href="mailto:chris@survivetheinternet.com">Christos Chiotis</a> for designing the new HTML report template.)</li>
 <li>XML</li>
 <li>TXT</li>
-<li>YAML serialization</li>
-<li>Metareport (providing Metasploit integration to allow for <a href="http://zapotek.github.com/arachni/file.EXPLOITATION.html">automated and assisted exploitation</a>)</li>
+<li>AFR -- The default Arachni Framework Report format.</li>
+<li>JSON</li>
+<li>Marshal</li>
+<li>YAML</li>
+<li>Metareport -- Providing Metasploit integration to allow for <a href="http://zapotek.github.com/arachni/file.EXPLOITATION.html">automated and assisted exploitation</a>.</li>
 </ul>
 </li>
 </ul>
@@ -283,6 +413,7 @@ From a user's or a component developer's point of view everything appears simple
 <li>Currently available plugins:
 
 <ul>
+<li>ReScan -- It uses the AFR report of a previous scan to extract the sitemap in order to avoid a redundant crawl.</li>
 <li>Passive Proxy -- Analyzes requests and responses between the web app and the browser assisting in AJAX audits, logging-in and/or restricting the scope of the audit</li>
 <li>Form based AutoLogin</li>
 <li>Dictionary attacker for HTTP Auth</li>
@@ -292,15 +423,15 @@ From a user's or a component developer's point of view everything appears simple
 <li>Healthmap -- Generates sitemap showing the health of each crawled/audited URL</li>
 <li>Content-types -- Logs content-types of server responses aiding in the identification of interesting (possibly leaked) files</li>
 <li>WAF (Web Application Firewall) Detector -- Establishes a baseline of normal behavior and uses rDiff analysis to determine if malicious inputs cause any behavioral changes</li>
-<li>MetaModules -- Loads and runs high-level meta-analysis modules pre/mid/post-scan
-
-<ul>
 <li>AutoThrottle -- Dynamically adjusts HTTP throughput during the scan for maximum bandwidth utilization</li>
-<li>TimeoutNotice -- Provides a notice for issues uncovered by timing attacks when the affected audited pages returned unusually high response times to begin with.</br>
+<li>TimingAttacks -- Provides a notice for issues uncovered by timing attacks when the affected audited pages returned unusually high response times to begin with.</br>
    It also points out the danger of DoS attacks against pages that perform heavy-duty processing.</li>
 <li>Uniformity -- Reports inputs that are uniformly vulnerable across a number of pages hinting to the lack of a central point of input sanitization.</li>
-</ul>
-</li>
+<li>Discovery -- Performs anomaly detection on issues logged by discovery modules and warns of the possibility of false positives where applicable.</li>
+<li>BeepNotify -- Beeps when the scan finishes.</li>
+<li>LibNotify -- Uses the libnotify library to send notifications for each discovered issue and a summary at the end of the scan.</li>
+<li>EmailNotify -- Sends a notification (and optionally a report) over SMTP at the end of the scan.</li>
+<li>Manual verification -- Flags issues that require manual verification as untrusted in order to reduce the signal-to-noise ratio.</li>
 </ul>
 </li>
 </ul>
@@ -354,6 +485,14 @@ The prefered ways to accomplish this is by either using <a href="http://rvm.begi
 <pre class="code">$ rake install
 </pre>
 
+<h2>Configuration of <em>extras</em></h2>
+
+<p>The <em>extras</em> directory holds components that are considered too specialised, dangerous or in some way unsuitable for utilising without explicit user interaction. <br/>
+This directory was mainly added to distribute modules which can be helpful but should not be put in the default <em>modules</em> directory to prevent them from being
+automatically loaded.</p>
+
+<p>Should you want to use these extra components simply move them from the <em>extras</em> folder to their appropriate system directories.</p>
+
 <h2>Supported platforms</h2>
 
 <p>Arachni should work on all *nix and POSIX compliant platforms with Ruby
@@ -377,12 +516,13 @@ See the <a href="file.LICENSE.html">LICENSE</a> file for more information.</p>
 However, I can't be held responsible for your actions or for any damage
 caused by the use of this software.</p>
 
-<p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p></div></div>
+<p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p>
+</div></div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:11 2011 by 
+  Generated on Tue Dec  6 12:29:57 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

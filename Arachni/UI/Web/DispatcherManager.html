@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::UI::Web::DispatcherManager</title>
-<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::UI::Web::DispatcherManager
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -74,32 +87,29 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/ui/web/dispatcher_manager.rb</dd>
+    <dd class="r2 last">lib/arachni/ui/web/dispatcher_manager.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Provides methods for dispatcher management.
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.1
-</p>
+    
+<p>Provides methods for dispatcher management.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.1.1</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
    
@@ -110,6 +120,8 @@ Provides methods for dispatcher management.
     
   
 </p>
+
+
 
 
 
@@ -124,7 +136,7 @@ Provides methods for dispatcher management.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#alive%3F-instance_method" title="#alive? (instance method)">- (Boolean) <strong>alive?</strong>(url, tries = 5) </a>
+      <a href="#alive%3F-instance_method" title="#alive? (instance method)">- (Boolean) <strong>alive?</strong>(url, &amp;block) </a>
     
 
     
@@ -137,9 +149,8 @@ Provides methods for dispatcher management.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Checks wether the dispatcher is alive.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks wether the dispatcher is alive.</p>
 </div></span>
   
 </li>
@@ -161,9 +172,8 @@ Checks wether the dispatcher is alive.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns all dispatchers stored in the DB.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns all dispatchers stored in the DB.</p>
 </div></span>
   
 </li>
@@ -172,7 +182,7 @@ Returns all dispatchers stored in the DB.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#connect-instance_method" title="#connect (instance method)">- (Arachni::RPC::XML::Client::Dispatcher) <strong>connect</strong>(url) </a>
+      <a href="#all_with_liveness-instance_method" title="#all_with_liveness (instance method)">- (Object) <strong>all_with_liveness</strong>(&amp;block) </a>
     
 
     
@@ -185,10 +195,29 @@ Returns all dispatchers stored in the DB.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Provides an easy way to connect to a dispatcher and caches connections to
-reduce overhead.
-</p>
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect-instance_method" title="#connect (instance method)">- (Arachni::RPC::Client::Dispatcher) <strong>connect</strong>(url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provides an easy way to connect to a dispatcher.</p>
 </div></span>
   
 </li>
@@ -210,9 +239,8 @@ reduce overhead.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Removed a dispatcher from the DB.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Removed a dispatcher from the DB.</p>
 </div></span>
   
 </li>
@@ -234,9 +262,8 @@ Removed a dispatcher from the DB.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Removed all dispatchers from the DB.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Removed all dispatchers from the DB.</p>
 </div></span>
   
 </li>
@@ -245,7 +272,7 @@ Removed all dispatchers from the DB.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#first_alive-instance_method" title="#first_alive (instance method)">- (Object) <strong>first_alive</strong> </a>
+      <a href="#first_alive-instance_method" title="#first_alive (instance method)">- (Object) <strong>first_alive</strong>(&amp;block) </a>
     
 
     
@@ -281,9 +308,8 @@ Removed all dispatchers from the DB.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-A new instance of DispatcherManager.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of DispatcherManager.</p>
 </div></span>
   
 </li>
@@ -292,7 +318,7 @@ A new instance of DispatcherManager.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#new-instance_method" title="#new (instance method)">- (Object) <strong>new</strong>(url) </a>
+      <a href="#jobs-instance_method" title="#jobs (instance method)">- (Object) <strong>jobs</strong>(&amp;block) </a>
     
 
     
@@ -305,10 +331,7 @@ A new instance of DispatcherManager.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Puts a new dispatcher in the DB.
-</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -316,7 +339,7 @@ Puts a new dispatcher in the DB.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stats-instance_method" title="#stats (instance method)">- (Hash) <strong>stats</strong> </a>
+      <a href="#new-instance_method" title="#new (instance method)">- (Object) <strong>new</strong>(url, neighbours = true) </a>
     
 
     
@@ -329,9 +352,31 @@ Puts a new dispatcher in the DB.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Provides statistics about running jobs etc using the dispatcher.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Puts a new dispatcher (and it's neighbours) in the DB.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stats-instance_method" title="#stats (instance method)">- (Hash) <strong>stats</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provides statistics about running jobs etc using the dispatcher.</p>
 </div></span>
   
 </li>
@@ -352,33 +397,33 @@ Provides statistics about running jobs etc using the dispatcher.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-A new instance of DispatcherManager
-</p>
+    
+<p>A new instance of DispatcherManager</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-35
-36
-37
 38
 39
 40
 41
 42
-43</pre>
+43
+44
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/dispatcher_manager.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/dispatcher_manager.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id settings'>settings</span> <span class='rparen'>)</span>
     <span class='ivar'>@opts</span>     <span class='op'>=</span> <span class='id opts'>opts</span>
@@ -404,15 +449,14 @@ A new instance of DispatcherManager
       <div class="method_details first">
   <p class="signature first" id="alive?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>alive?</strong>(url, tries = 5) 
+    - (<tt>Boolean</tt>) <strong>alive?</strong>(url, &amp;block) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Checks wether the dispatcher is alive.
-</p>
+    
+<p>Checks wether the dispatcher is alive.</p>
 
 
   </div>
@@ -423,29 +467,29 @@ Checks wether the dispatcher is alive.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-URL of the dispatcher
-</p>
+        <div class='inline'>
+<p>URL of the dispatcher</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
       
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -459,6 +503,7 @@ URL of the dispatcher
       <pre class="lines">
 
 
+83
 84
 85
 86
@@ -466,26 +511,19 @@ URL of the dispatcher
 88
 89
 90
-91
-92
-93
-94
-95</pre>
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/dispatcher_manager.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/dispatcher_manager.rb', line 83</span>
 
-<span class='kw'>def</span> <span class='id alive?'>alive?</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id tries'>tries</span> <span class='op'>=</span> <span class='int'>5</span> <span class='rparen'>)</span>
-    <span class='id tries'>tries</span><span class='period'>.</span><span class='id times'>times</span> <span class='lbrace'>{</span>
-        <span class='kw'>begin</span>
-            <span class='kw'>return</span> <span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id alive?'>alive?</span>
-        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
-            <span class='comment'># ap e
-</span>            <span class='comment'># ap e.backtrace
-</span>        <span class='kw'>end</span>
+<span class='kw'>def</span> <span class='id alive?'>alive?</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='id raise'>raise</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This method requires a block!</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id block_given?'>block_given?</span>
+
+    <span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id alive?'>alive?</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id ret'>ret</span><span class='op'>|</span>
+        <span class='id ret'>ret</span> <span class='op'>=</span> <span class='lparen'>(</span> <span class='id ret'>ret</span><span class='period'>.</span><span class='id rpc_connection_error?'>rpc_connection_error?</span> <span class='rparen'>)</span> <span class='op'>?</span> <span class='kw'>false</span> <span class='op'>:</span> <span class='id ret'>ret</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id ret'>ret</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
-
-    <span class='kw'>return</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -495,27 +533,27 @@ URL of the dispatcher
       <div class="method_details ">
   <p class="signature " id="all-instance_method">
   
-    - (<tt>Array</tt>) <strong>all</strong>(*args) 
+    - (<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>) <strong>all</strong>(*args) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns all dispatchers stored in the DB.
-</p>
+    
+<p>Returns all dispatchers stored in the DB.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
       
       
       
@@ -529,12 +567,12 @@ Returns all dispatchers stored in the DB.
       <pre class="lines">
 
 
-138
-139
-140</pre>
+216
+217
+218</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/dispatcher_manager.rb', line 138</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/dispatcher_manager.rb', line 216</span>
 
 <span class='kw'>def</span> <span class='id all'>all</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
     <span class='const'>Dispatcher</span><span class='period'>.</span><span class='id all'>all</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
@@ -545,18 +583,82 @@ Returns all dispatchers stored in the DB.
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="all_with_liveness-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>all_with_liveness</strong>(&amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/dispatcher_manager.rb', line 220</span>
+
+<span class='kw'>def</span> <span class='id all_with_liveness'>all_with_liveness</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='id raise'>raise</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This method requires a block!</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id block_given?'>block_given?</span>
+
+    <span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id all'>all</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span><span class='lparen'>(</span> <span class='id proc'>proc</span><span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id dispatcher'>dispatcher</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
+
+        <span class='id alive?'>alive?</span><span class='lparen'>(</span> <span class='id dispatcher'>dispatcher</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id liveness'>liveness</span><span class='op'>|</span>
+
+            <span class='id m_dispatcher'>m_dispatcher</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+            <span class='id dispatcher'>dispatcher</span><span class='period'>.</span><span class='id attributes'>attributes</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
+                <span class='id m_dispatcher'>m_dispatcher</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span>
+            <span class='rbrace'>}</span>
+            <span class='id m_dispatcher'>m_dispatcher</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>alive</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id liveness'>liveness</span>
+            <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='id m_dispatcher'>m_dispatcher</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id proc'>proc</span><span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id dispatchers'>dispatchers</span><span class='op'>|</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id dispatchers'>dispatchers</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="connect-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../RPC/XML/Client/Dispatcher.html" title="Arachni::RPC::XML::Client::Dispatcher (class)">Arachni::RPC::XML::Client::Dispatcher</a></span></tt>) <strong>connect</strong>(url) 
+    - (<tt><span class='object_link'><a href="../../RPC/Client/Dispatcher.html" title="Arachni::RPC::Client::Dispatcher (class)">Arachni::RPC::Client::Dispatcher</a></span></tt>) <strong>connect</strong>(url) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Provides an easy way to connect to a dispatcher and caches connections to
-reduce overhead.
-</p>
+    
+<p>Provides an easy way to connect to a dispatcher.</p>
 
 
   </div>
@@ -567,23 +669,24 @@ reduce overhead.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../RPC/XML/Client/Dispatcher.html" title="Arachni::RPC::XML::Client::Dispatcher (class)">Arachni::RPC::XML::Client::Dispatcher</a></span></tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../RPC/Client/Dispatcher.html" title="Arachni::RPC::Client::Dispatcher (class)">Arachni::RPC::Client::Dispatcher</a></span></tt>)</span>
       
       
       
@@ -597,41 +700,15 @@ reduce overhead.
       <pre class="lines">
 
 
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
 74
 75
-76
-77</pre>
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/dispatcher_manager.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/dispatcher_manager.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='cvar'>@@cache</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-
-    <span class='kw'>begin</span>
-        <span class='kw'>if</span> <span class='cvar'>@@cache</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='cvar'>@@cache</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id alive?'>alive?</span>
-            <span class='kw'>return</span> <span class='cvar'>@@cache</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span>
-        <span class='kw'>elsif</span> <span class='lparen'>(</span> <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>RPC</span><span class='op'>::</span><span class='const'>XML</span><span class='op'>::</span><span class='const'>Client</span><span class='op'>::</span><span class='const'>Dispatcher</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
-              <span class='id tmp'>tmp</span><span class='period'>.</span><span class='id alive?'>alive?</span>
-            <span class='kw'>return</span> <span class='cvar'>@@cache</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id tmp'>tmp</span>
-        <span class='kw'>end</span>
-    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
-        <span class='comment'># ap e
-</span>        <span class='comment'># ap e.backtrace
-</span>        <span class='kw'>return</span> <span class='kw'>nil</span>
-    <span class='kw'>end</span>
+    <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>RPC</span><span class='op'>::</span><span class='const'>Client</span><span class='op'>::</span><span class='const'>Dispatcher</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='comma'>,</span> <span class='id url'>url</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -647,9 +724,8 @@ reduce overhead.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Removed a dispatcher from the DB.
-</p>
+    
+<p>Removed a dispatcher from the DB.</p>
 
 
   </div>
@@ -660,10 +736,10 @@ Removed a dispatcher from the DB.
   
     <li>
       
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
         <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
       
       
       
@@ -671,18 +747,19 @@ Removed a dispatcher from the DB.
   
 </ul>
 
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-158
-159
-160</pre>
+259
+260
+261</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/dispatcher_manager.rb', line 158</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/dispatcher_manager.rb', line 259</span>
 
 <span class='kw'>def</span> <span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span>
     <span class='const'>Dispatcher</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id destroy'>destroy</span>
@@ -701,31 +778,31 @@ Removed a dispatcher from the DB.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Removed all dispatchers from the DB.
-</p>
+    
+<p>Removed all dispatchers from the DB.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-145
-146
-147
-148
-149
-150
-151</pre>
+246
+247
+248
+249
+250
+251
+252</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/dispatcher_manager.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/dispatcher_manager.rb', line 246</span>
 
 <span class='kw'>def</span> <span class='id delete_all'>delete_all</span>
     <span class='id all'>all</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
@@ -742,7 +819,7 @@ Removed all dispatchers from the DB.
       <div class="method_details ">
   <p class="signature " id="first_alive-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>first_alive</strong> 
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>first_alive</strong>(&amp;block) 
   
 
   
@@ -752,6 +829,10 @@ Removed all dispatchers from the DB.
       <pre class="lines">
 
 
+93
+94
+95
+96
 97
 98
 99
@@ -759,121 +840,13 @@ Removed all dispatchers from the DB.
 101
 102
 103
-104</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/dispatcher_manager.rb', line 97</span>
-
-<span class='kw'>def</span> <span class='id first_alive'>first_alive</span>
-    <span class='id all'>all</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id dispatcher'>dispatcher</span><span class='op'>|</span>
-        <span class='kw'>return</span> <span class='id dispatcher'>dispatcher</span> <span class='kw'>if</span> <span class='id alive?'>alive?</span><span class='lparen'>(</span> <span class='id dispatcher'>dispatcher</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='rbrace'>}</span>
-
-    <span class='kw'>return</span> <span class='kw'>nil</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="new-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>new</strong>(url) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Puts a new dispatcher in the DB.
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-        <span class='name'>url</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>
-URL of the dispatcher
-</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-50
-51
-52</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/dispatcher_manager.rb', line 50</span>
-
-<span class='kw'>def</span> <span class='id new'>new</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='const'>Dispatcher</span><span class='period'>.</span><span class='id first_or_create'>first_or_create</span><span class='lparen'>(</span> <span class='symbol'>:url</span> <span class='op'>=&gt;</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="stats-instance_method">
-  
-    - (<tt>Hash</tt>) <strong>stats</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Provides statistics about running jobs etc using the dispatcher
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
+104
+105
+106
+107
+108
+109
+110
 111
 112
 113
@@ -882,8 +855,56 @@ Provides statistics about running jobs etc using the dispatcher
 116
 117
 118
-119
-120
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/dispatcher_manager.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='id first_alive'>first_alive</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='id raise'>raise</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This method requires a block!</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id block_given?'>block_given?</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id all'>all</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='const'>EM</span><span class='period'>.</span><span class='id synchrony'>synchrony</span> <span class='kw'>do</span>
+            <span class='id dispatchers'>dispatchers</span> <span class='op'>=</span> <span class='const'>EM</span><span class='op'>::</span><span class='const'>Synchrony</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id all'>all</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id dispatcher'>dispatcher</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
+                <span class='id alive?'>alive?</span><span class='lparen'>(</span> <span class='id dispatcher'>dispatcher</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='lbrace'>{</span>
+                    <span class='op'>|</span><span class='id bool'>bool</span><span class='op'>|</span>
+                    <span class='kw'>if</span> <span class='id bool'>bool</span>
+                        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id dispatcher'>dispatcher</span> <span class='rparen'>)</span>
+                    <span class='kw'>else</span>
+                        <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+                    <span class='kw'>end</span>
+                <span class='rbrace'>}</span>
+            <span class='rbrace'>}</span><span class='period'>.</span><span class='id compact'>compact</span>
+
+            <span class='kw'>if</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+                <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='kw'>false</span> <span class='rparen'>)</span>
+            <span class='kw'>else</span>
+                <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id pop'>pop</span> <span class='rparen'>)</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='kw'>false</span> <span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="jobs-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>jobs</strong>(&amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
 121
 122
 123
@@ -894,31 +915,306 @@ Provides statistics about running jobs etc using the dispatcher
 128
 129
 130
-131</pre>
+131
+132
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ui/web/dispatcher_manager.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/dispatcher_manager.rb', line 121</span>
 
-<span class='kw'>def</span> <span class='id stats'>stats</span>
-    <span class='id stats_h'>stats_h</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id all'>all</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id dispatcher'>dispatcher</span><span class='op'>|</span>
+<span class='kw'>def</span> <span class='id jobs'>jobs</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id all'>all</span><span class='comma'>,</span> <span class='int'>20</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span><span class='lparen'>(</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id dispatcher'>dispatcher</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
 
-        <span class='kw'>begin</span>
-            <span class='id stats_h'>stats_h</span><span class='lbracket'>[</span><span class='id dispatcher'>dispatcher</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id dispatcher'>dispatcher</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id stats'>stats</span>
-            <span class='id stats_h'>stats_h</span><span class='lbracket'>[</span><span class='id dispatcher'>dispatcher</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>running_jobs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-                <span class='op'>|</span><span class='id job'>job</span><span class='op'>|</span>
-                <span class='kw'>begin</span>
-                    <span class='id instance'>instance</span> <span class='op'>=</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id instances'>instances</span><span class='period'>.</span><span class='id port_to_url'>port_to_url</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id dispatcher'>dispatcher</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-                    <span class='id job'>job</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>paused</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id paused?'>paused?</span>
-                <span class='kw'>rescue</span>
-                <span class='kw'>end</span>
-            <span class='rbrace'>}</span>
-        <span class='kw'>rescue</span>
-        <span class='kw'>end</span>
+        <span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id dispatcher'>dispatcher</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id stats'>stats</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id stats'>stats</span><span class='op'>|</span>
+            <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>running_jobs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id stats'>stats</span><span class='period'>.</span><span class='id rpc_connection_error?'>rpc_connection_error?</span>
+        <span class='rbrace'>}</span>
+
+    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id running'>running</span><span class='op'>|</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id running'>running</span><span class='period'>.</span><span class='id flatten'>flatten</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="new-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>new</strong>(url, neighbours = true) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Puts a new dispatcher (and it's neighbours) in the DB.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>URL of the dispatcher</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>neighbours</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>add its neighbouring dispatchers too?</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/dispatcher_manager.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id new'>new</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id neighbours'>neighbours</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='rparen'>)</span>
+    <span class='const'>Dispatcher</span><span class='period'>.</span><span class='id first_or_create'>first_or_create</span><span class='lparen'>(</span> <span class='symbol'>:url</span> <span class='op'>=&gt;</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id neighbours'>neighbours</span>
+    <span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id node'>node</span><span class='period'>.</span><span class='id neighbours'>neighbours</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id neighbours'>neighbours</span><span class='op'>|</span>
+        <span class='id neighbours'>neighbours</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id node'>node</span><span class='op'>|</span>
+            <span class='const'>Dispatcher</span><span class='period'>.</span><span class='id first_or_create'>first_or_create</span><span class='lparen'>(</span> <span class='symbol'>:url</span> <span class='op'>=&gt;</span> <span class='id node'>node</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="stats-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>stats</strong>(&amp;block) 
+  
 
-    <span class='kw'>return</span> <span class='id stats_h'>stats_h</span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Provides statistics about running jobs etc using the dispatcher</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/dispatcher_manager.rb', line 141</span>
+
+<span class='kw'>def</span> <span class='id stats'>stats</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+    <span class='id raise'>raise</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This method requires a block!</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id block_given?'>block_given?</span>
+
+    <span class='const'>EM</span><span class='period'>.</span><span class='id synchrony'>synchrony</span> <span class='kw'>do</span>
+
+        <span class='id stats'>stats</span> <span class='op'>=</span> <span class='const'>EM</span><span class='op'>::</span><span class='const'>Synchrony</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id all'>all</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id dispatcher'>dispatcher</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
+
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id dispatcher'>dispatcher</span><span class='period'>.</span><span class='id rpc_connection_error?'>rpc_connection_error?</span>
+                <span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id dispatcher'>dispatcher</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id stats'>stats</span> <span class='lbrace'>{</span>
+                    <span class='op'>|</span><span class='id stats'>stats</span><span class='op'>|</span>
+                    <span class='kw'>if</span> <span class='op'>!</span><span class='id stats'>stats</span><span class='period'>.</span><span class='id rpc_exception?'>rpc_exception?</span>
+                        <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='id dispatcher'>dispatcher</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=&gt;</span> <span class='id stats'>stats</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+                    <span class='kw'>else</span>
+                        <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+                    <span class='kw'>end</span>
+                <span class='rbrace'>}</span>
+            <span class='kw'>end</span>
+        <span class='rbrace'>}</span><span class='period'>.</span><span class='id compact'>compact</span>
+
+        <span class='id sorted_stats'>sorted_stats</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+        <span class='id stats'>stats</span><span class='period'>.</span><span class='id sort'>sort</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id a'>a</span><span class='comma'>,</span> <span class='id b'>b</span><span class='op'>|</span> <span class='id a'>a</span><span class='period'>.</span><span class='id keys'>keys</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&lt;=&gt;</span> <span class='id b'>b</span><span class='period'>.</span><span class='id keys'>keys</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id stat'>stat</span><span class='op'>|</span>
+            <span class='id sorted_stats'>sorted_stats</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id stat'>stat</span> <span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
+
+        <span class='id sorted_stats'>sorted_stats</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id stats'>stats</span><span class='op'>|</span>
+
+            <span class='id sorted_stats'>sorted_stats</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>running_jobs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span>
+                <span class='const'>EM</span><span class='op'>::</span><span class='const'>Synchrony</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>running_jobs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
+
+                <span class='kw'>if</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>helpers</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rank</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>slave</span><span class='tstring_end'>'</span></span>
+                    <span class='ivar'>@settings</span><span class='period'>.</span><span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id progress_data'>progress_data</span><span class='lparen'>(</span>
+                        <span class='symbol'>:slaves</span>   <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
+                        <span class='symbol'>:messages</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
+                        <span class='symbol'>:issues</span>   <span class='op'>=&gt;</span> <span class='kw'>false</span>
+                    <span class='rparen'>)</span> <span class='lbrace'>{</span>
+                        <span class='op'>|</span><span class='id prog_data'>prog_data</span><span class='op'>|</span>
+                        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id prog_data'>prog_data</span><span class='period'>.</span><span class='id rpc_exception?'>rpc_exception?</span>
+                        <span class='id instance'>instance</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id prog_data'>prog_data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+                        <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id prog_data'>prog_data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id capitalize!'>capitalize!</span>
+                        <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span>
+                    <span class='rbrace'>}</span>
+                <span class='kw'>else</span>
+                    <span class='ivar'>@settings</span><span class='period'>.</span><span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>helpers</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>master</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id progress_data'>progress_data</span><span class='lparen'>(</span>
+                        <span class='symbol'>:messages</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
+                        <span class='symbol'>:issues</span>   <span class='op'>=&gt;</span> <span class='kw'>false</span>
+                    <span class='rparen'>)</span> <span class='lbrace'>{</span>
+                        <span class='op'>|</span><span class='id prog_data'>prog_data</span><span class='op'>|</span>
+                        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id prog_data'>prog_data</span><span class='period'>.</span><span class='id rpc_exception?'>rpc_exception?</span>
+                        <span class='id prog_data'>prog_data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+                            <span class='op'>|</span><span class='id insdat'>insdat</span><span class='op'>|</span>
+                             <span class='kw'>if</span> <span class='id insdat'>insdat</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+                                 <span class='id instance'>instance</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id insdat'>insdat</span> <span class='rparen'>)</span>
+                                 <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id capitalize!'>capitalize!</span>
+                                 <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span>
+                            <span class='kw'>end</span>
+                        <span class='rbrace'>}</span>
+                    <span class='rbrace'>}</span>
+                <span class='kw'>end</span>
+            <span class='rbrace'>}</span><span class='period'>.</span><span class='id compact'>compact</span>
+        <span class='rbrace'>}</span>
+
+
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id sorted_stats'>sorted_stats</span> <span class='rparen'>)</span>
+    <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -930,9 +1226,9 @@ Provides statistics about running jobs etc using the dispatcher
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:20 2011 by 
+  Generated on Tue Dec  6 12:30:07 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

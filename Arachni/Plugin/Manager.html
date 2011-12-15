@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::Plugin::Manager</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::Plugin::Manager
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -82,45 +95,44 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/plugin/manager.rb</dd>
+    <dd class="r1 last">lib/arachni/plugin/manager.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Holds and manages the plugins.
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.1
-</p>
+    
+<p>Holds and manages the plugins.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.1</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="../RPC/XML/Server/Plugin/Manager.html" title="Arachni::RPC::XML::Server::Plugin::Manager (class)">RPC::XML::Server::Plugin::Manager</a></span></p>
+  <p class="children"><span class='object_link'><a href="../RPC/Server/Plugin/Manager.html" title="Arachni::RPC::Server::Plugin::Manager (class)">RPC::Server::Plugin::Manager</a></span></p>
 </div>
 
   <h2>Constant Summary</h2>
   
     <dl class="constants">
       
-        <dt id="ALWAYS_ON-constant" class="">ALWAYS_ON =
+        <dt id="DEFAULT-constant" class="">DEFAULT =
           
         </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>metamodules</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content_types</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>healthmap</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span></pre></dd>
+        <dd><pre class="code"><span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>defaults/*</span><span class='tstring_end'>'</span></span>
+<span class='rbracket'>]</span></pre></dd>
       
     </dl>
   
@@ -137,6 +149,18 @@ Holds and manages the plugins.
   <h3 class="inherited">Constants inherited from <span class='object_link'><a href="../ComponentManager.html" title="Arachni::ComponentManager (class)">ComponentManager</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="../ComponentManager.html#EXCLUDE-constant" title="Arachni::ComponentManager::EXCLUDE (constant)">EXCLUDE</a></span>, <span class='object_link'><a href="../ComponentManager.html#WILDCARD-constant" title="Arachni::ComponentManager::WILDCARD (constant)">WILDCARD</a></span></p>
 
+  
+  
+  
+  
+  
+
+
+  
+  
+  
+  
+  
   
   
   
@@ -167,9 +191,8 @@ Holds and manages the plugins.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Blocks until all plug-ins have finished executing.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Blocks until all plug-ins have finished executing.</p>
 </div></span>
   
 </li>
@@ -191,9 +214,8 @@ Blocks until all plug-ins have finished executing.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Will return false if all plug-ins have finished executing.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Will return false if all plug-ins have finished executing.</p>
 </div></span>
   
 </li>
@@ -236,9 +258,8 @@ Will return false if all plug-ins have finished executing.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Gets a running plug-in by name.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a running plug-in by name.</p>
 </div></span>
   
 </li>
@@ -262,9 +283,8 @@ Gets a running plug-in by name.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-A new instance of Manager.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Manager.</p>
 </div></span>
   
 </li>
@@ -286,9 +306,8 @@ A new instance of Manager.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns the names of the running plug-ins.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the names of the running plug-ins.</p>
 </div></span>
   
 </li>
@@ -310,9 +329,8 @@ Returns the names of the running plug-ins.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Returns all the running threads.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns all the running threads.</p>
 </div></span>
   
 </li>
@@ -334,9 +352,8 @@ Returns all the running threads.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Kills a plug-in by name.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Kills a plug-in by name.</p>
 </div></span>
   
 </li>
@@ -379,10 +396,30 @@ Kills a plug-in by name.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Runs each plug-in in its own thread.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Runs each plug-in in its own thread.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sane_env%3F-instance_method" title="#sane_env? (instance method)">- (Boolean) <strong>sane_env?</strong>(plugin) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -399,7 +436,7 @@ Runs each plug-in in its own thread.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="../Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#hash_keys_to_str-instance_method" title="Arachni::Module::Utilities#hash_keys_to_str (method)">#hash_keys_to_str</a></span>, <span class='object_link'><a href="../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_decode-instance_method" title="Arachni::Module::Utilities#uri_decode (method)">#uri_decode</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_encode-instance_method" title="Arachni::Module::Utilities#uri_encode (method)">#uri_encode</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_parser-instance_method" title="Arachni::Module::Utilities#uri_parser (method)">#uri_parser</a></span>, <span class='object_link'><a href="../Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
 
   
   
@@ -419,7 +456,7 @@ Runs each plug-in in its own thread.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../UI/Output.html" title="Arachni::UI::Output (module)">UI::Output</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../UI/Output.html#buffer-instance_method" title="Arachni::UI::Output#buffer (method)">#buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%21-instance_method" title="Arachni::UI::Output#debug! (method)">#debug!</a></span>, <span class='object_link'><a href="../UI/Output.html#debug%3F-instance_method" title="Arachni::UI::Output#debug? (method)">#debug?</a></span>, <span class='object_link'><a href="../UI/Output.html#flush_buffer-instance_method" title="Arachni::UI::Output#flush_buffer (method)">#flush_buffer</a></span>, <span class='object_link'><a href="../UI/Output.html#mute%21-instance_method" title="Arachni::UI::Output#mute! (method)">#mute!</a></span>, <span class='object_link'><a href="../UI/Output.html#muted%3F-instance_method" title="Arachni::UI::Output#muted? (method)">#muted?</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%21-instance_method" title="Arachni::UI::Output#only_positives! (method)">#only_positives!</a></span>, <span class='object_link'><a href="../UI/Output.html#only_positives%3F-instance_method" title="Arachni::UI::Output#only_positives? (method)">#only_positives?</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug-instance_method" title="Arachni::UI::Output#print_debug (method)">#print_debug</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_backtrace-instance_method" title="Arachni::UI::Output#print_debug_backtrace (method)">#print_debug_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_debug_pp-instance_method" title="Arachni::UI::Output#print_debug_pp (method)">#print_debug_pp</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error-instance_method" title="Arachni::UI::Output#print_error (method)">#print_error</a></span>, <span class='object_link'><a href="../UI/Output.html#print_error_backtrace-instance_method" title="Arachni::UI::Output#print_error_backtrace (method)">#print_error_backtrace</a></span>, <span class='object_link'><a href="../UI/Output.html#print_info-instance_method" title="Arachni::UI::Output#print_info (method)">#print_info</a></span>, <span class='object_link'><a href="../UI/Output.html#print_line-instance_method" title="Arachni::UI::Output#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="../UI/Output.html#print_ok-instance_method" title="Arachni::UI::Output#print_ok (method)">#print_ok</a></span>, <span class='object_link'><a href="../UI/Output.html#print_status-instance_method" title="Arachni::UI::Output#print_status (method)">#print_status</a></span>, <span class='object_link'><a href="../UI/Output.html#print_verbose-instance_method" title="Arachni::UI::Output#print_verbose (method)">#print_verbose</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file-instance_method" title="Arachni::UI::Output#reroute_to_file (method)">#reroute_to_file</a></span>, <span class='object_link'><a href="../UI/Output.html#reroute_to_file%3F-instance_method" title="Arachni::UI::Output#reroute_to_file? (method)">#reroute_to_file?</a></span>, <span class='object_link'><a href="../UI/Output.html#uncap_buffer%21-instance_method" title="Arachni::UI::Output#uncap_buffer! (method)">#uncap_buffer!</a></span>, <span class='object_link'><a href="../UI/Output.html#unmute%21-instance_method" title="Arachni::UI::Output#unmute! (method)">#unmute!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%21-instance_method" title="Arachni::UI::Output#verbose! (method)">#verbose!</a></span>, <span class='object_link'><a href="../UI/Output.html#verbose%3F-instance_method" title="Arachni::UI::Output#verbose? (method)">#verbose?</a></span></p>
 
   <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
@@ -433,9 +470,8 @@ Runs each plug-in in its own thread.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-A new instance of Manager
-</p>
+    
+<p>A new instance of Manager</p>
 
 
   </div>
@@ -446,22 +482,22 @@ A new instance of Manager
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a></span></tt>)</span>
-      
-      
         <span class='name'>framework</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-framework instance
-</p>
+        <div class='inline'>
+<p>framework instance</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -469,15 +505,15 @@ framework instance
       <pre class="lines">
 
 
-48
-49
-50
-51
-52
-53</pre>
+40
+41
+42
+43
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/manager.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/plugin/manager.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id dir'>dir</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Plugins</span> <span class='rparen'>)</span>
@@ -506,36 +542,36 @@ framework instance
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Blocks until all plug-ins have finished executing.
-</p>
+    
+<p>Blocks until all plug-ins have finished executing.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108</pre>
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/manager.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/plugin/manager.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='id block!'>block!</span>
     <span class='kw'>while</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@jobs</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
@@ -563,21 +599,21 @@ Blocks until all plug-ins have finished executing.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Will return false if all plug-ins have finished executing.
-</p>
+    
+<p>Will return false if all plug-ins have finished executing.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Bool</tt>)</span>
       
+        <span class='type'>(<tt>Bool</tt>)</span>
       
       
       
@@ -591,12 +627,12 @@ Will return false if all plug-ins have finished executing.
       <pre class="lines">
 
 
-115
-116
-117</pre>
+141
+142
+143</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/manager.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/plugin/manager.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id busy?'>busy?</span>
     <span class='op'>!</span><span class='ivar'>@jobs</span><span class='period'>.</span><span class='id reject'>reject</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id j'>j</span><span class='op'>|</span> <span class='id j'>j</span><span class='period'>.</span><span class='id alive?'>alive?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id empty?'>empty?</span>
@@ -619,13 +655,13 @@ Will return false if all plug-ins have finished executing.
       <pre class="lines">
 
 
-89
-90
-91
-92</pre>
+115
+116
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/manager.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/plugin/manager.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id create'>create</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
     <span class='id opts'>opts</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id plugins'>plugins</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span>
@@ -645,9 +681,8 @@ Will return false if all plug-ins have finished executing.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Gets a running plug-in by name.
-</p>
+    
+<p>Gets a running plug-in by name.</p>
 
 
   </div>
@@ -658,23 +693,24 @@ Gets a running plug-in by name.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Thread</tt>)</span>
       
+        <span class='type'>(<tt>Thread</tt>)</span>
       
       
       
@@ -688,15 +724,17 @@ Gets a running plug-in by name.
       <pre class="lines">
 
 
-155
-156
-157</pre>
+181
+182
+183
+184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/manager.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/plugin/manager.rb', line 181</span>
 
 <span class='kw'>def</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
     <span class='ivar'>@jobs</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id job'>job</span><span class='op'>|</span> <span class='kw'>return</span> <span class='id job'>job</span> <span class='kw'>if</span> <span class='id job'>job</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id name'>name</span> <span class='rbrace'>}</span>
+    <span class='kw'>return</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -706,27 +744,27 @@ Gets a running plug-in by name.
       <div class="method_details ">
   <p class="signature " id="job_names-instance_method">
   
-    - (<tt>Array</tt>) <strong>job_names</strong> 
+    - (<tt><span class='object_link'><a href="../../Array.html" title="Array (class)">Array</a></span></tt>) <strong>job_names</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns the names of the running plug-ins.
-</p>
+    
+<p>Returns the names of the running plug-ins.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
       
       
       
@@ -740,12 +778,12 @@ Returns the names of the running plug-ins.
       <pre class="lines">
 
 
-124
-125
-126</pre>
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/manager.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/plugin/manager.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id job_names'>job_names</span>
     <span class='ivar'>@jobs</span><span class='period'>.</span><span class='id map'>map</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id j'>j</span><span class='op'>|</span> <span class='id j'>j</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -758,27 +796,27 @@ Returns the names of the running plug-ins.
       <div class="method_details ">
   <p class="signature " id="jobs-instance_method">
   
-    - (<tt>Array&lt;Thread&gt;</tt>) <strong>jobs</strong> 
+    - (<tt><span class='object_link'><a href="../../Array.html" title="Array (class)">Array</a></span>&lt;Thread&gt;</tt>) <strong>jobs</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Returns all the running threads.
-</p>
+    
+<p>Returns all the running threads.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;Thread&gt;</tt>)</span>
       
+        <span class='type'>(<tt><span class='object_link'><a href="../../Array.html" title="Array (class)">Array</a></span>&lt;Thread&gt;</tt>)</span>
       
       
       
@@ -792,12 +830,12 @@ Returns all the running threads.
       <pre class="lines">
 
 
-133
-134
-135</pre>
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/manager.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/plugin/manager.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='id jobs'>jobs</span>
     <span class='ivar'>@jobs</span>
@@ -816,9 +854,8 @@ Returns all the running threads.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Kills a plug-in by name.
-</p>
+    
+<p>Kills a plug-in by name.</p>
 
 
   </div>
@@ -829,10 +866,10 @@ Kills a plug-in by name.
   
     <li>
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
         <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -840,20 +877,21 @@ Kills a plug-in by name.
   
 </ul>
 
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-142
-143
-144
-145
-146</pre>
+168
+169
+170
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/manager.rb', line 142</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/plugin/manager.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id kill'>kill</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
     <span class='id job'>job</span> <span class='op'>=</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
@@ -878,15 +916,15 @@ Kills a plug-in by name.
       <pre class="lines">
 
 
-55
-56
-57</pre>
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/manager.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/plugin/manager.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id load_defaults!'>load_defaults!</span>
-    <span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>ALWAYS_ON</span> <span class='rparen'>)</span>
+    <span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>DEFAULT</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -902,21 +940,29 @@ Kills a plug-in by name.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Runs each plug-in in its own thread.
-</p>
+    
+<p>Runs each plug-in in its own thread.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+54
+55
+56
+57
+58
+59
+60
+61
 62
 63
 64
@@ -942,15 +988,37 @@ Runs each plug-in in its own thread.
 84
 85
 86
-87</pre>
+87
+88
+89
+90
+91
+92
+93
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/plugin/manager.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/plugin/manager.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span>
     <span class='id i'>i</span> <span class='op'>=</span> <span class='int'>0</span>
     <span class='id each'>each</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id plugin'>plugin</span><span class='op'>|</span>
+
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id ret'>ret</span> <span class='op'>=</span> <span class='id sane_env?'>sane_env?</span><span class='lparen'>(</span> <span class='id plugin'>plugin</span> <span class='rparen'>)</span> <span class='rparen'>)</span> <span class='op'>!=</span> <span class='kw'>true</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:gem_errors</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+                <span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>] The following plug-in dependencies aren't satisfied:</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+                <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:gem_errors</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+                   <span class='op'>|</span><span class='id gem'>gem</span><span class='op'>|</span>
+                    <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t* </span><span class='embexpr_beg'>#{</span><span class='id gem'>gem</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+                <span class='rbrace'>}</span>
+
+                <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Try installing them by running:</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+                <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\tgem install </span><span class='embexpr_beg'>#{</span><span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:gem_errors</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+            <span class='kw'>end</span>
+
+            <span class='id raise'>raise</span>
+        <span class='kw'>end</span>
 
         <span class='ivar'>@jobs</span> <span class='op'>&lt;&lt;</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id new'>new</span> <span class='lbrace'>{</span>
 
@@ -978,14 +1046,94 @@ Runs each plug-in in its own thread.
 </table>
 </div>
     
+      <div class="method_details ">
+  <p class="signature " id="sane_env?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>sane_env?</strong>(plugin) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/plugin/manager.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id sane_env?'>sane_env?</span><span class='lparen'>(</span> <span class='id plugin'>plugin</span> <span class='rparen'>)</span>
+    <span class='id gem_errors'>gem_errors</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='id plugin'>plugin</span><span class='period'>.</span><span class='id gems'>gems</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id gem'>gem</span><span class='op'>|</span>
+        <span class='kw'>begin</span>
+            <span class='id require'>require</span> <span class='id gem'>gem</span>
+        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+            <span class='id gem_errors'>gem_errors</span> <span class='op'>&lt;&lt;</span> <span class='id gem'>gem</span>
+        <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
+
+    <span class='kw'>return</span> <span class='lbrace'>{</span>
+        <span class='symbol'>:gem_errors</span> <span class='op'>=&gt;</span> <span class='id gem_errors'>gem_errors</span>
+    <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id gem_errors'>gem_errors</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+
+    <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:16 2011 by 
+  Generated on Tue Dec  6 12:30:03 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

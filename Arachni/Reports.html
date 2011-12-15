@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Module: Arachni::Reports</title>
-<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Module: Arachni::Reports
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -59,8 +72,8 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/report/manager.rb<span class="defines">,<br />
-  reports/ap.rb,<br /> reports/xml.rb,<br /> reports/txt.rb,<br /> reports/afr.rb,<br /> reports/html.rb,<br /> reports/stdout.rb,<br /> reports/xml/buffer.rb,<br /> reports/metareport.rb,<br /> reports/plugin_formatters/xml/profiler.rb,<br /> reports/plugin_formatters/html/profiler.rb,<br /> reports/plugin_formatters/xml/autologin.rb,<br /> reports/plugin_formatters/xml/healthmap.rb,<br /> reports/plugin_formatters/html/healthmap.rb,<br /> reports/plugin_formatters/html/autologin.rb,<br /> reports/plugin_formatters/stdout/profiler.rb,<br /> reports/plugin_formatters/xml/metamodules.rb,<br /> reports/plugin_formatters/stdout/autologin.rb,<br /> reports/plugin_formatters/html/metamodules.rb,<br /> reports/plugin_formatters/xml/waf_detector.rb,<br /> reports/plugin_formatters/stdout/healthmap.rb,<br /> reports/plugin_formatters/html/waf_detector.rb,<br /> reports/plugin_formatters/xml/content_types.rb,<br /> reports/plugin_formatters/html/content_types.rb,<br /> reports/plugin_formatters/stdout/metamodules.rb,<br /> reports/plugin_formatters/xml/form_dicattack.rb,<br /> reports/plugin_formatters/xml/http_dicattack.rb,<br /> reports/plugin_formatters/stdout/waf_detector.rb,<br /> reports/plugin_formatters/html/http_dicattack.rb,<br /> reports/plugin_formatters/html/form_dicattack.rb,<br /> reports/plugin_formatters/stdout/content_types.rb,<br /> reports/plugin_formatters/xml/cookie_collector.rb,<br /> reports/plugin_formatters/stdout/form_dicattack.rb,<br /> reports/plugin_formatters/html/cookie_collector.rb,<br /> reports/plugin_formatters/stdout/http_dicattack.rb,<br /> reports/plugin_formatters/stdout/cookie_collector.rb,<br /> reports/plugin_formatters/xml/metaformatters/uniformity.rb,<br /> reports/plugin_formatters/html/metaformatters/uniformity.rb,<br /> reports/plugin_formatters/stdout/metaformatters/uniformity.rb,<br /> reports/plugin_formatters/xml/metaformatters/timeout_notice.rb,<br /> reports/plugin_formatters/html/metaformatters/timeout_notice.rb,<br /> reports/plugin_formatters/stdout/metaformatters/timeout_notice.rb</span>
+    <dd class="r1 last">lib/arachni/report/manager.rb<span class="defines">,<br />
+  reports/ap.rb,<br /> reports/txt.rb,<br /> reports/xml.rb,<br /> reports/afr.rb,<br /> reports/html.rb,<br /> reports/json.rb,<br /> reports/yaml.rb,<br /> reports/stdout.rb,<br /> reports/marshal.rb,<br /> reports/metareport.rb,<br /> reports/xml/buffer.rb,<br /> reports/plugin_formatters/xml/profiler.rb,<br /> reports/plugin_formatters/html/profiler.rb,<br /> reports/plugin_formatters/xml/discovery.rb,<br /> reports/plugin_formatters/xml/healthmap.rb,<br /> reports/plugin_formatters/xml/autologin.rb,<br /> reports/plugin_formatters/html/healthmap.rb,<br /> reports/plugin_formatters/xml/uniformity.rb,<br /> reports/plugin_formatters/html/discovery.rb,<br /> reports/plugin_formatters/html/autologin.rb,<br /> reports/plugin_formatters/html/uniformity.rb,<br /> reports/plugin_formatters/stdout/profiler.rb,<br /> reports/plugin_formatters/stdout/healthmap.rb,<br /> reports/plugin_formatters/xml/waf_detector.rb,<br /> reports/plugin_formatters/stdout/autologin.rb,<br /> reports/plugin_formatters/stdout/discovery.rb,<br /> reports/plugin_formatters/xml/content_types.rb,<br /> reports/plugin_formatters/html/waf_detector.rb,<br /> reports/plugin_formatters/stdout/uniformity.rb,<br /> reports/plugin_formatters/xml/http_dicattack.rb,<br /> reports/plugin_formatters/xml/form_dicattack.rb,<br /> reports/plugin_formatters/xml/timing_attacks.rb,<br /> reports/plugin_formatters/html/content_types.rb,<br /> reports/plugin_formatters/stdout/metamodules.rb,<br /> reports/plugin_formatters/html/http_dicattack.rb,<br /> reports/plugin_formatters/html/timing_attacks.rb,<br /> reports/plugin_formatters/html/form_dicattack.rb,<br /> reports/plugin_formatters/stdout/waf_detector.rb,<br /> reports/plugin_formatters/xml/cookie_collector.rb,<br /> reports/plugin_formatters/stdout/content_types.rb,<br /> reports/plugin_formatters/stdout/http_dicattack.rb,<br /> reports/plugin_formatters/stdout/timing_attacks.rb,<br /> reports/plugin_formatters/stdout/form_dicattack.rb,<br /> reports/plugin_formatters/html/cookie_collector.rb,<br /> reports/plugin_formatters/stdout/cookie_collector.rb</span>
 </dd>
   
 </dl>
@@ -68,15 +81,15 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-The namespace under which all modules exist
-</p>
+    
+<p>The namespace under which all modules exist</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
    
@@ -85,107 +98,23 @@ The namespace under which all modules exist
     
    
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Reports/AFR.html" title="Arachni::Reports::AFR (class)">AFR</a></span>, <span class='object_link'><a href="Reports/AP.html" title="Arachni::Reports::AP (class)">AP</a></span>, <span class='object_link'><a href="Reports/HTML.html" title="Arachni::Reports::HTML (class)">HTML</a></span>, <span class='object_link'><a href="Reports/Metareport.html" title="Arachni::Reports::Metareport (class)">Metareport</a></span>, <span class='object_link'><a href="Reports/Stdout.html" title="Arachni::Reports::Stdout (class)">Stdout</a></span>, <span class='object_link'><a href="Reports/Text.html" title="Arachni::Reports::Text (class)">Text</a></span>, <span class='object_link'><a href="Reports/XML.html" title="Arachni::Reports::XML (class)">XML</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Reports/AFR.html" title="Arachni::Reports::AFR (class)">AFR</a></span>, <span class='object_link'><a href="Reports/AP.html" title="Arachni::Reports::AP (class)">AP</a></span>, <span class='object_link'><a href="Reports/HTML.html" title="Arachni::Reports::HTML (class)">HTML</a></span>, <span class='object_link'><a href="Reports/JSON.html" title="Arachni::Reports::JSON (class)">JSON</a></span>, <span class='object_link'><a href="Reports/Marshal.html" title="Arachni::Reports::Marshal (class)">Marshal</a></span>, <span class='object_link'><a href="Reports/Metareport.html" title="Arachni::Reports::Metareport (class)">Metareport</a></span>, <span class='object_link'><a href="Reports/Stdout.html" title="Arachni::Reports::Stdout (class)">Stdout</a></span>, <span class='object_link'><a href="Reports/Text.html" title="Arachni::Reports::Text (class)">Text</a></span>, <span class='object_link'><a href="Reports/XML.html" title="Arachni::Reports::XML (class)">XML</a></span>, <span class='object_link'><a href="Reports/YAML.html" title="Arachni::Reports::YAML (class)">YAML</a></span>
     
   
 </p>
 
 
 
-  
-    <h2>
-      Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#reset-class_method" title="reset (class method)">+ (Object) <strong>reset</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Resets the namespace unloading all module classes.
-</p>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
 
 
 
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
-    
-    
-      <div class="method_details first">
-  <p class="signature first" id="reset-class_method">
-  
-    + (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>reset</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Resets the namespace unloading all module classes
-</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-21
-22
-23
-24
-25
-26</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/report/manager.rb', line 21</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id reset'>reset</span>
-    <span class='id constants'>constants</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id const'>const</span><span class='op'>|</span>
-        <span class='id remove_const'>remove_const</span><span class='lparen'>(</span> <span class='id const'>const</span> <span class='rparen'>)</span>
-    <span class='rbrace'>}</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:12 2011 by 
+  Generated on Tue Dec  6 12:29:57 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

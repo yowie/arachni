@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Module: Arachni::Module::ElementDB</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Module: Arachni::Module::ElementDB
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -67,42 +80,42 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/module/element_db.rb</dd>
+    <dd class="r1 last">lib/arachni/module/element_db.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Holds a database of all auditable elements of the current page,<br/>
-including elements that have appeared dynamically during the audit.
-</p>
-<p>
-The database is updated by the <span class='object_link'><a href="Trainer.html" title="Arachni::Module::Trainer (class)">Trainer</a></span>.
-</p>
-<p>
-For each page that is audited the database is reset.
-</p>
-<p>
-@author: Tasos &#8220;Zapotek&#8221; Laskos
-</p>
-<pre class="code">
-                                     &lt;tasos.laskos@gmail.com&gt;
-                                     &lt;zapotek@segfault.gr&gt;
-</pre>
-<p>
-@version: 0.2.1
-</p>
+    
+<p>Holds a database of all auditable elements of the current page,&lt;br/&gt;
+including elements that have appeared dynamically during the audit.</p>
+
+<p>The database is updated by the <span class='object_link'><a href="Trainer.html" title="Arachni::Module::Trainer (class)">Trainer</a></span>.</p>
+
+<p>For each page that is audited the database is reset.</p>
+
+<p>@author: Tasos "Zapotek" Laskos</p>
+
+<pre class="code">&lt;tasos.laskos@gmail.com&gt;
+&lt;zapotek@segfault.gr&gt;</pre>
+
+<p>@version: 0.2.1</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
 
   
+  
+  
+  
+
+
   
   
   
@@ -114,6 +127,27 @@ For each page that is audited the database is reset.
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cookie_in_jar%3F-instance_method" title="#cookie_in_jar? (instance method)">- (Boolean) <strong>cookie_in_jar?</strong>(cookie) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -131,9 +165,8 @@ For each page that is audited the database is reset.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Initializes @@cookies with the cookies found during the crawl/analysis.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes @@cookies with the cookies found during the crawl/analysis.</p>
 </div></span>
   
 </li>
@@ -155,9 +188,8 @@ Initializes @@cookies with the cookies found during the crawl/analysis.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Initializes @@forms with the cookies found during the crawl/analysis.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes @@forms with the cookies found during the crawl/analysis.</p>
 </div></span>
   
 </li>
@@ -179,9 +211,8 @@ Initializes @@forms with the cookies found during the crawl/analysis.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Initializes @@links with the links found during the crawl/analysis.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes @@links with the links found during the crawl/analysis.</p>
 </div></span>
   
 </li>
@@ -203,10 +234,9 @@ Initializes @@links with the links found during the crawl/analysis.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Updates @@cookies wth new cookies that may have dynamically appeared<br/>
-after analyzing the HTTP responses during the audit.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Updates @@cookies wth new cookies that may have dynamically
+appeared&lt;br/&gt; after analyzing the HTTP responses during the audit.</p>
 </div></span>
   
 </li>
@@ -228,10 +258,9 @@ after analyzing the HTTP responses during the audit.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Updates @@forms wth new forms that may have dynamically appeared<br/> after
-analyzing the HTTP responses during the audit.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Updates @@forms wth new forms that may have dynamically appeared&lt;br/&gt;
+after analyzing the HTTP responses during the audit.</p>
 </div></span>
   
 </li>
@@ -253,10 +282,9 @@ analyzing the HTTP responses during the audit.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Updates @@links wth new links that may have dynamically appeared<br/> after
-analyzing the HTTP responses during the audit.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Updates @@links wth new links that may have dynamically appeared&lt;br/&gt;
+after analyzing the HTTP responses during the audit.</p>
 </div></span>
   
 </li>
@@ -274,7 +302,7 @@ analyzing the HTTP responses during the audit.
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Utilities.html" title="Arachni::Module::Utilities (module)">Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Utilities.html#hash_keys_to_str-instance_method" title="Arachni::Module::Utilities#hash_keys_to_str (method)">#hash_keys_to_str</a></span>, <span class='object_link'><a href="Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="Utilities.html#uri_decode-instance_method" title="Arachni::Module::Utilities#uri_decode (method)">#uri_decode</a></span>, <span class='object_link'><a href="Utilities.html#uri_encode-instance_method" title="Arachni::Module::Utilities#uri_encode (method)">#uri_encode</a></span>, <span class='object_link'><a href="Utilities.html#uri_parser-instance_method" title="Arachni::Module::Utilities#uri_parser (method)">#uri_parser</a></span>, <span class='object_link'><a href="Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -282,7 +310,65 @@ analyzing the HTTP responses during the audit.
     
     
       <div class="method_details first">
-  <p class="signature first" id="init_cookies-instance_method">
+  <p class="signature first" id="cookie_in_jar?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>cookie_in_jar?</strong>(cookie) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157
+158
+159
+160
+161</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/module/element_db.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id cookie_in_jar?'>cookie_in_jar?</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span> <span class='rparen'>)</span>
+    <span class='cvar'>@@cookies</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id c'>c</span><span class='op'>|</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id c'>c</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="init_cookies-instance_method">
   
     - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>init_cookies</strong>(cookies) 
   
@@ -290,15 +376,15 @@ analyzing the HTTP responses during the audit.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Initializes @@cookies with the cookies found during the crawl/analysis
-</p>
+    
+<p>Initializes @@cookies with the cookies found during the crawl/analysis</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -310,7 +396,7 @@ Initializes @@cookies with the cookies found during the crawl/analysis
 64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/module/element_db.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id init_cookies'>init_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
   <span class='cvar'>@@cookies</span> <span class='op'>=</span> <span class='id cookies'>cookies</span>
@@ -329,15 +415,15 @@ Initializes @@cookies with the cookies found during the crawl/analysis
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Initializes @@forms with the cookies found during the crawl/analysis
-</p>
+    
+<p>Initializes @@forms with the cookies found during the crawl/analysis</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -349,7 +435,7 @@ Initializes @@forms with the cookies found during the crawl/analysis
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/module/element_db.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id init_forms'>init_forms</span><span class='lparen'>(</span> <span class='id forms'>forms</span> <span class='rparen'>)</span>
   <span class='cvar'>@@forms</span> <span class='op'>|=</span> <span class='id forms'>forms</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span> <span class='id form'>form</span><span class='period'>.</span><span class='id id'>id</span> <span class='rbrace'>}</span>
@@ -368,15 +454,15 @@ Initializes @@forms with the cookies found during the crawl/analysis
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Initializes @@links with the links found during the crawl/analysis
-</p>
+    
+<p>Initializes @@links with the links found during the crawl/analysis</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -388,7 +474,7 @@ Initializes @@links with the links found during the crawl/analysis
 57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/module/element_db.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id init_links'>init_links</span><span class='lparen'>(</span> <span class='id links'>links</span> <span class='rparen'>)</span>
   <span class='cvar'>@@links</span> <span class='op'>|=</span> <span class='id links'>links</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id link'>link</span><span class='op'>|</span> <span class='id link'>link</span><span class='period'>.</span><span class='id id'>id</span> <span class='rbrace'>}</span>
@@ -407,10 +493,9 @@ Initializes @@links with the links found during the crawl/analysis
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Updates @@cookies wth new cookies that may have dynamically appeared<br/>
-after analyzing the HTTP responses during the audit.
-</p>
+    
+<p>Updates @@cookies wth new cookies that may have dynamically
+appeared&lt;br/&gt; after analyzing the HTTP responses during the audit.</p>
 
 
   </div>
@@ -421,16 +506,17 @@ after analyzing the HTTP responses during the audit.
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;Element::Cookie&gt;</tt>)</span>
-      
-      
         <span class='name'>cookies</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Array.html" title="Array (class)">Array</a></span>&lt;Element::Cookie&gt;</tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -466,7 +552,7 @@ after analyzing the HTTP responses during the audit.
 153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/module/element_db.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id update_cookies'>update_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
@@ -482,7 +568,7 @@ after analyzing the HTTP responses during the audit.
 
             <span class='kw'>if</span><span class='lparen'>(</span> <span class='id page_cookie'>page_cookie</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
                 <span class='cvar'>@@cookies</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id cookie'>cookie</span>
-            <span class='kw'>else</span>
+            <span class='kw'>elsif</span> <span class='op'>!</span><span class='id cookie_in_jar?'>cookie_in_jar?</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span> <span class='rparen'>)</span>
                 <span class='ivar'>@new_cookies</span> <span class='op'>&lt;&lt;</span> <span class='id cookie'>cookie</span>
                 <span class='id cookie_cnt'>cookie_cnt</span> <span class='op'>+=</span> <span class='int'>1</span>
             <span class='kw'>end</span>
@@ -508,10 +594,9 @@ after analyzing the HTTP responses during the audit.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Updates @@forms wth new forms that may have dynamically appeared<br/> after
-analyzing the HTTP responses during the audit.
-</p>
+    
+<p>Updates @@forms wth new forms that may have dynamically appeared&lt;br/&gt;
+after analyzing the HTTP responses during the audit.</p>
 
 
   </div>
@@ -522,16 +607,17 @@ analyzing the HTTP responses during the audit.
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;Element::Form&gt;</tt>)</span>
-      
-      
         <span class='name'>forms</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Array.html" title="Array (class)">Array</a></span>&lt;Element::Form&gt;</tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -563,7 +649,7 @@ analyzing the HTTP responses during the audit.
 93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/module/element_db.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id update_forms'>update_forms</span><span class='lparen'>(</span> <span class='id forms'>forms</span> <span class='rparen'>)</span>
 
@@ -601,10 +687,9 @@ analyzing the HTTP responses during the audit.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Updates @@links wth new links that may have dynamically appeared<br/> after
-analyzing the HTTP responses during the audit.
-</p>
+    
+<p>Updates @@links wth new links that may have dynamically appeared&lt;br/&gt;
+after analyzing the HTTP responses during the audit.</p>
 
 
   </div>
@@ -615,16 +700,17 @@ analyzing the HTTP responses during the audit.
   
     <li>
       
-        <span class='type'>(<tt>Array&lt;Element::Link&gt;</tt>)</span>
-      
-      
         <span class='name'>links</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Array.html" title="Array (class)">Array</a></span>&lt;Element::Link&gt;</tt>)</span>
       
       
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -654,7 +740,7 @@ analyzing the HTTP responses during the audit.
 120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/module/element_db.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/module/element_db.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id update_links'>update_links</span><span class='lparen'>(</span> <span class='id links'>links</span> <span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id links'>links</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
@@ -686,9 +772,9 @@ analyzing the HTTP responses during the audit.
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:17 2011 by 
+  Generated on Tue Dec  6 12:30:05 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

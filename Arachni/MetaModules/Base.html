@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Arachni::MetaModules::Base</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Arachni::MetaModules::Base
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -85,12 +98,20 @@
 
 <div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="AutoThrottle.html" title="Arachni::MetaModules::AutoThrottle (class)">AutoThrottle</a></span>, <span class='object_link'><a href="TimeoutNotice.html" title="Arachni::MetaModules::TimeoutNotice (class)">TimeoutNotice</a></span>, <span class='object_link'><a href="Uniformity.html" title="Arachni::MetaModules::Uniformity (class)">Uniformity</a></span></p>
+  <p class="children"><span class='object_link'><a href="AutoThrottle.html" title="Arachni::MetaModules::AutoThrottle (class)">AutoThrottle</a></span>, <span class='object_link'><a href="Discovery.html" title="Arachni::MetaModules::Discovery (class)">Discovery</a></span>, <span class='object_link'><a href="TimingAttacks.html" title="Arachni::MetaModules::TimingAttacks (class)">TimingAttacks</a></span>, <span class='object_link'><a href="Uniformity.html" title="Arachni::MetaModules::Uniformity (class)">Uniformity</a></span></p>
 </div>
 
 
   
   
+  
+  
+  
+  
+  
+  
+
+
   
   
   
@@ -152,7 +173,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Called after post.
+</p>
+</div></span>
   
 </li>
 
@@ -186,7 +210,7 @@ A new instance of Base.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
+      <a href="#post-instance_method" title="#post (instance method)">- (Object) <strong>post</strong> </a>
     
 
     
@@ -199,7 +223,10 @@ A new instance of Base.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Called after the scan has finished.
+</p>
+</div></span>
   
 </li>
 
@@ -207,7 +234,7 @@ A new instance of Base.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong> </a>
+      <a href="#pre-instance_method" title="#pre (instance method)">- (Object) <strong>pre</strong> </a>
     
 
     
@@ -220,7 +247,10 @@ A new instance of Base.
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>
+Called before the scan starts.
+</p>
+</div></span>
   
 </li>
 
@@ -269,6 +299,7 @@ A new instance of Base
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -308,24 +339,24 @@ A new instance of Base
       <pre class="lines">
 
 
-32
-33
-34
-35
-36
-37
-38
-39
-40</pre>
+41
+42
+43
+44
+45
+46
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>[Meta] </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='kw'>self</span><span class='period'>.</span><span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Arachni::MetaModules::</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Performs high-level meta-analysis on the results of the scan
-</span><span class='tstring_content'>            using abstract meta components.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+            using abstract meta components.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
     <span class='rbrace'>}</span>
@@ -348,17 +379,29 @@ A new instance of Base
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Called after post
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-29
-30</pre>
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
 <span class='kw'>end</span></pre>
@@ -368,25 +411,37 @@ A new instance of Base
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="prepare-instance_method">
+  <p class="signature " id="post-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prepare</strong> 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>post</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Called after the scan has finished
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-23
-24</pre>
+32
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 32</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span>
+<span class='kw'>def</span> <span class='id post'>post</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -394,13 +449,25 @@ A new instance of Base
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="run-instance_method">
+  <p class="signature " id="pre-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>run</strong> 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>pre</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Called before the scan starts
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -412,7 +479,7 @@ A new instance of Base
     <td>
       <pre class="code"><span class="info file"># File 'plugins/metamodules.rb', line 26</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span>
+<span class='kw'>def</span> <span class='id pre'>pre</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -424,9 +491,9 @@ A new instance of Base
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:16 2011 by 
+  Generated on Tue Nov  1 13:11:41 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.2).
 </div>
 
   </body>

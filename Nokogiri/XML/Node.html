@@ -3,16 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: Nokogiri::XML::Node</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+<title>
+  Class: Nokogiri::XML::Node
+  
+    &mdash; Arachni - Web Application Security Scanner Framework
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -74,10 +87,12 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/nokogiri/xml/node.rb</dd>
+    <dd class="r2 last">lib/arachni/nokogiri/xml/node.rb</dd>
   
 </dl>
 <div class="clear"></div>
+
+
 
 
 
@@ -106,9 +121,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-# Serialize Node using <tt>options</tt>.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Serialize Node using <tt>options</tt>.</p>
 </div></span>
   
 </li>
@@ -132,29 +146,26 @@
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-# Serialize Node using <tt>options</tt>.  Save options can also be set
-using a block. See SaveOptions.
-</p>
-<p>
-These two statements are equivalent:
-</p>
-<pre class="code">
- <span class='id node'>node</span><span class='period'>.</span><span class='id serialize'>serialize</span><span class='lparen'>(</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:save_with</span> <span class='op'>=&gt;</span> <span class='const'>FORMAT</span> <span class='op'>|</span> <span class='const'>AS_XML</span><span class='rparen'>)</span>
-</pre>
-<p>
-or
-</p>
-<pre class="code">
-  <span class='id node'>node</span><span class='period'>.</span><span class='id serialize'>serialize</span><span class='lparen'>(</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id config'>config</span><span class='op'>|</span>
-    <span class='id config'>config</span><span class='period'>.</span><span class='id format'>format</span><span class='period'>.</span><span class='id as_xml'>as_xml</span>
-  <span class='kw'>end</span></pre>
+    
+<p>Serialize Node using <tt>options</tt>.  Save options can also be set using
+a block. See SaveOptions.</p>
+
+<p>These two statements are equivalent:</p>
+
+<pre class="code"><span class='id node'>node</span><span class='period'>.</span><span class='id serialize'>serialize</span><span class='lparen'>(</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:save_with</span> <span class='op'>=&gt;</span> <span class='const'>FORMAT</span> <span class='op'>|</span> <span class='const'>AS_XML</span><span class='rparen'>)</span></pre>
+
+<p>or</p>
+
+<pre class="code"><span class='id node'>node</span><span class='period'>.</span><span class='id serialize'>serialize</span><span class='lparen'>(</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id config'>config</span><span class='op'>|</span>
+  <span class='id config'>config</span><span class='period'>.</span><span class='id format'>format</span><span class='period'>.</span><span class='id as_xml'>as_xml</span>
+<span class='kw'>end</span></pre>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -183,7 +194,7 @@ or
 38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/nokogiri/xml/node.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/nokogiri/xml/node.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id serialize'>serialize</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span>
   <span class='id options'>options</span> <span class='op'>=</span> <span class='id args'>args</span><span class='period'>.</span><span class='id first'>first</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id args'>args</span><span class='period'>.</span><span class='id shift'>shift</span> <span class='op'>:</span> <span class='lbrace'>{</span>
@@ -215,9 +226,9 @@ or
 </div>
     
     <div id="footer">
-  Generated on Tue Jul 26 21:35:18 2011 by 
+  Generated on Tue Dec  6 12:30:05 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.5 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>
