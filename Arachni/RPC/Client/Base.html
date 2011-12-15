@@ -205,8 +205,8 @@
         <span class='symbol'>:token</span> <span class='op'>=&gt;</span> <span class='id token'>token</span><span class='comma'>,</span>
         <span class='symbol'>:keep_alive</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
         <span class='symbol'>:ssl_ca</span>     <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_ca'>ssl_ca</span><span class='comma'>,</span>
-        <span class='symbol'>:ssl_pkey</span>   <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_pkey'>ssl_pkey</span><span class='comma'>,</span>
-        <span class='symbol'>:ssl_cert</span>   <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_cert'>ssl_cert</span>
+        <span class='symbol'>:ssl_pkey</span>   <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id node_ssl_pkey'>node_ssl_pkey</span> <span class='op'>||</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_pkey'>ssl_pkey</span><span class='comma'>,</span>
+        <span class='symbol'>:ssl_cert</span>   <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id node_ssl_cert'>node_ssl_cert</span> <span class='op'>||</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_cert'>ssl_cert</span>
     <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -220,7 +220,7 @@
 </div>
     
     <div id="footer">
-  Generated on Tue Dec  6 12:30:04 2011 by 
+  Generated on Thu Dec 15 07:57:59 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>

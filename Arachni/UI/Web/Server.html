@@ -896,29 +896,29 @@ a number.</p>
       <pre class="lines">
 
 
-1093
-1094
-1095
-1096
-1097
-1098
-1099
-1100
-1101
-1102
-1103
-1104
-1105
-1106
-1107
-1108
-1109
-1110
-1111
-1112</pre>
+1121
+1122
+1123
+1124
+1125
+1126
+1127
+1128
+1129
+1130
+1131
+1132
+1133
+1134
+1135
+1136
+1137
+1138
+1139
+1140</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 1093</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 1121</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id prep_thin'>prep_thin</span>
     <span class='kw'>if</span> <span class='cvar'>@@conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
@@ -970,30 +970,30 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
       <pre class="lines">
 
 
-1071
-1072
-1073
-1074
-1075
-1076
-1077
-1078
-1079
-1080
-1081
-1082
-1083
-1084
-1085
-1086
-1087
-1088
-1089
-1090
-1091</pre>
+1099
+1100
+1101
+1102
+1103
+1104
+1105
+1106
+1107
+1108
+1109
+1110
+1111
+1112
+1113
+1114
+1115
+1116
+1117
+1118
+1119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 1071</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 1099</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id run!'>run!</span><span class='lparen'>(</span> <span class='id options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='id set'>set</span> <span class='id options'>options</span>
@@ -1007,7 +1007,7 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
     <span class='id puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>== Sinatra/</span><span class='embexpr_beg'>#{</span><span class='const'>Sinatra</span><span class='op'>::</span><span class='const'>VERSION</span><span class='rbrace'>}</span><span class='tstring_content'> has taken the stage </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>on </span><span class='embexpr_beg'>#{</span><span class='id port'>port</span><span class='rbrace'>}</span><span class='tstring_content'> for </span><span class='embexpr_beg'>#{</span><span class='id environment'>environment</span><span class='rbrace'>}</span><span class='tstring_content'> with backup from </span><span class='embexpr_beg'>#{</span><span class='id handler_name'>handler_name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id handler_name'>handler_name</span> <span class='op'>=~</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cgi</span><span class='regexp_end'>/i</span></span>
 
-    <span class='id handler'>handler</span><span class='period'>.</span><span class='id run'>run</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id handler_opts'>handler_opts</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='symbol'>:Host</span> <span class='op'>=&gt;</span> <span class='id bind'>bind</span><span class='comma'>,</span> <span class='symbol'>:Port</span> <span class='op'>=&gt;</span> <span class='id port'>port</span> <span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id handler'>handler</span><span class='period'>.</span><span class='id run'>run</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id handler_opts'>handler_opts</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='symbol'>:Host</span> <span class='op'>=&gt;</span> <span class='id options'>options</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:Port</span> <span class='op'>=&gt;</span> <span class='id options'>options</span><span class='lbracket'>[</span><span class='symbol'>:port</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='kw'>do</span>
         <span class='op'>|</span><span class='id server'>server</span><span class='op'>|</span>
         <span class='lbracket'>[</span> <span class='symbol'>:INT</span><span class='comma'>,</span> <span class='symbol'>:TERM</span> <span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id sig'>sig</span><span class='op'>|</span> <span class='id trap'>trap</span><span class='lparen'>(</span> <span class='id sig'>sig</span> <span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id quit!'>quit!</span><span class='lparen'>(</span> <span class='id server'>server</span><span class='comma'>,</span> <span class='id handler_name'>handler_name</span> <span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
 
@@ -1040,12 +1040,12 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
       <pre class="lines">
 
 
-280
-281
-282</pre>
+295
+296
+297</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 280</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 295</span>
 
 <span class='kw'>def</span> <span class='id addons'>addons</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id addons'>addons</span>
@@ -1068,24 +1068,24 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
       <pre class="lines">
 
 
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265</pre>
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 251</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 266</span>
 
 <span class='kw'>def</span> <span class='id async_redirect'>async_redirect</span><span class='lparen'>(</span> <span class='id location'>location</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='id response'>response</span><span class='period'>.</span><span class='id status'>status</span> <span class='op'>=</span> <span class='int'>302</span>
@@ -1142,16 +1142,16 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
       <pre class="lines">
 
 
-499
-500
-501
-502
-503
-504
-505</pre>
+513
+514
+515
+516
+517
+518
+519</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 499</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 513</span>
 
 <span class='kw'>def</span> <span class='id component_cache_filled?'>component_cache_filled?</span>
     <span class='kw'>begin</span>
@@ -1189,12 +1189,12 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
       <pre class="lines">
 
 
-299
-300
-301</pre>
+314
+315
+316</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 299</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 314</span>
 
 <span class='kw'>def</span> <span class='id dispatcher_stats'>dispatcher_stats</span>
     <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id stats'>stats</span>
@@ -1217,12 +1217,12 @@ href="https://github.com/sinatra/sinatra/pull/132">github.com/sinatra/sinatra/pu
       <pre class="lines">
 
 
-292
-293
-294</pre>
+307
+308
+309</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 292</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 307</span>
 
 <span class='kw'>def</span> <span class='id dispatchers'>dispatchers</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id dispatchers'>dispatchers</span>
@@ -1275,19 +1275,19 @@ appropriate error page.</p>
       <pre class="lines">
 
 
-582
-583
-584
-585
-586
-587
-588
-589
-590
-591</pre>
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 582</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 596</span>
 
 <span class='kw'>def</span> <span class='id ensure_dispatcher'>ensure_dispatcher</span>
     <span class='kw'>if</span> <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id all'>all</span><span class='period'>.</span><span class='id empty?'>empty?</span>
@@ -1317,15 +1317,15 @@ appropriate error page.</p>
       <pre class="lines">
 
 
-374
-375
-376
-377
-378
-379</pre>
+388
+389
+390
+391
+392
+393</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 374</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 388</span>
 
 <span class='kw'>def</span> <span class='id ensure_welcomed'>ensure_welcomed</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='id welcomed?'>welcomed?</span>
@@ -1351,16 +1351,16 @@ appropriate error page.</p>
       <pre class="lines">
 
 
-311
-312
-313
-314
-315
-316
-317</pre>
+326
+327
+328
+329
+330
+331
+332</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 311</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 326</span>
 
 <span class='kw'>def</span> <span class='id exception_jail'>exception_jail</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='comment'># begin
@@ -1387,20 +1387,6 @@ appropriate error page.</p>
       <pre class="lines">
 
 
-507
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517
-518
-519
-520
 521
 522
 523
@@ -1419,10 +1405,24 @@ appropriate error page.</p>
 536
 537
 538
-539</pre>
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 507</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 521</span>
 
 <span class='kw'>def</span> <span class='id fill_component_cache'>fill_component_cache</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='op'>!</span><span class='id component_cache_filled?'>component_cache_filled?</span>
@@ -1475,25 +1475,25 @@ appropriate error page.</p>
       <pre class="lines">
 
 
-482
-483
-484
-485
-486
-487
-488
-489
-490
-491
-492
-493
-494
-495
 496
-497</pre>
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 482</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 496</span>
 
 <span class='kw'>def</span> <span class='id helper_instance'>helper_instance</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='id raise'>raise</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This method requires a block!</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id block_given?'>block_given?</span>
@@ -1529,12 +1529,12 @@ appropriate error page.</p>
       <pre class="lines">
 
 
-307
-308
-309</pre>
+322
+323
+324</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 307</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 322</span>
 
 <span class='kw'>def</span> <span class='id instances'>instances</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id instances'>instances</span>
@@ -1557,12 +1557,12 @@ appropriate error page.</p>
       <pre class="lines">
 
 
-284
-285
-286</pre>
+299
+300
+301</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 284</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 299</span>
 
 <span class='kw'>def</span> <span class='id log'>log</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id log'>log</span>
@@ -1585,12 +1585,12 @@ appropriate error page.</p>
       <pre class="lines">
 
 
-381
-382
-383</pre>
+395
+396
+397</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 381</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 395</span>
 
 <span class='kw'>def</span> <span class='id options'>options</span>
     <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span>
@@ -1613,15 +1613,15 @@ appropriate error page.</p>
       <pre class="lines">
 
 
-463
-464
-465
-466
-467
-468</pre>
+477
+478
+479
+480
+481
+482</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 463</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 477</span>
 
 <span class='kw'>def</span> <span class='id prep_modules'>prep_modules</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>modules</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
@@ -1691,20 +1691,6 @@ appropriate error page.</p>
       <pre class="lines">
 
 
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
 419
 420
 421
@@ -1747,10 +1733,24 @@ appropriate error page.</p>
 458
 459
 460
-461</pre>
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 405</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 419</span>
 
 <span class='kw'>def</span> <span class='id prep_opts'>prep_opts</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
 
@@ -1827,20 +1827,20 @@ appropriate error page.</p>
       <pre class="lines">
 
 
-470
-471
-472
-473
-474
-475
-476
-477
-478
-479
-480</pre>
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 470</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 484</span>
 
 <span class='kw'>def</span> <span class='id prep_plugins'>prep_plugins</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
     <span class='id plugins'>plugins</span>  <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1883,20 +1883,6 @@ values</p>
       <pre class="lines">
 
 
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553
-554
-555
-556
-557
 558
 559
 560
@@ -1913,10 +1899,24 @@ values</p>
 571
 572
 573
-574</pre>
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 544</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 558</span>
 
 <span class='kw'>def</span> <span class='id prep_session'>prep_session</span><span class='lparen'>(</span> <span class='id skip_dispatcher'>skip_dispatcher</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
     <span class='id session'>session</span><span class='lbracket'>[</span><span class='symbol'>:flash</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1967,20 +1967,20 @@ values</p>
       <pre class="lines">
 
 
-267
-268
-269
-270
-271
-272
-273
-274
-275
-276
-277</pre>
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 267</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 282</span>
 
 <span class='kw'>def</span> <span class='id redirect'>redirect</span><span class='lparen'>(</span> <span class='id location'>location</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='id methods'>methods</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='symbol'>:current_addon</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id current_addon'>current_addon</span>
@@ -2011,12 +2011,12 @@ values</p>
       <pre class="lines">
 
 
-288
-289
-290</pre>
+303
+304
+305</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 288</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 303</span>
 
 <span class='kw'>def</span> <span class='id reports'>reports</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id reports'>reports</span>
@@ -2065,20 +2065,6 @@ values</p>
       <pre class="lines">
 
 
-598
-599
-600
-601
-602
-603
-604
-605
-606
-607
-608
-609
-610
-611
 612
 613
 614
@@ -2088,10 +2074,24 @@ values</p>
 618
 619
 620
-621</pre>
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 598</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 612</span>
 
 <span class='kw'>def</span> <span class='id save_and_shutdown'>save_and_shutdown</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='id instance'>instance</span> <span class='op'>=</span> <span class='id instances'>instances</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='rparen'>)</span>
@@ -2135,12 +2135,12 @@ values</p>
       <pre class="lines">
 
 
-303
-304
-305</pre>
+318
+319
+320</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 303</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 318</span>
 
 <span class='kw'>def</span> <span class='id scheduler'>scheduler</span>
     <span class='id settings'>settings</span><span class='period'>.</span><span class='id scheduler'>scheduler</span>
@@ -2163,28 +2163,28 @@ values</p>
       <pre class="lines">
 
 
-319
-320
-321
-322
-323
-324
-325
-326
-327
-328
-329
-330
-331
-332
-333
 334
 335
 336
-337</pre>
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 319</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 334</span>
 
 <span class='kw'>def</span> <span class='id show'>show</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id layout'>layout</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='rparen'>)</span>
 
@@ -2223,28 +2223,28 @@ values</p>
       <pre class="lines">
 
 
-339
-340
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
 354
 355
 356
-357</pre>
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 339</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 354</span>
 
 <span class='kw'>def</span> <span class='id show_dispatcher_line'>show_dispatcher_line</span><span class='lparen'>(</span> <span class='id stats'>stats</span> <span class='rparen'>)</span>
 
@@ -2283,22 +2283,20 @@ values</p>
       <pre class="lines">
 
 
-359
-360
-361
-362
-363
-364</pre>
+374
+375
+376
+377
+378</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 359</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 374</span>
 
 <span class='kw'>def</span> <span class='id show_dispatcher_node_line'>show_dispatcher_node_line</span><span class='lparen'>(</span> <span class='id stats'>stats</span> <span class='rparen'>)</span>
     <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Nickname: </span><span class='embexpr_beg'>#{</span><span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>node</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nickname</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'> - </span><span class='tstring_end'>&quot;</span></span>
     <span class='id str'>str</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Pipe ID: </span><span class='embexpr_beg'>#{</span><span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>node</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pipe_id</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'> - </span><span class='tstring_end'>&quot;</span></span>
-    <span class='id str'>str</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weight: </span><span class='embexpr_beg'>#{</span><span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>node</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>weight</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'> - </span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># str += &quot;Cost: #{stats['node']['cost']} &quot;
-</span><span class='kw'>end</span></pre>
+    <span class='id str'>str</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weight: </span><span class='embexpr_beg'>#{</span><span class='id stats'>stats</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>node</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>weight</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -2317,20 +2315,6 @@ values</p>
       <pre class="lines">
 
 
-670
-671
-672
-673
-674
-675
-676
-677
-678
-679
-680
-681
-682
-683
 684
 685
 686
@@ -2347,10 +2331,24 @@ values</p>
 697
 698
 699
-700</pre>
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 670</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 684</span>
 
 <span class='kw'>def</span> <span class='id show_error'>show_error</span><span class='lparen'>(</span> <span class='id title'>title</span><span class='comma'>,</span> <span class='id message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id backtrace'>backtrace</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
     <span class='id skip'>skip</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2378,10 +2376,10 @@ values</p>
     <span class='rparen'>)</span>
 
     <span class='id erb'>erb</span> <span class='symbol'>:error</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='symbol'>:layout</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='rbrace'>}</span><span class='comma'>,</span>
-        <span class='symbol'>:title</span>     <span class='op'>=&gt;</span> <span class='id title'>title</span><span class='comma'>,</span>
-        <span class='symbol'>:message</span>   <span class='op'>=&gt;</span> <span class='id message'>message</span><span class='comma'>,</span>
-        <span class='symbol'>:backtrace</span> <span class='op'>=&gt;</span> <span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='comma'>,</span>
-        <span class='symbol'>:env</span>       <span class='op'>=&gt;</span> <span class='id err_env'>err_env</span><span class='period'>.</span><span class='id to_yaml'>to_yaml</span>
+        <span class='symbol'>:title</span>     <span class='op'>=&gt;</span> <span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id title'>title</span> <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:message</span>   <span class='op'>=&gt;</span> <span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id message'>message</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;br /&gt;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:backtrace</span> <span class='op'>=&gt;</span> <span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:env</span>       <span class='op'>=&gt;</span> <span class='id escape'>escape</span><span class='lparen'>(</span> <span class='id err_env'>err_env</span><span class='period'>.</span><span class='id to_yaml'>to_yaml</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2412,26 +2410,26 @@ values</p>
       <pre class="lines">
 
 
-626
-627
-628
-629
-630
-631
-632
-633
-634
-635
-636
-637
-638
-639
 640
 641
-642</pre>
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 626</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 640</span>
 
 <span class='kw'>def</span> <span class='id shutdown_all'>shutdown_all</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id stats'>stats</span> <span class='lbrace'>{</span>
@@ -2497,29 +2495,29 @@ values</p>
       <pre class="lines">
 
 
-649
-650
-651
-652
-653
-654
-655
-656
-657
-658
-659
-660
-661
-662
 663
 664
 665
 666
 667
-668</pre>
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 649</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 663</span>
 
 <span class='kw'>def</span> <span class='id shutdown_zombies'>shutdown_zombies</span>
     <span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id jobs'>jobs</span> <span class='lbrace'>{</span>
@@ -2571,18 +2569,18 @@ a number</p>
       <pre class="lines">
 
 
-388
-389
-390
-391
-392
-393
-394
-395
-396</pre>
+402
+403
+404
+405
+406
+407
+408
+409
+410</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 388</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 402</span>
 
 <span class='kw'>def</span> <span class='id to_i'>to_i</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id str'>str</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id str'>str</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span>
@@ -2611,12 +2609,12 @@ a number</p>
       <pre class="lines">
 
 
-370
-371
-372</pre>
+384
+385
+386</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 370</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 384</span>
 
 <span class='kw'>def</span> <span class='id welcomed!'>welcomed!</span>
     <span class='const'>File</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id settings'>settings</span><span class='period'>.</span><span class='id db'>db</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/welcomed</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id close'>close</span>
@@ -2661,12 +2659,12 @@ a number</p>
       <pre class="lines">
 
 
-366
-367
-368</pre>
+380
+381
+382</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 366</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 380</span>
 
 <span class='kw'>def</span> <span class='id welcomed?'>welcomed?</span>
     <span class='const'>File</span><span class='period'>.</span><span class='id exist?'>exist?</span><span class='lparen'>(</span> <span class='id settings'>settings</span><span class='period'>.</span><span class='id db'>db</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/welcomed</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
@@ -2681,7 +2679,7 @@ a number</p>
 </div>
     
     <div id="footer">
-  Generated on Tue Dec  6 12:30:10 2011 by 
+  Generated on Thu Dec 15 07:58:05 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>

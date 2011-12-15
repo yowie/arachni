@@ -154,6 +154,31 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
         </dt>
         <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.tar.gz</span><span class='tstring_end'>'</span></span></pre></dd>
       
+        <dt id="NODE_SSL_KEY-constant" class="">NODE_SSL_KEY =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>node_ssl_key.pem</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="NODE_SSL_CERT-constant" class="">NODE_SSL_CERT =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>node_ssl_cert.pem</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="SSL_KEY-constant" class="">SSL_KEY =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ssl_key.pem</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="SSL_CERT-constant" class="">SSL_CERT =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ssl_cert.pem</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="SSL_CA-constant" class="">SSL_CA =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ssl_ca.pem</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
         <dt id="EXEC-constant" class="">EXEC =
           
         </dt>
@@ -326,7 +351,7 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Initializes the Scheduler and starts the clock.</p>
+<p>A new instance of Manager.</p>
 </div></span>
   
 </li>
@@ -440,7 +465,7 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#shutdown-instance_method" title="#shutdown (instance method)">- (Object) <strong>shutdown</strong>(deployment, password) </a>
+      <a href="#shutdown-instance_method" title="#shutdown (instance method)">- (Object) <strong>shutdown</strong>(deployment, password, &amp;block) </a>
     
 
     
@@ -521,6 +546,27 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#upload_ssl_pems%21-instance_method" title="#upload_ssl_pems! (instance method)">- (Object) <strong>upload_ssl_pems!</strong>(deployment, ssh) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -547,7 +593,7 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
 </p><div class="docstring">
   <div class="discussion">
     
-<p>Initializes the Scheduler and starts the clock.</p>
+<p>A new instance of Manager</p>
 
 
   </div>
@@ -561,18 +607,18 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-57
-58
-59
-60
-61
-62
-63
-64
-65</pre>
+76
+77
+78
+79
+80
+81
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id settings'>settings</span> <span class='rparen'>)</span>
     <span class='ivar'>@opts</span>     <span class='op'>=</span> <span class='id opts'>opts</span>
@@ -630,15 +676,15 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-217
-218
-219
-220
-221
-222</pre>
+275
+276
+277
+278
+279
+280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 217</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 275</span>
 
 <span class='kw'>def</span> <span class='id alive?'>alive?</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='ivar'>@settings</span><span class='period'>.</span><span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id alive?'>alive?</span><span class='lparen'>(</span> <span class='id get_rpc_url'>get_rpc_url</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='lbrace'>{</span>
@@ -664,16 +710,16 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-228
-229
-230
-231
-232
-233
-234</pre>
+286
+287
+288
+289
+290
+291
+292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 228</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 286</span>
 
 <span class='kw'>def</span> <span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id id'>id</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
     <span class='id deployment'>deployment</span> <span class='op'>=</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span>
@@ -700,15 +746,17 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-134
-135
-136
-137</pre>
+154
+155
+156
+157
+158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id finalize_setup'>finalize_setup</span><span class='lparen'>(</span> <span class='id channel'>channel</span> <span class='rparen'>)</span>
+    <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id channel'>channel</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:deployment</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id ssl'>ssl</span> <span class='op'>=</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id conf'>conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>enable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
     <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id channel'>channel</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:deployment</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id save'>save</span>
     <span class='kw'>return</span> <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id channel'>channel</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:deployment</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
@@ -730,12 +778,12 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-224
-225
-226</pre>
+282
+283
+284</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 224</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 282</span>
 
 <span class='kw'>def</span> <span class='id get'>get</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span>
     <span class='const'>Deployment</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span>
@@ -758,15 +806,15 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-247
-248
-249</pre>
+305
+306
+307</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 247</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 305</span>
 
 <span class='kw'>def</span> <span class='id get_rpc_url'>get_rpc_url</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span> <span class='rparen'>)</span>
-    <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id host'>host</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>:</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span>
+    <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id host'>host</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>:</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='period'>.</span><span class='id to_s'>to_s</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -786,13 +834,13 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-251
-252
-253
-254</pre>
+309
+310
+311
+312</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 251</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 309</span>
 
 <span class='kw'>def</span> <span class='id get_url'>get_url</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span> <span class='rparen'>)</span>
     <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id user'>user</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id host'>host</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>:</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id port'>port</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span>
@@ -816,12 +864,12 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-198
-199
-200</pre>
+256
+257
+258</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 256</span>
 
 <span class='kw'>def</span> <span class='id list'>list</span>
     <span class='const'>Deployment</span><span class='period'>.</span><span class='id all'>all</span><span class='period'>.</span><span class='id reverse'>reverse</span>
@@ -844,23 +892,23 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215</pre>
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 202</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 260</span>
 
 <span class='kw'>def</span> <span class='id list_with_liveness'>list_with_liveness</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='op'>::</span><span class='const'>EM</span><span class='period'>.</span><span class='id synchrony'>synchrony</span> <span class='kw'>do</span>
@@ -894,12 +942,12 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-130
-131
-132</pre>
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id output'>output</span><span class='lparen'>(</span> <span class='id channel'>channel</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id channel'>channel</span><span class='rbracket'>]</span>
@@ -922,27 +970,64 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177</pre>
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 181</span>
 
 <span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
    <span class='kw'>begin</span>
@@ -955,9 +1040,46 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
        <span class='rbrace'>}</span>
    <span class='kw'>end</span>
 
-   <span class='id session'>session</span><span class='period'>.</span><span class='id exec!'>exec!</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nohup ./</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
-           <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>EXEC</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> --port=</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span> <span class='op'>+</span>
-       <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> &gt; </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>EXEC</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-startup.log 2&gt;&amp;1 &amp;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id cmd'>cmd</span>  <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nohup ./</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>EXEC</span>
+    <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --port='</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='kw'>if</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id nickname'>nickname</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id nickname'>nickname</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --nickname='</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id nickname'>nickname</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id pipe_id'>pipe_id</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id pipe_id'>pipe_id</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --pipe-id='</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id pipe_id'>pipe_id</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id weight'>weight</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id weight'>weight</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --weight='</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id weight'>weight</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id neighbour'>neighbour</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id neighbour'>neighbour</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --neighbour='</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id neighbour'>neighbour</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id address'>address</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id address'>address</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --address='</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id address'>address</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id pool_size'>pool_size</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+        <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --pool-size='</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id pool_size'>pool_size</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id ssl'>ssl</span>
+        <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --node-ssl-pkey='/</span><span class='embexpr_beg'>#{</span><span class='const'>NODE_SSL_KEY</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --node-ssl-cert='/</span><span class='embexpr_beg'>#{</span><span class='const'>NODE_SSL_CERT</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --ssl-pkey='/</span><span class='embexpr_beg'>#{</span><span class='const'>SSL_KEY</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --ssl-cert='/</span><span class='embexpr_beg'>#{</span><span class='const'>SSL_CERT</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> --ssl-ca='/</span><span class='embexpr_beg'>#{</span><span class='const'>SSL_CA</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># puts cmd
+</span>
+    <span class='id cmd'>cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> &gt; </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>EXEC</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-startup.log 2&gt;&amp;1 &amp;</span><span class='tstring_end'>'</span></span>
+
+    <span class='id session'>session</span><span class='period'>.</span><span class='id exec!'>exec!</span><span class='lparen'>(</span> <span class='id cmd'>cmd</span> <span class='rparen'>)</span>
 
    <span class='id sleep'>sleep</span><span class='lparen'>(</span> <span class='int'>3</span> <span class='rparen'>)</span>
    <span class='lbrace'>{</span> <span class='symbol'>:code</span>   <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='rbrace'>}</span>
@@ -980,25 +1102,6 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
 86
 87
 88
@@ -1041,10 +1144,30 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
 125
 126
 127
-128</pre>
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id setup'>setup</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
 
@@ -1066,7 +1189,7 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
         <span class='kw'>end</span>
 
 
-        <span class='id wget'>wget</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>wget --output-document=</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span> <span class='op'>+</span>
+        <span class='id wget'>wget</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>wget --output-document=</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span>
             <span class='const'>ARCHIVE_EXT</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_PATH</span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='const'>ARCHIVE_EXT</span>
         <span class='id ret'>ret</span> <span class='op'>=</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='id wget'>wget</span> <span class='rparen'>)</span>
 
@@ -1075,7 +1198,7 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
             <span class='kw'>return</span>
         <span class='kw'>end</span>
 
-        <span class='id mkdir'>mkdir</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>mkdir </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span>
+        <span class='id mkdir'>mkdir</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>mkdir </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='period'>.</span><span class='id to_s'>to_s</span>
         <span class='id ret'>ret</span> <span class='op'>=</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span>  <span class='id mkdir'>mkdir</span> <span class='rparen'>)</span>
 
         <span class='kw'>if</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='int'>0</span>
@@ -1084,8 +1207,8 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
         <span class='kw'>end</span>
 
 
-        <span class='id tar'>tar</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tar xvf </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span> <span class='op'>+</span> <span class='const'>ARCHIVE_EXT</span> <span class='op'>+</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> -C </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span>
+        <span class='id tar'>tar</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tar xvf </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='const'>ARCHIVE_EXT</span> <span class='op'>+</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> -C </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='period'>.</span><span class='id to_s'>to_s</span>
         <span class='id ret'>ret</span> <span class='op'>=</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span>  <span class='id tar'>tar</span> <span class='rparen'>)</span>
 
         <span class='kw'>if</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='int'>0</span>
@@ -1093,10 +1216,11 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
             <span class='kw'>return</span>
         <span class='kw'>end</span>
 
-
-        <span class='id chmod'>chmod</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>chmod +x </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
+        <span class='id chmod'>chmod</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>chmod +x </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
             <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>EXEC</span>
         <span class='id ret'>ret</span> <span class='op'>=</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='id chmod'>chmod</span> <span class='rparen'>)</span>
+
+        <span class='id upload_ssl_pems!'>upload_ssl_pems!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span> <span class='rparen'>)</span>
 
         <span class='kw'>if</span> <span class='id ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='int'>0</span>
             <span class='cvar'>@@setup</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:status</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span>
@@ -1116,7 +1240,7 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <div class="method_details ">
   <p class="signature " id="shutdown-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>shutdown</strong>(deployment, password) 
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>shutdown</strong>(deployment, password, &amp;block) 
   
 
   
@@ -1126,43 +1250,43 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195</pre>
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 179</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 237</span>
 
-<span class='kw'>def</span> <span class='id shutdown'>shutdown</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id shutdown'>shutdown</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+   <span class='id url'>url</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id host'>host</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+   <span class='ivar'>@settings</span><span class='period'>.</span><span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id proc_info'>proc_info</span> <span class='lbrace'>{</span>
+       <span class='op'>|</span><span class='id proc'>proc</span><span class='op'>|</span>
+       <span class='kw'>begin</span>
+           <span class='id session'>session</span> <span class='op'>=</span> <span class='id ssh'>ssh</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
+       <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+           <span class='kw'>return</span> <span class='lbrace'>{</span>
+               <span class='symbol'>:output</span> <span class='op'>=&gt;</span> <span class='id e'>e</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='comma'>,</span>
+               <span class='symbol'>:status</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+               <span class='symbol'>:code</span>   <span class='op'>=&gt;</span> <span class='int'>1</span>
+           <span class='rbrace'>}</span>
+       <span class='kw'>end</span>
 
-   <span class='id url'>url</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id host'>host</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
-   <span class='id proc'>proc</span> <span class='op'>=</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id proc_info'>proc_info</span>
-
-   <span class='kw'>begin</span>
-       <span class='id session'>session</span> <span class='op'>=</span> <span class='id ssh'>ssh</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
-   <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
-       <span class='kw'>return</span> <span class='lbrace'>{</span>
-           <span class='symbol'>:output</span> <span class='op'>=&gt;</span> <span class='id e'>e</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='comma'>,</span>
-           <span class='symbol'>:status</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-           <span class='symbol'>:code</span>   <span class='op'>=&gt;</span> <span class='int'>1</span>
-       <span class='rbrace'>}</span>
-   <span class='kw'>end</span>
-
-    <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>kill -9 -</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id proc'>proc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pgrp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id session'>session</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>kill -9 -</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id proc'>proc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pgrp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1182,19 +1306,19 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245</pre>
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 236</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 294</span>
 
 <span class='kw'>def</span> <span class='id ssh'>ssh</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
     <span class='cvar'>@@ssh</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1224,66 +1348,66 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
-267
-268
-269
-270
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-281
-282
-283
-284
-285
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312</pre>
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 256</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 334</span>
 
 <span class='kw'>def</span> <span class='id ssh_exec!'>ssh_exec!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id ssh'>ssh</span><span class='comma'>,</span> <span class='id command'>command</span> <span class='rparen'>)</span>
 
@@ -1360,29 +1484,29 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
       <pre class="lines">
 
 
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158</pre>
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 139</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 160</span>
 
 <span class='kw'>def</span> <span class='id uninstall'>uninstall</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span>
 
@@ -1409,12 +1533,72 @@ href="https://github.com/downloads/Zapotek/arachni">github.com/downloads/Zapotek
 </table>
 </div>
     
+      <div class="method_details ">
+  <p class="signature " id="upload_ssl_pems!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>upload_ssl_pems!</strong>(deployment, ssh) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/autodeploy/lib/manager.rb', line 314</span>
+
+<span class='kw'>def</span> <span class='id upload_ssl_pems!'>upload_ssl_pems!</span><span class='lparen'>(</span> <span class='id deployment'>deployment</span><span class='comma'>,</span> <span class='id ssh'>ssh</span> <span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@settings</span><span class='period'>.</span><span class='id conf'>conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>client</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>enable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span>
+        <span class='op'>!</span><span class='ivar'>@settings</span><span class='period'>.</span><span class='id conf'>conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>enable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+        <span class='kw'>return</span>
+    <span class='kw'>end</span>
+
+    <span class='id dir'>dir</span> <span class='op'>=</span> <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id deployment'>deployment</span><span class='period'>.</span><span class='id dispatcher_port'>dispatcher_port</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
+        <span class='const'>ARCHIVE_NAME</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/cde-root/</span><span class='tstring_end'>'</span></span>
+
+    <span class='id tx'>tx</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id tx'>tx</span> <span class='op'>&lt;&lt;</span> <span class='id ssh'>ssh</span><span class='period'>.</span><span class='id scp'>scp</span><span class='period'>.</span><span class='id upload'>upload</span><span class='lparen'>(</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id conf'>conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>client</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id dir'>dir</span> <span class='op'>+</span> <span class='const'>NODE_SSL_KEY</span> <span class='rparen'>)</span>
+    <span class='id tx'>tx</span> <span class='op'>&lt;&lt;</span> <span class='id ssh'>ssh</span><span class='period'>.</span><span class='id scp'>scp</span><span class='period'>.</span><span class='id upload'>upload</span><span class='lparen'>(</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id conf'>conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>client</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cert</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id dir'>dir</span> <span class='op'>+</span> <span class='const'>NODE_SSL_CERT</span> <span class='rparen'>)</span>
+    <span class='id tx'>tx</span> <span class='op'>&lt;&lt;</span> <span class='id ssh'>ssh</span><span class='period'>.</span><span class='id scp'>scp</span><span class='period'>.</span><span class='id upload'>upload</span><span class='lparen'>(</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id conf'>conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id dir'>dir</span> <span class='op'>+</span> <span class='const'>SSL_KEY</span> <span class='rparen'>)</span>
+    <span class='id tx'>tx</span> <span class='op'>&lt;&lt;</span> <span class='id ssh'>ssh</span><span class='period'>.</span><span class='id scp'>scp</span><span class='period'>.</span><span class='id upload'>upload</span><span class='lparen'>(</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id conf'>conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cert</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id dir'>dir</span> <span class='op'>+</span> <span class='const'>SSL_CERT</span> <span class='rparen'>)</span>
+    <span class='id tx'>tx</span> <span class='op'>&lt;&lt;</span> <span class='id ssh'>ssh</span><span class='period'>.</span><span class='id scp'>scp</span><span class='period'>.</span><span class='id upload'>upload</span><span class='lparen'>(</span> <span class='ivar'>@settings</span><span class='period'>.</span><span class='id conf'>conf</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ssl</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>server</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ca</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id dir'>dir</span> <span class='op'>+</span> <span class='const'>SSL_CA</span> <span class='rparen'>)</span>
+
+    <span class='id tx'>tx</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id d'>d</span><span class='op'>|</span> <span class='id d'>d</span><span class='period'>.</span><span class='id wait'>wait</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
     
     <div id="footer">
-  Generated on Tue Dec  6 12:30:09 2011 by 
+  Generated on Thu Dec 15 07:58:05 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>

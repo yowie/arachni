@@ -240,7 +240,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Base.html" title="Arachni::Parser::Element::Base (class)">Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Base.html#id-instance_method" title="Arachni::Parser::Element::Base#id (method)">#id</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Base.html#dup-instance_method" title="Arachni::Parser::Element::Base#dup (method)">#dup</a></span>, <span class='object_link'><a href="Base.html#id-instance_method" title="Arachni::Parser::Element::Base#id (method)">#id</a></span></p>
 
   
   
@@ -288,10 +288,6 @@
       <pre class="lines">
 
 
-244
-245
-246
-247
 248
 249
 250
@@ -308,10 +304,14 @@
 261
 262
 263
-264</pre>
+264
+265
+266
+267
+268</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 244</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 248</span>
 
 <span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id raw'>raw</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id raw'>raw</span> <span class='rparen'>)</span>
@@ -359,12 +359,12 @@
       <pre class="lines">
 
 
-266
-267
-268</pre>
+270
+271
+272</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 266</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 270</span>
 
 <span class='kw'>def</span> <span class='id http_request'>http_request</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='ivar'>@auditor</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id cookie'>cookie</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
@@ -387,12 +387,12 @@
       <pre class="lines">
 
 
-270
-271
-272</pre>
+274
+275
+276</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 270</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 274</span>
 
 <span class='kw'>def</span> <span class='id simple'>simple</span>
     <span class='kw'>return</span> <span class='ivar'>@simple</span>
@@ -415,12 +415,12 @@
       <pre class="lines">
 
 
-274
-275
-276</pre>
+278
+279
+280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 274</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 278</span>
 
 <span class='kw'>def</span> <span class='id type'>type</span>
     <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Auditor</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>COOKIE</span>
@@ -435,7 +435,7 @@
 </div>
     
     <div id="footer">
-  Generated on Tue Dec  6 12:30:04 2011 by 
+  Generated on Thu Dec 15 07:57:58 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>

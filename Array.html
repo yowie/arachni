@@ -180,12 +180,14 @@ this program under the term of the GPL v2.0 License
 25
 26
 27
-28</pre>
+28
+29</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ruby/array.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id chunk'>chunk</span><span class='lparen'>(</span> <span class='id pieces'>pieces</span> <span class='op'>=</span> <span class='int'>2</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='id pieces'>pieces</span> <span class='op'>&lt;=</span> <span class='int'>0</span>
 
     <span class='id len'>len</span>    <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id length'>length</span><span class='semicolon'>;</span>
     <span class='id mid'>mid</span>    <span class='op'>=</span> <span class='lparen'>(</span> <span class='id len'>len</span> <span class='op'>/</span> <span class='id pieces'>pieces</span> <span class='rparen'>)</span>
@@ -211,7 +213,7 @@ this program under the term of the GPL v2.0 License
 </div>
     
     <div id="footer">
-  Generated on Tue Dec  6 12:30:01 2011 by 
+  Generated on Thu Dec 15 07:57:55 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>

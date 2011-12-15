@@ -69,7 +69,6 @@
 <li>Users can now specify a range of ports to be used for spawned Instances. [Issue #76]</li>
 <li>Now checks for signal availability before using <em>trap()</em>. (<strong>New</strong>) [Issue #71]</li>
 <li>Now uses Windows compliant filenames for the logs. (<strong>New</strong>) [Issue #70]</li>
-<li>Now includes <em>win32/process</em> to provide <em>Process.pid</em>/<em>fork()</em> (and others) under Windows platforms. (<strong>New</strong>)</li>
 </ul>
 </li>
 <li>Ruby's XMLRPC libraries have been replaced by <a href="https://github.com/Arachni/arachni-rpc">Arachni-RPC</a>,
@@ -102,6 +101,7 @@ a light-weight and high-performance custom client/server RPC implementation.</li
 <ul>
 <li>Fixed bug that caused the <em>current_page</em> to not be refreshed during timing attacks.</li>
 <li>Fixed bug that caused a less than 100% progress at the end of scans. [Issue #86]</li>
+<li>If the crawler is limited by link-count it will be taken under consideration.</li>
 </ul>
 </li>
 <li>Significantly reduced memory footprint by re-scheduling the consumption of Trainer generated pages.</li>
@@ -146,6 +146,7 @@ a light-weight and high-performance custom client/server RPC implementation.</li
 <li>Provides an average of all stats of scanner instances. (<strong>New</strong>)</li>
 <li>Added per instance progress bars. (<strong>New</strong>)</li>
 <li>Added per instance statuses. (<strong>New</strong>)</li>
+<li>Added est. remaining time. (<strong>New</strong>)</li>
 </ul>
 </li>
 <li>Settings
@@ -165,7 +166,14 @@ a light-weight and high-performance custom client/server RPC implementation.</li
 <li>CLI
 
 <ul>
-<li>Improved interrupt handler, it now exits in a cleaner fashion and is more obedient.</li>
+<li>Improved interrupt handler:
+
+<ul>
+<li>It now exits in a cleaner fashion and is more obedient.</li>
+<li>Added est. remaining time. (<strong>New</strong>)</li>
+<li>Added progressbar. (<strong>New</strong>)</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -255,6 +263,8 @@ the same inputs for all passwords in case it's a 'please repeat your password' t
 <li>Added graph showing issue trust totals. (<strong>New</strong>)</li>
 <li>The main issue graph shows trusted and untrusted issues in 2 different series.</li>
 <li>ALl JavaScript and CSS code is now included in the report for off-line viewing.</li>
+<li>Removed manual-verification piechart, obsoleted by the trust chart.</li>
+<li>Replaced Highcharts with jqPlot due to licensing reasons.</li>
 </ul>
 </li>
 <li>Added (<strong>New</strong>)
@@ -291,6 +301,8 @@ the same inputs for all passwords in case it's a 'please repeat your password' t
 look for that element before logging in order to eliminate false positives. [Issue #59]</li>
 <li>Path traversal -- Fixed broken regular expressions</li>
 <li>SQL Injection -- Fixed broken regular expressions</li>
+<li>XSS Path -- Updated to verify the injection using HTML parsing</li>
+<li>XSS URI -- Made obsolete and will be removed from future releases -- loads and runs XSS Path instead.</li>
 </ul>
 </li>
 <li>Recon
@@ -344,6 +356,7 @@ look for that element before logging in order to eliminate false positives. [Iss
 <li>Removed
 
 <ul>
+<li>Rack-CSRF</li>
 <li>JSON (Provided by DataMapper)</li>
 </ul>
 </li>
@@ -545,7 +558,7 @@ look for that element before logging in order to eliminate false positives. [Iss
 <h2>Version 0.2.2.2 <em>(March 22, 2011)</em></h2>
 
 <ul>
-<li>Added "arachni_web_autostart" under bin -- Automatically starts all systems required by the WebUI and makes shutting down everything easier too (Original by: Brandon Potter <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x62;&#x70;&#x6f;&#x74;&#116;&#x65;&#114;&#x38;&#x37;&#x30;&#53;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x62;&#112;&#x6f;&#x74;&#116;&#101;&#x72;&#56;&#55;&#x30;&#x35;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>)</li>
+<li>Added "arachni_web_autostart" under bin -- Automatically starts all systems required by the WebUI and makes shutting down everything easier too (Original by: Brandon Potter <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x62;&#x70;&#111;&#x74;&#x74;&#101;&#x72;&#x38;&#55;&#48;&#x35;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#98;&#112;&#111;&#x74;&#116;&#x65;&#114;&#56;&#x37;&#48;&#x35;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;</a>)</li>
 <li>Overrided Nokogiri to revert to UTF-8 when it comes across an unknown charset instead of throwing exceptions</li>
 <li>Dependency versions are now defined explicitly [Issue #23]</li>
 <li>Updated to Sinatra v1.2.1</li>
@@ -585,7 +598,7 @@ look for that element before logging in order to eliminate false positives. [Iss
 
 <ul>
 <li>Fixed exception on empty issue list</li>
-<li>Fixed encoding exceptions (cheers to Chris Weber <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#x63;&#104;&#114;&#x69;&#115;&#x40;&#99;&#97;&#115;&#x61;&#98;&#97;&#46;&#x63;&#x6f;&#x6d;">&#99;&#x68;&#x72;&#x69;&#115;&#64;&#x63;&#x61;&#115;&#x61;&#98;&#x61;&#x2e;&#99;&#x6f;&#x6d;</a>)</li>
+<li>Fixed encoding exceptions (cheers to Chris Weber <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#x63;&#x68;&#x72;&#x69;&#x73;&#64;&#99;&#97;&#x73;&#97;&#98;&#97;&#x2e;&#x63;&#111;&#109;">&#x63;&#x68;&#x72;&#x69;&#x73;&#64;&#x63;&#x61;&#115;&#97;&#x62;&#97;&#46;&#x63;&#111;&#x6d;</a>)</li>
 </ul>
 </li>
 </ul>
@@ -899,7 +912,7 @@ look for that element before logging in order to eliminate false positives. [Iss
 </div></div>
     
     <div id="footer">
-  Generated on Tue Dec  6 12:29:57 2011 by 
+  Generated on Thu Dec 15 07:57:50 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>
