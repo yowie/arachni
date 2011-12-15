@@ -759,6 +759,48 @@ instance.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#serialized_auditstore-instance_method" title="#serialized_auditstore (instance method)">- (Object) <strong>serialized_auditstore</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#serialized_report-instance_method" title="#serialized_report (instance method)">- (Object) <strong>serialized_report</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#set_master-instance_method" title="#set_master (instance method)">- (Bool) <strong>set_master</strong>(url, token) </a>
     
 
@@ -1574,17 +1616,17 @@ variations).</p>
       <pre class="lines">
 
 
-547
-548
-549
-550
-551
-552
-553
-554</pre>
+555
+556
+557
+558
+559
+560
+561
+562</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 547</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 555</span>
 
 <span class='kw'>def</span> <span class='id issues'>issues</span>
     <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id issues'>issues</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
@@ -2252,15 +2294,15 @@ instance.</p>
       <pre class="lines">
 
 
-629
-630
-631
-632
-633
-634</pre>
+637
+638
+639
+640
+641
+642</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 629</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 637</span>
 
 <span class='kw'>def</span> <span class='id register_issues'>register_issues</span><span class='lparen'>(</span> <span class='id issues'>issues</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id token'>token</span> <span class='rparen'>)</span>
@@ -2405,15 +2447,15 @@ instance.</p>
       <pre class="lines">
 
 
-572
-573
-574
-575
-576
-577</pre>
+580
+581
+582
+583
+584
+585</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 572</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 580</span>
 
 <span class='kw'>def</span> <span class='id restrict_to_elements!'>restrict_to_elements!</span><span class='lparen'>(</span> <span class='id elements'>elements</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id token'>token</span> <span class='rparen'>)</span>
@@ -2825,6 +2867,62 @@ instance.</p>
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="serialized_auditstore-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>serialized_auditstore</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+542
+543
+544</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 542</span>
+
+<span class='kw'>def</span> <span class='id serialized_auditstore'>serialized_auditstore</span>
+    <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id to_yaml'>to_yaml</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="serialized_report-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>serialized_report</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+546
+547
+548</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 546</span>
+
+<span class='kw'>def</span> <span class='id serialized_report'>serialized_report</span>
+    <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id to_h'>to_h</span><span class='period'>.</span><span class='id to_yaml'>to_yaml</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="set_master-instance_method">
   
     - (<tt>Bool</tt>) <strong>set_master</strong>(url, token) 
@@ -2903,23 +3001,23 @@ is not applicable).</p>
       <pre class="lines">
 
 
-588
-589
-590
-591
-592
-593
-594
-595
 596
 597
 598
 599
 600
-601</pre>
+601
+602
+603
+604
+605
+606
+607
+608
+609</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 588</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 596</span>
 
 <span class='kw'>def</span> <span class='id set_master'>set_master</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span>
@@ -3107,14 +3205,14 @@ is not applicable).</p>
       <pre class="lines">
 
 
-612
-613
-614
-615
-616</pre>
+620
+621
+622
+623
+624</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 612</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 620</span>
 
 <span class='kw'>def</span> <span class='id update_page_queue!'>update_page_queue!</span><span class='lparen'>(</span> <span class='id pages'>pages</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id token'>token</span> <span class='rparen'>)</span>
@@ -3141,7 +3239,7 @@ is not applicable).</p>
 </div>
     
     <div id="footer">
-  Generated on Thu Dec 15 08:05:07 2011 by 
+  Generated on Thu Dec 15 09:15:14 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>
