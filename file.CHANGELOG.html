@@ -85,8 +85,10 @@ a light-weight and high-performance custom client/server RPC implementation.</li
 <li>Recon
 
 <ul>
-<li>SVN Digger dirs -- Finds directories, based on wordlists created from open source repositories</li>
-<li>SVN Digger files -- Finds files, based on wordlists created from open source repositories</li>
+<li>SVN Digger dirs -- Finds directories, based on wordlists created from open source repositories (Herman Stevens)</li>
+<li>SVN Digger files -- Finds files, based on wordlists created from open source repositories (Herman Stevens)</li>
+<li>RAFT dirs (Herman Stevens)</li>
+<li>RAFT files (Herman Stevens)</li>
 </ul>
 </li>
 </ul>
@@ -117,7 +119,7 @@ a light-weight and high-performance custom client/server RPC implementation.</li
 
 <ul>
 <li>Updated to use the light-weight and high-performance <a href="http://code.macournoyer.com/thin/">Thin</a> server.</li>
-<li>Added <a href="https://github.com/raggi/async_sinatra">async_sinatra</a> to allow for asynchronous responses.</li>
+<li>Added <a href="https://github.com/raggi/async_sinatra">async_sinatra</a> to allow for asynchronous responses. (<strong>New</strong>)</li>
 </ul>
 </li>
 <li>Added support for HTTP Basic Auth (<strong>New</strong>)</li>
@@ -161,6 +163,7 @@ a light-weight and high-performance custom client/server RPC implementation.</li
 <li>Fixed small typo in "Settings" screen. [Issue #62]</li>
 <li>Reports -- AFR report is now served straight-up to avoid corruption. [Issue #55]</li>
 <li>Add-ons -- Updated to use the new async libraries.</li>
+<li>Added help buttons. (<strong>New</strong>)</li>
 </ul>
 </li>
 <li>CLI
@@ -309,15 +312,6 @@ look for that element before logging in order to eliminate false positives. [Iss
 
 <ul>
 <li>Added MixedResource detection module (<a href="http://googleonlinesecurity.blogspot.com/2011/06/trying-to-end-mixed-scripting.html">Reference</a>) (<strong>New</strong>) [Issue #56]</li>
-</ul>
-</li>
-<li>Extras (<strong>New</strong>)
-
-<ul>
-<li>SVN Digger dirs (Herman Stevens)</li>
-<li>SVN Digger files (Herman Stevens)</li>
-<li>RAFT dirs (Herman Stevens)</li>
-<li>RAFT files (Herman Stevens)</li>
 </ul>
 </li>
 </ul>
@@ -558,7 +552,7 @@ look for that element before logging in order to eliminate false positives. [Iss
 <h2>Version 0.2.2.2 <em>(March 22, 2011)</em></h2>
 
 <ul>
-<li>Added "arachni_web_autostart" under bin -- Automatically starts all systems required by the WebUI and makes shutting down everything easier too (Original by: Brandon Potter <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x62;&#112;&#111;&#116;&#116;&#101;&#x72;&#x38;&#x37;&#x30;&#53;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#98;&#112;&#x6f;&#116;&#116;&#x65;&#114;&#x38;&#x37;&#x30;&#x35;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a>)</li>
+<li>Added "arachni_web_autostart" under bin -- Automatically starts all systems required by the WebUI and makes shutting down everything easier too (Original by: Brandon Potter <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x62;&#x70;&#111;&#x74;&#x74;&#101;&#114;&#56;&#55;&#48;&#x35;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#98;&#x70;&#x6f;&#116;&#x74;&#101;&#114;&#56;&#55;&#x30;&#x35;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;</a>)</li>
 <li>Overrided Nokogiri to revert to UTF-8 when it comes across an unknown charset instead of throwing exceptions</li>
 <li>Dependency versions are now defined explicitly [Issue #23]</li>
 <li>Updated to Sinatra v1.2.1</li>
@@ -598,7 +592,7 @@ look for that element before logging in order to eliminate false positives. [Iss
 
 <ul>
 <li>Fixed exception on empty issue list</li>
-<li>Fixed encoding exceptions (cheers to Chris Weber <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#99;&#104;&#x72;&#x69;&#115;&#x40;&#x63;&#97;&#115;&#x61;&#x62;&#97;&#46;&#99;&#111;&#x6d;">&#x63;&#104;&#114;&#x69;&#115;&#64;&#x63;&#x61;&#x73;&#x61;&#98;&#x61;&#46;&#99;&#111;&#x6d;</a>)</li>
+<li>Fixed encoding exceptions (cheers to Chris Weber <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x63;&#104;&#x72;&#105;&#115;&#x40;&#99;&#x61;&#x73;&#97;&#98;&#x61;&#x2e;&#x63;&#111;&#x6d;">&#99;&#x68;&#x72;&#105;&#115;&#x40;&#99;&#97;&#115;&#x61;&#98;&#97;&#x2e;&#x63;&#111;&#x6d;</a>)</li>
 </ul>
 </li>
 </ul>
@@ -912,7 +906,7 @@ look for that element before logging in order to eliminate false positives. [Iss
 </div></div>
     
     <div id="footer">
-  Generated on Thu Dec 15 09:39:20 2011 by 
+  Generated on Fri Dec 16 09:23:16 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>

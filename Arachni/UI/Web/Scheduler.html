@@ -401,12 +401,12 @@
       <pre class="lines">
 
 
-137
-138
-139</pre>
+142
+143
+144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 142</span>
 
 <span class='kw'>def</span> <span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span>
     <span class='const'>Job</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id id'>id</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id destroy'>destroy</span>
@@ -440,12 +440,12 @@
       <pre class="lines">
 
 
-128
-129
-130</pre>
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id delete_all'>delete_all</span>
     <span class='id jobs'>jobs</span><span class='period'>.</span><span class='id destroy'>destroy</span>
@@ -492,12 +492,12 @@
       <pre class="lines">
 
 
-121
-122
-123</pre>
+126
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 126</span>
 
 <span class='kw'>def</span> <span class='id jobs'>jobs</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
     <span class='const'>Job</span><span class='period'>.</span><span class='id all'>all</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
@@ -625,7 +625,12 @@
 98
 99
 100
-101</pre>
+101
+102
+103
+104
+105
+106</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 72</span>
@@ -635,6 +640,11 @@
 
     <span class='ivar'>@settings</span><span class='period'>.</span><span class='id dispatchers'>dispatchers</span><span class='period'>.</span><span class='id connect'>connect</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='period'>.</span><span class='id dispatcher'>dispatcher</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id dispatch'>dispatch</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span><span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id instance'>instance</span><span class='op'>|</span>
+
+        <span class='kw'>if</span> <span class='id instance'>instance</span><span class='period'>.</span><span class='id rpc_exception?'>rpc_exception?</span>
+            <span class='ivar'>@settings</span><span class='period'>.</span><span class='id log'>log</span><span class='period'>.</span><span class='id scheduler_instance_dispatch_failed'>scheduler_instance_dispatch_failed</span><span class='lparen'>(</span> <span class='id env'>env</span> <span class='rparen'>)</span>
+            <span class='kw'>next</span>
+        <span class='kw'>end</span>
 
         <span class='id env'>env</span> <span class='op'>=</span> <span class='lbrace'>{</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>REMOTE_ADDR</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id job'>job</span><span class='period'>.</span><span class='id owner_addr'>owner_addr</span><span class='comma'>,</span>
@@ -704,16 +714,16 @@
       <pre class="lines">
 
 
-108
-109
-110
-111
-112
 113
-114</pre>
+114
+115
+116
+117
+118
+119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/scheduler.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id run_and_destroy'>run_and_destroy</span><span class='lparen'>(</span> <span class='id job'>job</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
     <span class='id run'>run</span><span class='lparen'>(</span> <span class='id job'>job</span> <span class='rparen'>)</span><span class='lbrace'>{</span>
@@ -732,7 +742,7 @@
 </div>
     
     <div id="footer">
-  Generated on Thu Dec 15 09:39:27 2011 by 
+  Generated on Fri Dec 16 09:23:24 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>

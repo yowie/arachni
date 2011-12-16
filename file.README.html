@@ -188,13 +188,19 @@ performance increase, both when browsing around and when monitoring running scan
 <p>Arachni is a feature-full, modular, high-performance Ruby framework aimed towards helping
 penetration testers and administrators evaluate the security of web applications.</p>
 
-<p>Arachni is smart, it trains itself by learning from the HTTP responses it receives during the audit process.<br/>
-Unlike other scanners, Arachni takes into account the dynamic nature of web applications and can detect changes caused while travelling<br/>
-through the paths of a web application's cyclomatic complexity.<br/>
+<p>Arachni is smart, it trains itself by learning from the HTTP responses it receives during the audit process and
+is able to perform meta-analysis using a number of factors in order to correctly assess the trustworthiness of results and intelligently identify false-positives.</p>
+
+<p>Unlike other scanners, it takes into account the dynamic nature of web applications, can detect changes caused while travelling<br/>
+through the paths of a web application's cyclomatic complexity and is able to adjust itself accordingly.<br/>
 This way attack/input vectors that would otherwise be undetectable by non-humans are seamlessly handled by Arachni.</p>
 
-<p>Finally, Arachni yields great performance due to its asynchronous HTTP  model (courtesy of <a href="https://github.com/pauldix/typhoeus">Typhoeus</a>).<br/>
-Thus, you'll only be limited by the responsiveness of the server under audit and your available bandwidth.</p>
+<p>Moreover, Arachni yields great performance due to its asynchronous HTTP model (courtesy of <a href="https://github.com/pauldix/typhoeus">Typhoeus</a>) --
+especially when combined with a High Performance Grid setup which allows you to combine the resources of multiple nodes for lightning fast scans.<br/>
+Thus, you'll only be limited by the responsiveness of the server under audit.</p>
+
+<p>Finally, it is versatile enough to cover a great deal of use cases,
+ranging from a simple command line scanner utility, to a global high performance grid of scanners, to a Ruby library allowing for scripted audits.</p>
 
 <p><strong>Note</strong>: <em>Despite the fact that Arachni is mostly targeted towards web application security, it can easily be used for general purpose scraping, data-mining, etc with the addition of custom modules.</em></p>
 
@@ -217,9 +223,9 @@ From a user's or a component developer's point of view everything appears simple
 <h3>General</h3>
 
 <ul>
-<li>Cookie-jar support</li>
+<li>Cookie-jar support.</li>
+<li>Custom header support.</li>
 <li>SSL support.</li>
-<li>Support for custom headers.</li>
 <li>User Agent spoofing.</li>
 <li>Proxy support for SOCKS4, SOCKS4A, SOCKS5, HTTP/1.1 and HTTP/1.0.</li>
 <li>Proxy authentication.</li>
@@ -229,12 +235,12 @@ From a user's or a component developer's point of view everything appears simple
 
 <ul>
 <li>Command line UI</li>
-<li>Web UI (Utilizing the Client - Dispatch-server RPC infrastructure)</li>
+<li>Web UI (Utilizing the Client - Dispatcher RPC infrastructure)</li>
 </ul>
 </li>
 <li>Pause/resume functionality.</li>
 <li>High performance asynchronous HTTP requests.</li>
-<li>Open RPC Client/Dispatch-server Infrastructure
+<li>Open <a href="https://github.com/Zapotek/arachni/wiki/RPC-API">RPC</a> Client/Dispatcher Infrastructure
 
 <ul>
 <li>Distributed deployment</li>
@@ -242,7 +248,7 @@ From a user's or a component developer's point of view everything appears simple
 <li>Parallel scans</li>
 <li>SSL encryption (with peer authentication)</li>
 <li>Remote monitoring</li>
-<li>Support for High Performance Grid configuration, utilizing multiple nodes to perform single scans.</li>
+<li>Support for High Performance Grid configuration, combining the resources of multiple nodes to perform fast scans.</li>
 </ul>
 </li>
 </ul>
@@ -419,9 +425,11 @@ However, this is usually not required since Arachni is aware of which requests a
 
 <h2>Usage</h2>
 
+<h3><a href="https://github.com/Zapotek/arachni/wiki/Command-line-user-interface">Command line interface</a></h3>
+
 <h3><a href="https://github.com/Zapotek/arachni/wiki/Web-user-interface">WebUI</a></h3>
 
-<h3><a href="https://github.com/Zapotek/arachni/wiki/Command-line-user-interface">Command line interface</a></h3>
+<h3><a href="https://github.com/Zapotek/arachni/wiki/RPC-server">Starting a Dispatcher</a></h3>
 
 <h2>Installation</h2>
 
@@ -432,8 +440,6 @@ CDE packages are self contained and thus alleviate the need for Ruby and other d
 You can download the latest CDE package from the <a href="https://github.com/Zapotek/arachni/downloads">download</a> page and escape the dependency hell.<br/>
 If you decide to go the CDE route you can skip the rest, you're done.</p>
 
-<p>Due to some incompatibility this release does not have a CDE package yet.</p>
-
 <h3>Gem</h3>
 
 <p>To install the Gem or work with the source code you'll also need the following system libraries:</p>
@@ -441,8 +447,8 @@ If you decide to go the CDE route you can skip the rest, you're done.</p>
 <pre class="code">$ sudo apt-get install libxml2-dev libxslt1-dev libcurl4-openssl-dev libsqlite3-dev
 </pre>
 
-<p>You will also need to have Ruby 1.9.2 installed <em>including</em> the dev package/headers.<br/>
-The prefered ways to accomplish this is by either using <a href="http://rvm.beginrescueend.com/">RVM</a> or by downloading and compiling the source code for <a href="http://www.ruby-lang.org/en/downloads/">Ruby 1.9.2</a> manually.</p>
+<p>You will also need to have Ruby 1.9.2 (or later) installed <em>including</em> the dev package/headers.<br/>
+The prefered ways to accomplish this is by either using <a href="http://rvm.beginrescueend.com/">RVM</a> or by downloading and compiling the source code for <a href="http://www.ruby-lang.org/en/downloads/">Ruby</a> manually.</p>
 
 <p>To install Arachni:</p>
 
@@ -453,7 +459,9 @@ The prefered ways to accomplish this is by either using <a href="http://rvm.begi
 
 <p>If you want to clone the repository and work with the source code then you'll need to run the following to install all gem dependencies and Arachni:</p>
 
-<pre class="code">$ rake install
+<pre class="code">$ git clone git://github.com/Zapotek/arachni.git
+$ cd arachni
+$ rake install
 </pre>
 
 <h2>Configuration of <em>extras</em></h2>
@@ -491,7 +499,7 @@ caused by the use of this software.</p>
 </div></div>
     
     <div id="footer">
-  Generated on Thu Dec 15 09:39:20 2011 by 
+  Generated on Fri Dec 16 09:23:16 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>

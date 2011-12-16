@@ -113,7 +113,7 @@
         <dt id="TrueRegex-constant" class="">TrueRegex =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(y|yes|t|1|true)$</span><span class='regexp_end'>/i</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(y|yes|t|1|true|on)$</span><span class='regexp_end'>/i</span></span></pre></dd>
       
     </dl>
   
@@ -491,7 +491,7 @@
 
     <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id value'>value</span> <span class='op'>!=</span> <span class='kw'>nil</span> <span class='kw'>and</span>
         <span class='lparen'>(</span><span class='id value'>value</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>==</span> <span class='kw'>false</span><span class='rparen'>)</span> <span class='kw'>and</span>
-        <span class='lparen'>(</span><span class='id value'>value</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(y|yes|n|no|t|f|0|1|true|false)$</span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='lparen'>(</span><span class='id value'>value</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(y|yes|n|no|t|f|0|1|true|false|on)$</span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
         <span class='kw'>return</span> <span class='kw'>false</span>
     <span class='kw'>end</span>
 
@@ -507,7 +507,7 @@
 </div>
     
     <div id="footer">
-  Generated on Thu Dec 15 09:39:28 2011 by 
+  Generated on Fri Dec 16 09:23:25 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>
