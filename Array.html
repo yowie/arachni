@@ -97,7 +97,7 @@
     
 <p>Arachni</p>
 
-<pre class="code">Copyright (c) 2010-2011 Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;
+<pre class="code">Copyright (c) 2010-2012 Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;
 
 This is free software; you can copy and distribute and modify
 this program under the term of the GPL v2.0 License
@@ -186,22 +186,22 @@ this program under the term of the GPL v2.0 License
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ruby/array.rb', line 13</span>
 
-<span class='kw'>def</span> <span class='id chunk'>chunk</span><span class='lparen'>(</span> <span class='id pieces'>pieces</span> <span class='op'>=</span> <span class='int'>2</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='id pieces'>pieces</span> <span class='op'>&lt;=</span> <span class='int'>0</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_chunk'>chunk</span><span class='lparen'>(</span> <span class='id identifier rubyid_pieces'>pieces</span> <span class='op'>=</span> <span class='int'>2</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='id identifier rubyid_pieces'>pieces</span> <span class='op'>&lt;=</span> <span class='int'>0</span>
 
-    <span class='id len'>len</span>    <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id length'>length</span><span class='semicolon'>;</span>
-    <span class='id mid'>mid</span>    <span class='op'>=</span> <span class='lparen'>(</span> <span class='id len'>len</span> <span class='op'>/</span> <span class='id pieces'>pieces</span> <span class='rparen'>)</span>
-    <span class='id chunks'>chunks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id start'>start</span>  <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_len'>len</span>    <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='semicolon'>;</span>
+    <span class='id identifier rubyid_mid'>mid</span>    <span class='op'>=</span> <span class='lparen'>(</span> <span class='id identifier rubyid_len'>len</span> <span class='op'>/</span> <span class='id identifier rubyid_pieces'>pieces</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_chunks'>chunks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_start'>start</span>  <span class='op'>=</span> <span class='int'>0</span>
 
-    <span class='int'>1</span><span class='period'>.</span><span class='id upto'>upto</span><span class='lparen'>(</span> <span class='id pieces'>pieces</span> <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id i'>i</span><span class='op'>|</span>
-        <span class='id last'>last</span> <span class='op'>=</span> <span class='id start'>start</span> <span class='op'>+</span> <span class='id mid'>mid</span>
-        <span class='id last'>last</span> <span class='op'>=</span> <span class='id last'>last</span> <span class='op'>-</span> <span class='int'>1</span> <span class='kw'>unless</span> <span class='id len'>len</span> <span class='op'>%</span> <span class='id pieces'>pieces</span> <span class='op'>&gt;=</span> <span class='id i'>i</span>
-        <span class='id chunks'>chunks</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span><span class='lbracket'>[</span> <span class='id start'>start</span><span class='op'>..</span><span class='id last'>last</span> <span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-        <span class='id start'>start</span> <span class='op'>=</span> <span class='id last'>last</span> <span class='op'>+</span> <span class='int'>1</span>
+    <span class='int'>1</span><span class='period'>.</span><span class='id identifier rubyid_upto'>upto</span><span class='lparen'>(</span> <span class='id identifier rubyid_pieces'>pieces</span> <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+        <span class='id identifier rubyid_last'>last</span> <span class='op'>=</span> <span class='id identifier rubyid_start'>start</span> <span class='op'>+</span> <span class='id identifier rubyid_mid'>mid</span>
+        <span class='id identifier rubyid_last'>last</span> <span class='op'>=</span> <span class='id identifier rubyid_last'>last</span> <span class='op'>-</span> <span class='int'>1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_len'>len</span> <span class='op'>%</span> <span class='id identifier rubyid_pieces'>pieces</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_i'>i</span>
+        <span class='id identifier rubyid_chunks'>chunks</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span><span class='lbracket'>[</span> <span class='id identifier rubyid_start'>start</span><span class='op'>..</span><span class='id identifier rubyid_last'>last</span> <span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_start'>start</span> <span class='op'>=</span> <span class='id identifier rubyid_last'>last</span> <span class='op'>+</span> <span class='int'>1</span>
     <span class='kw'>end</span>
 
-    <span class='kw'>return</span> <span class='id chunks'>chunks</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_chunks'>chunks</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -213,9 +213,9 @@ this program under the term of the GPL v2.0 License
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:21 2011 by 
+  Generated on Wed Jan  4 05:41:36 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

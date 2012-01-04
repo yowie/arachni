@@ -62,15 +62,15 @@
 
 <h2>Installation</h2>
 
-<pre class="code"><span class='id git'>git</span> <span class='id clone'>clone</span> <span class='label'>git:</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/github</span></span><span class='period'>.</span><span class='id com'>com</span><span class='op'>/</span><span class='const'>Zapotek</span><span class='op'>/</span><span class='id arachni'>arachni</span><span class='period'>.</span><span class='id git'>git</span>
-<span class='id cd'>cd</span> <span class='id arachni'>arachni</span>
-<span class='id git'>git</span> <span class='id checkout'>checkout</span> <span class='id experimental'>experimental</span>
-<span class='id rake'>rake</span> <span class='id install'>install</span>
+<pre class="code"><span class='id identifier rubyid_git'>git</span> <span class='id identifier rubyid_clone'>clone</span> <span class='label'>git:</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/github</span></span><span class='period'>.</span><span class='id identifier rubyid_com'>com</span><span class='op'>/</span><span class='const'>Zapotek</span><span class='op'>/</span><span class='id identifier rubyid_arachni'>arachni</span><span class='period'>.</span><span class='id identifier rubyid_git'>git</span>
+<span class='id identifier rubyid_cd'>cd</span> <span class='id identifier rubyid_arachni'>arachni</span>
+<span class='id identifier rubyid_git'>git</span> <span class='id identifier rubyid_checkout'>checkout</span> <span class='id identifier rubyid_experimental'>experimental</span>
+<span class='id identifier rubyid_rake'>rake</span> <span class='id identifier rubyid_install'>install</span>
 </pre>
 
 <p>If you encounter a Typhoeus related error while running Arachni issue:</p>
 
-<pre class="code"><span class='id gem'>gem</span> <span class='id clean'>clean</span>
+<pre class="code"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_clean'>clean</span>
 </pre>
 
 <h2>Setting up the High Performance Grid (HPG)</h2>
@@ -172,7 +172,7 @@ performance increase, both when browsing around and when monitoring running scan
     </tr>
     <tr>
         <th>Copyright</th>
-        <td>2010-2011</td>
+        <td>2010-2012 Tasos Laskos</td>
     </tr>
     <tr>
         <th>License</th>
@@ -409,6 +409,7 @@ From a user's or a component developer's point of view everything appears simple
 <li>LibNotify -- Uses the libnotify library to send notifications for each discovered issue and a summary at the end of the scan.</li>
 <li>EmailNotify -- Sends a notification (and optionally a report) over SMTP at the end of the scan.</li>
 <li>Manual verification -- Flags issues that require manual verification as untrusted in order to reduce the signal-to-noise ratio.</li>
+<li>Resolver -- Resolves vulnerable hostnames to IP addresses.</li>
 </ul>
 </li>
 </ul>
@@ -423,14 +424,6 @@ However, this is usually not required since Arachni is aware of which requests a
 
 <p>Still, this can be an invaluable asset to Fuzzer modules.</p>
 
-<h2>Usage</h2>
-
-<h3><a href="https://github.com/Zapotek/arachni/wiki/Command-line-user-interface">Command line interface</a></h3>
-
-<h3><a href="https://github.com/Zapotek/arachni/wiki/Web-user-interface">WebUI</a></h3>
-
-<h3><a href="https://github.com/Zapotek/arachni/wiki/RPC-server">Starting a Dispatcher</a></h3>
-
 <h2>Installation</h2>
 
 <h3>CDE packages for Linux</h3>
@@ -444,7 +437,7 @@ If you decide to go the CDE route you can skip the rest, you're done.</p>
 
 <p>To install the Gem or work with the source code you'll also need the following system libraries:</p>
 
-<pre class="code">$ sudo apt-get install libxml2-dev libxslt1-dev libcurl4-openssl-dev libsqlite3-dev
+<pre class="code">sudo apt-get install libxml2-dev libxslt1-dev libcurl4-openssl-dev libsqlite3-dev
 </pre>
 
 <p>You will also need to have Ruby 1.9.2 (or later) installed <em>including</em> the dev package/headers.<br/>
@@ -452,17 +445,27 @@ The prefered ways to accomplish this is by either using <a href="http://rvm.begi
 
 <p>To install Arachni:</p>
 
-<pre class="code">$ gem install arachni
+<pre class="code"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_arachni'>arachni</span>
 </pre>
 
 <h3>Source</h3>
 
 <p>If you want to clone the repository and work with the source code then you'll need to run the following to install all gem dependencies and Arachni:</p>
 
-<pre class="code">$ git clone git://github.com/Zapotek/arachni.git
-$ cd arachni
-$ rake install
+<pre class="code"><span class='id identifier rubyid_git'>git</span> <span class='id identifier rubyid_clone'>clone</span> <span class='label'>git:</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/github</span></span><span class='period'>.</span><span class='id identifier rubyid_com'>com</span><span class='op'>/</span><span class='const'>Zapotek</span><span class='op'>/</span><span class='id identifier rubyid_arachni'>arachni</span><span class='period'>.</span><span class='id identifier rubyid_git'>git</span>
+<span class='id identifier rubyid_cd'>cd</span> <span class='id identifier rubyid_arachni'>arachni</span>
+<span class='id identifier rubyid_rake'>rake</span> <span class='id identifier rubyid_install'>install</span>
 </pre>
+
+<h3><a href="https://github.com/Zapotek/arachni/wiki/Installation">Windows -- under Cygwin</a></h3>
+
+<h2>Usage</h2>
+
+<h3><a href="https://github.com/Zapotek/arachni/wiki/Command-line-user-interface">Command line interface</a></h3>
+
+<h3><a href="https://github.com/Zapotek/arachni/wiki/Web-user-interface">WebUI</a></h3>
+
+<h3><a href="https://github.com/Zapotek/arachni/wiki/RPC-server">Starting a Dispatcher</a></h3>
 
 <h2>Configuration of <em>extras</em></h2>
 
@@ -474,10 +477,9 @@ automatically loaded.</p>
 
 <h2>Supported platforms</h2>
 
-<p>Arachni should work on all *nix and POSIX compliant platforms with Ruby
-and the aforementioned requirements.</p>
+<p>Arachni should work on all *nix and POSIX compliant platforms with Ruby and the aforementioned requirements.</p>
 
-<p>Windows users should run Arachni in Cygwin.</p>
+<p>Windows users can run Arachni in Cygwin by following these <a href="https://github.com/Zapotek/arachni/wiki/Installation">instructions</a>.</p>
 
 <h2>Bug reports/Feature requests</h2>
 
@@ -499,9 +501,9 @@ caused by the use of this software.</p>
 </div></div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:16 2011 by 
+  Generated on Wed Jan  4 05:41:33 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

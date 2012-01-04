@@ -436,8 +436,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 64</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
-    <span class='id add_hash'>add_hash</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span> <span class='id identifier rubyid_params'>params</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_hash'>add_hash</span><span class='lparen'>(</span> <span class='id identifier rubyid_params'>params</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -473,9 +473,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 76</span>
 
-<span class='kw'>def</span> <span class='id add'>add</span><span class='lparen'>(</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='id value'>value</span> <span class='rparen'>)</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id send'>send</span><span class='lparen'>(</span> <span class='symbol'>:attr_accessor</span><span class='comma'>,</span> <span class='id name'>name</span> <span class='rparen'>)</span>
-    <span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id value'>value</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span> <span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span> <span class='symbol'>:attr_accessor</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span> <span class='rparen'>)</span>
     <span class='kw'>self</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -507,10 +507,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 68</span>
 
-<span class='kw'>def</span> <span class='id add_hash'>add_hash</span><span class='lparen'>(</span> <span class='id params'>params</span> <span class='rparen'>)</span>
-    <span class='id params'>params</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
-        <span class='id add'>add</span><span class='lparen'>(</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='id value'>value</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_add_hash'>add_hash</span><span class='lparen'>(</span> <span class='id identifier rubyid_params'>params</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+        <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
     <span class='kw'>self</span>
 <span class='kw'>end</span></pre>
@@ -541,10 +541,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 119</span>
 
-<span class='kw'>def</span> <span class='id escapeHTML'>escapeHTML</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_escapeHTML'>escapeHTML</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
     <span class='comment'># carefully escapes HTML and converts to UTF-8
 </span>    <span class='comment'># while removing invalid character sequences
-</span>    <span class='kw'>return</span> <span class='const'>CGI</span><span class='period'>.</span><span class='id escapeHTML'>escapeHTML</span><span class='lparen'>(</span> <span class='id normalize'>normalize</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+</span>    <span class='kw'>return</span> <span class='const'>CGI</span><span class='period'>.</span><span class='id identifier rubyid_escapeHTML'>escapeHTML</span><span class='lparen'>(</span> <span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -575,10 +575,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 94</span>
 
-<span class='kw'>def</span> <span class='id find_issue_by_hash'>find_issue_by_hash</span><span class='lparen'>(</span> <span class='id hash'>hash</span> <span class='rparen'>)</span>
-    <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id issues'>issues</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id issue'>issue</span><span class='comma'>,</span> <span class='id i'>i</span><span class='op'>|</span>
-        <span class='kw'>return</span> <span class='lbracket'>[</span><span class='id i'>i</span><span class='op'>+</span><span class='int'>1</span><span class='comma'>,</span> <span class='id issue'>issue</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id _hash'>_hash</span> <span class='op'>==</span> <span class='id hash'>hash</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_find_issue_by_hash'>find_issue_by_hash</span><span class='lparen'>(</span> <span class='id identifier rubyid_hash'>hash</span> <span class='rparen'>)</span>
+    <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id identifier rubyid_issues'>issues</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_issue'>issue</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+        <span class='kw'>return</span> <span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='op'>+</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_issue'>issue</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid__hash'>_hash</span> <span class='op'>==</span> <span class='id identifier rubyid_hash'>hash</span>
     <span class='rbrace'>}</span>
     <span class='kw'>return</span> <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
@@ -611,11 +611,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 82</span>
 
-<span class='kw'>def</span> <span class='id format_issue'>format_issue</span><span class='lparen'>(</span> <span class='id hash'>hash</span> <span class='rparen'>)</span>
-    <span class='id idx'>idx</span><span class='comma'>,</span> <span class='id issue'>issue</span> <span class='op'>=</span> <span class='id find_issue_by_hash'>find_issue_by_hash</span><span class='lparen'>(</span> <span class='id hash'>hash</span> <span class='rparen'>)</span>
-    <span class='id erb'>erb</span> <span class='symbol'>:issue</span><span class='comma'>,</span> <span class='lbrace'>{</span>
-        <span class='symbol'>:idx</span>   <span class='op'>=&gt;</span> <span class='id idx'>idx</span><span class='comma'>,</span>
-        <span class='symbol'>:issue</span> <span class='op'>=&gt;</span> <span class='id issue'>issue</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_format_issue'>format_issue</span><span class='lparen'>(</span> <span class='id identifier rubyid_hash'>hash</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_idx'>idx</span><span class='comma'>,</span> <span class='id identifier rubyid_issue'>issue</span> <span class='op'>=</span> <span class='id identifier rubyid_find_issue_by_hash'>find_issue_by_hash</span><span class='lparen'>(</span> <span class='id identifier rubyid_hash'>hash</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_erb'>erb</span> <span class='symbol'>:issue</span><span class='comma'>,</span> <span class='lbrace'>{</span>
+        <span class='symbol'>:idx</span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_idx'>idx</span><span class='comma'>,</span>
+        <span class='symbol'>:issue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -643,8 +643,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 125</span>
 
-<span class='kw'>def</span> <span class='id get_binding'>get_binding</span>
-    <span class='id binding'>binding</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_get_binding'>get_binding</span>
+    <span class='id identifier rubyid_binding'>binding</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -671,8 +671,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 102</span>
 
-<span class='kw'>def</span> <span class='id get_meta_info'>get_meta_info</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
-    <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id plugins'>plugins</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>metamodules</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:results</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_get_meta_info'>get_meta_info</span><span class='lparen'>(</span> <span class='id identifier rubyid_name'>name</span> <span class='rparen'>)</span>
+    <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id identifier rubyid_plugins'>plugins</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>metamodules</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:results</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -699,8 +699,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 106</span>
 
-<span class='kw'>def</span> <span class='id get_plugin_info'>get_plugin_info</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
-    <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id plugins'>plugins</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_get_plugin_info'>get_plugin_info</span><span class='lparen'>(</span> <span class='id identifier rubyid_name'>name</span> <span class='rparen'>)</span>
+    <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id identifier rubyid_plugins'>plugins</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -727,8 +727,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 110</span>
 
-<span class='kw'>def</span> <span class='id js_multiline'>js_multiline</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id normalize'>normalize</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\n</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='tstring_end'>&quot;</span></span><span class='semicolon'>;</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_js_multiline'>js_multiline</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\n</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='tstring_end'>&quot;</span></span><span class='semicolon'>;</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -756,9 +756,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 114</span>
 
-<span class='kw'>def</span> <span class='id normalize'>normalize</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='op'>!</span><span class='id str'>str</span> <span class='op'>||</span> <span class='id str'>str</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-    <span class='id str'>str</span><span class='period'>.</span><span class='id encode'>encode</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:invalid</span> <span class='op'>=&gt;</span> <span class='symbol'>:replace</span><span class='comma'>,</span> <span class='symbol'>:undef</span> <span class='op'>=&gt;</span> <span class='symbol'>:replace</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_str'>str</span> <span class='op'>||</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:invalid</span> <span class='op'>=&gt;</span> <span class='symbol'>:replace</span><span class='comma'>,</span> <span class='symbol'>:undef</span> <span class='op'>=&gt;</span> <span class='symbol'>:replace</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -785,8 +785,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'reports/html.rb', line 90</span>
 
-<span class='kw'>def</span> <span class='id prep_description'>prep_description</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
-    <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Reports</span><span class='op'>::</span><span class='const'>HTML</span><span class='period'>.</span><span class='id prep_description'>prep_description</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_prep_description'>prep_description</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
+    <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Reports</span><span class='op'>::</span><span class='const'>HTML</span><span class='period'>.</span><span class='id identifier rubyid_prep_description'>prep_description</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -798,9 +798,9 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:17 2011 by 
+  Generated on Wed Jan  4 05:41:33 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

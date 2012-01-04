@@ -313,8 +313,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 248</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id raw'>raw</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
-    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id raw'>raw</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_raw'>raw</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_raw'>raw</span> <span class='rparen'>)</span>
 
     <span class='ivar'>@action</span> <span class='op'>=</span> <span class='ivar'>@url</span>
     <span class='ivar'>@method</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span>
@@ -325,14 +325,14 @@
         <span class='ivar'>@auditable</span> <span class='op'>=</span> <span class='ivar'>@raw</span>
     <span class='kw'>end</span>
 
-    <span class='ivar'>@simple</span> <span class='op'>=</span> <span class='ivar'>@auditable</span><span class='period'>.</span><span class='id dup'>dup</span>
-    <span class='ivar'>@auditable</span><span class='period'>.</span><span class='id reject!'>reject!</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
-        <span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='period'>.</span><span class='id exclude_cookies'>exclude_cookies</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span> <span class='rparen'>)</span>
+    <span class='ivar'>@simple</span> <span class='op'>=</span> <span class='ivar'>@auditable</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+    <span class='ivar'>@auditable</span><span class='period'>.</span><span class='id identifier rubyid_reject!'>reject!</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_cookie'>cookie</span><span class='op'>|</span>
+        <span class='const'>Options</span><span class='period'>.</span><span class='id identifier rubyid_instance'>instance</span><span class='period'>.</span><span class='id identifier rubyid_exclude_cookies'>exclude_cookies</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookie'>cookie</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='ivar'>@orig</span>      <span class='op'>=</span> <span class='ivar'>@auditable</span><span class='period'>.</span><span class='id deep_clone'>deep_clone</span>
-    <span class='ivar'>@orig</span><span class='period'>.</span><span class='id freeze'>freeze</span>
+    <span class='ivar'>@orig</span>      <span class='op'>=</span> <span class='ivar'>@auditable</span><span class='period'>.</span><span class='id identifier rubyid_deep_clone'>deep_clone</span>
+    <span class='ivar'>@orig</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -366,8 +366,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 270</span>
 
-<span class='kw'>def</span> <span class='id http_request'>http_request</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='ivar'>@auditor</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id cookie'>cookie</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_http_request'>http_request</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='ivar'>@auditor</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_cookie'>cookie</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -394,7 +394,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 274</span>
 
-<span class='kw'>def</span> <span class='id simple'>simple</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_simple'>simple</span>
     <span class='kw'>return</span> <span class='ivar'>@simple</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -422,7 +422,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 278</span>
 
-<span class='kw'>def</span> <span class='id type'>type</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
     <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Auditor</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>COOKIE</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -435,9 +435,9 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:24 2011 by 
+  Generated on Wed Jan  4 05:41:39 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

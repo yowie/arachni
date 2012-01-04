@@ -152,19 +152,19 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/server.rb', line 32</span>
 
-<span class='kw'>def</span> <span class='id async_handle_exception'>async_handle_exception</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_async_handle_exception'>async_handle_exception</span>
     <span class='kw'>yield</span>
-<span class='kw'>rescue</span> <span class='op'>::</span><span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id boom'>boom</span>
-    <span class='kw'>if</span> <span class='id respond_to?'>respond_to?</span> <span class='symbol'>:aerror</span>
-        <span class='id aerror'>aerror</span> <span class='id boom'>boom</span>
-    <span class='kw'>elsif</span> <span class='id settings'>settings</span><span class='period'>.</span><span class='id show_exceptions?'>show_exceptions?</span>
-        <span class='id printer'>printer</span> <span class='op'>=</span> <span class='const'>Sinatra</span><span class='op'>::</span><span class='const'>ShowExceptions</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id proc'>proc</span><span class='lbrace'>{</span> <span class='id raise'>raise</span> <span class='id boom'>boom</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
-        <span class='id s'>s</span><span class='comma'>,</span> <span class='id h'>h</span><span class='comma'>,</span> <span class='id b'>b</span> <span class='op'>=</span> <span class='id printer'>printer</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id request'>request</span><span class='period'>.</span><span class='id env'>env</span> <span class='rparen'>)</span>
-        <span class='id response'>response</span><span class='period'>.</span><span class='id status'>status</span> <span class='op'>=</span> <span class='id s'>s</span>
-        <span class='id response'>response</span><span class='period'>.</span><span class='id headers'>headers</span><span class='period'>.</span><span class='id replace'>replace</span><span class='lparen'>(</span> <span class='id h'>h</span> <span class='rparen'>)</span>
-        <span class='id response'>response</span><span class='period'>.</span><span class='id body'>body</span> <span class='op'>=</span> <span class='id b'>b</span>
+<span class='kw'>rescue</span> <span class='op'>::</span><span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_boom'>boom</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:aerror</span>
+        <span class='id identifier rubyid_aerror'>aerror</span> <span class='id identifier rubyid_boom'>boom</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_show_exceptions?'>show_exceptions?</span>
+        <span class='id identifier rubyid_printer'>printer</span> <span class='op'>=</span> <span class='const'>Sinatra</span><span class='op'>::</span><span class='const'>ShowExceptions</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='id identifier rubyid_proc'>proc</span><span class='lbrace'>{</span> <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_boom'>boom</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_s'>s</span><span class='comma'>,</span> <span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_b'>b</span> <span class='op'>=</span> <span class='id identifier rubyid_printer'>printer</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span> <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_env'>env</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_s'>s</span>
+        <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span><span class='period'>.</span><span class='id identifier rubyid_replace'>replace</span><span class='lparen'>(</span> <span class='id identifier rubyid_h'>h</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='id identifier rubyid_b'>b</span>
     <span class='kw'>else</span>
-        <span class='id body'>body</span><span class='lparen'>(</span> <span class='id handle_exception!'>handle_exception!</span><span class='lparen'>(</span> <span class='id boom'>boom</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_body'>body</span><span class='lparen'>(</span> <span class='id identifier rubyid_handle_exception!'>handle_exception!</span><span class='lparen'>(</span> <span class='id identifier rubyid_boom'>boom</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -177,9 +177,9 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:30 2011 by 
+  Generated on Wed Jan  4 05:41:44 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

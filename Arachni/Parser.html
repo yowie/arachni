@@ -786,13 +786,13 @@ location of the page.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 99</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span>
-    <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='id opts'>opts</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span> <span class='rparen'>)</span>
+    <span class='ivar'>@opts</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span>
 
-    <span class='ivar'>@code</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span>
-    <span class='ivar'>@url</span>  <span class='op'>=</span> <span class='id url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span> <span class='rparen'>)</span>
-    <span class='ivar'>@html</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span>
-    <span class='ivar'>@response_headers</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id headers_hash'>headers_hash</span>
+    <span class='ivar'>@code</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span>
+    <span class='ivar'>@url</span>  <span class='op'>=</span> <span class='id identifier rubyid_url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_effective_url'>effective_url</span> <span class='rparen'>)</span>
+    <span class='ivar'>@html</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+    <span class='ivar'>@response_headers</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_headers_hash'>headers_hash</span>
 
     <span class='ivar'>@doc</span>   <span class='op'>=</span> <span class='kw'>nil</span>
     <span class='ivar'>@paths</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -854,7 +854,7 @@ location of the page.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 91</span>
 
-<span class='kw'>def</span> <span class='id opts'>opts</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_opts'>opts</span>
   <span class='ivar'>@opts</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -914,7 +914,7 @@ location of the page.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 84</span>
 
-<span class='kw'>def</span> <span class='id url'>url</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_url'>url</span>
   <span class='ivar'>@url</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -954,10 +954,10 @@ location of the page.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 547</span>
 
-<span class='kw'>def</span> <span class='id base'>base</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_base'>base</span>
     <span class='kw'>begin</span>
-        <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='id doc'>doc</span><span class='period'>.</span><span class='id search'>search</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>//base[@href]</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='id tmp'>tmp</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id dup'>dup</span>
+        <span class='id identifier rubyid_tmp'>tmp</span> <span class='op'>=</span> <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>//base[@href]</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_tmp'>tmp</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
     <span class='kw'>rescue</span>
         <span class='kw'>return</span>
     <span class='kw'>end</span>
@@ -1103,59 +1103,59 @@ location of the page.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 401</span>
 
-<span class='kw'>def</span> <span class='id cookies'>cookies</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cookies'>cookies</span>
 
-    <span class='id cookies_arr'>cookies_arr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id cookies'>cookies</span>     <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_cookies_arr'>cookies_arr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_cookies'>cookies</span>     <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
     <span class='kw'>begin</span>
-        <span class='id doc'>doc</span><span class='period'>.</span><span class='id search'>search</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//meta[@http-equiv]</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id elem'>elem</span><span class='op'>|</span>
+        <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//meta[@http-equiv]</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_elem'>elem</span><span class='op'>|</span>
 
-            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id elem'>elem</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http-equiv</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id downcase'>downcase</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span>
-            <span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='op'>=</span> <span class='id elem'>elem</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
-            <span class='id cookies_arr'>cookies_arr</span> <span class='op'>&lt;&lt;</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id k'>k</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id v'>v</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_elem'>elem</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http-equiv</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span>
+            <span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span> <span class='op'>=</span> <span class='id identifier rubyid_elem'>elem</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_cookies_arr'>cookies_arr</span> <span class='op'>&lt;&lt;</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_v'>v</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
-    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
         <span class='comment'># ap e
 </span>        <span class='comment'># ap e.backtrace
 </span>    <span class='kw'>end</span>
 
 
     <span class='comment'># don't ask me why....
-</span>    <span class='kw'>if</span> <span class='ivar'>@response_headers</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id downcase'>downcase</span><span class='period'>.</span><span class='id substring?'>substring?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+</span>    <span class='kw'>if</span> <span class='ivar'>@response_headers</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_substring?'>substring?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
         <span class='kw'>begin</span>
-            <span class='id cookies'>cookies</span> <span class='op'>&lt;&lt;</span> <span class='op'>::</span><span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id parse_set_cookies'>parse_set_cookies</span><span class='lparen'>(</span> <span class='ivar'>@response_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Set-Cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
-            <span class='id cookies'>cookies</span> <span class='op'>&lt;&lt;</span> <span class='op'>::</span><span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id parse_set_cookies'>parse_set_cookies</span><span class='lparen'>(</span> <span class='ivar'>@response_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
-        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+            <span class='id identifier rubyid_cookies'>cookies</span> <span class='op'>&lt;&lt;</span> <span class='op'>::</span><span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id identifier rubyid_parse_set_cookies'>parse_set_cookies</span><span class='lparen'>(</span> <span class='ivar'>@response_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Set-Cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_cookies'>cookies</span> <span class='op'>&lt;&lt;</span> <span class='op'>::</span><span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id identifier rubyid_parse_set_cookies'>parse_set_cookies</span><span class='lparen'>(</span> <span class='ivar'>@response_headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rparen'>)</span>
+        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
             <span class='comment'># ap e
 </span>            <span class='comment'># ap e.backtrace
-</span>            <span class='kw'>return</span> <span class='id cookies_arr'>cookies_arr</span>
+</span>            <span class='kw'>return</span> <span class='id identifier rubyid_cookies_arr'>cookies_arr</span>
         <span class='kw'>end</span>
     <span class='kw'>end</span>
 
-    <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id flatten'>flatten</span><span class='period'>.</span><span class='id uniq'>uniq</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id cookie'>cookie</span><span class='comma'>,</span> <span class='id i'>i</span><span class='op'>|</span>
-        <span class='id cookies_arr'>cookies_arr</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+    <span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_cookie'>cookie</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+        <span class='id identifier rubyid_cookies_arr'>cookies_arr</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 
-        <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id instance_variables'>instance_variables</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id var'>var</span><span class='op'>|</span>
-            <span class='id value'>value</span> <span class='op'>=</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span> <span class='id var'>var</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
-            <span class='id value'>value</span><span class='period'>.</span><span class='id strip!'>strip!</span>
+        <span class='id identifier rubyid_cookie'>cookie</span><span class='period'>.</span><span class='id identifier rubyid_instance_variables'>instance_variables</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_var'>var</span><span class='op'>|</span>
+            <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_cookie'>cookie</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span> <span class='id identifier rubyid_var'>var</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+            <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_strip!'>strip!</span>
 
-            <span class='id key'>key</span> <span class='op'>=</span> <span class='id normalize_name'>normalize_name</span><span class='lparen'>(</span> <span class='id var'>var</span> <span class='rparen'>)</span>
-            <span class='id val'>val</span> <span class='op'>=</span> <span class='id value'>value</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\&quot;\\\[\]]</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_normalize_name'>normalize_name</span><span class='lparen'>(</span> <span class='id identifier rubyid_var'>var</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\&quot;\\\[\]]</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 
-            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id val'>val</span> <span class='op'>==</span> <span class='id seed'>seed</span>
-            <span class='id cookies_arr'>cookies_arr</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id val'>val</span>
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span> <span class='op'>==</span> <span class='id identifier rubyid_seed'>seed</span>
+            <span class='id identifier rubyid_cookies_arr'>cookies_arr</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span>
         <span class='rbrace'>}</span>
 
         <span class='comment'># cookies.reject!{ |cookie| cookie['name'] == cookies_arr[i]['name'] }
 </span>
-        <span class='id cookies_arr'>cookies_arr</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='id cookies_arr'>cookies_arr</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_cookies_arr'>cookies_arr</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='id identifier rubyid_cookies_arr'>cookies_arr</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
-    <span class='id cookies_arr'>cookies_arr</span><span class='period'>.</span><span class='id flatten!'>flatten!</span>
-    <span class='kw'>return</span> <span class='id cookies_arr'>cookies_arr</span>
+    <span class='id identifier rubyid_cookies_arr'>cookies_arr</span><span class='period'>.</span><span class='id identifier rubyid_flatten!'>flatten!</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_cookies_arr'>cookies_arr</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1182,8 +1182,8 @@ location of the page.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 456</span>
 
-<span class='kw'>def</span> <span class='id dir'>dir</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='const'>URI</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id dirname'>dirname</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_dir'>dir</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+    <span class='const'>URI</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1211,7 +1211,7 @@ location of the page.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 179</span>
 
-<span class='kw'>def</span> <span class='id doc'>doc</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_doc'>doc</span>
   <span class='kw'>return</span> <span class='ivar'>@doc</span> <span class='kw'>if</span> <span class='ivar'>@doc</span>
   <span class='ivar'>@doc</span> <span class='op'>=</span> <span class='const'>Nokogiri</span><span class='op'>::</span><span class='const'>HTML</span><span class='lparen'>(</span> <span class='ivar'>@html</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@html</span> <span class='kw'>rescue</span> <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
@@ -1267,10 +1267,10 @@ location of the page.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 598</span>
 
-<span class='kw'>def</span> <span class='id exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id exclude'>exclude</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id pattern'>pattern</span><span class='op'>|</span>
-        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>=~</span> <span class='id pattern'>pattern</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_exclude'>exclude</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_pattern'>pattern</span><span class='op'>|</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>=~</span> <span class='id identifier rubyid_pattern'>pattern</span>
     <span class='rbrace'>}</span>
 
     <span class='kw'>return</span> <span class='kw'>false</span>
@@ -1346,15 +1346,15 @@ location of the page.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 587</span>
 
-<span class='kw'>def</span> <span class='id extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
 
-    <span class='kw'>if</span> <span class='op'>!</span><span class='id url'>url</span><span class='period'>.</span><span class='id host'>host</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_host'>host</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>end</span>
 
-    <span class='id splits'>splits</span> <span class='op'>=</span> <span class='id url'>url</span><span class='period'>.</span><span class='id host'>host</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_splits'>splits</span> <span class='op'>=</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_host'>host</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span>
 
-    <span class='kw'>if</span> <span class='id splits'>splits</span><span class='period'>.</span><span class='id length'>length</span> <span class='op'>==</span> <span class='int'>1</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_splits'>splits</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>1</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>end</span>
 
-    <span class='id splits'>splits</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id splits'>splits</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_splits'>splits</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_splits'>splits</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1513,76 +1513,76 @@ location of the page.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 281</span>
 
-<span class='kw'>def</span> <span class='id forms'>forms</span><span class='lparen'>(</span> <span class='id html'>html</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_forms'>forms</span><span class='lparen'>(</span> <span class='id identifier rubyid_html'>html</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
 
-    <span class='id elements'>elements</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_elements'>elements</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
     <span class='kw'>begin</span>
-        <span class='id html'>html</span> <span class='op'>=</span> <span class='id html'>html</span> <span class='op'>||</span> <span class='ivar'>@html</span><span class='period'>.</span><span class='id clone'>clone</span>
+        <span class='id identifier rubyid_html'>html</span> <span class='op'>=</span> <span class='id identifier rubyid_html'>html</span> <span class='op'>||</span> <span class='ivar'>@html</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
         <span class='comment'>#
 </span>        <span class='comment'># This imitates Firefox's behavior when it comes to
 </span>        <span class='comment'># broken/unclosed form tags
 </span>        <span class='comment'>#
 </span>
         <span class='comment'># get properly closed forms
-</span>        <span class='id forms'>forms</span> <span class='op'>=</span> <span class='id html'>html</span><span class='period'>.</span><span class='id scan'>scan</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;form(.*?)&lt;\/form&gt;</span><span class='regexp_end'>/ixm</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id flatten'>flatten</span>
+</span>        <span class='id identifier rubyid_forms'>forms</span> <span class='op'>=</span> <span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;form(.*?)&lt;\/form&gt;</span><span class='regexp_end'>/ixm</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
 
         <span class='comment'># now remove them from html...
-</span>        <span class='id forms'>forms</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span> <span class='id html'>html</span><span class='period'>.</span><span class='id gsub!'>gsub!</span><span class='lparen'>(</span> <span class='id form'>form</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+</span>        <span class='id identifier rubyid_forms'>forms</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_form'>form</span><span class='op'>|</span> <span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
 
         <span class='comment'># and get unclosed forms.
-</span>        <span class='id forms'>forms</span> <span class='op'>|=</span> <span class='id html'>html</span><span class='period'>.</span><span class='id scan'>scan</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;form (.*)(?!&lt;\/form&gt;)</span><span class='regexp_end'>/ixm</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id flatten'>flatten</span>
+</span>        <span class='id identifier rubyid_forms'>forms</span> <span class='op'>|=</span> <span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;form (.*)(?!&lt;\/form&gt;)</span><span class='regexp_end'>/ixm</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
 
-    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
-        <span class='kw'>return</span> <span class='id elements'>elements</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_elements'>elements</span>
     <span class='kw'>end</span>
 
-    <span class='id i'>i</span> <span class='op'>=</span> <span class='int'>0</span>
-    <span class='id forms'>forms</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span>
+    <span class='id identifier rubyid_i'>i</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_forms'>forms</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_form'>form</span><span class='op'>|</span>
 
-        <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
-        <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id form_attrs'>form_attrs</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+        <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id identifier rubyid_form_attrs'>form_attrs</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span>
 
-        <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='op'>!</span><span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-            <span class='id action'>action</span> <span class='op'>=</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_action'>action</span> <span class='op'>=</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
         <span class='kw'>else</span>
-            <span class='id action'>action</span> <span class='op'>=</span> <span class='id url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_action'>action</span> <span class='op'>=</span> <span class='id identifier rubyid_url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
         <span class='kw'>end</span>
-        <span class='id action'>action</span> <span class='op'>=</span> <span class='id uri_encode'>uri_encode</span><span class='lparen'>(</span> <span class='id action'>action</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+        <span class='id identifier rubyid_action'>action</span> <span class='op'>=</span> <span class='id identifier rubyid_uri_encode'>uri_encode</span><span class='lparen'>(</span> <span class='id identifier rubyid_action'>action</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 
-        <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id action'>action</span><span class='period'>.</span><span class='id clone'>clone</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+        <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 
-        <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-            <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>post</span><span class='tstring_end'>'</span></span>
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>post</span><span class='tstring_end'>'</span></span>
         <span class='kw'>else</span>
-            <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span>
-                <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id downcase'>downcase</span>
+            <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span>
+                <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
         <span class='kw'>end</span>
 
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id skip?'>skip?</span><span class='lparen'>(</span> <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_skip?'>skip?</span><span class='lparen'>(</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
-        <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>textarea</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id form_textareas'>form_textareas</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
-        <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>select</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='id form_selects'>form_selects</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
-        <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>input</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id form_inputs'>form_inputs</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>textarea</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_form_textareas'>form_textareas</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>select</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='id identifier rubyid_form_selects'>form_selects</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>input</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id identifier rubyid_form_inputs'>form_inputs</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span>
 
         <span class='comment'># merge the form elements to make auditing easier
-</span>        <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span>
-            <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>input</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>|</span> <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>textarea</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+</span>        <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span>
+            <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>input</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>|</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>textarea</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
 
-        <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span>
-            <span class='id merge_select_with_input'>merge_select_with_input</span><span class='lparen'>(</span> <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
-                <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>select</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span>
+            <span class='id identifier rubyid_merge_select_with_input'>merge_select_with_input</span><span class='lparen'>(</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+                <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>select</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
-        <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Form</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Form</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
 
-        <span class='id i'>i</span> <span class='op'>+=</span> <span class='int'>1</span>
+        <span class='id identifier rubyid_i'>i</span> <span class='op'>+=</span> <span class='int'>1</span>
     <span class='rbrace'>}</span>
 
-    <span class='id elements'>elements</span><span class='period'>.</span><span class='id reject'>reject</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span>
-        <span class='op'>!</span><span class='id form'>form</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Form</span> <span class='rparen'>)</span> <span class='op'>||</span> <span class='id form'>form</span><span class='period'>.</span><span class='id auditable'>auditable</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+    <span class='id identifier rubyid_elements'>elements</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_form'>form</span><span class='op'>|</span>
+        <span class='op'>!</span><span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Form</span> <span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_auditable'>auditable</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1659,24 +1659,24 @@ but better be safe than sorry.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 247</span>
 
-<span class='kw'>def</span> <span class='id headers'>headers</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='id headers_arr'>headers_arr</span>  <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_headers'>headers</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_headers_arr'>headers_arr</span>  <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='lbrace'>{</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>accept</span><span class='tstring_end'>'</span></span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>text/html,application/xhtml+xml,application</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/xml;q=0.9,*/*;q=0.8</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>accept-charset</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ISO-8859-1,utf-8;q=0.7,*;q=0.7</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>accept-language</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>en-gb,en;q=0.5</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>accept-encoding</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>gzip;q=1.0,deflate;q=0.6,identity;q=0.3</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>from</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id authed_by'>authed_by</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>user-agent</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id user_agent'>user_agent</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>from</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_authed_by'>authed_by</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>user-agent</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_user_agent'>user_agent</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>referer</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='ivar'>@url</span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pragma</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>no-cache</span><span class='tstring_end'>'</span></span>
-    <span class='rbrace'>}</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span><span class='id v'>v</span><span class='op'>|</span>
-        <span class='id headers_arr'>headers_arr</span> <span class='op'>&lt;&lt;</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Header</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='id k'>k</span> <span class='op'>=&gt;</span> <span class='id v'>v</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='id identifier rubyid_headers_arr'>headers_arr</span> <span class='op'>&lt;&lt;</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Header</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_k'>k</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_v'>v</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='kw'>return</span> <span class='id headers_arr'>headers_arr</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_headers_arr'>headers_arr</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1735,15 +1735,15 @@ returns <tt>false</tt> otherwise</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 569</span>
 
-<span class='kw'>def</span> <span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id identifier rubyid_uri'>uri</span> <span class='rparen'>)</span>
 
-    <span class='id curi'>curi</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id uri'>uri</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_curi'>curi</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span> <span class='id identifier rubyid_normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id follow_subdomains'>follow_subdomains</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='id extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='id curi'>curi</span> <span class='rparen'>)</span> <span class='op'>==</span>  <span class='id extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_follow_subdomains'>follow_subdomains</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='id identifier rubyid_curi'>curi</span> <span class='rparen'>)</span> <span class='op'>==</span>  <span class='id identifier rubyid_extract_domain'>extract_domain</span><span class='lparen'>(</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 
-    <span class='kw'>return</span> <span class='id curi'>curi</span><span class='period'>.</span><span class='id host'>host</span> <span class='op'>==</span> <span class='const'>URI</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_curi'>curi</span><span class='period'>.</span><span class='id identifier rubyid_host'>host</span> <span class='op'>==</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span> <span class='id identifier rubyid_normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_host'>host</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1799,13 +1799,13 @@ returns <tt>false</tt> otherwise</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 607</span>
 
-<span class='kw'>def</span> <span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id include'>include</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_include'>include</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
-    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id include'>include</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id pattern'>pattern</span><span class='op'>|</span>
-        <span class='id pattern'>pattern</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id pattern'>pattern</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id pattern'>pattern</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>=~</span> <span class='id pattern'>pattern</span>
+    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_include'>include</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_pattern'>pattern</span><span class='op'>|</span>
+        <span class='id identifier rubyid_pattern'>pattern</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='id identifier rubyid_pattern'>pattern</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>String</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>=~</span> <span class='id identifier rubyid_pattern'>pattern</span>
     <span class='rbrace'>}</span>
     <span class='kw'>return</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
@@ -1900,22 +1900,22 @@ returns <tt>false</tt> otherwise</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 483</span>
 
-<span class='kw'>def</span> <span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='op'>!</span><span class='id link'>link</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>end</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_link_vars'>link_vars</span><span class='lparen'>(</span> <span class='id identifier rubyid_link'>link</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_link'>link</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>end</span>
 
-    <span class='id var_string'>var_string</span> <span class='op'>=</span> <span class='id link'>link</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\?</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
-    <span class='kw'>if</span> <span class='op'>!</span><span class='id var_string'>var_string</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>end</span>
+    <span class='id identifier rubyid_var_string'>var_string</span> <span class='op'>=</span> <span class='id identifier rubyid_link'>link</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\?</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_var_string'>var_string</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>end</span>
 
-    <span class='id var_hash'>var_hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
-    <span class='id var_string'>var_string</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&amp;</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id pair'>pair</span><span class='op'>|</span>
-        <span class='id name'>name</span><span class='comma'>,</span> <span class='id value'>value</span> <span class='op'>=</span> <span class='id pair'>pair</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>=</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_var_hash'>var_hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_var_string'>var_string</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&amp;</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_pair'>pair</span><span class='op'>|</span>
+        <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_pair'>pair</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>=</span><span class='regexp_end'>/</span></span> <span class='rparen'>)</span>
 
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id value'>value</span> <span class='op'>==</span> <span class='id seed'>seed</span>
-        <span class='id var_hash'>var_hash</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id value'>value</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>==</span> <span class='id identifier rubyid_seed'>seed</span>
+        <span class='id identifier rubyid_var_hash'>var_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
     <span class='rbrace'>}</span>
 
-    <span class='id var_hash'>var_hash</span>
+    <span class='id identifier rubyid_var_hash'>var_hash</span>
 
 <span class='kw'>end</span></pre>
     </td>
@@ -2020,34 +2020,34 @@ returns <tt>false</tt> otherwise</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 363</span>
 
-<span class='kw'>def</span> <span class='id links'>links</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_links'>links</span>
 
-    <span class='id link_arr'>link_arr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id elements_by_name'>elements_by_name</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>a</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id link'>link</span><span class='op'>|</span>
+    <span class='id identifier rubyid_link_arr'>link_arr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_elements_by_name'>elements_by_name</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>a</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_link'>link</span><span class='op'>|</span>
 
-        <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
-        <span class='kw'>if</span> <span class='op'>!</span><span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id skip?'>skip?</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>then</span> <span class='kw'>next</span> <span class='kw'>end</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_skip?'>skip?</span><span class='lparen'>(</span> <span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
-        <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-        <span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id key'>key</span><span class='comma'>,</span> <span class='id val'>val</span><span class='op'>|</span>
+        <span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+        <span class='id identifier rubyid_link_vars'>link_vars</span><span class='lparen'>(</span> <span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='op'>|</span>
             <span class='kw'>begin</span>
-                <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id val'>val</span> <span class='rparen'>)</span>
+                <span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id identifier rubyid_val'>val</span> <span class='rparen'>)</span>
             <span class='kw'>rescue</span>
-                <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id val'>val</span>
+                <span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span>
             <span class='kw'>end</span>
         <span class='rbrace'>}</span>
 
-        <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
-        <span class='id link_arr'>link_arr</span> <span class='op'>&lt;&lt;</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Link</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='id link'>link</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_link_arr'>link_arr</span> <span class='op'>&lt;&lt;</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Link</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='id identifier rubyid_link'>link</span> <span class='rparen'>)</span>
 
     <span class='rbrace'>}</span>
 
-    <span class='kw'>return</span> <span class='id link_arr'>link_arr</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_link_arr'>link_arr</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2129,19 +2129,19 @@ returns <tt>false</tt> otherwise</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 222</span>
 
-<span class='kw'>def</span> <span class='id merge_with_cookiejar'>merge_with_cookiejar</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='id cookies'>cookies</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id cookies'>cookies</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_merge_with_cookiejar'>merge_with_cookiejar</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookies'>cookies</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_cookies'>cookies</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_cookies'>cookies</span>
 
-    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id cookies'>cookies</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
-        <span class='id cookies'>cookies</span> <span class='op'>&lt;&lt;</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span>
+    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+        <span class='id identifier rubyid_cookies'>cookies</span> <span class='op'>&lt;&lt;</span> <span class='const'>Element</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span>
             <span class='lbrace'>{</span>
-                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id name'>name</span><span class='comma'>,</span>
-                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id value'>value</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_value'>value</span>
             <span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='kw'>return</span> <span class='id cookies'>cookies</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_cookies'>cookies</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2195,29 +2195,29 @@ returns <tt>false</tt> otherwise</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 184</span>
 
-<span class='kw'>def</span> <span class='id merge_with_cookiestore'>merge_with_cookiestore</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_merge_with_cookiestore'>merge_with_cookiestore</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookies'>cookies</span> <span class='rparen'>)</span>
 
     <span class='ivar'>@cookiestore</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
-    <span class='kw'>if</span> <span class='ivar'>@cookiestore</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-        <span class='ivar'>@cookiestore</span> <span class='op'>=</span> <span class='id cookies'>cookies</span>
+    <span class='kw'>if</span> <span class='ivar'>@cookiestore</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='ivar'>@cookiestore</span> <span class='op'>=</span> <span class='id identifier rubyid_cookies'>cookies</span>
     <span class='kw'>else</span>
-        <span class='id tmp'>tmp</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-        <span class='ivar'>@cookiestore</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
-            <span class='id tmp'>tmp</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id simple'>simple</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_tmp'>tmp</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+        <span class='ivar'>@cookiestore</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_cookie'>cookie</span><span class='op'>|</span>
+            <span class='id identifier rubyid_tmp'>tmp</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookie'>cookie</span><span class='period'>.</span><span class='id identifier rubyid_simple'>simple</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
 
-        <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
-            <span class='id tmp'>tmp</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id simple'>simple</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_cookie'>cookie</span><span class='op'>|</span>
+            <span class='id identifier rubyid_tmp'>tmp</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookie'>cookie</span><span class='period'>.</span><span class='id identifier rubyid_simple'>simple</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
 
-        <span class='ivar'>@cookiestore</span> <span class='op'>=</span> <span class='id tmp'>tmp</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
-            <span class='const'>Element</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='lbrace'>{</span>
-                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id name'>name</span><span class='comma'>,</span>
-                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id value'>value</span>
+        <span class='ivar'>@cookiestore</span> <span class='op'>=</span> <span class='id identifier rubyid_tmp'>tmp</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+            <span class='const'>Element</span><span class='op'>::</span><span class='const'>Cookie</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='comma'>,</span> <span class='lbrace'>{</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_value'>value</span>
             <span class='rbrace'>}</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='kw'>end</span>
@@ -2279,12 +2279,12 @@ returns <tt>false</tt> otherwise</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 465</span>
 
-<span class='kw'>def</span> <span class='id paths'>paths</span>
-  <span class='kw'>return</span> <span class='ivar'>@paths</span> <span class='kw'>unless</span> <span class='ivar'>@paths</span><span class='period'>.</span><span class='id nil?'>nil?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_paths'>paths</span>
+  <span class='kw'>return</span> <span class='ivar'>@paths</span> <span class='kw'>unless</span> <span class='ivar'>@paths</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
   <span class='ivar'>@paths</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='kw'>return</span> <span class='ivar'>@paths</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id doc'>doc</span>
+  <span class='kw'>return</span> <span class='ivar'>@paths</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_doc'>doc</span>
 
-  <span class='ivar'>@paths</span> <span class='op'>=</span> <span class='id run_extractors'>run_extractors</span>
+  <span class='ivar'>@paths</span> <span class='op'>=</span> <span class='id identifier rubyid_run_extractors'>run_extractors</span>
   <span class='kw'>return</span> <span class='ivar'>@paths</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2389,14 +2389,14 @@ returns <tt>false</tt> otherwise</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 116</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
 
     <span class='comment'># non text files won't contain any auditable elements
-</span>    <span class='kw'>if</span> <span class='op'>!</span><span class='id text?'>text?</span>
-        <span class='kw'>return</span> <span class='const'>Page</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
+</span>    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_text?'>text?</span>
+        <span class='kw'>return</span> <span class='const'>Page</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
             <span class='symbol'>:code</span>        <span class='op'>=&gt;</span> <span class='ivar'>@code</span><span class='comma'>,</span>
             <span class='symbol'>:url</span>         <span class='op'>=&gt;</span> <span class='ivar'>@url</span><span class='comma'>,</span>
-            <span class='symbol'>:query_vars</span>  <span class='op'>=&gt;</span> <span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span><span class='comma'>,</span>
+            <span class='symbol'>:query_vars</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_link_vars'>link_vars</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span><span class='comma'>,</span>
             <span class='symbol'>:html</span>        <span class='op'>=&gt;</span> <span class='ivar'>@html</span><span class='comma'>,</span>
             <span class='symbol'>:headers</span>     <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
             <span class='symbol'>:response_headers</span>     <span class='op'>=&gt;</span> <span class='ivar'>@response_headers</span><span class='comma'>,</span>
@@ -2409,39 +2409,39 @@ returns <tt>false</tt> otherwise</p>
     <span class='kw'>end</span>
 
 
-    <span class='id cookies_arr'>cookies_arr</span> <span class='op'>=</span> <span class='id cookies'>cookies</span>
-    <span class='id cookies_arr'>cookies_arr</span> <span class='op'>=</span> <span class='id merge_with_cookiejar'>merge_with_cookiejar</span><span class='lparen'>(</span> <span class='id cookies_arr'>cookies_arr</span><span class='period'>.</span><span class='id flatten'>flatten</span><span class='period'>.</span><span class='id uniq'>uniq</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_cookies_arr'>cookies_arr</span> <span class='op'>=</span> <span class='id identifier rubyid_cookies'>cookies</span>
+    <span class='id identifier rubyid_cookies_arr'>cookies_arr</span> <span class='op'>=</span> <span class='id identifier rubyid_merge_with_cookiejar'>merge_with_cookiejar</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookies_arr'>cookies_arr</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span> <span class='rparen'>)</span>
 
-    <span class='id jar'>jar</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id jar'>jar</span> <span class='op'>=</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id parse_cookiejar'>parse_cookiejar</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id cookie_jar'>cookie_jar</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id cookie_jar'>cookie_jar</span>
+    <span class='id identifier rubyid_jar'>jar</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_jar'>jar</span> <span class='op'>=</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_cookies'>cookies</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_parse_cookiejar'>parse_cookiejar</span><span class='lparen'>(</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_cookie_jar'>cookie_jar</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_cookie_jar'>cookie_jar</span>
 
-    <span class='id preped'>preped</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id cookies_arr'>cookies_arr</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span> <span class='id preped'>preped</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id simple'>simple</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_preped'>preped</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_cookies_arr'>cookies_arr</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_cookie'>cookie</span><span class='op'>|</span> <span class='id identifier rubyid_preped'>preped</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookie'>cookie</span><span class='period'>.</span><span class='id identifier rubyid_simple'>simple</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
 
-    <span class='id jar'>jar</span> <span class='op'>=</span> <span class='id preped'>preped</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id jar'>jar</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_jar'>jar</span> <span class='op'>=</span> <span class='id identifier rubyid_preped'>preped</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span> <span class='id identifier rubyid_jar'>jar</span> <span class='rparen'>)</span>
 
-    <span class='id c_links'>c_links</span> <span class='op'>=</span> <span class='id links'>links</span>
+    <span class='id identifier rubyid_c_links'>c_links</span> <span class='op'>=</span> <span class='id identifier rubyid_links'>links</span>
 
-    <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span> <span class='id vars'>vars</span> <span class='op'>=</span> <span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-        <span class='id url'>url</span> <span class='op'>=</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span>
-        <span class='id c_links'>c_links</span> <span class='op'>&lt;&lt;</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>Link</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='lbrace'>{</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id vars'>vars</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span> <span class='id identifier rubyid_vars'>vars</span> <span class='op'>=</span> <span class='id identifier rubyid_link_vars'>link_vars</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_c_links'>c_links</span> <span class='op'>&lt;&lt;</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>Link</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vars</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_vars'>vars</span>
         <span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 
-    <span class='kw'>return</span> <span class='const'>Page</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
+    <span class='kw'>return</span> <span class='const'>Page</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
         <span class='symbol'>:code</span>        <span class='op'>=&gt;</span> <span class='ivar'>@code</span><span class='comma'>,</span>
         <span class='symbol'>:url</span>         <span class='op'>=&gt;</span> <span class='ivar'>@url</span><span class='comma'>,</span>
-        <span class='symbol'>:query_vars</span>  <span class='op'>=&gt;</span> <span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:query_vars</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_link_vars'>link_vars</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span><span class='comma'>,</span>
         <span class='symbol'>:html</span>        <span class='op'>=&gt;</span> <span class='ivar'>@html</span><span class='comma'>,</span>
-        <span class='symbol'>:headers</span>     <span class='op'>=&gt;</span> <span class='id headers'>headers</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:headers</span>     <span class='op'>=&gt;</span> <span class='id identifier rubyid_headers'>headers</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='comma'>,</span>
         <span class='symbol'>:response_headers</span>     <span class='op'>=&gt;</span> <span class='ivar'>@response_headers</span><span class='comma'>,</span>
-        <span class='symbol'>:paths</span>       <span class='op'>=&gt;</span> <span class='id paths'>paths</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='comma'>,</span>
-        <span class='symbol'>:forms</span>       <span class='op'>=&gt;</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id audit_forms'>audit_forms</span> <span class='op'>?</span> <span class='id forms'>forms</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='symbol'>:links</span>       <span class='op'>=&gt;</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id audit_links'>audit_links</span> <span class='op'>?</span> <span class='id c_links'>c_links</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='symbol'>:cookies</span>     <span class='op'>=&gt;</span> <span class='id merge_with_cookiestore'>merge_with_cookiestore</span><span class='lparen'>(</span> <span class='id merge_with_cookiejar'>merge_with_cookiejar</span><span class='lparen'>(</span> <span class='id cookies_arr'>cookies_arr</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='comma'>,</span>
-        <span class='symbol'>:cookiejar</span>   <span class='op'>=&gt;</span> <span class='id jar'>jar</span>
+        <span class='symbol'>:paths</span>       <span class='op'>=&gt;</span> <span class='id identifier rubyid_paths'>paths</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:forms</span>       <span class='op'>=&gt;</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_audit_forms'>audit_forms</span> <span class='op'>?</span> <span class='id identifier rubyid_forms'>forms</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='symbol'>:links</span>       <span class='op'>=&gt;</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_audit_links'>audit_links</span> <span class='op'>?</span> <span class='id identifier rubyid_c_links'>c_links</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='symbol'>:cookies</span>     <span class='op'>=&gt;</span> <span class='id identifier rubyid_merge_with_cookiestore'>merge_with_cookiestore</span><span class='lparen'>(</span> <span class='id identifier rubyid_merge_with_cookiejar'>merge_with_cookiejar</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookies_arr'>cookies_arr</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:cookiejar</span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_jar'>jar</span>
     <span class='rbrace'>}</span> <span class='rparen'>)</span>
 
 <span class='kw'>end</span></pre>
@@ -2501,14 +2501,14 @@ returns <tt>false</tt> otherwise</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 618</span>
 
-<span class='kw'>def</span> <span class='id skip?'>skip?</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id path'>path</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_skip?'>skip?</span><span class='lparen'>(</span> <span class='id identifier rubyid_path'>path</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_path'>path</span>
 
     <span class='kw'>begin</span>
-        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id too_deep?'>too_deep?</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id path'>path</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_path'>path</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id identifier rubyid_path'>path</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_too_deep?'>too_deep?</span><span class='lparen'>(</span> <span class='id identifier rubyid_path'>path</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id identifier rubyid_path'>path</span> <span class='rparen'>)</span>
     <span class='kw'>rescue</span>
         <span class='kw'>true</span>
     <span class='kw'>end</span>
@@ -2562,10 +2562,10 @@ returns <tt>false</tt> otherwise</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 173</span>
 
-<span class='kw'>def</span> <span class='id text?'>text?</span>
-    <span class='id type'>type</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id content_type'>content_type</span><span class='lparen'>(</span> <span class='ivar'>@response_headers</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id type'>type</span>
-    <span class='kw'>return</span> <span class='id type'>type</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id substring?'>substring?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>text</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_text?'>text?</span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_content_type'>content_type</span><span class='lparen'>(</span> <span class='ivar'>@response_headers</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_type'>type</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_substring?'>substring?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>text</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2664,14 +2664,14 @@ location of the page</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 510</span>
 
-<span class='kw'>def</span> <span class='id to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_absolute'>to_absolute</span><span class='lparen'>(</span> <span class='id identifier rubyid_link'>link</span> <span class='rparen'>)</span>
 
     <span class='kw'>begin</span>
-        <span class='id link'>link</span> <span class='op'>=</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span>
-        <span class='kw'>if</span> <span class='id uri_parser'>uri_parser</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id host'>host</span>
-            <span class='kw'>return</span> <span class='id link'>link</span>
+        <span class='id identifier rubyid_link'>link</span> <span class='op'>=</span> <span class='id identifier rubyid_normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id identifier rubyid_link'>link</span> <span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_uri_parser'>uri_parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span> <span class='id identifier rubyid_link'>link</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_host'>host</span>
+            <span class='kw'>return</span> <span class='id identifier rubyid_link'>link</span>
         <span class='kw'>end</span>
-    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
         <span class='comment'># ap e
 </span>        <span class='comment'># ap e.backtrace
 </span>        <span class='kw'>return</span> <span class='kw'>nil</span>
@@ -2679,21 +2679,21 @@ location of the page</p>
 
     <span class='kw'>begin</span>
         <span class='comment'># remove anchor
-</span>        <span class='id link'>link</span> <span class='op'>=</span> <span class='id uri_encode'>uri_encode</span><span class='lparen'>(</span> <span class='id link'>link</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>#[a-zA-Z0-9_-]*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+</span>        <span class='id identifier rubyid_link'>link</span> <span class='op'>=</span> <span class='id identifier rubyid_uri_encode'>uri_encode</span><span class='lparen'>(</span> <span class='id identifier rubyid_link'>link</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>#[a-zA-Z0-9_-]*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 
-        <span class='kw'>if</span> <span class='id url'>url</span> <span class='op'>=</span> <span class='id base'>base</span>
-            <span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='id uri_parser'>uri_parser</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_base'>base</span>
+            <span class='id identifier rubyid_base_url'>base_url</span> <span class='op'>=</span> <span class='id identifier rubyid_uri_parser'>uri_parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
         <span class='kw'>else</span>
-            <span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='id uri_parser'>uri_parser</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_base_url'>base_url</span> <span class='op'>=</span> <span class='id identifier rubyid_uri_parser'>uri_parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span> <span class='ivar'>@url</span> <span class='rparen'>)</span>
         <span class='kw'>end</span>
 
-        <span class='id relative'>relative</span> <span class='op'>=</span> <span class='id uri_parser'>uri_parser</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span> <span class='id link'>link</span> <span class='rparen'>)</span>
-        <span class='id absolute'>absolute</span> <span class='op'>=</span> <span class='id base_url'>base_url</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id relative'>relative</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_relative'>relative</span> <span class='op'>=</span> <span class='id identifier rubyid_uri_parser'>uri_parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span> <span class='id identifier rubyid_link'>link</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_absolute'>absolute</span> <span class='op'>=</span> <span class='id identifier rubyid_base_url'>base_url</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span> <span class='id identifier rubyid_relative'>relative</span> <span class='rparen'>)</span>
 
-        <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id path'>path</span> <span class='op'>&amp;&amp;</span> <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id path'>path</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id identifier rubyid_absolute'>absolute</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_absolute'>absolute</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_absolute'>absolute</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
-        <span class='kw'>return</span> <span class='id absolute'>absolute</span><span class='period'>.</span><span class='id to_s'>to_s</span>
-    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_absolute'>absolute</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
         <span class='comment'># ap e
 </span>        <span class='comment'># ap e.backtrace
 </span>        <span class='kw'>return</span> <span class='kw'>nil</span>
@@ -2750,8 +2750,8 @@ location of the page</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/parser.rb', line 557</span>
 
-<span class='kw'>def</span> <span class='id too_deep?'>too_deep?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id depth_limit'>depth_limit</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id depth_limit'>depth_limit</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>&lt;=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span><span class='period'>.</span><span class='id count'>count</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_too_deep?'>too_deep?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_depth_limit'>depth_limit</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_depth_limit'>depth_limit</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>&lt;=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
         <span class='kw'>return</span> <span class='kw'>true</span>
     <span class='kw'>else</span>
         <span class='kw'>return</span> <span class='kw'>false</span>
@@ -2767,9 +2767,9 @@ location of the page</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:21 2011 by 
+  Generated on Wed Jan  4 05:41:37 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

@@ -242,11 +242,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/component_options.rb', line 375</span>
 
-<span class='kw'>def</span> <span class='id normalize'>normalize</span><span class='lparen'>(</span><span class='id value'>value</span><span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id value'>value</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^0x[a-fA-F\d]+$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
-        <span class='id value'>value</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='lparen'>(</span><span class='int'>16</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^0x[a-fA-F\d]+$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='lparen'>(</span><span class='int'>16</span><span class='rparen'>)</span>
     <span class='kw'>else</span>
-        <span class='id value'>value</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+        <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -274,7 +274,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/component_options.rb', line 371</span>
 
-<span class='kw'>def</span> <span class='id type'>type</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
     <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>integer</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -330,10 +330,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/component_options.rb', line 383</span>
 
-<span class='kw'>def</span> <span class='id valid?'>valid?</span><span class='lparen'>(</span><span class='id value'>value</span><span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id empty_required_value?'>empty_required_value?</span><span class='lparen'>(</span><span class='id value'>value</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_empty_required_value?'>empty_required_value?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
 
-    <span class='kw'>if</span> <span class='id value'>value</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='id normalize'>normalize</span><span class='lparen'>(</span><span class='id value'>value</span><span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
         <span class='kw'>return</span> <span class='kw'>false</span>
     <span class='kw'>end</span>
 
@@ -349,9 +349,9 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:25 2011 by 
+  Generated on Wed Jan  4 05:41:40 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

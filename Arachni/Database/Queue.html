@@ -334,9 +334,9 @@ to refactor any code since it behaves just like Ruby's implementation.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/queue.rb', line 33</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
-    <span class='kw'>super</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
-    <span class='ivar'>@q</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Queue</span><span class='period'>.</span><span class='id new'>new</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span> <span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span> <span class='rparen'>)</span>
+    <span class='ivar'>@q</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Queue</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -400,8 +400,8 @@ to refactor any code since it behaves just like Ruby's implementation.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/queue.rb', line 43</span>
 
-<span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span> <span class='id obj'>obj</span> <span class='rparen'>)</span>
-    <span class='ivar'>@q</span> <span class='op'>&lt;&lt;</span> <span class='id dump'>dump</span><span class='lparen'>(</span> <span class='id obj'>obj</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span> <span class='id identifier rubyid_obj'>obj</span> <span class='rparen'>)</span>
+    <span class='ivar'>@q</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span> <span class='id identifier rubyid_obj'>obj</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -443,11 +443,11 @@ to refactor any code since it behaves just like Ruby's implementation.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/queue.rb', line 82</span>
 
-<span class='kw'>def</span> <span class='id clear'>clear</span>
-    <span class='kw'>while</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@q</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
-        <span class='id path'>path</span> <span class='op'>=</span> <span class='ivar'>@q</span><span class='period'>.</span><span class='id pop'>pop</span>
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id path'>path</span>
-        <span class='id delete_file'>delete_file</span><span class='lparen'>(</span> <span class='id filepath'>filepath</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_clear'>clear</span>
+    <span class='kw'>while</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@q</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='ivar'>@q</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_path'>path</span>
+        <span class='id identifier rubyid_delete_file'>delete_file</span><span class='lparen'>(</span> <span class='id identifier rubyid_filepath'>filepath</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -499,8 +499,8 @@ to refactor any code since it behaves just like Ruby's implementation.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/queue.rb', line 75</span>
 
-<span class='kw'>def</span> <span class='id empty?'>empty?</span>
-    <span class='ivar'>@q</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='ivar'>@q</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -555,8 +555,8 @@ to refactor any code since it behaves just like Ruby's implementation.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/queue.rb', line 54</span>
 
-<span class='kw'>def</span> <span class='id pop'>pop</span>
-    <span class='kw'>return</span> <span class='id load_and_delete_file'>load_and_delete_file</span><span class='lparen'>(</span> <span class='ivar'>@q</span><span class='period'>.</span><span class='id pop'>pop</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_pop'>pop</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_load_and_delete_file'>load_and_delete_file</span><span class='lparen'>(</span> <span class='ivar'>@q</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -611,8 +611,8 @@ to refactor any code since it behaves just like Ruby's implementation.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/queue.rb', line 65</span>
 
-<span class='kw'>def</span> <span class='id size'>size</span>
-    <span class='ivar'>@q</span><span class='period'>.</span><span class='id size'>size</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_size'>size</span>
+    <span class='ivar'>@q</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -624,9 +624,9 @@ to refactor any code since it behaves just like Ruby's implementation.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:23 2011 by 
+  Generated on Wed Jan  4 05:41:38 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

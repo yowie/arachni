@@ -346,7 +346,7 @@ module.</p>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/xss_uri.rb', line 42</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>XSSURI</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Compatibility module, will load and run xss_path instead.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
@@ -385,8 +385,8 @@ module.</p>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/xss_uri.rb', line 38</span>
 
-<span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
-    <span class='ivar'>@mod</span><span class='period'>.</span><span class='id clean_up'>clean_up</span> <span class='kw'>if</span> <span class='ivar'>@mod</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_up'>clean_up</span>
+    <span class='ivar'>@mod</span><span class='period'>.</span><span class='id identifier rubyid_clean_up'>clean_up</span> <span class='kw'>if</span> <span class='ivar'>@mod</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -417,11 +417,11 @@ module.</p>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/xss_uri.rb', line 23</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span>
-    <span class='kw'>if</span> <span class='ivar'>@framework</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@framework</span><span class='period'>.</span><span class='id modules'>modules</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>xss_path</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-        <span class='ivar'>@mod</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id modules'>modules</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>xss_path</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@page</span> <span class='rparen'>)</span>
-        <span class='ivar'>@mod</span><span class='period'>.</span><span class='id set_framework'>set_framework</span><span class='lparen'>(</span> <span class='ivar'>@framework</span> <span class='rparen'>)</span>
-        <span class='ivar'>@mod</span><span class='period'>.</span><span class='id prepare'>prepare</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
+    <span class='kw'>if</span> <span class='ivar'>@framework</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_modules'>modules</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>xss_path</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='ivar'>@mod</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_modules'>modules</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>xss_path</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@page</span> <span class='rparen'>)</span>
+        <span class='ivar'>@mod</span><span class='period'>.</span><span class='id identifier rubyid_set_framework'>set_framework</span><span class='lparen'>(</span> <span class='ivar'>@framework</span> <span class='rparen'>)</span>
+        <span class='ivar'>@mod</span><span class='period'>.</span><span class='id identifier rubyid_prepare'>prepare</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -452,11 +452,11 @@ module.</p>
     <td>
       <pre class="code"><span class="info file"># File 'modules/audit/xss_uri.rb', line 31</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span>
-    <span class='id print_bad'>print_bad</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Module has been obsoleted and will eventually be removed.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    <span class='id print_bad'>print_bad</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Please remove it from any profiles or scripts you may have created.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    <span class='id print_bad'>print_bad</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-- Running \'xss_path\' instead.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    <span class='ivar'>@mod</span><span class='period'>.</span><span class='id run'>run</span> <span class='kw'>if</span> <span class='ivar'>@mod</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
+    <span class='id identifier rubyid_print_bad'>print_bad</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Module has been obsoleted and will eventually be removed.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_bad'>print_bad</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Please remove it from any profiles or scripts you may have created.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_bad'>print_bad</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-- Running \'xss_path\' instead.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='ivar'>@mod</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>if</span> <span class='ivar'>@mod</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -468,9 +468,9 @@ module.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:20 2011 by 
+  Generated on Wed Jan  4 05:41:36 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

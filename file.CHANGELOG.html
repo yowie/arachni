@@ -249,6 +249,7 @@ the same inputs for all passwords in case it's a 'please repeat your password' t
 <li>LibNotify -- Uses the libnotify library to send notifications for each discovered issue and a summary at the end of the scan.</li>
 <li>EmailNotify -- Sends a notification (and optionally a report) over SMTP at the end of the scan.</li>
 <li>Manual verification -- Flags issues that require manual verification as untrusted in order to reduce the signal-to-noise ratio.</li>
+<li>Resolver -- Resolves vulnerable hostnames to IP addresses.</li>
 </ul>
 </li>
 </ul>
@@ -552,7 +553,7 @@ look for that element before logging in order to eliminate false positives. [Iss
 <h2>Version 0.2.2.2 <em>(March 22, 2011)</em></h2>
 
 <ul>
-<li>Added "arachni_web_autostart" under bin -- Automatically starts all systems required by the WebUI and makes shutting down everything easier too (Original by: Brandon Potter <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x62;&#x70;&#111;&#x74;&#x74;&#101;&#114;&#56;&#55;&#48;&#x35;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#98;&#x70;&#x6f;&#116;&#x74;&#101;&#114;&#56;&#55;&#x30;&#x35;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;</a>)</li>
+<li>Added "arachni_web_autostart" under bin -- Automatically starts all systems required by the WebUI and makes shutting down everything easier too (Original by: Brandon Potter <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x62;&#x70;&#111;&#x74;&#116;&#101;&#114;&#x38;&#55;&#48;&#53;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#98;&#x70;&#x6f;&#116;&#116;&#x65;&#x72;&#x38;&#x37;&#x30;&#53;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;</a>)</li>
 <li>Overrided Nokogiri to revert to UTF-8 when it comes across an unknown charset instead of throwing exceptions</li>
 <li>Dependency versions are now defined explicitly [Issue #23]</li>
 <li>Updated to Sinatra v1.2.1</li>
@@ -592,7 +593,7 @@ look for that element before logging in order to eliminate false positives. [Iss
 
 <ul>
 <li>Fixed exception on empty issue list</li>
-<li>Fixed encoding exceptions (cheers to Chris Weber <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x63;&#104;&#x72;&#105;&#115;&#x40;&#99;&#x61;&#x73;&#97;&#98;&#x61;&#x2e;&#x63;&#111;&#x6d;">&#99;&#x68;&#x72;&#105;&#115;&#x40;&#99;&#97;&#115;&#x61;&#98;&#97;&#x2e;&#x63;&#111;&#x6d;</a>)</li>
+<li>Fixed encoding exceptions (cheers to Chris Weber <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#99;&#x68;&#114;&#105;&#115;&#x40;&#x63;&#97;&#x73;&#97;&#x62;&#97;&#x2e;&#99;&#111;&#109;">&#x63;&#x68;&#x72;&#x69;&#x73;&#x40;&#x63;&#x61;&#115;&#97;&#98;&#x61;&#46;&#99;&#x6f;&#109;</a>)</li>
 </ul>
 </li>
 </ul>
@@ -906,9 +907,9 @@ look for that element before logging in order to eliminate false positives. [Iss
 </div></div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:16 2011 by 
+  Generated on Wed Jan  4 05:41:33 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

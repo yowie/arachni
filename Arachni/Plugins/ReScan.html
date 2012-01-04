@@ -211,14 +211,12 @@ previous report.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ReScan) <strong>initialize</strong>(framework, options) </a>
+      <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
     
 
     
   </span>
   
-    <span class="note title constructor">constructor</span>
-  
   
   
   
@@ -226,9 +224,7 @@ previous report.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of ReScan.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -266,7 +262,7 @@ previous report.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#distributable%3F-class_method" title="Arachni::Plugin::Base.distributable? (method)">distributable?</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#merge-class_method" title="Arachni::Plugin::Base.merge (method)">merge</a></span>, <span class='object_link'><a href="../Plugin/Base.html#prepare-instance_method" title="Arachni::Plugin::Base#prepare (method)">#prepare</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#distributable%3F-class_method" title="Arachni::Plugin::Base.distributable? (method)">distributable?</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Plugin/Base.html#merge-class_method" title="Arachni::Plugin::Base.merge (method)">merge</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
 
   
   
@@ -300,83 +296,7 @@ previous report.</p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="" title="Arachni::Plugins::ReScan (class)">ReScan</a></span></tt>) <strong>initialize</strong>(framework, options) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>A new instance of ReScan</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>framework</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a></span></tt>)</span>
-      
-      
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>options passed to the plugin</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-32
-33
-34
-35
-36
-37
-38</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'plugins/rescan.rb', line 32</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
-    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
-    <span class='ivar'>@options</span>   <span class='op'>=</span> <span class='id options'>options</span>
-
-    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id pause!'>pause!</span>
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>System paused.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">Arachni::Plugin::Base</a></span></p>
   
 </div>
 
@@ -398,24 +318,24 @@ previous report.</p>
       <pre class="lines">
 
 
+43
+44
+45
+46
+47
+48
+49
 50
 51
 52
 53
 54
-55
-56
-57
-58
-59
-60
-61
-62</pre>
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/rescan.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'plugins/rescan.rb', line 43</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ReScan</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>It uses the AFR report of a previous scan to
@@ -424,7 +344,7 @@ previous report.</p>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:options</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
-            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptPath</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>afr</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Path to the AFR report.</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
+            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptPath</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>afr</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Path to the AFR report.</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
         <span class='rbracket'>]</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -452,17 +372,47 @@ previous report.</p>
       <pre class="lines">
 
 
-45
-46
-47
-48</pre>
+38
+39
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/rescan.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'plugins/rescan.rb', line 38</span>
 
-<span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
-    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id resume!'>resume!</span>
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>System resumed.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_up'>clean_up</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_resume!'>resume!</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>System resumed.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prepare-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prepare</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'plugins/rescan.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_pause!'>pause!</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>System paused.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -482,17 +432,17 @@ previous report.</p>
       <pre class="lines">
 
 
-40
-41
-42
-43</pre>
+33
+34
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/rescan.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'plugins/rescan.rb', line 33</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span>
-    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id restrict_paths'>restrict_paths</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>AuditStore</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>afr</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id sitemap'>sitemap</span>
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found </span><span class='embexpr_beg'>#{</span><span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id restrict_paths'>restrict_paths</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> paths.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_restrict_paths'>restrict_paths</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>AuditStore</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>afr</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sitemap'>sitemap</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found </span><span class='embexpr_beg'>#{</span><span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_restrict_paths'>restrict_paths</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> paths.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -504,9 +454,9 @@ previous report.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:17 2011 by 
+  Generated on Wed Jan  4 05:41:34 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

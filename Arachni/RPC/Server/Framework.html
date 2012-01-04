@@ -439,7 +439,7 @@ master, false otherwise.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#issues-instance_method" title="#issues (instance method)">- (Array) <strong>issues</strong> </a>
+      <a href="#issues-instance_method" title="#issues (instance method)">- (Array&lt;Arachni::Issue&gt;) <strong>issues</strong> </a>
     
 
     
@@ -455,6 +455,29 @@ master, false otherwise.</p>
     <span class="summary_desc"><div class='inline'>
 <p>Returns a array containing summaries of all discovered issues (i.e. no
 variations).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#issues_as_hash-instance_method" title="#issues_as_hash (instance method)">- (Array&lt;Hash&gt;) <strong>issues_as_hash</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the return value of <span class='object_link'><a href="#issues-instance_method" title="Arachni::RPC::Server::Framework#issues (method)">#issues</a></span> as an Array of hashes.</p>
 </div></span>
   
 </li>
@@ -484,7 +507,7 @@ variations).</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#lsplug-instance_method" title="#lsplug (instance method)">- (Object) <strong>lsplug</strong> </a>
+      <a href="#lsplug-instance_method" title="#lsplug (instance method)">- (Array&lt;Hash&gt;) <strong>lsplug</strong> </a>
     
 
     
@@ -636,7 +659,7 @@ includes:.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Registers an array holding [Arachni::Issue] objects with the local
+<p>Registers an array holding <span class='object_link'><a href="../../Issue.html" title="Arachni::Issue (class)">Issue</a></span> objects with the local
 instance.</p>
 </div></span>
   
@@ -649,6 +672,8 @@ instance.</p>
       <a href="#report-instance_method" title="#report (instance method)">- (Hash) <strong>report</strong> </a>
     
 
+    
+      (also: #audit_store_as_hash, #auditstore_as_hash)
     
   </span>
   
@@ -759,7 +784,7 @@ instance.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#serialized_auditstore-instance_method" title="#serialized_auditstore (instance method)">- (Object) <strong>serialized_auditstore</strong> </a>
+      <a href="#serialized_auditstore-instance_method" title="#serialized_auditstore (instance method)">- (String) <strong>serialized_auditstore</strong> </a>
     
 
     
@@ -772,7 +797,9 @@ instance.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>YAML representation of <span class='object_link'><a href="#auditstore-instance_method" title="Arachni::RPC::Server::Framework#auditstore (method)">#auditstore</a></span>.</p>
+</div></span>
   
 </li>
 
@@ -780,7 +807,7 @@ instance.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#serialized_report-instance_method" title="#serialized_report (instance method)">- (Object) <strong>serialized_report</strong> </a>
+      <a href="#serialized_report-instance_method" title="#serialized_report (instance method)">- (String) <strong>serialized_report</strong> </a>
     
 
     
@@ -793,7 +820,9 @@ instance.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>YAML representation of <span class='object_link'><a href="#report-instance_method" title="Arachni::RPC::Server::Framework#report (method)">#report</a></span>.</p>
+</div></span>
   
 </li>
 
@@ -1000,11 +1029,11 @@ instance.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 52</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
-    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span>
 
-    <span class='ivar'>@modules</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>RPC</span><span class='op'>::</span><span class='const'>Server</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Manager</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
-    <span class='ivar'>@plugins</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>RPC</span><span class='op'>::</span><span class='const'>Server</span><span class='op'>::</span><span class='const'>Plugin</span><span class='op'>::</span><span class='const'>Manager</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span>
+    <span class='ivar'>@modules</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>RPC</span><span class='op'>::</span><span class='const'>Server</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Manager</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span>
+    <span class='ivar'>@plugins</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>RPC</span><span class='op'>::</span><span class='const'>Server</span><span class='op'>::</span><span class='const'>Plugin</span><span class='op'>::</span><span class='const'>Manager</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span>
 
     <span class='comment'># holds all running instances
 </span>    <span class='ivar'>@instances</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1015,7 +1044,7 @@ instance.</p>
     <span class='comment'># if we're a slave this var will hold the URL of our master
 </span>    <span class='ivar'>@master_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
 
-    <span class='ivar'>@local_token</span> <span class='op'>=</span> <span class='id gen_token'>gen_token</span>
+    <span class='ivar'>@local_token</span> <span class='op'>=</span> <span class='id identifier rubyid_gen_token'>gen_token</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1071,7 +1100,7 @@ instance.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 47</span>
 
-<span class='kw'>def</span> <span class='id instances'>instances</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_instances'>instances</span>
   <span class='ivar'>@instances</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1113,7 +1142,7 @@ instance.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 47</span>
 
-<span class='kw'>def</span> <span class='id modules'>modules</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_modules'>modules</span>
   <span class='ivar'>@modules</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1155,7 +1184,7 @@ instance.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 47</span>
 
-<span class='kw'>def</span> <span class='id opts'>opts</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_opts'>opts</span>
   <span class='ivar'>@opts</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1197,7 +1226,7 @@ instance.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 47</span>
 
-<span class='kw'>def</span> <span class='id plugins'>plugins</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_plugins'>plugins</span>
   <span class='ivar'>@plugins</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1329,26 +1358,26 @@ false if slaves are done too.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 89</span>
 
-<span class='kw'>def</span> <span class='id busy?'>busy?</span><span class='lparen'>(</span> <span class='id include_slaves'>include_slaves</span> <span class='op'>=</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_busy?'>busy?</span><span class='lparen'>(</span> <span class='id identifier rubyid_include_slaves'>include_slaves</span> <span class='op'>=</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> <span class='rparen'>)</span>
 
-    <span class='id busyness'>busyness</span> <span class='op'>=</span> <span class='lbracket'>[</span> <span class='id extended_running?'>extended_running?</span> <span class='rbracket'>]</span>
+    <span class='id identifier rubyid_busyness'>busyness</span> <span class='op'>=</span> <span class='lbracket'>[</span> <span class='id identifier rubyid_extended_running?'>extended_running?</span> <span class='rbracket'>]</span>
 
-    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id include_slaves'>include_slaves</span>
-        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id busyness'>busyness</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
+    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_include_slaves'>include_slaves</span>
+        <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span> <span class='id identifier rubyid_busyness'>busyness</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
         <span class='kw'>return</span>
     <span class='kw'>end</span>
 
-    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span><span class='lparen'>(</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
-        <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id busy?'>busy?</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-            <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_instance'>instance</span><span class='comma'>,</span> <span class='id identifier rubyid_iter'>iter</span><span class='op'>|</span>
+        <span class='id identifier rubyid_connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id identifier rubyid_instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_busy?'>busy?</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span>
+            <span class='id identifier rubyid_iter'>iter</span><span class='period'>.</span><span class='id identifier rubyid_return'>return</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
-    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-        <span class='id busyness'>busyness</span> <span class='op'>&lt;&lt;</span> <span class='id res'>res</span>
-        <span class='id busyness'>busyness</span><span class='period'>.</span><span class='id flatten!'>flatten!</span>
-        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id busyness'>busyness</span><span class='period'>.</span><span class='id reject'>reject</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id is_busy'>is_busy</span><span class='op'>|</span> <span class='op'>!</span><span class='id is_busy'>is_busy</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span>
+        <span class='id identifier rubyid_busyness'>busyness</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_res'>res</span>
+        <span class='id identifier rubyid_busyness'>busyness</span><span class='period'>.</span><span class='id identifier rubyid_flatten!'>flatten!</span>
+        <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id identifier rubyid_busyness'>busyness</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_is_busy'>is_busy</span><span class='op'>|</span> <span class='op'>!</span><span class='id identifier rubyid_is_busy'>is_busy</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1436,31 +1465,31 @@ instances.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 304</span>
 
-<span class='kw'>def</span> <span class='id clean_up!'>clean_up!</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
-    <span class='id old_clean_up!'>old_clean_up!</span><span class='lparen'>(</span> <span class='kw'>true</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_up!'>clean_up!</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_old_clean_up!'>old_clean_up!</span><span class='lparen'>(</span> <span class='kw'>true</span> <span class='rparen'>)</span>
 
-    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span> <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
+    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
         <span class='kw'>return</span>
     <span class='kw'>end</span>
 
-    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span><span class='lparen'>(</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
-        <span class='id instance_conn'>instance_conn</span> <span class='op'>=</span> <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span>
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_instance'>instance</span><span class='comma'>,</span> <span class='id identifier rubyid_iter'>iter</span><span class='op'>|</span>
+        <span class='id identifier rubyid_instance_conn'>instance_conn</span> <span class='op'>=</span> <span class='id identifier rubyid_connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id identifier rubyid_instance'>instance</span> <span class='rparen'>)</span>
 
-        <span class='id instance_conn'>instance_conn</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id clean_up!'>clean_up!</span> <span class='lbrace'>{</span>
-            <span class='id instance_conn'>instance_conn</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id get_plugin_store'>get_plugin_store</span> <span class='lbrace'>{</span>
-                <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-                <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id res'>res</span><span class='period'>.</span><span class='id rpc_exception?'>rpc_exception?</span> <span class='op'>?</span>  <span class='id res'>res</span> <span class='op'>:</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_instance_conn'>instance_conn</span><span class='period'>.</span><span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_clean_up!'>clean_up!</span> <span class='lbrace'>{</span>
+            <span class='id identifier rubyid_instance_conn'>instance_conn</span><span class='period'>.</span><span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_get_plugin_store'>get_plugin_store</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span>
+                <span class='id identifier rubyid_iter'>iter</span><span class='period'>.</span><span class='id identifier rubyid_return'>return</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_rpc_exception?'>rpc_exception?</span> <span class='op'>?</span>  <span class='id identifier rubyid_res'>res</span> <span class='op'>:</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
             <span class='rbrace'>}</span>
         <span class='rbrace'>}</span>
 
-    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id results'>results</span><span class='op'>|</span>
-        <span class='id results'>results</span><span class='period'>.</span><span class='id compact!'>compact!</span>
-        <span class='id results'>results</span> <span class='op'>&lt;&lt;</span> <span class='id get_plugin_store'>get_plugin_store</span>
-        <span class='id update_plugin_results!'>update_plugin_results!</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
-        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_results'>results</span><span class='op'>|</span>
+        <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_compact!'>compact!</span>
+        <span class='id identifier rubyid_results'>results</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_get_plugin_store'>get_plugin_store</span>
+        <span class='id identifier rubyid_update_plugin_results!'>update_plugin_results!</span><span class='lparen'>(</span> <span class='id identifier rubyid_results'>results</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
     <span class='rbrace'>}</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1517,7 +1546,7 @@ instances.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 75</span>
 
-<span class='kw'>def</span> <span class='id get_plugin_store'>get_plugin_store</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_get_plugin_store'>get_plugin_store</span>
     <span class='ivar'>@plugin_store</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1570,8 +1599,8 @@ master, false otherwise.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 140</span>
 
-<span class='kw'>def</span> <span class='id high_performance?'>high_performance?</span>
-    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id grid_mode'>grid_mode</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>high_performance</span><span class='tstring_end'>'</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_high_performance?'>high_performance?</span>
+    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_grid_mode'>grid_mode</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>high_performance</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1581,7 +1610,7 @@ master, false otherwise.</p>
       <div class="method_details ">
   <p class="signature " id="issues-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>) <strong>issues</strong> 
+    - (<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="../../Issue.html" title="Arachni::Issue (class)">Arachni::Issue</a></span>&gt;</tt>) <strong>issues</strong> 
   
 
   
@@ -1602,7 +1631,7 @@ variations).</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="../../Issue.html" title="Arachni::Issue (class)">Arachni::Issue</a></span>&gt;</tt>)</span>
       
       
       
@@ -1616,25 +1645,84 @@ variations).</p>
       <pre class="lines">
 
 
-555
-556
-557
-558
-559
-560
-561
-562</pre>
+575
+576
+577
+578
+579
+580
+581
+582</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 555</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 575</span>
 
-<span class='kw'>def</span> <span class='id issues'>issues</span>
-    <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id issues'>issues</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id issue'>issue</span><span class='op'>|</span>
-        <span class='id tmp_issue'>tmp_issue</span> <span class='op'>=</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id deep_clone'>deep_clone</span>
-        <span class='id tmp_issue'>tmp_issue</span><span class='period'>.</span><span class='id variations'>variations</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-        <span class='id tmp_issue'>tmp_issue</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_issues'>issues</span>
+    <span class='id identifier rubyid_audit_store'>audit_store</span><span class='period'>.</span><span class='id identifier rubyid_issues'>issues</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_issue'>issue</span><span class='op'>|</span>
+        <span class='id identifier rubyid_tmp_issue'>tmp_issue</span> <span class='op'>=</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_deep_clone'>deep_clone</span>
+        <span class='id identifier rubyid_tmp_issue'>tmp_issue</span><span class='period'>.</span><span class='id identifier rubyid_variations'>variations</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_tmp_issue'>tmp_issue</span>
     <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="issues_as_hash-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span>&lt;Hash&gt;</tt>) <strong>issues_as_hash</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the return value of <span class='object_link'><a href="#issues-instance_method" title="Arachni::RPC::Server::Framework#issues (method)">#issues</a></span> as an Array of hashes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span>&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#issues-instance_method" title="Arachni::RPC::Server::Framework#issues (method)">#issues</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+591
+592
+593</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 591</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_issues_as_hash'>issues_as_hash</span>
+    <span class='id identifier rubyid_issues'>issues</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1654,7 +1742,7 @@ variations).</p>
       <div class="method_details ">
   <p class="signature " id="lsplug-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>lsplug</strong> 
+    - (<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span>&lt;Hash&gt;</tt>) <strong>lsplug</strong> 
   
 
   
@@ -1667,22 +1755,20 @@ variations).</p>
   </div>
 </div>
 <div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
+  
+<h3>Returns:</h3>
+<ul class="return">
   
     <li>
       
-        <span class='name'></span>
       
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Array.html" title="Array (class)">Array</a></span>&lt;Hash&gt;</tt>)</span>
       
       
       
     </li>
   
 </ul>
-
 
 </div><table class="source_code">
   <tr>
@@ -1710,21 +1796,21 @@ variations).</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 117</span>
 
-<span class='kw'>def</span> <span class='id lsplug'>lsplug</span>
-    <span class='id plug_info'>plug_info</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_lsplug'>lsplug</span>
+    <span class='id identifier rubyid_plug_info'>plug_info</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
-    <span class='kw'>super</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id plugin'>plugin</span><span class='op'>|</span>
+    <span class='kw'>super</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_plugin'>plugin</span><span class='op'>|</span>
 
-        <span class='id plugin'>plugin</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id plugin'>plugin</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id flatten'>flatten</span><span class='period'>.</span><span class='id compact'>compact</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id opt'>opt</span><span class='op'>|</span>
-            <span class='id opt'>opt</span><span class='period'>.</span><span class='id to_h'>to_h</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>type</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id opt'>opt</span><span class='period'>.</span><span class='id type'>type</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_plugin'>plugin</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_plugin'>plugin</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
+            <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>type</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
 
-        <span class='id plug_info'>plug_info</span> <span class='op'>&lt;&lt;</span> <span class='id plugin'>plugin</span>
+        <span class='id identifier rubyid_plug_info'>plug_info</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_plugin'>plugin</span>
     <span class='rbrace'>}</span>
 
-    <span class='kw'>return</span> <span class='id plug_info'>plug_info</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_plug_info'>plug_info</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1775,7 +1861,7 @@ variations).</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 361</span>
 
-<span class='kw'>def</span> <span class='id master'>master</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_master'>master</span>
     <span class='ivar'>@master_url</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1856,24 +1942,24 @@ provide an accurate depiction of the actual progress.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 375</span>
 
-<span class='kw'>def</span> <span class='id output'>output</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_output'>output</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> <span class='rparen'>)</span>
 
-    <span class='id buffer'>buffer</span> <span class='op'>=</span> <span class='id flush_buffer'>flush_buffer</span>
+    <span class='id identifier rubyid_buffer'>buffer</span> <span class='op'>=</span> <span class='id identifier rubyid_flush_buffer'>flush_buffer</span>
 
-    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id buffer'>buffer</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span> <span class='id identifier rubyid_buffer'>buffer</span> <span class='rparen'>)</span>
         <span class='kw'>return</span>
     <span class='kw'>end</span>
 
-    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='const'>MAX_CONCURRENCY</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span><span class='lparen'>(</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
-        <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id service'>service</span><span class='period'>.</span><span class='id output'>output</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id out'>out</span><span class='op'>|</span>
-            <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='id out'>out</span> <span class='rparen'>)</span>
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='const'>MAX_CONCURRENCY</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_instance'>instance</span><span class='comma'>,</span> <span class='id identifier rubyid_iter'>iter</span><span class='op'>|</span>
+        <span class='id identifier rubyid_connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id identifier rubyid_instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_service'>service</span><span class='period'>.</span><span class='id identifier rubyid_output'>output</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_out'>out</span><span class='op'>|</span>
+            <span class='id identifier rubyid_iter'>iter</span><span class='period'>.</span><span class='id identifier rubyid_return'>return</span><span class='lparen'>(</span> <span class='id identifier rubyid_out'>out</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
-    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id out'>out</span><span class='op'>|</span>
-        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='lparen'>(</span><span class='id buffer'>buffer</span> <span class='op'>|</span> <span class='id out'>out</span><span class='rparen'>)</span><span class='period'>.</span><span class='id flatten'>flatten</span> <span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_out'>out</span><span class='op'>|</span>
+        <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span> <span class='lparen'>(</span><span class='id identifier rubyid_buffer'>buffer</span> <span class='op'>|</span> <span class='id identifier rubyid_out'>out</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1917,11 +2003,11 @@ provide an accurate depiction of the actual progress.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 335</span>
 
-<span class='kw'>def</span> <span class='id pause!'>pause!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_pause!'>pause!</span>
     <span class='kw'>super</span>
-    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
-        <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id pause!'>pause!</span><span class='lbrace'>{</span> <span class='id iter'>iter</span><span class='period'>.</span><span class='id next'>next</span> <span class='rbrace'>}</span>
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_instance'>instance</span><span class='comma'>,</span> <span class='id identifier rubyid_iter'>iter</span><span class='op'>|</span>
+        <span class='id identifier rubyid_connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id identifier rubyid_instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_pause!'>pause!</span><span class='lbrace'>{</span> <span class='id identifier rubyid_iter'>iter</span><span class='period'>.</span><span class='id identifier rubyid_next'>next</span> <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
     <span class='kw'>return</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
@@ -1954,11 +2040,11 @@ provide an accurate depiction of the actual progress.</p>
 required in order to get an accurate depiction of a scan's progress and
 includes:</p>
 
-<pre class="code"><span class='id o'>o</span> <span class='id output'>output</span> <span class='id messages'>messages</span>
-<span class='id o'>o</span> <span class='id discovered'>discovered</span> <span class='id issues'>issues</span>
-<span class='id o'>o</span> <span class='id overall'>overall</span> <span class='id statistics'>statistics</span>
-<span class='id o'>o</span> <span class='id overall'>overall</span> <span class='id scan'>scan</span> <span class='id status'>status</span>
-<span class='id o'>o</span> <span class='id statistics'>statistics</span> <span class='id of'>of</span> <span class='id all'>all</span> <span class='id instances'>instances</span> <span class='id individually'>individually</span></pre>
+<pre class="code"><span class='id identifier rubyid_o'>o</span> <span class='id identifier rubyid_output'>output</span> <span class='id identifier rubyid_messages'>messages</span>
+<span class='id identifier rubyid_o'>o</span> <span class='id identifier rubyid_discovered'>discovered</span> <span class='id identifier rubyid_issues'>issues</span>
+<span class='id identifier rubyid_o'>o</span> <span class='id identifier rubyid_overall'>overall</span> <span class='id identifier rubyid_statistics'>statistics</span>
+<span class='id identifier rubyid_o'>o</span> <span class='id identifier rubyid_overall'>overall</span> <span class='id identifier rubyid_scan'>scan</span> <span class='id identifier rubyid_status'>status</span>
+<span class='id identifier rubyid_o'>o</span> <span class='id identifier rubyid_statistics'>statistics</span> <span class='id identifier rubyid_of'>of</span> <span class='id identifier rubyid_all'>all</span> <span class='id identifier rubyid_instances'>instances</span> <span class='id identifier rubyid_individually'>individually</span></pre>
 
 
   </div>
@@ -1989,7 +2075,10 @@ includes:</p>
 <p>:issues   -- include issue summaries</p>
 </li></ul>
 
-<p>Uses an implicit include (i.e. nil will be considered true).</p>
+<p>Uses an implicit include for the above (i.e. nil will be considered true).</p>
+<ul><li>
+<p>:as_hash  -- if set to true will convert issues to hashes before returning</p>
+</li></ul>
 </div>
       
     </li>
@@ -2019,8 +2108,6 @@ includes:</p>
       <pre class="lines">
 
 
-437
-438
 439
 440
 441
@@ -2113,104 +2200,126 @@ includes:</p>
 528
 529
 530
-531</pre>
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 437</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 439</span>
 
-<span class='kw'>def</span> <span class='id progress_data'>progress_data</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_progress_data'>progress_data</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> <span class='rparen'>)</span>
 
-    <span class='kw'>if</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:messages</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id nil?'>nil?</span>
-        <span class='id include_messages'>include_messages</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:messages</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+        <span class='id identifier rubyid_include_messages'>include_messages</span> <span class='op'>=</span> <span class='kw'>true</span>
     <span class='kw'>else</span>
-        <span class='id include_messages'>include_messages</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:messages</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_include_messages'>include_messages</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:messages</span><span class='rbracket'>]</span>
     <span class='kw'>end</span>
 
-    <span class='kw'>if</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:slaves</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id nil?'>nil?</span>
-        <span class='id include_slaves'>include_slaves</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:slaves</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+        <span class='id identifier rubyid_include_slaves'>include_slaves</span> <span class='op'>=</span> <span class='kw'>true</span>
     <span class='kw'>else</span>
-        <span class='id include_slaves'>include_slaves</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:slaves</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_include_slaves'>include_slaves</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:slaves</span><span class='rbracket'>]</span>
     <span class='kw'>end</span>
 
-    <span class='kw'>if</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:issues</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id nil?'>nil?</span>
-        <span class='id include_issues'>include_issues</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:issues</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+        <span class='id identifier rubyid_include_issues'>include_issues</span> <span class='op'>=</span> <span class='kw'>true</span>
     <span class='kw'>else</span>
-        <span class='id include_issues'>include_issues</span> <span class='op'>=</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:issues</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_include_issues'>include_issues</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:issues</span><span class='rbracket'>]</span>
     <span class='kw'>end</span>
 
-    <span class='id data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:as_hash</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_as_hash'>as_hash</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_as_hash'>as_hash</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:as_hash</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id status'>status</span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>busy</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='id extended_running?'>extended_running?</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>busy</span><span class='tstring_end'>'</span></span>      <span class='op'>=&gt;</span> <span class='id identifier rubyid_extended_running?'>extended_running?</span>
     <span class='rbrace'>}</span>
 
-    <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>messages</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id flush_buffer'>flush_buffer</span> <span class='kw'>if</span> <span class='id include_messages'>include_messages</span>
-    <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id issues'>issues</span> <span class='kw'>if</span> <span class='id include_issues'>include_issues</span>
-    <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id include_slaves'>include_slaves</span>
+    <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>messages</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id identifier rubyid_flush_buffer'>flush_buffer</span> <span class='kw'>if</span> <span class='id identifier rubyid_include_messages'>include_messages</span>
 
-    <span class='id stats'>stats</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id stat_hash'>stat_hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id stats'>stats</span><span class='lparen'>(</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='kw'>true</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-        <span class='id stat_hash'>stat_hash</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span>
-    <span class='rbrace'>}</span>
-
-    <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='symbol'>:dispatcher_url</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id include_slaves'>include_slaves</span>
-        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id self_url'>self_url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id stat_hash'>stat_hash</span><span class='period'>.</span><span class='id dup'>dup</span>
-        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id self_url'>self_url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id self_url'>self_url</span>
-        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id self_url'>self_url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id status'>status</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_include_issues'>include_issues</span>
+        <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_as_hash'>as_hash</span> <span class='op'>?</span> <span class='id identifier rubyid_issues_as_hash'>issues_as_hash</span> <span class='op'>:</span> <span class='id identifier rubyid_issues'>issues</span>
     <span class='kw'>end</span>
 
-    <span class='id stats'>stats</span> <span class='op'>&lt;&lt;</span> <span class='id stat_hash'>stat_hash</span>
+    <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_include_slaves'>include_slaves</span>
 
-    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id include_slaves'>include_slaves</span>
-        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id merge_stats'>merge_stats</span><span class='lparen'>(</span> <span class='id stats'>stats</span> <span class='rparen'>)</span>
-        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id values'>values</span> <span class='kw'>if</span> <span class='id include_slaves'>include_slaves</span>
-        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id data'>data</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_stats'>stats</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_stat_hash'>stat_hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_stats'>stats</span><span class='lparen'>(</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='kw'>true</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='id identifier rubyid_stat_hash'>stat_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
+    <span class='rbrace'>}</span>
+
+    <span class='kw'>if</span> <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='symbol'>:dispatcher_url</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_include_slaves'>include_slaves</span>
+        <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_self_url'>self_url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_stat_hash'>stat_hash</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+        <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_self_url'>self_url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_self_url'>self_url</span>
+        <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_self_url'>self_url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_status'>status</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_stats'>stats</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_stat_hash'>stat_hash</span>
+
+    <span class='kw'>if</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_include_slaves'>include_slaves</span>
+        <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_merge_stats'>merge_stats</span><span class='lparen'>(</span> <span class='id identifier rubyid_stats'>stats</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span> <span class='kw'>if</span> <span class='id identifier rubyid_include_slaves'>include_slaves</span>
+        <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span> <span class='id identifier rubyid_data'>data</span> <span class='rparen'>)</span>
         <span class='kw'>return</span>
     <span class='kw'>end</span>
 
-    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='const'>MAX_CONCURRENCY</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span><span class='lparen'>(</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
-        <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id progress_data'>progress_data</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id tmp'>tmp</span><span class='op'>|</span>
-            <span class='kw'>if</span> <span class='op'>!</span><span class='id tmp'>tmp</span><span class='period'>.</span><span class='id rpc_exception?'>rpc_exception?</span>
-                <span class='id tmp'>tmp</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-                <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='id tmp'>tmp</span> <span class='rparen'>)</span>
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='const'>MAX_CONCURRENCY</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_instance'>instance</span><span class='comma'>,</span> <span class='id identifier rubyid_iter'>iter</span><span class='op'>|</span>
+        <span class='id identifier rubyid_connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id identifier rubyid_instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_progress_data'>progress_data</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_tmp'>tmp</span><span class='op'>|</span>
+            <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_tmp'>tmp</span><span class='period'>.</span><span class='id identifier rubyid_rpc_exception?'>rpc_exception?</span>
+                <span class='id identifier rubyid_tmp'>tmp</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_instance'>instance</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+                <span class='id identifier rubyid_iter'>iter</span><span class='period'>.</span><span class='id identifier rubyid_return'>return</span><span class='lparen'>(</span> <span class='id identifier rubyid_tmp'>tmp</span> <span class='rparen'>)</span>
             <span class='kw'>else</span>
-                <span class='id iter'>iter</span><span class='period'>.</span><span class='id return'>return</span><span class='lparen'>(</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+                <span class='id identifier rubyid_iter'>iter</span><span class='period'>.</span><span class='id identifier rubyid_return'>return</span><span class='lparen'>(</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
             <span class='kw'>end</span>
         <span class='rbrace'>}</span>
-    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id proc'>proc</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id slave_data'>slave_data</span><span class='op'>|</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_slave_data'>slave_data</span><span class='op'>|</span>
 
-        <span class='id slave_data'>slave_data</span><span class='period'>.</span><span class='id compact!'>compact!</span>
-        <span class='id slave_data'>slave_data</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id slave'>slave</span><span class='op'>|</span>
-            <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>messages</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>  <span class='op'>|=</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>messages</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id include_messages'>include_messages</span>
-            <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>|=</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id include_issues'>include_issues</span>
+        <span class='id identifier rubyid_slave_data'>slave_data</span><span class='period'>.</span><span class='id identifier rubyid_compact!'>compact!</span>
+        <span class='id identifier rubyid_slave_data'>slave_data</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_slave'>slave</span><span class='op'>|</span>
+            <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>messages</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>  <span class='op'>|=</span> <span class='id identifier rubyid_slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>messages</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_include_messages'>include_messages</span>
+            <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>|=</span> <span class='id identifier rubyid_slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_include_issues'>include_issues</span>
 
-            <span class='kw'>if</span> <span class='id include_slaves'>include_slaves</span>
-                <span class='id url'>url</span> <span class='op'>=</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-                <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span>           <span class='op'>=</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-                <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id url'>url</span>
-                <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_include_slaves'>include_slaves</span>
+                <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+                <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_url'>url</span><span class='rbracket'>]</span>           <span class='op'>=</span> <span class='id identifier rubyid_slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+                <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id identifier rubyid_url'>url</span>
+                <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_url'>url</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>status</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
             <span class='kw'>end</span>
 
-            <span class='id stats'>stats</span> <span class='op'>&lt;&lt;</span> <span class='id slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+            <span class='id identifier rubyid_stats'>stats</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_slave'>slave</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
         <span class='rbrace'>}</span>
 
-        <span class='kw'>if</span> <span class='id include_slaves'>include_slaves</span>
-            <span class='id sorted_data_instances'>sorted_data_instances</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-            <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id sort'>sort</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-                <span class='op'>|</span><span class='id url'>url</span><span class='op'>|</span>
-                <span class='id sorted_data_instances'>sorted_data_instances</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id url'>url</span><span class='rbracket'>]</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_include_slaves'>include_slaves</span>
+            <span class='id identifier rubyid_sorted_data_instances'>sorted_data_instances</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+            <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id identifier rubyid_url'>url</span><span class='op'>|</span>
+                <span class='id identifier rubyid_sorted_data_instances'>sorted_data_instances</span><span class='lbracket'>[</span><span class='id identifier rubyid_url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_url'>url</span><span class='rbracket'>]</span>
             <span class='rbrace'>}</span>
-            <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id sorted_data_instances'>sorted_data_instances</span><span class='period'>.</span><span class='id values'>values</span>
+            <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>instances</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_sorted_data_instances'>sorted_data_instances</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span>
         <span class='kw'>end</span>
 
-        <span class='id data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id merge_stats'>merge_stats</span><span class='lparen'>(</span> <span class='id stats'>stats</span> <span class='rparen'>)</span>
-        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id data'>data</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stats</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_merge_stats'>merge_stats</span><span class='lparen'>(</span> <span class='id identifier rubyid_stats'>stats</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span> <span class='id identifier rubyid_data'>data</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2228,7 +2337,7 @@ includes:</p>
 </p><div class="docstring">
   <div class="discussion">
     
-<p>Registers an array holding [Arachni::Issue] objects with the local
+<p>Registers an array holding <span class='object_link'><a href="../../Issue.html" title="Arachni::Issue (class)">Issue</a></span> objects with the local
 instance.</p>
 
 <p>Primarily used by slaves to register issues they find on the spot.</p>
@@ -2281,7 +2390,7 @@ instance.</p>
       
         &mdash;
         <div class='inline'>
-<p>true on success, false on invalid token</p>
+<p>true on success, false on invalid token or if not in HPG mode</p>
 </div>
       
     </li>
@@ -2294,20 +2403,20 @@ instance.</p>
       <pre class="lines">
 
 
-637
-638
-639
-640
-641
-642</pre>
+668
+669
+670
+671
+672
+673</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 637</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 668</span>
 
-<span class='kw'>def</span> <span class='id register_issues'>register_issues</span><span class='lparen'>(</span> <span class='id issues'>issues</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id token'>token</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_register_issues'>register_issues</span><span class='lparen'>(</span> <span class='id identifier rubyid_issues'>issues</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id identifier rubyid_token'>token</span> <span class='rparen'>)</span>
 
-    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='id issues'>issues</span> <span class='rparen'>)</span>
+    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_register_results'>register_results</span><span class='lparen'>(</span> <span class='id identifier rubyid_issues'>issues</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2321,6 +2430,10 @@ instance.</p>
     - (<tt>Hash</tt>) <strong>report</strong> 
   
 
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='audit_store_as_hash-instance_method'>audit_store_as_hash</span>, <span id='auditstore_as_hash-instance_method'>auditstore_as_hash</span></span>
+    </span>
   
 </p><div class="docstring">
   <div class="discussion">
@@ -2352,15 +2465,15 @@ instance.</p>
       <pre class="lines">
 
 
-538
-539
-540</pre>
+550
+551
+552</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 538</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 550</span>
 
-<span class='kw'>def</span> <span class='id report'>report</span>
-    <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id to_h'>to_h</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_report'>report</span>
+    <span class='id identifier rubyid_audit_store'>audit_store</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2447,20 +2560,20 @@ instance.</p>
       <pre class="lines">
 
 
-580
-581
-582
-583
-584
-585</pre>
+611
+612
+613
+614
+615
+616</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 580</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 611</span>
 
-<span class='kw'>def</span> <span class='id restrict_to_elements!'>restrict_to_elements!</span><span class='lparen'>(</span> <span class='id elements'>elements</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id token'>token</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_restrict_to_elements!'>restrict_to_elements!</span><span class='lparen'>(</span> <span class='id identifier rubyid_elements'>elements</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id identifier rubyid_token'>token</span> <span class='rparen'>)</span>
 
-    <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>Auditable</span><span class='period'>.</span><span class='id restrict_to_elements!'>restrict_to_elements!</span><span class='lparen'>(</span> <span class='id elements'>elements</span> <span class='rparen'>)</span>
+    <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>Auditable</span><span class='period'>.</span><span class='id identifier rubyid_restrict_to_elements!'>restrict_to_elements!</span><span class='lparen'>(</span> <span class='id identifier rubyid_elements'>elements</span> <span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2504,11 +2617,11 @@ instance.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 347</span>
 
-<span class='kw'>def</span> <span class='id resume!'>resume!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_resume!'>resume!</span>
     <span class='kw'>super</span>
-    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id iter'>iter</span><span class='op'>|</span>
-        <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id resume!'>resume!</span><span class='lbrace'>{</span> <span class='id iter'>iter</span><span class='period'>.</span><span class='id next'>next</span> <span class='rbrace'>}</span>
+    <span class='op'>::</span><span class='const'>EM</span><span class='op'>::</span><span class='const'>Iterator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@instances</span><span class='comma'>,</span> <span class='ivar'>@instances</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_instance'>instance</span><span class='comma'>,</span> <span class='id identifier rubyid_iter'>iter</span><span class='op'>|</span>
+        <span class='id identifier rubyid_connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='id identifier rubyid_instance'>instance</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_resume!'>resume!</span><span class='lbrace'>{</span> <span class='id identifier rubyid_iter'>iter</span><span class='period'>.</span><span class='id identifier rubyid_next'>next</span> <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
     <span class='kw'>return</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
@@ -2717,9 +2830,9 @@ instance.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 149</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
     <span class='comment'># return if we're already running
-</span>    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id extended_running?'>extended_running?</span>
+</span>    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_extended_running?'>extended_running?</span>
 
     <span class='comment'># EventMachine.add_periodic_timer( 1 ) do
 </span>        <span class='comment'># print &quot;Arachni::RPC::Client::Handler objects: &quot;
@@ -2733,7 +2846,7 @@ instance.</p>
 </span>    <span class='comment'># end
 </span>
     <span class='ivar'>@extended_running</span> <span class='op'>=</span> <span class='kw'>true</span>
-    <span class='op'>::</span><span class='const'>EM</span><span class='period'>.</span><span class='id defer'>defer</span> <span class='lbrace'>{</span>
+    <span class='op'>::</span><span class='const'>EM</span><span class='period'>.</span><span class='id identifier rubyid_defer'>defer</span> <span class='lbrace'>{</span>
 
         <span class='comment'>#
 </span>        <span class='comment'># if we're in HPG mode do fancy stuff like distributing and balancing workload
@@ -2742,7 +2855,7 @@ instance.</p>
 </span>        <span class='comment'>#
 </span>        <span class='comment'># otherwise just run the local instance, nothing special...
 </span>        <span class='comment'>#
-</span>        <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span>
+</span>        <span class='kw'>if</span> <span class='id identifier rubyid_high_performance?'>high_performance?</span>
 
             <span class='comment'>#
 </span>            <span class='comment'># We're in HPG (High Performance Grid) mode,
@@ -2767,82 +2880,82 @@ instance.</p>
 </span>            <span class='comment'># appear during the audit they will override these restrictions
 </span>            <span class='comment'># and each instance will audit them at will.
 </span>            <span class='comment'>#
-</span>            <span class='id pages'>pages</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Database</span><span class='op'>::</span><span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+</span>            <span class='id identifier rubyid_pages'>pages</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Database</span><span class='op'>::</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 
             <span class='comment'># prepare the local instance (runs plugins and start the timer)
-</span>            <span class='id prepare'>prepare</span>
+</span>            <span class='id identifier rubyid_prepare'>prepare</span>
 
             <span class='comment'># we need to take our cues from the local framework as some
 </span>            <span class='comment'># plug-ins may need the system to wait for them to finish
 </span>            <span class='comment'># before moving on.
-</span>            <span class='id sleep'>sleep</span><span class='lparen'>(</span> <span class='float'>0.2</span> <span class='rparen'>)</span> <span class='kw'>while</span> <span class='id paused?'>paused?</span>
+</span>            <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span> <span class='float'>0.2</span> <span class='rparen'>)</span> <span class='kw'>while</span> <span class='id identifier rubyid_paused?'>paused?</span>
 
             <span class='comment'># start the crawl and extract all paths
-</span>            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Spider</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id run'>run</span> <span class='lbrace'>{</span>
-                <span class='op'>|</span><span class='id page'>page</span><span class='op'>|</span>
-                <span class='ivar'>@override_sitemap</span> <span class='op'>&lt;&lt;</span> <span class='id page'>page</span><span class='period'>.</span><span class='id url'>url</span>
-                <span class='id pages'>pages</span><span class='lbracket'>[</span><span class='id page'>page</span><span class='period'>.</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id page'>page</span>
+</span>            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Spider</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@opts</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id identifier rubyid_page'>page</span><span class='op'>|</span>
+                <span class='ivar'>@override_sitemap</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
+                <span class='id identifier rubyid_pages'>pages</span><span class='lbracket'>[</span><span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_page'>page</span>
             <span class='rbrace'>}</span>
             <span class='ivar'>@crawling_done</span> <span class='op'>=</span> <span class='kw'>true</span>
 
             <span class='comment'># the plug-ins may have update the framework page queue
 </span>            <span class='comment'># so we need to distribute these pages as well
-</span>            <span class='id page_a'>page_a</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-            <span class='id page_q'>page_q</span> <span class='op'>=</span> <span class='ivar'>@page_queue</span>
-            <span class='kw'>while</span> <span class='op'>!</span><span class='id page_q'>page_q</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='id page_q'>page_q</span><span class='period'>.</span><span class='id pop'>pop</span>
-                <span class='id page_a'>page_a</span> <span class='op'>&lt;&lt;</span> <span class='id page'>page</span>
-                <span class='id pages'>pages</span><span class='lbracket'>[</span><span class='id page'>page</span><span class='period'>.</span><span class='id url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id page'>page</span>
+</span>            <span class='id identifier rubyid_page_a'>page_a</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+            <span class='id identifier rubyid_page_q'>page_q</span> <span class='op'>=</span> <span class='ivar'>@page_queue</span>
+            <span class='kw'>while</span> <span class='op'>!</span><span class='id identifier rubyid_page_q'>page_q</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_page'>page</span> <span class='op'>=</span> <span class='id identifier rubyid_page_q'>page_q</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+                <span class='id identifier rubyid_page_a'>page_a</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_page'>page</span>
+                <span class='id identifier rubyid_pages'>pages</span><span class='lbracket'>[</span><span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_page'>page</span>
             <span class='kw'>end</span>
 
             <span class='comment'># get the Dispatchers with unique Pipe IDs
 </span>            <span class='comment'># in order to take advantage of line aggregation
-</span>            <span class='id prefered_dispatchers'>prefered_dispatchers</span> <span class='lbrace'>{</span>
-                <span class='op'>|</span><span class='id pref_dispatchers'>pref_dispatchers</span><span class='op'>|</span>
+</span>            <span class='id identifier rubyid_prefered_dispatchers'>prefered_dispatchers</span> <span class='lbrace'>{</span>
+                <span class='op'>|</span><span class='id identifier rubyid_pref_dispatchers'>pref_dispatchers</span><span class='op'>|</span>
 
                 <span class='comment'># split the URLs of the pages in equal chunks
-</span>                <span class='id chunks'>chunks</span>    <span class='op'>=</span> <span class='id split_urls'>split_urls</span><span class='lparen'>(</span> <span class='id pages'>pages</span><span class='period'>.</span><span class='id keys'>keys</span><span class='comma'>,</span> <span class='id pref_dispatchers'>pref_dispatchers</span> <span class='rparen'>)</span>
-                <span class='id chunk_cnt'>chunk_cnt</span> <span class='op'>=</span> <span class='id chunks'>chunks</span><span class='period'>.</span><span class='id size'>size</span>
+</span>                <span class='id identifier rubyid_chunks'>chunks</span>    <span class='op'>=</span> <span class='id identifier rubyid_split_urls'>split_urls</span><span class='lparen'>(</span> <span class='id identifier rubyid_pages'>pages</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='comma'>,</span> <span class='id identifier rubyid_pref_dispatchers'>pref_dispatchers</span> <span class='rparen'>)</span>
+                <span class='id identifier rubyid_chunk_cnt'>chunk_cnt</span> <span class='op'>=</span> <span class='id identifier rubyid_chunks'>chunks</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
 
-                <span class='kw'>if</span> <span class='id chunk_cnt'>chunk_cnt</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+                <span class='kw'>if</span> <span class='id identifier rubyid_chunk_cnt'>chunk_cnt</span> <span class='op'>&gt;</span> <span class='int'>0</span>
                     <span class='comment'># split the page array into chunks that will be distributed
 </span>                    <span class='comment'># across the instances
-</span>                    <span class='id page_chunks'>page_chunks</span> <span class='op'>=</span> <span class='id page_a'>page_a</span><span class='period'>.</span><span class='id chunk'>chunk</span><span class='lparen'>(</span> <span class='id chunk_cnt'>chunk_cnt</span> <span class='rparen'>)</span>
+</span>                    <span class='id identifier rubyid_page_chunks'>page_chunks</span> <span class='op'>=</span> <span class='id identifier rubyid_page_a'>page_a</span><span class='period'>.</span><span class='id identifier rubyid_chunk'>chunk</span><span class='lparen'>(</span> <span class='id identifier rubyid_chunk_cnt'>chunk_cnt</span> <span class='rparen'>)</span>
 
                     <span class='comment'># assign us our fair share of plug-in discovered pages
-</span>                    <span class='id update_page_queue!'>update_page_queue!</span><span class='lparen'>(</span> <span class='id page_chunks'>page_chunks</span><span class='period'>.</span><span class='id pop'>pop</span><span class='comma'>,</span> <span class='ivar'>@local_token</span> <span class='rparen'>)</span>
+</span>                    <span class='id identifier rubyid_update_page_queue!'>update_page_queue!</span><span class='lparen'>(</span> <span class='id identifier rubyid_page_chunks'>page_chunks</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span><span class='comma'>,</span> <span class='ivar'>@local_token</span> <span class='rparen'>)</span>
 
                     <span class='comment'># remove duplicate elements across the (per instance) chunks
 </span>                    <span class='comment'># while spreading them out evenly
-</span>                    <span class='id elements'>elements</span> <span class='op'>=</span> <span class='id distribute_elements'>distribute_elements</span><span class='lparen'>(</span> <span class='id chunks'>chunks</span><span class='comma'>,</span> <span class='id pages'>pages</span> <span class='rparen'>)</span>
+</span>                    <span class='id identifier rubyid_elements'>elements</span> <span class='op'>=</span> <span class='id identifier rubyid_distribute_elements'>distribute_elements</span><span class='lparen'>(</span> <span class='id identifier rubyid_chunks'>chunks</span><span class='comma'>,</span> <span class='id identifier rubyid_pages'>pages</span> <span class='rparen'>)</span>
 
                     <span class='comment'># empty out the Hash and remove temporary files
-</span>                    <span class='id pages'>pages</span><span class='period'>.</span><span class='id clear'>clear</span>
+</span>                    <span class='id identifier rubyid_pages'>pages</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
 
                     <span class='comment'># restrict the local instance to its assigned elements
-</span>                    <span class='id restrict_to_elements!'>restrict_to_elements!</span><span class='lparen'>(</span> <span class='id elements'>elements</span><span class='period'>.</span><span class='id pop'>pop</span><span class='comma'>,</span> <span class='ivar'>@local_token</span> <span class='rparen'>)</span>
+</span>                    <span class='id identifier rubyid_restrict_to_elements!'>restrict_to_elements!</span><span class='lparen'>(</span> <span class='id identifier rubyid_elements'>elements</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span><span class='comma'>,</span> <span class='ivar'>@local_token</span> <span class='rparen'>)</span>
 
                     <span class='comment'># set the URLs to be audited by the local instance
-</span>                    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id restrict_paths'>restrict_paths</span> <span class='op'>=</span> <span class='id chunks'>chunks</span><span class='period'>.</span><span class='id pop'>pop</span>
+</span>                    <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_restrict_paths'>restrict_paths</span> <span class='op'>=</span> <span class='id identifier rubyid_chunks'>chunks</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
 
-                    <span class='id chunks'>chunks</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
-                        <span class='op'>|</span><span class='id chunk'>chunk</span><span class='comma'>,</span> <span class='id i'>i</span><span class='op'>|</span>
+                    <span class='id identifier rubyid_chunks'>chunks</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+                        <span class='op'>|</span><span class='id identifier rubyid_chunk'>chunk</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
 
                         <span class='comment'># spawn a remote instance, assign a chunk of URLs
 </span>                        <span class='comment'># and elements to it and run it
-</span>                        <span class='id spawn'>spawn</span><span class='lparen'>(</span> <span class='id chunk'>chunk</span><span class='comma'>,</span> <span class='id page_chunks'>page_chunks</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id elements'>elements</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id pref_dispatchers'>pref_dispatchers</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-                            <span class='op'>|</span><span class='id inst'>inst</span><span class='op'>|</span>
-                            <span class='ivar'>@instances</span> <span class='op'>&lt;&lt;</span> <span class='id inst'>inst</span>
+</span>                        <span class='id identifier rubyid_spawn'>spawn</span><span class='lparen'>(</span> <span class='id identifier rubyid_chunk'>chunk</span><span class='comma'>,</span> <span class='id identifier rubyid_page_chunks'>page_chunks</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_pref_dispatchers'>pref_dispatchers</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+                            <span class='op'>|</span><span class='id identifier rubyid_inst'>inst</span><span class='op'>|</span>
+                            <span class='ivar'>@instances</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_inst'>inst</span>
                         <span class='rbrace'>}</span>
                     <span class='rbrace'>}</span>
                 <span class='kw'>end</span>
 
                 <span class='comment'># start the local instance
-</span>                <span class='const'>Thread</span><span class='period'>.</span><span class='id new'>new</span> <span class='lbrace'>{</span>
+</span>                <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span>
                     <span class='comment'># ap 'AUDITING'
-</span>                    <span class='id audit'>audit</span>
+</span>                    <span class='id identifier rubyid_audit'>audit</span>
 
                     <span class='comment'># ap 'OLD CLEAN UP'
-</span>                    <span class='id old_clean_up!'>old_clean_up!</span>
+</span>                    <span class='id identifier rubyid_old_clean_up!'>old_clean_up!</span>
 
                     <span class='comment'># ap 'DONE'
 </span>                    <span class='ivar'>@extended_running</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -2850,7 +2963,7 @@ instance.</p>
             <span class='rbrace'>}</span>
         <span class='kw'>else</span>
             <span class='comment'># start the local instance
-</span>            <span class='const'>Thread</span><span class='period'>.</span><span class='id new'>new</span> <span class='lbrace'>{</span>
+</span>            <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span>
                 <span class='comment'># ap 'AUDITING'
 </span>                <span class='kw'>super</span>
                 <span class='comment'># ap 'DONE'
@@ -2869,25 +2982,54 @@ instance.</p>
       <div class="method_details ">
   <p class="signature " id="serialized_auditstore-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>serialized_auditstore</strong> 
+    - (<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>) <strong>serialized_auditstore</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>YAML representation of <span class='object_link'><a href="#auditstore-instance_method" title="Arachni::RPC::Server::Framework#auditstore (method)">#auditstore</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>YAML representation of <span class='object_link'><a href="#auditstore-instance_method" title="Arachni::RPC::Server::Framework#auditstore (method)">#auditstore</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-542
-543
-544</pre>
+559
+560
+561</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 542</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 559</span>
 
-<span class='kw'>def</span> <span class='id serialized_auditstore'>serialized_auditstore</span>
-    <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id to_yaml'>to_yaml</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_serialized_auditstore'>serialized_auditstore</span>
+    <span class='id identifier rubyid_audit_store'>audit_store</span><span class='period'>.</span><span class='id identifier rubyid_to_yaml'>to_yaml</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2897,25 +3039,54 @@ instance.</p>
       <div class="method_details ">
   <p class="signature " id="serialized_report-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>serialized_report</strong> 
+    - (<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>) <strong>serialized_report</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>YAML representation of <span class='object_link'><a href="#report-instance_method" title="Arachni::RPC::Server::Framework#report (method)">#report</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>YAML representation of <span class='object_link'><a href="#report-instance_method" title="Arachni::RPC::Server::Framework#report (method)">#report</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-546
-547
-548</pre>
+566
+567
+568</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 546</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 566</span>
 
-<span class='kw'>def</span> <span class='id serialized_report'>serialized_report</span>
-    <span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id to_h'>to_h</span><span class='period'>.</span><span class='id to_yaml'>to_yaml</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_serialized_report'>serialized_report</span>
+    <span class='id identifier rubyid_audit_store'>audit_store</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span><span class='period'>.</span><span class='id identifier rubyid_to_yaml'>to_yaml</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3001,34 +3172,34 @@ is not applicable).</p>
       <pre class="lines">
 
 
-596
-597
-598
-599
-600
-601
-602
-603
-604
-605
-606
-607
-608
-609</pre>
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 596</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 627</span>
 
-<span class='kw'>def</span> <span class='id set_master'>set_master</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_set_master'>set_master</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_high_performance?'>high_performance?</span>
 
-    <span class='ivar'>@master_url</span> <span class='op'>=</span> <span class='id url'>url</span>
-    <span class='ivar'>@master</span> <span class='op'>=</span> <span class='id connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id token'>token</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+    <span class='ivar'>@master_url</span> <span class='op'>=</span> <span class='id identifier rubyid_url'>url</span>
+    <span class='ivar'>@master</span> <span class='op'>=</span> <span class='id identifier rubyid_connect_to_instance'>connect_to_instance</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>token</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_token'>token</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
 
-    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id do_not_store!'>do_not_store!</span>
-    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id on_register_results'>on_register_results</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id results'>results</span><span class='op'>|</span>
-        <span class='id report_issues_to_master'>report_issues_to_master</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
+    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_do_not_store!'>do_not_store!</span>
+    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_on_register_results'>on_register_results</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_results'>results</span><span class='op'>|</span>
+        <span class='id identifier rubyid_report_issues_to_master'>report_issues_to_master</span><span class='lparen'>(</span> <span class='id identifier rubyid_results'>results</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
     <span class='kw'>return</span> <span class='kw'>true</span>
@@ -3062,10 +3233,10 @@ is not applicable).</p>
 
 <p>Possible values are:</p>
 
-<pre class="code"><span class='id o'>o</span> <span class='id crawling'>crawling</span>
-<span class='id o'>o</span> <span class='id paused'>paused</span>
-<span class='id o'>o</span> <span class='id done'>done</span>
-<span class='id o'>o</span> <span class='id busy'>busy</span></pre>
+<pre class="code"><span class='id identifier rubyid_o'>o</span> <span class='id identifier rubyid_crawling'>crawling</span>
+<span class='id identifier rubyid_o'>o</span> <span class='id identifier rubyid_paused'>paused</span>
+<span class='id identifier rubyid_o'>o</span> <span class='id identifier rubyid_done'>done</span>
+<span class='id identifier rubyid_o'>o</span> <span class='id identifier rubyid_busy'>busy</span></pre>
 
 
   </div>
@@ -3108,13 +3279,13 @@ is not applicable).</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 407</span>
 
-<span class='kw'>def</span> <span class='id status'>status</span>
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@crawling_done</span> <span class='op'>&amp;&amp;</span> <span class='id master'>master</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='id high_performance?'>high_performance?</span><span class='rparen'>)</span> <span class='op'>||</span>
-        <span class='lparen'>(</span> <span class='id master'>master</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='id stats'>stats</span><span class='lbracket'>[</span><span class='symbol'>:current_page</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_status'>status</span>
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@crawling_done</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_master'>master</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_high_performance?'>high_performance?</span><span class='rparen'>)</span> <span class='op'>||</span>
+        <span class='lparen'>(</span> <span class='id identifier rubyid_master'>master</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_stats'>stats</span><span class='lbracket'>[</span><span class='symbol'>:current_page</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='rparen'>)</span>
         <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>crawling</span><span class='tstring_end'>'</span></span>
-    <span class='kw'>elsif</span> <span class='id paused?'>paused?</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_paused?'>paused?</span>
         <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>paused</span><span class='tstring_end'>'</span></span>
-    <span class='kw'>elsif</span> <span class='op'>!</span><span class='id extended_running?'>extended_running?</span>
+    <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_extended_running?'>extended_running?</span>
         <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>done</span><span class='tstring_end'>'</span></span>
     <span class='kw'>else</span>
         <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>busy</span><span class='tstring_end'>'</span></span>
@@ -3205,18 +3376,18 @@ is not applicable).</p>
       <pre class="lines">
 
 
-620
-621
-622
-623
-624</pre>
+651
+652
+653
+654
+655</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 620</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/framework.rb', line 651</span>
 
-<span class='kw'>def</span> <span class='id update_page_queue!'>update_page_queue!</span><span class='lparen'>(</span> <span class='id pages'>pages</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id token'>token</span> <span class='rparen'>)</span>
-    <span class='id pages'>pages</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id page'>page</span><span class='op'>|</span> <span class='ivar'>@page_queue</span> <span class='op'>&lt;&lt;</span> <span class='id page'>page</span> <span class='rbrace'>}</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_update_page_queue!'>update_page_queue!</span><span class='lparen'>(</span> <span class='id identifier rubyid_pages'>pages</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_high_performance?'>high_performance?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_valid_token?'>valid_token?</span><span class='lparen'>(</span> <span class='id identifier rubyid_token'>token</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_pages'>pages</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_page'>page</span><span class='op'>|</span> <span class='ivar'>@page_queue</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_page'>page</span> <span class='rbrace'>}</span>
     <span class='kw'>return</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -3239,9 +3410,9 @@ is not applicable).</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:26 2011 by 
+  Generated on Wed Jan  4 05:41:42 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

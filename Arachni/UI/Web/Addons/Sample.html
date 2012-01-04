@@ -266,7 +266,7 @@ the menu (in case you want it to be dynamic).</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/sample.rb', line 63</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Sample add-on</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>This add-on serves as an example/tutorial.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
@@ -334,13 +334,13 @@ the menu (in case you want it to be dynamic).</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/sample.rb', line 33</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
 
     <span class='comment'>#
 </span>    <span class='comment'># You can work with get/post/put/delete handlers just like
 </span>    <span class='comment'># when using Sinatra.
 </span>    <span class='comment'>#
-</span>    <span class='id get'>get</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='kw'>do</span>
+</span>    <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='kw'>do</span>
 
         <span class='comment'>#
 </span>        <span class='comment'># From inside the block you have access to regular Sinatra stuff
@@ -351,7 +351,7 @@ the menu (in case you want it to be dynamic).</p>
 </span>        <span class='comment'># settings  =&gt; Direct access to the Sinatra methods, attributes, etc.
 </span>
         <span class='comment'># You can treat 'present' just like 'erb' with a default layout.
-</span>        <span class='id present'>present</span> <span class='symbol'>:index</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>world</span><span class='tstring_end'>'</span></span>
+</span>        <span class='id identifier rubyid_present'>present</span> <span class='symbol'>:index</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>world</span><span class='tstring_end'>'</span></span>
     <span class='kw'>end</span>
 
 <span class='kw'>end</span></pre>
@@ -392,7 +392,7 @@ the menu (in case you want it to be dynamic).</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/web/addons/sample.rb', line 59</span>
 
-<span class='kw'>def</span> <span class='id title'>title</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_title'>title</span>
     <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Sample</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -405,9 +405,9 @@ the menu (in case you want it to be dynamic).</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:27 2011 by 
+  Generated on Wed Jan  4 05:41:41 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

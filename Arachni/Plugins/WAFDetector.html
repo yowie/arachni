@@ -114,7 +114,7 @@ will be averaged using rDiff analysis.</p>
 <pre class="code">&lt;tasos.laskos@gmail.com&gt;
 &lt;zapotek@segfault.gr&gt;</pre>
 
-<p>@version: 0.1</p>
+<p>@version: 0.1.1</p>
 
 
   </div>
@@ -260,31 +260,6 @@ will be averaged using rDiff analysis.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (WAFDetector) <strong>initialize</strong>(framework, options) </a>
-    
-
-    
-  </span>
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of WAFDetector.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#not_found%21-instance_method" title="#not_found! (instance method)">- (Object) <strong>not_found!</strong> </a>
     
 
@@ -420,7 +395,7 @@ will be averaged using rDiff analysis.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#clean_up-instance_method" title="Arachni::Plugin::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Plugin/Base.html#distributable%3F-class_method" title="Arachni::Plugin::Base.distributable? (method)">distributable?</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#merge-class_method" title="Arachni::Plugin::Base.merge (method)">merge</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#clean_up-instance_method" title="Arachni::Plugin::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Plugin/Base.html#distributable%3F-class_method" title="Arachni::Plugin::Base.distributable? (method)">distributable?</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Plugin/Base.html#merge-class_method" title="Arachni::Plugin::Base.merge (method)">merge</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
 
   
   
@@ -454,77 +429,7 @@ will be averaged using rDiff analysis.</p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="" title="Arachni::Plugins::WAFDetector (class)">WAFDetector</a></span></tt>) <strong>initialize</strong>(framework, options) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>A new instance of WAFDetector</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>framework</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a></span></tt>)</span>
-      
-      
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>options passed to the plugin</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-43
-44
-45
-46</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 43</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
-    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
-    <span class='ivar'>@options</span>   <span class='op'>=</span> <span class='id options'>options</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">Arachni::Plugin::Base</a></span></p>
   
 </div>
 
@@ -546,6 +451,17 @@ will be averaged using rDiff analysis.</p>
       <pre class="lines">
 
 
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
 157
 158
 159
@@ -554,23 +470,12 @@ will be averaged using rDiff analysis.</p>
 162
 163
 164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176</pre>
+165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 146</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>WAF Detector</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Performs basic profiling on the web application
@@ -584,9 +489,9 @@ will be averaged using rDiff analysis.</p>
 
              Steps 1 to 3 will be repeated _precision_ times (default: 5) and the responses will be averaged using rDiff analysis.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:options</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
-            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptInt</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>precision</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Stage precision (how many times to perform each detection stage).</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>5</span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
+            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptInt</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>precision</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Stage precision (how many times to perform each detection stage).</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>5</span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
         <span class='rbracket'>]</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -614,17 +519,17 @@ will be averaged using rDiff analysis.</p>
       <pre class="lines">
 
 
-112
-113
-114
-115</pre>
+101
+102
+103
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 101</span>
 
-<span class='kw'>def</span> <span class='id found!'>found!</span>
-    <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='const'>MSG_FOUND</span> <span class='rparen'>)</span>
-    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_FOUND</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_found!'>found!</span>
+    <span class='id identifier rubyid_print_ok'>print_ok</span><span class='lparen'>(</span> <span class='const'>MSG_FOUND</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_FOUND</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -644,17 +549,17 @@ will be averaged using rDiff analysis.</p>
       <pre class="lines">
 
 
-122
-123
-124
-125</pre>
+111
+112
+113
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 111</span>
 
-<span class='kw'>def</span> <span class='id inconclusive!'>inconclusive!</span>
-    <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='const'>MSG_INCONCLUSIVE</span> <span class='rparen'>)</span>
-    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_INCONCLUSIVE</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_inconclusive!'>inconclusive!</span>
+    <span class='id identifier rubyid_print_ok'>print_ok</span><span class='lparen'>(</span> <span class='const'>MSG_INCONCLUSIVE</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_INCONCLUSIVE</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -674,17 +579,17 @@ will be averaged using rDiff analysis.</p>
       <pre class="lines">
 
 
-117
-118
-119
-120</pre>
+106
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 106</span>
 
-<span class='kw'>def</span> <span class='id not_found!'>not_found!</span>
-    <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='const'>MSG_NOT_FOUND</span> <span class='rparen'>)</span>
-    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_NOT_FOUND</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_not_found!'>not_found!</span>
+    <span class='id identifier rubyid_print_ok'>print_ok</span><span class='lparen'>(</span> <span class='const'>MSG_NOT_FOUND</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_NOT_FOUND</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -704,6 +609,15 @@ will be averaged using rDiff analysis.</p>
       <pre class="lines">
 
 
+39
+40
+41
+42
+43
+44
+45
+46
+47
 48
 49
 50
@@ -726,46 +640,35 @@ will be averaged using rDiff analysis.</p>
 67
 68
 69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80</pre>
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 39</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span>
-
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
     <span class='ivar'>@precision</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>precision</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
 
-    <span class='id bad'>bad</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='id identifier rubyid_bad'>bad</span> <span class='op'>=</span> <span class='lbracket'>[</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>../../../../</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;script&gt;foo&lt;/script&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\'--;`</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
     <span class='rbracket'>]</span>
 
-    <span class='id names'>names</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id bad'>bad</span><span class='period'>.</span><span class='id size'>size</span><span class='period'>.</span><span class='id times'>times</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id i'>i</span><span class='op'>|</span>
-        <span class='id names'>names</span> <span class='op'>&lt;&lt;</span> <span class='id i'>i</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>Digest</span><span class='op'>::</span><span class='const'>SHA2</span><span class='period'>.</span><span class='id hexdigest'>hexdigest</span><span class='lparen'>(</span> <span class='id rand'>rand</span><span class='lparen'>(</span> <span class='id i'>i</span><span class='op'>*</span><span class='int'>1000</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_names'>names</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_bad'>bad</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+        <span class='id identifier rubyid_names'>names</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='const'>Digest</span><span class='op'>::</span><span class='const'>SHA2</span><span class='period'>.</span><span class='id identifier rubyid_hexdigest'>hexdigest</span><span class='lparen'>(</span> <span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span> <span class='id identifier rubyid_i'>i</span><span class='op'>*</span><span class='int'>1000</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
     <span class='ivar'>@safe</span>   <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span>
     <span class='ivar'>@unsafe</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span>
-    <span class='id names'>names</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id i'>i</span><span class='op'>|</span>
-        <span class='ivar'>@safe</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value_</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id name'>name</span>
-        <span class='ivar'>@unsafe</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id i'>i</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id bad'>bad</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+        <span class='ivar'>@safe</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>value_</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span>
+        <span class='ivar'>@unsafe</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_bad'>bad</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>_</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='ivar'>@url</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id url'>url</span>
+    <span class='ivar'>@url</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
 
     <span class='ivar'>@responses</span> <span class='op'>=</span> <span class='lbrace'>{</span>
         <span class='symbol'>:original</span> <span class='op'>=&gt;</span> <span class='kw'>nil</span><span class='comma'>,</span>
@@ -792,25 +695,25 @@ will be averaged using rDiff analysis.</p>
       <pre class="lines">
 
 
-127
-128
-129
-130
-131
-132
-133
-134
-135</pre>
+116
+117
+118
+119
+120
+121
+122
+123
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 116</span>
 
-<span class='kw'>def</span> <span class='id queue_original'>queue_original</span>
-    <span class='ivar'>@precision</span><span class='period'>.</span><span class='id times'>times</span> <span class='lbrace'>{</span>
-        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:original</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span>
-            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:original</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:original</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_queue_original'>queue_original</span>
+    <span class='ivar'>@precision</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span>
+        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_on_complete'>on_complete</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span>
+            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:original</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:original</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:original</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -832,25 +735,25 @@ will be averaged using rDiff analysis.</p>
       <pre class="lines">
 
 
-147
-148
-149
-150
-151
-152
-153
-154
-155</pre>
+136
+137
+138
+139
+140
+141
+142
+143
+144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 147</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 136</span>
 
-<span class='kw'>def</span> <span class='id queue_spicy'>queue_spicy</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='ivar'>@precision</span><span class='period'>.</span><span class='id times'>times</span> <span class='lbrace'>{</span>
-        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='symbol'>:params</span> <span class='op'>=&gt;</span> <span class='ivar'>@unsafe</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:spicy</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span>
-            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:spicy</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:spicy</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_queue_spicy'>queue_spicy</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='ivar'>@precision</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span>
+        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='symbol'>:params</span> <span class='op'>=&gt;</span> <span class='ivar'>@unsafe</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_on_complete'>on_complete</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span>
+            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:spicy</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:spicy</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:spicy</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -872,25 +775,25 @@ will be averaged using rDiff analysis.</p>
       <pre class="lines">
 
 
-137
-138
-139
-140
-141
-142
-143
-144
-145</pre>
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 126</span>
 
-<span class='kw'>def</span> <span class='id queue_vanilla'>queue_vanilla</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='ivar'>@precision</span><span class='period'>.</span><span class='id times'>times</span> <span class='lbrace'>{</span>
-        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='symbol'>:params</span> <span class='op'>=&gt;</span> <span class='ivar'>@safe</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
-            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:vanilla</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span>
-            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:vanilla</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:vanilla</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_queue_vanilla'>queue_vanilla</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='ivar'>@precision</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span>
+        <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='symbol'>:params</span> <span class='op'>=&gt;</span> <span class='ivar'>@safe</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_on_complete'>on_complete</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span>
+            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:vanilla</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+            <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:vanilla</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:vanilla</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_rdiff'>rdiff</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -912,6 +815,16 @@ will be averaged using rDiff analysis.</p>
       <pre class="lines">
 
 
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
 82
 83
 84
@@ -929,50 +842,38 @@ will be averaged using rDiff analysis.</p>
 96
 97
 98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110</pre>
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'plugins/waf_detector.rb', line 72</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Starting detection with a precision of </span><span class='embexpr_beg'>#{</span><span class='ivar'>@precision</span><span class='rbrace'>}</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Starting detection with a precision of </span><span class='embexpr_beg'>#{</span><span class='ivar'>@precision</span><span class='rbrace'>}</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stage #1: Requesting original page.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_queue_original'>queue_original</span><span class='lparen'>(</span>  <span class='rparen'>)</span>
 
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stage #1: Requesting original page.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-    <span class='id queue_original'>queue_original</span><span class='lparen'>(</span>  <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stage #2: Requesting with vanilla inputs.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_queue_vanilla'>queue_vanilla</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stage #2: Requesting with vanilla inputs.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-    <span class='id queue_vanilla'>queue_vanilla</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stage #3: Requesting with spicy inputs.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_queue_spicy'>queue_spicy</span><span class='lparen'>(</span> <span class='rparen'>)</span>
 
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stage #3: Requesting with spicy inputs.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-    <span class='id queue_spicy'>queue_spicy</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stage #4: Analyzing gathered responses.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stage #4: Analyzing gathered responses.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-
-    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id after_run'>after_run</span> <span class='lbrace'>{</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_after_run'>after_run</span> <span class='lbrace'>{</span>
 
         <span class='kw'>if</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:original</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:vanilla</span><span class='rbracket'>]</span>
             <span class='kw'>if</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:vanilla</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='ivar'>@responses</span><span class='lbracket'>[</span><span class='symbol'>:spicy</span><span class='rbracket'>]</span>
-                <span class='id not_found!'>not_found!</span>
+                <span class='id identifier rubyid_not_found!'>not_found!</span>
             <span class='kw'>else</span>
-                <span class='id found!'>found!</span>
+                <span class='id identifier rubyid_found!'>found!</span>
             <span class='kw'>end</span>
         <span class='kw'>else</span>
-            <span class='id inconclusive!'>inconclusive!</span>
+            <span class='id identifier rubyid_inconclusive!'>inconclusive!</span>
         <span class='kw'>end</span>
     <span class='rbrace'>}</span>
-
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -984,9 +885,9 @@ will be averaged using rDiff analysis.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:20 2011 by 
+  Generated on Wed Jan  4 05:41:36 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

@@ -787,18 +787,18 @@ them in a new object.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 35</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
-    <span class='kw'>super</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span> <span class='rparen'>)</span>
+    <span class='kw'>super</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span> <span class='rparen'>)</span>
 
     <span class='comment'># holds the internal representation of the Hash
 </span>    <span class='comment'># same keys as self but the values are actually pointing to filepaths
 </span>    <span class='comment'># where the real values are being stores
-</span>    <span class='ivar'>@h</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+</span>    <span class='ivar'>@h</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 
     <span class='comment'># holds a key-value pair of self with digests as values
 </span>    <span class='comment'># in order to allow comparisons without requiring to load
 </span>    <span class='comment'># the actual values from their files.
-</span>    <span class='ivar'>@eql_h</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+</span>    <span class='ivar'>@eql_h</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -859,16 +859,16 @@ Ruby Hash by calling 'to_hash' on it.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 343</span>
 
-<span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span> <span class='id h'>h</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='op'>!</span><span class='id h'>h</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span> <span class='rparen'>)</span>
-        <span class='id eql'>eql</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-        <span class='id h'>h</span><span class='period'>.</span><span class='id to_hash'>to_hash</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-            <span class='id eql'>eql</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id eql_hash'>eql_hash</span><span class='lparen'>(</span> <span class='id v'>v</span><span class='period'>.</span><span class='id to_yaml'>to_yaml</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span> <span class='id identifier rubyid_h'>h</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_eql'>eql</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+        <span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+            <span class='id identifier rubyid_eql'>eql</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_eql_hash'>eql_hash</span><span class='lparen'>(</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_to_yaml'>to_yaml</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
-        <span class='ivar'>@eql_h</span> <span class='op'>==</span> <span class='id eql'>eql</span>
+        <span class='ivar'>@eql_h</span> <span class='op'>==</span> <span class='id identifier rubyid_eql'>eql</span>
     <span class='kw'>else</span>
-        <span class='ivar'>@eql_h</span> <span class='op'>==</span> <span class='id h'>h</span><span class='period'>.</span><span class='id _eql_h'>_eql_h</span>
+        <span class='ivar'>@eql_h</span> <span class='op'>==</span> <span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid__eql_h'>_eql_h</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -940,8 +940,8 @@ Ruby Hash by calling 'to_hash' on it.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 71</span>
 
-<span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span>
-    <span class='id load'>load</span><span class='lparen'>(</span> <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span> <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1022,10 +1022,10 @@ Ruby Hash by calling 'to_hash' on it.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 55</span>
 
-<span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span> <span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='rparen'>)</span>
-    <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id dump'>dump</span><span class='lparen'>(</span> <span class='id v'>v</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id serialized'>serialized</span><span class='op'>|</span>
-        <span class='ivar'>@eql_h</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id eql_hash'>eql_hash</span><span class='lparen'>(</span> <span class='id serialized'>serialized</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span> <span class='rparen'>)</span>
+    <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span> <span class='id identifier rubyid_v'>v</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_serialized'>serialized</span><span class='op'>|</span>
+        <span class='ivar'>@eql_h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_eql_hash'>eql_hash</span><span class='lparen'>(</span> <span class='id identifier rubyid_serialized'>serialized</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1053,8 +1053,8 @@ Ruby Hash by calling 'to_hash' on it.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 372</span>
 
-<span class='kw'>def</span> <span class='id _eql_h'>_eql_h</span>
-    <span class='ivar'>@eql_h</span><span class='period'>.</span><span class='id dup'>dup</span>
+<span class='kw'>def</span> <span class='id identifier rubyid__eql_h'>_eql_h</span>
+    <span class='ivar'>@eql_h</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1111,8 +1111,8 @@ actual values when merging 2 objects.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 368</span>
 
-<span class='kw'>def</span> <span class='id _internal'>_internal</span>
-    <span class='ivar'>@h</span><span class='period'>.</span><span class='id dup'>dup</span>
+<span class='kw'>def</span> <span class='id identifier rubyid__internal'>_internal</span>
+    <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1184,9 +1184,9 @@ actual values when merging 2 objects.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 82</span>
 
-<span class='kw'>def</span> <span class='id assoc'>assoc</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span>
-    <span class='lbracket'>[</span> <span class='id k'>k</span><span class='comma'>,</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_assoc'>assoc</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span>
+    <span class='lbracket'>[</span> <span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1225,9 +1225,9 @@ actual values when merging 2 objects.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 331</span>
 
-<span class='kw'>def</span> <span class='id clear'>clear</span>
-    <span class='ivar'>@h</span><span class='period'>.</span><span class='id values'>values</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id filepath'>filepath</span><span class='op'>|</span> <span class='id delete_file'>delete_file</span><span class='lparen'>(</span> <span class='id filepath'>filepath</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
-    <span class='ivar'>@h</span><span class='period'>.</span><span class='id clear'>clear</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_clear'>clear</span>
+    <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_filepath'>filepath</span><span class='op'>|</span> <span class='id identifier rubyid_delete_file'>delete_file</span><span class='lparen'>(</span> <span class='id identifier rubyid_filepath'>filepath</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1308,14 +1308,14 @@ and the method returns the result of that block.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 109</span>
 
-<span class='kw'>def</span> <span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id k'>k</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span>
-        <span class='id obj'>obj</span> <span class='op'>=</span> <span class='id load_and_delete_file'>load_and_delete_file</span><span class='lparen'>(</span> <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-        <span class='ivar'>@h</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span>
-        <span class='ivar'>@eql_h</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='id obj'>obj</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_obj'>obj</span> <span class='op'>=</span> <span class='id identifier rubyid_load_and_delete_file'>load_and_delete_file</span><span class='lparen'>(</span> <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span> <span class='rparen'>)</span>
+        <span class='ivar'>@eql_h</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span> <span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_obj'>obj</span>
     <span class='kw'>else</span>
-        <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
+        <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1384,15 +1384,15 @@ given it returns an enumerator.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 138</span>
 
-<span class='kw'>def</span> <span class='id each'>each</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
-        <span class='ivar'>@h</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-            <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='lbracket'>[</span> <span class='id k'>k</span><span class='comma'>,</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+        <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+            <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span> <span class='lbracket'>[</span> <span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
         <span class='kw'>self</span>
     <span class='kw'>else</span>
-        <span class='id enum_for'>enum_for</span><span class='lparen'>(</span> <span class='symbol'>:each</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span> <span class='symbol'>:each</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1454,12 +1454,12 @@ given it returns an enumerator.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 159</span>
 
-<span class='kw'>def</span> <span class='id each_key'>each_key</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
-        <span class='ivar'>@h</span><span class='period'>.</span><span class='id each_key'>each_key</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_each_key'>each_key</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+        <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> <span class='rparen'>)</span>
         <span class='kw'>self</span>
     <span class='kw'>else</span>
-        <span class='id enum_for'>enum_for</span><span class='lparen'>(</span> <span class='symbol'>:each_key</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span> <span class='symbol'>:each_key</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1524,15 +1524,15 @@ given it returns an enumerator.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 176</span>
 
-<span class='kw'>def</span> <span class='id each_value'>each_value</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id block'>block</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
-        <span class='ivar'>@h</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id k'>k</span><span class='op'>|</span>
-            <span class='id block'>block</span><span class='period'>.</span><span class='id call'>call</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_each_value'>each_value</span><span class='lparen'>(</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+        <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span>
+            <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
         <span class='kw'>self</span>
     <span class='kw'>else</span>
-        <span class='id enum_for'>enum_for</span><span class='lparen'>(</span> <span class='symbol'>:each_value</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span> <span class='symbol'>:each_value</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1584,8 +1584,8 @@ given it returns an enumerator.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 324</span>
 
-<span class='kw'>def</span> <span class='id empty?'>empty?</span>
-    <span class='ivar'>@h</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1640,8 +1640,8 @@ given it returns an enumerator.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 226</span>
 
-<span class='kw'>def</span> <span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span>
-    <span class='ivar'>@h</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span> <span class='rparen'>)</span>
+    <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1716,11 +1716,11 @@ given it returns an enumerator.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 204</span>
 
-<span class='kw'>def</span> <span class='id key'>key</span><span class='lparen'>(</span> <span class='id val'>val</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id value?'>value?</span><span class='lparen'>(</span> <span class='id val'>val</span> <span class='rparen'>)</span>
-    <span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-        <span class='kw'>return</span> <span class='id k'>k</span> <span class='kw'>if</span> <span class='id val'>val</span> <span class='op'>==</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id val'>val</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span> <span class='id identifier rubyid_val'>val</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_value?'>value?</span><span class='lparen'>(</span> <span class='id identifier rubyid_val'>val</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_k'>k</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span> <span class='op'>==</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_val'>val</span><span class='rbracket'>]</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1777,8 +1777,8 @@ given it returns an enumerator.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 193</span>
 
-<span class='kw'>def</span> <span class='id keys'>keys</span>
-    <span class='ivar'>@h</span><span class='period'>.</span><span class='id keys'>keys</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_keys'>keys</span>
+    <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1845,8 +1845,8 @@ them in a new object.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 254</span>
 
-<span class='kw'>def</span> <span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id h'>h</span> <span class='rparen'>)</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id serializer'>serializer</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id h'>h</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span> <span class='id identifier rubyid_h'>h</span> <span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='id identifier rubyid_serializer'>serializer</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span> <span class='id identifier rubyid_h'>h</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1923,20 +1923,20 @@ by calling 'to_hash' on it and the merging it with self.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 269</span>
 
-<span class='kw'>def</span> <span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id h'>h</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='op'>!</span><span class='id h'>h</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span> <span class='rparen'>)</span>
-        <span class='id h'>h</span><span class='period'>.</span><span class='id to_hash'>to_hash</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-            <span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@h</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span>
-            <span class='kw'>self</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span> <span class='id identifier rubyid_h'>h</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+            <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span> <span class='rparen'>)</span>
+            <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
         <span class='rbrace'>}</span>
     <span class='kw'>else</span>
-        <span class='id h'>h</span><span class='period'>.</span><span class='id _internal'>_internal</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-            <span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@h</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id k'>k</span> <span class='rparen'>)</span>
-            <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span>
+        <span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid__internal'>_internal</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+            <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_k'>k</span> <span class='rparen'>)</span>
+            <span class='ivar'>@h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
         <span class='rbrace'>}</span>
-        <span class='ivar'>@eql_h</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id h'>h</span><span class='period'>.</span><span class='id _eql_h'>_eql_h</span> <span class='rparen'>)</span>
+        <span class='ivar'>@eql_h</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span> <span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid__eql_h'>_eql_h</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
     <span class='kw'>self</span>
 <span class='kw'>end</span></pre>
@@ -2010,9 +2010,9 @@ by calling 'to_hash' on it and the merging it with self.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 94</span>
 
-<span class='kw'>def</span> <span class='id rassoc'>rassoc</span><span class='lparen'>(</span> <span class='id v'>v</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id value?'>value?</span><span class='lparen'>(</span> <span class='id v'>v</span> <span class='rparen'>)</span>
-    <span class='lbracket'>[</span> <span class='id key'>key</span><span class='lparen'>(</span> <span class='id v'>v</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_rassoc'>rassoc</span><span class='lparen'>(</span> <span class='id identifier rubyid_v'>v</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_value?'>value?</span><span class='lparen'>(</span> <span class='id identifier rubyid_v'>v</span> <span class='rparen'>)</span>
+    <span class='lbracket'>[</span> <span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span> <span class='id identifier rubyid_v'>v</span> <span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span> <span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2064,9 +2064,9 @@ by calling 'to_hash' on it and the merging it with self.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 125</span>
 
-<span class='kw'>def</span> <span class='id shift'>shift</span>
-    <span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='op'>=</span> <span class='ivar'>@h</span><span class='period'>.</span><span class='id shift'>shift</span>
-    <span class='lbracket'>[</span> <span class='id k'>k</span><span class='comma'>,</span> <span class='id load_and_delete_file'>load_and_delete_file</span><span class='lparen'>(</span> <span class='id v'>v</span> <span class='rparen'>)</span> <span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_shift'>shift</span>
+    <span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span> <span class='op'>=</span> <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span>
+    <span class='lbracket'>[</span> <span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_load_and_delete_file'>load_and_delete_file</span><span class='lparen'>(</span> <span class='id identifier rubyid_v'>v</span> <span class='rparen'>)</span> <span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2121,8 +2121,8 @@ by calling 'to_hash' on it and the merging it with self.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 314</span>
 
-<span class='kw'>def</span> <span class='id size'>size</span>
-    <span class='ivar'>@h</span><span class='period'>.</span><span class='id size'>size</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_size'>size</span>
+    <span class='ivar'>@h</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2173,8 +2173,8 @@ by calling 'to_hash' on it and the merging it with self.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 305</span>
 
-<span class='kw'>def</span> <span class='id to_a'>to_a</span>
-    <span class='id to_hash'>to_hash</span><span class='period'>.</span><span class='id to_a'>to_a</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
+    <span class='id identifier rubyid_to_hash'>to_hash</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2231,10 +2231,10 @@ by calling 'to_hash' on it and the merging it with self.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 293</span>
 
-<span class='kw'>def</span> <span class='id to_hash'>to_hash</span>
-    <span class='id h'>h</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span> <span class='id h'>h</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span> <span class='rbrace'>}</span>
-    <span class='kw'>return</span> <span class='id h'>h</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
+    <span class='id identifier rubyid_h'>h</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span> <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_h'>h</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2289,10 +2289,10 @@ by calling 'to_hash' on it and the merging it with self.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 238</span>
 
-<span class='kw'>def</span> <span class='id value?'>value?</span><span class='lparen'>(</span> <span class='id v'>v</span> <span class='rparen'>)</span>
-    <span class='id each_value'>each_value</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id val'>val</span><span class='op'>|</span>
-        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id val'>val</span> <span class='op'>==</span> <span class='id v'>v</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_value?'>value?</span><span class='lparen'>(</span> <span class='id identifier rubyid_v'>v</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_each_value'>each_value</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_val'>val</span><span class='op'>|</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span> <span class='op'>==</span> <span class='id identifier rubyid_v'>v</span>
     <span class='rbrace'>}</span>
     <span class='kw'>return</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
@@ -2350,8 +2350,8 @@ by calling 'to_hash' on it and the merging it with self.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/database/hash.rb', line 217</span>
 
-<span class='kw'>def</span> <span class='id values'>values</span>
-    <span class='id each_value'>each_value</span><span class='period'>.</span><span class='id to_a'>to_a</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_values'>values</span>
+    <span class='id identifier rubyid_each_value'>each_value</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2363,9 +2363,9 @@ by calling 'to_hash' on it and the merging it with self.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:22 2011 by 
+  Generated on Wed Jan  4 05:41:38 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

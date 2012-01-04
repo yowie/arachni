@@ -75,7 +75,7 @@
   
   
     <dt class="r2">Included in:</dt>
-    <dd class="r2"><span class='object_link'><a href="../ComponentManager.html" title="Arachni::ComponentManager (class)">ComponentManager</a></span>, <span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Framework</a></span>, <span class='object_link'><a href="../HTTP.html" title="Arachni::HTTP (class)">HTTP</a></span>, <span class='object_link'><a href="../Module/Manager.html" title="Arachni::Module::Manager (class)">Module::Manager</a></span>, <span class='object_link'><a href="../Module/Output.html" title="Arachni::Module::Output (module)">Module::Output</a></span>, <span class='object_link'><a href="../Parser.html" title="Arachni::Parser (class)">Parser</a></span>, <span class='object_link'><a href="../Plugin/Formatter.html" title="Arachni::Plugin::Formatter (class)">Plugin::Formatter</a></span>, <span class='object_link'><a href="../RPC/Server/Dispatcher.html" title="Arachni::RPC::Server::Dispatcher (class)">RPC::Server::Dispatcher</a></span>, <span class='object_link'><a href="../RPC/Server/Dispatcher/Node.html" title="Arachni::RPC::Server::Dispatcher::Node (class)">RPC::Server::Dispatcher::Node</a></span>, <span class='object_link'><a href="../RPC/Server/Instance.html" title="Arachni::RPC::Server::Instance (class)">RPC::Server::Instance</a></span>, <span class='object_link'><a href="../Report/Base.html" title="Arachni::Report::Base (class)">Report::Base</a></span>, <span class='object_link'><a href="../Reports/Stdout/PluginFormatters/MetaModules.html" title="Arachni::Reports::Stdout::PluginFormatters::MetaModules (class)">Reports::Stdout::PluginFormatters::MetaModules</a></span>, <span class='object_link'><a href="../Spider.html" title="Arachni::Spider (class)">Spider</a></span>, <span class='object_link'><a href="CLI.html" title="Arachni::UI::CLI (class)">CLI</a></span>, <span class='object_link'><a href="DispatcherMonitor.html" title="Arachni::UI::DispatcherMonitor (class)">DispatcherMonitor</a></span>, <span class='object_link'><a href="" title="Arachni::UI::Output (module)">Output</a></span>, <span class='object_link'><a href="RPC.html" title="Arachni::UI::RPC (class)">RPC</a></span></dd>
+    <dd class="r2"><span class='object_link'><a href="../ComponentManager.html" title="Arachni::ComponentManager (class)">ComponentManager</a></span>, <span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Framework</a></span>, <span class='object_link'><a href="../HTTP.html" title="Arachni::HTTP (class)">HTTP</a></span>, <span class='object_link'><a href="../Module/Manager.html" title="Arachni::Module::Manager (class)">Module::Manager</a></span>, <span class='object_link'><a href="../Module/Output.html" title="Arachni::Module::Output (module)">Module::Output</a></span>, <span class='object_link'><a href="../Parser.html" title="Arachni::Parser (class)">Parser</a></span>, <span class='object_link'><a href="../Plugin/Formatter.html" title="Arachni::Plugin::Formatter (class)">Plugin::Formatter</a></span>, <span class='object_link'><a href="../RPC/Server/Dispatcher.html" title="Arachni::RPC::Server::Dispatcher (class)">RPC::Server::Dispatcher</a></span>, <span class='object_link'><a href="../RPC/Server/Dispatcher/Node.html" title="Arachni::RPC::Server::Dispatcher::Node (class)">RPC::Server::Dispatcher::Node</a></span>, <span class='object_link'><a href="../RPC/Server/Instance.html" title="Arachni::RPC::Server::Instance (class)">RPC::Server::Instance</a></span>, <span class='object_link'><a href="../Report/Base.html" title="Arachni::Report::Base (class)">Report::Base</a></span>, <span class='object_link'><a href="../Spider.html" title="Arachni::Spider (class)">Spider</a></span>, <span class='object_link'><a href="CLI.html" title="Arachni::UI::CLI (class)">CLI</a></span>, <span class='object_link'><a href="DispatcherMonitor.html" title="Arachni::UI::DispatcherMonitor (class)">DispatcherMonitor</a></span>, <span class='object_link'><a href="" title="Arachni::UI::Output (module)">Output</a></span>, <span class='object_link'><a href="RPC.html" title="Arachni::UI::RPC (class)">RPC</a></span></dd>
     
   
   
@@ -807,21 +807,21 @@ discovery of a vulnerability.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/output.rb', line 62</span>
 
-<span class='kw'>def</span> <span class='id buffer'>buffer</span><span class='lparen'>(</span> <span class='id msg'>msg</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id file'>file</span> <span class='op'>=</span> <span class='cvar'>@@reroute_to_file</span>
-        <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>a+</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id f'>f</span><span class='op'>|</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_buffer'>buffer</span><span class='lparen'>(</span> <span class='id identifier rubyid_msg'>msg</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='cvar'>@@reroute_to_file</span>
+        <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span> <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>a+</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span>
 
-            <span class='id type'>type</span> <span class='op'>=</span> <span class='id msg'>msg</span><span class='period'>.</span><span class='id keys'>keys</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
-            <span class='id str'>str</span>  <span class='op'>=</span> <span class='id msg'>msg</span><span class='period'>.</span><span class='id values'>values</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
-            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id str'>str</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+            <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+            <span class='id identifier rubyid_str'>str</span>  <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
-            <span class='id f'>f</span><span class='period'>.</span><span class='id write'>write</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span><span class='period'>.</span><span class='id asctime'>asctime</span><span class='rbrace'>}</span><span class='tstring_content'>] [</span><span class='embexpr_beg'>#{</span><span class='id type'>type</span><span class='rbrace'>}</span><span class='tstring_content'>]  </span><span class='embexpr_beg'>#{</span><span class='id str'>str</span><span class='rbrace'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_f'>f</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_asctime'>asctime</span><span class='rbrace'>}</span><span class='tstring_content'>] [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='rbrace'>}</span><span class='tstring_content'>]  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_str'>str</span><span class='rbrace'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='kw'>else</span>
-        <span class='cvar'>@@buffer</span> <span class='op'>&lt;&lt;</span> <span class='id msg'>msg</span>
-        <span class='kw'>if</span> <span class='cvar'>@@buffer_cap</span><span class='period'>.</span><span class='id is_a?'>is_a?</span> <span class='const'>Integer</span>
-            <span class='cvar'>@@buffer</span><span class='period'>.</span><span class='id slice!'>slice!</span><span class='lparen'>(</span> <span class='lparen'>(</span><span class='cvar'>@@buffer</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>-</span> <span class='cvar'>@@buffer_cap</span><span class='rparen'>)</span><span class='op'>..</span><span class='cvar'>@@buffer</span><span class='period'>.</span><span class='id size'>size</span>  <span class='rparen'>)</span>
+        <span class='cvar'>@@buffer</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_msg'>msg</span>
+        <span class='kw'>if</span> <span class='cvar'>@@buffer_cap</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Integer</span>
+            <span class='cvar'>@@buffer</span><span class='period'>.</span><span class='id identifier rubyid_slice!'>slice!</span><span class='lparen'>(</span> <span class='lparen'>(</span><span class='cvar'>@@buffer</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>-</span> <span class='cvar'>@@buffer_cap</span><span class='rparen'>)</span><span class='op'>..</span><span class='cvar'>@@buffer</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>  <span class='rparen'>)</span>
         <span class='kw'>end</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -868,7 +868,7 @@ discovery of a vulnerability.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 231</span>
 
-<span class='kw'>def</span> <span class='id debug!'>debug!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_debug!'>debug!</span>
     <span class='cvar'>@@debug</span> <span class='op'>=</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -932,7 +932,7 @@ discovery of a vulnerability.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 241</span>
 
-<span class='kw'>def</span> <span class='id debug?'>debug?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_debug?'>debug?</span>
     <span class='cvar'>@@debug</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -988,10 +988,10 @@ discovery of a vulnerability.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/output.rb', line 56</span>
 
-<span class='kw'>def</span> <span class='id flush_buffer'>flush_buffer</span>
-    <span class='id buf'>buf</span> <span class='op'>=</span> <span class='cvar'>@@buffer</span><span class='period'>.</span><span class='id dup'>dup</span>
-    <span class='cvar'>@@buffer</span><span class='period'>.</span><span class='id clear'>clear</span>
-    <span class='kw'>return</span> <span class='id buf'>buf</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_flush_buffer'>flush_buffer</span>
+    <span class='id identifier rubyid_buf'>buf</span> <span class='op'>=</span> <span class='cvar'>@@buffer</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+    <span class='cvar'>@@buffer</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_buf'>buf</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1018,7 +1018,7 @@ discovery of a vulnerability.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 265</span>
 
-<span class='kw'>def</span> <span class='id mute!'>mute!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_mute!'>mute!</span>
     <span class='cvar'>@@mute</span> <span class='op'>=</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1068,7 +1068,7 @@ discovery of a vulnerability.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 274</span>
 
-<span class='kw'>def</span> <span class='id muted?'>muted?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_muted?'>muted?</span>
     <span class='cvar'>@@mute</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1114,7 +1114,7 @@ discovery of a vulnerability.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 251</span>
 
-<span class='kw'>def</span> <span class='id only_positives!'>only_positives!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_only_positives!'>only_positives!</span>
     <span class='cvar'>@@only_positives</span> <span class='op'>=</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1178,7 +1178,7 @@ discovery of a vulnerability.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 261</span>
 
-<span class='kw'>def</span> <span class='id only_positives?'>only_positives?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_only_positives?'>only_positives?</span>
     <span class='cvar'>@@only_positives</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1240,8 +1240,8 @@ rather than display an actual error.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 76</span>
 
-<span class='kw'>def</span> <span class='id print_bad'>print_bad</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    <span class='id buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:red</span> <span class='op'>=&gt;</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_bad'>print_bad</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:red</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1316,13 +1316,13 @@ rather than display an actual error.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 133</span>
 
-<span class='kw'>def</span> <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_debug'>print_debug</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='op'>!</span><span class='cvar'>@@debug</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
 
-    <span class='kw'>if</span> <span class='id reroute_to_file?'>reroute_to_file?</span>
-        <span class='id buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:debug</span> <span class='op'>=&gt;</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_reroute_to_file?'>reroute_to_file?</span>
+        <span class='id identifier rubyid_buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:debug</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
     <span class='kw'>else</span>
-        <span class='id print_color'>print_color</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>[!]</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>36</span><span class='comma'>,</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='gvar'>$stderr</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_print_color'>print_color</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>[!]</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>36</span><span class='comma'>,</span> <span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='gvar'>$stderr</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1388,9 +1388,9 @@ rather than display an actual error.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 164</span>
 
-<span class='kw'>def</span> <span class='id print_debug_backtrace'>print_debug_backtrace</span><span class='lparen'>(</span> <span class='id e'>e</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_debug_backtrace'>print_debug_backtrace</span><span class='lparen'>(</span> <span class='id identifier rubyid_e'>e</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='op'>!</span><span class='cvar'>@@debug</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
-    <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id line'>line</span><span class='op'>|</span> <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='id line'>line</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_backtrace'>backtrace</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span> <span class='id identifier rubyid_print_debug'>print_debug</span><span class='lparen'>(</span> <span class='id identifier rubyid_line'>line</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1456,9 +1456,9 @@ it'll do for now</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 149</span>
 
-<span class='kw'>def</span> <span class='id print_debug_pp'>print_debug_pp</span><span class='lparen'>(</span> <span class='id obj'>obj</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_debug_pp'>print_debug_pp</span><span class='lparen'>(</span> <span class='id identifier rubyid_obj'>obj</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='op'>!</span><span class='cvar'>@@debug</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
-    <span class='id pp'>pp</span> <span class='id obj'>obj</span>
+    <span class='id identifier rubyid_pp'>pp</span> <span class='id identifier rubyid_obj'>obj</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1520,9 +1520,9 @@ circumstances.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 55</span>
 
-<span class='kw'>def</span> <span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    <span class='id buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:error</span> <span class='op'>=&gt;</span> <span class='id str'>str</span> <span class='rparen'>)</span>
-    <span class='id print_color'>print_color</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>[-]</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>31</span><span class='comma'>,</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='gvar'>$stderr</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:error</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_color'>print_color</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>[-]</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>31</span><span class='comma'>,</span> <span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='gvar'>$stderr</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1549,8 +1549,8 @@ circumstances.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 169</span>
 
-<span class='kw'>def</span> <span class='id print_error_backtrace'>print_error_backtrace</span><span class='lparen'>(</span> <span class='id e'>e</span> <span class='rparen'>)</span>
-    <span class='id e'>e</span><span class='period'>.</span><span class='id backtrace'>backtrace</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id line'>line</span><span class='op'>|</span> <span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='id line'>line</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_error_backtrace'>print_error_backtrace</span><span class='lparen'>(</span> <span class='id identifier rubyid_e'>e</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_backtrace'>backtrace</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span> <span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='id identifier rubyid_line'>line</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1620,9 +1620,9 @@ circumstances.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 106</span>
 
-<span class='kw'>def</span> <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_info'>print_info</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='cvar'>@@only_positives</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
-    <span class='id buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:info</span> <span class='op'>=&gt;</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:info</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1687,9 +1687,9 @@ circumstances.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 199</span>
 
-<span class='kw'>def</span> <span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='cvar'>@@only_positives</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
-    <span class='id buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:line</span> <span class='op'>=&gt;</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:line</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1750,8 +1750,8 @@ discovery of a vulnerability</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 119</span>
 
-<span class='kw'>def</span> <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-    <span class='id buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:ok</span> <span class='op'>=&gt;</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_ok'>print_ok</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:ok</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1821,9 +1821,9 @@ discovery of a vulnerability</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 91</span>
 
-<span class='kw'>def</span> <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='cvar'>@@only_positives</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
-    <span class='id buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:status</span> <span class='op'>=&gt;</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:status</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1893,9 +1893,9 @@ discovery of a vulnerability</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 184</span>
 
-<span class='kw'>def</span> <span class='id print_verbose'>print_verbose</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_verbose'>print_verbose</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='op'>!</span><span class='cvar'>@@verbose</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>end</span>
-    <span class='id buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:verbose</span> <span class='op'>=&gt;</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_buffer'>buffer</span><span class='lparen'>(</span> <span class='symbol'>:verbose</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1922,8 +1922,8 @@ discovery of a vulnerability</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/output.rb', line 296</span>
 
-<span class='kw'>def</span> <span class='id reroute_to_file'>reroute_to_file</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
-    <span class='cvar'>@@reroute_to_file</span> <span class='op'>=</span> <span class='id file'>file</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_reroute_to_file'>reroute_to_file</span><span class='lparen'>(</span> <span class='id identifier rubyid_file'>file</span> <span class='rparen'>)</span>
+    <span class='cvar'>@@reroute_to_file</span> <span class='op'>=</span> <span class='id identifier rubyid_file'>file</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1972,7 +1972,7 @@ discovery of a vulnerability</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/output.rb', line 300</span>
 
-<span class='kw'>def</span> <span class='id reroute_to_file?'>reroute_to_file?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_reroute_to_file?'>reroute_to_file?</span>
     <span class='cvar'>@@reroute_to_file</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2000,7 +2000,7 @@ discovery of a vulnerability</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/output.rb', line 81</span>
 
-<span class='kw'>def</span> <span class='id uncap_buffer!'>uncap_buffer!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_uncap_buffer!'>uncap_buffer!</span>
     <span class='cvar'>@@buffer_cap</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2028,7 +2028,7 @@ discovery of a vulnerability</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 269</span>
 
-<span class='kw'>def</span> <span class='id unmute!'>unmute!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_unmute!'>unmute!</span>
     <span class='cvar'>@@mute</span> <span class='op'>=</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2074,7 +2074,7 @@ discovery of a vulnerability</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 211</span>
 
-<span class='kw'>def</span> <span class='id verbose!'>verbose!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_verbose!'>verbose!</span>
     <span class='cvar'>@@verbose</span> <span class='op'>=</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2138,7 +2138,7 @@ discovery of a vulnerability</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/ui/cli/output.rb', line 221</span>
 
-<span class='kw'>def</span> <span class='id verbose?'>verbose?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_verbose?'>verbose?</span>
     <span class='cvar'>@@verbose</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2151,9 +2151,9 @@ discovery of a vulnerability</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:22 2011 by 
+  Generated on Wed Jan  4 05:41:38 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

@@ -510,15 +510,15 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/module/base.rb', line 62</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span> <span class='id identifier rubyid_page'>page</span> <span class='rparen'>)</span>
 
-    <span class='ivar'>@page</span>  <span class='op'>=</span> <span class='id page'>page</span>
-    <span class='ivar'>@http</span>  <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id instance'>instance</span>
-    <span class='ivar'>@http</span><span class='period'>.</span><span class='id trainer'>trainer</span><span class='period'>.</span><span class='id set_page'>set_page</span><span class='lparen'>(</span> <span class='ivar'>@page</span> <span class='rparen'>)</span>
+    <span class='ivar'>@page</span>  <span class='op'>=</span> <span class='id identifier rubyid_page'>page</span>
+    <span class='ivar'>@http</span>  <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_instance'>instance</span>
+    <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_trainer'>trainer</span><span class='period'>.</span><span class='id identifier rubyid_set_page'>set_page</span><span class='lparen'>(</span> <span class='ivar'>@page</span> <span class='rparen'>)</span>
 
     <span class='comment'># update the cookies
-</span>    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@page</span><span class='period'>.</span><span class='id cookiejar'>cookiejar</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
-        <span class='ivar'>@http</span><span class='period'>.</span><span class='id update_cookies'>update_cookies</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id cookiejar'>cookiejar</span> <span class='rparen'>)</span>
+</span>    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_cookiejar'>cookiejar</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='rparen'>)</span>
+        <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_update_cookies'>update_cookies</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_cookiejar'>cookiejar</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 
     <span class='comment'>#
@@ -533,12 +533,12 @@
 </span>    <span class='comment'># for each page and not overwritten every single time a module is instantiated.
 </span>    <span class='comment'>#
 </span>    <span class='cvar'>@@__last_url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='cvar'>@@__last_url</span> <span class='op'>!=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
-        <span class='ivar'>@http</span><span class='period'>.</span><span class='id trainer'>trainer</span><span class='period'>.</span><span class='id page'>page</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id dup'>dup</span>
-        <span class='ivar'>@http</span><span class='period'>.</span><span class='id trainer'>trainer</span><span class='period'>.</span><span class='id init_forms'>init_forms</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id forms'>forms</span> <span class='rparen'>)</span>
-        <span class='ivar'>@http</span><span class='period'>.</span><span class='id trainer'>trainer</span><span class='period'>.</span><span class='id init_links'>init_links</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id links'>links</span> <span class='rparen'>)</span>
-        <span class='ivar'>@http</span><span class='period'>.</span><span class='id trainer'>trainer</span><span class='period'>.</span><span class='id init_cookies'>init_cookies</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id cookies'>cookies</span> <span class='rparen'>)</span>
-        <span class='cvar'>@@__last_url</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span>
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='cvar'>@@__last_url</span> <span class='op'>!=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+        <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_trainer'>trainer</span><span class='period'>.</span><span class='id identifier rubyid_page'>page</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+        <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_trainer'>trainer</span><span class='period'>.</span><span class='id identifier rubyid_init_forms'>init_forms</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_forms'>forms</span> <span class='rparen'>)</span>
+        <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_trainer'>trainer</span><span class='period'>.</span><span class='id identifier rubyid_init_links'>init_links</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_links'>links</span> <span class='rparen'>)</span>
+        <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_trainer'>trainer</span><span class='period'>.</span><span class='id identifier rubyid_init_cookies'>init_cookies</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_cookies'>cookies</span> <span class='rparen'>)</span>
+        <span class='cvar'>@@__last_url</span> <span class='op'>=</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -608,7 +608,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/module/base.rb', line 45</span>
 
-<span class='kw'>def</span> <span class='id http'>http</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_http'>http</span>
   <span class='ivar'>@http</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -663,7 +663,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/module/base.rb', line 52</span>
 
-<span class='kw'>def</span> <span class='id page'>page</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_page'>page</span>
   <span class='ivar'>@page</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -752,7 +752,7 @@ ommit any of the info.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/module/base.rb', line 131</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Base module abstract class</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Provides an abstract class the modules should implement.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
@@ -838,7 +838,7 @@ ommit any of the info.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/module/base.rb', line 115</span>
 
-<span class='kw'>def</span> <span class='id clean_up'>clean_up</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_up'>clean_up</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -876,7 +876,7 @@ ommit any of the info.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/module/base.rb', line 121</span>
 
-<span class='kw'>def</span> <span class='id framework'>framework</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_framework'>framework</span>
     <span class='ivar'>@framework</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -916,7 +916,7 @@ ommit any of the info.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/module/base.rb', line 99</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -955,7 +955,7 @@ ommit any of the info.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/module/base.rb', line 107</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -982,8 +982,8 @@ ommit any of the info.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/module/base.rb', line 175</span>
 
-<span class='kw'>def</span> <span class='id set_framework'>set_framework</span><span class='lparen'>(</span> <span class='id framework'>framework</span> <span class='rparen'>)</span>
-    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_set_framework'>set_framework</span><span class='lparen'>(</span> <span class='id identifier rubyid_framework'>framework</span> <span class='rparen'>)</span>
+    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id identifier rubyid_framework'>framework</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -995,9 +995,9 @@ ommit any of the info.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:21 2011 by 
+  Generated on Wed Jan  4 05:41:37 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

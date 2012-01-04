@@ -550,31 +550,31 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 84</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id audit'>audit</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span> <span class='id identifier rubyid_audit'>audit</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
     <span class='ivar'>@plugins</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='ivar'>@sitemap</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
     <span class='comment'># set instance variables from audit opts
-</span>    <span class='id audit'>audit</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-        <span class='kw'>self</span><span class='period'>.</span><span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='rparen'>)</span>
+</span>    <span class='id identifier rubyid_audit'>audit</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='ivar'>@options</span>         <span class='op'>=</span> <span class='id prepare_options'>prepare_options</span><span class='lparen'>(</span> <span class='ivar'>@options</span> <span class='rparen'>)</span>
-    <span class='ivar'>@issues</span>          <span class='op'>=</span> <span class='id sort'>sort</span><span class='lparen'>(</span> <span class='id prepare_variations'>prepare_variations</span><span class='lparen'>(</span> <span class='ivar'>@issues</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+    <span class='ivar'>@options</span>         <span class='op'>=</span> <span class='id identifier rubyid_prepare_options'>prepare_options</span><span class='lparen'>(</span> <span class='ivar'>@options</span> <span class='rparen'>)</span>
+    <span class='ivar'>@issues</span>          <span class='op'>=</span> <span class='id identifier rubyid_sort'>sort</span><span class='lparen'>(</span> <span class='id identifier rubyid_prepare_variations'>prepare_variations</span><span class='lparen'>(</span> <span class='ivar'>@issues</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>start_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-        <span class='ivar'>@start_datetime</span>  <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>start_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id asctime'>asctime</span>
+        <span class='ivar'>@start_datetime</span>  <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>start_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_asctime'>asctime</span>
     <span class='kw'>else</span>
-        <span class='ivar'>@start_datetime</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span><span class='period'>.</span><span class='id asctime'>asctime</span>
+        <span class='ivar'>@start_datetime</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_asctime'>asctime</span>
     <span class='kw'>end</span>
 
     <span class='kw'>if</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>finish_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-        <span class='ivar'>@finish_datetime</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>finish_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id asctime'>asctime</span>
+        <span class='ivar'>@finish_datetime</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>finish_datetime</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_asctime'>asctime</span>
     <span class='kw'>else</span>
-        <span class='ivar'>@finish_datetime</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span><span class='period'>.</span><span class='id asctime'>asctime</span>
+        <span class='ivar'>@finish_datetime</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_asctime'>asctime</span>
     <span class='kw'>end</span>
 
-    <span class='ivar'>@delta_time</span> <span class='op'>=</span> <span class='id secs_to_hms'>secs_to_hms</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>delta_time</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+    <span class='ivar'>@delta_time</span> <span class='op'>=</span> <span class='id identifier rubyid_secs_to_hms'>secs_to_hms</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>delta_time</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -638,7 +638,7 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 73</span>
 
-<span class='kw'>def</span> <span class='id delta_time'>delta_time</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_delta_time'>delta_time</span>
   <span class='ivar'>@delta_time</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -698,7 +698,7 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 68</span>
 
-<span class='kw'>def</span> <span class='id finish_datetime'>finish_datetime</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_finish_datetime'>finish_datetime</span>
   <span class='ivar'>@finish_datetime</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -758,7 +758,7 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 53</span>
 
-<span class='kw'>def</span> <span class='id issues'>issues</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_issues'>issues</span>
   <span class='ivar'>@issues</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -818,7 +818,7 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 43</span>
 
-<span class='kw'>def</span> <span class='id options'>options</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_options'>options</span>
   <span class='ivar'>@options</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -878,7 +878,7 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 58</span>
 
-<span class='kw'>def</span> <span class='id plugins'>plugins</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_plugins'>plugins</span>
   <span class='ivar'>@plugins</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -938,7 +938,7 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 38</span>
 
-<span class='kw'>def</span> <span class='id revision'>revision</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_revision'>revision</span>
   <span class='ivar'>@revision</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -998,7 +998,7 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 48</span>
 
-<span class='kw'>def</span> <span class='id sitemap'>sitemap</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_sitemap'>sitemap</span>
   <span class='ivar'>@sitemap</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1058,7 +1058,7 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 63</span>
 
-<span class='kw'>def</span> <span class='id start_datetime'>start_datetime</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_start_datetime'>start_datetime</span>
   <span class='ivar'>@start_datetime</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1118,7 +1118,7 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 33</span>
 
-<span class='kw'>def</span> <span class='id version'>version</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_version'>version</span>
   <span class='ivar'>@version</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1203,13 +1203,13 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 118</span>
 
-<span class='kw'>def</span> <span class='const'>AuditStore</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='const'>AuditStore</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span> <span class='id identifier rubyid_file'>file</span> <span class='rparen'>)</span>
      <span class='kw'>begin</span>
-         <span class='id r'>r</span> <span class='op'>=</span> <span class='const'>YAML</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-         <span class='id r'>r</span><span class='period'>.</span><span class='id version'>version</span>
-         <span class='id r'>r</span>
-     <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id e'>e</span>
-         <span class='const'>Marshal</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id binread'>binread</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+         <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'>YAML</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span> <span class='id identifier rubyid_file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+         <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_version'>version</span>
+         <span class='id identifier rubyid_r'>r</span>
+     <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+         <span class='const'>Marshal</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_binread'>binread</span><span class='lparen'>(</span> <span class='id identifier rubyid_file'>file</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
      <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1279,16 +1279,16 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 133</span>
 
-<span class='kw'>def</span> <span class='id save'>save</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_save'>save</span><span class='lparen'>(</span> <span class='id identifier rubyid_file'>file</span> <span class='rparen'>)</span>
     <span class='kw'>begin</span>
-        <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id f'>f</span><span class='op'>|</span>
-            <span class='id f'>f</span><span class='period'>.</span><span class='id write'>write</span><span class='lparen'>(</span> <span class='const'>YAML</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+        <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span> <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>w</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span>
+            <span class='id identifier rubyid_f'>f</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span> <span class='const'>YAML</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='kw'>rescue</span>
-        <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span> <span class='id file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>wb</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id f'>f</span><span class='op'>|</span>
-            <span class='id f'>f</span><span class='period'>.</span><span class='id write'>write</span><span class='lparen'>(</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+        <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span> <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>wb</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span>
+            <span class='id identifier rubyid_f'>f</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span> <span class='const'>Marshal</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -1359,26 +1359,26 @@ the runtime environment, the results of the audit etc...</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/audit_store.rb', line 152</span>
 
-<span class='kw'>def</span> <span class='id to_h'>to_h</span>
-    <span class='id hash'>hash</span> <span class='op'>=</span> <span class='id obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id dup'>dup</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_h'>to_h</span>
+    <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='id identifier rubyid_obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
 
-    <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id issue'>issue</span><span class='op'>|</span>
-        <span class='id issue'>issue</span><span class='period'>.</span><span class='id variations'>variations</span> <span class='op'>=</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id variations'>variations</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id var'>var</span><span class='op'>|</span> <span class='id obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='id var'>var</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
-        <span class='id obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='id issue'>issue</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issues</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_issue'>issue</span><span class='op'>|</span>
+        <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_variations'>variations</span> <span class='op'>=</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_variations'>variations</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_var'>var</span><span class='op'>|</span> <span class='id identifier rubyid_obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='id identifier rubyid_var'>var</span> <span class='rparen'>)</span> <span class='rbrace'>}</span>
+        <span class='id identifier rubyid_obj_to_hash'>obj_to_hash</span><span class='lparen'>(</span> <span class='id identifier rubyid_issue'>issue</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id plugin'>plugin</span><span class='comma'>,</span> <span class='id results'>results</span><span class='op'>|</span>
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id results'>results</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_plugin'>plugin</span><span class='comma'>,</span> <span class='id identifier rubyid_results'>results</span><span class='op'>|</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_results'>results</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span>
 
-        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id plugin'>plugin</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id plugin'>plugin</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id opt'>opt</span><span class='op'>|</span>
-            <span class='id opt'>opt</span><span class='period'>.</span><span class='id to_h'>to_h</span>
+        <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_plugin'>plugin</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_plugin'>plugin</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
+            <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span>
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
 
-    <span class='kw'>return</span> <span class='id hash'>hash</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_hash'>hash</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1390,9 +1390,9 @@ the runtime environment, the results of the audit etc...</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:22 2011 by 
+  Generated on Wed Jan  4 05:41:37 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

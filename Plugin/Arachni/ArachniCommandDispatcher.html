@@ -503,6 +503,11 @@ provided vulnerability.</p>
       <pre class="lines">
 
 
+96
+97
+98
+99
+100
 101
 102
 103
@@ -593,19 +598,14 @@ provided vulnerability.</p>
 188
 189
 190
-191
-192
-193
-194
-195
-196</pre>
+191</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 96</span>
 
-<span class='kw'>def</span> <span class='id cmd_arachni_autopwn'>cmd_arachni_autopwn</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cmd_arachni_autopwn'>cmd_arachni_autopwn</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span> <span class='rparen'>)</span>
 
-	<span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+	<span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
 		<span class='symbol'>:meterpreter</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
 		<span class='symbol'>:reverse</span>     <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
 		<span class='symbol'>:bind</span>        <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
@@ -613,89 +613,89 @@ provided vulnerability.</p>
 		<span class='symbol'>:regexp</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
 	<span class='rbrace'>}</span>
 
-	<span class='id args'>args</span><span class='period'>.</span><span class='id push'>push</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-h</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id args'>args</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+	<span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-h</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
-	<span class='kw'>while</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id args'>args</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='id flag'>flag</span> <span class='op'>=</span> <span class='id args'>args</span><span class='period'>.</span><span class='id shift'>shift</span> <span class='rparen'>)</span>
+	<span class='kw'>while</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_flag'>flag</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span> <span class='rparen'>)</span>
 
-		<span class='kw'>case</span> <span class='id flag'>flag</span>
+		<span class='kw'>case</span> <span class='id identifier rubyid_flag'>flag</span>
 
 		<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-h</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>--help</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>?</span><span class='tstring_end'>'</span></span>
-			<span class='id help'>help</span><span class='lparen'>(</span><span class='rparen'>)</span>
+			<span class='id identifier rubyid_help'>help</span><span class='lparen'>(</span><span class='rparen'>)</span>
 			<span class='kw'>return</span>
 
 		<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-r</span><span class='tstring_end'>'</span></span>
-			<span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:reverse</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+			<span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:reverse</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
 
 		<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-b</span><span class='tstring_end'>'</span></span>
-			<span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:bind</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+			<span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:bind</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
 
 		<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-m</span><span class='tstring_end'>'</span></span>
-			<span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:meterpreter</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+			<span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:meterpreter</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
 
 		<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-q</span><span class='tstring_end'>'</span></span>
-			<span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:quiet</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+			<span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:quiet</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
 
 		<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-x</span><span class='tstring_end'>'</span></span>
-			<span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:regexp</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id args'>args</span><span class='period'>.</span><span class='id shift'>shift</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
+			<span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:regexp</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rparen'>)</span>
 
 		<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-a</span><span class='tstring_end'>'</span></span>
-			<span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:regexp</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>.*</span><span class='regexp_end'>/</span></span>
+			<span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:regexp</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>.*</span><span class='regexp_end'>/</span></span>
 
 		<span class='kw'>else</span>
-			<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Unknown option: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id flag'>flag</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
+			<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Unknown option: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_flag'>flag</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rparen'>)</span>
 			<span class='kw'>return</span>
 		<span class='kw'>end</span>
 
 	<span class='kw'>end</span>
 
-	<span class='kw'>if</span> <span class='id running?'>running?</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@jobs</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> pwn-jobs haven't finished yet.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>To kill them run: \'arachni_killall\'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='id identifier rubyid_running?'>running?</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@jobs</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> pwn-jobs haven't finished yet.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>To kill them run: \'arachni_killall\'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 		<span class='kw'>return</span>
 	<span class='kw'>end</span>
 
 
 	<span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@vulns</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>You must first load a report using \'arachni_load\'.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>You must first load a report using \'arachni_load\'.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 		<span class='kw'>return</span>
 	<span class='kw'>end</span>
 
-	<span class='kw'>if</span> <span class='ivar'>@vulns</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>No vulnerabilities to exploit.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='ivar'>@vulns</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>No vulnerabilities to exploit.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 	<span class='kw'>end</span>
 
-	<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Running pwn-jobs...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-	<span class='id print_line'>print_line</span>
+	<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Running pwn-jobs...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_line'>print_line</span>
 
 	<span class='ivar'>@jobs</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-	<span class='ivar'>@vulns</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id vuln'>vuln</span><span class='op'>|</span>
+	<span class='ivar'>@vulns</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_vuln'>vuln</span><span class='op'>|</span>
 
-		<span class='kw'>next</span> <span class='kw'>if</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:regexp</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:regexp</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+		<span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:regexp</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:regexp</span><span class='rbracket'>]</span><span class='rparen'>)</span>
 
-		<span class='ivar'>@jobs</span> <span class='op'>&lt;&lt;</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id vuln'>vuln</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id vulnerability'>vulnerability</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='op'>|</span>
-			<span class='id exploit'>exploit</span><span class='lparen'>(</span> <span class='id vulnerability'>vulnerability</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+		<span class='ivar'>@jobs</span> <span class='op'>&lt;&lt;</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='id identifier rubyid_vuln'>vuln</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_vulnerability'>vulnerability</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>|</span>
+			<span class='id identifier rubyid_exploit'>exploit</span><span class='lparen'>(</span> <span class='id identifier rubyid_vulnerability'>vulnerability</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span>
 		<span class='kw'>end</span>
 	<span class='kw'>end</span>
 
 	<span class='comment'># Wait on all the jobs we just spawned
-</span>	<span class='kw'>while</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@jobs</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
+</span>	<span class='kw'>while</span><span class='lparen'>(</span> <span class='op'>!</span><span class='ivar'>@jobs</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='rparen'>)</span>
 		<span class='comment'># All running jobs are stored in framework.jobs.  If it's
 </span>		<span class='comment'># not in this list, it must have completed.
-</span>		<span class='ivar'>@jobs</span><span class='period'>.</span><span class='id delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id j'>j</span><span class='op'>|</span> <span class='op'>!</span><span class='id j'>j</span><span class='period'>.</span><span class='id alive?'>alive?</span> <span class='rbrace'>}</span>
+</span>		<span class='ivar'>@jobs</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_j'>j</span><span class='op'>|</span> <span class='op'>!</span><span class='id identifier rubyid_j'>j</span><span class='period'>.</span><span class='id identifier rubyid_alive?'>alive?</span> <span class='rbrace'>}</span>
 
-		<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id sessions'>sessions</span><span class='period'>.</span><span class='id length'>length</span><span class='rbrace'>}</span><span class='tstring_content'> established sessions]):</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
-			<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> Waiting on </span><span class='embexpr_beg'>#{</span><span class='ivar'>@jobs</span><span class='period'>.</span><span class='id length'>length</span><span class='rbrace'>}</span><span class='tstring_content'> launched modules to finish execution...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-		<span class='op'>::</span><span class='const'>IO</span><span class='period'>.</span><span class='id select'>select</span><span class='lparen'>(</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='float'>5.0</span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_sessions'>sessions</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rbrace'>}</span><span class='tstring_content'> established sessions]):</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+			<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> Waiting on </span><span class='embexpr_beg'>#{</span><span class='ivar'>@jobs</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rbrace'>}</span><span class='tstring_content'> launched modules to finish execution...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+		<span class='op'>::</span><span class='const'>IO</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='float'>5.0</span> <span class='rparen'>)</span>
 	<span class='kw'>end</span>
 
-	<span class='id print_line'>print_line</span>
-	<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The autopwn command has completed with </span><span class='embexpr_beg'>#{</span><span class='id framework'>framework</span><span class='period'>.</span><span class='id sessions'>sessions</span><span class='period'>.</span><span class='id length'>length</span><span class='rbrace'>}</span><span class='tstring_content'> sessions</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-	<span class='kw'>if</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='period'>.</span><span class='id sessions'>sessions</span><span class='period'>.</span><span class='id length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='rparen'>)</span>
-		<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Enter sessions -i [ID] to interact with a given session ID</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-		<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-		<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='int'>80</span> <span class='rparen'>)</span>
-		<span class='id driver'>driver</span><span class='period'>.</span><span class='id run_single'>run_single</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sessions -l -v</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-		<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='int'>80</span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_line'>print_line</span>
+	<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The autopwn command has completed with </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_sessions'>sessions</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rbrace'>}</span><span class='tstring_content'> sessions</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='kw'>if</span><span class='lparen'>(</span> <span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_sessions'>sessions</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Enter sessions -i [ID] to interact with a given session ID</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='int'>80</span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_driver'>driver</span><span class='period'>.</span><span class='id identifier rubyid_run_single'>run_single</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sessions -l -v</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='int'>80</span> <span class='rparen'>)</span>
 	<span class='kw'>end</span>
 
 <span class='kw'>end</span></pre>
@@ -728,6 +728,11 @@ provided vulnerability.</p>
       <pre class="lines">
 
 
+203
+204
+205
+206
+207
 208
 209
 210
@@ -743,35 +748,30 @@ provided vulnerability.</p>
 220
 221
 222
-223
-224
-225
-226
-227
-228</pre>
+223</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 208</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 203</span>
 
-<span class='kw'>def</span> <span class='id cmd_arachni_killall'>cmd_arachni_killall</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cmd_arachni_killall'>cmd_arachni_killall</span>
 
 	<span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@jobs</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The pwn-job queue hasn't been initialised yet.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The pwn-job queue hasn't been initialised yet.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 		<span class='kw'>return</span>
 	<span class='kw'>end</span>
 
-	<span class='kw'>if</span> <span class='ivar'>@jobs</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-		<span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The pwn-job queue is empty.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='ivar'>@jobs</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+		<span class='id identifier rubyid_print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The pwn-job queue is empty.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 		<span class='kw'>return</span>
 	<span class='kw'>end</span>
 
-	<span class='id cnt'>cnt</span> <span class='op'>=</span> <span class='int'>0</span>
-	<span class='ivar'>@jobs</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id j'>j</span><span class='op'>|</span>
-		<span class='id cnt'>cnt</span> <span class='op'>+=</span><span class='int'>1</span> <span class='kw'>if</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id kill'>kill</span><span class='lparen'>(</span> <span class='id j'>j</span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_cnt'>cnt</span> <span class='op'>=</span> <span class='int'>0</span>
+	<span class='ivar'>@jobs</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_j'>j</span><span class='op'>|</span>
+		<span class='id identifier rubyid_cnt'>cnt</span> <span class='op'>+=</span><span class='int'>1</span> <span class='kw'>if</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_kill'>kill</span><span class='lparen'>(</span> <span class='id identifier rubyid_j'>j</span> <span class='rparen'>)</span>
 	<span class='kw'>end</span>
 
-	<span class='ivar'>@jobs</span><span class='period'>.</span><span class='id clear'>clear</span>
-	<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Killed </span><span class='embexpr_beg'>#{</span><span class='id cnt'>cnt</span><span class='rbrace'>}</span><span class='tstring_content'> pwn-jobs.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='ivar'>@jobs</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+	<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Killed </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_cnt'>cnt</span><span class='rbrace'>}</span><span class='tstring_content'> pwn-jobs.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
 <span class='kw'>end</span></pre>
     </td>
@@ -803,17 +803,17 @@ provided vulnerability.</p>
       <pre class="lines">
 
 
-233
-234
-235
-236</pre>
+228
+229
+230
+231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 233</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 228</span>
 
-<span class='kw'>def</span> <span class='id cmd_arachni_list_all'>cmd_arachni_list_all</span>
-	<span class='id cmd_arachni_list_exploits'>cmd_arachni_list_exploits</span>
-	<span class='id cmd_arachni_list_vulns'>cmd_arachni_list_vulns</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cmd_arachni_list_all'>cmd_arachni_list_all</span>
+	<span class='id identifier rubyid_cmd_arachni_list_exploits'>cmd_arachni_list_exploits</span>
+	<span class='id identifier rubyid_cmd_arachni_list_vulns'>cmd_arachni_list_vulns</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -844,6 +844,11 @@ provided vulnerability.</p>
       <pre class="lines">
 
 
+342
+343
+344
+345
+346
 347
 348
 349
@@ -867,30 +872,25 @@ provided vulnerability.</p>
 367
 368
 369
-370
-371
-372
-373
-374
-375</pre>
+370</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 347</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 342</span>
 
-<span class='kw'>def</span> <span class='id cmd_arachni_list_exploits'>cmd_arachni_list_exploits</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cmd_arachni_list_exploits'>cmd_arachni_list_exploits</span>
 
 	<span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@exploits</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>You must first load a report using \'arachni_load\'.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>You must first load a report using \'arachni_load\'.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 		<span class='kw'>return</span>
 	<span class='kw'>end</span>
 
-	<span class='kw'>if</span> <span class='ivar'>@exploits</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>No exploits to list.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='ivar'>@exploits</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>No exploits to list.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 	<span class='kw'>end</span>
 
-	<span class='ivar'>@exploits</span><span class='period'>.</span><span class='id uniq!'>uniq!</span>
+	<span class='ivar'>@exploits</span><span class='period'>.</span><span class='id identifier rubyid_uniq!'>uniq!</span>
 
-	<span class='id exploit_table'>exploit_table</span> <span class='op'>=</span> <span class='const'>Rex</span><span class='op'>::</span><span class='const'>Ui</span><span class='op'>::</span><span class='const'>Text</span><span class='op'>::</span><span class='const'>Table</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span>
+	<span class='id identifier rubyid_exploit_table'>exploit_table</span> <span class='op'>=</span> <span class='const'>Rex</span><span class='op'>::</span><span class='const'>Ui</span><span class='op'>::</span><span class='const'>Text</span><span class='op'>::</span><span class='const'>Table</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
 	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Header</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unique exploits</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
 	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Indent</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='int'>4</span><span class='comma'>,</span>
 	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Columns</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
@@ -898,12 +898,12 @@ provided vulnerability.</p>
 		<span class='rbracket'>]</span>
 	<span class='rparen'>)</span>
 
-	<span class='ivar'>@exploits</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id ex'>ex</span><span class='comma'>,</span> <span class='id idx'>idx</span><span class='op'>|</span>
-		<span class='id desc'>desc</span> <span class='op'>=</span> <span class='id framework'>framework</span><span class='period'>.</span><span class='id modules'>modules</span><span class='period'>.</span><span class='id create'>create</span><span class='lparen'>(</span> <span class='id ex'>ex</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id description'>description</span>
-		<span class='id exploit_table'>exploit_table</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id idx'>idx</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span> <span class='id ex'>ex</span><span class='comma'>,</span> <span class='id desc'>desc</span> <span class='rbracket'>]</span>
+	<span class='ivar'>@exploits</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ex'>ex</span><span class='comma'>,</span> <span class='id identifier rubyid_idx'>idx</span><span class='op'>|</span>
+		<span class='id identifier rubyid_desc'>desc</span> <span class='op'>=</span> <span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_modules'>modules</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span> <span class='id identifier rubyid_ex'>ex</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span>
+		<span class='id identifier rubyid_exploit_table'>exploit_table</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_idx'>idx</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_ex'>ex</span><span class='comma'>,</span> <span class='id identifier rubyid_desc'>desc</span> <span class='rbracket'>]</span>
 	<span class='kw'>end</span>
 
-	<span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='embexpr_beg'>#{</span><span class='id exploit_table'>exploit_table</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_exploit_table'>exploit_table</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
 <span class='kw'>end</span></pre>
     </td>
@@ -935,6 +935,11 @@ provided vulnerability.</p>
       <pre class="lines">
 
 
+236
+237
+238
+239
+240
 241
 242
 243
@@ -967,30 +972,25 @@ provided vulnerability.</p>
 270
 271
 272
-273
-274
-275
-276
-277
-278</pre>
+273</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 241</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 236</span>
 
-<span class='kw'>def</span> <span class='id cmd_arachni_list_vulns'>cmd_arachni_list_vulns</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cmd_arachni_list_vulns'>cmd_arachni_list_vulns</span>
 
 	<span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@vulns</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>You must first load a report using \'arachni_load\'.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>You must first load a report using \'arachni_load\'.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 		<span class='kw'>return</span>
 	<span class='kw'>end</span>
 
-	<span class='kw'>if</span> <span class='ivar'>@vulns</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>No vulnerabilities to list.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='ivar'>@vulns</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>No vulnerabilities to list.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 	<span class='kw'>end</span>
 
-	<span class='ivar'>@vulns</span><span class='period'>.</span><span class='id uniq!'>uniq!</span>
+	<span class='ivar'>@vulns</span><span class='period'>.</span><span class='id identifier rubyid_uniq!'>uniq!</span>
 
-	<span class='id vuln_table'>vuln_table</span> <span class='op'>=</span> <span class='const'>Rex</span><span class='op'>::</span><span class='const'>Ui</span><span class='op'>::</span><span class='const'>Text</span><span class='op'>::</span><span class='const'>Table</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span>
+	<span class='id identifier rubyid_vuln_table'>vuln_table</span> <span class='op'>=</span> <span class='const'>Rex</span><span class='op'>::</span><span class='const'>Ui</span><span class='op'>::</span><span class='const'>Text</span><span class='op'>::</span><span class='const'>Table</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
 	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Header</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Vulnerabilities</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
 	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Indent</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='int'>4</span><span class='comma'>,</span>
 	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Columns</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
@@ -1004,15 +1004,15 @@ provided vulnerability.</p>
 		<span class='rbracket'>]</span>
 	<span class='rparen'>)</span>
 
-	<span class='id indent'>indent</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
-	<span class='ivar'>@vulns</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id vuln'>vuln</span><span class='comma'>,</span> <span class='id idx'>idx</span><span class='op'>|</span>
+	<span class='id identifier rubyid_indent'>indent</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+	<span class='ivar'>@vulns</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_vuln'>vuln</span><span class='comma'>,</span> <span class='id identifier rubyid_idx'>idx</span><span class='op'>|</span>
 
-		<span class='id vuln_table'>vuln_table</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span> <span class='id idx'>idx</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span> <span class='id vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='comma'>,</span>
-			<span class='id vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:method</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span> <span class='id vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span> <span class='rbracket'>]</span>
+		<span class='id identifier rubyid_vuln_table'>vuln_table</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span> <span class='id identifier rubyid_idx'>idx</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='comma'>,</span>
+			<span class='id identifier rubyid_vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:method</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='id identifier rubyid_vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span> <span class='rbracket'>]</span>
 
 	<span class='kw'>end</span>
 
-	<span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='embexpr_beg'>#{</span><span class='id vuln_table'>vuln_table</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_vuln_table'>vuln_table</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
 <span class='kw'>end</span></pre>
     </td>
@@ -1045,6 +1045,11 @@ vulnerabilities and suitable exploits.</p>
       <pre class="lines">
 
 
+41
+42
+43
+44
+45
 46
 47
 48
@@ -1090,66 +1095,61 @@ vulnerabilities and suitable exploits.</p>
 88
 89
 90
-91
-92
-93
-94
-95
-96</pre>
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 41</span>
 
-<span class='kw'>def</span> <span class='id cmd_arachni_load'>cmd_arachni_load</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cmd_arachni_load'>cmd_arachni_load</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span> <span class='rparen'>)</span>
 
-	<span class='id metareport'>metareport</span> <span class='op'>=</span> <span class='id args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_metareport'>metareport</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 
-	<span class='kw'>if</span> <span class='op'>!</span><span class='id metareport'>metareport</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Usage: arachni_load [metareport]</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_metareport'>metareport</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Usage: arachni_load [metareport]</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 		<span class='kw'>return</span>
 	<span class='kw'>end</span>
 
-	<span class='kw'>if</span> <span class='op'>!</span><span class='const'>File</span><span class='period'>.</span><span class='id exist?'>exist?</span><span class='lparen'>(</span> <span class='id metareport'>metareport</span> <span class='rparen'>)</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>File '</span><span class='embexpr_beg'>#{</span><span class='id metareport'>metareport</span><span class='rbrace'>}</span><span class='tstring_content'>' doesn't exist.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='op'>!</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span> <span class='id identifier rubyid_metareport'>metareport</span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>File '</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_metareport'>metareport</span><span class='rbrace'>}</span><span class='tstring_content'>' doesn't exist.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 		<span class='kw'>return</span>
 	<span class='kw'>end</span>
 
-	<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Loading report...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Loading report...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
 	<span class='ivar'>@vulns</span>    <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 	<span class='ivar'>@exploits</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-	<span class='const'>YAML</span><span class='period'>.</span><span class='id load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id read'>read</span><span class='lparen'>(</span> <span class='id metareport'>metareport</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id vuln'>vuln</span><span class='op'>|</span>
-		<span class='id data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span>
+	<span class='const'>YAML</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span> <span class='const'>IO</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span> <span class='id identifier rubyid_metareport'>metareport</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_vuln'>vuln</span><span class='op'>|</span>
+		<span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span>
 
-		<span class='id vuln'>vuln</span><span class='period'>.</span><span class='id ivars'>ivars</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id k'>k</span><span class='op'>|</span>
-			<span class='id data'>data</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='period'>.</span><span class='id to_sym'>to_sym</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id vuln'>vuln</span><span class='period'>.</span><span class='id ivars'>ivars</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_vuln'>vuln</span><span class='period'>.</span><span class='id identifier rubyid_ivars'>ivars</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span>
+			<span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_vuln'>vuln</span><span class='period'>.</span><span class='id identifier rubyid_ivars'>ivars</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span>
 		<span class='kw'>end</span>
 
 		<span class='kw'>begin</span>
 			<span class='comment'># the MSF doesn't much like hostnames, resolve to an IP address
 </span>			<span class='comment'># there's probably a beter way to do it...
-</span>			<span class='id host'>host</span> <span class='op'>=</span> <span class='const'>Rex</span><span class='op'>::</span><span class='const'>Socket</span><span class='period'>.</span><span class='id gethostbyname'>gethostbyname</span><span class='lparen'>(</span> <span class='id data'>data</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id pop'>pop</span>
-			<span class='id data'>data</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Rex</span><span class='op'>::</span><span class='const'>Socket</span><span class='period'>.</span><span class='id addr_ntoa'>addr_ntoa</span><span class='lparen'>(</span> <span class='id host'>host</span> <span class='rparen'>)</span>
+</span>			<span class='id identifier rubyid_host'>host</span> <span class='op'>=</span> <span class='const'>Rex</span><span class='op'>::</span><span class='const'>Socket</span><span class='period'>.</span><span class='id identifier rubyid_gethostbyname'>gethostbyname</span><span class='lparen'>(</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+			<span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Rex</span><span class='op'>::</span><span class='const'>Socket</span><span class='period'>.</span><span class='id identifier rubyid_addr_ntoa'>addr_ntoa</span><span class='lparen'>(</span> <span class='id identifier rubyid_host'>host</span> <span class='rparen'>)</span>
 
-			<span class='ivar'>@exploits</span> <span class='op'>&lt;&lt;</span> <span class='id data'>data</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span>
+			<span class='ivar'>@exploits</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span>
 
-			<span class='ivar'>@vulns</span> <span class='op'>&lt;&lt;</span> <span class='id data'>data</span>
+			<span class='ivar'>@vulns</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_data'>data</span>
 		<span class='kw'>rescue</span>
 			<span class='kw'>next</span>
 		<span class='kw'>end</span>
 
 	<span class='kw'>end</span>
 
-	<span class='ivar'>@vulns</span><span class='period'>.</span><span class='id uniq!'>uniq!</span>
+	<span class='ivar'>@vulns</span><span class='period'>.</span><span class='id identifier rubyid_uniq!'>uniq!</span>
 
-	<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Loaded </span><span class='embexpr_beg'>#{</span><span class='ivar'>@vulns</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> vulnerabilities.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Loaded </span><span class='embexpr_beg'>#{</span><span class='ivar'>@vulns</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> vulnerabilities.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
-	<span class='id print_line'>print_line</span>
-	<span class='id cmd_arachni_list_exploits'>cmd_arachni_list_exploits</span>
-	<span class='id cmd_arachni_list_vulns'>cmd_arachni_list_vulns</span>
-	<span class='id print_line'>print_line</span>
+	<span class='id identifier rubyid_print_line'>print_line</span>
+	<span class='id identifier rubyid_cmd_arachni_list_exploits'>cmd_arachni_list_exploits</span>
+	<span class='id identifier rubyid_cmd_arachni_list_vulns'>cmd_arachni_list_vulns</span>
+	<span class='id identifier rubyid_print_line'>print_line</span>
 
-	<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Done!</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Done!</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1180,6 +1180,11 @@ vulnerabilities and suitable exploits.</p>
       <pre class="lines">
 
 
+278
+279
+280
+281
+282
 283
 284
 285
@@ -1234,73 +1239,68 @@ vulnerabilities and suitable exploits.</p>
 334
 335
 336
-337
-338
-339
-340
-341
-342</pre>
+337</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 283</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 278</span>
 
-<span class='kw'>def</span> <span class='id cmd_arachni_manual'>cmd_arachni_manual</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id args'>args</span> <span class='rparen'>)</span>
-	<span class='id idx'>idx</span> <span class='op'>=</span> <span class='id args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cmd_arachni_manual'>cmd_arachni_manual</span><span class='lparen'>(</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_idx'>idx</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 
-	<span class='kw'>if</span> <span class='op'>!</span><span class='id idx'>idx</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Usage: arachni_manual [ID]</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-		<span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Use \'arachni_vulns\' to see all available IDs.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_idx'>idx</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Usage: arachni_manual [ID]</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Use \'arachni_vulns\' to see all available IDs.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 		<span class='kw'>return</span>
 	<span class='kw'>end</span>
-	<span class='id idx'>idx</span> <span class='op'>=</span> <span class='id idx'>idx</span><span class='period'>.</span><span class='id to_i'>to_i</span>
-	<span class='id idx'>idx</span> <span class='op'>-=</span> <span class='int'>1</span>
+	<span class='id identifier rubyid_idx'>idx</span> <span class='op'>=</span> <span class='id identifier rubyid_idx'>idx</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+	<span class='id identifier rubyid_idx'>idx</span> <span class='op'>-=</span> <span class='int'>1</span>
 
 	<span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@vulns</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>You must first load a report using \'arachni_load\'.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>You must first load a report using \'arachni_load\'.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 		<span class='kw'>return</span>
 	<span class='kw'>end</span>
 
-	<span class='kw'>if</span> <span class='ivar'>@vulns</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>No vulnerabilities to exploit.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='ivar'>@vulns</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>No vulnerabilities to exploit.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 	<span class='kw'>end</span>
 
-	<span class='id vuln'>vuln</span> <span class='op'>=</span> <span class='ivar'>@vulns</span><span class='lbracket'>[</span><span class='id idx'>idx</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_vuln'>vuln</span> <span class='op'>=</span> <span class='ivar'>@vulns</span><span class='lbracket'>[</span><span class='id identifier rubyid_idx'>idx</span><span class='rbracket'>]</span>
 
-	<span class='kw'>if</span> <span class='op'>!</span><span class='id vuln'>vuln</span>
-		<span class='id print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid index: </span><span class='embexpr_beg'>#{</span><span class='id idx'>idx</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-		<span class='id cmd_arachni_list_vulns'>cmd_arachni_list_vulns</span>
+	<span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_vuln'>vuln</span>
+		<span class='id identifier rubyid_print_error'>print_error</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid index: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_idx'>idx</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_cmd_arachni_list_vulns'>cmd_arachni_list_vulns</span>
 		<span class='kw'>return</span>
 	<span class='kw'>end</span>
 
 
-	<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Using </span><span class='embexpr_beg'>#{</span><span class='id vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'> .</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-	<span class='id driver'>driver</span><span class='period'>.</span><span class='id run_single'>run_single</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>use </span><span class='embexpr_beg'>#{</span><span class='id vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Using </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'> .</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_driver'>driver</span><span class='period'>.</span><span class='id identifier rubyid_run_single'>run_single</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>use </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
-	<span class='id prep_datastore'>prep_datastore</span><span class='lparen'>(</span> <span class='id vuln'>vuln</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-		<span class='id v'>v</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='op'>!</span><span class='id v'>v</span>
-		<span class='id driver'>driver</span><span class='period'>.</span><span class='id run_single'>run_single</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>set </span><span class='embexpr_beg'>#{</span><span class='id k'>k</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id v'>v</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_prep_datastore'>prep_datastore</span><span class='lparen'>(</span> <span class='id identifier rubyid_vuln'>vuln</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+		<span class='id identifier rubyid_v'>v</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_v'>v</span>
+		<span class='id identifier rubyid_driver'>driver</span><span class='period'>.</span><span class='id identifier rubyid_run_single'>run_single</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>set </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 	<span class='kw'>end</span>
 
-	<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Done!</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Done!</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
 	<span class='kw'>begin</span>
 
-		<span class='id sploit'>sploit</span> <span class='op'>=</span> <span class='id framework'>framework</span><span class='period'>.</span><span class='id modules'>modules</span><span class='period'>.</span><span class='id create'>create</span><span class='lparen'>(</span> <span class='id vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-		<span class='id driver'>driver</span><span class='period'>.</span><span class='id run_single'>run_single</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>set PAYLOAD </span><span class='embexpr_beg'>#{</span><span class='id payload'>payload</span><span class='lparen'>(</span> <span class='id sploit'>sploit</span><span class='comma'>,</span> <span class='id vuln'>vuln</span> <span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_sploit'>sploit</span> <span class='op'>=</span> <span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_modules'>modules</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span> <span class='id identifier rubyid_vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_driver'>driver</span><span class='period'>.</span><span class='id identifier rubyid_run_single'>run_single</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>set PAYLOAD </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_payload'>payload</span><span class='lparen'>(</span> <span class='id identifier rubyid_sploit'>sploit</span><span class='comma'>,</span> <span class='id identifier rubyid_vuln'>vuln</span> <span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
 
-		<span class='id payload_table'>payload_table</span> <span class='op'>=</span> <span class='const'>Rex</span><span class='op'>::</span><span class='const'>Ui</span><span class='op'>::</span><span class='const'>Text</span><span class='op'>::</span><span class='const'>Table</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span>
+		<span class='id identifier rubyid_payload_table'>payload_table</span> <span class='op'>=</span> <span class='const'>Rex</span><span class='op'>::</span><span class='const'>Ui</span><span class='op'>::</span><span class='const'>Text</span><span class='op'>::</span><span class='const'>Table</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
 			<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Header</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Compatible payloads</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
 			<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Indent</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='int'>4</span><span class='comma'>,</span>
 			<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Columns</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Description</span><span class='tstring_end'>&quot;</span></span> <span class='rbracket'>]</span>
 		<span class='rparen'>)</span>
 
-		<span class='id sploit'>sploit</span><span class='period'>.</span><span class='id compatible_payloads'>compatible_payloads</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id payload'>payload</span><span class='op'>|</span>
-			<span class='id payload_table'>payload_table</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span> <span class='id payload'>payload</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id payload'>payload</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id new'>new</span><span class='period'>.</span><span class='id description'>description</span> <span class='rbracket'>]</span>
+		<span class='id identifier rubyid_sploit'>sploit</span><span class='period'>.</span><span class='id identifier rubyid_compatible_payloads'>compatible_payloads</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payload'>payload</span><span class='op'>|</span>
+			<span class='id identifier rubyid_payload_table'>payload_table</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span> <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span> <span class='rbracket'>]</span>
 		<span class='kw'>end</span>
 	<span class='kw'>rescue</span>
-		<span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='embexpr_beg'>#{</span><span class='id payload_table'>payload_table</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-		<span class='id print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Use: set PAYLOAD &lt;name&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_payload_table'>payload_table</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Use: set PAYLOAD &lt;name&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 	<span class='kw'>end</span>
 
 <span class='kw'>end</span></pre>
@@ -1333,22 +1333,22 @@ vulnerabilities and suitable exploits.</p>
       <pre class="lines">
 
 
+25
+26
+27
+28
+29
 30
 31
 32
 33
 34
-35
-36
-37
-38
-39
-40</pre>
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 25</span>
 
-<span class='kw'>def</span> <span class='id commands'>commands</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_commands'>commands</span>
 	<span class='lbrace'>{</span>
 		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>arachni_load</span><span class='tstring_end'>&quot;</span></span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Loads an ArachniMetareport file (.afr.msf).</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
 		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>arachni_autopwn</span><span class='tstring_end'>&quot;</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tries to exploit all vulnerabilities.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
@@ -1388,6 +1388,11 @@ vulnerabilities and suitable exploits.</p>
       <pre class="lines">
 
 
+388
+389
+390
+391
+392
 393
 394
 395
@@ -1398,28 +1403,23 @@ vulnerabilities and suitable exploits.</p>
 400
 401
 402
-403
-404
-405
-406
-407
-408</pre>
+403</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 393</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 388</span>
 
-<span class='kw'>def</span> <span class='id exploit'>exploit</span><span class='lparen'>(</span> <span class='id vuln'>vuln</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_exploit'>exploit</span><span class='lparen'>(</span> <span class='id identifier rubyid_vuln'>vuln</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span>
 
-	<span class='id sploit'>sploit</span> <span class='op'>=</span>  <span class='id framework'>framework</span><span class='period'>.</span><span class='id modules'>modules</span><span class='period'>.</span><span class='id create'>create</span><span class='lparen'>(</span> <span class='id vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_sploit'>sploit</span> <span class='op'>=</span>  <span class='id identifier rubyid_framework'>framework</span><span class='period'>.</span><span class='id identifier rubyid_modules'>modules</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span> <span class='id identifier rubyid_vuln'>vuln</span><span class='lbracket'>[</span><span class='symbol'>:exploit</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
-	<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Running </span><span class='embexpr_beg'>#{</span><span class='id sploit'>sploit</span><span class='period'>.</span><span class='id fullname'>fullname</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Running </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sploit'>sploit</span><span class='period'>.</span><span class='id identifier rubyid_fullname'>fullname</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
-	<span class='id sploit'>sploit</span><span class='period'>.</span><span class='id datastore'>datastore</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id prep_datastore'>prep_datastore</span><span class='lparen'>(</span> <span class='id vuln'>vuln</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_sploit'>sploit</span><span class='period'>.</span><span class='id identifier rubyid_datastore'>datastore</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span> <span class='id identifier rubyid_prep_datastore'>prep_datastore</span><span class='lparen'>(</span> <span class='id identifier rubyid_vuln'>vuln</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
 
-	<span class='id sploit'>sploit</span><span class='period'>.</span><span class='id exploit_simple'>exploit_simple</span><span class='lparen'>(</span>
-	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Payload</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='id payload'>payload</span><span class='lparen'>(</span> <span class='id sploit'>sploit</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span><span class='comma'>,</span>
-	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>LocalInput</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:quiet</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='id driver'>driver</span><span class='period'>.</span><span class='id input'>input</span><span class='comma'>,</span>
-	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>LocalOutput</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:quiet</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='id driver'>driver</span><span class='period'>.</span><span class='id output'>output</span><span class='comma'>,</span>
+	<span class='id identifier rubyid_sploit'>sploit</span><span class='period'>.</span><span class='id identifier rubyid_exploit_simple'>exploit_simple</span><span class='lparen'>(</span>
+	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Payload</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='id identifier rubyid_payload'>payload</span><span class='lparen'>(</span> <span class='id identifier rubyid_sploit'>sploit</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>LocalInput</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:quiet</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='id identifier rubyid_driver'>driver</span><span class='period'>.</span><span class='id identifier rubyid_input'>input</span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>LocalOutput</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:quiet</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='id identifier rubyid_driver'>driver</span><span class='period'>.</span><span class='id identifier rubyid_output'>output</span><span class='comma'>,</span>
 	<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>RunAsJob</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='kw'>false</span>
 	<span class='rparen'>)</span>
 
@@ -1453,21 +1453,21 @@ vulnerabilities and suitable exploits.</p>
       <pre class="lines">
 
 
-503
-504
-505
-506
-507
-508</pre>
+498
+499
+500
+501
+502
+503</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 503</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 498</span>
 
-<span class='kw'>def</span> <span class='id hash_to_query'>hash_to_query</span><span class='lparen'>(</span> <span class='id hash'>hash</span><span class='comma'>,</span> <span class='id glue'>glue</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id hash'>hash</span><span class='period'>.</span><span class='id to_a'>to_a</span><span class='period'>.</span><span class='id map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span>
-		<span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id item'>item</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
-		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id item'>item</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id item'>item</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
-	<span class='kw'>end</span><span class='period'>.</span><span class='id reject'>reject</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id i'>i</span><span class='op'>|</span> <span class='op'>!</span><span class='id i'>i</span> <span class='kw'>end</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='id glue'>glue</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_hash_to_query'>hash_to_query</span><span class='lparen'>(</span> <span class='id identifier rubyid_hash'>hash</span><span class='comma'>,</span> <span class='id identifier rubyid_glue'>glue</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+	<span class='kw'>return</span> <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
+		<span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_item'>item</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+	<span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='op'>!</span><span class='id identifier rubyid_i'>i</span> <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span> <span class='id identifier rubyid_glue'>glue</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1487,33 +1487,33 @@ vulnerabilities and suitable exploits.</p>
       <pre class="lines">
 
 
+372
+373
+374
+375
+376
 377
 378
 379
 380
 381
 382
-383
-384
-385
-386
-387
-388</pre>
+383</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 377</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 372</span>
 
-<span class='kw'>def</span> <span class='id help'>help</span>
-	<span class='id print_status'>print_status</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Usage: arachni_autopwn [options]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='id print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-h          Display this help text</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='id print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-x [regexp] Only run modules whose name matches the regex</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='id print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-a          Launch exploits against all matched targets</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_help'>help</span>
+	<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Usage: arachni_autopwn [options]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-h          Display this help text</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-x [regexp] Only run modules whose name matches the regex</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-a          Launch exploits against all matched targets</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 	<span class='comment'># print_line(&quot;\t-s          Stop on first shell&quot;)
-</span>	<span class='id print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-r          Use a reverse connect shell</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='id print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-b          Use a bind shell on a random port (default)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='id print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-m          Use a meterpreter shell (if possible)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='id print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-q          Disable exploit module output</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='id print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</span>	<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-r          Use a reverse connect shell</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-b          Use a bind shell on a random port (default)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-m          Use a meterpreter shell (if possible)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t-q          Disable exploit module output</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1544,14 +1544,14 @@ vulnerabilities and suitable exploits.</p>
       <pre class="lines">
 
 
-23
-24
-25</pre>
+18
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 18</span>
 
-<span class='kw'>def</span> <span class='id name'>name</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
 	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Arachni</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1583,6 +1583,11 @@ vulnerabilities and suitable exploits.</p>
       <pre class="lines">
 
 
+408
+409
+410
+411
+412
 413
 414
 415
@@ -1620,24 +1625,19 @@ vulnerabilities and suitable exploits.</p>
 447
 448
 449
-450
-451
-452
-453
-454
-455</pre>
+450</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 413</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 408</span>
 
-<span class='kw'>def</span> <span class='id payload'>payload</span><span class='lparen'>(</span> <span class='id sploit'>sploit</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_payload'>payload</span><span class='lparen'>(</span> <span class='id identifier rubyid_sploit'>sploit</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span>
 
 	<span class='comment'># choose best payloads for a reverse shells
-</span>	<span class='kw'>if</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:reverse</span><span class='rbracket'>]</span>
+</span>	<span class='kw'>if</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:reverse</span><span class='rbracket'>]</span>
 
 		<span class='comment'># choose best payloads for a reverse meterpreter shell
-</span>		<span class='kw'>if</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:meterpreter</span><span class='rbracket'>]</span>
-			<span class='id payloads'>payloads</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+</span>		<span class='kw'>if</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:meterpreter</span><span class='rbracket'>]</span>
+			<span class='id identifier rubyid_payloads'>payloads</span> <span class='op'>=</span> <span class='lbrace'>{</span>
 				<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exploit/unix/webapp/arachni_php_include</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>php/meterpreter/reverse_tcp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
 				<span class='comment'># arachni_exec doesn't have a compatiblem meterpreter shell...
 </span>				<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exploit/unix/webapp/arachni_exec</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cmd/unix/reverse_perl</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -1645,7 +1645,7 @@ vulnerabilities and suitable exploits.</p>
 			<span class='rbrace'>}</span>
 		<span class='comment'># choose best payloads for a standard reverse shell
 </span>		<span class='kw'>else</span>
-			<span class='id payloads'>payloads</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+			<span class='id identifier rubyid_payloads'>payloads</span> <span class='op'>=</span> <span class='lbrace'>{</span>
 				<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exploit/unix/webapp/arachni_php_include</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>generic/shell_reverse_tcp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
 				<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exploit/unix/webapp/arachni_exec</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cmd/unix/reverse_perl</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
 				<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exploit/unix/webapp/arachni_php_eval</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>generic/shell_reverse_tcp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -1655,15 +1655,15 @@ vulnerabilities and suitable exploits.</p>
 	<span class='comment'># choose best payloads for a bind shell (default)
 </span>	<span class='kw'>else</span>
 		<span class='comment'># choose best payloads for a bind meterpreter shell
-</span>		<span class='kw'>if</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:meterpreter</span><span class='rbracket'>]</span>
-			<span class='id payloads'>payloads</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+</span>		<span class='kw'>if</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:meterpreter</span><span class='rbracket'>]</span>
+			<span class='id identifier rubyid_payloads'>payloads</span> <span class='op'>=</span> <span class='lbrace'>{</span>
 				<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exploit/unix/webapp/arachni_php_include</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>php/meterpreter/bind_tcp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
 				<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exploit/unix/webapp/arachni_exec</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cmd/unix/reverse_perl</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
 				<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exploit/unix/webapp/arachni_php_eval</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>php/meterpreter/bind_tcp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
 			<span class='rbrace'>}</span>
 		<span class='comment'># choose best payloads for a standard bind shell
 </span>		<span class='kw'>else</span>
-			<span class='id payloads'>payloads</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+			<span class='id identifier rubyid_payloads'>payloads</span> <span class='op'>=</span> <span class='lbrace'>{</span>
 				<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exploit/unix/webapp/arachni_php_include</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>php/bind_php</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
 				<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exploit/unix/webapp/arachni_exec</span><span class='tstring_end'>'</span></span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cmd/unix/bind_perl</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
 				<span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>exploit/unix/webapp/arachni_php_eval</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>php/bind_php</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -1671,7 +1671,7 @@ vulnerabilities and suitable exploits.</p>
 		<span class='kw'>end</span>
 	<span class='kw'>end</span>
 
-	<span class='kw'>return</span> <span class='id payloads'>payloads</span><span class='lbracket'>[</span><span class='id sploit'>sploit</span><span class='period'>.</span><span class='id fullname'>fullname</span><span class='rbracket'>]</span>
+	<span class='kw'>return</span> <span class='id identifier rubyid_payloads'>payloads</span><span class='lbracket'>[</span><span class='id identifier rubyid_sploit'>sploit</span><span class='period'>.</span><span class='id identifier rubyid_fullname'>fullname</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1703,6 +1703,11 @@ provided vulnerability</p>
       <pre class="lines">
 
 
+456
+457
+458
+459
+460
 461
 462
 463
@@ -1735,53 +1740,48 @@ provided vulnerability</p>
 490
 491
 492
-493
-494
-495
-496
-497
-498</pre>
+493</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 461</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 456</span>
 
-<span class='kw'>def</span> <span class='id prep_datastore'>prep_datastore</span><span class='lparen'>(</span> <span class='id vuln'>vuln</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_prep_datastore'>prep_datastore</span><span class='lparen'>(</span> <span class='id identifier rubyid_vuln'>vuln</span> <span class='rparen'>)</span>
 
-	<span class='id cvuln'>cvuln</span> <span class='op'>=</span> <span class='id vuln'>vuln</span><span class='period'>.</span><span class='id dup'>dup</span>
+	<span class='id identifier rubyid_cvuln'>cvuln</span> <span class='op'>=</span> <span class='id identifier rubyid_vuln'>vuln</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
 
-	<span class='id uri'>uri</span>  <span class='op'>=</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span>
-	<span class='id uri'>uri</span> <span class='op'>+=</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>  <span class='kw'>if</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>
-	<span class='id uri'>uri</span> <span class='op'>+=</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:query</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:query</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_uri'>uri</span>  <span class='op'>=</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_uri'>uri</span> <span class='op'>+=</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>  <span class='kw'>if</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_uri'>uri</span> <span class='op'>+=</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:query</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:query</span><span class='rbracket'>]</span>
 
-	<span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Preparing datastore for '</span><span class='embexpr_beg'>#{</span><span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>' vulnerability @ </span><span class='embexpr_beg'>#{</span><span class='id uri'>uri</span><span class='rbrace'>}</span><span class='tstring_content'> ...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Preparing datastore for '</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>' vulnerability @ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_uri'>uri</span><span class='rbrace'>}</span><span class='tstring_content'> ...</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
-	<span class='id datastore'>datastore</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-	<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SRVHOST</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>127.0.0.1</span><span class='tstring_end'>&quot;</span></span>
-	<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SRVPORT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span> <span class='id rand'>rand</span><span class='lparen'>(</span> <span class='int'>9999</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>6000</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
-	<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RHOST</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span>
-	<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RPORT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:port</span><span class='rbracket'>]</span>
-	<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LHOST</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>127.0.0.1</span><span class='tstring_end'>&quot;</span></span>
-	<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LPORT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='lparen'>(</span> <span class='id rand'>rand</span><span class='lparen'>(</span> <span class='int'>9999</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>5000</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+	<span class='id identifier rubyid_datastore'>datastore</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+	<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SRVHOST</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>127.0.0.1</span><span class='tstring_end'>&quot;</span></span>
+	<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SRVPORT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span> <span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span> <span class='int'>9999</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>6000</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+	<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RHOST</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RPORT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:port</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LHOST</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>127.0.0.1</span><span class='tstring_end'>&quot;</span></span>
+	<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LPORT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='lparen'>(</span> <span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span> <span class='int'>9999</span> <span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>5000</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 
-	<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SSL</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>     <span class='op'>=</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:ssl</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SSL</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>     <span class='op'>=</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:ssl</span><span class='rbracket'>]</span>
 
-	<span class='kw'>case</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:method</span><span class='rbracket'>]</span>
+	<span class='kw'>case</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:method</span><span class='rbracket'>]</span>
 	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>GET</span><span class='tstring_end'>'</span></span>
-		<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id hash_to_query'>hash_to_query</span><span class='lparen'>(</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id identifier rubyid_hash_to_query'>hash_to_query</span><span class='lparen'>(</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>POST</span><span class='tstring_end'>'</span></span>
-		<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>POST</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id hash_to_query'>hash_to_query</span><span class='lparen'>(</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+		<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>POST</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_hash_to_query'>hash_to_query</span><span class='lparen'>(</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 	<span class='kw'>end</span>
 
-	<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>METHOD</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:method</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>METHOD</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:method</span><span class='rbracket'>]</span>
 
-	<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>COOKIES</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-	<span class='id headers'>headers</span> <span class='op'>=</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span>
-	<span class='id headers'>headers</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>COOKIES</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:headers</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_headers'>headers</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cookie</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 
-	<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HEADERS</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id hash_to_query'>hash_to_query</span><span class='lparen'>(</span> <span class='id headers'>headers</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>::</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-	<span class='id datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PATH</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HEADERS</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_hash_to_query'>hash_to_query</span><span class='lparen'>(</span> <span class='id identifier rubyid_headers'>headers</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>::</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+	<span class='id identifier rubyid_datastore'>datastore</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PATH</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id identifier rubyid_cvuln'>cvuln</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>
 
-	<span class='kw'>return</span> <span class='id datastore'>datastore</span><span class='period'>.</span><span class='id dup'>dup</span>
+	<span class='kw'>return</span> <span class='id identifier rubyid_datastore'>datastore</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1825,15 +1825,15 @@ provided vulnerability</p>
       <pre class="lines">
 
 
-201
-202
-203</pre>
+196
+197
+198</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 201</span>
+      <pre class="code"><span class="info file"># File 'external/metasploit/plugins/arachni.rb', line 196</span>
 
-<span class='kw'>def</span> <span class='id running?'>running?</span>
-	<span class='kw'>return</span> <span class='ivar'>@jobs</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@jobs</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_running?'>running?</span>
+	<span class='kw'>return</span> <span class='ivar'>@jobs</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@jobs</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1845,9 +1845,9 @@ provided vulnerability</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:30 2011 by 
+  Generated on Wed Jan  4 05:41:44 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

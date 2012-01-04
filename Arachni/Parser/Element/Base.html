@@ -526,9 +526,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 79</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id raw'>raw</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
-    <span class='ivar'>@raw</span>   <span class='op'>=</span> <span class='id raw'>raw</span><span class='period'>.</span><span class='id dup'>dup</span>
-    <span class='ivar'>@url</span>   <span class='op'>=</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_raw'>raw</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
+    <span class='ivar'>@raw</span>   <span class='op'>=</span> <span class='id identifier rubyid_raw'>raw</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+    <span class='ivar'>@url</span>   <span class='op'>=</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -589,7 +589,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 47</span>
 
-<span class='kw'>def</span> <span class='id action'>action</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_action'>action</span>
   <span class='ivar'>@action</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -631,7 +631,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 49</span>
 
-<span class='kw'>def</span> <span class='id auditable'>auditable</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_auditable'>auditable</span>
   <span class='ivar'>@auditable</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -697,7 +697,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 71</span>
 
-<span class='kw'>def</span> <span class='id method'>method</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_method'>method</span>
   <span class='ivar'>@method</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -739,7 +739,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 51</span>
 
-<span class='kw'>def</span> <span class='id orig'>orig</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_orig'>orig</span>
   <span class='ivar'>@orig</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -794,7 +794,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 58</span>
 
-<span class='kw'>def</span> <span class='id raw'>raw</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_raw'>raw</span>
   <span class='ivar'>@raw</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -849,7 +849,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 38</span>
 
-<span class='kw'>def</span> <span class='id url'>url</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_url'>url</span>
   <span class='ivar'>@url</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -884,8 +884,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 107</span>
 
-<span class='kw'>def</span> <span class='id dup'>dup</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id dup'>dup</span><span class='comma'>,</span> <span class='ivar'>@raw</span><span class='period'>.</span><span class='id dup'>dup</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_dup'>dup</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@url</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='comma'>,</span> <span class='ivar'>@raw</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -936,8 +936,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 89</span>
 
-<span class='kw'>def</span> <span class='id id'>id</span>
-    <span class='kw'>return</span> <span class='ivar'>@raw</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
+    <span class='kw'>return</span> <span class='ivar'>@raw</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -975,7 +975,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 96</span>
 
-<span class='kw'>def</span> <span class='id simple'>simple</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_simple'>simple</span>
 
 <span class='kw'>end</span></pre>
     </td>
@@ -1014,7 +1014,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/elements.rb', line 103</span>
 
-<span class='kw'>def</span> <span class='id type'>type</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
 
 <span class='kw'>end</span></pre>
     </td>
@@ -1027,9 +1027,9 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:24 2011 by 
+  Generated on Wed Jan  4 05:41:39 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

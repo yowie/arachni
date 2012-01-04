@@ -135,7 +135,7 @@ performed a previous event it will check these too.</p>
 <pre class="code">&lt;tasos.laskos@gmail.com&gt;
 &lt;zapotek@segfault.gr&gt;</pre>
 
-<p>@version: 0.2.1</p>
+<p>@version: 0.2.2</p>
 
 
   </div>
@@ -306,31 +306,6 @@ performed a previous event it will check these too.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (CSRF) <strong>initialize</strong>(page) </a>
-    
-
-    
-  </span>
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of CSRF.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#logged_in_only-instance_method" title="#logged_in_only (instance method)">- (Array) <strong>logged_in_only</strong>(logged_out) </a>
     
 
@@ -428,7 +403,7 @@ performed a previous event it will check these too.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Module/Base.html#framework-instance_method" title="Arachni::Module::Base#framework (method)">#framework</a></span>, <span class='object_link'><a href="../Module/Base.html#set_framework-instance_method" title="Arachni::Module::Base#set_framework (method)">#set_framework</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Module/Base.html#framework-instance_method" title="Arachni::Module::Base#framework (method)">#framework</a></span>, <span class='object_link'><a href="../Module/Base.html#initialize-instance_method" title="Arachni::Module::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Module/Base.html#set_framework-instance_method" title="Arachni::Module::Base#set_framework (method)">#set_framework</a></span></p>
 
   
   
@@ -462,44 +437,7 @@ performed a previous event it will check these too.</p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="" title="Arachni::Modules::CSRF (class)">CSRF</a></span></tt>) <strong>initialize</strong>(page) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>A new instance of CSRF</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-53
-54
-55</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 53</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
-    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Module/Base.html#initialize-instance_method" title="Arachni::Module::Base#initialize (method)">Arachni::Module::Base</a></span></p>
   
 </div>
 <div id="method_missing_details" class="method_details_list">
@@ -531,6 +469,10 @@ performed a previous event it will check these too.</p>
       <pre class="lines">
 
 
+253
+254
+255
+256
 257
 258
 259
@@ -563,16 +505,12 @@ performed a previous event it will check these too.</p>
 286
 287
 288
-289
-290
-291
-292
-293</pre>
+289</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 257</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 253</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CSRF</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>It uses 2-pass rDiff analysis to determine
@@ -582,7 +520,7 @@ performed a previous event it will check these too.</p>
             <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span>
         <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt; </span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.2.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:references</span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Wikipedia</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://en.wikipedia.org/wiki/Cross-site_request_forgery</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>OWASP</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
@@ -633,6 +571,10 @@ performed a previous event it will check these too.</p>
       <pre class="lines">
 
 
+230
+231
+232
+233
 234
 235
 236
@@ -650,36 +592,32 @@ performed a previous event it will check these too.</p>
 248
 249
 250
-251
-252
-253
-254
-255</pre>
+251</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 234</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 230</span>
 
-<span class='kw'>def</span> <span class='id __log'>__log</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid___log'>__log</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span>
 
-    <span class='id url'>url</span>  <span class='op'>=</span> <span class='id form'>form</span><span class='period'>.</span><span class='id action'>action</span>
-    <span class='id name'>name</span> <span class='op'>=</span> <span class='id form'>form</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id form'>form</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>id</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_url'>url</span>  <span class='op'>=</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span>
+    <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>id</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
 
-    <span class='kw'>if</span> <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-        <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Skipping already audited form with name \'</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
-            <span class='id name'>name</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\' of url: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Skipping already audited form with name \'</span><span class='tstring_end'>'</span></span> <span class='op'>+</span>
+            <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\' of url: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
         <span class='kw'>return</span>
     <span class='kw'>end</span>
 
-    <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
 
-    <span class='id log_issue'>log_issue</span><span class='lparen'>(</span>
-        <span class='symbol'>:var</span>          <span class='op'>=&gt;</span> <span class='id name'>name</span><span class='comma'>,</span>
-        <span class='symbol'>:url</span>          <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_log_issue'>log_issue</span><span class='lparen'>(</span>
+        <span class='symbol'>:var</span>          <span class='op'>=&gt;</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+        <span class='symbol'>:url</span>          <span class='op'>=&gt;</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span>
         <span class='symbol'>:elem</span>         <span class='op'>=&gt;</span> <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>FORM</span><span class='comma'>,</span>
-        <span class='symbol'>:response</span>     <span class='op'>=&gt;</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span><span class='comma'>,</span>
+        <span class='symbol'>:response</span>     <span class='op'>=&gt;</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span><span class='comma'>,</span>
     <span class='rparen'>)</span>
 
-    <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found unprotected form with name '</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>' at '</span><span class='embexpr_beg'>#{</span><span class='id url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_ok'>print_ok</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found unprotected form with name '</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>' at '</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_url'>url</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -738,6 +676,10 @@ performed a previous event it will check these too.</p>
       <pre class="lines">
 
 
+189
+190
+191
+192
 193
 194
 195
@@ -772,46 +714,42 @@ performed a previous event it will check these too.</p>
 224
 225
 226
-227
-228
-229
-230
-231</pre>
+227</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 193</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 189</span>
 
-<span class='kw'>def</span> <span class='id csrf_token?'>csrf_token?</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_csrf_token?'>csrf_token?</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span>
 
     <span class='comment'># we could use regexps but i kinda like lcamtuf's (Michal's) way
-</span>    <span class='id base16_len_min'>base16_len_min</span>    <span class='op'>=</span> <span class='int'>8</span>
-    <span class='id base16_len_max'>base16_len_max</span>    <span class='op'>=</span> <span class='int'>45</span>
-    <span class='id base16_digit_num'>base16_digit_num</span>  <span class='op'>=</span> <span class='int'>2</span>
+</span>    <span class='id identifier rubyid_base16_len_min'>base16_len_min</span>    <span class='op'>=</span> <span class='int'>8</span>
+    <span class='id identifier rubyid_base16_len_max'>base16_len_max</span>    <span class='op'>=</span> <span class='int'>45</span>
+    <span class='id identifier rubyid_base16_digit_num'>base16_digit_num</span>  <span class='op'>=</span> <span class='int'>2</span>
 
-    <span class='id base64_len_min'>base64_len_min</span>    <span class='op'>=</span> <span class='int'>6</span>
-    <span class='id base64_len_max'>base64_len_max</span>    <span class='op'>=</span> <span class='int'>32</span>
-    <span class='id base64_digit_num'>base64_digit_num</span>  <span class='op'>=</span> <span class='int'>1</span>
-    <span class='id base64_case'>base64_case</span>       <span class='op'>=</span> <span class='int'>2</span>
-    <span class='id base64_digit_num2'>base64_digit_num2</span> <span class='op'>=</span> <span class='int'>3</span>
-    <span class='id base64_slash_cnt'>base64_slash_cnt</span>  <span class='op'>=</span> <span class='int'>2</span>
+    <span class='id identifier rubyid_base64_len_min'>base64_len_min</span>    <span class='op'>=</span> <span class='int'>6</span>
+    <span class='id identifier rubyid_base64_len_max'>base64_len_max</span>    <span class='op'>=</span> <span class='int'>32</span>
+    <span class='id identifier rubyid_base64_digit_num'>base64_digit_num</span>  <span class='op'>=</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_base64_case'>base64_case</span>       <span class='op'>=</span> <span class='int'>2</span>
+    <span class='id identifier rubyid_base64_digit_num2'>base64_digit_num2</span> <span class='op'>=</span> <span class='int'>3</span>
+    <span class='id identifier rubyid_base64_slash_cnt'>base64_slash_cnt</span>  <span class='op'>=</span> <span class='int'>2</span>
 
-    <span class='id len'>len</span> <span class='op'>=</span> <span class='id str'>str</span><span class='period'>.</span><span class='id size'>size</span>
-    <span class='id digit_cnt'>digit_cnt</span> <span class='op'>=</span> <span class='id str'>str</span><span class='period'>.</span><span class='id scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[0-9]+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id size'>size</span>
+    <span class='id identifier rubyid_len'>len</span> <span class='op'>=</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
+    <span class='id identifier rubyid_digit_cnt'>digit_cnt</span> <span class='op'>=</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[0-9]+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
 
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id len'>len</span> <span class='op'>&gt;=</span> <span class='id base16_len_min'>base16_len_min</span> <span class='op'>&amp;&amp;</span>
-        <span class='id len'>len</span> <span class='op'>&lt;=</span> <span class='id base16_len_max'>base16_len_max</span> <span class='op'>&amp;&amp;</span>
-        <span class='id digit_cnt'>digit_cnt</span> <span class='op'>&gt;=</span> <span class='id base16_digit_num'>base16_digit_num</span>
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id identifier rubyid_len'>len</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_base16_len_min'>base16_len_min</span> <span class='op'>&amp;&amp;</span>
+        <span class='id identifier rubyid_len'>len</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_base16_len_max'>base16_len_max</span> <span class='op'>&amp;&amp;</span>
+        <span class='id identifier rubyid_digit_cnt'>digit_cnt</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_base16_digit_num'>base16_digit_num</span>
       <span class='rparen'>)</span>
         <span class='kw'>return</span> <span class='kw'>true</span>
     <span class='kw'>end</span>
 
-    <span class='id upper_cnt'>upper_cnt</span> <span class='op'>=</span> <span class='id str'>str</span><span class='period'>.</span><span class='id scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[A-Z]+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id size'>size</span>
-    <span class='id slash_cnt'>slash_cnt</span> <span class='op'>=</span> <span class='id str'>str</span><span class='period'>.</span><span class='id scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\/+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id size'>size</span>
+    <span class='id identifier rubyid_upper_cnt'>upper_cnt</span> <span class='op'>=</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[A-Z]+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
+    <span class='id identifier rubyid_slash_cnt'>slash_cnt</span> <span class='op'>=</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\/+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
 
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id len'>len</span> <span class='op'>&gt;=</span> <span class='id base64_len_min'>base64_len_min</span> <span class='op'>&amp;&amp;</span> <span class='id len'>len</span> <span class='op'>&lt;=</span> <span class='id base64_len_max'>base64_len_max</span> <span class='op'>&amp;&amp;</span>
-        <span class='lparen'>(</span> <span class='lparen'>(</span> <span class='id digit_cnt'>digit_cnt</span> <span class='op'>&gt;=</span> <span class='id base64_digit_num'>base64_digit_num</span> <span class='op'>&amp;&amp;</span> <span class='id upper_cnt'>upper_cnt</span> <span class='op'>&gt;=</span> <span class='id base64_case'>base64_case</span> <span class='rparen'>)</span> <span class='op'>||</span>
-          <span class='id digit_cnt'>digit_cnt</span> <span class='op'>&gt;=</span> <span class='id base64_digit_num2'>base64_digit_num2</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
-        <span class='id slash_cnt'>slash_cnt</span> <span class='op'>&lt;=</span> <span class='id base64_slash_cnt'>base64_slash_cnt</span>
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id identifier rubyid_len'>len</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_base64_len_min'>base64_len_min</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_len'>len</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_base64_len_max'>base64_len_max</span> <span class='op'>&amp;&amp;</span>
+        <span class='lparen'>(</span> <span class='lparen'>(</span> <span class='id identifier rubyid_digit_cnt'>digit_cnt</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_base64_digit_num'>base64_digit_num</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_upper_cnt'>upper_cnt</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_base64_case'>base64_case</span> <span class='rparen'>)</span> <span class='op'>||</span>
+          <span class='id identifier rubyid_digit_cnt'>digit_cnt</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_base64_digit_num2'>base64_digit_num2</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+        <span class='id identifier rubyid_slash_cnt'>slash_cnt</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_base64_slash_cnt'>base64_slash_cnt</span>
       <span class='rparen'>)</span>
 
         <span class='kw'>return</span> <span class='kw'>true</span>
@@ -860,6 +798,10 @@ performed a previous event it will check these too.</p>
       <pre class="lines">
 
 
+170
+171
+172
+173
 174
 175
 176
@@ -868,21 +810,17 @@ performed a previous event it will check these too.</p>
 179
 180
 181
-182
-183
-184
-185
-186</pre>
+182</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 174</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 170</span>
 
-<span class='kw'>def</span> <span class='id forms_include?'>forms_include?</span><span class='lparen'>(</span> <span class='id forms'>forms</span><span class='comma'>,</span> <span class='id form'>form</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_forms_include?'>forms_include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_forms'>forms</span><span class='comma'>,</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span>
 
-    <span class='id forms'>forms</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id i_form'>i_form</span><span class='op'>|</span>
+    <span class='id identifier rubyid_forms'>forms</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_i_form'>i_form</span><span class='op'>|</span>
 
-        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id form'>form</span><span class='period'>.</span><span class='id id'>id</span> <span class='op'>==</span> <span class='id i_form'>i_form</span><span class='period'>.</span><span class='id id'>id</span> <span class='rparen'>)</span>
+        <span class='kw'>if</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_i_form'>i_form</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='rparen'>)</span>
             <span class='kw'>return</span> <span class='kw'>true</span>
         <span class='kw'>end</span>
 
@@ -959,6 +897,10 @@ performed a previous event it will check these too.</p>
       <pre class="lines">
 
 
+153
+154
+155
+156
 157
 158
 159
@@ -970,30 +912,26 @@ performed a previous event it will check these too.</p>
 165
 166
 167
-168
-169
-170
-171
-172</pre>
+168</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 153</span>
 
-<span class='kw'>def</span> <span class='id logged_in_only'>logged_in_only</span><span class='lparen'>(</span> <span class='id logged_out'>logged_out</span> <span class='rparen'>)</span>
-    <span class='id csrf_forms'>csrf_forms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_logged_in_only'>logged_in_only</span><span class='lparen'>(</span> <span class='id identifier rubyid_logged_out'>logged_out</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_csrf_forms'>csrf_forms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
-    <span class='ivar'>@page</span><span class='period'>.</span><span class='id forms'>forms</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span>
+    <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_forms'>forms</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_form'>form</span><span class='op'>|</span>
 
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id form'>form</span><span class='period'>.</span><span class='id auditable'>auditable</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_auditable'>auditable</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
 
-        <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span> <span class='id forms_include?'>forms_include?</span><span class='lparen'>(</span> <span class='id logged_out'>logged_out</span><span class='comma'>,</span> <span class='id form'>form</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
-            <span class='id csrf_forms'>csrf_forms</span> <span class='op'>&lt;&lt;</span> <span class='id form'>form</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span> <span class='id identifier rubyid_forms_include?'>forms_include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_logged_out'>logged_out</span><span class='comma'>,</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_csrf_forms'>csrf_forms</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_form'>form</span>
         <span class='kw'>end</span>
 
     <span class='rbrace'>}</span>
 
-    <span class='kw'>return</span> <span class='id csrf_forms'>csrf_forms</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_csrf_forms'>csrf_forms</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1013,27 +951,27 @@ performed a previous event it will check these too.</p>
       <pre class="lines">
 
 
+53
+54
+55
+56
 57
 58
 59
 60
-61
-62
-63
-64
-65</pre>
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 53</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
 
     <span class='comment'># the Trainer can provide modules access to the HTML parser
 </span>    <span class='comment'># and other cool stuff for element comparison
-</span>    <span class='ivar'>@__trainer</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id trainer'>trainer</span>
+</span>    <span class='ivar'>@__trainer</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_trainer'>trainer</span>
 
     <span class='comment'># since we bypass the Auditor we must also do our own audit tracking
-</span>    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id new'>new</span>
+</span>    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1053,6 +991,10 @@ performed a previous event it will check these too.</p>
       <pre class="lines">
 
 
+63
+64
+65
+66
 67
 68
 69
@@ -1090,52 +1032,48 @@ performed a previous event it will check these too.</p>
 101
 102
 103
-104
-105
-106
-107
-108</pre>
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 63</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
 
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Looking for CSRF candidates...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Looking for CSRF candidates...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Simulating logged-out user.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Simulating logged-out user.</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 
     <span class='comment'># setup opts with empty cookies
-</span>    <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+</span>    <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
         <span class='symbol'>:cookies</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
         <span class='symbol'>:remove_id</span> <span class='op'>=&gt;</span> <span class='kw'>true</span>
     <span class='rbrace'>}</span>
 
     <span class='comment'># request page without cookies, simulating a logged-out user
-</span>    <span class='ivar'>@http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id on_complete'>on_complete</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
+</span>    <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_on_complete'>on_complete</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span>
 
         <span class='comment'># set-up the parser with the proper url so that it
 </span>        <span class='comment'># can fix broken 'action' attrs and the like
-</span>        <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id instance'>instance</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+</span>        <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id identifier rubyid_instance'>instance</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span> <span class='rparen'>)</span>
 
         <span class='comment'># extract forms from the body of the response
-</span>        <span class='id forms_logged_out'>forms_logged_out</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id forms'>forms</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id reject'>reject</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span>
-            <span class='id form'>form</span><span class='period'>.</span><span class='id auditable'>auditable</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+</span>        <span class='id identifier rubyid_forms_logged_out'>forms_logged_out</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id identifier rubyid_forms'>forms</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_form'>form</span><span class='op'>|</span>
+            <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_auditable'>auditable</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
         <span class='rbrace'>}</span>
 
-        <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found </span><span class='embexpr_beg'>#{</span><span class='id forms_logged_out'>forms_logged_out</span><span class='period'>.</span><span class='id size'>size</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'> context irrelevant forms.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_forms_logged_out'>forms_logged_out</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'> context irrelevant forms.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
         <span class='comment'># get forms that are worthy of testing for CSRF
 </span>        <span class='comment'># i.e. apper only when the user is logged-in
-</span>        <span class='id csrf_forms'>csrf_forms</span> <span class='op'>=</span> <span class='id logged_in_only'>logged_in_only</span><span class='lparen'>(</span> <span class='id forms_logged_out'>forms_logged_out</span> <span class='rparen'>)</span>
+</span>        <span class='id identifier rubyid_csrf_forms'>csrf_forms</span> <span class='op'>=</span> <span class='id identifier rubyid_logged_in_only'>logged_in_only</span><span class='lparen'>(</span> <span class='id identifier rubyid_forms_logged_out'>forms_logged_out</span> <span class='rparen'>)</span>
 
-        <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found </span><span class='embexpr_beg'>#{</span><span class='id csrf_forms'>csrf_forms</span><span class='period'>.</span><span class='id size'>size</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'> CSRF candidates.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_csrf_forms'>csrf_forms</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'> CSRF candidates.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
-        <span class='id csrf_forms'>csrf_forms</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span>
-            <span class='id __log'>__log</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id unsafe?'>unsafe?</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_csrf_forms'>csrf_forms</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_form'>form</span><span class='op'>|</span>
+            <span class='id identifier rubyid___log'>__log</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_unsafe?'>unsafe?</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
 
     <span class='rbrace'>}</span>
@@ -1203,6 +1141,10 @@ performed a previous event it will check these too.</p>
       <pre class="lines">
 
 
+113
+114
+115
+116
 117
 118
 119
@@ -1227,43 +1169,39 @@ performed a previous event it will check these too.</p>
 138
 139
 140
-141
-142
-143
-144
-145</pre>
+141</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/csrf.rb', line 113</span>
 
-<span class='kw'>def</span> <span class='id unsafe?'>unsafe?</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_unsafe?'>unsafe?</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span>
 
-    <span class='id found_token'>found_token</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_found_token'>found_token</span> <span class='op'>=</span> <span class='kw'>false</span>
 
     <span class='comment'># nobody says that tokens must be in a 'value' attribute,
 </span>    <span class='comment'># they can just as well be in 'name'.
 </span>    <span class='comment'># so we check them both...
-</span>    <span class='id form'>form</span><span class='period'>.</span><span class='id simple'>simple</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_a'>to_a</span><span class='period'>.</span><span class='id flatten'>flatten</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id str'>str</span><span class='comma'>,</span> <span class='id i'>i</span><span class='op'>|</span>
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id str'>str</span>
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id form'>form</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span>
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id form'>form</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>type</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id form'>form</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>type</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id downcase'>downcase</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hidden</span><span class='tstring_end'>'</span></span>
+</span>    <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_simple'>simple</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_str'>str</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>type</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>auditable</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>type</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hidden</span><span class='tstring_end'>'</span></span>
 
-        <span class='id found_token'>found_token</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id csrf_token?'>csrf_token?</span><span class='lparen'>(</span> <span class='id str'>str</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_found_token'>found_token</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='id identifier rubyid_csrf_token?'>csrf_token?</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='id link_vars'>link_vars</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id link_vars'>link_vars</span><span class='lparen'>(</span> <span class='id form'>form</span><span class='period'>.</span><span class='id action'>action</span> <span class='rparen'>)</span>
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id link_vars'>link_vars</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_link_vars'>link_vars</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id identifier rubyid_link_vars'>link_vars</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id identifier rubyid_link_vars'>link_vars</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='rparen'>)</span>
         <span class='comment'># and we also need to check for a token in the form action
-</span>        <span class='id link_vars'>link_vars</span><span class='period'>.</span><span class='id values'>values</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id val'>val</span><span class='op'>|</span>
-            <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id val'>val</span>
-            <span class='id found_token'>found_token</span> <span class='op'>=</span> <span class='kw'>true</span>  <span class='kw'>if</span><span class='lparen'>(</span> <span class='id csrf_token?'>csrf_token?</span><span class='lparen'>(</span> <span class='id val'>val</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+</span>        <span class='id identifier rubyid_link_vars'>link_vars</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_val'>val</span><span class='op'>|</span>
+            <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_val'>val</span>
+            <span class='id identifier rubyid_found_token'>found_token</span> <span class='op'>=</span> <span class='kw'>true</span>  <span class='kw'>if</span><span class='lparen'>(</span> <span class='id identifier rubyid_csrf_token?'>csrf_token?</span><span class='lparen'>(</span> <span class='id identifier rubyid_val'>val</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='kw'>end</span>
 
-    <span class='kw'>return</span> <span class='op'>!</span><span class='id found_token'>found_token</span>
+    <span class='kw'>return</span> <span class='op'>!</span><span class='id identifier rubyid_found_token'>found_token</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1275,9 +1213,9 @@ performed a previous event it will check these too.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:19 2011 by 
+  Generated on Wed Jan  4 05:41:35 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

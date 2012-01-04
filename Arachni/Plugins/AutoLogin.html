@@ -108,7 +108,7 @@ response as framework-wide cookies to be used by the spider later on.</p>
 <pre class="code">&lt;tasos.laskos@gmail.com&gt;
 &lt;zapotek@segfault.gr&gt;</pre>
 
-<p>@version: 0.1</p>
+<p>@version: 0.1.1</p>
 
 
   </div>
@@ -264,31 +264,6 @@ response as framework-wide cookies to be used by the spider later on.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (AutoLogin) <strong>initialize</strong>(framework, options) </a>
-    
-
-    
-  </span>
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of AutoLogin.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#login_form%3F-instance_method" title="#login_form? (instance method)">- (Boolean) <strong>login_form?</strong>(form) </a>
     
 
@@ -382,7 +357,7 @@ response as framework-wide cookies to be used by the spider later on.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#distributable%3F-class_method" title="Arachni::Plugin::Base.distributable? (method)">distributable?</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#merge-class_method" title="Arachni::Plugin::Base.merge (method)">merge</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#distributable%3F-class_method" title="Arachni::Plugin::Base.distributable? (method)">distributable?</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Plugin/Base.html#merge-class_method" title="Arachni::Plugin::Base.merge (method)">merge</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
 
   
   
@@ -416,83 +391,7 @@ response as framework-wide cookies to be used by the spider later on.</p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="" title="Arachni::Plugins::AutoLogin (class)">AutoLogin</a></span></tt>) <strong>initialize</strong>(framework, options) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>A new instance of AutoLogin</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>framework</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a></span></tt>)</span>
-      
-      
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>options passed to the plugin</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-38
-39
-40
-41
-42
-43
-44</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 38</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
-    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
-    <span class='ivar'>@options</span>   <span class='op'>=</span> <span class='id options'>options</span>
-
-    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id pause!'>pause!</span>
-    <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>System paused.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">Arachni::Plugin::Base</a></span></p>
   
 </div>
 
@@ -533,7 +432,7 @@ response as framework-wide cookies to be used by the spider later on.</p>
     <td>
       <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 28</span>
 
-<span class='kw'>def</span> <span class='id http'>http</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_http'>http</span>
   <span class='ivar'>@http</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -561,26 +460,26 @@ response as framework-wide cookies to be used by the spider later on.</p>
       <pre class="lines">
 
 
+120
+121
+122
+123
+124
+125
+126
+127
+128
 129
 130
 131
 132
 133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143</pre>
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 129</span>
+      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 120</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>AutoLogin</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>It looks for the login form in the user provided URL,
@@ -588,10 +487,10 @@ response as framework-wide cookies to be used by the spider later on.</p>
             of the response and request as framework-wide cookies to be used by the spider later on.
         </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:options</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
-            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptUrl</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>The URL that contains the login form.</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span> <span class='rparen'>)</span><span class='comma'>,</span>
-            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptString</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>params</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Form parameters to submit. ( username=user&amp;password=pass )</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
+            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptUrl</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>The URL that contains the login form.</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span> <span class='rparen'>)</span><span class='comma'>,</span>
+            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptString</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>params</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Form parameters to submit. ( username=user&amp;password=pass )</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
         <span class='rbracket'>]</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -619,15 +518,15 @@ response as framework-wide cookies to be used by the spider later on.</p>
       <pre class="lines">
 
 
-102
-103
-104</pre>
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 93</span>
 
-<span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
-    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id resume!'>resume!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_up'>clean_up</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_resume!'>resume!</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -669,28 +568,28 @@ response as framework-wide cookies to be used by the spider later on.</p>
       <pre class="lines">
 
 
+97
+98
+99
+100
+101
+102
+103
+104
+105
 106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116</pre>
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 97</span>
 
-<span class='kw'>def</span> <span class='id login_form?'>login_form?</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
-    <span class='id avail'>avail</span>    <span class='op'>=</span> <span class='id form'>form</span><span class='period'>.</span><span class='id auditable'>auditable</span><span class='period'>.</span><span class='id keys'>keys</span>
-    <span class='id provided'>provided</span> <span class='op'>=</span> <span class='ivar'>@params</span><span class='period'>.</span><span class='id keys'>keys</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_login_form?'>login_form?</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_avail'>avail</span>    <span class='op'>=</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_auditable'>auditable</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
+    <span class='id identifier rubyid_provided'>provided</span> <span class='op'>=</span> <span class='ivar'>@params</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
 
-    <span class='id provided'>provided</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id name'>name</span><span class='op'>|</span>
-        <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id avail'>avail</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id name'>name</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_provided'>provided</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+        <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_avail'>avail</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_name'>name</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
     <span class='kw'>return</span> <span class='kw'>true</span>
@@ -713,27 +612,27 @@ response as framework-wide cookies to be used by the spider later on.</p>
       <pre class="lines">
 
 
-118
-119
-120
-121
-122
-123
-124
-125
-126</pre>
+109
+110
+111
+112
+113
+114
+115
+116
+117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 109</span>
 
-<span class='kw'>def</span> <span class='id parse_params'>parse_params</span>
-    <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>params</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id param'>param</span><span class='op'>|</span>
-        <span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='op'>=</span> <span class='id param'>param</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
-        <span class='id params'>params</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_parse_params'>parse_params</span>
+    <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>params</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_param'>param</span><span class='op'>|</span>
+        <span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span> <span class='op'>=</span> <span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
     <span class='rbrace'>}</span>
-    <span class='kw'>return</span> <span class='id params'>params</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_params'>params</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -753,23 +652,29 @@ response as framework-wide cookies to be used by the spider later on.</p>
       <pre class="lines">
 
 
-46
-47
-48
-49
-50
-51
-52</pre>
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 34</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span>
-    <span class='ivar'>@params</span> <span class='op'>=</span> <span class='id parse_params'>parse_params</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_pause!'>pause!</span>
+    <span class='id identifier rubyid_print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>System paused.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+
+    <span class='ivar'>@params</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_params'>parse_params</span>
 
     <span class='comment'># we need to declared this in order to pass ourselves
 </span>    <span class='comment'># as the auditor to the form later in order to submit it.
-</span>    <span class='ivar'>@http</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span>
+</span>    <span class='ivar'>@http</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -789,6 +694,15 @@ response as framework-wide cookies to be used by the spider later on.</p>
       <pre class="lines">
 
 
+45
+46
+47
+48
+49
+50
+51
+52
+53
 54
 55
 56
@@ -826,63 +740,54 @@ response as framework-wide cookies to be used by the spider later on.</p>
 88
 89
 90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100</pre>
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'plugins/autologin.rb', line 45</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
 
     <span class='comment'># grab the page containing the login form
-</span>    <span class='id res'>res</span>  <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:async</span> <span class='op'>=&gt;</span> <span class='kw'>false</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id response'>response</span>
+</span>    <span class='id identifier rubyid_res'>res</span>  <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:async</span> <span class='op'>=&gt;</span> <span class='kw'>false</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_response'>response</span>
 
-    <span class='id parser'>parser</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_parser'>parser</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span> <span class='rparen'>)</span>
     <span class='comment'># parse the response as a Page object
-</span>    <span class='id page'>page</span> <span class='op'>=</span> <span class='id parser'>parser</span><span class='period'>.</span><span class='id run'>run</span>
+</span>    <span class='id identifier rubyid_page'>page</span> <span class='op'>=</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span>
 
     <span class='comment'># find the login form
-</span>    <span class='id login_form'>login_form</span> <span class='op'>=</span> <span class='kw'>nil</span>
-    <span class='id page'>page</span><span class='period'>.</span><span class='id forms'>forms</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span>
-        <span class='id login_form'>login_form</span> <span class='op'>=</span> <span class='id form'>form</span> <span class='kw'>if</span> <span class='id login_form?'>login_form?</span><span class='lparen'>(</span> <span class='id form'>form</span> <span class='rparen'>)</span>
+</span>    <span class='id identifier rubyid_login_form'>login_form</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_forms'>forms</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_form'>form</span><span class='op'>|</span>
+        <span class='id identifier rubyid_login_form'>login_form</span> <span class='op'>=</span> <span class='id identifier rubyid_form'>form</span> <span class='kw'>if</span> <span class='id identifier rubyid_login_form?'>login_form?</span><span class='lparen'>(</span> <span class='id identifier rubyid_form'>form</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='kw'>if</span> <span class='op'>!</span><span class='id login_form'>login_form</span>
-        <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_FAILURE</span> <span class='op'>+</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
-        <span class='id print_bad'>print_bad</span><span class='lparen'>(</span> <span class='const'>MSG_FAILURE</span> <span class='op'>+</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_login_form'>login_form</span>
+        <span class='id identifier rubyid_register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_FAILURE</span> <span class='op'>+</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_print_bad'>print_bad</span><span class='lparen'>(</span> <span class='const'>MSG_FAILURE</span> <span class='op'>+</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rparen'>)</span>
         <span class='kw'>return</span>
     <span class='kw'>end</span>
 
-    <span class='id name'>name</span> <span class='op'>=</span> <span class='id login_form'>login_form</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='id login_form'>login_form</span><span class='period'>.</span><span class='id raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;n/a&gt;</span><span class='tstring_end'>'</span></span>
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found log-in form with name: </span><span class='tstring_end'>&quot;</span></span>  <span class='op'>+</span> <span class='id name'>name</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_login_form'>login_form</span><span class='period'>.</span><span class='id identifier rubyid_raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='id identifier rubyid_login_form'>login_form</span><span class='period'>.</span><span class='id identifier rubyid_raw'>raw</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;n/a&gt;</span><span class='tstring_end'>'</span></span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Found log-in form with name: </span><span class='tstring_end'>&quot;</span></span>  <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='rparen'>)</span>
 
     <span class='comment'># merge the input fields of the form with the user supplied parameters
-</span>    <span class='id login_form'>login_form</span><span class='period'>.</span><span class='id auditable'>auditable</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='ivar'>@params</span> <span class='rparen'>)</span>
+</span>    <span class='id identifier rubyid_login_form'>login_form</span><span class='period'>.</span><span class='id identifier rubyid_auditable'>auditable</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span> <span class='ivar'>@params</span> <span class='rparen'>)</span>
 
     <span class='comment'># register us as the auditor
-</span>    <span class='id login_form'>login_form</span><span class='period'>.</span><span class='id auditor'>auditor</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span>
-    <span class='id res'>res</span> <span class='op'>=</span> <span class='id login_form'>login_form</span><span class='period'>.</span><span class='id submit'>submit</span><span class='lparen'>(</span> <span class='symbol'>:async</span> <span class='op'>=&gt;</span> <span class='kw'>false</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id response'>response</span>
+</span>    <span class='id identifier rubyid_login_form'>login_form</span><span class='period'>.</span><span class='id identifier rubyid_auditor'>auditor</span><span class='lparen'>(</span> <span class='kw'>self</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='id identifier rubyid_login_form'>login_form</span><span class='period'>.</span><span class='id identifier rubyid_submit'>submit</span><span class='lparen'>(</span> <span class='symbol'>:async</span> <span class='op'>=&gt;</span> <span class='kw'>false</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_response'>response</span>
 
-    <span class='kw'>if</span> <span class='op'>!</span><span class='id res'>res</span>
-        <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_NO_RESPONSE</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
-        <span class='id print_bad'>print_bad</span><span class='lparen'>(</span> <span class='const'>MSG_NO_RESPONSE</span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_res'>res</span>
+        <span class='id identifier rubyid_register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_NO_RESPONSE</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_print_bad'>print_bad</span><span class='lparen'>(</span> <span class='const'>MSG_NO_RESPONSE</span> <span class='rparen'>)</span>
         <span class='kw'>return</span>
     <span class='kw'>else</span>
-        <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_SUCCESS</span><span class='comma'>,</span> <span class='symbol'>:cookies</span> <span class='op'>=&gt;</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id current_cookies'>current_cookies</span><span class='period'>.</span><span class='id dup'>dup</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
-        <span class='id print_ok'>print_ok</span><span class='lparen'>(</span> <span class='const'>MSG_SUCCESS</span> <span class='rparen'>)</span>
-        <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Cookies set to:</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-        <span class='ivar'>@http</span><span class='period'>.</span><span class='id current_cookies'>current_cookies</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id val'>val</span><span class='op'>|</span>
-            <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>    * </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> = </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id val'>val</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:code</span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:msg</span> <span class='op'>=&gt;</span> <span class='const'>MSG_SUCCESS</span><span class='comma'>,</span> <span class='symbol'>:cookies</span> <span class='op'>=&gt;</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_current_cookies'>current_cookies</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='rbrace'>}</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_print_ok'>print_ok</span><span class='lparen'>(</span> <span class='const'>MSG_SUCCESS</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Cookies set to:</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_current_cookies'>current_cookies</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='op'>|</span>
+            <span class='id identifier rubyid_print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>    * </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> = </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_val'>val</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='kw'>end</span>
 
@@ -897,9 +802,9 @@ response as framework-wide cookies to be used by the spider later on.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:18 2011 by 
+  Generated on Wed Jan  4 05:41:34 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

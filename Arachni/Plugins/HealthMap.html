@@ -108,7 +108,7 @@
 <pre class="code">&lt;tasos.laskos@gmail.com&gt;
 &lt;zapotek@segfault.gr&gt;</pre>
 
-<p>@version: 0.1</p>
+<p>@version: 0.1.1</p>
 
 
   </div>
@@ -232,31 +232,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (HealthMap) <strong>initialize</strong>(framework, options) </a>
-    
-
-    
-  </span>
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of HealthMap.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#normalize-instance_method" title="#normalize (instance method)">- (Object) <strong>normalize</strong>(url) </a>
     
 
@@ -339,7 +314,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#clean_up-instance_method" title="Arachni::Plugin::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#clean_up-instance_method" title="Arachni::Plugin::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
 
   
   
@@ -363,77 +338,7 @@
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="" title="Arachni::Plugins::HealthMap (class)">HealthMap</a></span></tt>) <strong>initialize</strong>(framework, options) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>A new instance of HealthMap</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>framework</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a></span></tt>)</span>
-      
-      
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>options passed to the plugin</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-30
-31
-32
-33</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 30</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
-    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
-    <span class='ivar'>@options</span>   <span class='op'>=</span> <span class='id options'>options</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">Arachni::Plugin::Base</a></span></p>
   
 </div>
 
@@ -477,14 +382,14 @@
       <pre class="lines">
 
 
-82
-83
-84</pre>
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 69</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id distributable?'>distributable?</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_distributable?'>distributable?</span>
     <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -505,24 +410,24 @@
       <pre class="lines">
 
 
-107
-108
-109
-110
-111
-112
-113
-114</pre>
+94
+95
+96
+97
+98
+99
+100
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 94</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Health map</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Generates a simple list of safe/unsafe URLs.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -543,31 +448,31 @@
       <pre class="lines">
 
 
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
 86
 87
 88
 89
 90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104</pre>
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 73</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
-    <span class='id merged'>merged</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span> <span class='id identifier rubyid_results'>results</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_merged'>merged</span> <span class='op'>=</span> <span class='lbrace'>{</span>
         <span class='symbol'>:map</span>    <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:total</span>  <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span>
         <span class='symbol'>:safe</span>   <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span>
@@ -575,15 +480,15 @@
         <span class='symbol'>:issue_percentage</span> <span class='op'>=&gt;</span> <span class='int'>0</span>
     <span class='rbrace'>}</span>
 
-    <span class='id results'>results</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id healthmap'>healthmap</span><span class='op'>|</span>
-        <span class='id merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:map</span><span class='rbracket'>]</span>    <span class='op'>|=</span> <span class='id healthmap'>healthmap</span><span class='lbracket'>[</span><span class='symbol'>:map</span><span class='rbracket'>]</span>
-        <span class='id merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:total</span><span class='rbracket'>]</span>  <span class='op'>+=</span> <span class='id healthmap'>healthmap</span><span class='lbracket'>[</span><span class='symbol'>:total</span><span class='rbracket'>]</span>
-        <span class='id merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:safe</span><span class='rbracket'>]</span>   <span class='op'>+=</span> <span class='id healthmap'>healthmap</span><span class='lbracket'>[</span><span class='symbol'>:safe</span><span class='rbracket'>]</span>
-        <span class='id merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:unsafe</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='id healthmap'>healthmap</span><span class='lbracket'>[</span><span class='symbol'>:unsafe</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_healthmap'>healthmap</span><span class='op'>|</span>
+        <span class='id identifier rubyid_merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:map</span><span class='rbracket'>]</span>    <span class='op'>|=</span> <span class='id identifier rubyid_healthmap'>healthmap</span><span class='lbracket'>[</span><span class='symbol'>:map</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:total</span><span class='rbracket'>]</span>  <span class='op'>+=</span> <span class='id identifier rubyid_healthmap'>healthmap</span><span class='lbracket'>[</span><span class='symbol'>:total</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:safe</span><span class='rbracket'>]</span>   <span class='op'>+=</span> <span class='id identifier rubyid_healthmap'>healthmap</span><span class='lbracket'>[</span><span class='symbol'>:safe</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:unsafe</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='id identifier rubyid_healthmap'>healthmap</span><span class='lbracket'>[</span><span class='symbol'>:unsafe</span><span class='rbracket'>]</span>
     <span class='rbrace'>}</span>
-    <span class='id merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:issue_percentage</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span> <span class='lparen'>(</span> <span class='const'>Float</span><span class='lparen'>(</span> <span class='id merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:unsafe</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='op'>/</span> <span class='id merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:total</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id round'>round</span>
-    <span class='kw'>return</span> <span class='id merged'>merged</span>
+    <span class='id identifier rubyid_merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:issue_percentage</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span> <span class='lparen'>(</span> <span class='const'>Float</span><span class='lparen'>(</span> <span class='id identifier rubyid_merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:unsafe</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='op'>/</span> <span class='id identifier rubyid_merged'>merged</span><span class='lbracket'>[</span><span class='symbol'>:total</span><span class='rbracket'>]</span> <span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_merged'>merged</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -609,21 +514,21 @@
       <pre class="lines">
 
 
-75
-76
-77
-78
-79
-80</pre>
+62
+63
+64
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 62</span>
 
-<span class='kw'>def</span> <span class='id normalize'>normalize</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='id query'>query</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id query'>query</span>
-    <span class='kw'>return</span> <span class='id url'>url</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id query'>query</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_query'>query</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id identifier rubyid_normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_url'>url</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_query'>query</span>
 
-    <span class='id url'>url</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>?</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id query'>query</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>?</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -643,23 +548,17 @@
       <pre class="lines">
 
 
-35
-36
-37
-38
-39
-40
-41</pre>
+26
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 26</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span>
-    <span class='kw'>while</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id running?'>running?</span> <span class='rparen'>)</span>
-        <span class='op'>::</span><span class='const'>IO</span><span class='period'>.</span><span class='id select'>select</span><span class='lparen'>(</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='int'>1</span> <span class='rparen'>)</span>
-    <span class='kw'>end</span>
-
-    <span class='ivar'>@audit_store</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id audit_store'>audit_store</span><span class='lparen'>(</span> <span class='kw'>true</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
+    <span class='id identifier rubyid_wait_while_framework_running'>wait_while_framework_running</span>
+    <span class='ivar'>@audit_store</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_audit_store'>audit_store</span><span class='lparen'>(</span> <span class='kw'>true</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -679,6 +578,18 @@
       <pre class="lines">
 
 
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
 43
 44
 45
@@ -696,52 +607,38 @@
 57
 58
 59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73</pre>
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/healthmap.rb', line 31</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
+    <span class='id identifier rubyid_sitemap'>sitemap</span>  <span class='op'>=</span> <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id identifier rubyid_sitemap'>sitemap</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_url'>url</span><span class='op'>|</span> <span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
+    <span class='id identifier rubyid_sitemap'>sitemap</span> <span class='op'>|=</span> <span class='id identifier rubyid_issue_urls'>issue_urls</span> <span class='op'>=</span> <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id identifier rubyid_issues'>issues</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_issue'>issue</span><span class='op'>|</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
 
-    <span class='id sitemap'>sitemap</span>  <span class='op'>=</span> <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id sitemap'>sitemap</span><span class='period'>.</span><span class='id map'>map</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id url'>url</span><span class='op'>|</span> <span class='id normalize'>normalize</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id uniq'>uniq</span>
-    <span class='id sitemap'>sitemap</span> <span class='op'>|=</span> <span class='id issue_urls'>issue_urls</span> <span class='op'>=</span> <span class='ivar'>@audit_store</span><span class='period'>.</span><span class='id issues'>issues</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id issue'>issue</span><span class='op'>|</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id url'>url</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id uniq'>uniq</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_sitemap'>sitemap</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
 
-    <span class='kw'>return</span> <span class='kw'>if</span> <span class='id sitemap'>sitemap</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_issue'>issue</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_map'>map</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_sitemap'>sitemap</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_url'>url</span><span class='op'>|</span>
 
-    <span class='id issue'>issue</span> <span class='op'>=</span> <span class='int'>0</span>
-    <span class='id map'>map</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id sitemap'>sitemap</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id url'>url</span><span class='op'>|</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_url'>url</span>
 
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id url'>url</span>
-
-        <span class='kw'>if</span> <span class='id issue_urls'>issue_urls</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-            <span class='id map'>map</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span> <span class='symbol'>:unsafe</span> <span class='op'>=&gt;</span> <span class='id url'>url</span> <span class='rbrace'>}</span>
-            <span class='id issue'>issue</span> <span class='op'>+=</span> <span class='int'>1</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_issue_urls'>issue_urls</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_map'>map</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span> <span class='symbol'>:unsafe</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_url'>url</span> <span class='rbrace'>}</span>
+            <span class='id identifier rubyid_issue'>issue</span> <span class='op'>+=</span> <span class='int'>1</span>
         <span class='kw'>else</span>
-            <span class='id map'>map</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span> <span class='symbol'>:safe</span>  <span class='op'>=&gt;</span> <span class='id url'>url</span> <span class='rbrace'>}</span>
+            <span class='id identifier rubyid_map'>map</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span> <span class='symbol'>:safe</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_url'>url</span> <span class='rbrace'>}</span>
         <span class='kw'>end</span>
     <span class='rbrace'>}</span>
 
-    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
-        <span class='symbol'>:map</span>    <span class='op'>=&gt;</span> <span class='id map'>map</span><span class='comma'>,</span>
-        <span class='symbol'>:total</span>  <span class='op'>=&gt;</span> <span class='id map'>map</span><span class='period'>.</span><span class='id size'>size</span><span class='comma'>,</span>
-        <span class='symbol'>:safe</span>   <span class='op'>=&gt;</span> <span class='id map'>map</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>-</span> <span class='id issue'>issue</span><span class='comma'>,</span>
-        <span class='symbol'>:unsafe</span> <span class='op'>=&gt;</span> <span class='id issue'>issue</span><span class='comma'>,</span>
-        <span class='symbol'>:issue_percentage</span> <span class='op'>=&gt;</span> <span class='lparen'>(</span> <span class='lparen'>(</span> <span class='const'>Float</span><span class='lparen'>(</span> <span class='id issue'>issue</span> <span class='rparen'>)</span> <span class='op'>/</span> <span class='id map'>map</span><span class='period'>.</span><span class='id size'>size</span> <span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id round'>round</span>
+    <span class='id identifier rubyid_register_results'>register_results</span><span class='lparen'>(</span> <span class='lbrace'>{</span>
+        <span class='symbol'>:map</span>    <span class='op'>=&gt;</span> <span class='id identifier rubyid_map'>map</span><span class='comma'>,</span>
+        <span class='symbol'>:total</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='comma'>,</span>
+        <span class='symbol'>:safe</span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>-</span> <span class='id identifier rubyid_issue'>issue</span><span class='comma'>,</span>
+        <span class='symbol'>:unsafe</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span><span class='comma'>,</span>
+        <span class='symbol'>:issue_percentage</span> <span class='op'>=&gt;</span> <span class='lparen'>(</span> <span class='lparen'>(</span> <span class='const'>Float</span><span class='lparen'>(</span> <span class='id identifier rubyid_issue'>issue</span> <span class='rparen'>)</span> <span class='op'>/</span> <span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span>
     <span class='rbrace'>}</span> <span class='rparen'>)</span>
 
 <span class='kw'>end</span></pre>
@@ -755,9 +652,9 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:23 2011 by 
+  Generated on Wed Jan  4 05:41:39 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

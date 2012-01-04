@@ -109,7 +109,7 @@ appear inside HTML 'script' tags.</p>
 <pre class="code">&lt;tasos.laskos@gmail.com&gt;
 &lt;zapotek@segfault.gr&gt;</pre>
 
-<p>@version: 0.1.1</p>
+<p>@version: 0.1.2</p>
 
 
   </div>
@@ -241,31 +241,6 @@ appear inside HTML 'script' tags.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (XSSScriptTag) <strong>initialize</strong>(page) </a>
-    
-
-    
-  </span>
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of XSSScriptTag.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
     
 
@@ -327,7 +302,7 @@ appear inside HTML 'script' tags.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Module/Base.html#framework-instance_method" title="Arachni::Module::Base#framework (method)">#framework</a></span>, <span class='object_link'><a href="../Module/Base.html#set_framework-instance_method" title="Arachni::Module::Base#set_framework (method)">#set_framework</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Module/Base.html#framework-instance_method" title="Arachni::Module::Base#framework (method)">#framework</a></span>, <span class='object_link'><a href="../Module/Base.html#initialize-instance_method" title="Arachni::Module::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Module/Base.html#set_framework-instance_method" title="Arachni::Module::Base#set_framework (method)">#set_framework</a></span></p>
 
   
   
@@ -361,44 +336,7 @@ appear inside HTML 'script' tags.</p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="" title="Arachni::Modules::XSSScriptTag (class)">XSSScriptTag</a></span></tt>) <strong>initialize</strong>(page) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>A new instance of XSSScriptTag</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-32
-33
-34</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss_script_tag.rb', line 32</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
-    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Module/Base.html#initialize-instance_method" title="Arachni::Module::Base#initialize (method)">Arachni::Module::Base</a></span></p>
   
 </div>
 <div id="method_missing_details" class="method_details_list">
@@ -430,6 +368,11 @@ appear inside HTML 'script' tags.</p>
       <pre class="lines">
 
 
+71
+72
+73
+74
+75
 76
 77
 78
@@ -457,17 +400,12 @@ appear inside HTML 'script' tags.</p>
 100
 101
 102
-103
-104
-105
-106
-107
-108</pre>
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss_script_tag.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/xss_script_tag.rb', line 71</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>XSS in HTML &quot;script&quot; tag</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Injects strings and checks if they appear inside HTML 'script' tags.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
@@ -478,7 +416,7 @@ appear inside HTML 'script' tags.</p>
             <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>HEADER</span>
         <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt; </span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:references</span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ha.ckers</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://ha.ckers.org/xss.html</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Secunia</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://secunia.com/advisories/9716/</span><span class='tstring_end'>'</span></span>
@@ -524,6 +462,11 @@ appear inside HTML 'script' tags.</p>
       <pre class="lines">
 
 
+53
+54
+55
+56
+57
 58
 59
 60
@@ -535,30 +478,25 @@ appear inside HTML 'script' tags.</p>
 66
 67
 68
-69
-70
-71
-72
-73
-74</pre>
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss_script_tag.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/xss_script_tag.rb', line 53</span>
 
-<span class='kw'>def</span> <span class='id _log'>_log</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span>
     <span class='comment'># if we have no body or it doesn't contain the injected string under any
 </span>    <span class='comment'># context there's no point in parsing the HMTL to verify the vulnerability
-</span>    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='op'>||</span> <span class='op'>!</span><span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='period'>.</span><span class='id substring?'>substring?</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:injected</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+</span>    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_substring?'>substring?</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:injected</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
 
     <span class='kw'>begin</span>
-        <span class='id doc'>doc</span> <span class='op'>=</span> <span class='const'>Nokogiri</span><span class='op'>::</span><span class='const'>HTML</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_doc'>doc</span> <span class='op'>=</span> <span class='const'>Nokogiri</span><span class='op'>::</span><span class='const'>HTML</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='rparen'>)</span>
 
         <span class='comment'># see if we managed to inject a working HTML attribute to any
 </span>        <span class='comment'># elements
-</span>        <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id html_elem'>html_elem</span> <span class='op'>=</span> <span class='id doc'>doc</span><span class='period'>.</span><span class='id xpath'>xpath</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//script</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>&amp;&amp;</span>
-            <span class='id html_elem'>html_elem</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id substring?'>substring?</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:injected</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-            <span class='id opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:match</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id html_elem'>html_elem</span><span class='period'>.</span><span class='id to_s'>to_s</span>
-            <span class='id log'>log</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+</span>        <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_html_elem'>html_elem</span> <span class='op'>=</span> <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_xpath'>xpath</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//script</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>&amp;&amp;</span>
+            <span class='id identifier rubyid_html_elem'>html_elem</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_substring?'>substring?</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:injected</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:match</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_html_elem'>html_elem</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+            <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span> <span class='rparen'>)</span>
         <span class='kw'>end</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -580,26 +518,26 @@ appear inside HTML 'script' tags.</p>
       <pre class="lines">
 
 
+31
+32
+33
+34
+35
 36
 37
 38
 39
 40
-41
-42
-43
-44
-45
-46</pre>
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss_script_tag.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/xss_script_tag.rb', line 31</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
     <span class='ivar'>@_injection_strs</span> <span class='op'>=</span> <span class='lbracket'>[</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>arachni_xss_in_script_tag_</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id seed'>seed</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;arachni_xss_in_script_tag_</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id seed'>seed</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>'arachni_xss_in_script_tag_</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id seed'>seed</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>arachni_xss_in_script_tag_</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_seed'>seed</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;arachni_xss_in_script_tag_</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_seed'>seed</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>'arachni_xss_in_script_tag_</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_seed'>seed</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
     <span class='rbracket'>]</span>
 
     <span class='ivar'>@_opts</span> <span class='op'>=</span> <span class='lbrace'>{</span>
@@ -624,25 +562,25 @@ appear inside HTML 'script' tags.</p>
       <pre class="lines">
 
 
+43
+44
+45
+46
+47
 48
 49
 50
-51
-52
-53
-54
-55
-56</pre>
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/audit/xss_script_tag.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'modules/audit/xss_script_tag.rb', line 43</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='ivar'>@_injection_strs</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id str'>str</span><span class='op'>|</span>
-        <span class='id audit'>audit</span><span class='lparen'>(</span> <span class='id str'>str</span><span class='comma'>,</span> <span class='ivar'>@_opts</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id res'>res</span><span class='comma'>,</span> <span class='id opts'>opts</span><span class='op'>|</span>
-            <span class='id _log'>_log</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
+    <span class='ivar'>@_injection_strs</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_str'>str</span><span class='op'>|</span>
+        <span class='id identifier rubyid_audit'>audit</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='ivar'>@_opts</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>|</span>
+            <span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -656,9 +594,9 @@ appear inside HTML 'script' tags.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:25 2011 by 
+  Generated on Wed Jan  4 05:41:40 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

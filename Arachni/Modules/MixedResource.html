@@ -107,7 +107,7 @@ HTTPS.</p>
 <pre class="code">&lt;tasos.laskos@gmail.com&gt;
 &lt;zapotek@segfault.gr&gt;</pre>
 
-<p>@version: 0.1</p>
+<p>@version: 0.1.1</p>
 
 
   </div>
@@ -228,14 +228,12 @@ HTTPS.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (MixedResource) <strong>initialize</strong>(page) </a>
+      <a href="#log_resource-instance_method" title="#log_resource (instance method)">- (Object) <strong>log_resource</strong>(url) </a>
     
 
     
   </span>
   
-    <span class="note title constructor">constructor</span>
-  
   
   
   
@@ -243,9 +241,7 @@ HTTPS.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of MixedResource.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -253,7 +249,7 @@ HTTPS.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#log_resource-instance_method" title="#log_resource (instance method)">- (Object) <strong>log_resource</strong>(url) </a>
+      <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
     
 
     
@@ -304,7 +300,7 @@ HTTPS.</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Module/Base.html" title="Arachni::Module::Base (class)">Arachni::Module::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Module/Base.html#framework-instance_method" title="Arachni::Module::Base#framework (method)">#framework</a></span>, <span class='object_link'><a href="../Module/Base.html#prepare-instance_method" title="Arachni::Module::Base#prepare (method)">#prepare</a></span>, <span class='object_link'><a href="../Module/Base.html#set_framework-instance_method" title="Arachni::Module::Base#set_framework (method)">#set_framework</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Base.html#clean_up-instance_method" title="Arachni::Module::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Module/Base.html#framework-instance_method" title="Arachni::Module::Base#framework (method)">#framework</a></span>, <span class='object_link'><a href="../Module/Base.html#initialize-instance_method" title="Arachni::Module::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Module/Base.html#set_framework-instance_method" title="Arachni::Module::Base#set_framework (method)">#set_framework</a></span></p>
 
   
   
@@ -338,50 +334,7 @@ HTTPS.</p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="" title="Arachni::Modules::MixedResource (class)">MixedResource</a></span></tt>) <strong>initialize</strong>(page) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>A new instance of MixedResource</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-31
-32
-33
-34
-35
-36</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/mixed_resource.rb', line 31</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id page'>page</span> <span class='rparen'>)</span>
-    <span class='comment'># in this case we don't need to call the parent
-</span>    <span class='ivar'>@page</span> <span class='op'>=</span> <span class='id page'>page</span>
-
-    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id new'>new</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Module/Base.html#initialize-instance_method" title="Arachni::Module::Base#initialize (method)">Arachni::Module::Base</a></span></p>
   
 </div>
 <div id="method_missing_details" class="method_details_list">
@@ -413,6 +366,12 @@ HTTPS.</p>
       <pre class="lines">
 
 
+72
+73
+74
+75
+76
+77
 78
 79
 80
@@ -431,18 +390,12 @@ HTTPS.</p>
 93
 94
 95
-96
-97
-98
-99
-100
-101
-102</pre>
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/mixed_resource.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/mixed_resource.rb', line 72</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Mixed Resource</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Looks for resources served over HTTP when the HTML code is server over HTTPS.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
@@ -450,7 +403,7 @@ HTTPS.</p>
             <span class='const'>Issue</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>BODY</span>
         <span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt; </span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:references</span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
             <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Google Online Security Blog</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span>
                 <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://googleonlinesecurity.blogspot.com/2011/06/trying-to-end-mixed-scripting.html</span><span class='tstring_end'>'</span></span>
@@ -513,15 +466,15 @@ HTTPS.</p>
       <pre class="lines">
 
 
-66
-67
-68</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/mixed_resource.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/mixed_resource.rb', line 60</span>
 
-<span class='kw'>def</span> <span class='id https?'>https?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='const'>URI</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id scheme'>scheme</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>https</span><span class='tstring_end'>'</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_https?'>https?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+    <span class='const'>URI</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_scheme'>scheme</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>https</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -541,23 +494,51 @@ HTTPS.</p>
       <pre class="lines">
 
 
-70
-71
-72
-73
-74
-75
-76</pre>
+64
+65
+66
+67
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/mixed_resource.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/mixed_resource.rb', line 64</span>
 
-<span class='kw'>def</span> <span class='id log_resource'>log_resource</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>if</span> <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_log_resource'>log_resource</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='cvar'>@@__audited</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
 
-    <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='id url'>url</span>
+    <span class='cvar'>@@__audited</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_url'>url</span>
 
-    <span class='id match_and_log'>match_and_log</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_match_and_log'>match_and_log</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prepare-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>prepare</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'modules/recon/mixed_resource.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
+    <span class='cvar'>@@__audited</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -577,6 +558,12 @@ HTTPS.</p>
       <pre class="lines">
 
 
+32
+33
+34
+35
+36
+37
 38
 39
 40
@@ -597,42 +584,36 @@ HTTPS.</p>
 55
 56
 57
-58
-59
-60
-61
-62
-63
-64</pre>
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'modules/recon/mixed_resource.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'modules/recon/mixed_resource.rb', line 32</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span>
-    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id https?'>https?</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_https?'>https?</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
 
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Checking...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Checking...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 
-    <span class='id doc'>doc</span> <span class='op'>=</span> <span class='const'>Nokogiri</span><span class='op'>::</span><span class='const'>HTML</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id html'>html</span> <span class='rparen'>)</span>
-    <span class='id doc'>doc</span><span class='period'>.</span><span class='id xpath'>xpath</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.//script</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id script'>script</span><span class='op'>|</span>
+    <span class='id identifier rubyid_doc'>doc</span> <span class='op'>=</span> <span class='const'>Nokogiri</span><span class='op'>::</span><span class='const'>HTML</span><span class='lparen'>(</span> <span class='ivar'>@page</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_xpath'>xpath</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.//script</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_script'>script</span><span class='op'>|</span>
 
-        <span class='id url'>url</span> <span class='op'>=</span> <span class='id script'>script</span><span class='period'>.</span><span class='id attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>src</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_s'>to_s</span>
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id url'>url</span> <span class='op'>||</span> <span class='id https?'>https?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='op'>||</span> <span class='id url'>url</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_script'>script</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>src</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_url'>url</span> <span class='op'>||</span> <span class='id identifier rubyid_https?'>https?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
-        <span class='id log_resource'>log_resource</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_log_resource'>log_resource</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='id doc'>doc</span><span class='period'>.</span><span class='id xpath'>xpath</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.//link</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id script'>script</span><span class='op'>|</span>
+    <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_xpath'>xpath</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>.//link</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_script'>script</span><span class='op'>|</span>
 
-        <span class='id url'>url</span> <span class='op'>=</span> <span class='id script'>script</span><span class='period'>.</span><span class='id attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_s'>to_s</span>
-        <span class='kw'>if</span> <span class='op'>!</span><span class='id url'>url</span> <span class='op'>||</span> <span class='op'>!</span><span class='id script'>script</span><span class='period'>.</span><span class='id attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rel</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='period'>.</span><span class='id downcase'>downcase</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stylesheet</span><span class='tstring_end'>'</span></span> <span class='op'>||</span>
-            <span class='id https?'>https?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span> <span class='op'>||</span> <span class='id url'>url</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_script'>script</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_url'>url</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_script'>script</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rel</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>stylesheet</span><span class='tstring_end'>'</span></span> <span class='op'>||</span>
+            <span class='id identifier rubyid_https?'>https?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
             <span class='kw'>next</span>
         <span class='kw'>end</span>
 
-        <span class='id log_resource'>log_resource</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_log_resource'>log_resource</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -645,9 +626,9 @@ HTTPS.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:25 2011 by 
+  Generated on Wed Jan  4 05:41:40 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

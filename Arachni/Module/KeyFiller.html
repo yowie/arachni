@@ -286,23 +286,23 @@ the key of the parameter.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/module/key_filler.rb', line 54</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id fill'>fill</span><span class='lparen'>(</span> <span class='id hash'>hash</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_fill'>fill</span><span class='lparen'>(</span> <span class='id identifier rubyid_hash'>hash</span> <span class='rparen'>)</span>
     
-    <span class='id hash'>hash</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id key'>key</span><span class='op'>|</span>
+    <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span>
         
-        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
         
-        <span class='kw'>if</span> <span class='id val'>val</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id match?'>match?</span><span class='lparen'>(</span> <span class='id key'>key</span> <span class='rparen'>)</span>
-            <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id val'>val</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_match?'>match?</span><span class='lparen'>(</span> <span class='id identifier rubyid_key'>key</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span>
         <span class='kw'>end</span>
         
         <span class='comment'># moronic default value...
 </span>        <span class='comment'># will figure  out ssomething better in the future...
-</span>        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>1</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='rparen'>)</span>
+</span>        <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>1</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
     
-    <span class='kw'>return</span> <span class='id hash'>hash</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_hash'>hash</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -314,9 +314,9 @@ the key of the parameter.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:25 2011 by 
+  Generated on Wed Jan  4 05:41:40 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

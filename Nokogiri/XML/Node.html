@@ -152,12 +152,12 @@ a block. See SaveOptions.</p>
 
 <p>These two statements are equivalent:</p>
 
-<pre class="code"><span class='id node'>node</span><span class='period'>.</span><span class='id serialize'>serialize</span><span class='lparen'>(</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:save_with</span> <span class='op'>=&gt;</span> <span class='const'>FORMAT</span> <span class='op'>|</span> <span class='const'>AS_XML</span><span class='rparen'>)</span></pre>
+<pre class="code"><span class='id identifier rubyid_node'>node</span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span><span class='lparen'>(</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:save_with</span> <span class='op'>=&gt;</span> <span class='const'>FORMAT</span> <span class='op'>|</span> <span class='const'>AS_XML</span><span class='rparen'>)</span></pre>
 
 <p>or</p>
 
-<pre class="code"><span class='id node'>node</span><span class='period'>.</span><span class='id serialize'>serialize</span><span class='lparen'>(</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id config'>config</span><span class='op'>|</span>
-  <span class='id config'>config</span><span class='period'>.</span><span class='id format'>format</span><span class='period'>.</span><span class='id as_xml'>as_xml</span>
+<pre class="code"><span class='id identifier rubyid_node'>node</span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span><span class='lparen'>(</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_config'>config</span><span class='op'>|</span>
+  <span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_as_xml'>as_xml</span>
 <span class='kw'>end</span></pre>
 
 
@@ -196,25 +196,25 @@ a block. See SaveOptions.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/nokogiri/xml/node.rb', line 19</span>
 
-<span class='kw'>def</span> <span class='id serialize'>serialize</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span>
-  <span class='id options'>options</span> <span class='op'>=</span> <span class='id args'>args</span><span class='period'>.</span><span class='id first'>first</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id args'>args</span><span class='period'>.</span><span class='id shift'>shift</span> <span class='op'>:</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:encoding</span>   <span class='op'>=&gt;</span> <span class='id args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span>
-    <span class='symbol'>:save_with</span>  <span class='op'>=&gt;</span> <span class='id args'>args</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>SaveOptions</span><span class='op'>::</span><span class='const'>FORMAT</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_serialize'>serialize</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
+  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span> <span class='op'>:</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:encoding</span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='symbol'>:save_with</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>SaveOptions</span><span class='op'>::</span><span class='const'>FORMAT</span>
   <span class='rbrace'>}</span>
 
-  <span class='id encoding'>encoding</span> <span class='op'>=</span> <span class='id options'>options</span><span class='lbracket'>[</span><span class='symbol'>:encoding</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id document'>document</span><span class='period'>.</span><span class='id encoding'>encoding</span>
+  <span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:encoding</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_document'>document</span><span class='period'>.</span><span class='id identifier rubyid_encoding'>encoding</span>
 
-  <span class='id outstring'>outstring</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>if</span> <span class='id encoding'>encoding</span> <span class='op'>&amp;&amp;</span> <span class='id outstring'>outstring</span><span class='period'>.</span><span class='id respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:force_encoding</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_outstring'>outstring</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_outstring'>outstring</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:force_encoding</span><span class='rparen'>)</span>
     <span class='kw'>begin</span>
-      <span class='id outstring'>outstring</span><span class='period'>.</span><span class='id force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='const'>Encoding</span><span class='period'>.</span><span class='id find'>find</span><span class='lparen'>(</span><span class='id encoding'>encoding</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_outstring'>outstring</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='const'>Encoding</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_encoding'>encoding</span><span class='rparen'>)</span><span class='rparen'>)</span>
     <span class='kw'>rescue</span>
-      <span class='id outstring'>outstring</span><span class='period'>.</span><span class='id force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='const'>Encoding</span><span class='period'>.</span><span class='id find'>find</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_outstring'>outstring</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='const'>Encoding</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
-  <span class='id io'>io</span> <span class='op'>=</span> <span class='const'>StringIO</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id outstring'>outstring</span><span class='rparen'>)</span>
-  <span class='id write_to'>write_to</span> <span class='id io'>io</span><span class='comma'>,</span> <span class='id options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span>
-  <span class='id io'>io</span><span class='period'>.</span><span class='id string'>string</span>
+  <span class='id identifier rubyid_io'>io</span> <span class='op'>=</span> <span class='const'>StringIO</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_outstring'>outstring</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_write_to'>write_to</span> <span class='id identifier rubyid_io'>io</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
+  <span class='id identifier rubyid_io'>io</span><span class='period'>.</span><span class='id identifier rubyid_string'>string</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -226,9 +226,9 @@ a block. See SaveOptions.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:25 2011 by 
+  Generated on Wed Jan  4 05:41:40 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

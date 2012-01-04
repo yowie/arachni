@@ -239,14 +239,14 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/base.rb', line 27</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span>
-        <span class='symbol'>:host</span>  <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id rpc_address'>rpc_address</span><span class='comma'>,</span>
-        <span class='symbol'>:port</span>  <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id rpc_port'>rpc_port</span><span class='comma'>,</span>
-        <span class='symbol'>:token</span> <span class='op'>=&gt;</span> <span class='id token'>token</span><span class='comma'>,</span>
-        <span class='symbol'>:ssl_ca</span>     <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_ca'>ssl_ca</span><span class='comma'>,</span>
-        <span class='symbol'>:ssl_pkey</span>   <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_pkey'>ssl_pkey</span><span class='comma'>,</span>
-        <span class='symbol'>:ssl_cert</span>   <span class='op'>=&gt;</span> <span class='id opts'>opts</span><span class='period'>.</span><span class='id ssl_cert'>ssl_cert</span>
+        <span class='symbol'>:host</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_rpc_address'>rpc_address</span><span class='comma'>,</span>
+        <span class='symbol'>:port</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_rpc_port'>rpc_port</span><span class='comma'>,</span>
+        <span class='symbol'>:token</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_token'>token</span><span class='comma'>,</span>
+        <span class='symbol'>:ssl_ca</span>     <span class='op'>=&gt;</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_ssl_ca'>ssl_ca</span><span class='comma'>,</span>
+        <span class='symbol'>:ssl_pkey</span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_ssl_pkey'>ssl_pkey</span><span class='comma'>,</span>
+        <span class='symbol'>:ssl_cert</span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_ssl_cert'>ssl_cert</span>
     <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -303,7 +303,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/base.rb', line 43</span>
 
-<span class='kw'>def</span> <span class='id ready?'>ready?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_ready?'>ready?</span>
     <span class='ivar'>@ready</span> <span class='op'>||=</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -332,7 +332,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/rpc/server/base.rb', line 38</span>
 
-<span class='kw'>def</span> <span class='id start'>start</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span>
     <span class='kw'>super</span>
     <span class='ivar'>@ready</span> <span class='op'>=</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
@@ -346,9 +346,9 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:24 2011 by 
+  Generated on Wed Jan  4 05:41:39 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

@@ -109,7 +109,7 @@ audited pages returned unusually high response times to begin with.</p>
 <pre class="code">&lt;tasos.laskos@gmail.com&gt;
 &lt;zapotek@segfault.gr&gt;</pre>
 
-<p>@version: 0.1.2</p>
+<p>@version: 0.1.3</p>
 
 
   </div>
@@ -294,31 +294,6 @@ considered</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (TimingAttacks) <strong>initialize</strong>(framework, opts) </a>
-    
-
-    
-  </span>
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of TimingAttacks.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
     
 
@@ -380,7 +355,7 @@ considered</p>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#clean_up-instance_method" title="Arachni::Plugin::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#clean_up-instance_method" title="Arachni::Plugin::Base#clean_up (method)">#clean_up</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
 
   
   
@@ -404,52 +379,7 @@ considered</p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="" title="Arachni::Plugins::TimingAttacks (class)">TimingAttacks</a></span></tt>) <strong>initialize</strong>(framework, opts) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>A new instance of TimingAttacks</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-34
-35
-36
-37
-38
-39
-40</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 34</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
-    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
-    <span class='ivar'>@http</span> <span class='op'>=</span> <span class='id framework'>framework</span><span class='period'>.</span><span class='id http'>http</span>
-
-    <span class='ivar'>@times</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='ivar'>@counter</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">Arachni::Plugin::Base</a></span></p>
   
 </div>
 
@@ -493,14 +423,14 @@ considered</p>
       <pre class="lines">
 
 
-101
-102
-103</pre>
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 96</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id distributable?'>distributable?</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_distributable?'>distributable?</span>
     <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -521,6 +451,11 @@ considered</p>
       <pre class="lines">
 
 
+104
+105
+106
+107
+108
 109
 110
 111
@@ -529,17 +464,12 @@ considered</p>
 114
 115
 116
-117
-118
-119
-120
-121
-122</pre>
+117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 104</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Timing attack anomalies</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Analyzes the scan results and logs issues that used timing attacks
@@ -549,7 +479,7 @@ considered</p>
             Pages with high response times usually include heavy-duty processing
             which makes them prime targets for Denial-of-Service attacks.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.3</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:tags</span>           <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>anomaly</span><span class='tstring_end'>'</span></span> <span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>timing</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attacks</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>meta</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -571,15 +501,15 @@ considered</p>
       <pre class="lines">
 
 
-105
-106
-107</pre>
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 100</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
-    <span class='id results'>results</span><span class='period'>.</span><span class='id flatten'>flatten</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span> <span class='id identifier rubyid_results'>results</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -605,31 +535,31 @@ considered</p>
       <pre class="lines">
 
 
+84
+85
+86
+87
+88
 89
 90
 91
 92
 93
-94
-95
-96
-97
-98
-99</pre>
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 84</span>
 
-<span class='kw'>def</span> <span class='id get_avg'>get_avg</span>
-    <span class='id avg'>avg</span> <span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_get_avg'>get_avg</span>
+    <span class='id identifier rubyid_avg'>avg</span> <span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span>
 
     <span class='comment'># calculate average request time for each path
-</span>    <span class='ivar'>@times</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id path'>path</span><span class='comma'>,</span> <span class='id time'>time</span><span class='op'>|</span>
-        <span class='id avg'>avg</span><span class='lbracket'>[</span><span class='id path'>path</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id time'>time</span> <span class='op'>/</span> <span class='ivar'>@counter</span><span class='lbracket'>[</span><span class='id path'>path</span><span class='rbracket'>]</span>
+</span>    <span class='ivar'>@times</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_time'>time</span><span class='op'>|</span>
+        <span class='id identifier rubyid_avg'>avg</span><span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_time'>time</span> <span class='op'>/</span> <span class='ivar'>@counter</span><span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='rbracket'>]</span>
     <span class='rbrace'>}</span>
 
-    <span class='kw'>return</span> <span class='id avg'>avg</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_avg'>avg</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -649,6 +579,14 @@ considered</p>
       <pre class="lines">
 
 
+34
+35
+36
+37
+38
+39
+40
+41
 42
 43
 44
@@ -664,36 +602,34 @@ considered</p>
 54
 55
 56
-57
-58
-59
-60
-61
-62</pre>
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 34</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
+    <span class='ivar'>@times</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='ivar'>@counter</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
     <span class='comment'># run for each response as it arrives
-</span>    <span class='ivar'>@http</span><span class='period'>.</span><span class='id add_on_complete'>add_on_complete</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id res'>res</span><span class='op'>|</span>
+</span>    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_add_on_complete'>add_on_complete</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span>
 
         <span class='comment'># we don't care about non OK responses
-</span>        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id res'>res</span><span class='period'>.</span><span class='id code'>code</span> <span class='op'>!=</span> <span class='int'>200</span>
+</span>        <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>!=</span> <span class='int'>200</span>
 
-        <span class='id path'>path</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span>
-        <span class='id path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id path'>path</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-        <span class='ivar'>@counter</span><span class='lbracket'>[</span><span class='id path'>path</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='ivar'>@times</span><span class='lbracket'>[</span><span class='id path'>path</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
+        <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id identifier rubyid_normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_effective_url'>effective_url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span>
+        <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='ivar'>@counter</span><span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='ivar'>@times</span><span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
 
         <span class='comment'># add up all request times for a specific path
-</span>        <span class='ivar'>@times</span><span class='lbracket'>[</span><span class='id path'>path</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id start_transfer_time'>start_transfer_time</span>
+</span>        <span class='ivar'>@times</span><span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_start_transfer_time'>start_transfer_time</span>
 
         <span class='comment'># add up all requests for each path
-</span>        <span class='ivar'>@counter</span><span class='lbracket'>[</span><span class='id path'>path</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='int'>1</span>
+</span>        <span class='ivar'>@counter</span><span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='int'>1</span>
     <span class='rbrace'>}</span>
 
-    <span class='op'>::</span><span class='const'>IO</span><span class='period'>.</span><span class='id select'>select</span><span class='lparen'>(</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='int'>1</span> <span class='rparen'>)</span> <span class='kw'>while</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id running?'>running?</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_wait_while_framework_running'>wait_while_framework_running</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -713,6 +649,11 @@ considered</p>
       <pre class="lines">
 
 
+59
+60
+61
+62
+63
 64
 65
 66
@@ -731,39 +672,34 @@ considered</p>
 79
 80
 81
-82
-83
-84
-85
-86
-87</pre>
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/timing_attacks.rb', line 59</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span>
-    <span class='id avg'>avg</span> <span class='op'>=</span> <span class='id get_avg'>get_avg</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
+    <span class='id identifier rubyid_avg'>avg</span> <span class='op'>=</span> <span class='id identifier rubyid_get_avg'>get_avg</span>
 
     <span class='comment'># will hold the hash IDs of inconclusive issues
-</span>    <span class='id inconclusive'>inconclusive</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id audit_store'>audit_store</span><span class='period'>.</span><span class='id issues'>issues</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id issue'>issue</span><span class='comma'>,</span> <span class='id idx'>idx</span><span class='op'>|</span>
-        <span class='kw'>if</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id tags'>tags</span> <span class='op'>&amp;&amp;</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id tags'>tags</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='const'>TAG</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
-            <span class='id avg'>avg</span><span class='lbracket'>[</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id path'>path</span> <span class='rbracket'>]</span> <span class='op'>&gt;=</span> <span class='const'>TIME_THRESHOLD</span>
+</span>    <span class='id identifier rubyid_inconclusive'>inconclusive</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_audit_store'>audit_store</span><span class='period'>.</span><span class='id identifier rubyid_issues'>issues</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_issue'>issue</span><span class='comma'>,</span> <span class='id identifier rubyid_idx'>idx</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='const'>TAG</span> <span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+            <span class='id identifier rubyid_avg'>avg</span><span class='lbracket'>[</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id identifier rubyid_normalize_url'>normalize_url</span><span class='lparen'>(</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='rbracket'>]</span> <span class='op'>&gt;=</span> <span class='const'>TIME_THRESHOLD</span>
 
-            <span class='id inconclusive'>inconclusive</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span>
-                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id _hash'>_hash</span><span class='comma'>,</span>
-                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>index</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='id idx'>idx</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span>
-                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id url'>url</span><span class='comma'>,</span>
-                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id name'>name</span><span class='comma'>,</span>
-                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>var</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id var'>var</span><span class='comma'>,</span>
-                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>elem</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id elem'>elem</span><span class='comma'>,</span>
-                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id issue'>issue</span><span class='period'>.</span><span class='id method'>method</span>
+            <span class='id identifier rubyid_inconclusive'>inconclusive</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hash</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid__hash'>_hash</span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>index</span><span class='tstring_end'>'</span></span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_idx'>idx</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>var</span><span class='tstring_end'>'</span></span>    <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_var'>var</span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>elem</span><span class='tstring_end'>'</span></span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_elem'>elem</span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span>
             <span class='rbrace'>}</span>
         <span class='kw'>end</span>
     <span class='rbrace'>}</span>
 
-    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='id inconclusive'>inconclusive</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id inconclusive'>inconclusive</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+    <span class='id identifier rubyid_register_results'>register_results</span><span class='lparen'>(</span> <span class='id identifier rubyid_inconclusive'>inconclusive</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_inconclusive'>inconclusive</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -775,9 +711,9 @@ considered</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:29 2011 by 
+  Generated on Wed Jan  4 05:41:44 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

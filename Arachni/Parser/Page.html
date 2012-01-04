@@ -632,7 +632,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 99</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
 
     <span class='ivar'>@forms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='ivar'>@links</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -645,9 +645,9 @@ its auditable inputs as a name=&gt;value hash.</p>
     <span class='ivar'>@response_headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='ivar'>@query_vars</span>       <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
 
-    <span class='id opts'>opts</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-        <span class='id send'>send</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id k'>k</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id v'>v</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -712,7 +712,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 34</span>
 
-<span class='kw'>def</span> <span class='id code'>code</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_code'>code</span>
   <span class='ivar'>@code</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -767,7 +767,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 91</span>
 
-<span class='kw'>def</span> <span class='id cookiejar'>cookiejar</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cookiejar'>cookiejar</span>
   <span class='ivar'>@cookiejar</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -827,7 +827,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 84</span>
 
-<span class='kw'>def</span> <span class='id cookies'>cookies</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cookies'>cookies</span>
   <span class='ivar'>@cookies</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -887,7 +887,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 77</span>
 
-<span class='kw'>def</span> <span class='id forms'>forms</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_forms'>forms</span>
   <span class='ivar'>@forms</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -942,7 +942,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 56</span>
 
-<span class='kw'>def</span> <span class='id headers'>headers</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_headers'>headers</span>
   <span class='ivar'>@headers</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1002,7 +1002,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 49</span>
 
-<span class='kw'>def</span> <span class='id html'>html</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_html'>html</span>
   <span class='ivar'>@html</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1062,7 +1062,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 70</span>
 
-<span class='kw'>def</span> <span class='id links'>links</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_links'>links</span>
   <span class='ivar'>@links</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1122,7 +1122,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 39</span>
 
-<span class='kw'>def</span> <span class='id method'>method</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_method'>method</span>
   <span class='ivar'>@method</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1164,7 +1164,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 63</span>
 
-<span class='kw'>def</span> <span class='id paths'>paths</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_paths'>paths</span>
   <span class='ivar'>@paths</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1224,7 +1224,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 44</span>
 
-<span class='kw'>def</span> <span class='id query_vars'>query_vars</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_query_vars'>query_vars</span>
   <span class='ivar'>@query_vars</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1277,7 +1277,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 61</span>
 
-<span class='kw'>def</span> <span class='id response_headers'>response_headers</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_response_headers'>response_headers</span>
   <span class='ivar'>@response_headers</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1337,7 +1337,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 29</span>
 
-<span class='kw'>def</span> <span class='id url'>url</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_url'>url</span>
   <span class='ivar'>@url</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1374,10 +1374,10 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 93</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id from_http_response'>from_http_response</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='comma'>,</span> <span class='id opts'>opts</span> <span class='rparen'>)</span>
-    <span class='id page'>page</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id opts'>opts</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id run'>run</span>
-    <span class='id page'>page</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id effective_url'>effective_url</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='id page'>page</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_http_response'>from_http_response</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_page'>page</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span>
+    <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Module</span><span class='op'>::</span><span class='const'>Utilities</span><span class='period'>.</span><span class='id identifier rubyid_url_sanitize'>url_sanitize</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_effective_url'>effective_url</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_page'>page</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1410,7 +1410,7 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 118</span>
 
-<span class='kw'>def</span> <span class='id body'>body</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_body'>body</span>
     <span class='ivar'>@html</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1473,14 +1473,14 @@ its auditable inputs as a name=&gt;value hash.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 156</span>
 
-<span class='kw'>def</span> <span class='id cookies_simple'>cookies_simple</span>
-    <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cookies_simple'>cookies_simple</span>
+    <span class='id identifier rubyid_cookies'>cookies</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span>
 
-    <span class='ivar'>@cookies</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
-        <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id simple'>simple</span> <span class='rparen'>)</span>
+    <span class='ivar'>@cookies</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_cookie'>cookie</span><span class='op'>|</span>
+        <span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookie'>cookie</span><span class='period'>.</span><span class='id identifier rubyid_simple'>simple</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
-    <span class='kw'>return</span> <span class='id cookies'>cookies</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_cookies'>cookies</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1537,13 +1537,13 @@ its auditable inputs as a name=&gt;value hash</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 128</span>
 
-<span class='kw'>def</span> <span class='id forms_simple'>forms_simple</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='id forms'>forms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='ivar'>@forms</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id form'>form</span><span class='op'>|</span>
-        <span class='id forms'>forms</span> <span class='op'>&lt;&lt;</span> <span class='id form'>form</span><span class='period'>.</span><span class='id simple'>simple</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_forms_simple'>forms_simple</span><span class='lparen'>(</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_forms'>forms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@forms</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_form'>form</span><span class='op'>|</span>
+        <span class='id identifier rubyid_forms'>forms</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_simple'>simple</span>
     <span class='rbrace'>}</span>
-    <span class='kw'>return</span> <span class='id forms'>forms</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_forms'>forms</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1599,13 +1599,13 @@ its auditable inputs as a name=&gt;value hash</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/parser/page.rb', line 142</span>
 
-<span class='kw'>def</span> <span class='id links_simple'>links_simple</span>
-    <span class='id links'>links</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='ivar'>@links</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id link'>link</span><span class='op'>|</span>
-        <span class='id links'>links</span> <span class='op'>&lt;&lt;</span> <span class='id link'>link</span><span class='period'>.</span><span class='id simple'>simple</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_links_simple'>links_simple</span>
+    <span class='id identifier rubyid_links'>links</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@links</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_link'>link</span><span class='op'>|</span>
+        <span class='id identifier rubyid_links'>links</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_link'>link</span><span class='period'>.</span><span class='id identifier rubyid_simple'>simple</span>
     <span class='rbrace'>}</span>
-    <span class='kw'>return</span> <span class='id links'>links</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_links'>links</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1617,9 +1617,9 @@ its auditable inputs as a name=&gt;value hash</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:21 2011 by 
+  Generated on Wed Jan  4 05:41:37 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

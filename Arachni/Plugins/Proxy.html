@@ -307,31 +307,6 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Proxy) <strong>initialize</strong>(framework, options) </a>
-    
-
-    
-  </span>
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of Proxy.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
     
 
@@ -446,7 +421,7 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#distributable%3F-class_method" title="Arachni::Plugin::Base.distributable? (method)">distributable?</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#merge-class_method" title="Arachni::Plugin::Base.merge (method)">merge</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#distributable%3F-class_method" title="Arachni::Plugin::Base.distributable? (method)">distributable?</a></span>, <span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Plugin/Base.html#merge-class_method" title="Arachni::Plugin::Base.merge (method)">merge</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
 
   
   
@@ -480,85 +455,7 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="" title="Arachni::Plugins::Proxy (class)">Proxy</a></span></tt>) <strong>initialize</strong>(framework, options) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>A new instance of Proxy</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>framework</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a></span></tt>)</span>
-      
-      
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>options passed to the plugin</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-45
-46
-47
-48
-49
-50
-51
-52</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 45</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
-    <span class='ivar'>@framework</span> <span class='op'>=</span> <span class='id framework'>framework</span>
-    <span class='ivar'>@options</span>   <span class='op'>=</span> <span class='id options'>options</span>
-
-    <span class='comment'># don't let the framework run just yet
-</span>    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id pause!'>pause!</span>
-    <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>System paused.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">Arachni::Plugin::Base</a></span></p>
   
 </div>
 
@@ -580,26 +477,26 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
       <pre class="lines">
 
 
+220
+221
+222
+223
+224
+225
+226
+227
+228
 229
 230
 231
 232
 233
-234
-235
-236
-237
-238
-239
-240
-241
-242
-243</pre>
+234</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 229</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 220</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Proxy</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Gathers data based on user actions and exchanged HTTP
@@ -609,8 +506,8 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:options</span>        <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
-            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptPort</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Port to bind to.</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>8282</span> <span class='rbracket'>]</span> <span class='rparen'>)</span><span class='comma'>,</span>
-            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptAddress</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bind_address</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>IP address to bind to.</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.0.0.0</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
+            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptPort</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Port to bind to.</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>8282</span> <span class='rbracket'>]</span> <span class='rparen'>)</span><span class='comma'>,</span>
+            <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>OptAddress</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bind_address</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>IP address to bind to.</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.0.0.0</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span> <span class='rparen'>)</span>
         <span class='rbracket'>]</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -664,6 +561,15 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
       <pre class="lines">
 
 
+178
+179
+180
+181
+182
+183
+184
+185
+186
 187
 188
 189
@@ -687,52 +593,43 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
 207
 208
 209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219</pre>
+210</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 187</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 178</span>
 
-<span class='kw'>def</span> <span class='id allowed?'>allowed?</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_allowed?'>allowed?</span><span class='lparen'>(</span> <span class='id identifier rubyid_uri'>uri</span> <span class='rparen'>)</span>
 
-    <span class='id url'>url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id uri'>uri</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span> <span class='id identifier rubyid_uri'>uri</span> <span class='rparen'>)</span>
 
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Requesting: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Requesting: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rparen'>)</span>
 
     <span class='comment'># if !(url.to_s =~ /http(s):\/\//)
 </span>    <span class='comment'>#     url = URI( @framework.opts.url.scheme + '://' + url.to_s )
 </span>    <span class='comment'># end
 </span>
-    <span class='id reasons'>reasons</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_reasons'>reasons</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
-    <span class='kw'>if</span> <span class='id shutdown?'>shutdown?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-        <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Shutting down...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-        <span class='ivar'>@server</span><span class='period'>.</span><span class='id shutdown'>shutdown</span>
-        <span class='id reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_SHUTDOWN</span>
-        <span class='kw'>return</span> <span class='id reasons'>reasons</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_shutdown?'>shutdown?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Shutting down...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='ivar'>@server</span><span class='period'>.</span><span class='id identifier rubyid_shutdown'>shutdown</span>
+        <span class='id identifier rubyid_reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_SHUTDOWN</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_reasons'>reasons</span>
     <span class='kw'>end</span>
 
-    <span class='ivar'>@parser</span><span class='period'>.</span><span class='id url'>url</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id url'>url</span>
+    <span class='ivar'>@parser</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
 
-    <span class='id reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_NOT_IN_DOMAIN</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@parser</span><span class='period'>.</span><span class='id in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='id reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_EXCLUDED</span>      <span class='kw'>if</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='id reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_NOT_INCLUDED</span>  <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@parser</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_NOT_IN_DOMAIN</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@parser</span><span class='period'>.</span><span class='id identifier rubyid_in_domain?'>in_domain?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_EXCLUDED</span>      <span class='kw'>if</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id identifier rubyid_exclude?'>exclude?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_NOT_INCLUDED</span>  <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@parser</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
 
-    <span class='kw'>if</span> <span class='op'>!</span><span class='id reasons'>reasons</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-        <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MSG_DISALOWED</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-        <span class='id reasons'>reasons</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id msg'>msg</span><span class='op'>|</span> <span class='id print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id msg'>msg</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
-        <span class='id reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_DISALOWED</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_reasons'>reasons</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MSG_DISALOWED</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_reasons'>reasons</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_msg'>msg</span><span class='op'>|</span> <span class='id identifier rubyid_print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_msg'>msg</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+        <span class='id identifier rubyid_reasons'>reasons</span> <span class='op'>&lt;&lt;</span> <span class='const'>MSG_DISALOWED</span>
     <span class='kw'>end</span>
 
-    <span class='kw'>return</span> <span class='id reasons'>reasons</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_reasons'>reasons</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -752,15 +649,15 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
       <pre class="lines">
 
 
-225
-226
-227</pre>
+216
+217
+218</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 225</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 216</span>
 
-<span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
-    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id resume!'>resume!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_up'>clean_up</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_resume!'>resume!</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -791,6 +688,15 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
       <pre class="lines">
 
 
+80
+81
+82
+83
+84
+85
+86
+87
+88
 89
 90
 91
@@ -815,53 +721,44 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
 110
 111
 112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122</pre>
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 80</span>
 
-<span class='kw'>def</span> <span class='id handler'>handler</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_handler'>handler</span><span class='lparen'>(</span> <span class='id identifier rubyid_req'>req</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span> <span class='rparen'>)</span>
 
-    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id header'>header</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content-encoding</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>gzip</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-        <span class='id res'>res</span><span class='period'>.</span><span class='id header'>header</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content-encoding</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-        <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='op'>=</span> <span class='const'>Zlib</span><span class='op'>::</span><span class='const'>GzipReader</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='const'>StringIO</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id read'>read</span>
+    <span class='kw'>if</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content-encoding</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>gzip</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>content-encoding</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='const'>Zlib</span><span class='op'>::</span><span class='const'>GzipReader</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='const'>StringIO</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span>
     <span class='kw'>end</span>
 
-    <span class='id headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id headers'>headers</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id res'>res</span><span class='period'>.</span><span class='id header'>header</span><span class='period'>.</span><span class='id dup'>dup</span> <span class='rparen'>)</span>     <span class='kw'>if</span> <span class='id res'>res</span><span class='period'>.</span><span class='id header'>header</span>
-    <span class='id headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id cookies'>cookies</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id res'>res</span><span class='period'>.</span><span class='id cookies'>cookies</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+    <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_headers'>headers</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='rparen'>)</span>     <span class='kw'>if</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span>
+    <span class='id identifier rubyid_headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_cookies'>cookies</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
     <span class='comment'># proper initialization in order to parse the response into a page
-</span>    <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='comma'>,</span>
-        <span class='const'>Typhoeus</span><span class='op'>::</span><span class='const'>Response</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span>
-            <span class='symbol'>:effective_url</span> <span class='op'>=&gt;</span> <span class='id req'>req</span><span class='period'>.</span><span class='id unparsed_uri'>unparsed_uri</span><span class='comma'>,</span>
-            <span class='symbol'>:body</span>          <span class='op'>=&gt;</span> <span class='id res'>res</span><span class='period'>.</span><span class='id body'>body</span><span class='comma'>,</span>
-            <span class='symbol'>:headers_hash</span>  <span class='op'>=&gt;</span> <span class='id headers'>headers</span>
+</span>    <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span>
+        <span class='const'>Typhoeus</span><span class='op'>::</span><span class='const'>Response</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+            <span class='symbol'>:effective_url</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_unparsed_uri'>unparsed_uri</span><span class='comma'>,</span>
+            <span class='symbol'>:body</span>          <span class='op'>=&gt;</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='comma'>,</span>
+            <span class='symbol'>:headers_hash</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_headers'>headers</span>
         <span class='rparen'>)</span>
     <span class='rparen'>)</span>
 
-    <span class='id page'>page</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id run'>run</span>
-    <span class='id page'>page</span> <span class='op'>=</span> <span class='id update_forms'>update_forms</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id req'>req</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id req'>req</span><span class='period'>.</span><span class='id body'>body</span>
-    <span class='id page'>page</span><span class='period'>.</span><span class='id method'>method</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id request_method'>request_method</span>
-    <span class='id page'>page</span><span class='period'>.</span><span class='id code'>code</span>   <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id status'>status</span>
+    <span class='id identifier rubyid_page'>page</span> <span class='op'>=</span> <span class='ivar'>@parser</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span>
+    <span class='id identifier rubyid_page'>page</span> <span class='op'>=</span> <span class='id identifier rubyid_update_forms'>update_forms</span><span class='lparen'>(</span> <span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='id identifier rubyid_req'>req</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+    <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_request_method'>request_method</span>
+    <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span>   <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span>
 
-    <span class='id print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id page'>page</span><span class='period'>.</span><span class='id forms'>forms</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> forms</span><span class='tstring_end'>&quot;</span></span>
-    <span class='id print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id page'>page</span><span class='period'>.</span><span class='id links'>links</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> links</span><span class='tstring_end'>&quot;</span></span>
-    <span class='id print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id page'>page</span><span class='period'>.</span><span class='id cookies'>cookies</span><span class='period'>.</span><span class='id size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> cookies</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_forms'>forms</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> forms</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_links'>links</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> links</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_print_info'>print_info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> *  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> cookies</span><span class='tstring_end'>&quot;</span></span>
 
-    <span class='id update_framework_cookies'>update_framework_cookies</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id req'>req</span> <span class='rparen'>)</span>
-    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id push_to_page_queue'>push_to_page_queue</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='period'>.</span><span class='id dup'>dup</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_update_framework_cookies'>update_framework_cookies</span><span class='lparen'>(</span> <span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='id identifier rubyid_req'>req</span> <span class='rparen'>)</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_push_to_page_queue'>push_to_page_queue</span><span class='lparen'>(</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='rparen'>)</span>
 
-    <span class='kw'>return</span> <span class='id res'>res</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_res'>res</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -881,6 +778,19 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
       <pre class="lines">
 
 
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
 54
 55
 56
@@ -893,40 +803,35 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
 63
 64
 65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75</pre>
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 41</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span>
-    <span class='id require'>require</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id dir'>dir</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/proxy/server.rb</span><span class='tstring_end'>'</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
+    <span class='comment'># don't let the framework run just yet
+</span>    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_pause!'>pause!</span>
+    <span class='id identifier rubyid_print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>System paused.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_require'>require</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_dir'>dir</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>plugins</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/proxy/server.rb</span><span class='tstring_end'>'</span></span>
 
     <span class='comment'># foo initialization, we just need it to verify URLs
-</span>    <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='comma'>,</span>
-        <span class='const'>Typhoeus</span><span class='op'>::</span><span class='const'>Response</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span>
-            <span class='symbol'>:effective_url</span> <span class='op'>=&gt;</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id opts'>opts</span><span class='period'>.</span><span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='comma'>,</span>
+</span>    <span class='ivar'>@parser</span> <span class='op'>=</span> <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span>
+        <span class='const'>Typhoeus</span><span class='op'>::</span><span class='const'>Response</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+            <span class='symbol'>:effective_url</span> <span class='op'>=&gt;</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span>
             <span class='symbol'>:body</span>          <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
             <span class='symbol'>:headers_hash</span>  <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
         <span class='rparen'>)</span>
     <span class='rparen'>)</span>
 
-    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='const'>Server</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span>
+    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='const'>Server</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
         <span class='symbol'>:BindAddress</span>    <span class='op'>=&gt;</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bind_address</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:Port</span>           <span class='op'>=&gt;</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>port</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
         <span class='symbol'>:ProxyVia</span>       <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span>
-        <span class='symbol'>:ProxyContentHandler</span> <span class='op'>=&gt;</span> <span class='id method'>method</span><span class='lparen'>(</span> <span class='symbol'>:handler</span> <span class='rparen'>)</span><span class='comma'>,</span>
-        <span class='symbol'>:ProxyURITest</span>   <span class='op'>=&gt;</span> <span class='id method'>method</span><span class='lparen'>(</span> <span class='symbol'>:allowed?</span> <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:ProxyContentHandler</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span> <span class='symbol'>:handler</span> <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='symbol'>:ProxyURITest</span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span> <span class='symbol'>:allowed?</span> <span class='rparen'>)</span><span class='comma'>,</span>
         <span class='symbol'>:AccessLog</span>      <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
-        <span class='symbol'>:Logger</span>         <span class='op'>=&gt;</span> <span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Log</span><span class='op'>::</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/dev/null</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>7</span> <span class='rparen'>)</span>
+        <span class='symbol'>:Logger</span>         <span class='op'>=&gt;</span> <span class='const'>WEBrick</span><span class='op'>::</span><span class='const'>Log</span><span class='op'>::</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/dev/null</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>7</span> <span class='rparen'>)</span>
     <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -947,25 +852,25 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
       <pre class="lines">
 
 
-77
-78
-79
-80
-81
-82
-83
-84</pre>
+68
+69
+70
+71
+72
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 68</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Listening on: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Listening on: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://</span><span class='embexpr_beg'>#{</span><span class='ivar'>@server</span><span class='lbracket'>[</span><span class='symbol'>:BindAddress</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@server</span><span class='lbracket'>[</span><span class='symbol'>:Port</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
 
-    <span class='id print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shutdown URL: </span><span class='embexpr_beg'>#{</span><span class='const'>SHUTDOWN_URL</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-    <span class='id print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The scan will resume once you visit the shutdown URL.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
-    <span class='ivar'>@server</span><span class='period'>.</span><span class='id start'>start</span>
+    <span class='id identifier rubyid_print_status'>print_status</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shutdown URL: </span><span class='embexpr_beg'>#{</span><span class='const'>SHUTDOWN_URL</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_info'>print_info</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The scan will resume once you visit the shutdown URL.</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+    <span class='ivar'>@server</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1007,15 +912,15 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
       <pre class="lines">
 
 
-221
-222
-223</pre>
+212
+213
+214</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 221</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 212</span>
 
-<span class='kw'>def</span> <span class='id shutdown?'>shutdown?</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='id url'>url</span><span class='period'>.</span><span class='id to_s'>to_s</span> <span class='op'>==</span> <span class='const'>SHUTDOWN_URL</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_shutdown?'>shutdown?</span><span class='lparen'>(</span> <span class='id identifier rubyid_url'>url</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='const'>SHUTDOWN_URL</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1035,6 +940,15 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
       <pre class="lines">
 
 
+149
+150
+151
+152
+153
+154
+155
+156
+157
 158
 159
 160
@@ -1048,42 +962,33 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
 168
 169
 170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180</pre>
+171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 158</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 149</span>
 
-<span class='kw'>def</span> <span class='id update_forms'>update_forms</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id req'>req</span> <span class='rparen'>)</span>
-    <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_update_forms'>update_forms</span><span class='lparen'>(</span> <span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='id identifier rubyid_req'>req</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
 
-    <span class='id uri_decode'>uri_decode</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='period'>.</span><span class='id body'>body</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id param'>param</span><span class='op'>|</span>
-        <span class='id k'>k</span><span class='comma'>,</span><span class='id v'>v</span> <span class='op'>=</span> <span class='id param'>param</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
-        <span class='id params'>params</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span>
+    <span class='id identifier rubyid_uri_decode'>uri_decode</span><span class='lparen'>(</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_param'>param</span><span class='op'>|</span>
+        <span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span> <span class='op'>=</span> <span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
     <span class='rbrace'>}</span>
 
-    <span class='id raw'>raw</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='id identifier rubyid_raw'>raw</span> <span class='op'>=</span> <span class='lbrace'>{</span>
         <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>attrs</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id req'>req</span><span class='period'>.</span><span class='id unparsed_uri'>unparsed_uri</span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id req'>req</span><span class='period'>.</span><span class='id request_method'>request_method</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>action</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_unparsed_uri'>unparsed_uri</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_request_method'>request_method</span><span class='comma'>,</span>
         <span class='rbrace'>}</span>
     <span class='rbrace'>}</span>
 
-    <span class='id form'>form</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>Form</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span> <span class='id req'>req</span><span class='period'>.</span><span class='id unparsed_uri'>unparsed_uri</span><span class='comma'>,</span> <span class='id raw'>raw</span> <span class='rparen'>)</span>
-    <span class='id form'>form</span><span class='period'>.</span><span class='id auditable'>auditable</span> <span class='op'>=</span> <span class='id params'>params</span>
+    <span class='id identifier rubyid_form'>form</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Arachni</span><span class='op'>::</span><span class='const'>Parser</span><span class='op'>::</span><span class='const'>Element</span><span class='op'>::</span><span class='const'>Form</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='id identifier rubyid_req'>req</span><span class='period'>.</span><span class='id identifier rubyid_unparsed_uri'>unparsed_uri</span><span class='comma'>,</span> <span class='id identifier rubyid_raw'>raw</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_auditable'>auditable</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span>
 
-    <span class='id page'>page</span><span class='period'>.</span><span class='id forms'>forms</span> <span class='op'>&lt;&lt;</span> <span class='id form'>form</span>
+    <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_forms'>forms</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_form'>form</span>
 
-    <span class='kw'>return</span> <span class='id page'>page</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_page'>page</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1103,6 +1008,15 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
       <pre class="lines">
 
 
+115
+116
+117
+118
+119
+120
+121
+122
+123
 124
 125
 126
@@ -1126,51 +1040,42 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
 144
 145
 146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156</pre>
+147</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'plugins/proxy.rb', line 115</span>
 
-<span class='kw'>def</span> <span class='id update_framework_cookies'>update_framework_cookies</span><span class='lparen'>(</span> <span class='id page'>page</span><span class='comma'>,</span> <span class='id req'>req</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_update_framework_cookies'>update_framework_cookies</span><span class='lparen'>(</span> <span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='id identifier rubyid_req'>req</span> <span class='rparen'>)</span>
 
-    <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Updating framework cookies...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Updating framework cookies...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 
-    <span class='id cookies'>cookies</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_cookies'>cookies</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
 
-    <span class='kw'>if</span> <span class='id req'>req</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-        <span class='id req'>req</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
-            <span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span> <span class='op'>=</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
-            <span class='id cookies'>cookies</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='period'>.</span><span class='id strip'>strip</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id v'>v</span><span class='period'>.</span><span class='id strip'>strip</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_req'>req</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_req'>req</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Cookie</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>;</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_cookie'>cookie</span><span class='op'>|</span>
+            <span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span> <span class='op'>=</span> <span class='id identifier rubyid_cookie'>cookie</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='int'>2</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid_cookies'>cookies</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
         <span class='rbrace'>}</span>
     <span class='kw'>end</span>
 
-    <span class='id page'>page</span><span class='period'>.</span><span class='id cookies'>cookies</span><span class='period'>.</span><span class='id each'>each</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id cookie'>cookie</span><span class='op'>|</span>
-        <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span> <span class='id cookie'>cookie</span><span class='period'>.</span><span class='id simple'>simple</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_cookie'>cookie</span><span class='op'>|</span>
+        <span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookie'>cookie</span><span class='period'>.</span><span class='id identifier rubyid_simple'>simple</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 
-    <span class='kw'>if</span> <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id empty?'>empty?</span>
-        <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Could not extract cookies...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Could not extract cookies...</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
         <span class='kw'>return</span>
     <span class='kw'>else</span>
-        <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Extracted cookies:</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
-        <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span>
-            <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-            <span class='id print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  * </span><span class='embexpr_beg'>#{</span><span class='id k'>k</span><span class='rbrace'>}</span><span class='tstring_content'> =&gt; </span><span class='embexpr_beg'>#{</span><span class='id v'>v</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Extracted cookies:</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+        <span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span>
+            <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+            <span class='id identifier rubyid_print_debug'>print_debug</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  * </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='rbrace'>}</span><span class='tstring_content'> =&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
         <span class='rbrace'>}</span>
     <span class='kw'>end</span>
 
-    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id update_cookies'>update_cookies</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_update_cookies'>update_cookies</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookies'>cookies</span> <span class='rparen'>)</span>
 
 <span class='kw'>end</span></pre>
     </td>
@@ -1183,9 +1088,9 @@ that data to the <span class='object_link'><a href="../Framework.html#push_to_pa
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:17 2011 by 
+  Generated on Wed Jan  4 05:41:33 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>

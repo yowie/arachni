@@ -104,7 +104,7 @@
 <pre class="code">&lt;tasos.laskos@gmail.com&gt;
 &lt;zapotek@segfault.gr&gt;</pre>
 
-<p>@version: 0.1.2</p>
+<p>@version: 0.1.3</p>
 
 
   </div>
@@ -249,31 +249,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (CookieCollector) <strong>initialize</strong>(framework, options) </a>
-    
-
-    
-  </span>
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of CookieCollector.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
     
 
@@ -367,7 +342,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Plugin/Base.html" title="Arachni::Plugin::Base (class)">Arachni::Plugin::Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Plugin/Base.html#gems-class_method" title="Arachni::Plugin::Base.gems (method)">gems</a></span>, <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Plugin/Base.html#register_results-instance_method" title="Arachni::Plugin::Base#register_results (method)">#register_results</a></span>, <span class='object_link'><a href="../Plugin/Base.html#wait_while_framework_running-instance_method" title="Arachni::Plugin::Base#wait_while_framework_running (method)">#wait_while_framework_running</a></span></p>
 
   
   
@@ -401,75 +376,7 @@
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="" title="Arachni::Plugins::CookieCollector (class)">CookieCollector</a></span></tt>) <strong>initialize</strong>(framework, options) 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>A new instance of CookieCollector</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>framework</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Framework.html" title="Arachni::Framework (class)">Arachni::Framework</a></span></tt>)</span>
-      
-      
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>options passed to the plugin</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-28
-29
-30</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 28</span>
-
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
-    <span class='kw'>super</span><span class='lparen'>(</span> <span class='id framework'>framework</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Plugin/Base.html#initialize-instance_method" title="Arachni::Plugin::Base#initialize (method)">Arachni::Plugin::Base</a></span></p>
   
 </div>
 
@@ -513,14 +420,14 @@
       <pre class="lines">
 
 
-75
-76
-77</pre>
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 67</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id distributable?'>distributable?</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_distributable?'>distributable?</span>
     <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -541,23 +448,23 @@
       <pre class="lines">
 
 
+76
+77
+78
+79
+80
+81
+82
+83
 84
 85
 86
-87
-88
-89
-90
-91
-92
-93
-94
-95</pre>
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 76</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id info'>info</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Cookie collector</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Monitors and collects cookies while establishing a timeline of changes.
@@ -566,7 +473,7 @@
                 It will log thousands of results leading to a huge report,
                 highly increased memory and CPU usage.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+        <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.3</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -587,15 +494,15 @@
       <pre class="lines">
 
 
-79
-80
-81</pre>
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 71</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span> <span class='id results'>results</span> <span class='rparen'>)</span>
-    <span class='id results'>results</span><span class='period'>.</span><span class='id flatten'>flatten</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span> <span class='id identifier rubyid_results'>results</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -621,23 +528,23 @@
       <pre class="lines">
 
 
-67
-68
-69
-70
-71
-72
-73</pre>
+59
+60
+61
+62
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 59</span>
 
-<span class='kw'>def</span> <span class='id clean_up'>clean_up</span>
-    <span class='kw'>while</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id running?'>running?</span> <span class='rparen'>)</span>
-        <span class='op'>::</span><span class='const'>IO</span><span class='period'>.</span><span class='id select'>select</span><span class='lparen'>(</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='int'>1</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_up'>clean_up</span>
+    <span class='kw'>while</span><span class='lparen'>(</span> <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_running?'>running?</span> <span class='rparen'>)</span>
+        <span class='op'>::</span><span class='const'>IO</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='int'>1</span> <span class='rparen'>)</span>
     <span class='kw'>end</span>
 
-    <span class='id register_results'>register_results</span><span class='lparen'>(</span> <span class='ivar'>@cookies</span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_register_results'>register_results</span><span class='lparen'>(</span> <span class='ivar'>@cookies</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -657,14 +564,14 @@
       <pre class="lines">
 
 
-32
-33
-34</pre>
+24
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 24</span>
 
-<span class='kw'>def</span> <span class='id prepare'>prepare</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
     <span class='ivar'>@cookies</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -685,20 +592,20 @@
       <pre class="lines">
 
 
-36
-37
-38
-39
-40
-41</pre>
+28
+29
+30
+31
+32
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 28</span>
 
-<span class='kw'>def</span> <span class='id run'>run</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id http'>http</span><span class='period'>.</span><span class='id add_on_new_cookies'>add_on_new_cookies</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id cookies'>cookies</span><span class='comma'>,</span> <span class='id res'>res</span><span class='op'>|</span>
-        <span class='id update'>update</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
+    <span class='ivar'>@framework</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_add_on_new_cookies'>add_on_new_cookies</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_cookies'>cookies</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='op'>|</span>
+        <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookies'>cookies</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span> <span class='rparen'>)</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -719,32 +626,32 @@
       <pre class="lines">
 
 
+35
+36
+37
+38
+39
+40
+41
+42
 43
 44
 45
-46
-47
-48
-49
-50
-51
-52
-53
-54</pre>
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 35</span>
 
-<span class='kw'>def</span> <span class='id update'>update</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span><span class='comma'>,</span> <span class='id res'>res</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>if</span> <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id empty?'>empty?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id update?'>update?</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookies'>cookies</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_update?'>update?</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookies'>cookies</span> <span class='rparen'>)</span>
 
-    <span class='id res_hash'>res_hash</span> <span class='op'>=</span> <span class='id res'>res</span><span class='period'>.</span><span class='id to_hash'>to_hash</span>
-    <span class='id res_hash'>res_hash</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>body</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+    <span class='id identifier rubyid_res_hash'>res_hash</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
+    <span class='id identifier rubyid_res_hash'>res_hash</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>body</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
 
     <span class='ivar'>@cookies</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span>
-        <span class='symbol'>:time</span>       <span class='op'>=&gt;</span> <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span><span class='comma'>,</span>
-        <span class='symbol'>:res</span>        <span class='op'>=&gt;</span> <span class='id res_hash'>res_hash</span><span class='comma'>,</span>
-        <span class='symbol'>:cookies</span>    <span class='op'>=&gt;</span> <span class='id cookies'>cookies</span>
+        <span class='symbol'>:time</span>       <span class='op'>=&gt;</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='comma'>,</span>
+        <span class='symbol'>:res</span>        <span class='op'>=&gt;</span> <span class='id identifier rubyid_res_hash'>res_hash</span><span class='comma'>,</span>
+        <span class='symbol'>:cookies</span>    <span class='op'>=&gt;</span> <span class='id identifier rubyid_cookies'>cookies</span>
     <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -787,26 +694,26 @@
       <pre class="lines">
 
 
+48
+49
+50
+51
+52
+53
+54
+55
 56
-57
-58
-59
-60
-61
-62
-63
-64
-65</pre>
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'plugins/cookie_collector.rb', line 48</span>
 
-<span class='kw'>def</span> <span class='id update?'>update?</span><span class='lparen'>(</span> <span class='id cookies'>cookies</span> <span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='ivar'>@cookies</span><span class='period'>.</span><span class='id empty?'>empty?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_update?'>update?</span><span class='lparen'>(</span> <span class='id identifier rubyid_cookies'>cookies</span> <span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='ivar'>@cookies</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
-    <span class='id cookies'>cookies</span><span class='period'>.</span><span class='id each_pair'>each_pair</span> <span class='lbrace'>{</span>
-        <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
-        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='ivar'>@cookies</span><span class='period'>.</span><span class='id last'>last</span><span class='lbracket'>[</span><span class='symbol'>:cookies</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id v'>v</span>
+    <span class='id identifier rubyid_cookies'>cookies</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='lbrace'>{</span>
+        <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+        <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='ivar'>@cookies</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='lbracket'>[</span><span class='symbol'>:cookies</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id identifier rubyid_v'>v</span>
     <span class='rbrace'>}</span>
 
     <span class='kw'>return</span> <span class='kw'>false</span>
@@ -821,9 +728,9 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Dec 16 09:23:22 2011 by 
+  Generated on Wed Jan  4 05:41:38 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.3 (ruby-1.9.3).
+  0.7.4 (ruby-1.9.3).
 </div>
 
   </body>
