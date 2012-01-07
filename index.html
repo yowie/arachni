@@ -54,85 +54,7 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><h1>Experimental (unstable) branch</h1>
-
-<p>This branch holds experimental code which is planned for release once it has been properly tested.</p>
-
-<p>The newest addition to the branch is the brand new High Performance Grid.</p>
-
-<h2>Installation</h2>
-
-<pre class="code"><span class='id identifier rubyid_git'>git</span> <span class='id identifier rubyid_clone'>clone</span> <span class='label'>git:</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/github</span></span><span class='period'>.</span><span class='id identifier rubyid_com'>com</span><span class='op'>/</span><span class='const'>Zapotek</span><span class='op'>/</span><span class='id identifier rubyid_arachni'>arachni</span><span class='period'>.</span><span class='id identifier rubyid_git'>git</span>
-<span class='id identifier rubyid_cd'>cd</span> <span class='id identifier rubyid_arachni'>arachni</span>
-<span class='id identifier rubyid_git'>git</span> <span class='id identifier rubyid_checkout'>checkout</span> <span class='id identifier rubyid_experimental'>experimental</span>
-<span class='id identifier rubyid_rake'>rake</span> <span class='id identifier rubyid_install'>install</span>
-</pre>
-
-<p>If you encounter a Typhoeus related error while running Arachni issue:</p>
-
-<pre class="code"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_clean'>clean</span>
-</pre>
-
-<h2>Setting up the High Performance Grid (HPG)</h2>
-
-<p>Pretty much the same as setting up the WebUI but instead of running only one Dispatcher you can run as many as you can handle.</p>
-
-<p>In order to connect the Dispatchers into a grid you'll need to:</p>
-
-<ul>
-<li>specify an IP address or hostname on which the Dispatcher will be accessible by the rest of the Grid nodes (i.e. other Dispatchers)</li>
-<li>specify a neighbouring Dispatcher when running a new one</li>
-<li>use different Pipe IDs -- these are used to identify independent bandwidth lines to the target in order to split the workload in a way that will aggregate the collective bandwidth</li>
-</ul>
-
-
-<p>After that they will build their network themselves.</p>
-
-<p>Here's how it's done:</p>
-
-<p>Firing up the first one:</p>
-
-<pre class="code">arachni_rpcd --pipe-id=&quot;Pipe 1&quot; --nickname=&quot;My Dispatcher&quot; --address=192.168.0.1
-</pre>
-
-<p>Adding more to make a Grid:</p>
-
-<pre class="code">arachni_rpcd --pipe-id=&quot;Pipe 2&quot; --nickname=&quot;My second Dispatcher&quot; --address=192.168.0.2 --neighbour=192.168.0.1:7331
-</pre>
-
-<p>Lather, rinse, repeat:</p>
-
-<pre class="code">arachni_rpcd --pipe-id=&quot;Pipe 3&quot; --nickname=&quot;My third Dispatcher&quot; --address=192.168.0.3 --neighbour=192.168.0.2:7331
-
-arachni_rpcd --pipe-id=&quot;Pipe 4&quot; --nickname=&quot;My forth Dispatcher&quot; --address=192.168.0.4 --neighbour=192.168.0.3:7331
-</pre>
-
-<p>That sort of setup assumes that each Dispatcher is on a machine with independent bandwidth lines (to the target website at least).</p>
-
-<p>If you want to, out of curiosity, start a few Dispatchers on localhost you will need to specify the ports:</p>
-
-<pre class="code">arachni_rpcd --pipe-id=&quot;Pipe 1&quot; --nickname=&quot;My Dispatcher&quot;
-
-arachni_rpcd --pipe-id=&quot;Pipe 2&quot; --nickname=&quot;My second Dispatcher&quot; --port=1111 --neighbour=localhost:7331
-
-arachni_rpcd --pipe-id=&quot;Pipe 3&quot; --nickname=&quot;My third Dispatcher&quot; --port=2222 --neighbour=localhost:1111
-</pre>
-
-<p>etc.</p>
-
-<h2>Usage</h2>
-
-<p>After setting everything up you simply start the WebUI as usual.<br/>
-When it asks you to specify a Dispatcher you pick one, enter it and the WebUI will grab its neighbours automatically.</p>
-
-<p>Despite the fact that there haven't been any dramatic changes to the front-end of the WebUI you'll immediatly notice a sizable<br/>
-performance increase, both when browsing around and when monitoring running scans.<br/></p>
-
-<p>You can find some more technical stuff here: <a href="http://trainofthought.segfault.gr/2011/07/29/arachni-grid-draft-design/">http://trainofthought.segfault.gr/2011/07/29/arachni-grid-draft-design/</a></p>
-
-<p>And some screenshots here: <a href="http://trainofthought.segfault.gr/2011/09/02/arachni-a-sneak-peek-at-the-grid-with-screenshots/">http://trainofthought.segfault.gr/2011/09/02/arachni-a-sneak-peek-at-the-grid-with-screenshots/</a></p>
-
-<h1>Arachni - Web Application Security Scanner Framework</h1>
+    <div id="content"><div id='filecontents'><h1>Arachni - Web Application Security Scanner Framework</h1>
 
 <table>
     <tr>
@@ -164,7 +86,7 @@ performance increase, both when browsing around and when monitoring running scan
     </tr>
     <tr>
        <th>Author</th>
-       <td><a href="mailto:tasos.laskos@gmail.com">Tasos</a> "<a href="mailto:zapotek@segfault.gr">Zapotek</a>" <a href="mailto:tasos.laskos@gmail.com">Laskos</a></td>
+       <td><a href="mailto:tasos.laskos@gmail.com">Tasos Laskos</a></td>
     </tr>
     <tr>
         <th>Twitter</th>
@@ -180,8 +102,7 @@ performance increase, both when browsing around and when monitoring running scan
     </tr>
 </table>
 
-
-<p><img src="http://zapotek.github.com/arachni/logo.png" alt="Arachni logo" /></p>
+<p><img src="http://zapotek.github.com/arachni/logo.png" alt="Arachni logo"></p>
 
 <h2>Synopsis</h2>
 
@@ -192,12 +113,12 @@ penetration testers and administrators evaluate the security of web applications
 is able to perform meta-analysis using a number of factors in order to correctly assess the trustworthiness of results and intelligently identify false-positives.</p>
 
 <p>Unlike other scanners, it takes into account the dynamic nature of web applications, can detect changes caused while travelling<br/>
-through the paths of a web application's cyclomatic complexity and is able to adjust itself accordingly.<br/>
+through the paths of a web application&#39;s cyclomatic complexity and is able to adjust itself accordingly.<br/>
 This way attack/input vectors that would otherwise be undetectable by non-humans are seamlessly handled by Arachni.</p>
 
 <p>Moreover, Arachni yields great performance due to its asynchronous HTTP model (courtesy of <a href="https://github.com/pauldix/typhoeus">Typhoeus</a>) --
 especially when combined with a High Performance Grid setup which allows you to combine the resources of multiple nodes for lightning fast scans.<br/>
-Thus, you'll only be limited by the responsiveness of the server under audit.</p>
+Thus, you&#39;ll only be limited by the responsiveness of the server under audit.</p>
 
 <p>Finally, it is versatile enough to cover a great deal of use cases,
 ranging from a simple command line scanner utility, to a global high performance grid of scanners, to a Ruby library allowing for scripted audits.</p>
@@ -216,7 +137,7 @@ without stifling them or complicating their tasks.<br/></p>
 <h4>Simplicity</h4>
 
 <p>Although some parts of the Framework are fairly complex you will never have to deal them directly.<br/>
-From a user's or a component developer's point of view everything appears simple and straight-forward all the while providing power, performance and flexibility.</p>
+From a user&#39;s or a component developer&#39;s point of view everything appears simple and straight-forward all the while providing power, performance and flexibility.</p>
 
 <h2>Feature List</h2>
 
@@ -236,8 +157,7 @@ From a user's or a component developer's point of view everything appears simple
 <ul>
 <li>Command line UI</li>
 <li>Web UI (Utilizing the Client - Dispatcher RPC infrastructure)</li>
-</ul>
-</li>
+</ul></li>
 <li>Pause/resume functionality.</li>
 <li>High performance asynchronous HTTP requests.</li>
 <li>Open <a href="https://github.com/Zapotek/arachni/wiki/RPC-API">RPC</a> Client/Dispatcher Infrastructure
@@ -248,11 +168,9 @@ From a user's or a component developer's point of view everything appears simple
 <li>Parallel scans</li>
 <li>SSL encryption (with peer authentication)</li>
 <li>Remote monitoring</li>
-<li>Support for High Performance Grid configuration, combining the resources of multiple nodes to perform fast scans.</li>
+<li>Support for <a href="https://github.com/Zapotek/arachni/wiki/RPC-server#wiki-grid">High Performance Grid</a> configuration, combining the resources of multiple nodes to perform fast scans.</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-
 
 <h3>Website Crawler</h3>
 
@@ -263,10 +181,9 @@ From a user's or a component developer's point of view everything appears simple
 <li>Can optionally follow subdomains.</li>
 <li>Adjustable link count limit.</li>
 <li>Adjustable redirect limit.</li>
-<li>Modular path extraction via "Path Extractor" components.</li>
+<li>Modular path extraction via &quot;Path Extractor&quot; components.</li>
 <li>Can read paths from multiple user supplied files (to both restrict and extend the scope of the crawl).</li>
 </ul>
-
 
 <h3>HTML Parser</h3>
 
@@ -278,7 +195,6 @@ From a user's or a component developer's point of view everything appears simple
 <li>Cookies</li>
 <li>Headers</li>
 </ul>
-
 
 <p>The analyzer can graciously handle badly written HTML code due to a combination of regular expression analysis and the <a href="http://nokogiri.org/">Nokogiri</a> HTML parser.</p>
 
@@ -292,8 +208,7 @@ From a user's or a component developer's point of view everything appears simple
 <li>For forms, links and cookies auditing.</li>
 <li>A wide range of injection strings/input combinations.</li>
 <li>Writing RFI, SQL injection, XSS etc modules is a matter of minutes if not seconds.</li>
-</ul>
-</li>
+</ul></li>
 <li>Currently available modules:
 
 <ul>
@@ -319,9 +234,8 @@ From a user's or a component developer's point of view everything appears simple
 <li>XSS</li>
 <li>XSS in event attributes of HTML elements</li>
 <li>XSS in HTML tags</li>
-<li>XSS in HTML 'script' tags</li>
-</ul>
-</li>
+<li>XSS in HTML &#39;script&#39; tags</li>
+</ul></li>
 <li>Recon:
 
 <ul>
@@ -344,8 +258,7 @@ From a user's or a component developer's point of view everything appears simple
 <li>US Social Security Number disclosure</li>
 <li>Forceful directory listing</li>
 <li>Mixed Resource/Scripting</li>
-</ul>
-</li>
+</ul></li>
 <li>Extras
 
 <ul>
@@ -353,12 +266,9 @@ From a user's or a component developer's point of view everything appears simple
 <li>SVN Digger files</li>
 <li>RAFT dirs</li>
 <li>RAFT files</li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-
 
 <h3>Report Management</h3>
 
@@ -376,10 +286,8 @@ From a user's or a component developer's point of view everything appears simple
 <li>Marshal</li>
 <li>YAML</li>
 <li>Metareport -- Providing Metasploit integration to allow for <a href="http://zapotek.github.com/arachni/file.EXPLOITATION.html">automated and assisted exploitation</a>.</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-
 
 <h3>Plug-in Management</h3>
 
@@ -402,7 +310,7 @@ From a user's or a component developer's point of view everything appears simple
 <li>WAF (Web Application Firewall) Detector -- Establishes a baseline of normal behavior and uses rDiff analysis to determine if malicious inputs cause any behavioral changes</li>
 <li>AutoThrottle -- Dynamically adjusts HTTP throughput during the scan for maximum bandwidth utilization</li>
 <li>TimingAttacks -- Provides a notice for issues uncovered by timing attacks when the affected audited pages returned unusually high response times to begin with.</br>
-   It also points out the danger of DoS attacks against pages that perform heavy-duty processing.</li>
+ It also points out the danger of DoS attacks against pages that perform heavy-duty processing.</li>
 <li>Uniformity -- Reports inputs that are uniformly vulnerable across a number of pages hinting to the lack of a central point of input sanitization.</li>
 <li>Discovery -- Performs anomaly detection on issues logged by discovery modules and warns of the possibility of false positives where applicable.</li>
 <li>BeepNotify -- Beeps when the scan finishes.</li>
@@ -410,10 +318,8 @@ From a user's or a component developer's point of view everything appears simple
 <li>EmailNotify -- Sends a notification (and optionally a report) over SMTP at the end of the scan.</li>
 <li>Manual verification -- Flags issues that require manual verification as untrusted in order to reduce the signal-to-noise ratio.</li>
 <li>Resolver -- Resolves vulnerable hostnames to IP addresses.</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-
 
 <h3>Trainer subsystem</h3>
 
@@ -424,18 +330,24 @@ However, this is usually not required since Arachni is aware of which requests a
 
 <p>Still, this can be an invaluable asset to Fuzzer modules.</p>
 
-<h2>Installation</h2>
+<h2><a href="https://github.com/Zapotek/arachni/wiki/Installation">Installation</a></h2>
 
 <h3>CDE packages for Linux</h3>
 
-<p>Arachni is released as <a href="http://stanford.edu/~pgbovine/cde.html">CDE packages</a> for your convinience.<br/>
+<p>Arachni is released as <a href="http://stanford.edu/%7Epgbovine/cde.html">CDE packages</a> for your convinience.<br/>
 CDE packages are self contained and thus alleviate the need for Ruby and other dependencies to be installed or root access.<br/>
 You can download the latest CDE package from the <a href="https://github.com/Zapotek/arachni/downloads">download</a> page and escape the dependency hell.<br/>
-If you decide to go the CDE route you can skip the rest, you're done.</p>
+If you decide to go the CDE route you can skip the rest, you&#39;re done.</p>
+
+<h3>Cygwin packages for Windows</h3>
+
+<p>Arachni does not yet run natively on Windows systems, however until that day comes you can download a pre-configured Cygwin environment containing Arachni and its dependencies.
+All you need to do is download the <a href="http://downloads.segfault.gr/arachni/">latest self-extracting archive</a>, select a directory for it, open it up and then execute the Cygwin batch file.
+You will then be presented with a Bash shell, after that you&#39;ll be able to use Arachni as if you were on a Linux system.</p>
 
 <h3>Gem</h3>
 
-<p>To install the Gem or work with the source code you'll also need the following system libraries:</p>
+<p>To install the Gem or work with the source code you&#39;ll also need the following system libraries:</p>
 
 <pre class="code">sudo apt-get install libxml2-dev libxslt1-dev libcurl4-openssl-dev libsqlite3-dev
 </pre>
@@ -450,14 +362,12 @@ The prefered ways to accomplish this is by either using <a href="http://rvm.begi
 
 <h3>Source</h3>
 
-<p>If you want to clone the repository and work with the source code then you'll need to run the following to install all gem dependencies and Arachni:</p>
+<p>If you want to clone the repository and work with the source code then you&#39;ll need to run the following to install all gem dependencies and Arachni:</p>
 
 <pre class="code"><span class='id identifier rubyid_git'>git</span> <span class='id identifier rubyid_clone'>clone</span> <span class='label'>git:</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/github</span></span><span class='period'>.</span><span class='id identifier rubyid_com'>com</span><span class='op'>/</span><span class='const'>Zapotek</span><span class='op'>/</span><span class='id identifier rubyid_arachni'>arachni</span><span class='period'>.</span><span class='id identifier rubyid_git'>git</span>
 <span class='id identifier rubyid_cd'>cd</span> <span class='id identifier rubyid_arachni'>arachni</span>
 <span class='id identifier rubyid_rake'>rake</span> <span class='id identifier rubyid_install'>install</span>
 </pre>
-
-<h3><a href="https://github.com/Zapotek/arachni/wiki/Installation">Windows -- under Cygwin</a></h3>
 
 <h2>Usage</h2>
 
@@ -479,11 +389,11 @@ automatically loaded.</p>
 
 <p>Arachni should work on all *nix and POSIX compliant platforms with Ruby and the aforementioned requirements.</p>
 
-<p>Windows users can run Arachni in Cygwin by following these <a href="https://github.com/Zapotek/arachni/wiki/Installation">instructions</a>.</p>
+<p>Windows users can download the pre-configured Cygwin package, see the <a href="https://github.com/Zapotek/arachni/wiki/Installation">installation instructions</a>.</p>
 
 <h2>Bug reports/Feature requests</h2>
 
-<p>Please send your feedback using Github's issue system at
+<p>Please send your feedback using Github&#39;s issue system at
 <a href="http://github.com/zapotek/arachni/issues">http://github.com/zapotek/arachni/issues</a>.</p>
 
 <h2>License</h2>
@@ -494,14 +404,14 @@ See the <a href="file.LICENSE.html">LICENSE</a> file for more information.</p>
 <h2>Disclaimer</h2>
 
 <p>Arachni is free software and you are allowed to use it as you see fit.<br/>
-However, I can't be held responsible for your actions or for any damage
+However, I can&#39;t be held responsible for your actions or for any damage
 caused by the use of this software.</p>
 
-<p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner" /></p>
+<p><img src="http://zapotek.github.com/arachni/banner.png" alt="Arachni banner"></p>
 </div></div>
     
     <div id="footer">
-  Generated on Wed Jan  4 05:41:33 2012 by 
+  Generated on Sat Jan  7 08:47:13 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.4 (ruby-1.9.3).
 </div>

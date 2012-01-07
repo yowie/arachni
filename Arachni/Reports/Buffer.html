@@ -410,16 +410,16 @@
       <pre class="lines">
 
 
-88
-89
-90
-91
 92
 93
-94</pre>
+94
+95
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/xml/buffer.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'reports/xml/buffer.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid___add'>__add</span><span class='lparen'>(</span> <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='id identifier rubyid_no_escape'>no_escape</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_no_escape'>no_escape</span>
@@ -446,13 +446,13 @@
       <pre class="lines">
 
 
-83
-84
-85
-86</pre>
+87
+88
+89
+90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/xml/buffer.rb', line 83</span>
+      <pre class="code"><span class="info file"># File 'reports/xml/buffer.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid___buffer'>__buffer</span><span class='lparen'>(</span> <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
     <span class='ivar'>@__buffer</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
@@ -540,7 +540,11 @@
 63
 64
 65
-66</pre>
+66
+67
+68
+69
+70</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'reports/xml/buffer.rb', line 58</span>
@@ -550,7 +554,11 @@
     <span class='id identifier rubyid_start_tag'>start_tag</span><span class='lparen'>(</span> <span class='id identifier rubyid_type'>type</span> <span class='rparen'>)</span>
     <span class='id identifier rubyid_headers'>headers</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-        <span class='id identifier rubyid___buffer'>__buffer</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;field name=\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>\&quot; value=\&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='period'>.</span><span class='id identifier rubyid_escapeHTML'>escapeHTML</span><span class='lparen'>(</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span> <span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>\&quot; /&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>set-cookie</span><span class='tstring_end'>'</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span> <span class='const'>Array</span> <span class='rparen'>)</span>
+            <span class='id identifier rubyid___buffer'>__buffer</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;field name=\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>\&quot; value=\&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='period'>.</span><span class='id identifier rubyid_escapeHTML'>escapeHTML</span><span class='lparen'>(</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span> <span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>\&quot; /&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='kw'>else</span>
+            <span class='id identifier rubyid___buffer'>__buffer</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;field name=\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>\&quot; value=\&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='period'>.</span><span class='id identifier rubyid_escapeHTML'>escapeHTML</span><span class='lparen'>(</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span> <span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>\&quot; /&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+        <span class='kw'>end</span>
     <span class='rbrace'>}</span>
     <span class='id identifier rubyid_end_tag'>end_tag</span><span class='lparen'>(</span> <span class='id identifier rubyid_type'>type</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -656,18 +664,18 @@
       <pre class="lines">
 
 
-68
-69
-70
-71
 72
 73
 74
 75
-76</pre>
+76
+77
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/xml/buffer.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'reports/xml/buffer.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_tags'>add_tags</span><span class='lparen'>(</span> <span class='id identifier rubyid_tags'>tags</span> <span class='rparen'>)</span>
 
@@ -724,12 +732,12 @@
       <pre class="lines">
 
 
-79
-80
-81</pre>
+83
+84
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'reports/xml/buffer.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'reports/xml/buffer.rb', line 83</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_buffer'>buffer</span>
     <span class='kw'>return</span> <span class='ivar'>@__buffer</span>
@@ -832,7 +840,7 @@
 </div>
     
     <div id="footer">
-  Generated on Wed Jan  4 05:41:35 2012 by 
+  Generated on Sat Jan  7 08:47:14 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.4 (ruby-1.9.3).
 </div>

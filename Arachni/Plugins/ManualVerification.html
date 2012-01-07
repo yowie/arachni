@@ -247,7 +247,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#hash_keys_to_str-instance_method" title="Arachni::Module::Utilities#hash_keys_to_str (method)">#hash_keys_to_str</a></span>, <span class='object_link'><a href="../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_decode-instance_method" title="Arachni::Module::Utilities#uri_decode (method)">#uri_decode</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_encode-instance_method" title="Arachni::Module::Utilities#uri_encode (method)">#uri_encode</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_parser-instance_method" title="Arachni::Module::Utilities#uri_parser (method)">#uri_parser</a></span>, <span class='object_link'><a href="../Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="../Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="../Module/Utilities.html#hash_keys_to_str-instance_method" title="Arachni::Module::Utilities#hash_keys_to_str (method)">#hash_keys_to_str</a></span>, <span class='object_link'><a href="../Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="../Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="../Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_decode-instance_method" title="Arachni::Module::Utilities#uri_decode (method)">#uri_decode</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_encode-instance_method" title="Arachni::Module::Utilities#uri_encode (method)">#uri_encode</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_parse-instance_method" title="Arachni::Module::Utilities#uri_parse (method)">#uri_parse</a></span>, <span class='object_link'><a href="../Module/Utilities.html#uri_parser-instance_method" title="Arachni::Module::Utilities#uri_parser (method)">#uri_parser</a></span>, <span class='object_link'><a href="../Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
 
   
   
@@ -301,7 +301,10 @@
 54
 55
 56
-57</pre>
+57
+58
+59
+60</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'plugins/defaults/metamodules/remedies/manual_verification.rb', line 49</span>
@@ -309,7 +312,10 @@
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
     <span class='lbrace'>{</span>
         <span class='symbol'>:name</span>           <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Issues requiring manual verification</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-        <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>Goes through the list of logged issues and cherry picks the ones that require manual verification.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+        <span class='symbol'>:description</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>%q{</span><span class='tstring_content'>The HTTP responses of the issues logged by this plugin exhibit a suspicious pattern
+            even before any audit action has taken place -- this challenges the relevance of the audit procedure.
+
+            Thus, these issues require manual verification.</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
         <span class='symbol'>:author</span>         <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tasos &quot;Zapotek&quot; Laskos &lt;tasos.laskos@gmail.com&gt;</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:version</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0.1.1</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
         <span class='symbol'>:tags</span>           <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>anomaly</span><span class='tstring_end'>'</span></span> <span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>verification</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>meta</span><span class='tstring_end'>'</span></span> <span class='rbracket'>]</span>
@@ -421,7 +427,7 @@
 </div>
     
     <div id="footer">
-  Generated on Wed Jan  4 05:41:44 2012 by 
+  Generated on Sat Jan  7 08:47:23 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.4 (ruby-1.9.3).
 </div>

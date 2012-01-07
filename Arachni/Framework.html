@@ -1030,7 +1030,7 @@ effect.</p>
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Module/Utilities.html" title="Arachni::Module::Utilities (module)">Module::Utilities</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Module/Utilities.html#hash_keys_to_str-instance_method" title="Arachni::Module::Utilities#hash_keys_to_str (method)">#hash_keys_to_str</a></span>, <span class='object_link'><a href="Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_decode-instance_method" title="Arachni::Module::Utilities#uri_decode (method)">#uri_decode</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_encode-instance_method" title="Arachni::Module::Utilities#uri_encode (method)">#uri_encode</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_parser-instance_method" title="Arachni::Module::Utilities#uri_parser (method)">#uri_parser</a></span>, <span class='object_link'><a href="Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Module/Utilities.html#exception_jail-instance_method" title="Arachni::Module::Utilities#exception_jail (method)">#exception_jail</a></span>, <span class='object_link'><a href="Module/Utilities.html#get_path-instance_method" title="Arachni::Module::Utilities#get_path (method)">#get_path</a></span>, <span class='object_link'><a href="Module/Utilities.html#hash_keys_to_str-instance_method" title="Arachni::Module::Utilities#hash_keys_to_str (method)">#hash_keys_to_str</a></span>, <span class='object_link'><a href="Module/Utilities.html#normalize_url-instance_method" title="Arachni::Module::Utilities#normalize_url (method)">#normalize_url</a></span>, <span class='object_link'><a href="Module/Utilities.html#read_file-instance_method" title="Arachni::Module::Utilities#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="Module/Utilities.html#seed-instance_method" title="Arachni::Module::Utilities#seed (method)">#seed</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_decode-instance_method" title="Arachni::Module::Utilities#uri_decode (method)">#uri_decode</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_encode-instance_method" title="Arachni::Module::Utilities#uri_encode (method)">#uri_encode</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_parse-instance_method" title="Arachni::Module::Utilities#uri_parse (method)">#uri_parse</a></span>, <span class='object_link'><a href="Module/Utilities.html#uri_parser-instance_method" title="Arachni::Module::Utilities#uri_parser (method)">#uri_parser</a></span>, <span class='object_link'><a href="Module/Utilities.html#url_sanitize-instance_method" title="Arachni::Module::Utilities#url_sanitize (method)">#url_sanitize</a></span></p>
 
   
   
@@ -2305,29 +2305,29 @@ plugins.</p>
       <pre class="lines">
 
 
-720
-721
-722
-723
-724
-725
-726
-727
-728
-729
-730
-731
-732
-733
-734
-735
-736
-737
-738
-739</pre>
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 720</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 698</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clean_up!'>clean_up!</span><span class='lparen'>(</span> <span class='id identifier rubyid_skip_audit_queue'>skip_audit_queue</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='rparen'>)</span>
     <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_finish_datetime'>finish_datetime</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
@@ -2463,58 +2463,26 @@ plugins.</p>
 582
 583
 584
-585
-586
-587
-588
-589
-590
-591
-592
-593
-594
-595
-596
-597
-598
-599
-600
-601</pre>
+585</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 570</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lsmod'>lsmod</span>
-
-    <span class='id identifier rubyid_mod_info'>mod_info</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id identifier rubyid_available'>available</span><span class='lparen'>(</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id identifier rubyid_available'>available</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
 
         <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='ivar'>@modules</span><span class='period'>.</span><span class='id identifier rubyid_name_to_path'>name_to_path</span><span class='lparen'>(</span> <span class='id identifier rubyid_name'>name</span> <span class='rparen'>)</span>
         <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_lsmod_match?'>lsmod_match?</span><span class='lparen'>(</span> <span class='id identifier rubyid_path'>path</span> <span class='rparen'>)</span>
 
-        <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='ivar'>@modules</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:mod_name</span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span>        <span class='op'>=</span> <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
-
-        <span class='kw'>if</span><span class='lparen'>(</span> <span class='op'>!</span><span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:dependencies</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
-            <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:dependencies</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-        <span class='kw'>end</span>
-
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span> <span class='rbrace'>}</span>
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:version</span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:version</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>      <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
-
-        <span class='id identifier rubyid_mod_info'>mod_info</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_info'>info</span>
-    <span class='rbrace'>}</span>
-
-    <span class='comment'># unload all modules
-</span>    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-
-    <span class='kw'>return</span> <span class='id identifier rubyid_mod_info'>mod_info</span>
-
+        <span class='ivar'>@modules</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+            <span class='symbol'>:mod_name</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+            <span class='symbol'>:author</span>   <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='ivar'>@modules</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='symbol'>:path</span>     <span class='op'>=&gt;</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
+        <span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+<span class='kw'>ensure</span>
+    <span class='ivar'>@modules</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2558,49 +2526,41 @@ plugins.</p>
       <pre class="lines">
 
 
-634
-635
-636
-637
-638
-639
-640
-641
-642
-643
-644
-645
-646
-647
-648
-649
-650
-651
-652
-653</pre>
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 634</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 616</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lsplug'>lsplug</span>
-
-    <span class='id identifier rubyid_plug_info'>plug_info</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-
-    <span class='ivar'>@plugins</span><span class='period'>.</span><span class='id identifier rubyid_available'>available</span><span class='lparen'>(</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+    <span class='ivar'>@plugins</span><span class='period'>.</span><span class='id identifier rubyid_available'>available</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id identifier rubyid_plugin'>plugin</span><span class='op'>|</span>
 
-        <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='ivar'>@plugins</span><span class='lbracket'>[</span><span class='id identifier rubyid_plugin'>plugin</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
+        <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='ivar'>@plugins</span><span class='period'>.</span><span class='id identifier rubyid_name_to_path'>name_to_path</span><span class='lparen'>(</span> <span class='id identifier rubyid_plugin'>plugin</span> <span class='rparen'>)</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_lsplug_match?'>lsplug_match?</span><span class='lparen'>(</span> <span class='id identifier rubyid_path'>path</span> <span class='rparen'>)</span>
 
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:plug_name</span><span class='rbracket'>]</span>   <span class='op'>=</span> <span class='id identifier rubyid_plugin'>plugin</span>
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>        <span class='op'>=</span> <span class='ivar'>@plugins</span><span class='period'>.</span><span class='id identifier rubyid_name_to_path'>name_to_path</span><span class='lparen'>(</span> <span class='id identifier rubyid_plugin'>plugin</span> <span class='rparen'>)</span>
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span> <span class='rbrace'>}</span>
-
-        <span class='id identifier rubyid_plug_info'>plug_info</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_info'>info</span>
-    <span class='rbrace'>}</span>
-
-    <span class='ivar'>@plugins</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-
-    <span class='kw'>return</span> <span class='id identifier rubyid_plug_info'>plug_info</span>
+        <span class='ivar'>@plugins</span><span class='lbracket'>[</span><span class='id identifier rubyid_plugin'>plugin</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+            <span class='symbol'>:plug_name</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_plugin'>plugin</span><span class='comma'>,</span>
+            <span class='symbol'>:path</span>      <span class='op'>=&gt;</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span>
+            <span class='symbol'>:author</span>    <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='ivar'>@plugins</span><span class='lbracket'>[</span><span class='id identifier rubyid_plugin'>plugin</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span> <span class='rbrace'>}</span>
+        <span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+<span class='kw'>ensure</span>
+    <span class='ivar'>@plugins</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2644,45 +2604,41 @@ plugins.</p>
       <pre class="lines">
 
 
-609
-610
-611
-612
-613
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626</pre>
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 609</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 593</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lsrep'>lsrep</span>
-
-    <span class='id identifier rubyid_rep_info'>rep_info</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='ivar'>@reports</span><span class='period'>.</span><span class='id identifier rubyid_available'>available</span><span class='lparen'>(</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span>
+    <span class='ivar'>@reports</span><span class='period'>.</span><span class='id identifier rubyid_available'>available</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span>
         <span class='op'>|</span><span class='id identifier rubyid_report'>report</span><span class='op'>|</span>
 
-        <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='ivar'>@reports</span><span class='lbracket'>[</span><span class='id identifier rubyid_report'>report</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
+        <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='ivar'>@reports</span><span class='period'>.</span><span class='id identifier rubyid_name_to_path'>name_to_path</span><span class='lparen'>(</span> <span class='id identifier rubyid_report'>report</span> <span class='rparen'>)</span>
+        <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_lsrep_match?'>lsrep_match?</span><span class='lparen'>(</span> <span class='id identifier rubyid_path'>path</span> <span class='rparen'>)</span>
 
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:rep_name</span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='id identifier rubyid_report'>report</span>
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>        <span class='op'>=</span> <span class='ivar'>@reports</span><span class='period'>.</span><span class='id identifier rubyid_name_to_path'>name_to_path</span><span class='lparen'>(</span> <span class='id identifier rubyid_report'>report</span> <span class='rparen'>)</span>
-        <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span> <span class='rbrace'>}</span>
-
-        <span class='id identifier rubyid_rep_info'>rep_info</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_info'>info</span>
-    <span class='rbrace'>}</span>
-    <span class='ivar'>@reports</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span><span class='lparen'>(</span> <span class='rparen'>)</span>
-
-    <span class='kw'>return</span> <span class='id identifier rubyid_rep_info'>rep_info</span>
+        <span class='ivar'>@reports</span><span class='lbracket'>[</span><span class='id identifier rubyid_report'>report</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+            <span class='symbol'>:rep_name</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_report'>report</span><span class='comma'>,</span>
+            <span class='symbol'>:path</span>     <span class='op'>=&gt;</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span>
+            <span class='symbol'>:author</span>   <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='ivar'>@reports</span><span class='lbracket'>[</span><span class='id identifier rubyid_report'>report</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span> <span class='rbrace'>}</span>
+        <span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+<span class='kw'>ensure</span>
+    <span class='ivar'>@reports</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2733,14 +2689,14 @@ effect</p>
       <pre class="lines">
 
 
-673
-674
-675
-676
-677</pre>
+651
+652
+653
+654
+655</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 673</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 651</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pause!'>pause!</span>
     <span class='ivar'>@spider</span><span class='period'>.</span><span class='id identifier rubyid_pause!'>pause!</span> <span class='kw'>if</span> <span class='ivar'>@spider</span>
@@ -2794,12 +2750,12 @@ effect</p>
       <pre class="lines">
 
 
-665
-666
-667</pre>
+643
+644
+645</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 665</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 643</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_paused?'>paused?</span>
     <span class='op'>!</span><span class='ivar'>@paused</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -3090,14 +3046,14 @@ just return.</p>
       <pre class="lines">
 
 
-682
-683
-684
-685
-686</pre>
+660
+661
+662
+663
+664</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 682</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 660</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_resume!'>resume!</span>
     <span class='ivar'>@paused</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span> <span class='id identifier rubyid_caller'>caller</span> <span class='rparen'>)</span>
@@ -3146,12 +3102,12 @@ just return.</p>
       <pre class="lines">
 
 
-702
-703
-704</pre>
+680
+681
+682</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 702</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 680</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_revision'>revision</span>
     <span class='const'>REVISION</span>
@@ -3313,12 +3269,12 @@ just return.</p>
       <pre class="lines">
 
 
-658
-659
-660</pre>
+636
+637
+638</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 658</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 636</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_running?'>running?</span>
     <span class='ivar'>@running</span>
@@ -3708,12 +3664,12 @@ paused without messing with the clocks)</p>
       <pre class="lines">
 
 
-693
-694
-695</pre>
+671
+672
+673</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 693</span>
+      <pre class="code"><span class="info file"># File 'lib/arachni/framework.rb', line 671</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_version'>version</span>
     <span class='const'>Arachni</span><span class='op'>::</span><span class='const'>VERSION</span>
@@ -3728,7 +3684,7 @@ paused without messing with the clocks)</p>
 </div>
     
     <div id="footer">
-  Generated on Wed Jan  4 05:41:36 2012 by 
+  Generated on Sat Jan  7 08:47:16 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.4 (ruby-1.9.3).
 </div>
