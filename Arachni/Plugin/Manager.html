@@ -110,7 +110,7 @@
 <pre class="code">&lt;tasos.laskos@gmail.com&gt;
 &lt;zapotek@segfault.gr&gt;</pre>
 
-<p>@version: 0.1</p>
+<p>@version: 0.1.1</p>
 
 
   </div>
@@ -1022,7 +1022,7 @@
 
         <span class='ivar'>@jobs</span> <span class='op'>&lt;&lt;</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span>
 
-            <span class='id identifier rubyid_exception_jail'>exception_jail</span> <span class='lbrace'>{</span>
+            <span class='id identifier rubyid_exception_jail'>exception_jail</span><span class='lparen'>(</span> <span class='kw'>false</span> <span class='rparen'>)</span> <span class='lbrace'>{</span>
                 <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
 
                 <span class='id identifier rubyid_plugin_new'>plugin_new</span> <span class='op'>=</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span> <span class='id identifier rubyid_name'>name</span> <span class='rparen'>)</span>
@@ -1131,7 +1131,7 @@
 </div>
     
     <div id="footer">
-  Generated on Sat Jan  7 08:47:18 2012 by 
+  Generated on Mon Jan  9 22:04:11 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.4 (ruby-1.9.3).
 </div>
