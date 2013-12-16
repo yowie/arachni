@@ -15,6 +15,7 @@
 =end
 
 require 'rubygems'
+require 'pry'
 require 'bundler/setup'
 
 def ap( obj )
