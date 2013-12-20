@@ -14,47 +14,49 @@
     limitations under the License.
 =end
 
-# Check for lack of X-FRAME-OPTIONS header.
 #
-# @author Iain Funnell/yowie @iainfunnell
+# Looks for and logs e-mail addresses.
+#
+# @author Tasos "Zapotek" Laskos <tasos.laskos@gmail.com>
 #
 # @version 0.1.1
 #
 class Arachni::Modules::XFrameOptions < Arachni::Module::Base
 
     def run
-      spider.on_each_page do |page|
-        print_status "test: #{page.url}"
-      end  
-      #page.headers.each do |header|
-        #  binding.pry
-
-           # next if cookie.http_only? || audited?( cookie.name )
-
-           # log( var: cookie.name, element: cookie.type, )
-          #  audited( cookie.name )
-        #end
+        unless audited?(page.headers)
+            framing_protection = false
+            page.headers.each do |header|
+                if header.orig.downcase.has_key?("x-frame-options")
+                  framing_protection = true
+                end
+            end
+            unless framing_protection
+              log( var: page.url, element: page.url, )
+            end
+            audited( page.headers)
+            binding.pry()
+        end
     end
-
 
     def self.info
         {
-            name:        'X-FRAME-OPTIONS headers',
-            description: %q{Logs pages that do not set the X-FRAME-OPTIONS headers},
-            elements:    [ Element::HEADER ],
-            author:      'Iain "yowie" Funnell @iainfunnell',
+            name:        'Lack of ClickJacking protection (X-FRAMES-OPTIONS headers)',
+            description: %q{Logs servers that do not set the X-FRAME-OPTIONS headers},
+            elements:    [ Element::BODY ],
+            author:      'Iain "yowie" Funnell <@iainfunnell> <iainfunnell@gmail.com',
             version:     '0.1.1',
             targets:     %w(Generic),
             references:  {
                 'ClickJacking - OWASP' => 'https://www.owasp.org/index.php/ClickJacking'
             },
             issue:       {
-                name:            %q{HttpOnly cookie},
-                description:     %q{The logged cookie does not have the HttpOnly
-    flag set which makes it succeptible to maniplation via client-side code.},
-                cwe:             '200',
+                name:            %q{Lack of ClickJacking Protection},
+                description:     %q{The server does not adequately protect the page from framing attacks},
+                cwe:              '200',
                 severity:        Severity::INFORMATIONAL,
-                remedy_guidance: %q{blerg},
+                remedy_guidance: %q{The server should include the X-Frame-Options header 
+                    to prevent the site from being loaded in a malicious frame.}
             },
             max_issues: 1
         }
