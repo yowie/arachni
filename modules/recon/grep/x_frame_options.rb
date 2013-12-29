@@ -20,33 +20,35 @@
 # @author Iain "yowie" Funnell <iainfunnell@gmail.com>
 #
 # @version 0.1.1
-#
-# @notes Included in ELEMENT::BODY rather than ELEMENT::HEADER as I 
-# wanted to include with all checks (headers not included by default) 
 
 class Arachni::Modules::XFrameOptions < Arachni::Module::Base
 
     def run
         unless audited?(page.headers)
             framing_protection = false
-            page.headers.each do |header|
-                if header.orig.downcase.has_key?("x-frame-options")
-                  framing_protection = true
-                end
-            end
+            binding.pry()
+            page.headers.any? { |header| header.orig.downcase.has_key?("x-frame-options") }
+
+            #page.headers.each do |header|
+             #   if header.orig.downcase.has_key?("x-frame-options")
+              #    framing_protection = true
+               # end
+            #end
             unless framing_protection
               log( var: page.url, element: page.url, )
             end
             audited( page.headers)
+            #needs to be based on server/domain - extract_domain function is available
             binding.pry()
         end
     end
+
 
     def self.info
         {
             name:        'Lack of ClickJacking protection (X-FRAMES-OPTIONS headers)',
             description: %q{Logs servers that do not set the X-FRAME-OPTIONS headers},
-            elements:    [ Element::BODY ],
+            elements:    [ Element::SERVER ],
             author:      'Iain "yowie" Funnell <@iainfunnell> <iainfunnell@gmail.com',
             version:     '0.1.1',
             targets:     %w(Generic),
@@ -61,7 +63,7 @@ class Arachni::Modules::XFrameOptions < Arachni::Module::Base
                 remedy_guidance: %q{The server should include the X-Frame-Options header 
                     to prevent the site from being loaded in a malicious frame.}
             },
-            max_issues: 1
+            #max_issues: 1
         }
     end
 
