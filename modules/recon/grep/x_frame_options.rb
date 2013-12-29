@@ -15,12 +15,15 @@
 =end
 
 #
-# Looks for and logs e-mail addresses.
+# Looks for and logs missing framing protection.
 #
-# @author Tasos "Zapotek" Laskos <tasos.laskos@gmail.com>
+# @author Iain "yowie" Funnell <iainfunnell@gmail.com>
 #
 # @version 0.1.1
 #
+# @notes Included in ELEMENT::BODY rather than ELEMENT::HEADER as I 
+# wanted to include with all checks (headers not included by default) 
+
 class Arachni::Modules::XFrameOptions < Arachni::Module::Base
 
     def run
