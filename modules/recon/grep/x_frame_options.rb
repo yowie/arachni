@@ -24,22 +24,12 @@
 class Arachni::Modules::XFrameOptions < Arachni::Module::Base
 
     def run
-        unless audited?(page.headers)
-            framing_protection = false
-            binding.pry()
-            page.headers.any? { |header| header.orig.downcase.has_key?("x-frame-options") }
-
-            #page.headers.each do |header|
-             #   if header.orig.downcase.has_key?("x-frame-options")
-              #    framing_protection = true
-               # end
-            #end
-            unless framing_protection
-              log( var: page.url, element: page.url, )
+        unless audited?(extract_domain(page.url))
+            unless page.response_headers.has_key?("X-Frame-Options")
+              log( var: extract_domain(page.url), match: page.response_headers,
+                  element: Element::SERVER)
             end
-            audited( page.headers)
-            #needs to be based on server/domain - extract_domain function is available
-            binding.pry()
+            audited( extract_domain(page.url))
         end
     end
 
