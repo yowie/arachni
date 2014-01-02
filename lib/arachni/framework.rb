@@ -21,6 +21,7 @@ require 'bundler/setup'
 
 require 'ap'
 require 'pp'
+
 require File.expand_path( File.dirname( __FILE__ ) ) + '/options'
 
 module Arachni
